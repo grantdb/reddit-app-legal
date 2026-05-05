@@ -1,6 +1,6 @@
 # Terms of Service for Linux Quest
 
-Last updated: April 14, 2026
+Last updated: May 5, 2026
 
 ## 1. Description of Service
 `Linux Quest` is a free-to-play simulation game provided "as is" for entertainment purposes on the Reddit platform.

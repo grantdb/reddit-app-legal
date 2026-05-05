@@ -1,6 +1,6 @@
 # Privacy Policy for Linux Quest
 
-Last updated: April 14, 2026
+Last updated: May 5, 2026
 
 ## 1. Information Collection
 `Linux Quest` is a webview-based simulation game on Reddit. 
