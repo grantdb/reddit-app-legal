@@ -1,21 +1,15 @@
-# Privacy Policy - Post Title Check
+# Privacy Policy for Post Title Enforcer
 
-Effective Date: June 20, 2026
+Last updated: April 13, 2026
 
 ## Information Collection
-The Post Title Check Devvit application published by Grant (u/grantdb) processes data provided by the Reddit API (such as post titles, subreddit name, and authors) exclusively to validate post titles against configured moderation rules and log actions.
+This application operates on the Reddit platform and processes submission titles to ensure compliance with subreddit rules. It does not collect, store, or share any personal user data (PII).
 
 ## Data Usage
-Data is stored securely using Devvit's Redis infrastructure to maintain application settings, caching of moderators list, and idempotency status for processed posts.
+Data (post titles) is processed in real-time to perform regex matching. No data is stored persistently beyond the temporary processing state required by the Reddit Devvit platform.
 
 ## Third-Party Services
-This application does **NOT** sell, trade, or otherwise transfer your personal information to outside parties. It does **NOT** use your information for targeted advertising or tracking outside of Reddit.
-
-## Data Retention
-Application data is stored indefinitely in the Reddit-hosted Redis database to maintain settings, moderation caches, and logging context. If you wish to have your data or logs removed from this application, please contact the developer or the moderators of the subreddit where the interaction occurred.
-
-## Updates
-We may update this Privacy Policy from time to time. Any updates will be reflected in this document. By using the application, you consent to our Privacy Policy.
+The app does not communicate with any third-party services.
 
 ## Contact
-For privacy concerns, please contact the developer via Reddit.
+If you have questions about this privacy policy, please contact the developer via Reddit modmail in the subreddit where the app is installed.

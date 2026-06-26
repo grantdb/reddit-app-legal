@@ -1,6 +1,6 @@
-# Terms of Service for WordGuard
+# Terms of Service for domain-guard
 
-Last updated: May 4, 2026
+Last updated: May 6, 2026
 
 ## Acceptance of Terms
 By installing and using this Devvit application, you agree to these Terms of Service.

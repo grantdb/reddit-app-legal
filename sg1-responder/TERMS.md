@@ -1,4 +1,4 @@
-# Terms of Service for WordGuard
+# Terms of Service for SG-1 Responder
 
 Last updated: May 4, 2026
 

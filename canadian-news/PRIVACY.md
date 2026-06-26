@@ -1,0 +1,17 @@
+# Privacy Policy for Canadian News
+
+Last updated: June 25, 2026
+
+This Privacy Policy describes how this Devvit application collects, uses, and shares information.
+
+## Information Collection
+This application operates on the Reddit platform and may process public data within the context of its authorized subreddit installations. It does not collect or store persistent Personal Identifiable Information (PII) beyond what is necessary to fulfill its news aggregation and posting functions (e.g., caching feed configurations and post history).
+
+## Data Usage
+Data is used solely for the purpose of the app's functionality (e.g., fetching Canadian news feeds and automatically posting relevant content to the configured subreddit).
+
+## Third-Party Sharing
+No data collected or processed by this application is shared with, sold to, or accessible by any third parties. All data remains within the Reddit ecosystem.
+
+## Contact
+If you have questions about this privacy policy, please contact the developer via Reddit.
