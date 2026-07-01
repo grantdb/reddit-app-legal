@@ -25,4 +25,4 @@ This application is subject to the following legal agreements:
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/sg1-responder/PRIVACY.md)
 
 ---
-*Built for fun on Reddit*
+*Built for Reddit's moderator community.*

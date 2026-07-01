@@ -27,4 +27,4 @@ This application is subject to the following legal agreements:
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/sticky-pro/PRIVACY.md)
 
 ---
-*Built for Reddit's moderator community.*
+*Built for fun on Reddit*
