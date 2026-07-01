@@ -1,28 +1,29 @@
 # Canuck News Bot
 
-A moderator-controlled news tool designed to deliver curated, non-political news from across Canada with a focus on balanced regional representation. This bot allows moderators to manually trigger news updates, ensuring every part of the country is heard while maintaining a neutral, high-quality content standard.
+![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge)
+![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
+![Category](https://img.shields.io/badge/Category-News-blue?style=for-the-badge)
+
+Canuck News Bot is a moderator-controlled tool designed to deliver curated, balanced, and non-political news from across Canada. It ensures neutral, high-quality standards for community content.
 
 ## Features
+- **On-Demand Execution**: Operates strictly under moderator control.
+- **Regional Balancing**: Prioritizes news from under-represented regions.
+- **Content Filtering**: Automatically filters out political content.
+- **Clean Rendering**: Ensures titles are properly formatted and readable.
 
-- **Manual Trigger**: Operates only when manually triggered by a moderator via the "Run News Fetcher" menu item.
-- **Adjustable Batch Size**: Configurable "Posts per Run" setting to control exactly how many items are posted at once.
-- **Regional Balancing**: Prioritizes news from regions with lower coverage to ensure diverse national representation.
-- **Content Filtering**: Automatically identifies and filters out political content to keep the subreddit focused on general news and community interests.
-- **HTML Cleanup**: Decodes HTML entities in titles for clean, readable headlines.
-- **Timezone Precision**: Uses GMT-4 (Eastern Time) for consistent "same-day" content filtering.
+## Install / Use
+1. Install **Canuck News Bot** via the App Directory.
+2. Configure settings like batch size via your subreddit's App Settings.
+3. Trigger a fetch using the "Run News Fetcher" menu item in Mod Tools.
 
-## Configuration & Domains
+## Settings
+This app can be configured directly from the subreddit's App Settings menu. It is also triggered via Mod Menu Actions on posts or comments.
 
-The bot securely fetches data from the following trusted sources:
-- `cbc.ca` (Regional news coverage)
-- `globalnews.ca` (Science and technology)
-- `theglobeandmail.com` (Business and national updates)
-
-## Technical Architecture
-
-- **Redis Integration**: Robust deduplication and regional post-count tracking.
-- **Reddit API**: Seamless moderator-initiated submissions.
-- **TypeScript & Devvit**: Built on version 0.12.19 for maximum reliability.
+## Legal
+This application is subject to the following legal agreements:
+- [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/CanuckNews-bot/TERMS.md)
+- [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/CanuckNews-bot/PRIVACY.md)
 
 ---
-*Built for the Reddit community.*
+*Built for Reddit's moderator community.*

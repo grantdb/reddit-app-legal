@@ -1,19 +1,30 @@
 # Linux Quest
 
-Linux Quest is an educational and interactive RPG-style adventure that takes players through the journey of discovering and mastering Linux distributions. Learn about kernels, packages, and systems while competing with other community members.
+![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge)
+![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
+![Linux](https://img.shields.io/badge/Focus-Support_Readiness-E33332?style=for-the-badge)
+
+Linux Quest is an educational RPG designed to act as a support-readiness proof layer for the Linux community. It teaches users the essential habits required to submit high-quality, actionable support requests, reducing friction and speeding up resolution times.
 
 ## Features
+- **Context-Aware Scenarios**: Engaging simulations covering installations, hardware choices, and troubleshooting.
+- **Support Readiness Brief**: Generates a shareable summary including system context and attempted fixes for the user to post.
+- **Behavioral Scoring**: Measures support-readiness behavior (precision, clarity, attempts) rather than technical trivia.
+- **Interactive Onboarding**: Clear mission objectives displayed natively on startup.
+- **Seamless Experience**: Runs smoothly directly within the Reddit app.
 
-- **Educational RPG Logic**: Engaging quest-based system that teaches real-world Linux concepts.
-- **Dynamic Leaderboards**: Track your progress and see how you rank against fellow explorers.
-- **Hardware Simulation**: Experience the process of "installing" and "configuring" virtual Linux environments.
-- **Rich Interactive UI**: A custom-designed frontend built for responsive gameplay inside Reddit.
+## Install / Use
+1. Install **Linux Quest** on your subreddit.
+2. Users can launch the quest directly from an established post.
+3. Upon completion, users can copy their Support Readiness Brief and paste it into a support thread.
 
-## Technical Details
+## Settings
+This app uses an interactive Custom Post Dashboard for its configuration. Look for the configuration post in your subreddit to manage settings.
 
-- **Architecture**: Separated frontend (React) and backend (Devvit API) for a robust gaming experience.
-- **Data Model**: Comprehensive type system for tracking equipment, installation steps, and hardware compatibility.
-- **Persistence**: Securely stores player progress and scores using Reddit's distributed state.
+## Legal
+This application is subject to the following legal agreements:
+- [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/linux-quest/TERMS.md)
+- [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/linux-quest/PRIVACY.md)
 
 ---
-*Built for the Reddit community.*
+*Built for fun on Reddit*

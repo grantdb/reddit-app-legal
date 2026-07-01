@@ -1,23 +1,29 @@
-# App Update Checker
+# App Update Check
 
-The App Update Checker is a specialized administrative tool designed to help subreddit moderators monitor updates for all custom logic and applications installed on their community. It provides proactive notifications, ensuring your moderation team is always using the most current and secure versions of your favorite tools.
+![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge)
+![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
+![Utility](https://img.shields.io/badge/Category-Infrastructure-blue?style=for-the-badge)
+
+App Update Check is a utility that helps moderation teams monitor updates for all third-party applications installed in their community. It proactively checks for new versions and alerts your team via ModMail.
 
 ## Features
+- **Automated Discovery**: Automatically identifies and tracks all active third-party applications.
+- **Patch Detection**: Recognizes and logs new software versions as they are released.
+- **ModMail Alerts**: Sends actionable notifications directly to the moderation team.
+- **Precise Control**: Track or exclude specific applications via settings.
 
-- **Automated Discovery**: Scans the Subreddit ModLog upon activation to identify and register existing applications for monitoring.
-- **Intelligent Update Detection**: Performs background polling of the Reddit Developer Portal to instantly recognize new patches or feature releases.
-- **Proactive Notifications**: Dispatches a detailed ModMail alert when an update is detected, including direct links to the update configuration.
-- **Manual Management**: Offers precise control via Subreddit Settings and Mod Menu actions to manually track or untrack specific items as needed.
+## Install / Use
+1. Install **App Update Check** via the App Directory.
+2. Manage tracked applications via your subreddit's App Settings.
+3. Review update alerts delivered directly to your ModMail.
 
-## Technical Configuration
+## Settings
+This app can be configured directly from the subreddit's App Settings menu. This app uses an interactive Custom Post Dashboard for its configuration. Look for the configuration post in your subreddit to manage settings. It is also triggered via Mod Menu Actions on posts or comments.
 
-The tool utilizes Reddit's native scheduling and state management to ensure reliable monitoring without manual intervention:
-
-| Component | Functionality |
-|---------|-------------|
-| **Backend Polling** | Secure synchronization with the Developer Portal. |
-| **State Storage** | Tracks version history and registered app slugs. |
-| **Notification Engine** | Automated ModMail dispatching for real-time updates. |
+## Legal
+This application is subject to the following legal agreements:
+- [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/app-update-check/TERMS.md)
+- [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/app-update-check/PRIVACY.md)
 
 ---
-*Built for the Reddit community.*
+*Built for Reddit's moderator community.*

@@ -1,34 +1,30 @@
 # Post Title Check
 
-A powerful Reddit automation tool that enforces title standards, ensuring your subreddit remains organized and high-quality. This app automatically validates new submissions against your custom rules and provides clear, helpful feedback to users.
+![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge)
+![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
+![Validation](https://img.shields.io/badge/Logic-Validation-blue?style=for-the-badge)
+
+Post Title Check is a powerful automation utility that enforces community editorial standards, ensuring your subreddit remains organized and professional. It validates new submissions in real-time and provides constructive feedback to users with zero moderator intervention.
 
 ## Features
+- **Configurable Rules**: Set minimum word counts, banned phrases, bracket requirements, and character restrictions.
+- **Custom Removal Reasons**: Provide custom, multi-line explanations for each specific rule violation, or use the dynamic `{phrase}` injector for banned words.
+- **Automated Monitoring**: Automatically checks all newly submitted posts instantly.
+- **Automated Removal & PM**: Immediately removes violating posts and sends a detailed private message to the author with a "Copy & Resubmit" template.
+- **Sticky Explanation**: Leaves a distinguished, sticky comment on removed posts explaining exactly which rule was violated.
 
-- **Word Count Enforcement**: Set minimum length requirements to ensure post titles are descriptive.
-- **Banned Phrases**: Instantly block specific keywords or prohibited phrases (case-insensitive).
-- **Mandatory Tagging**: Require users to include bracketed categories (e.g., [News], [Update], [Help]).
-- **Character Validation**: Enforce ASCII/English-only titles to maintain subreddit readability.
-- **Intelligent Feedback**: Automatically posts a stickied removal comment with the exact reason for the violation.
-- **Resubmission Assistance**: Provides users with a copy-paste ready version of their title to simplify the correction process.
+## Install / Use
+1. Install **Post Title Check** via the App Directory.
+2. Configure your formatting rules and banned phrases via the subreddit App Settings.
+3. Provide your own Custom Removal Reasons in the settings, or leave them blank to use the default automated messaging.
 
-## Configuration
+## Settings
+This app can be configured directly from the subreddit's App Settings menu.
 
-Moderators can fine-tune the app behavior directly from the Mod Tools menu:
-
-| Setting | Description |
-|---------|-------------|
-| **Minimum Word Count** | Define the minimum words required (Default: 3). |
-| **Banned Phrases** | A comma-separated list of blocked terms. |
-| **Require Brackets** | Toggle mandatory [...] style tagging. |
-| **English / ASCII Only** | Restrict titles to standard English characters. |
-| **Custom Message** | Customize the preamble for all removal notifications. |
-
-## How It Works
-
-1. **Scan**: Every new post is analyzed the moment it is submitted.
-2. **Validate**: The title is checked against your specific subreddit configuration.
-3. **Act**: If a violation is found, the post is removed instantly.
-4. **Notify**: The author receives a stickied comment and a private message explaining how to fix their title and resubmit.
+## Legal
+This application is subject to the following legal agreements:
+- [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/post-title-check/TERMS.md)
+- [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/post-title-check/PRIVACY.md)
 
 ---
-*Built on Reddit's Developer Platform.*
+*Built for Reddit's moderator community.*

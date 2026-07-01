@@ -1,30 +1,29 @@
 # DistroFeed Bot
 
-A specialized Reddit automation tool that monitors distribution update feeds and automatically shares them with your community. Designed for Linux and software distribution subreddits, it ensures your users are always informed about the latest releases.
+![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge)
+![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
+![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
+
+DistroFeed Bot is an automated news curator for Linux subreddits. It monitors top distribution news sources and automatically shares major releases and updates with the community.
 
 ## Features
+- **Smart Summaries**: Uses AI to securely browse news sites and summarize content.
+- **Deduplication**: Ensures no story is ever double-posted across manual or automated runs.
+- **Auto-Flairing**: Intelligent keyword detection to properly tag posts (e.g., Arch, Fedora, Ubuntu).
+- **Scheduled or Manual**: Supports automated daily posting and on-demand manual fetching.
 
-- **RSS Polling**: Automatically checks configured distribution feeds at regular intervals.
-- **Smart Filtering**: Ensures only relevant updates are posted, preventing duplicates and spam.
-- **GMT-4 Timezone Enforcement**: Precisely tracks "same-day" releases using a standardized timezone to maintain content freshness.
-- **Clean Content**: Automatically decodes HTML entities in titles (e.g., converting `&amp;` to `&`) for a professional appearance.
-- **Automated Posting**: Streamlines the submission process for moderators.
+## Install / Use
+1. Install **DistroFeed Bot** via the App Directory.
+2. Configure your automated daily post schedule via the App Settings.
+3. Manually fetch the latest stories anytime using the "Post Top Distro Updates" subreddit menu action.
 
-## Configuration
+## Settings
+This app can be configured directly from the subreddit's App Settings menu. It is also triggered via Mod Menu Actions on posts or comments.
 
-Settings can be managed directly through the Reddit Mod Tools menu:
-
-| Setting | Description |
-|---------|-------------|
-| **Feed URL** | The RSS or Atom feed to monitor. |
-| **Post Flair** | Automatically apply specific flair to release posts. |
-| **Check Frequency** | How often to poll the feed for updates. |
-
-## Technical Details
-
-- **Language**: TypeScript
-- **Platform**: Reddit Developer Platform (Devvit)
-- **Version**: 0.12.19
+## Legal
+This application is subject to the following legal agreements:
+- [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/DistroFeed-bot/TERMS.md)
+- [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/DistroFeed-bot/PRIVACY.md)
 
 ---
-*Built for the Reddit community.*
+*Built for Reddit's moderator community.*

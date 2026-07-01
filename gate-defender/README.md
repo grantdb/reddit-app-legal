@@ -1,17 +1,29 @@
 # Gate Defender
 
-Gate Defender is a specialized Reddit application designed for community protection and access management.
+![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge)
+![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
+![Gaming](https://img.shields.io/badge/Category-Gaming-blue?style=for-the-badge)
+
+Gate Defender is an intensive, arcade-style survival game engineered directly within the Reddit client. Designed to foster community spirit through competition, it challenges players to defend their perimeter against escalating waves of obstacles.
 
 ## Features
+- **High-Velocity Survival Mechanics**: Fast-paced, responsive arcade gameplay.
+- **Persistent Global Leaderboards**: Features a real-time Top 10 ranking system to encourage recurring community engagement.
+- **Mobile-Optimized Interface**: Custom-built and tested for smooth performance on all platforms.
+- **Interactive Onboarding**: Pre-game splash screen providing swift, easy-to-understand tutorial instructions.
+- **Moderator-Initiated Launch**: Simple, one-click deployment via the Subreddit Moderator Menu for event scheduling.
 
-- **Access Control**: Automated management of subreddit membership and posting permissions.
-- **Security Scans**: Intelligent detection of unauthorized entry or participation patterns.
-- **Interactive Mod UI**: Custom webview interface for easy gatekeeping operations.
+## Install / Use
+1. Install **Gate Defender** via the App Directory.
+2. Launch a game instance by selecting it from the Subreddit Moderator Menu.
 
-## Technical Details
+## Settings
+This app uses an interactive Custom Post Dashboard for its configuration. Look for the configuration post in your subreddit to manage settings.
 
-- **Framework**: Devvit SDK 0.12.19
-- **Integration**: Deep integration with Reddit's moderator API and webview system.
+## Legal
+This application is subject to the following legal agreements:
+- [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/gate-defender/TERMS.md)
+- [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/gate-defender/PRIVACY.md)
 
 ---
-*Built for the Reddit community.*
+*Built for fun on Reddit*

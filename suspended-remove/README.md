@@ -1,24 +1,28 @@
-# Suspended Account Remover
+# Suspended Remove
 
-Suspended Account Remover is a professional-grade moderation tool designed to keep community queues clean and focused. It automatically identifies and manages content from suspended or shadowbanned users, significantly reducing the manual workload for moderation teams.
+![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge)
+![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
+![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
+
+Suspended Remove is a professional-grade security utility designed to maintain community integrity by automating the management of content from suspended or shadowbanned users. 
 
 ## Features
+- **Automated Perimeter Defense**: Constantly monitors community queues for contributions from invalid or restricted accounts.
+- **Silent Conflict Resolution**: Instantly removes flagged content without requiring manual moderator clicks.
+- **Advanced Audit Integration**: Automatically appends internal notes to removed content, ensuring transparent records.
+- **Reliable Performance**: Optimized to cleanly handle thousands of users without stalling.
 
-- **Automated Queue Maintenance**: Constantly monitors standard and spam queues for content from invalid accounts.
-- **Silent Actioning**: Automatically removes flagged content without requiring manual intervention from moderators.
-- **Detailed Auditing**: Appends private removal notes and internal moderator notes to ensure a clear audit trail.
-- **Performance Optimized**: Features intelligent caching to instantly skip already-processed items and verified users.
-- **Platform Resilience**: Architected to handle high-traffic subreddits without encountering platform timeouts or rate limits.
+## Install / Use
+1. Install **Suspended Remove** via the App Directory.
+2. The application will immediately begin scanning queues in the background for suspended content.
 
-## Technical Summary
+## Settings
+This app can be configured directly from the subreddit's App Settings menu.
 
-The application operates as a background task with no configuration required:
-
-| Component | Functionality |
-|---------|-------------|
-| **Background Scanning** | 5-minute interval monitoring of all active queues. |
-| **User Verification** | Real-time status checks for account validity. |
-| **Audit Integration** | Seamless integration with Reddit's Mod Note system. |
+## Legal
+This application is subject to the following legal agreements:
+- [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/TERMS.md)
+- [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/PRIVACY.md)
 
 ---
-*Built for the Reddit community.*
+*Built for Reddit's moderator community.*
