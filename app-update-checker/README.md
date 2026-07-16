@@ -16,7 +16,7 @@
 
 ## How It Works
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png)
+![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-check-flowchart.png)
 
 1. The app runs a background task on a scheduled interval.
 2. It retrieves the list of installed apps on the subreddit and compares their currently installed versions against the latest available versions in the app registry.
