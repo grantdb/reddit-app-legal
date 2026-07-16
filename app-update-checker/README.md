@@ -1,11 +1,11 @@
-# App Update Check
+# App Update Checker
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
 ![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
 ![Utility](https://img.shields.io/badge/Category-Infrastructure-blue?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-Monitoring-8A2BE2?style=for-the-badge)
 
-**App Update Check** is a utility designed to help moderation teams effortlessly monitor all third-party Devvit applications installed in their community. Instead of manually checking for updates, it proactively scans your installed apps for new versions and sends automated alerts directly to your ModMail.
+**App Update Checker** is a utility designed to help moderation teams effortlessly monitor all third-party Devvit applications installed in their community. Instead of manually checking for updates, it proactively scans your installed apps for new versions and sends automated alerts directly to your ModMail.
 
 ## Key Features
 
@@ -16,7 +16,7 @@
 
 ## How It Works
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-check-flowchart.png)
+![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png)
 
 1. The app runs a background task on a scheduled interval.
 2. It retrieves the list of installed apps on the subreddit and compares their currently installed versions against the latest available versions in the app registry.
@@ -25,16 +25,17 @@
 
 ## Setup & Configuration
 
-1. **Install**: Add **App Update Check** to your subreddit via the App Directory.
-2. **App Settings**: Navigate to your subreddit's Mod Tools > App Settings > App Update Check.
+1. **Install**: Add **App Update Checker** to your subreddit via the App Directory.
+2. **App Settings**: Navigate to your subreddit's Mod Tools > App Settings > App Update Checker.
 3. **Configure Tracking**: Use the settings interface to specify if there are any installed apps you wish to exclude from monitoring.
 4. **Monitoring**: The app will run automatically in the background. Simply keep an eye on ModMail for future update alerts.
 
 ## Legal
 
 This application is subject to the following legal agreements:
-- [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/app-update-check/TERMS.md)
-- [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/app-update-check/PRIVACY.md)
+- [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/app-update-checker/TERMS.md)
+- [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/app-update-checker/PRIVACY.md)
 
 ---
 *Built for Reddit's moderator community.*
+
