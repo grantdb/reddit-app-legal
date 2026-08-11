@@ -1,12 +1,12 @@
-# Terms of Service for Post Title Enforcer
+# Terms of Service for Post Title Check
 
 Last updated: April 13, 2026
 
 ## 1. Acceptance of Terms
-By installing or using Post Title Enforcer, you agree to these terms. If you do not agree, do not use the application.
+By installing or using Post Title Check, you agree to these terms. If you do not agree, do not use the application.
 
 ## 2. Description of Service
-Post Title Enforcer is a moderation tool designed to help subreddit moderators automate the enforcement of title formatting rules.
+Post Title Check is a moderation tool designed to help subreddit moderators automate the enforcement of title formatting rules.
 
 ## 3. Data Privacy
 Your use of the service is subject to our Privacy Policy. The app does not store user data.

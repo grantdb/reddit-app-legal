@@ -1,4 +1,4 @@
-# Privacy Policy for suspended-remover
+# Privacy Policy for suspended-remove
 
 Last updated: April 13, 2026
 

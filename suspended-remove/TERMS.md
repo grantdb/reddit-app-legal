@@ -1,4 +1,4 @@
-# Terms of Service for suspended-remover
+# Terms of Service for suspended-remove
 
 Last updated: April 13, 2026
 

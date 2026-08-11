@@ -1,4 +1,4 @@
-# Privacy Policy for Post Title Enforcer
+# Privacy Policy for Post Title Check
 
 Last updated: April 13, 2026
 
