@@ -1,0 +1,78 @@
+<h1>RescueGuard</h1>
+
+<p>Category: Moderation<br>
+Version: v0.0.1<br>
+Visibility: Unlisted<br>
+Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.</p>
+
+<h2>Overview</h2>
+<p>Subreddit post-discovery & manual spotlight moderation engine for Reddit.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/rescue-guard-flowchart.png">View flowchart image</a></p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Menu Actions</h3>
+<ul>
+<li>GuardHub: RescueGuard Review: Review low-attention posts from the past 30 days for community spotlighting (Location: subreddit)</li>
+</ul>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>min_age_hours: Minimum Post Age (Hours) (number, default: 24). Posts must be at least this old before being surfaced for review (default: 24h).</li>
+<li>candidate_limit: Review Queue Batch Size (number, default: 5). Maximum number of low-attention candidates presented in each moderator review session.</li>
+<li>highlight_action: Spotlight Action on Approval (select, default: flair). Action executed when a moderator approves a candidate post.</li>
+<li>spotlight_flair_text: Spotlight Flair Text (string, default: 🌟 Community Spotlight). Text applied to post flair when approved (e.g. " Community Spotlight").</li>
+<li>spotlight_comment_template: Spotlight Comment Template (paragraph, default: 🌟 **Community Spotlight**: This post has been selected for the community showcase! Thank you u/{author} for sharing.). Sticky comment text placed on approved posts. Supports {author} and {title}.</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: No — Does not remove or filter content.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: Yes — Updates post or user flair based on rules.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add RescueGuard to your subreddit through the Reddit App Directory.</li>
+<li>Configure: Open Mod Tools > App Settings > RescueGuard.</li>
+<li>Set Thresholds: Configure your minimum post age (e.g. 24 hours), review batch size, and spotlight flair/comment text.</li>
+<li>Launch Review: Open the subreddit menu and select GuardHub: RescueGuard Review.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.1 — 2026-08-20<br>
+Standard fleet synchronization and maintenance.; All notable changes to the RescueGuard app will be documented in this file.</p>
+<p>0.0.1 — 2026-08-20<br>
+Initial V1 release of RescueGuard post review and spotlight discovery engine.; day candidate scan with minimum-age filtration and low-attention engagement ranking.; Subreddit-level moderator menu and modal review dialog with manual approve, skip, and dismiss actions.; Configurable spotlight flair and distinguished sticky comment highlights.; Zero-scan Redis audit logging with 60-day automatic key expiration.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/rescue-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/rescue-guard/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/rescue-guard">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>
