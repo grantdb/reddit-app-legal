@@ -36,7 +36,8 @@ Summary: AI-powered version tracking across the fleet. Uses Gemini 2.5 to bypass
 <h2>Settings Reference</h2>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
 <ul>
-<li>warning: Before you continue (paragraph, default: If). Before you continue</li>
+<li>extra_slugs: Extra App Slugs to Track (paragraph, default: -). Optional. Comma or newline-separated app slugs to track (e.g. suspended-remove, sticky-pro, domain-guard). Add a baseline version with slug:version (e.g. domain-guard:0.0.38).</li>
+<li>auto_check_enabled: Enable Daily Auto Check (boolean, default: true). If enabled, the app will automatically run an update check every day. Modmail is only sent when an update is found (or on manually-triggered checks).</li>
 </ul>
 
 <h2>Automation Capabilities</h2>

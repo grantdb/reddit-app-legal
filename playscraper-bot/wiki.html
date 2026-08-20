@@ -46,13 +46,16 @@ Summary: AI-powered metadata extraction via Gemini 2.5. Eligibility-first proces
 <h2>Settings Reference</h2>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
 <ul>
-<li>process_post_delayed: Legal Documentation (group, default: -). Legal Documentation</li>
-<li>gemini_api_key: Automation Mode (string, default: -). Get a free API key from Google AI Studio (aistudio.google.com).</li>
-<li>comment_detail_level: Confirmed Only (badge + link) (select, default: -). Confirmed Only (badge + link)</li>
-<li>enabled_sources: Google Play Store (select, default: -). Google Play Store</li>
-<li>delayedProcessingEnabled: Processing Delay (seconds) (boolean, default: true). When enabled, the bot waits before processing a new post. It checks if the post is still valid before calling external APIs.</li>
-<li>skipIfRemoved: Skip if Post is Filtered (In Modqueue) (boolean, default: true). If the post is removed by the time the bot checks, skip processing entirely.</li>
-<li>skipIfSpam: Trigger App Scraper (boolean, default: true). If the post is marked as spam when the bot checks, skip processing.</li>
+<li>legal_docs: Terms & Privacy (string, default: See help text for official documentation links.). https://github.com/grantdb/reddit-app-legal/tree/main/playscraper-bot</li>
+<li>gemini_api_key: Google Gemini API Key (string, default: -). Get a free API key from Google AI Studio (aistudio.google.com).</li>
+<li>automation_mode: Automation Mode (select, default: auto). Select whether the bot should automatically process new posts or only run when manually triggered.</li>
+<li>comment_detail_level: Comment Detail Level (select, default: general). Controls how much information the bot includes in its comment. "General" shows key stats; "Full" adds IAPs, updated date, and an AI-generated description.</li>
+<li>enabled_sources: App Sources to Detect (select, default: playstore,github,fdroid). Select which app stores and repositories the bot will detect and look up. Disabled sources are silently ignored.</li>
+<li>delayedProcessingEnabled: Enable Delayed Processing (boolean, default: true). When enabled, the bot waits before processing a new post. It checks if the post is still valid before calling external APIs.</li>
+<li>delayedProcessingSeconds: Processing Delay (seconds) (number, default: 20). How many seconds to wait before checking a new post (min: 5, max: 100). Default: 20.</li>
+<li>skipIfRemoved: Skip if Post is Removed (boolean, default: true). If the post is removed by the time the bot checks, skip processing entirely.</li>
+<li>skipIfFiltered: Skip if Post is Filtered (In Modqueue) (boolean, default: true). If the post is filtered (awaiting mod approval) when the bot checks, skip processing.</li>
+<li>skipIfSpam: Skip if Post is Marked as Spam (boolean, default: true). If the post is marked as spam when the bot checks, skip processing.</li>
 </ul>
 
 <h2>Automation Capabilities</h2>

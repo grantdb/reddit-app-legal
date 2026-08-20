@@ -33,7 +33,29 @@ Summary: Moderator-triggered AI detection engine. Upgraded to native Gemini 1.5 
 <h2>Settings Reference</h2>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
 <ul>
-<li>check_ai_post_eligibility: Provider Configuration (group, default: -). Provider Configuration</li>
+<li>detectionProvider: Detection Provider (select, default: DetectionProvider.Gemini). Detection Provider</li>
+<li>resultCommentTemplate: Result Comment Template (paragraph, default: This post has been reviewed with the community AI detection tool.
+
+**Verdict:** {verdict}
+**Score:** {score}/10
+**Provider:** {provider}
+**Confidence:** {confidence}
+**Content Type:** {content_type}
+
+*This is an automated indicator intended to assist moderator review, not a definitive action. Contact moderators via modmail with any questions.*). Result Comment Template</li>
+<li>includeProviderConfidence: Include Provider Confidence in Comment (boolean, default: true). Include Provider Confidence in Comment</li>
+<li>distinguishResultComment: Distinguish Result Comment as Moderator (boolean, default: true). Distinguish Result Comment as Moderator</li>
+<li>lockResultComment: Lock Result Comment (boolean, default: false). Lock Result Comment</li>
+<li>sendModmailCopy: Send Modmail Copy to Moderators (boolean, default: false). Send Modmail Copy to Moderators</li>
+<li>autoScanPosts: Enable Auto-Scan on New Posts (boolean, default: false). Enable Auto-Scan on New Posts</li>
+<li>delayedProcessingSeconds: Processing Delay (seconds) (number, default: 20). Delay before scanning to verify post eligibility (min 5s, max 100s).</li>
+<li>minConfidenceThreshold: Minimum Confidence Threshold (0.0 - 1.0) (number, default: 0.5). Ignore detections below this confidence level.</li>
+<li>gemini_api_key: Gemini API Key (string, default: -). Required if using Gemini provider. Get a key at aistudio.google.com</li>
+<li>gptzero_api_key: GPTZero API Key (string, default: -). Required if using GPTZero provider.</li>
+<li>sightengine_api_user: Sightengine API User (string, default: -). Required if using Sightengine provider.</li>
+<li>sightengine_api_secret: Sightengine API Secret (string, default: -). Required if using Sightengine provider.</li>
+<li>hive_api_key: Hive API Key (string, default: -). Required if using Hive provider.</li>
+<li>hive_project_id: Hive Project ID (string, default: text_ai_generated). Hive Project ID</li>
 </ul>
 
 <h2>Automation Capabilities</h2>

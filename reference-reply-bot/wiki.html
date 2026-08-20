@@ -46,6 +46,19 @@ Summary: Post-only support intake and reference bot for r/grantdb.</p>
 <h3>Custom Post Types and Entrypoints</h3>
 <p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
 
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>enabled: Enable Support Bot (boolean, default: true). Master toggle to enable or pause support bot monitoring in r/grantdb.</li>
+<li>welcomeRepliesEnabled: Enable Support Post Welcome Replies (boolean, default: true). Automatically reply to new support posts with reference & troubleshooting guidance.</li>
+<li>minConfidence: Post Minimum Confidence Threshold (0-100) (number, default: 60). Minimum score required to post a welcome/reference reply on a support post.</li>
+<li>completenessThreshold: Intake Completeness Threshold (0.0-1.0) (number, default: 0.6). Score threshold below which matched app replies append a missing details reminder (hybrid mode).</li>
+<li>replyCooldownMinutes: User Cooldown Window (Minutes) (number, default: 15). Minimum time to wait before automated replies fire again for the same user. Set 0 to disable.</li>
+<li>supportFlairs: Monitored Support Post Flairs (string, default: Support, Bug, Bug Report, Help, Question). Comma-separated post flair names (e.g., "Support, Bug, Help, Question"). Blank = all posts.</li>
+<li>maxLinksPerReply: Maximum Links Per Reply (number, default: 2). Cap on documentation and reference links per reply.</li>
+<li>debugLogging: Enable Debug Logging (boolean, default: false). Log scoring details and lock statuses to the console.</li>
+</ul>
+
 <h2>Automation Capabilities</h2>
 <ul>
 <li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>

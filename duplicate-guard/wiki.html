@@ -30,6 +30,26 @@ Summary: Moderation app that uses onPostSubmit to detect recent duplicate subjec
 <h3>Custom Post Types and Entrypoints</h3>
 <p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
 
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>appEnabled: Enable Duplicate Guard (boolean, default: true). Toggle the duplicate detection engine on or off.</li>
+<li>matchMode: Match Mode (select, default: balanced). Match Mode</li>
+<li>lookbackSize: Lookback Size (number, default: 50). How many recent posts to check against (5 to 100 posts, default: 50).</li>
+<li>ageLimitDays: Duplicate Window (Days) (number, default: 7). Only check against posts created within this many days (1 to 30 days, default: 7).</li>
+<li>includeSelftext: Include Selftext in Scoring (boolean, default: false). If enabled, selftext (body text) will be checked for keyword overlap on borderline title matches.</li>
+<li>ignoreModerators: Ignore Moderators (boolean, default: true). Do not check posts submitted by moderators.</li>
+<li>ignoreApprovedUsers: Ignore Approved Users (boolean, default: false). Do not check posts submitted by approved users.</li>
+<li>notifyAuthorOnMatch: Notify Author on Match (PM) (boolean, default: true). Send the post author a private message listing all matched duplicate posts with links.</li>
+<li>includeSummaryInComment: Include Match Summary in Comment (boolean, default: true). Append the breakdown list of matched duplicate posts and links to the removal/sticky comment.</li>
+<li>exemptFlairIds: Exempt Flair IDs/Names (Optional) (string, default: ). Comma-separated list of post flair IDs or names to exempt from duplicate checks.</li>
+<li>exemptTitleRegex: Exempt Post Titles (Regex) (string, default: ). Regex for post titles that should bypass duplicate checks (e.g., megathreads).</li>
+<li>actionOnMatch: Action on Match (select, default: filter). Action on Match</li>
+<li>reportReasonText: Report Reason Text (string, default: Duplicate Guard: This looks very similar to a recent post.). Report Reason Text</li>
+<li>commentTemplate: Comment Template (paragraph, default: This looks very similar to a recent post on the same topic and has been flagged for moderator review.). The text to leave if a comment action is selected.</li>
+<li>debugLogging: Enable Debug Logging (boolean, default: true). Logs scoring data to the Devvit console.</li>
+</ul>
+
 <h2>Automation Capabilities</h2>
 <ul>
 <li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>

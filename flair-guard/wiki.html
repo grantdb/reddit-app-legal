@@ -29,10 +29,14 @@ Summary: Professional flair moderation engine.</p>
 <h2>Settings Reference</h2>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
 <ul>
-<li>delayedProcessingEnabled: Processing Delay (seconds) (boolean, default: true). Processing Delay (seconds)</li>
-<li>skipIfRemoved: Skip if Post is Filtered (In Modqueue) (boolean, default: true). Skip if Post is Filtered (In Modqueue)</li>
-<li>skipIfSpam: Exempt Moderators (boolean, default: true). Exempt Moderators</li>
-<li>triggerKeywords: Target Post Flair Template ID (string, default: urgent). Target Post Flair Template ID</li>
+<li>delayedProcessingEnabled: Enable Delayed Processing (boolean, default: true). Enable Delayed Processing</li>
+<li>delayedProcessingSeconds: Processing Delay (seconds) (number, default: DEFAULT_DELAY_SECONDS). Processing Delay (seconds)</li>
+<li>skipIfRemoved: Skip if Post is Removed (boolean, default: true). Skip if Post is Removed</li>
+<li>skipIfFiltered: Skip if Post is Filtered (In Modqueue) (boolean, default: true). Skip if Post is Filtered (In Modqueue)</li>
+<li>skipIfSpam: Skip if Post is Marked as Spam (boolean, default: true). Skip if Post is Marked as Spam</li>
+<li>moderatorExempt: Exempt Moderators (boolean, default: true). Exempt Moderators</li>
+<li>triggerKeywords: Trigger Keywords (comma separated) (string, default: urgent, help, question). Trigger Keywords (comma separated)</li>
+<li>targetPostFlairId: Target Post Flair Template ID (string, default: ). Target Post Flair Template ID</li>
 </ul>
 
 <h2>Automation Capabilities</h2>

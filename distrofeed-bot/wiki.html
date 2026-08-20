@@ -40,13 +40,9 @@ Summary: Linux aggregator. Upgraded to Gemini 2.5 metadata extraction. Fixed net
 <h2>Settings Reference</h2>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
 <ul>
-<li>gemini_api_key: Include Major Releases (string, default: tr). Required. Get yours at aistudio.google.com. Used for all source scanning.</li>
-<li>include_serious_updates: Post Title (boolean, default: true). Post significant updates: kernel releases, security patches.</li>
-<li>targetUrl: Post Link URL (string, default: defaultUrl). Post Link URL</li>
-<li>editedSummary: TL;DR Summary (Comment Text) (paragraph, default: defaultBody). TL;DR Summary (Comment Text)</li>
-<li>flairText: Post Flair Text (string, default: defaultFlair). Post Flair Text</li>
-<li>postStickyComment: Submit TL;DR summary as sticky comment (boolean, default: true). Submit TL;DR summary as sticky comment</li>
-<li>selectedIndex: Select Linux Update Candidate (select, default: options.length). Select Linux Update Candidate</li>
+<li>gemini_api_key: Google Gemini API Key (string, default: -). Required. Get yours at aistudio.google.com. Used for all source scanning.</li>
+<li>include_major_releases: Include Major Releases (boolean, default: true). Post new distribution version releases.</li>
+<li>include_serious_updates: Include Serious Updates (boolean, default: true). Post significant updates: kernel releases, security patches.</li>
 </ul>
 
 <h2>Automation Capabilities</h2>

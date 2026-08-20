@@ -46,10 +46,13 @@ Summary: Automated screen-capture and visual logging utility.</p>
 <h2>Settings Reference</h2>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
 <ul>
-<li>process_post_delayed: Legal Documentation (group, default: -). Legal Documentation</li>
-<li>comment_format: Standard (Large Code Block) (select, default: -). Standard (Large Code Block)</li>
-<li>detection_target: All Terminal Outputs (select, default: -). All Terminal Outputs</li>
-<li>automation_mode: Automatic (New Posts) (select, default: [auto]). Automatic (New Posts)</li>
+<li>legal_docs: Terms & Privacy (string, default: See help text for official documentation links.). LEGAL_DOCS_URL</li>
+<li>geminiApiKey: Gemini API Key (string, default: -). Gemini API Key</li>
+<li>characterLimit: Comment Character Limit (number, default: 1500). Maximum characters in a comment before truncating.</li>
+<li>max_comments_per_hour: Hourly Comment Rate Limit (number, default: 30). Maximum bot comments allowed per hour across the subreddit for automated runs. Hard-capped at 60.</li>
+<li>comment_format: Comment Format Style (select, default: spoiler). Select how the stickied comment should be rendered to save vertical space.</li>
+<li>detection_target: Extraction Target (select, default: all). Select what types of terminal screenshots the bot should look for.</li>
+<li>automation_mode: Automation Mode (select, default: auto). Select whether the bot should automatically process new posts or only run when manually triggered.</li>
 </ul>
 
 <h2>Automation Capabilities</h2>

@@ -28,6 +28,20 @@ Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 <li>GuardHub: RateGuard Settings: Configure posting frequency limits and cooldowns. (Location: subreddit)</li>
 </ul>
 
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>appEnabled: Enable RateGuard (boolean, default: true). Master toggle to enable or pause RateGuard posting frequency limits.</li>
+<li>appMode: App Enforcement Mode (select, default: dry_run). App Enforcement Mode</li>
+<li>minGapMinutes: Minimum Gap Cooldown (Minutes) (number, default: 120). Minimum required time between consecutive user submissions (e.g. 120 = 2 hours). 0 = disabled.</li>
+<li>maxPosts24h: Rolling 24-Hour Post Cap (number, default: 3). Maximum posts allowed per user in a 24-hour rolling window. 0 = disabled.</li>
+<li>burstMaxPosts: Burst Post Cap (number, default: 3). Maximum posts allowed within the burst window.</li>
+<li>burstWindowMinutes: Burst Window (Minutes) (number, default: 5). Window size in minutes for burst detection (e.g. 5 minutes).</li>
+<li>exemptMods: Exempt Subreddit Moderators (boolean, default: true). Exempt subreddit moderators from all rate limits.</li>
+<li>exemptApproved: Exempt Approved Contributors (boolean, default: true). Exempt approved submitters from all rate limits.</li>
+<li>exemptFlairs: Exempt Post Flairs (string, default: ). Comma-separated list of post flair names exempt from rate limits (e.g. "Megathread, Announcement").</li>
+</ul>
+
 <h2>Automation Capabilities</h2>
 <ul>
 <li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>

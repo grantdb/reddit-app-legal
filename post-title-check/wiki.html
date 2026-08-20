@@ -31,7 +31,20 @@ Summary: Real-time title validation against community guidelines. Now with suppo
 <h2>Settings Reference</h2>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
 <ul>
-<li>legal_docs: Terms & Privacy (string, default: See). Terms & Privacy</li>
+<li>legal_docs: Terms & Privacy (string, default: See help text for official documentation links.). LEGAL_DOCS_URL</li>
+<li>removalMessage: Global Preamble Message (string, default: Hi! Your post was automatically removed because its title does not meet the requirements for r/{subreddit}.). The preamble added to every removal comment. The specific rule violation will be appended automatically.</li>
+<li>removalCommentTemplate: Removal Comment Template (string, default: {preamble}
+
+**Reason:** {reason}). Full template for the removal comment. Use {preamble} for the global preamble and {reason} for the specific rule reason. Markdown is supported.</li>
+<li>minWordCount: Minimum Word Count (number, default: 3). Posts whose titles have fewer words than this will be removed.</li>
+<li>reasonMinWordCount: Custom Removal Reason (paragraph, default: Your title is too short (minimum {minWordCount} words required). Please use more words so the post is descriptive enough for other users.). The reason appended to the removal comment when this rule is violated. Use {minWordCount} for required word count.</li>
+<li>bannedPhrases: Banned Phrases (comma-separated) (string, default: ). A comma-separated list of phrases. Any post title containing one of these phrases will be removed. Case-insensitive. Single words are matched as whole words only (e.g. "SYN" will NOT match "SYNWAVE"). Multi-word phrases are matched anywhere in the title.</li>
+<li>reasonBannedPhrases: Custom Removal Reason (paragraph, default: Your title contains a banned phrase: "{phrase}". Please rewrite your title without this phrase.). The reason appended to the removal comment when this rule is violated. Use {phrase} to inject the matched phrase.</li>
+<li>requireBrackets: Require Brackets [...] (boolean, default: false). When enabled, post titles must contain at least one bracketed tag, e.g. [Game] or [Tool].</li>
+<li>reasonRequireBrackets: Custom Removal Reason (paragraph, default: Your title is missing a required [Tag] (e.g. `[Game]`, `[Tool]`). Please include a bracketed category tag.). The reason appended to the removal comment when this rule is violated.</li>
+<li>englishOnly: English / ASCII Only (boolean, default: false). When enabled, post titles must consist of printable ASCII / Latin characters or emojis only. Foreign non-Latin scripts will be removed.</li>
+<li>reasonEnglishOnly: Custom Removal Reason (paragraph, default: Your title contains characters outside of the supported (English) character set. Please rewrite your title using standard English characters.). The reason appended to the removal comment when this rule is violated.</li>
+<li>moderatorExempt: Exempt Moderators from Title Checks (boolean, default: false). When enabled, posts submitted by subreddit moderators will skip all title rule checks.</li>
 </ul>
 
 <h2>Automation Capabilities</h2>
