@@ -1,7 +1,7 @@
 <h1>WikiSync Bot</h1>
 
 <p>Category: Utility<br>
-Version: v0.0.1<br>
+Version: v0.0.2<br>
 Visibility: Unlisted<br>
 Summary: Subreddit wiki synchronization engine for Reddit communities.</p>
 
@@ -14,11 +14,19 @@ Summary: Subreddit wiki synchronization engine for Reddit communities.</p>
 <h2>Permissions Used</h2>
 <ul>
 <li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+<li>http: External HTTP Fetch access [Domains: raw.githubusercontent.com]</li>
 </ul>
 
 <h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).</li>
+<li>AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).</li>
+</ul>
 <h3>Menu Actions</h3>
 <ul>
+<li>Sync Wiki Pages Now: Immediately check the fleet wiki manifest and push any changed pages, without waiting for the next scheduled check. (Location: subreddit)</li>
 <li>Update Wiki (Manual Test): Manual test trigger to write configured test content to the target wiki page. (Location: subreddit)</li>
 </ul>
 
@@ -33,7 +41,11 @@ Summary: Subreddit wiki synchronization engine for Reddit communities.</p>
 </ul>
 
 <h2>Data Storage</h2>
-<p>This app does not store persistent state in Redis.</p>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Key patterns: wikisync:hash:</li>
+</ul>
 
 <h2>Setup and Usage</h2>
 <ul>
@@ -50,6 +62,8 @@ Summary: Subreddit wiki synchronization engine for Reddit communities.</p>
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.2 — 2026-08-20<br>
+Standard fleet synchronization and maintenance.</p>
 <p>0.0.1 — 2026-08-20<br>
 Standard fleet synchronization and maintenance.; All notable changes to the WikiSync app will be documented in this file.</p>
 <p>0.0.1 — 2026-08-20<br>

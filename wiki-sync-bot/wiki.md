@@ -1,6 +1,6 @@
 WikiSync Bot
 Category: Utility
-Version: v0.0.1
+Version: v0.0.2
 Visibility: Unlisted
 Summary: Subreddit wiki synchronization engine for Reddit communities.
 
@@ -15,10 +15,13 @@ Key Features
 
 Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
+- redis: Redis key-value storage (state tracking, caching, strike memory)
+- http: External HTTP Fetch access [Domains: raw.githubusercontent.com]
 
 Triggers and Activation
 Event Triggers
-- Not documented yet.
+- AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).
+- AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).
 
 Custom Post Types and Entrypoints
 - None
@@ -35,7 +38,9 @@ Automation Capabilities
 - Updates User or Post Flair: No
 
 Data Storage
-This app does not store state in Redis.
+This app utilizes Reddit Redis storage:
+- Key-Value Strings (deduplication & cooldown markers)
+- Key Patterns: wikisync:hash:
 
 Setup and Usage
 - Install: Add WikiSync Bot to your subreddit.
@@ -47,6 +52,8 @@ Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 
 Version History
+0.0.2 — 2026-08-20
+- Standard fleet synchronization and maintenance.
 0.0.1 — 2026-08-20
 - Standard fleet synchronization and maintenance.
 - All notable changes to the WikiSync app will be documented in this file.
