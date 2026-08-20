@@ -1,0 +1,78 @@
+<h1>Ring Escape: Serpent Flagship</h1>
+
+<p>Category: Interactive<br>
+Version: v0.0.63<br>
+Visibility: Unlisted<br>
+Summary: Stealth infiltration game. Sabotage four systems aboard a Serpent Empire warship and escape through the rings.</p>
+
+<h2>Overview</h2>
+<p>Stealth infiltration game. Sabotage four systems aboard a Serpent Empire warship and escape through the rings.</p>
+
+<h2>Key Features</h2>
+<ul>
+<li>Stealth & Sabotage Mechanics: Deep gameplay loop requiring players to navigate a multi-level ship, stun guards tactically, and sabotage critical systems to unlock the extraction point.</li>
+<li>Multi-Level Progression: Escalating challenges across multiple distinct levels, ensuring players remain engaged over long play sessions.</li>
+<li>Persistent Global Leaderboards: Automatically tracks high scores on the main post to encourage long-term community competition and rivalry.</li>
+<li>Cross-Platform Support: Enjoy precise keyboard controls on desktop web browsers and highly responsive on-screen touch controls for Reddit mobile apps.</li>
+<li>Autonomous Game Logic: Fully automated score submission and level management. Once the event is launched, it runs entirely on its own without requiring any moderator oversight.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Sorted Sets (time-series audit logs)</li>
+<li>Key patterns: node:http</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add Ring Escape to your subreddit via the App Directory.</li>
+<li>App Settings: Open your subreddit's App Settings to configure optional parameters or custom messaging for the leaderboard.</li>
+<li>Usage: To start a community event, simply open the Mod Menu anywhere in your subreddit and select the "Create Ring Escape Post" action to spawn a new game post.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.63 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.62 — 2026-07-27<br>
+Verification & Sync: Standardized server Hono/Devvit route handling and Redis ZSET score ranking.</p>
+<p>0.0.61 — 2026-07-24<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/ring-escape/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/ring-escape/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/ring-escape">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

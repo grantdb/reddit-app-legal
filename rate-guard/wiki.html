@@ -1,0 +1,78 @@
+<h1>RateGuard</h1>
+
+<p>Category: Moderation<br>
+Version: v0.0.5<br>
+Visibility: Public<br>
+Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.</p>
+
+<h2>Overview</h2>
+<p>Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/rate-guard-flowchart.png">View flowchart image</a></p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>PostSubmit: Delivered by Reddit event router to endpoint /internal/trigger/post.</li>
+<li>PostCreate: Delivered by Reddit event router to endpoint /internal/trigger/post.</li>
+</ul>
+<h3>Menu Actions</h3>
+<ul>
+<li>GuardHub: RateGuard Settings: Configure posting frequency limits and cooldowns. (Location: subreddit)</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Hashes (structured records & alias indices)</li>
+<li>Sorted Sets (time-series audit logs)</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add Rate Guard to your subreddit through the Reddit App Directory.</li>
+<li>Configure: Open Mod Tools > App Settings > Rate Guard.</li>
+<li>Set Cadence: Configure your minimum time gap, 24-hour rolling cap, and burst limit thresholds.</li>
+<li>Save: The cadence engine applies immediately to all incoming community posts.</li>
+<li>No external servers or complicated bot hosting required. Clean, automated rate limiting inside Reddit.*</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.5 — 2026-08-20<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.4 — 2026-08-20<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.3 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/rate-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/rate-guard/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/rate-guard">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

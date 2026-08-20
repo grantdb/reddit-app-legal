@@ -1,0 +1,88 @@
+<h1>App Update Checker</h1>
+
+<p>Category: Utility<br>
+Version: v0.0.62<br>
+Visibility: Unlisted<br>
+Summary: AI-powered version tracking across the fleet. Uses Gemini 2.5 to bypass external scraper blocks.</p>
+
+<h2>Overview</h2>
+<p>AI-powered version tracking across the fleet. Uses Gemini 2.5 to bypass external scraper blocks.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png">View flowchart image</a></p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+<li>http: External HTTP Fetch access [Domains: raw.githubusercontent.com, registry.npmjs.org, api.github.com]</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).</li>
+<li>AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).</li>
+</ul>
+<h3>Menu Actions</h3>
+<ul>
+<li>Check for App Updates: Moderator menu action (Location: subreddit)</li>
+<li>Mark Apps Up-to-Date: Only use after verifying installed versions in Mod Tools > Installed Apps (Location: subreddit)</li>
+<li>Reset App Cache: Moderator menu action (Location: subreddit)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>warning: Before you continue (paragraph, default: If). Before you continue</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: No — Does not remove or filter content.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Hashes (structured records & alias indices)</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add App Update Checker to your subreddit through the Reddit App Directory.</li>
+<li>Configure Settings: Open Mod Tools > App Settings > App Update Checker to adjust notification preferences.</li>
+<li>Run Initial Check: Select Check for App Updates from the subreddit overflow menu to generate your first report.</li>
+<li>Relax: Scheduled daily audits will keep your team informed of any future releases.</li>
+<li>No manual app directory checking. Automated update notifications delivered directly to modmail.*</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.62 — 2026-08-20<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.61 — 2026-08-20<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.60 — 2026-08-20<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/app-update-checker/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/app-update-checker/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/app-update-checker">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

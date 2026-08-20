@@ -1,0 +1,99 @@
+<h1>Suspended Remover</h1>
+
+<p>Category: Security<br>
+Version: v1.0.80<br>
+Visibility: Public<br>
+Summary: High-precision account purification engine. Fleet-wide security infrastructure.</p>
+
+<h2>Overview</h2>
+<p>High-precision account purification engine. Fleet-wide security infrastructure.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/suspended-remove-flowchart.png">View flowchart image</a></p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).</li>
+<li>AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).</li>
+</ul>
+<h3>Menu Actions</h3>
+<ul>
+<li>GuardHub: Scan Modqueue for Suspended Users: Manually run the suspended user queue scan immediately (Location: subreddit)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>enabled: Enable automated enforcement (boolean, default: true). Turn this off to pause all scan actions without uninstalling the app.</li>
+<li>recheckDays: Days between rechecks (number, default: -). Default: 0 for legacy behavior and lowest rollout friction. Use 0 to allow</li>
+<li>confirmChecks: Required verification checks (number, default: -). Default: 1 for legacy behavior and lowest rollout friction. Increase this if</li>
+<li>duringWaitAction: What to do during the waiting window (select, default: -). What to do during the waiting window</li>
+<li>addDuringWaitNote: Add mod note to item during waiting window (boolean, default: -). Adds the waiting-period note to the item when the waiting action is applied.</li>
+<li>duringWaitReason: Waiting-period mod note text (string, default: -). This note is added to the item when the waiting-period action is applied.</li>
+<li>approveRecoveredTempRemovals: Auto-approve if account recovers (hidden/temp-removed items) (boolean, default: -). If a later check shows the account is accessible again, the app will automatically approve</li>
+<li>finalAction: Final action after threshold (select, default: -). Final action after threshold</li>
+<li>markAsSpam: [Deprecated] Mark final removal as spam (boolean, default: -). This older setting is still shown for compatibility with existing installs.</li>
+<li>addFinalNote: Add mod note to item on final action (boolean, default: -). Adds the final-action note to the item when it is removed. Turn this off if</li>
+<li>finalReason: Final-action mod note text (string, default: Suspended). This note is added to the item when the final action is applied.</li>
+<li>addUserNote: Add mod note to user on final action (boolean, default: -). Adds a note to the user</li>
+<li>userNoteLabel: User note label (select, default: -). User note label</li>
+<li>userNoteText: User note text (string, default: Account). User note text</li>
+<li>legalDocs: Terms & Privacy (string, default: See). Terms & Privacy</li>
+<li>scanModqueueJob: GuardHub: Scan Modqueue for Suspended Users (all, default: -). GuardHub: Scan Modqueue for Suspended Users</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: Yes — Attaches removal notes when taking moderation action.</li>
+<li>Approves Content: Yes — Automatically approves eligible content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Hashes (structured records & alias indices)</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add Suspended Remove to your subreddit through the Reddit App Directory.</li>
+<li>Configure Pipeline: Open Mod Tools > App Settings > Suspended Remove.</li>
+<li>Choose Waiting Mode: Select your preferred waiting-stage action (*Filter & Hide* recommended).</li>
+<li>Save: Background queue scanning activates immediately with zero manual maintenance.</li>
+<li>No more orphaned mod queue items. Clean, safe queue automation directly inside Reddit.*</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>1.0.80 — 2026-08-16<br>
+Fix: Removed duplicate manifest menu declaration in `devvit.json` to resolve double menu trigger in subreddit moderator tools.</p>
+<p>1.0.79 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>1.0.78 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/suspended-remove">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

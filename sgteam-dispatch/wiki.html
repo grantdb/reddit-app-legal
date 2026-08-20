@@ -1,0 +1,77 @@
+<h1>SG Team Dispatch</h1>
+
+<p>Category: Interactive<br>
+Version: v0.0.4<br>
+Visibility: Unlisted<br>
+Summary: Replayable Stargate SG-1 inspired tactical mission command game.</p>
+
+<h2>Overview</h2>
+<p>Replayable Stargate SG-1 inspired tactical mission command game.</p>
+
+<h2>Key Features</h2>
+<ul>
+<li>Tactical SG Team Roster Selection: Assemble specialized 4-member SG teams (Commander, Archaeologist, Engineer, Heavy Specialist, Tactical Specialist) with unique stat bonuses and role synergies.</li>
+<li>Dynamic Offworld Encounters: Multi-phase tactical missions (Opener, Mid-Game, Extraction) with branching risk choices influenced by biome, threat levels, and team role perks.</li>
+<li>Resource & Threat Status Management: Balance team Health, Time, Intel, Morale, and Goa'uld Alert meters to ensure mission success and safe gate extraction.</li>
+<li>Daily Seeded Operations & Random Runs: Play canonical daily offworld missions shared deterministically across the subreddit or command procedurally generated random operations.</li>
+<li>Server-Authoritative State Engine: All encounter options, decision tracking, resource state mutations, score evaluations, and ending tier determinations are computed strictly on the server.</li>
+<li>Redis Leaderboards & Tie-Handling: Subreddit all-time and daily command leaderboards with score preservation (no lower-score overwrites) and high-precision timestamp tie-breaking.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Hashes (structured records & alias indices)</li>
+<li>Sorted Sets (time-series audit logs)</li>
+<li>Key patterns: node:http, sgtd:daily</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add SG Team Dispatch to your subreddit via the Devvit platform.</li>
+<li>Post Creation: Open the Mod Menu on your subreddit and select "Create SG Team Dispatch Post".</li>
+<li>Play & Compete: Commanders interact with the mission control canvas directly inside Reddit on mobile or desktop.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.4 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.3 — 2026-07-27<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.2 — 2026-07-27<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/sgteam-dispatch/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/sgteam-dispatch/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/sgteam-dispatch">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

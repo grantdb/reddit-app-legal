@@ -1,0 +1,64 @@
+<h1>WikiSync Bot</h1>
+
+<p>Category: Utility<br>
+Version: v0.0.1<br>
+Visibility: Unlisted<br>
+Summary: Subreddit wiki synchronization engine for Reddit communities.</p>
+
+<h2>Overview</h2>
+<p>Subreddit wiki synchronization engine for Reddit communities.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/wiki-sync-bot-flowchart.png">View flowchart image</a></p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Menu Actions</h3>
+<ul>
+<li>Update Wiki (Manual Test): Manual test trigger to write configured test content to the target wiki page. (Location: subreddit)</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: No — Does not remove or filter content.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app does not store persistent state in Redis.</p>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add WikiSync Bot to your subreddit.</li>
+<li>Configure: Open Mod Tools > App Settings > WikiSync Bot.</li>
+<li>Set Target Path: Enter the target wiki page path (e.g. `index/all-apps/wiki-sync-bot-test`).</li>
+<li>Test Write: Open the subreddit menu and click Update Wiki (Manual Test)** to verify the write.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.1 — 2026-08-20<br>
+Standard fleet synchronization and maintenance.; All notable changes to the WikiSync app will be documented in this file.</p>
+<p>0.0.1 — 2026-08-20<br>
+Initial V1 release for manual wiki write testing.; Subreddit-level moderator menu action to create/update wiki pages.; Configurable test page path and markdown content via App Settings.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/wiki-sync-bot/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/wiki-sync-bot/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/wiki-sync-bot">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

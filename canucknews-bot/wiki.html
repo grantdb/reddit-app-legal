@@ -1,0 +1,104 @@
+<h1>CanuckNews Bot</h1>
+
+<p>Category: News<br>
+Version: v1.1.39<br>
+Visibility: Public<br>
+Summary: Regional Canadian news aggregation with moderator triggers.</p>
+
+<h2>Overview</h2>
+<p>Regional Canadian news aggregation with moderator triggers.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/CanuckNews-bot-flowchart.png">View flowchart image</a></p>
+
+<h2>Key Features</h2>
+<ul>
+<li>% Manual & Moderator Control: Operates strictly on-demand. The bot will never auto-post or run background crons.</li>
+<li>Candidate Scouting Pipeline: Interactively scans CBC, Global News, and Globe & Mail feeds based on your selected subject focus (Health, Science, Tech, Business, Lifestyle, Regional).</li>
+<li>Pre-Publish Editor: Presents candidate stories in an interactive Devvit form allowing moderators to inspect and customize the post title, link URL, flair, and spoiler settings before publishing.</li>
+<li>Content & Spam Filtering: Automatically filters out political content and controversial topics to maintain a neutral community environment.</li>
+<li>Day Redis Deduplication: Prevents duplicate link submissions across all scouting runs.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+<li>http: External HTTP Fetch access [Domains: www.cbc.ca, cbc.ca, globalnews.ca, www.theglobeandmail.com, theglobeandmail.com]</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Menu Actions</h3>
+<ul>
+<li>Scout Canadian News: Moderator menu action (Location: subreddit)</li>
+<li>Scout Canadian News: Moderator menu action (Location: post)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>legal_docs: Terms & Privacy (string, default: See). Terms & Privacy</li>
+<li>flair_national: Canada / National Flair ID (string, default: -). Canada / National Flair ID</li>
+<li>flair_bc: British Columbia Flair ID (string, default: -). British Columbia Flair ID</li>
+<li>flair_ab: Alberta Flair ID (string, default: -). Alberta Flair ID</li>
+<li>flair_prairies: Sask/Manitoba Flair ID (string, default: -). Sask/Manitoba Flair ID</li>
+<li>flair_on: Ontario Flair ID (string, default: -). Ontario Flair ID</li>
+<li>flair_qc: Quebec Flair ID (string, default: -). Quebec Flair ID</li>
+<li>flair_atlantic: Atlantic Flair ID (string, default: -). Atlantic Flair ID</li>
+<li>flair_north: North/Territories Flair ID (string, default: -). North/Territories Flair ID</li>
+<li>editedTitle: Post Title (string, default: defaultTitle). Post Title</li>
+<li>targetUrl: Article URL (string, default: defaultUrl). Article URL</li>
+<li>flairId: Flair ID (Optional) (string, default: ). Flair ID (Optional)</li>
+<li>markAsSpoiler: Mark post as spoiler (boolean, default: false). Mark post as spoiler</li>
+<li>selectedCandidateId: Select Article to Review & Edit (select, default: options.length). Select Article to Review & Edit</li>
+<li>postCount: Candidate Pool Size (select, default: [3]). Candidate Pool Size</li>
+<li>subject_filters: Subject Focus (select, default: -). Subject Focus</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Key patterns: canucknews:scouted</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add Canuck News Bot to your subreddit via the App Directory.</li>
+<li>App Settings: Navigate to Mod Tools > App Settings > Canuck News Bot to map optional regional post flair IDs.</li>
+<li>Usage: Open the subreddit Mod Menu and click Scout Canadian News to begin scouting.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>1.1.39 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>1.1.38 — 2026-08-09<br>
+Standard fleet synchronization and maintenance.</p>
+<p>1.1.37 — 2026-08-08<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/canucknews-bot/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/canucknews-bot/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/canucknews-bot">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

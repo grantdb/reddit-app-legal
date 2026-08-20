@@ -1,0 +1,93 @@
+<h1>Canadian News</h1>
+
+<p>Category: News<br>
+Version: v0.0.54<br>
+Visibility: Public<br>
+Summary: Regional Canadian news aggregator. Refactored to include political news as an optional subject.</p>
+
+<h2>Overview</h2>
+<p>Regional Canadian news aggregator. Refactored to include political news as an optional subject.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/canadian-news-flowchart.png">View flowchart image</a></p>
+
+<h2>Key Features</h2>
+<ul>
+<li>% Manual Moderator Control: Zero auto-posting or background crons. You decide when news is scouted and published.</li>
+<li>Multi-Subject Scouting: Scout stories across Politics, Health, Science, Technology, Crime, Business, Lifestyle, or Regional news feeds.</li>
+<li>Pre-Publish Editor: Review scouted candidate stories in an interactive Devvit form to customize the post title, target URL, and spoiler tags prior to posting.</li>
+<li>Spam Filtering & Deduplication: Automatically filters promotional and spam content while enforcing 30-day link deduplication in Redis.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+<li>http: External HTTP Fetch access [Domains: www.cbc.ca, cbc.ca, globalnews.ca, www.theglobeandmail.com, theglobeandmail.com]</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Menu Actions</h3>
+<ul>
+<li>Scout Canadian News: Moderator menu action (Location: subreddit)</li>
+<li>Scout Canadian News: Moderator menu action (Location: post)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>legal_docs: Terms & Privacy (string, default: See). Terms & Privacy</li>
+<li>editedTitle: Post Title (string, default: defaultTitle). Post Title</li>
+<li>targetUrl: Article URL (string, default: defaultUrl). Article URL</li>
+<li>markAsSpoiler: Mark post as spoiler (boolean, default: false). Mark post as spoiler</li>
+<li>selectedCandidateId: Select Article to Review & Edit (select, default: options.length). Select Article to Review & Edit</li>
+<li>postCount: Candidate Pool Size (select, default: [3]). Candidate Pool Size</li>
+<li>subject_filters: Subject Focus (select, default: -). Subject Focus</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Key patterns: canadian-news:scouted</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add Canadian News App to your subreddit via the App Directory.</li>
+<li>Usage: Open the subreddit Mod Menu and click Scout Canadian News to launch the interactive scouting workflow.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.54 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.53 — 2026-08-09<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.52 — 2026-08-08<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/canadian-news/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/canadian-news/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/canadian-news">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

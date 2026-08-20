@@ -1,0 +1,78 @@
+<h1>Linux Quest</h1>
+
+<p>Category: Community<br>
+Version: v0.0.122<br>
+Visibility: Public<br>
+Summary: Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.</p>
+
+<h2>Overview</h2>
+<p>Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.</p>
+
+<h2>Key Features</h2>
+<ul>
+<li>Context-Aware Scenarios: Features engaging, interactive simulations covering common issues like installations, hardware compatibility, and terminal troubleshooting.</li>
+<li>Support Readiness Brief: Upon completing the quest, the game generates a formatted, shareable summary including the user's system context and attempted fixes, ready to be pasted into a real support thread.</li>
+<li>Behavioral Scoring: Measures and rewards support-readiness behavior (precision, clarity, providing logs) rather than expecting the user to know technical trivia.</li>
+<li>Interactive Onboarding: Clear mission objectives displayed natively on startup to hook users immediately.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: No — Does not remove or filter content.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Sorted Sets (time-series audit logs)</li>
+<li>Key patterns: node:http, node:events</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add Linux Quest to your subreddit via the App Directory.</li>
+<li>Dashboard Initialization: Navigate to your subreddit's Mod Tools and open the Linux Quest configuration post if you wish to tweak settings.</li>
+<li>Usage: Users can launch the quest directly from an interactive post in the community. We recommend linking to it from your subreddit's sidebar or rules.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.122 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.121 — 2026-07-27<br>
+Verification & Sync: Standardized server error status code handling and Redis ZSET leaderboard query performance.</p>
+<p>0.0.120 — 2026-07-24<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/linux-quest/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/linux-quest/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/linux-quest">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

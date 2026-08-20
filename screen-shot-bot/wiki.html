@@ -1,0 +1,100 @@
+<h1>Screen-Shot Bot</h1>
+
+<p>Category: Rendering<br>
+Version: v1.0.77<br>
+Visibility: Public<br>
+Summary: Automated screen-capture and visual logging utility.</p>
+
+<h2>Overview</h2>
+<p>Automated screen-capture and visual logging utility.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/screen-shot-bot-flowchart.png">View flowchart image</a></p>
+
+<h2>Key Features</h2>
+<ul>
+<li>Automated AI Transcription: Integrates with Gemini to instantly and accurately extract precise text strings from complex, grainy, or poorly lit technical images.</li>
+<li>Searchable Indexing: By converting static images of crash logs into text-based stickied comments, it ensures that your subreddit's error reports are fully searchable by future users experiencing the same issue.</li>
+<li>Configurable Targets: Granular settings allow you to choose exactly what the bot looks for. You can configure it to transcribe *all* terminal images, or only activate when it detects specific contexts (like Errors, System Info, or Config files).</li>
+<li>Mod Approval Coverage: Safely operates alongside your existing moderation workflow. It will automatically check new posts, and intelligently re-process posts if they are held and later approved by a moderator.</li>
+<li>Manual Actions: Moderators can manually trigger an on-demand transcription of older posts using the Mod Actions menu.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+<li>http: External HTTP Fetch access [Domains: generativelanguage.googleapis.com, i.redd.it, preview.redd.it, imgur.com]</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.</li>
+<li>PostCreate: Delivered by Reddit event router to endpoint /internal/on-post-create.</li>
+<li>ModAction: Delivered by Reddit event router to endpoint /internal/on-mod-action.</li>
+<li>AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).</li>
+<li>AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).</li>
+</ul>
+<h3>Menu Actions</h3>
+<ul>
+<li>Extract text from image (Gemini): Uses Gemini Vision to extract text from screenshots or terminal photos (Location: post)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>process_post_delayed: Legal Documentation (group, default: -). Legal Documentation</li>
+<li>comment_format: Standard (Large Code Block) (select, default: -). Standard (Large Code Block)</li>
+<li>detection_target: All Terminal Outputs (select, default: -). All Terminal Outputs</li>
+<li>automation_mode: Automatic (New Posts) (select, default: [auto]). Automatic (New Posts)</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: No — Does not remove or filter content.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add Screen Shot Bot to your subreddit via the App Directory.</li>
+<li>App Settings:</li>
+<li>Add your Google Gemini API key to the settings.</li>
+<li>Select your "Extraction Target" from the dropdown list.</li>
+<li>Usage: The bot runs automatically. To use it manually on an old post, use the "Extract text from image (Gemini)" menu item in the post's mod menu.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>1.0.77 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>1.0.76 — 2026-08-10<br>
+Standard fleet synchronization and maintenance.</p>
+<p>1.0.75 — 2026-08-04<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/screen-shot-bot/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/screen-shot-bot/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/screen-shot-bot">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

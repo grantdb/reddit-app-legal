@@ -1,0 +1,97 @@
+<h1>DistroFeed Bot</h1>
+
+<p>Category: Automation<br>
+Version: v0.1.105<br>
+Visibility: Public<br>
+Summary: Linux aggregator. Upgraded to Gemini 2.5 metadata extraction. Fixed network permissions.</p>
+
+<h2>Overview</h2>
+<p>Linux aggregator. Upgraded to Gemini 2.5 metadata extraction. Fixed network permissions.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/DistroFeed-bot-flowchart.png">View flowchart image</a></p>
+
+<h2>Key Features</h2>
+<ul>
+<li>% Manual & Moderator Control: Zero auto-posting or background crons. Operates via a 2-stage Mod Menu workflow.</li>
+<li>AI-Powered Search Grounding: Uses Google Gemini 2.5 Flash to scan DistroWatch, Phoronix, and 9to5Linux for recent major OS releases and kernel updates.</li>
+<li>Interactive Pre-Publish Editor: Presents candidate updates in an interactive Devvit form where moderators can customize post title, target URL, TL;DR summary, post flair, and sticky comment options.</li>
+<li>Deduplication Engine: Enforces Redis URL and topic slug tracking to prevent duplicate coverage.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+<li>http: External HTTP Fetch access [Domains: generativelanguage.googleapis.com]</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Menu Actions</h3>
+<ul>
+<li>1. Scout Distro Updates: Moderator menu action (Location: subreddit)</li>
+<li>1. Scout Distro Updates: Moderator menu action (Location: post)</li>
+<li>2. Review Scouted Updates: Moderator menu action (Location: subreddit)</li>
+<li>2. Review Scouted Updates: Moderator menu action (Location: post)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>gemini_api_key: Include Major Releases (string, default: tr). Required. Get yours at aistudio.google.com. Used for all source scanning.</li>
+<li>include_serious_updates: Post Title (boolean, default: true). Post significant updates: kernel releases, security patches.</li>
+<li>targetUrl: Post Link URL (string, default: defaultUrl). Post Link URL</li>
+<li>editedSummary: TL;DR Summary (Comment Text) (paragraph, default: defaultBody). TL;DR Summary (Comment Text)</li>
+<li>flairText: Post Flair Text (string, default: defaultFlair). Post Flair Text</li>
+<li>postStickyComment: Submit TL;DR summary as sticky comment (boolean, default: true). Submit TL;DR summary as sticky comment</li>
+<li>selectedIndex: Select Linux Update Candidate (select, default: options.length). Select Linux Update Candidate</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: Yes — Updates post or user flair based on rules.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Sorted Sets (time-series audit logs)</li>
+<li>Key patterns: distrofeed:scouted_candidates, distrofeed:posted_urls</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add DistroFeed Bot to your subreddit via the App Directory.</li>
+<li>App Settings: Navigate to Mod Tools > App Settings > DistroFeed Bot and provide a Google Gemini API Key (from aistudio.google.com).</li>
+<li>Usage: Open the subreddit Mod Menu to scout and review updates.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.1.105 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.1.104 — 2026-08-09<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.1.103 — 2026-08-08<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/distrofeed-bot/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/distrofeed-bot/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/distrofeed-bot">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

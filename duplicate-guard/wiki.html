@@ -1,0 +1,79 @@
+<h1>Duplicate Guard</h1>
+
+<p>Category: Moderation<br>
+Version: v0.0.33<br>
+Visibility: Unlisted<br>
+Summary: Moderation app that uses onPostSubmit to detect recent duplicate subject/topic posts.</p>
+
+<h2>Overview</h2>
+<p>Moderation app that uses onPostSubmit to detect recent duplicate subject/topic posts.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/duplicate-guard-flowchart.png">View flowchart image</a></p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.</li>
+<li>PostCreate: Delivered by Reddit event router to endpoint /internal/on-post-create.</li>
+</ul>
+<h3>Menu Actions</h3>
+<ul>
+<li>Clear Duplicate Lock: Moderator menu action (Location: post)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Sorted Sets (time-series audit logs)</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add Duplicate Guard to your subreddit through the Reddit App Directory.</li>
+<li>Configure: Open Mod Tools > App Settings > Duplicate Guard.</li>
+<li>Set Thresholds: Choose your preferred Match Mode (Strict or Balanced) and lookback post limit.</li>
+<li>Save: Settings apply immediately to all incoming community submissions.</li>
+<li>No external tools required. Automated duplicate protection right inside Reddit.*</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.33 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.32 — 2026-08-01<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.31 — 2026-08-01<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/duplicate-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/duplicate-guard/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/duplicate-guard">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

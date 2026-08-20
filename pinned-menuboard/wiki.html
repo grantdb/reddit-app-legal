@@ -1,0 +1,70 @@
+<h1>Pinned Menuboard</h1>
+
+<p>Category: Moderation<br>
+Version: v0.0.61<br>
+Visibility: Public<br>
+Summary: A centralized menu board for pinned posts</p>
+
+<h2>Overview</h2>
+<p>A centralized menu board for pinned posts</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/pinned-menuboard-flowchart.png">View flowchart image</a></p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: No — Does not remove or filter content.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Key patterns: node:http</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add Pinned Menuboard to your subreddit through the Reddit App Directory.</li>
+<li>Generate Board: Select Generate Pinned Menuboard from Subreddit Mod Tools and sticky the resulting post.</li>
+<li>Feature Content: Open any post and select Toggle on Menuboard to add it to an open slot.</li>
+<li>Customize: Adjust board headers and styling preferences in App Settings anytime.</li>
+<li>No markdown link tables to update manually. Visual community navigation directly inside your feed.*</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.61 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.60 — 2026-08-04<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.59 — 2026-08-04<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/pinned-menuboard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/pinned-menuboard/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/pinned-menuboard">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

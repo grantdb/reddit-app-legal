@@ -1,0 +1,79 @@
+<h1>DomainGuard</h1>
+
+<p>Category: Security<br>
+Version: v0.0.147<br>
+Visibility: Public<br>
+Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.</p>
+
+<h2>Overview</h2>
+<p>Professional URL and domain moderation engine with singleton architecture and hardened API gates.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/domain-guard-flowchart.png">View flowchart image</a></p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>PostCreate: Delivered by Reddit event router to endpoint /internal/trigger/post.</li>
+<li>PostSubmit: Delivered by Reddit event router to endpoint /internal/trigger/post.</li>
+<li>CommentCreate: Delivered by Reddit event router to endpoint /internal/trigger/comment.</li>
+<li>CommentSubmit: Delivered by Reddit event router to endpoint /internal/trigger/comment.</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: Yes — Sends notifications or summaries to modmail.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Hashes (structured records & alias indices)</li>
+<li>Sorted Sets (time-series audit logs)</li>
+<li>Key patterns: node:http, node:events, hover:border-slate-500</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add Domain Guard to your subreddit through the Reddit App Directory.</li>
+<li>Configure: Open GuardHub: DomainGuard Dashboard from Subreddit Mod Tools.</li>
+<li>Create Rules: Add your domain allowlist or blocklist in Audit Mode to safely verify matching behavior.</li>
+<li>Enforce: Once satisfied with audit results, switch rules to Live mode to begin automated enforcement.</li>
+<li>No complex regex configuration required. Full control stays in your native dashboard.*</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.147 — 2026-08-18<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.146 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.145 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/domain-guard">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

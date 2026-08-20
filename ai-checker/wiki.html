@@ -1,0 +1,84 @@
+<h1>AI Checker</h1>
+
+<p>Category: Security<br>
+Version: v0.0.81<br>
+Visibility: Public<br>
+Summary: Moderator-triggered AI detection engine. Upgraded to native Gemini 1.5 Flash for high-speed analysis.</p>
+
+<h2>Overview</h2>
+<p>Moderator-triggered AI detection engine. Upgraded to native Gemini 1.5 Flash for high-speed analysis.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ai-checker-flowchart.png">View flowchart image</a></p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+<li>http: External HTTP Fetch access [Domains: generativelanguage.googleapis.com, api.gptzero.me, api.sightengine.com, api.thehive.ai, i.redd.it, preview.redd.it, external-preview.redd.it, i.imgur.com]</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>PostCreate: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostCreate' }).</li>
+</ul>
+<h3>Menu Actions</h3>
+<ul>
+<li>Check AI Content: Moderator menu action (Location: post)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.tsx</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>check_ai_post_eligibility: Provider Configuration (group, default: -). Provider Configuration</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: No — Does not remove or filter content.</li>
+<li>Dispatches Modmail Alerts: Yes — Sends notifications or summaries to modmail.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add AI Checker to your subreddit through the Reddit App Directory.</li>
+<li>Configure Provider: Open Mod Tools > App Settings > AI Checker and add your provider API key.</li>
+<li>Set Preferences: Choose between on-demand menu auditing or automated background scanning.</li>
+<li>Save: Start evaluating synthetic content directly from your native moderation workflow.</li>
+<li>No external browser extensions required. Multi-model AI detection right inside Reddit.*</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.81 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.80 — 2026-08-02<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.79 — 2026-08-02<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/ai-checker/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/ai-checker/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/ai-checker">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

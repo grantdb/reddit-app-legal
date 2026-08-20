@@ -1,0 +1,79 @@
+<h1>AutoMod Easy</h1>
+
+<p>Category: Moderation<br>
+Version: v0.0.135<br>
+Visibility: Public<br>
+Summary: No-code visual rule builder for AutoModerator. Generates and validates YAML configurations automatically.</p>
+
+<h2>Overview</h2>
+<p>No-code visual rule builder for AutoModerator. Generates and validates YAML configurations automatically.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/automod-easy-flowchart.png">View flowchart image</a></p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>Harassment Filter: Rule Name (string, default: -). Rule Name</li>
+<li>keywords: Keywords to Ban (comma separated) (string, default: -). Keywords to Ban (comma separated)</li>
+<li>reason: Internal Mod Note (e.g. (string, default: -). Internal Mod Note (e.g.</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Hashes (structured records & alias indices)</li>
+<li>Key patterns: node:http, automod_easy:meta</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add AutoMod Easy to your subreddit through the Reddit App Directory.</li>
+<li>Open Trainer: Select AutoMod Easy Trainer from Subreddit Mod Tools.</li>
+<li>Audit Rules: Review the initial health scorecard of your current AutoMod configuration.</li>
+<li>Experiment: Use the Sandbox Lab to test new rules or generate patterns from spam samples.</li>
+<li>No scary live-testing mistakes. Safe, visual AutoModerator development inside Reddit.*</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.135 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.134 — 2026-07-29<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.133 — 2026-07-29<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/automod-easy/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/automod-easy/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/automod-easy">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

@@ -1,0 +1,83 @@
+<h1>TestRank</h1>
+
+<p>Category: Utility<br>
+Version: v0.0.14<br>
+Visibility: Unlisted<br>
+Summary: Tester recognition and ranking app for r/droidapptesters.</p>
+
+<h2>Overview</h2>
+<p>Tester recognition and ranking app for r/droidapptesters.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/testrank-flowchart.png">View flowchart image</a></p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
+<li>PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.</li>
+<li>CommentCreate: Delivered by Reddit event router to endpoint /internal/on-comment-create.</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: Yes — Updates post or user flair based on rules.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Sorted Sets (time-series audit logs)</li>
+<li>Key patterns: node:http, tr:dashboard_post_url:global, tr:leaderboard_post_url:global</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Post your app testing thread in the subreddit with an appropriate link flair.</li>
+<li>Review comments from testers. On helpful replies, open the comment menu (`...`) and click:</li>
+<li>Mark Helpful Feedback (+10 pts)</li>
+<li>Mark Bug Found (+25 pts)</li>
+<li>Mark Retest (+15 pts)</li>
+<li>Alternatively, open Open This Post’s TestRank Dashboard from the post overflow menu to view all post commenters and award summary cards.</li>
+<li>To opt out a specific thread from TestRank, comment `!testrank-optout` on your post.</li>
+<li>Test apps shared in the subreddit and leave descriptive feedback.</li>
+<li>Track your cumulative XP, current rank, and unlocked milestone badges directly in the TestRank dashboard.</li>
+<li>Watch your subreddit user flair automatically upgrade as you climb the prestige ladder.</li>
+<li>Select Open TestRank Mod Dashboard from the subreddit menu to inspect real-time weekly/monthly leaderboards, toggle post or user participation, and view the immutable audit log.</li>
+<li>Select Create TestRank Custom Post to generate a pinned public leaderboard post for the community.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.14 — 2026-08-18<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.13 — 2026-08-18<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.12 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/testrank/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/testrank/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/testrank">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

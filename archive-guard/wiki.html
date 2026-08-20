@@ -1,0 +1,103 @@
+<h1>Archive-Guard</h1>
+
+<p>Category: Moderation<br>
+Version: v0.0.2<br>
+Visibility: Unlisted<br>
+Summary: Subreddit memory engine that detects recurring discussion topics, clusters repeat questions, and tracks canonical threads.</p>
+
+<h2>Overview</h2>
+<p>Subreddit memory engine that detects recurring discussion topics, clusters repeat questions, and tracks canonical threads.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-guard-flowchart.png">View flowchart image</a></p>
+
+<h2>Key Features</h2>
+<ul>
+<li>Explainable Topic Clustering: Automatically extracts meaningful tokens and bigrams to detect recurring discussion subjects on post submission without black-box magic.</li>
+<li>Click Canonical Threads: Mark high-effort community guides as the "definitive source" for any topic directly from Reddit's post menu.</li>
+<li>Mod-Safe by Design: Operates purely as a moderator assistant with private mod reports and internal logs. No automatic post removals or intrusive user interruptions in v1.</li>
+<li>On-Demand Community Digests: Generate clean markdown summaries spotlighting your most frequently discussed topics and essential resources.</li>
+<li>Atomic Redis Reliability: Powered by Redis transactions and strict single-trigger idempotency for exact-once execution.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.</li>
+</ul>
+<h3>Menu Actions</h3>
+<ul>
+<li>Archive-Guard: Set as Canonical: Moderator menu action (Location: post)</li>
+<li>Archive-Guard: View Topic History: Moderator menu action (Location: post)</li>
+<li>Archive-Guard: Ignore Match: Moderator menu action (Location: post)</li>
+<li>Archive-Guard: Generate Digest Now: Moderator menu action (Location: subreddit)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>postId: Post ID (string, default: data?.postId). Post ID</li>
+<li>postTitle: Post Title (string, default: data?.postTitle). Post Title</li>
+<li>postUrl: Post URL (string, default: data?.postUrl). Post URL</li>
+<li>topicName: Canonical Topic Title / Name (string, default: data?.suggestedTopicName). A clear, descriptive label for this recurring subject (e.g.,</li>
+<li>digestPreview: Generated Markdown Digest (paragraph, default: data?.digestMarkdown). Generated Markdown Digest</li>
+<li>enableModReports: Enable Mod Reports for Recurring Topics (boolean, default: true). When enabled, Archive-Guard submits a private mod report when a recurring topic is detected.</li>
+<li>minOverlapScore: Minimum Match Confidence Threshold (%) (number, default: 65). Conservative baseline is 65%. Increase to reduce flags; decrease to catch broader variations.</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Hashes (structured records & alias indices)</li>
+<li>Sorted Sets (time-series audit logs)</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add app via Reddit App Directory or Mod Tools.</li>
+<li>Open: Open Mod Tools -&gt; App Settings in your subreddit to configure options.</li>
+<li>Configure: Set active options and API keys as needed.</li>
+<li>Use: App runs automatically in background according to event triggers and settings.</li>
+<li>Review: Verify bot activity and comments directly on subreddit posts or in mod logs.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.2 — 2026-08-18<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.1 — 2026-08-18<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.1.0 — 2026-08-17<br>
+Initial release of Archive-Guard.; Real-time `onPostSubmit` ingestion with deterministic token and bigram overlap topic clustering.; Redis transaction safety for atomic hit counts, post deduplication, and topic cluster indexing.; Contextual moderator post actions: Set as Canonical, View Topic History, and Ignore Match.; Subreddit-level moderator menu action: Generate Digest Now with structured markdown preview.; Mod-only safety defaults with explainable match reasons and zero auto-removals.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/archive-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/archive-guard/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/archive-guard">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

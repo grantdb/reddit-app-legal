@@ -1,0 +1,78 @@
+<h1>Stargate Trivia</h1>
+
+<p>Category: Interactive<br>
+Version: v0.0.123<br>
+Visibility: Public<br>
+Summary: Interactive trivia engine with rich UI and global leaderboards.</p>
+
+<h2>Overview</h2>
+<p>Interactive trivia engine with rich UI and global leaderboards.</p>
+
+<h2>Key Features</h2>
+<ul>
+<li>Curated Content: Features a proprietary library of unique, canonical trivia questions ensuring that hardcore fans are challenged.</li>
+<li>Persistent Leaderboards: Encourages long-term community engagement by tracking high scores and milestones directly on the event post.</li>
+<li>Seamless Experience: A custom-designed, low-latency interface that ensures perfect mobile and desktop rendering without leaving the Reddit app.</li>
+<li>Autonomous Game Logic: Automatically handles answer validation, scoring, and session management—no moderator oversight required once the event is launched.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Sorted Sets (time-series audit logs)</li>
+<li>Key patterns: node:http, node:events</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add Stargate Trivia to your subreddit via the App Directory.</li>
+<li>App Settings: Open your subreddit's App Settings for Stargate Trivia to configure the number of questions per round or difficulty scaling.</li>
+<li>Usage: To start a community event, simply open the Mod Menu anywhere in your subreddit and select the "Launch Trivia Event" action.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.123 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.122 — 2026-07-24<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.121 — 2026-07-22<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/stargate-trivia/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/stargate-trivia/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/stargate-trivia">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

@@ -1,0 +1,96 @@
+<h1>Reference Reply Bot</h1>
+
+<p>Category: Support<br>
+Version: v0.0.12<br>
+Visibility: Unlisted<br>
+Summary: Post-only support intake and reference bot for r/grantdb.</p>
+
+<h2>Overview</h2>
+<p>Post-only support intake and reference bot for r/grantdb.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/reference-reply-bot-flowchart.png">View flowchart image</a></p>
+
+<h2>Key Features</h2>
+<ul>
+<li>Post-Only Support Focus: Listens strictly to `onPostSubmit` events to provide immediate triage and reference replies on new support submissions in `r/grantdb`.</li>
+<li>Confidence-Based Reply Shaping: Categorizes matched results into confidence bands (`high`, `medium`, `low`) to dynamically tailor response length, section visibility, and diagnostic blocks.</li>
+<li>Likely Cause & Safe-First Actions: Surfaces diagnostic `Likely cause` blocks for high/medium confidence matches and ranks safe, non-disruptive troubleshooting actions first (settings check → Mod Menu test → console logs).</li>
+<li>Semantic Intent Deduplication: Prunes near-duplicate troubleshooting bullets by intent signature (`dedupeBulletsByIntent`) to keep replies compact and focused.</li>
+<li>Atomic Concurrency Lock: Uses Redis `watch` and multi-exec transactions (`rrb:processing:`) to acquire a 30-second processing lock, preventing race conditions when event triggers fire concurrently.</li>
+<li>Post-Execution Replied Marker: The permanent deduplication marker (`rrb:replied:`) is written only after `submitComment` succeeds. If commenting fails, the lock is released in a `finally` block so the post can be retried safely.</li>
+<li>Structured Redis App Knowledge: App documentation records are stored in `rrb:apps` and `rrb:aliases` Redis hashes for easy bulk ingestion of fleet README files.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.</li>
+<li>PostCreate: Delivered by Reddit event router to endpoint /internal/on-post-create.</li>
+<li>AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
+<li>AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-upgrade.</li>
+</ul>
+<h3>Menu Actions</h3>
+<ul>
+<li>GrantDB Support: Clear My Cooldown: Reset your user testing cooldown in Redis so automated replies fire immediately. (Location: subreddit)</li>
+<li>GrantDB Support: Seed App Knowledge Database: Populate Redis with normalized app reference records from r/grantdb/wiki/bot_knowledge (or bundled fallback). (Location: subreddit)</li>
+<li>GrantDB Support: Clear Knowledge Database: Wipe stored app reference records, alias mappings, and metadata from Redis. (Location: subreddit)</li>
+<li>GrantDB Support: Analyze & Reply to Post: Manually run support intake analysis and post reference reply on demand. (Location: post)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Hashes (structured records & alias indices)</li>
+<li>Key patterns: rrb:apps, rrb:aliases, rrb:meta:schemaVersion, rrb:meta:seededAt, rrb:meta:seedSource, rrb:meta:subreddit</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add app via Reddit App Directory or Mod Tools.</li>
+<li>Open: Open Mod Tools -&gt; App Settings in your subreddit to configure options.</li>
+<li>Configure: Set active options and API keys as needed.</li>
+<li>Use: App runs automatically in background according to event triggers and settings.</li>
+<li>Review: Verify bot activity and comments directly on subreddit posts or in mod logs.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.12 — 2026-08-16<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.11 — 2026-08-11<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.10 — 2026-08-11<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/reference-reply-bot/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/reference-reply-bot/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/reference-reply-bot">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

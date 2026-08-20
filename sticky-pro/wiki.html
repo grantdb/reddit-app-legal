@@ -1,0 +1,117 @@
+<h1>Sticky-Pro</h1>
+
+<p>Category: Moderation<br>
+Version: v1.0.105<br>
+Visibility: Public<br>
+Summary: Automated moderator sticky suite with dynamic form population.</p>
+
+<h2>Overview</h2>
+<p>Automated moderator sticky suite with dynamic form population.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sticky-pro-flowchart.png">View flowchart image</a></p>
+
+<h2>Key Features</h2>
+<ul>
+<li>Unified Post Menu Modal: Open Sticky Pro: Post Sticky from any post menu to pick from your configured templates, write custom markdown, toggle top-pinning and comment locks, and set an optional auto-unsticky timer.</li>
+<li>One-Click Unsticky Action: Select Sticky Pro: Remove Sticky from the post overflow menu to immediately unpin and remove the active sticky comment and cancel any pending timers.</li>
+<li>Duration Expiration Timers: Automatically expire and remove sticky comments after a configurable countdown (1 hour, 6 hours, 12 hours, 24 hours, 3 days, 7 days) via scheduled background jobs.</li>
+<li>Auto-Sticky Posting: Can be configured to automatically submit and lock a sticky comment on every new post in the subreddit, with built-in deduplication and delayed eligibility checking.</li>
+<li>Auto-Pin Control: Configurable setting (`autoPin`) to control whether sticky comments are pinned to the top of the comment section or distinguished as moderator comments without pinning.</li>
+<li>Enhanced Comment Commands: Quick moderator commands (`!sticky 1 24h`, `!sticky 2 3d`, `!sticky 3`, `!unsticky`) available as fast mobile and desktop shortcuts.</li>
+<li>Reliable Deliveries: Automatically retries and bypasses platform rate limits when posting, ensuring your moderation actions never fail silently.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>CommentSubmit: Subscribed in main.ts via Devvit.addTrigger({ event: 'CommentSubmit' }).</li>
+<li>PostSubmit: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostSubmit' }).</li>
+<li>PostCreate: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostCreate' }).</li>
+</ul>
+<h3>Menu Actions</h3>
+<ul>
+<li>Sticky Pro: Post Sticky: Post, customize, and schedule a sticky comment on this post (Location: post)</li>
+<li>Sticky Pro: Remove Sticky: Unpin or remove the active sticky comment from this post (Location: post)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>label1: Custom Toast Name 1 (string, default: FAQ). Sets the display name for Template 1.</li>
+<li>text1: Sticky Content 1 (paragraph, default: Rules). Sets the display name for Template 2.</li>
+<li>label2: Custom Toast Name 2 (string, default: Rules). Sets the display name for Template 2.</li>
+<li>text2: Sticky Content 2 (paragraph, default: Custom). Sets the display name for Template 3.</li>
+<li>label3: Custom Toast Name 3 (string, default: Custom). Sets the display name for Template 3.</li>
+<li>text3: Sticky Content 3 (paragraph, default: false). Sticky Content 3</li>
+<li>enableAutoSticky: Enable Auto-Sticky on Every Post (boolean, default: false). Enable Auto-Sticky on Every Post</li>
+<li>autoStickyText: Auto-Sticky Content (paragraph, default: true). Auto-Sticky Content</li>
+<li>autoPin: Pin Auto-Sticky Comment to Top (boolean, default: true). When enabled, auto-sticky comments are stickied to top of thread. When disabled, comments are distinguished as moderator without pinning.</li>
+<li>delayedProcessingEnabled: Processing Delay (seconds) (boolean, default: true). Processing Delay (seconds)</li>
+<li>skipIfRemoved: Skip if Post is Filtered (In Modqueue) (boolean, default: true). Skip auto-sticky if the post is removed by the time the delay expires.</li>
+<li>skipIfSpam: Post ID (boolean, default: true). Skip auto-sticky if the post is marked as spam when the delay expires.</li>
+<li>templateChoice: Choose Template (select, default: -). Choose Template</li>
+<li>customText: Custom Markdown Message (Optional) (paragraph, default: -). If</li>
+<li>pinToTop: Pin Comment to Top (Distinguish & Sticky) (boolean, default: true). Pin Comment to Top (Distinguish & Sticky)</li>
+<li>lockComment: Lock Comment (Prevent Replies) (boolean, default: true). Lock Comment (Prevent Replies)</li>
+<li>duration: Auto-Unsticky Timer (select, default: -). Automatically unpin this comment when the selected duration expires.</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add Sticky Pro to your subreddit via the Reddit App Directory.</li>
+<li>App Settings:</li>
+<li>Navigate to your subreddit's Mod Tools > App Settings > Sticky Pro.</li>
+<li>Define your Markdown text and custom display labels for Template 1, 2, and 3.</li>
+<li>Toggle Enable Auto-Sticky on Every Post and set Pin Auto-Sticky Comment to Top (`autoPin`).</li>
+<li>Configure Delayed Eligibility-First processing preferences (delay duration, skip if removed, skip if spam).</li>
+<li>Usage:</li>
+<li>On any post, open the moderator menu and select Sticky Pro: Post Sticky to launch the configuration modal.</li>
+<li>To remove a sticky, select Sticky Pro: Remove Sticky or comment `!unsticky`.</li>
+<li>Use `!sticky 1 24h` or `!sticky 2` in comment replies for rapid mobile shortcuts.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>1.0.105 — 2026-08-20<br>
+Standard fleet synchronization and maintenance.</p>
+<p>1.0.104 — 2026-08-18<br>
+Standard fleet synchronization and maintenance.</p>
+<p>1.0.103 — 2026-08-18<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/sticky-pro/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/sticky-pro/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/sticky-pro">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

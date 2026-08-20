@@ -1,0 +1,88 @@
+<h1>MALP-Scout</h1>
+
+<p>Category: Moderation<br>
+Version: v0.0.17<br>
+Visibility: Unlisted<br>
+Summary: Manual-only Stargate SG-1 content scout for subreddit moderators.</p>
+
+<h2>Overview</h2>
+<p>Manual-only Stargate SG-1 content scout for subreddit moderators.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/malp-scout-flowchart.png">View flowchart image</a></p>
+
+<h2>Key Features</h2>
+<ul>
+<li>Manual On-Demand Reconnaissance: Triggered strictly by subreddit moderators via the Mod Menu (`MALP: Launch Reconnaissance`). Zero automatic posting or background schedulers.</li>
+<li>Local Curated SG-1 Knowledge Base: Built-in, hand-reviewed dataset mapping SG-1 main/recurring cast birthdays, notable episode air dates, and major show milestones.</li>
+<li>Strict Zero-Crossover Policy: Enforces strict SG-1-only filtering, excluding Stargate Atlantis (SGA) and Stargate Universe (SGU) crossover content.</li>
+<li>Importance Quality Floor: Allows moderators to select a quality threshold (High, Medium, Low). Returns fewer candidates if not enough items meet the quality floor—never pads with weak filler.</li>
+<li>Moderator Preview & Approval Gate: Presents candidate titles, quality ranks, and 200-character excerpts in a confirmation form before any post is created on the subreddit.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Menu Actions</h3>
+<ul>
+<li>MALP: Launch Reconnaissance: Moderator menu action (Location: subreddit)</li>
+<li>MALP: Launch Reconnaissance: Moderator menu action (Location: post)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>editedTitle: Post Title (string, default: defaultTitle). Post Title</li>
+<li>editedBody: Post Body (Markdown) (paragraph, default: defaultBody). Post Body (Markdown)</li>
+<li>markAsSpoiler: Mark post as spoiler (boolean, default: false). Mark post as spoiler</li>
+<li>useDefaultMalpFlair: Apply default MALP post flair (boolean, default: true). Apply default MALP post flair</li>
+<li>selectedCandidateId: Select Candidate Post (select, default: [options[0].value]). Select Candidate Post</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app does not store persistent state in Redis.</p>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add MALP-Scout to your subreddit via the Devvit App Directory.</li>
+<li>Usage: Open the Subreddit Mod Menu (desktop) or tap the 3-dots on any post menu (mobile) and select MALP: Launch Reconnaissance.</li>
+<li>Select & Edit: Pick your preferred candidate post, customize the title or body markdown if desired.</li>
+<li>Publish: Tap Publish Post Now to submit to the subreddit.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.17 — 2026-08-16<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.16 — 2026-08-16<br>
+Optimize modal form transition with direct candidate JSON payload handoff.; Implement atomic submitPost with integrated flairId to prevent client request timeouts.</p>
+<p>0.0.15 — 2026-08-16<br>
+Fix candidate selection algorithm to implement dynamic daily rotation across episodes/actors and balanced multi-category slotting (Actor Spotlight, Episode Focus, and Milestone Anniversary).</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/malp-scout/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/malp-scout/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/malp-scout">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

@@ -1,0 +1,82 @@
+<h1>SG-1 Responder</h1>
+
+<p>Category: Stargate<br>
+Version: v0.0.61<br>
+Visibility: Public<br>
+Summary: New Stargate-themed responder application. Under development.</p>
+
+<h2>Overview</h2>
+<p>New Stargate-themed responder application. Under development.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sg1-responder-flowchart.png">View flowchart image</a></p>
+
+<h2>Key Features</h2>
+<ul>
+<li>Contextual Triggers: Intelligently monitors both new submissions and comment threads for specific franchise-themed keywords and quotes.</li>
+<li>Automated Interaction: Automatically delivers canonically accurate responses and character quotes to surprise and engage users.</li>
+<li>Response Variety: Utilizes a weighted random selection algorithm when multiple responses apply, ensuring that the bot's interactions remain fresh and unpredictable rather than robotic.</li>
+<li>Safety Filters: Built with integrated rate limiting, cooldown timers, and moderator exemptions to ensure the bot adds to the fun without ever becoming spammy or annoying.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.</li>
+<li>PostCreate: Delivered by Reddit event router to endpoint /internal/on-post-create.</li>
+<li>CommentSubmit: Delivered by Reddit event router to endpoint /internal/on-comment-submit.</li>
+<li>CommentCreate: Delivered by Reddit event router to endpoint /internal/on-comment-create.</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add SG-1 Responder to your subreddit via the App Directory.</li>
+<li>Configuration: This app currently requires no manual configuration. Its response library and cooldown timers are hardcoded for optimal engagement out of the box.</li>
+<li>Usage: Simply install the app and watch it interact with your community!</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.61 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.60 — 2026-08-04<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.59 — 2026-08-04<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/sg1-responder/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/sg1-responder/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/sg1-responder">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

@@ -1,0 +1,79 @@
+<h1>GimmeCode Guard</h1>
+
+<p>Category: Moderation<br>
+Version: v0.0.30<br>
+Visibility: Unlisted<br>
+Summary: Detects low-effort give me code requests</p>
+
+<h2>Overview</h2>
+<p>Detects low-effort give me code requests</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/gimmecode-guard-flowchart.png">View flowchart image</a></p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>CommentSubmit: Delivered by Reddit event router to endpoint /internal/on-comment-submit.</li>
+</ul>
+<h3>Menu Actions</h3>
+<ul>
+<li>Check User GimmeCode History: Moderator menu action (Location: comment)</li>
+<li>View GimmeCode Audit Logs: Moderator menu action (Location: subreddit)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: Yes — Sends notifications or summaries to modmail.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Sorted Sets (time-series audit logs)</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add GimmeCode Guard to your subreddit through the Reddit App Directory.</li>
+<li>Configure: Open Mod Tools > App Settings > GimmeCode Guard.</li>
+<li>Set Thresholds: Configure your desired scores for warning replies, reports, or removals.</li>
+<li>Save: Automated protection activates immediately across all new comment submissions.</li>
+<li>No complex regex configuration required. Clean technical discussions for your developer community.*</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.30 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.29 — 2026-08-05<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.29 — 2026-08-05<br>
+Fix: Enforced smart 8,500-character body length cap on Modmail summary report generator to satisfy Reddit API's 10,000-character hard limit and prevent `Bad request` API rejections on subreddits with extensive flag histories.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/gimmecode-guard">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

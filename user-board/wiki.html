@@ -1,0 +1,73 @@
+<h1>User Board</h1>
+
+<p>Category: Moderation<br>
+Version: v0.0.33<br>
+Visibility: Public<br>
+Summary: Subreddit top-poster analytics and custom post leaderboard.</p>
+
+<h2>Overview</h2>
+<p>Subreddit top-poster analytics and custom post leaderboard.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/user-board-flowchart.png">View flowchart image</a></p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: No — Does not remove or filter content.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Key patterns: node:http</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add User Board to your subreddit through the Reddit App Directory.</li>
+<li>Configure Weights: Open Mod Tools > App Settings > User Board to adjust point multipliers.</li>
+<li>Generate Post: Select Create Subreddit User Board from Subreddit Mod Tools.</li>
+<li>Pin: Sticky the generated post to your subreddit to start showcasing top contributors.</li>
+<li>No manual score tallying required. Automated community gamification directly inside Reddit.*</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.33 — 2026-08-15<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.32 — 2026-08-10<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.31 — 2026-08-10<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/user-board/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/user-board/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/user-board">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>
