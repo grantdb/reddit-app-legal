@@ -1,7 +1,7 @@
 <h1>RescueGuard</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.7<br>
+Version: v0.0.8<br>
 Visibility: Unlisted<br>
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.</p>
 
@@ -22,8 +22,6 @@ Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddi
 <ul>
 <li>GuardHub: RescueGuard Review: Review low-attention posts from the lookback window for community spotlighting (Location: subreddit)</li>
 </ul>
-<h3>Custom Post Types and Entrypoints</h3>
-<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
 
 <h2>Settings Reference</h2>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
@@ -44,7 +42,7 @@ Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddi
 <li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
 <li>Attaches Removal Notes: No — Does not attach removal notes.</li>
 <li>Approves Content: No — Does not approve content.</li>
-<li>Removes or Filters Content: No — Does not remove or filter content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
 <li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
 <li>Updates User or Post Flair: Yes — Updates post or user flair based on rules.</li>
 </ul>
@@ -53,6 +51,7 @@ Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddi
 <p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
 <ul>
 <li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Key patterns: node:http</li>
 </ul>
 
 <h2>Setup and Usage</h2>
@@ -70,11 +69,11 @@ Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddi
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.8 — 2026-08-22<br>
+Standard fleet synchronization and maintenance.</p>
 <p>0.0.7 — 2026-08-22<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.6 — 2026-08-22<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.5 — 2026-08-22<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>

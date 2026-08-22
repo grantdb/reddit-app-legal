@@ -1,6 +1,6 @@
 RescueGuard
 Category: Moderation
-Version: v0.0.7
+Version: v0.0.8
 Visibility: Unlisted
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.
 
@@ -22,7 +22,7 @@ Event Triggers
 - Not documented yet.
 
 Custom Post Types and Entrypoints
-- Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
+- None
 
 Settings Reference
 - candidate_limit (number, default: 5): Review Queue Batch Size - Maximum number of candidate submissions presented in each review session (default: 5).
@@ -39,13 +39,14 @@ Automation Capabilities
 - Submits Automated Comments: Yes
 - Attaches Removal Notes: No
 - Approves Content: No
-- Removes or Filters Content: No
+- Removes or Filters Content: Yes
 - Dispatches Modmail Alerts: No
 - Updates User or Post Flair: Yes
 
 Data Storage
 This app utilizes Reddit Redis storage:
 - Key-Value Strings (deduplication & cooldown markers)
+- Key Patterns: node:http
 
 Setup and Usage
 - Install: Add RescueGuard to your subreddit through the Reddit App Directory.
@@ -57,11 +58,11 @@ Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 
 Version History
+0.0.8 — 2026-08-22
+- Standard fleet synchronization and maintenance.
 0.0.7 — 2026-08-22
 - Standard fleet synchronization and maintenance.
 0.0.6 — 2026-08-22
-- Standard fleet synchronization and maintenance.
-0.0.5 — 2026-08-22
 - Standard fleet synchronization and maintenance.
 
 Links
