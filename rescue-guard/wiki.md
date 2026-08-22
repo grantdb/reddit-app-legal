@@ -1,6 +1,6 @@
 RescueGuard
 Category: Moderation
-Version: v0.0.1
+Version: v0.0.2
 Visibility: Unlisted
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.
 
@@ -22,7 +22,7 @@ Event Triggers
 - Not documented yet.
 
 Custom Post Types and Entrypoints
-- None
+- Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
 
 Settings Reference
 - min_age_hours (number, default: 24): Minimum Post Age (Hours) - Posts must be at least this old before being surfaced for review (default: 24h).
@@ -53,6 +53,8 @@ Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 
 Version History
+0.0.2 — 2026-08-22
+- Standard fleet synchronization and maintenance.
 0.0.1 — 2026-08-20
 - Standard fleet synchronization and maintenance.
 - All notable changes to the RescueGuard app will be documented in this file.
