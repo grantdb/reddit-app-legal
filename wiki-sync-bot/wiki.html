@@ -1,7 +1,7 @@
 <h1>WikiSync Bot</h1>
 
 <p>Category: Utility<br>
-Version: v0.0.2<br>
+Version: v0.0.3<br>
 Visibility: Unlisted<br>
 Summary: Subreddit wiki synchronization engine for Reddit communities.</p>
 
@@ -21,14 +21,16 @@ Summary: Subreddit wiki synchronization engine for Reddit communities.</p>
 <h2>Triggers and Activation</h2>
 <h3>Event Triggers</h3>
 <ul>
-<li>AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).</li>
-<li>AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).</li>
+<li>AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
+<li>AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-upgrade.</li>
 </ul>
 <h3>Menu Actions</h3>
 <ul>
-<li>Sync Wiki Pages Now: Immediately check the fleet wiki manifest and push any changed pages, without waiting for the next scheduled check. (Location: subreddit)</li>
-<li>Update Wiki (Manual Test): Manual test trigger to write configured test content to the target wiki page. (Location: subreddit)</li>
+<li>GuardHub: Sync Wiki Pages Now: Immediately check the fleet wiki manifest and push any changed pages, without waiting for the next scheduled check. (Location: subreddit)</li>
+<li>GuardHub: Update Wiki (Manual Test): Manual test trigger to write configured test content to the target wiki page. (Location: subreddit)</li>
 </ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/server/index.ts</p>
 
 <h2>Settings Reference</h2>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
@@ -36,7 +38,7 @@ Summary: Subreddit wiki synchronization engine for Reddit communities.</p>
 <li>test_page_name: Test Wiki Page Path (paragraph, default: index/all-apps/wiki-sync-bot-test). The wiki page path to create or update (e.g. index/all-apps/wiki-sync-bot-test).</li>
 <li>test_content: Test Wiki Content (paragraph, default: # WikiSync Bot Test Page
 
-This is a test wiki page created by **WikiSync Bot** V1 manual verification.). Markdown content to write to the specified wiki page during manual testing.</li>
+This is a test wiki page created by WikiSync Bot manual verification.). Markdown content to write to the specified wiki page during manual testing.</li>
 </ul>
 
 <h2>Automation Capabilities</h2>
@@ -71,12 +73,12 @@ This is a test wiki page created by **WikiSync Bot** V1 manual verification.). M
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.3 — 2026-08-22<br>
+Standard fleet synchronization and maintenance.</p>
 <p>0.0.2 — 2026-08-20<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.1 — 2026-08-20<br>
 Standard fleet synchronization and maintenance.; All notable changes to the WikiSync app will be documented in this file.</p>
-<p>0.0.1 — 2026-08-20<br>
-Initial V1 release for manual wiki write testing.; Subreddit-level moderator menu action to create/update wiki pages.; Configurable test page path and markdown content via App Settings.</p>
 
 <h2>Links</h2>
 <ul>

@@ -1,6 +1,6 @@
 WikiSync Bot
 Category: Utility
-Version: v0.0.2
+Version: v0.0.3
 Visibility: Unlisted
 Summary: Subreddit wiki synchronization engine for Reddit communities.
 
@@ -20,14 +20,17 @@ Permissions Used
 
 Triggers and Activation
 Event Triggers
-- AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).
-- AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).
+- AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.
+- AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-upgrade.
 
 Custom Post Types and Entrypoints
-- None
+- Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/server/index.ts)
 
 Settings Reference
-App settings are configured via Mod Tools -> App Settings.
+- test_page_name (paragraph, default: index/all-apps/wiki-sync-bot-test): Test Wiki Page Path - The wiki page path to create or update (e.g. index/all-apps/wiki-sync-bot-test).
+- test_content (paragraph, default: # WikiSync Bot Test Page
+
+This is a test wiki page created by WikiSync Bot manual verification.): Test Wiki Content - Markdown content to write to the specified wiki page during manual testing.
 
 Automation Capabilities
 - Submits Automated Comments: No
@@ -52,15 +55,13 @@ Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 
 Version History
+0.0.3 — 2026-08-22
+- Standard fleet synchronization and maintenance.
 0.0.2 — 2026-08-20
 - Standard fleet synchronization and maintenance.
 0.0.1 — 2026-08-20
 - Standard fleet synchronization and maintenance.
 - All notable changes to the WikiSync app will be documented in this file.
-0.0.1 — 2026-08-20
-- Initial V1 release for manual wiki write testing.
-- Subreddit-level moderator menu action to create/update wiki pages.
-- Configurable test page path and markdown content via App Settings.
 
 Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/wiki-sync-bot/TERMS.md)
