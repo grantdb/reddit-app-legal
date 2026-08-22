@@ -1,6 +1,6 @@
 RescueGuard
 Category: Moderation
-Version: v0.0.4
+Version: v0.0.5
 Visibility: Unlisted
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.
 
@@ -27,7 +27,7 @@ Custom Post Types and Entrypoints
 Settings Reference
 - min_age_hours (number, default: 24): Minimum Post Age (Hours) - Posts must be at least this old before being surfaced for review (default: 24h).
 - candidate_limit (number, default: 5): Review Queue Batch Size - Maximum number of low-attention candidates presented in each moderator review session.
-- highlight_action (select, default: pin_flair): Spotlight Action on Approval - Action executed when a moderator approves a candidate post.
+- highlight_action (select, default: flair): Spotlight Action on Approval - Action executed when a moderator approves a candidate post.
 - spotlight_flair_text (string, default: Community Spotlight): Spotlight Flair Text - Text applied to post flair when approved (default: "Community Spotlight").
 - spotlight_flair_template_id (string, default: 8d217d80-9dcc-11f1-8c4e-c629b2ba0d44): Spotlight Flair Template ID - Optional specific post flair template ID from Subreddit Settings > Post Flair.
 - spotlight_comment_template (paragraph, default: **Community Spotlight**: This post has been selected for the community showcase! Thank you u/{author} for sharing.): Spotlight Comment Template - Sticky comment text placed on approved posts. Supports {author} and {title}.
@@ -54,11 +54,11 @@ Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 
 Version History
+0.0.5 — 2026-08-22
+- Standard fleet synchronization and maintenance.
 0.0.4 — 2026-08-22
 - Standard fleet synchronization and maintenance.
 0.0.3 — 2026-08-22
-- Standard fleet synchronization and maintenance.
-0.0.2 — 2026-08-22
 - Standard fleet synchronization and maintenance.
 
 Links
