@@ -1,6 +1,6 @@
 WikiSync Bot
 Category: Utility
-Version: v0.0.4
+Version: v0.0.5
 Visibility: Unlisted
 Summary: Subreddit wiki synchronization engine for Reddit communities.
 
@@ -20,8 +20,8 @@ Permissions Used
 
 Triggers and Activation
 Event Triggers
-- AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.
-- AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-upgrade.
+- AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).
+- AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).
 
 Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
@@ -55,11 +55,11 @@ Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 
 Version History
+0.0.5 — 2026-08-22
+- Standard fleet synchronization and maintenance.
 0.0.4 — 2026-08-22
 - Standard fleet synchronization and maintenance.
 0.0.3 — 2026-08-22
-- Standard fleet synchronization and maintenance.
-0.0.2 — 2026-08-20
 - Standard fleet synchronization and maintenance.
 
 Links
