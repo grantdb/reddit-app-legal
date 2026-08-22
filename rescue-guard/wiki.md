@@ -1,6 +1,6 @@
 RescueGuard
 Category: Moderation
-Version: v0.0.5
+Version: v0.0.6
 Visibility: Unlisted
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.
 
@@ -54,11 +54,11 @@ Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 
 Version History
+0.0.6 — 2026-08-22
+- Standard fleet synchronization and maintenance.
 0.0.5 — 2026-08-22
 - Standard fleet synchronization and maintenance.
 0.0.4 — 2026-08-22
-- Standard fleet synchronization and maintenance.
-0.0.3 — 2026-08-22
 - Standard fleet synchronization and maintenance.
 
 Links
