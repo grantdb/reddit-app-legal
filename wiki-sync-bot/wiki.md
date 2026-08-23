@@ -1,6 +1,6 @@
 WikiSync Bot
 Category: Utility
-Version: v0.0.8
+Version: v0.0.9
 Visibility: Unlisted
 Summary: Subreddit wiki synchronization engine for Reddit communities.
 
@@ -55,11 +55,11 @@ Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 
 Version History
+0.0.9 — 2026-08-23
+- Standard fleet synchronization and maintenance.
 0.0.8 — 2026-08-23
 - Standard fleet synchronization and maintenance.
 0.0.7 — 2026-08-22
-- Standard fleet synchronization and maintenance.
-0.0.6 — 2026-08-22
 - Standard fleet synchronization and maintenance.
 
 Links
