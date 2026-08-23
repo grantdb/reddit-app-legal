@@ -1,7 +1,7 @@
 # GimmeCode Guard
 
 Category: Moderation  
-Version: v0.0.30  
+Version: v0.0.31  
 Visibility: Unlisted  
 Summary: Detects low-effort give me code requests
 
@@ -32,9 +32,9 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - exemptModsAndApproved: Exempt Moderators and Approved Users (-5 points) (boolean, default: true). Exempt Moderators and Approved Users (-5 points)
 - useDefaultPhrases: Use Default Phrases (e.g. "code please", "send source") (boolean, default: true). Use Default Phrases (e.g. "code please", "send source")
 - customPhrases: Custom Phrases (comma-separated) (string, default: ). Custom Phrases (comma-separated)
-- warnThreshold: Warning Threshold (0 to disable) (number, default: 0). Warning Threshold (0 to disable)
-- reportThreshold: Report Threshold (0 to disable) (number, default: 0). Report Threshold (0 to disable)
-- removeThreshold: Remove Threshold (0 to disable) (number, default: 0). Remove Threshold (0 to disable)
+- warnThreshold: Tier 1: Warning Auto-Reply Threshold - Cumulative Points (0 to disable) (number, default: 30). Posts an automated polite warning reply to the user once their cumulative low-effort score reaches this value (default: 30).
+- reportThreshold: Tier 2: Filter to Needs Review Threshold - Cumulative Points (0 to disable) (number, default: 60). Filters comment from public view and queues it into Modqueue for review once cumulative score reaches this value (default: 60).
+- removeThreshold: Tier 3: Removal + Modmail Alert Threshold - Cumulative Points (0 to disable) (number, default: 90). Removes comment and dispatches an instant Modmail alert to the mod team once cumulative score reaches this value (default: 90).
 - warningTemplate: Warning Auto-Reply Message (string, default: Hi! It looks like you're asking for code or links. Please take a moment to leave some feedback or appreciation (e.g. 'Wow, looks great!') for the creator when making requests.). Warning Auto-Reply Message
 
 ## Automation Capabilities
@@ -63,14 +63,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.31 — 2026-08-23
+- Standard fleet synchronization and maintenance.
+
 0.0.30 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 0.0.29 — 2026-08-05
 - Standard fleet synchronization and maintenance.
-
-0.0.29 — 2026-08-05
-- Fix: Enforced smart 8,500-character body length cap on Modmail summary report generator to satisfy Reddit API's 10,000-character hard limit and prevent `Bad request` API rejections on subreddits with extensive flag histories.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/TERMS.md)
