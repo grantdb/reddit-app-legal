@@ -1,0 +1,79 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Suspended Remove</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Security-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Clean mod queue backlogs from suspended and shadowbanned accounts automatically.</strong></p></blockquote>
+<p>Suspended Remove safely clears content left behind by suspended, deleted, or shadowbanned accounts. Featuring a multi-stage verification pipeline with customizable waiting actions (Filter & Hide, Filter & Keep Public, or Temp Remove) and auto-recovery, it keeps your mod queue clean while protecting false flags.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Two-stage verification</strong>: Hold suspected items during a confirmation window before applying permanent removal.</li>
+<li><strong>Three waiting-stage modes</strong>: Choose between Filter & Hide, Filter & Keep Public, or Temporary Remove.</li>
+<li><strong>Automated account recovery</strong>: Automatically restore and approve content if an account becomes accessible again.</li>
+<li><strong>Detailed Mod Notes</strong>: Attach custom internal mod notes and user profile notes at every stage of the check.</li>
+<li><strong>Background queue scanning</strong>: Continuously scans posts and comments across modqueue and spam folders.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Suspended Remove Way</h2>
+<p>---</p>
+<h2>Built for Queue Hygiene & Safe Verification</h2>
+<ul>
+<li><strong>Two-Stage Enforcement</strong>: Protects innocent users with a configurable waiting period before executing permanent removals.</li>
+<li><strong>Customizable Waiting Actions</strong>:</li>
+<li>*Filter & Hide*: Pulls items from public view into Needs Review while checks run.</li>
+<li>*Filter & Keep Public*: Keeps items visible on the subreddit while tracking them in Needs Review.</li>
+<li>*Temporary Remove*: Moves items to the removed queue during multi-day checks.</li>
+<li><strong>Automatic Account Recovery</strong>: If an account is unsuspended or verified accessible on a subsequent check, Suspended Remove can automatically approve the item.</li>
+<li><strong>Granular Mod Notes</strong>: Independently toggle and customize internal mod notes attached during the waiting stage and final removal.</li>
+<li><strong>Automated Retention Capping</strong>: Items in the verification pipeline are automatically expired and pruned after 14 days.</li>
+<li><strong>Native Settings Control</strong>: Configure confirmation check counts, waiting modes, and removal actions directly in Subreddit Mod Tools.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/suspended-remove-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Scan</strong>: Suspended Remove scans posts and comments across your subreddit's modqueue and spam queue.</p>
+<p>2. <strong>Verify</strong>: The engine tests author profile accessibility against the Reddit User API.</p>
+<p>3. <strong>Hold</strong>: On the first confirmed inaccessibility, your chosen waiting-period action (*Filter & Hide*, *Filter & Keep Public*, or *Temp Remove*) is applied.</p>
+<p>4. <strong>Action or Recover</strong>: If the account remains inaccessible after all scheduled checks, the final action executes; if the account recovers, the post is automatically approved.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Suspended Remove</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure Pipeline</strong>: Open <strong>Mod Tools > App Settings > Suspended Remove</strong>.</p>
+<p>3. <strong>Choose Waiting Mode</strong>: Select your preferred waiting-stage action (*Filter & Hide* recommended).</p>
+<p>4. <strong>Save</strong>: Background queue scanning activates immediately with zero manual maintenance.</p>
+<p>*No more orphaned mod queue items. Clean, safe queue automation directly inside Reddit.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Suspended Remove is engineered for resilient API status resolution and stateful multi-day queue tracking.</p>
+<ul>
+<li><strong>Account Accessibility Verifier</strong>: Distinguishes between deleted accounts, shadowbanned users, and network timeouts.</li>
+<li><strong>Stateful Redis Queue</strong>: Tracks pending items across configurable multi-day recheck schedules with atomic updates.</li>
+<li><strong>Auto-Recovery Restorer</strong>: Re-evaluates queued items on subsequent crons and executes automated approvals upon profile restoration.</li>
+<li><strong>Mod Note Synchronizer</strong>: Directly appends internal Reddit Mod Notes with customizable format templates.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Suspended Remove verifies account accessibility to assist in queue hygiene and orphaned content management. Multi-stage checks and mod notes ensure transparency—human moderators retain full authority to review, approve, or adjust account verification settings at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name.</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message.</li>
+<li>Screenshots or relevant details.</li>
+</ul>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community.*</p>
