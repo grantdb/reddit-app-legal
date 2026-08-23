@@ -1,7 +1,7 @@
 # Suspended Remover
 
 Category: Security  
-Version: v1.0.81  
+Version: v1.0.82  
 Visibility: Public  
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.
 
@@ -70,14 +70,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.82 — 2026-08-23
+- Standard fleet synchronization and maintenance.
+
 1.0.81 — 2026-08-23
 - Standard fleet synchronization and maintenance.
 
 1.0.80 — 2026-08-16
 - Fix: Removed duplicate manifest menu declaration in `devvit.json` to resolve double menu trigger in subreddit moderator tools.
-
-1.0.79 — 2026-08-15
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/TERMS.md)
