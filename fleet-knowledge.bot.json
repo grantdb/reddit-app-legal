@@ -1,0 +1,2744 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-23T04:31:40.499Z",
+  "subreddit": "grantdb",
+  "apps": [
+    {
+      "appId": "suspended-remove",
+      "slug": "suspended-remove",
+      "appName": "Suspended Remover",
+      "aliases": [
+        "suspended-remove",
+        "suspended remover",
+        "suspendedremove",
+        "suspended remove"
+      ],
+      "summary": "High-precision account purification engine. Fleet-wide security infrastructure.",
+      "keywords": [
+        "suspended-remove",
+        "suspended remover",
+        "security",
+        "suspendedremove",
+        "suspended remove"
+      ],
+      "setupSteps": [
+        "Install: Add Suspended Remove to your subreddit through the Reddit App Directory.",
+        "Configure Pipeline: Open Mod Tools > App Settings > Suspended Remove.",
+        "Choose Waiting Mode: Select your preferred waiting-stage action (*Filter & Hide* recommended).",
+        "Save: Background queue scanning activates immediately with zero manual maintenance.",
+        "No more orphaned mod queue items. Clean, safe queue automation directly inside Reddit.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": false,
+        "redis": true,
+        "http": false,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "AppInstall",
+        "AppUpgrade"
+      ],
+      "menuItems": [
+        "GuardHub: Scan Modqueue for Suspended Users"
+      ],
+      "settingsCount": 15,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove",
+        "github": "https://github.com/grantdb/suspended-remove",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Suspended Remover.",
+        "troubleshooting": "Check the Suspended Remover troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "sticky-pro",
+      "slug": "sticky-pro",
+      "appName": "Sticky-Pro",
+      "aliases": [
+        "sticky-pro",
+        "stickypro",
+        "sticky pro"
+      ],
+      "summary": "Automated moderator sticky suite with dynamic form population.",
+      "keywords": [
+        "sticky-pro",
+        "moderation",
+        "stickypro",
+        "sticky pro"
+      ],
+      "setupSteps": [
+        "Install: Add Sticky Pro to your subreddit via the Reddit App Directory.",
+        "App Settings:",
+        "Navigate to your subreddit's Mod Tools > App Settings > Sticky Pro.",
+        "Define your Markdown text and custom display labels for Template 1, 2, and 3.",
+        "Toggle Enable Auto-Sticky on Every Post and set Pin Auto-Sticky Comment to Top (`autoPin`)."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": false,
+        "redis": true,
+        "http": false,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "CommentSubmit",
+        "PostSubmit",
+        "PostCreate"
+      ],
+      "menuItems": [
+        "Sticky Pro: Post Sticky",
+        "Sticky Pro: Remove Sticky"
+      ],
+      "settingsCount": 14,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/sticky-pro",
+        "github": "https://github.com/grantdb/sticky-pro",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/sticky-pro/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/sticky-pro/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Sticky-Pro.",
+        "troubleshooting": "Check the Sticky-Pro troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "canucknews-bot",
+      "slug": "canucknews-bot",
+      "appName": "CanuckNews Bot",
+      "aliases": [
+        "canucknews-bot",
+        "canucknews bot",
+        "canucknewsbot"
+      ],
+      "summary": "Regional Canadian news aggregation with moderator triggers.",
+      "keywords": [
+        "canucknews-bot",
+        "canucknews bot",
+        "news",
+        "canucknewsbot"
+      ],
+      "setupSteps": [
+        "Install: Add Canuck News Bot to your subreddit via the App Directory.",
+        "App Settings: Navigate to Mod Tools > App Settings > Canuck News Bot to map optional regional post flair IDs.",
+        "Usage: Open the subreddit Mod Menu and click Scout Canadian News to begin scouting."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": true,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [
+        "Scout Canadian News",
+        "Scout Canadian News"
+      ],
+      "settingsCount": 9,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/canucknews-bot",
+        "github": "https://github.com/grantdb/canucknews-bot",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/canucknews-bot/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/canucknews-bot/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for CanuckNews Bot.",
+        "troubleshooting": "Check the CanuckNews Bot troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "playscraper-bot",
+      "slug": "playscraper-bot",
+      "appName": "Playscraper Bot",
+      "aliases": [
+        "playscraper-bot",
+        "playscraper bot",
+        "playscraperbot"
+      ],
+      "summary": "AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with configurable delay. Security-hardened moderator gates.",
+      "keywords": [
+        "playscraper-bot",
+        "playscraper bot",
+        "metadata",
+        "playscraperbot"
+      ],
+      "setupSteps": [
+        "Install: Add Playscraper Bot via the App Directory.",
+        "API Key Requirement: Obtain a free Google Gemini API Key from Google AI Studio.",
+        "App Settings:",
+        "Input your Gemini API Key into the app settings.",
+        "Choose which sources to detect (e.g., enable GitHub but disable Play Store)."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": true,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "PostSubmit",
+        "PostCreate",
+        "ModAction",
+        "AppInstall",
+        "AppUpgrade"
+      ],
+      "menuItems": [
+        "Trigger App Scraper"
+      ],
+      "settingsCount": 10,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/playscraper-bot",
+        "github": "https://github.com/grantdb/playscraper-bot",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/playscraper-bot/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/playscraper-bot/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Playscraper Bot.",
+        "troubleshooting": "Check the Playscraper Bot troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "screen-shot-bot",
+      "slug": "screen-shot-bot",
+      "appName": "Screen-Shot Bot",
+      "aliases": [
+        "screen-shot-bot",
+        "screen-shot bot",
+        "screenshotbot",
+        "screen shot bot"
+      ],
+      "summary": "Automated screen-capture and visual logging utility.",
+      "keywords": [
+        "screen-shot-bot",
+        "screen-shot bot",
+        "rendering",
+        "screenshotbot",
+        "screen shot bot"
+      ],
+      "setupSteps": [
+        "Install: Add Screen Shot Bot to your subreddit via the App Directory.",
+        "App Settings:",
+        "Add your Google Gemini API key to the settings.",
+        "Select your \"Extraction Target\" from the dropdown list.",
+        "Usage: The bot runs automatically. To use it manually on an old post, use the \"Extract text from image (Gemini)\" menu item in the post's mod menu."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": true,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "PostSubmit",
+        "PostCreate",
+        "ModAction",
+        "AppInstall",
+        "AppUpgrade"
+      ],
+      "menuItems": [
+        "Extract text from image (Gemini)"
+      ],
+      "settingsCount": 7,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/screen-shot-bot",
+        "github": "https://github.com/grantdb/screen-shot-bot",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/screen-shot-bot/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/screen-shot-bot/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Screen-Shot Bot.",
+        "troubleshooting": "Check the Screen-Shot Bot troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "post-title-check",
+      "slug": "post-title-check",
+      "appName": "Post Title Check",
+      "aliases": [
+        "post-title-check",
+        "post title check",
+        "posttitlecheck"
+      ],
+      "summary": "Real-time title validation against community guidelines. Now with support for customizable removal reasons per rule.",
+      "keywords": [
+        "post-title-check",
+        "post title check",
+        "validation",
+        "posttitlecheck"
+      ],
+      "setupSteps": [
+        "Install: Add Post Title Check to your subreddit through the Reddit App Directory.",
+        "Configure Rules: Open Mod Tools > App Settings > Post Title Check to set word counts and required tags.",
+        "Add Banned Words: Enter prohibited clickbait phrases separated by commas.",
+        "Save: Automated title validation begins immediately on all incoming community submissions.",
+        "No complex AutoMod regex scripts required. Clean, professional titles across your entire feed.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "PostSubmit",
+        "PostCreate",
+        "AppInstall",
+        "AppUpgrade"
+      ],
+      "menuItems": [],
+      "settingsCount": 12,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/post-title-check",
+        "github": "https://github.com/grantdb/post-title-check",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/post-title-check/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/post-title-check/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Post Title Check.",
+        "troubleshooting": "Check the Post Title Check troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "stargate-trivia",
+      "slug": "stargate-trivia",
+      "appName": "Stargate Trivia",
+      "aliases": [
+        "stargate-trivia",
+        "stargate trivia",
+        "stargatetrivia"
+      ],
+      "summary": "Interactive trivia engine with rich UI and global leaderboards.",
+      "keywords": [
+        "stargate-trivia",
+        "stargate trivia",
+        "interactive",
+        "stargatetrivia"
+      ],
+      "setupSteps": [
+        "Install: Add Stargate Trivia to your subreddit via the App Directory.",
+        "App Settings: Open your subreddit's App Settings for Stargate Trivia to configure the number of questions per round or difficulty scaling.",
+        "Usage: To start a community event, simply open the Mod Menu anywhere in your subreddit and select the \"Launch Trivia Event\" action."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "AppInstall"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/stargate-trivia",
+        "github": "https://github.com/grantdb/stargate-trivia",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/stargate-trivia/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/stargate-trivia/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Stargate Trivia.",
+        "troubleshooting": "Check the Stargate Trivia troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-15"
+    },
+    {
+      "appId": "canadian-news",
+      "slug": "canadian-news",
+      "appName": "Canadian News",
+      "aliases": [
+        "canadian-news",
+        "canadian news",
+        "canadiannews"
+      ],
+      "summary": "Regional Canadian news aggregator. Refactored to include political news as an optional subject.",
+      "keywords": [
+        "canadian-news",
+        "canadian news",
+        "news",
+        "canadiannews"
+      ],
+      "setupSteps": [
+        "Install: Add Canadian News App to your subreddit via the App Directory.",
+        "Usage: Open the subreddit Mod Menu and click Scout Canadian News to launch the interactive scouting workflow."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": true,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [
+        "Scout Canadian News",
+        "Scout Canadian News"
+      ],
+      "settingsCount": 1,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/canadian-news",
+        "github": "https://github.com/grantdb/canadian-news",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/canadian-news/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/canadian-news/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Canadian News.",
+        "troubleshooting": "Check the Canadian News troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "distrofeed-bot",
+      "slug": "distrofeed-bot",
+      "appName": "DistroFeed Bot",
+      "aliases": [
+        "distrofeed-bot",
+        "distrofeed bot",
+        "distrofeedbot"
+      ],
+      "summary": "Linux aggregator. Upgraded to Gemini 2.5 metadata extraction. Fixed network permissions.",
+      "keywords": [
+        "distrofeed-bot",
+        "distrofeed bot",
+        "automation",
+        "distrofeedbot"
+      ],
+      "setupSteps": [
+        "Install: Add DistroFeed Bot to your subreddit via the App Directory.",
+        "App Settings: Navigate to Mod Tools > App Settings > DistroFeed Bot and provide a Google Gemini API Key (from aistudio.google.com).",
+        "Usage: Open the subreddit Mod Menu to scout and review updates."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": true,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [
+        "1. Scout Distro Updates",
+        "1. Scout Distro Updates",
+        "2. Review Scouted Updates",
+        "2. Review Scouted Updates"
+      ],
+      "settingsCount": 3,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/distrofeed-bot",
+        "github": "https://github.com/grantdb/distrofeed-bot",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/distrofeed-bot/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/distrofeed-bot/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for DistroFeed Bot.",
+        "troubleshooting": "Check the DistroFeed Bot troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "linux-quest",
+      "slug": "linux-quest",
+      "appName": "Linux Quest",
+      "aliases": [
+        "linux-quest",
+        "linux quest",
+        "linuxquest"
+      ],
+      "summary": "Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.",
+      "keywords": [
+        "linux-quest",
+        "linux quest",
+        "community",
+        "linuxquest"
+      ],
+      "setupSteps": [
+        "Install: Add Linux Quest to your subreddit via the App Directory.",
+        "Dashboard Initialization: Navigate to your subreddit's Mod Tools and open the Linux Quest configuration post if you wish to tweak settings.",
+        "Usage: Users can launch the quest directly from an interactive post in the community. We recommend linking to it from your subreddit's sidebar or rules."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "AppInstall"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest",
+        "github": "https://github.com/grantdb/linux-quest",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/linux-quest/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/linux-quest/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Linux Quest.",
+        "troubleshooting": "Check the Linux Quest troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-15"
+    },
+    {
+      "appId": "archive-all-mm",
+      "slug": "archive-all-mm",
+      "appName": "Archive All MM",
+      "aliases": [
+        "archive-all-mm",
+        "archive all mm",
+        "archiveallmm"
+      ],
+      "summary": "Modmail archival utility. High-volume message indexing and backup.",
+      "keywords": [
+        "archive-all-mm",
+        "archive all mm",
+        "modmail",
+        "archiveallmm"
+      ],
+      "setupSteps": [
+        "Install: Add Archive All Modmail to your subreddit through the Reddit App Directory.",
+        "Configure Queues: Open Mod Tools > App Settings > Archive All Modmail and pick your target queues.",
+        "Start Cleanup: Click Archive All Modmail (Background)** from the subreddit action menu.",
+        "Monitor: Check Check Modmail Archive Status anytime to observe real-time progress.",
+        "No repetitive manual clicking. Safe, automated Inbox Zero in your native workflow.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [
+        "Archive All Modmail (Background)",
+        "Check Modmail Archive Status"
+      ],
+      "settingsCount": 1,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/archive-all-mm",
+        "github": "https://github.com/grantdb/archive-all-mm",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/archive-all-mm/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/archive-all-mm/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Archive All MM.",
+        "troubleshooting": "Check the Archive All MM troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "ring-escape",
+      "slug": "ring-escape",
+      "appName": "Ring Escape: Serpent Flagship",
+      "aliases": [
+        "ring-escape",
+        "ring escape: serpent flagship",
+        "ringescape",
+        "ring escape"
+      ],
+      "summary": "Stealth infiltration game. Sabotage four systems aboard a Serpent Empire warship and escape through the rings.",
+      "keywords": [
+        "ring-escape",
+        "ring escape: serpent flagship",
+        "interactive",
+        "ringescape",
+        "ring escape"
+      ],
+      "setupSteps": [
+        "Install: Add Ring Escape to your subreddit via the App Directory.",
+        "App Settings: Open your subreddit's App Settings to configure optional parameters or custom messaging for the leaderboard.",
+        "Usage: To start a community event, simply open the Mod Menu anywhere in your subreddit and select the \"Create Ring Escape Post\" action to spawn a new game post."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": false,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "AppInstall"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/ring-escape",
+        "github": "https://github.com/grantdb/ring-escape",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/ring-escape/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/ring-escape/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Ring Escape: Serpent Flagship.",
+        "troubleshooting": "Check the Ring Escape: Serpent Flagship troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-15"
+    },
+    {
+      "appId": "app-update-checker",
+      "slug": "app-update-checker",
+      "appName": "App Update Checker",
+      "aliases": [
+        "app-update-checker",
+        "app update checker",
+        "appupdatechecker"
+      ],
+      "summary": "AI-powered version tracking across the fleet. Uses Gemini 2.5 to bypass external scraper blocks.",
+      "keywords": [
+        "app-update-checker",
+        "app update checker",
+        "utility",
+        "appupdatechecker"
+      ],
+      "setupSteps": [
+        "Install: Add App Update Checker to your subreddit through the Reddit App Directory.",
+        "Configure Settings: Open Mod Tools > App Settings > App Update Checker to adjust notification preferences.",
+        "Run Initial Check: Select Check for App Updates from the subreddit overflow menu to generate your first report.",
+        "Relax: Scheduled daily audits will keep your team informed of any future releases.",
+        "No manual app directory checking. Automated update notifications delivered directly to modmail.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": true,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "AppInstall",
+        "AppUpgrade"
+      ],
+      "menuItems": [
+        "Check for App Updates",
+        "Mark Apps Up-to-Date",
+        "Reset App Cache"
+      ],
+      "settingsCount": 2,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/app-update-checker",
+        "github": "https://github.com/grantdb/app-update-checker",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/app-update-checker/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/app-update-checker/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for App Update Checker.",
+        "troubleshooting": "Check the App Update Checker troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "gate-defender",
+      "slug": "gate-defender",
+      "appName": "Gate Defender",
+      "aliases": [
+        "gate-defender",
+        "gate defender",
+        "gatedefender"
+      ],
+      "summary": "Community security gatekeeper. React Webview-based entry validation.",
+      "keywords": [
+        "gate-defender",
+        "gate defender",
+        "interactive",
+        "gatedefender"
+      ],
+      "setupSteps": [
+        "Install: Add Gate Defender to your subreddit via the App Directory.",
+        "App Settings: (Optional) Use the subreddit's App Settings to tweak gameplay difficulty multipliers if your community wants a harder challenge.",
+        "Usage: To start a community event, simply open the Mod Menu anywhere in your subreddit and select the \"Launch Gate Defender\" action to spawn a new game post."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/gate-defender",
+        "github": "https://github.com/grantdb/gate-defender",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/gate-defender/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/gate-defender/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Gate Defender.",
+        "troubleshooting": "Check the Gate Defender troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-15"
+    },
+    {
+      "appId": "ai-checker",
+      "slug": "ai-checker",
+      "appName": "AI Checker",
+      "aliases": [
+        "ai-checker",
+        "ai checker",
+        "aichecker"
+      ],
+      "summary": "Moderator-triggered AI detection engine. Upgraded to native Gemini 1.5 Flash for high-speed analysis.",
+      "keywords": [
+        "ai-checker",
+        "ai checker",
+        "security",
+        "aichecker"
+      ],
+      "setupSteps": [
+        "Install: Add AI Checker to your subreddit through the Reddit App Directory.",
+        "Configure Provider: Open Mod Tools > App Settings > AI Checker and add your provider API key.",
+        "Set Preferences: Choose between on-demand menu auditing or automated background scanning.",
+        "Save: Start evaluating synthetic content directly from your native moderation workflow.",
+        "No external browser extensions required. Multi-model AI detection right inside Reddit.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": true,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "PostCreate"
+      ],
+      "menuItems": [
+        "Check AI Content"
+      ],
+      "settingsCount": 15,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/ai-checker",
+        "github": "https://github.com/grantdb/ai-checker",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/ai-checker/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/ai-checker/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for AI Checker.",
+        "troubleshooting": "Check the AI Checker troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "mod-snapshot",
+      "slug": "mod-snapshot",
+      "appName": "Mod Snapshot",
+      "aliases": [
+        "mod-snapshot",
+        "mod snapshot",
+        "modsnapshot"
+      ],
+      "summary": "Professional-grade subreddit configuration backup. Delivers comprehensive archival snapshots and best-effort app discovery to Modmail.",
+      "keywords": [
+        "mod-snapshot",
+        "mod snapshot",
+        "archival",
+        "modsnapshot"
+      ],
+      "setupSteps": [
+        "Install: Add Mod Snapshot to your subreddit through the Reddit App Directory.",
+        "Configure Settings: Open Mod Tools > App Settings > Mod Snapshot to review snapshot preferences.",
+        "Run Backup: Select Generate Mod Snapshot from Subreddit Mod Tools to create your first archive.",
+        "Verify: Open modmail to inspect your complete, structured backup document.",
+        "No external backup servers or manual exports required. Reliable community disaster recovery inside Reddit.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [
+        "Generate Mod Snapshot"
+      ],
+      "settingsCount": 1,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod-snapshot",
+        "github": "https://github.com/grantdb/mod-snapshot",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/mod-snapshot/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/mod-snapshot/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Mod Snapshot.",
+        "troubleshooting": "Check the Mod Snapshot troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "word-guard",
+      "slug": "word-guard",
+      "appName": "WordGuard",
+      "aliases": [
+        "word-guard",
+        "wordguard",
+        "word guard"
+      ],
+      "summary": "Premium keyword moderation engine with singleton control center and hardened security architecture.",
+      "keywords": [
+        "word-guard",
+        "wordguard",
+        "moderation",
+        "word guard"
+      ],
+      "setupSteps": [
+        "Install: Add Word Guard to your subreddit through the Reddit App Directory.",
+        "Configure: Open GuardHub: WordGuard Dashboard from Subreddit Mod Tools.",
+        "Create Groups: Add your keyword groups (e.g. Scams or Profanity) and test them in Audit Mode.",
+        "Enforce: Switch verified groups to Live mode to begin automated keyword filtering.",
+        "No cryptic YAML files required. Clean, modular keyword management directly in your community dashboard.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": false,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "PostSubmit",
+        "PostCreate",
+        "CommentSubmit",
+        "CommentCreate"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/word-guard",
+        "github": "https://github.com/grantdb/word-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/word-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/word-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for WordGuard.",
+        "troubleshooting": "Check the WordGuard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "sg1-responder",
+      "slug": "sg1-responder",
+      "appName": "SG-1 Responder",
+      "aliases": [
+        "sg1-responder",
+        "sg-1 responder",
+        "sg1responder",
+        "sg1 responder"
+      ],
+      "summary": "New Stargate-themed responder application. Under development.",
+      "keywords": [
+        "sg1-responder",
+        "sg-1 responder",
+        "stargate",
+        "sg1responder",
+        "sg1 responder"
+      ],
+      "setupSteps": [
+        "Install: Add SG-1 Responder to your subreddit via the App Directory.",
+        "Configuration: This app currently requires no manual configuration. Its response library and cooldown timers are hardcoded for optimal engagement out of the box.",
+        "Usage: Simply install the app and watch it interact with your community!"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "PostSubmit",
+        "PostCreate",
+        "CommentSubmit",
+        "CommentCreate"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/sg1-responder",
+        "github": "https://github.com/grantdb/sg1-responder",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/sg1-responder/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/sg1-responder/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for SG-1 Responder.",
+        "troubleshooting": "Check the SG-1 Responder troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-15"
+    },
+    {
+      "appId": "domain-guard",
+      "slug": "domain-guard",
+      "appName": "DomainGuard",
+      "aliases": [
+        "domain-guard",
+        "domainguard",
+        "domain guard"
+      ],
+      "summary": "Professional URL and domain moderation engine with singleton architecture and hardened API gates.",
+      "keywords": [
+        "domain-guard",
+        "domainguard",
+        "security",
+        "domain guard"
+      ],
+      "setupSteps": [
+        "Install: Add Domain Guard to your subreddit through the Reddit App Directory.",
+        "Configure: Open GuardHub: DomainGuard Dashboard from Subreddit Mod Tools.",
+        "Create Rules: Add your domain allowlist or blocklist in Audit Mode to safely verify matching behavior.",
+        "Enforce: Once satisfied with audit results, switch rules to Live mode to begin automated enforcement.",
+        "No complex regex configuration required. Full control stays in your native dashboard.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "PostCreate",
+        "PostSubmit",
+        "CommentCreate",
+        "CommentSubmit"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/domain-guard",
+        "github": "https://github.com/grantdb/domain-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for DomainGuard.",
+        "troubleshooting": "Check the DomainGuard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "user-guard",
+      "slug": "user-guard",
+      "appName": "UserGuard",
+      "aliases": [
+        "user-guard",
+        "userguard",
+        "user guard"
+      ],
+      "summary": "Native author-based moderation engine with exact username and threshold resolution.",
+      "keywords": [
+        "user-guard",
+        "userguard",
+        "moderation",
+        "user guard"
+      ],
+      "setupSteps": [
+        "Install: Add User Guard to your subreddit through the Reddit App Directory.",
+        "Configure: Open GuardHub: UserGuard Dashboard from Subreddit Mod Tools.",
+        "Create Rules: Add your account age and karma thresholds in Audit Mode to preview matching accounts safely.",
+        "Enforce: Switch verified rules to Live mode to begin automated gatekeeping.",
+        "No complex YAML syntax required. Clean access controls directly in your community dashboard.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "PostCreate",
+        "PostSubmit",
+        "CommentCreate",
+        "CommentSubmit"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-guard",
+        "github": "https://github.com/grantdb/user-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/user-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/user-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for UserGuard.",
+        "troubleshooting": "Check the UserGuard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "filter-guard",
+      "slug": "filter-guard",
+      "appName": "FilterGuard",
+      "aliases": [
+        "filter-guard",
+        "filterguard",
+        "filter guard"
+      ],
+      "summary": "Grouped threshold-based and gate-style filtering engine for complex community safety gates.",
+      "keywords": [
+        "filter-guard",
+        "filterguard",
+        "moderation",
+        "filter guard"
+      ],
+      "setupSteps": [
+        "Install: Add Filter Guard to your subreddit through the Reddit App Directory.",
+        "Configure: Open GuardHub: FilterGuard Dashboard from Subreddit Mod Tools.",
+        "Create Gates: Define your threshold groups and test them in the Test tab.",
+        "Enforce: Activate your verified rule groups to start automated gating.",
+        "No complex YAML syntax required. Clean layered protection managed directly from your dashboard.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "PostCreate",
+        "PostSubmit",
+        "CommentCreate",
+        "CommentSubmit"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/filter-guard",
+        "github": "https://github.com/grantdb/filter-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/filter-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/filter-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for FilterGuard.",
+        "troubleshooting": "Check the FilterGuard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "format-guard",
+      "slug": "format-guard",
+      "appName": "FormatGuard",
+      "aliases": [
+        "format-guard",
+        "formatguard",
+        "format guard"
+      ],
+      "summary": "Focused structure-first moderation engine for formatting, title-shape, and stylistic rules.",
+      "keywords": [
+        "format-guard",
+        "formatguard",
+        "moderation",
+        "format guard"
+      ],
+      "setupSteps": [
+        "Install: Add Format Guard to your subreddit through the Reddit App Directory.",
+        "Configure: Open GuardHub: FormatGuard Dashboard from Subreddit Mod Tools.",
+        "Create Rules: Add your required title tags and length limits, testing them in the Test tab.",
+        "Enforce: Activate your rules to begin automated formatting validation.",
+        "No complex AutoMod syntax required. Clean, consistent post formatting across your entire community.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "PostCreate",
+        "PostSubmit",
+        "CommentCreate",
+        "CommentSubmit"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/format-guard",
+        "github": "https://github.com/grantdb/format-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/format-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/format-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for FormatGuard.",
+        "troubleshooting": "Check the FormatGuard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "comment-guard",
+      "slug": "comment-guard",
+      "appName": "CommentGuard",
+      "aliases": [
+        "comment-guard",
+        "commentguard",
+        "comment guard"
+      ],
+      "summary": "Hardened code-request moderation engine with weighted scoring and Shadow DOM stability.",
+      "keywords": [
+        "comment-guard",
+        "commentguard",
+        "moderation",
+        "comment guard"
+      ],
+      "setupSteps": [
+        "Install: Add Comment Guard to your subreddit through the Reddit App Directory.",
+        "Configure: Open GuardHub: CommentGuard Dashboard from Subreddit Mod Tools.",
+        "Set Thresholds: Adjust the removal score sensitivity and penalty weights to match your community standards.",
+        "Monitor: Review enforcement logs in your dashboard to refine pattern weights over time.",
+        "No complex AutoMod rules required. Intelligent, weighted comment moderation out of the box.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "CommentCreate",
+        "CommentSubmit"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/comment-guard",
+        "github": "https://github.com/grantdb/comment-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/comment-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/comment-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for CommentGuard.",
+        "troubleshooting": "Check the CommentGuard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "automod-easy",
+      "slug": "automod-easy",
+      "appName": "AutoMod Easy",
+      "aliases": [
+        "automod-easy",
+        "automod easy",
+        "automodeasy"
+      ],
+      "summary": "No-code visual rule builder for AutoModerator. Generates and validates YAML configurations automatically.",
+      "keywords": [
+        "automod-easy",
+        "automod easy",
+        "moderation",
+        "automodeasy"
+      ],
+      "setupSteps": [
+        "Install: Add AutoMod Easy to your subreddit through the Reddit App Directory.",
+        "Open Trainer: Select AutoMod Easy Trainer from Subreddit Mod Tools.",
+        "Audit Rules: Review the initial health scorecard of your current AutoMod configuration.",
+        "Experiment: Use the Sandbox Lab to test new rules or generate patterns from spam samples.",
+        "No scary live-testing mistakes. Safe, visual AutoModerator development inside Reddit.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [],
+      "settingsCount": 3,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/automod-easy",
+        "github": "https://github.com/grantdb/automod-easy",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/automod-easy/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/automod-easy/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for AutoMod Easy.",
+        "troubleshooting": "Check the AutoMod Easy troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "pinned-menuboard",
+      "slug": "pinned-menuboard",
+      "appName": "Pinned Menuboard",
+      "aliases": [
+        "pinned-menuboard",
+        "pinned menuboard",
+        "pinnedmenuboard"
+      ],
+      "summary": "A centralized menu board for pinned posts",
+      "keywords": [
+        "pinned-menuboard",
+        "pinned menuboard",
+        "moderation",
+        "pinnedmenuboard"
+      ],
+      "setupSteps": [
+        "Install: Add Pinned Menuboard to your subreddit through the Reddit App Directory.",
+        "Generate Board: Select Generate Pinned Menuboard from Subreddit Mod Tools and sticky the resulting post.",
+        "Feature Content: Open any post and select Toggle on Menuboard to add it to an open slot.",
+        "Customize: Adjust board headers and styling preferences in App Settings anytime.",
+        "No markdown link tables to update manually. Visual community navigation directly inside your feed.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/pinned-menuboard",
+        "github": "https://github.com/grantdb/pinned-menuboard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/pinned-menuboard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/pinned-menuboard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Pinned Menuboard.",
+        "troubleshooting": "Check the Pinned Menuboard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "user-board",
+      "slug": "user-board",
+      "appName": "User Board",
+      "aliases": [
+        "user-board",
+        "user board",
+        "userboard"
+      ],
+      "summary": "Subreddit top-poster analytics and custom post leaderboard.",
+      "keywords": [
+        "user-board",
+        "user board",
+        "moderation",
+        "userboard"
+      ],
+      "setupSteps": [
+        "Install: Add User Board to your subreddit through the Reddit App Directory.",
+        "Configure Weights: Open Mod Tools > App Settings > User Board to adjust point multipliers.",
+        "Generate Post: Select Create Subreddit User Board from Subreddit Mod Tools.",
+        "Pin: Sticky the generated post to your subreddit to start showcasing top contributors.",
+        "No manual score tallying required. Automated community gamification directly inside Reddit.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": false,
+        "redis": true,
+        "http": false,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "AppInstall"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-board",
+        "github": "https://github.com/grantdb/user-board",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/user-board/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/user-board/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for User Board.",
+        "troubleshooting": "Check the User Board troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "queue-guard",
+      "slug": "queue-guard",
+      "appName": "QueueGuard",
+      "aliases": [
+        "queue-guard",
+        "queueguard",
+        "queue guard"
+      ],
+      "summary": "Queue triage and decision-support tool. Surfaces duplicate context, account signals, and prior handling history before moderators approve or remove queued posts.",
+      "keywords": [
+        "queue-guard",
+        "queueguard",
+        "moderation",
+        "queue guard"
+      ],
+      "setupSteps": [
+        "Install: Add Queue-Guard to your subreddit through the Reddit App Directory.",
+        "Configure: Risk thresholds and analyzer policies work out of the box with zero required setup.",
+        "Use: Open the three-dots menu on any post or comment to moderate directly in your feed.",
+        "Customize: Open [#] QueueGuard Dashboard from Subreddit Mod Tools to adjust sensitivity anytime.",
+        "No complicated workflow changes. No separate tool required for routine moderation.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [],
+      "settingsCount": 2,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/queue-guard",
+        "github": "https://github.com/grantdb/queue-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/queue-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/queue-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for QueueGuard.",
+        "troubleshooting": "Check the QueueGuard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "duplicate-guard",
+      "slug": "duplicate-guard",
+      "appName": "Duplicate Guard",
+      "aliases": [
+        "duplicate-guard",
+        "duplicate guard",
+        "duplicateguard"
+      ],
+      "summary": "Moderation app that uses onPostSubmit to detect recent duplicate subject/topic posts.",
+      "keywords": [
+        "duplicate-guard",
+        "duplicate guard",
+        "moderation",
+        "duplicateguard"
+      ],
+      "setupSteps": [
+        "Install: Add Duplicate Guard to your subreddit through the Reddit App Directory.",
+        "Configure: Open Mod Tools > App Settings > Duplicate Guard.",
+        "Set Thresholds: Choose your preferred Match Mode (Strict or Balanced) and lookback post limit.",
+        "Save: Settings apply immediately to all incoming community submissions.",
+        "No external tools required. Automated duplicate protection right inside Reddit.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "PostSubmit",
+        "PostCreate"
+      ],
+      "menuItems": [
+        "Clear Duplicate Lock"
+      ],
+      "settingsCount": 15,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/duplicate-guard",
+        "github": "https://github.com/grantdb/duplicate-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/duplicate-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/duplicate-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Duplicate Guard.",
+        "troubleshooting": "Check the Duplicate Guard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "gimmecode-guard",
+      "slug": "gimmecode-guard",
+      "appName": "GimmeCode Guard",
+      "aliases": [
+        "gimmecode-guard",
+        "gimmecode guard",
+        "gimmecodeguard"
+      ],
+      "summary": "Detects low-effort give me code requests",
+      "keywords": [
+        "gimmecode-guard",
+        "gimmecode guard",
+        "moderation",
+        "gimmecodeguard"
+      ],
+      "setupSteps": [
+        "Install: Add GimmeCode Guard to your subreddit through the Reddit App Directory.",
+        "Configure: Open Mod Tools > App Settings > GimmeCode Guard.",
+        "Set Thresholds: Configure your desired scores for warning replies, reports, or removals.",
+        "Save: Automated protection activates immediately across all new comment submissions.",
+        "No complex regex configuration required. Clean technical discussions for your developer community.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "CommentSubmit"
+      ],
+      "menuItems": [
+        "Check User GimmeCode History",
+        "View GimmeCode Audit Logs"
+      ],
+      "settingsCount": 7,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/gimmecode-guard",
+        "github": "https://github.com/grantdb/gimmecode-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for GimmeCode Guard.",
+        "troubleshooting": "Check the GimmeCode Guard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "action-guard",
+      "slug": "action-guard",
+      "appName": "ActionGuard",
+      "aliases": [
+        "action-guard",
+        "actionguard",
+        "action guard"
+      ],
+      "summary": "Professional action moderation engine.",
+      "keywords": [
+        "action-guard",
+        "actionguard",
+        "moderation",
+        "action guard"
+      ],
+      "setupSteps": [
+        "Install: Add Action Guard to your subreddit through the Reddit App Directory.",
+        "Configure: Open GuardHub: ActionGuard Orchestrator from Subreddit Mod Tools.",
+        "Create Playbooks: Build your multi-action response recipes and test them in Dry-Run Mode.",
+        "Activate: Switch verified playbooks to Live mode to begin automated orchestration.",
+        "No external bot hosting required. Coordinated multi-action workflows directly within Reddit.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "PostCreate",
+        "CommentCreate",
+        "ModAction"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/action-guard",
+        "github": "https://github.com/grantdb/action-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/action-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/action-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for ActionGuard.",
+        "troubleshooting": "Check the ActionGuard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "audit-guard",
+      "slug": "audit-guard",
+      "appName": "AuditGuard",
+      "aliases": [
+        "audit-guard",
+        "auditguard",
+        "audit guard"
+      ],
+      "summary": "Professional audit log moderation engine.",
+      "keywords": [
+        "audit-guard",
+        "auditguard",
+        "moderation",
+        "audit guard"
+      ],
+      "setupSteps": [
+        "Install: Add Audit Guard to your subreddit through the Reddit App Directory.",
+        "Initialize Dashboard: Select GuardHub: Create Audit Dashboard from Subreddit Mod Tools.",
+        "Passive Ingestion: Audit Guard automatically begins indexing community moderation events.",
+        "Review: Open your dashboard anytime to inspect event history and search specific actions.",
+        "No external database setup required. Complete moderation transparency directly in your subreddit.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/audit-guard",
+        "github": "https://github.com/grantdb/audit-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/audit-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/audit-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for AuditGuard.",
+        "troubleshooting": "Check the AuditGuard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "flair-guard",
+      "slug": "flair-guard",
+      "appName": "FlairGuard",
+      "aliases": [
+        "flair-guard",
+        "flairguard",
+        "flair guard"
+      ],
+      "summary": "Professional flair moderation engine.",
+      "keywords": [
+        "flair-guard",
+        "flairguard",
+        "moderation",
+        "flair guard"
+      ],
+      "setupSteps": [
+        "Install: Add Flair Guard to your subreddit through the Reddit App Directory.",
+        "Configure: Open Mod Tools > App Settings > Flair Guard.",
+        "Map Flairs: Enter your keyword triggers and corresponding flair template IDs.",
+        "Save: Automated flair enforcement begins immediately on all incoming community posts.",
+        "No complex AutoMod YAML required. Clean visual organization for your entire community.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "PostSubmit",
+        "PostCreate"
+      ],
+      "menuItems": [],
+      "settingsCount": 8,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/flair-guard",
+        "github": "https://github.com/grantdb/flair-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/flair-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/flair-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for FlairGuard.",
+        "troubleshooting": "Check the FlairGuard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "guard-hub",
+      "slug": "guard-hub",
+      "appName": "Guard Hub",
+      "aliases": [
+        "guard-hub",
+        "guard hub",
+        "guardhub"
+      ],
+      "summary": "Central GuardHub integration platform.",
+      "keywords": [
+        "guard-hub",
+        "guard hub",
+        "moderation",
+        "guardhub"
+      ],
+      "setupSteps": [
+        "Install: Add Guard Hub to your subreddit through the Reddit App Directory.",
+        "Open Hub: Launch GuardHub: Guard Hub Dashboard from Subreddit Mod Tools.",
+        "Review: Guard Hub automatically discovers your installed apps and displays your community defense status.",
+        "Monitor: Check the dashboard periodically to ensure all moderation layers remain fully operational.",
+        "No complex configuration required. Complete observability for your entire moderation ecosystem.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": false,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [
+        "GuardHub: Status"
+      ],
+      "settingsCount": 1,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/guard-hub",
+        "github": "https://github.com/grantdb/guard-hub",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/guard-hub/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/guard-hub/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Guard Hub.",
+        "troubleshooting": "Check the Guard Hub troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "link-guard",
+      "slug": "link-guard",
+      "appName": "LinkGuard",
+      "aliases": [
+        "link-guard",
+        "linkguard",
+        "link guard"
+      ],
+      "summary": "Strict URL policy enforcement & link shortener filter for Reddit posts and comments.",
+      "keywords": [
+        "link-guard",
+        "linkguard",
+        "security",
+        "link guard"
+      ],
+      "setupSteps": [
+        "Install: Add Link Guard to your subreddit through the Reddit App Directory.",
+        "Configure: Open GuardHub: LinkGuard Dashboard from Subreddit Mod Tools.",
+        "Select Rules: Enable URL shortener resolution, threat feed matching, and custom pattern filters in Audit Mode.",
+        "Enforce: Once satisfied with audit logs, switch your rules to Live mode.",
+        "No dangerous manual URL clicking. Comprehensive automated link security in your native dashboard.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": true,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "PostCreate",
+        "PostSubmit",
+        "CommentCreate",
+        "CommentSubmit"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/link-guard",
+        "github": "https://github.com/grantdb/link-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/link-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/link-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for LinkGuard.",
+        "troubleshooting": "Check the LinkGuard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "verify-guard",
+      "slug": "verify-guard",
+      "appName": "VerifyGuard",
+      "aliases": [
+        "verify-guard",
+        "verifyguard",
+        "verify guard"
+      ],
+      "summary": "Configurable multi-tier verification engine for user trust, age, and role verification.",
+      "keywords": [
+        "verify-guard",
+        "verifyguard",
+        "security",
+        "verify guard"
+      ],
+      "setupSteps": [
+        "Install: Add Verify Guard to your subreddit through the Reddit App Directory.",
+        "Configure: Open GuardHub: VerifyGuard Dashboard from Subreddit Mod Tools.",
+        "Launch Post: Click GuardHub: Create Verification Post to create your community intake post.",
+        "Activate: Set your desired verification tiers to begin welcoming verified members.",
+        "No modmail clutter or sensitive data exposure. Streamlined community verification directly in Reddit.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": false,
+        "redis": true,
+        "http": false,
+        "scheduler": true,
+        "customPost": false
+      },
+      "triggers": [
+        "PostCreate",
+        "PostSubmit",
+        "CommentCreate",
+        "CommentSubmit",
+        "AppInstall"
+      ],
+      "menuItems": [
+        "GuardHub: VerifyGuard Dashboard",
+        "GuardHub: Create Verification Post"
+      ],
+      "settingsCount": 1,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/verify-guard",
+        "github": "https://github.com/grantdb/verify-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/verify-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/verify-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for VerifyGuard.",
+        "troubleshooting": "Check the VerifyGuard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "rate-guard",
+      "slug": "rate-guard",
+      "appName": "RateGuard",
+      "aliases": [
+        "rate-guard",
+        "rateguard",
+        "rate guard"
+      ],
+      "summary": "Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.",
+      "keywords": [
+        "rate-guard",
+        "rateguard",
+        "moderation",
+        "rate guard"
+      ],
+      "setupSteps": [
+        "Install: Add Rate Guard to your subreddit through the Reddit App Directory.",
+        "Configure: Open Mod Tools > App Settings > Rate Guard.",
+        "Set Cadence: Configure your minimum time gap, 24-hour rolling cap, and burst limit thresholds.",
+        "Save: The cadence engine applies immediately to all incoming community posts.",
+        "No external servers or complicated bot hosting required. Clean, automated rate limiting inside Reddit.*"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": false
+      },
+      "triggers": [
+        "PostSubmit",
+        "PostCreate"
+      ],
+      "menuItems": [
+        "GuardHub: RateGuard Settings"
+      ],
+      "settingsCount": 9,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/rate-guard",
+        "github": "https://github.com/grantdb/rate-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/rate-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/rate-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for RateGuard.",
+        "troubleshooting": "Check the RateGuard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "sgteam-dispatch",
+      "slug": "sgteam-dispatch",
+      "appName": "SG Team Dispatch",
+      "aliases": [
+        "sgteam-dispatch",
+        "sg team dispatch",
+        "sgteamdispatch",
+        "sgteam dispatch"
+      ],
+      "summary": "Replayable Stargate SG-1 inspired tactical mission command game.",
+      "keywords": [
+        "sgteam-dispatch",
+        "sg team dispatch",
+        "interactive",
+        "sgteamdispatch",
+        "sgteam dispatch"
+      ],
+      "setupSteps": [
+        "Install: Add SG Team Dispatch to your subreddit via the Devvit platform.",
+        "Post Creation: Open the Mod Menu on your subreddit and select \"Create SG Team Dispatch Post\".",
+        "Play & Compete: Commanders interact with the mission control canvas directly inside Reddit on mobile or desktop."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/sgteam-dispatch",
+        "github": "https://github.com/grantdb/sgteam-dispatch",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/sgteam-dispatch/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/sgteam-dispatch/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for SG Team Dispatch.",
+        "troubleshooting": "Check the SG Team Dispatch troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-15"
+    },
+    {
+      "appId": "chevron-lock",
+      "slug": "chevron-lock",
+      "appName": "Chevron Lock",
+      "aliases": [
+        "chevron-lock",
+        "chevron lock",
+        "chevronlock"
+      ],
+      "summary": "Stargate-inspired 7-chevron dialing console puzzle game.",
+      "keywords": [
+        "chevron-lock",
+        "chevron lock",
+        "interactive",
+        "chevronlock"
+      ],
+      "setupSteps": [],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/chevron-lock",
+        "github": "https://github.com/grantdb/chevron-lock",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/chevron-lock/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/chevron-lock/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Chevron Lock.",
+        "troubleshooting": "Check the Chevron Lock troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-15"
+    },
+    {
+      "appId": "testrank",
+      "slug": "testrank",
+      "appName": "TestRank",
+      "aliases": [
+        "testrank"
+      ],
+      "summary": "Tester recognition and ranking app for r/droidapptesters.",
+      "keywords": [
+        "testrank",
+        "utility"
+      ],
+      "setupSteps": [
+        "Post your app testing thread in the subreddit with an appropriate link flair.",
+        "Review comments from testers. On helpful replies, open the comment menu (`...`) and click:",
+        "Mark Helpful Feedback (+10 pts)",
+        "Mark Bug Found (+25 pts)",
+        "Mark Retest (+15 pts)"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": false,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "AppInstall",
+        "PostSubmit",
+        "CommentCreate"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/testrank",
+        "github": "https://github.com/grantdb/testrank",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/testrank/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/testrank/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for TestRank.",
+        "troubleshooting": "Check the TestRank troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-18"
+    },
+    {
+      "appId": "reference-reply-bot",
+      "slug": "reference-reply-bot",
+      "appName": "Reference Reply Bot",
+      "aliases": [
+        "reference-reply-bot",
+        "reference reply bot",
+        "referencereplybot"
+      ],
+      "summary": "Post-only support intake and reference bot for r/grantdb.",
+      "keywords": [
+        "reference-reply-bot",
+        "reference reply bot",
+        "support",
+        "referencereplybot"
+      ],
+      "setupSteps": [],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "PostSubmit",
+        "PostCreate",
+        "AppInstall",
+        "AppUpgrade"
+      ],
+      "menuItems": [
+        "GrantDB Support: Clear My Cooldown",
+        "GrantDB Support: Seed App Knowledge Database",
+        "GrantDB Support: Clear Knowledge Database",
+        "GrantDB Support: Analyze & Reply to Post"
+      ],
+      "settingsCount": 8,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/reference-reply-bot",
+        "github": "https://github.com/grantdb/reference-reply-bot",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/reference-reply-bot/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/reference-reply-bot/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Reference Reply Bot.",
+        "troubleshooting": "Check the Reference Reply Bot troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "malp-scout",
+      "slug": "malp-scout",
+      "appName": "MALP-Scout",
+      "aliases": [
+        "malp-scout",
+        "malpscout",
+        "malp scout"
+      ],
+      "summary": "Manual-only Stargate SG-1 content scout for subreddit moderators.",
+      "keywords": [
+        "malp-scout",
+        "moderation",
+        "malpscout",
+        "malp scout"
+      ],
+      "setupSteps": [
+        "Install: Add MALP-Scout to your subreddit via the Devvit App Directory.",
+        "Usage: Open the Subreddit Mod Menu (desktop) or tap the 3-dots on any post menu (mobile) and select MALP: Launch Reconnaissance.",
+        "Select & Edit: Pick your preferred candidate post, customize the title or body markdown if desired.",
+        "Publish: Tap Publish Post Now to submit to the subreddit."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": false,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [
+        "MALP: Launch Reconnaissance",
+        "MALP: Launch Reconnaissance"
+      ],
+      "settingsCount": 5,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/malp-scout",
+        "github": "https://github.com/grantdb/malp-scout",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/malp-scout/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/malp-scout/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for MALP-Scout.",
+        "troubleshooting": "Check the MALP-Scout troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-15"
+    },
+    {
+      "appId": "archive-guard",
+      "slug": "archive-guard",
+      "appName": "Archive-Guard",
+      "aliases": [
+        "archive-guard",
+        "archiveguard",
+        "archive guard"
+      ],
+      "summary": "Subreddit memory engine that detects recurring discussion topics, clusters repeat questions, and tracks canonical threads.",
+      "keywords": [
+        "archive-guard",
+        "moderation",
+        "archiveguard",
+        "archive guard"
+      ],
+      "setupSteps": [],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "PostSubmit"
+      ],
+      "menuItems": [
+        "Archive-Guard: Set as Canonical",
+        "Archive-Guard: View Topic History",
+        "Archive-Guard: Ignore Match",
+        "Archive-Guard: Generate Digest Now"
+      ],
+      "settingsCount": 2,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/archive-guard",
+        "github": "https://github.com/grantdb/archive-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/archive-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/archive-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Archive-Guard.",
+        "troubleshooting": "Check the Archive-Guard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-20"
+    },
+    {
+      "appId": "wiki-sync-bot",
+      "slug": "wiki-sync-bot",
+      "appName": "WikiSync Bot",
+      "aliases": [
+        "wiki-sync-bot",
+        "wikisync bot",
+        "wikisyncbot",
+        "wiki sync bot"
+      ],
+      "summary": "Subreddit wiki synchronization engine for Reddit communities.",
+      "keywords": [
+        "wiki-sync-bot",
+        "wikisync bot",
+        "utility",
+        "wikisyncbot",
+        "wiki sync bot"
+      ],
+      "setupSteps": [
+        "Install: Add WikiSync Bot to your subreddit.",
+        "Configure: Open Mod Tools > App Settings > WikiSync Bot.",
+        "Set Target Path: Enter the target wiki page path (e.g. `index/all-apps/wiki-sync-bot-test`).",
+        "Test Write: Open the subreddit menu and click Update Wiki (Manual Test)** to verify the write."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": true,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "AppInstall",
+        "AppUpgrade"
+      ],
+      "menuItems": [
+        "GuardHub: Sync Single App Wiki",
+        "GuardHub: Sync Wiki Pages Now",
+        "GuardHub: Force Sync All Wiki Pages",
+        "GuardHub: Sync Bot Knowledge (Schema)"
+      ],
+      "settingsCount": 2,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-sync-bot",
+        "github": "https://github.com/grantdb/wiki-sync-bot",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/wiki-sync-bot/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/wiki-sync-bot/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for WikiSync Bot.",
+        "troubleshooting": "Check the WikiSync Bot troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-23"
+    },
+    {
+      "appId": "rescue-guard",
+      "slug": "rescue-guard",
+      "appName": "RescueGuard",
+      "aliases": [
+        "rescue-guard",
+        "rescueguard",
+        "rescue guard"
+      ],
+      "summary": "Subreddit post-discovery & manual spotlight moderation engine for Reddit.",
+      "keywords": [
+        "rescue-guard",
+        "rescueguard",
+        "moderation",
+        "rescue guard"
+      ],
+      "setupSteps": [
+        "Install: Add RescueGuard to your subreddit through the Reddit App Directory.",
+        "Configure: Open Mod Tools > App Settings > RescueGuard.",
+        "Set Thresholds: Configure your batch size, minimum post age, lookback days, deduplication strategy, and spotlight flair/comment text.",
+        "Launch Review: Open the subreddit menu and select GuardHub: RescueGuard Review."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": false
+      },
+      "triggers": [],
+      "menuItems": [
+        "GuardHub: RescueGuard Review"
+      ],
+      "settingsCount": 9,
+      "links": {
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/rescue-guard",
+        "github": "https://github.com/grantdb/rescue-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/rescue-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/rescue-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for RescueGuard.",
+        "troubleshooting": "Check the RescueGuard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-08-22"
+    }
+  ]
+}
