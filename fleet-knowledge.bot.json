@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-23T10:56:34.561Z",
+  "generatedAt": "2026-08-23T11:39:15.304Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2467,9 +2467,7 @@
       },
       "triggers": [
         "PostSubmit",
-        "PostCreate",
-        "AppInstall",
-        "AppUpgrade"
+        "PostCreate"
       ],
       "menuItems": [
         "GrantDB Support: Moderator Hub",
