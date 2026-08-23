@@ -1,7 +1,7 @@
 <h1>WikiSync Bot</h1>
 
 <p>Category: Utility<br>
-Version: v0.0.16<br>
+Version: v0.0.17<br>
 Visibility: Unlisted<br>
 Summary: Subreddit wiki synchronization engine for Reddit communities.</p>
 
@@ -29,6 +29,7 @@ Summary: Subreddit wiki synchronization engine for Reddit communities.</p>
 <li>GuardHub: Sync Single App Wiki: Select and immediately sync the wiki page for a specific fleet app. (Location: subreddit)</li>
 <li>GuardHub: Sync Wiki Pages Now: Check the fleet manifest and push any newly changed wiki pages. (Location: subreddit)</li>
 <li>GuardHub: Force Sync All Wiki Pages: Force a complete background re-sync of all 44 app wiki pages, bypassing cache. (Location: subreddit)</li>
+<li>GuardHub: Sync Bot Knowledge (Schema): Fetch latest fleet-knowledge.bot.json from GitHub and push raw JSON directly to r/grantdb/wiki/bot_knowledge in both v2 and v1. (Location: subreddit)</li>
 </ul>
 <h3>Custom Post Types and Entrypoints</h3>
 <p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
@@ -63,8 +64,7 @@ This is a test wiki page created by WikiSync Bot manual verification.). Markdown
 <ul>
 <li>Install: Add WikiSync Bot to your subreddit.</li>
 <li>Configure: Open Mod Tools > App Settings > WikiSync Bot.</li>
-<li>Set Target Path: Enter the target wiki page path (e.g. `index/all-apps/wiki-sync-bot-test`).</li>
-<li>Test Write: Open the subreddit menu and click Update Wiki (Manual Test)** to verify the write.</li>
+<li>Trigger Sync: Open the subreddit menu and click GuardHub: Sync Wiki Pages Now or GuardHub: Sync Bot Knowledge (Schema)**.</li>
 </ul>
 
 <h2>Troubleshooting</h2>
@@ -74,11 +74,11 @@ This is a test wiki page created by WikiSync Bot manual verification.). Markdown
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.17 — 2026-08-23<br>
+Standard fleet synchronization and maintenance.</p>
 <p>0.0.16 — 2026-08-23<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.15 — 2026-08-23<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.14 — 2026-08-23<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>

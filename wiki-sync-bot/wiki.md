@@ -1,7 +1,7 @@
 # WikiSync Bot
 
 Category: Utility  
-Version: v0.0.16  
+Version: v0.0.17  
 Visibility: Unlisted  
 Summary: Subreddit wiki synchronization engine for Reddit communities.
 
@@ -24,6 +24,7 @@ Subreddit wiki synchronization engine for Reddit communities.
 - GuardHub: Sync Single App Wiki: Select and immediately sync the wiki page for a specific fleet app. (Location: subreddit)
 - GuardHub: Sync Wiki Pages Now: Check the fleet manifest and push any newly changed wiki pages. (Location: subreddit)
 - GuardHub: Force Sync All Wiki Pages: Force a complete background re-sync of all 44 app wiki pages, bypassing cache. (Location: subreddit)
+- GuardHub: Sync Bot Knowledge (Schema): Fetch latest fleet-knowledge.bot.json from GitHub and push raw JSON directly to r/grantdb/wiki/bot_knowledge in both v2 and v1. (Location: subreddit)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
@@ -53,21 +54,20 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 ## Setup and Usage
 - Install: Add WikiSync Bot to your subreddit.
 - Configure: Open Mod Tools > App Settings > WikiSync Bot.
-- Set Target Path: Enter the target wiki page path (e.g. `index/all-apps/wiki-sync-bot-test`).
-- Test Write: Open the subreddit menu and click Update Wiki (Manual Test)** to verify the write.
+- Trigger Sync: Open the subreddit menu and click GuardHub: Sync Wiki Pages Now or GuardHub: Sync Bot Knowledge (Schema)**.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.17 — 2026-08-23
+- Standard fleet synchronization and maintenance.
+
 0.0.16 — 2026-08-23
 - Standard fleet synchronization and maintenance.
 
 0.0.15 — 2026-08-23
-- Standard fleet synchronization and maintenance.
-
-0.0.14 — 2026-08-23
 - Standard fleet synchronization and maintenance.
 
 ## Links
