@@ -1,7 +1,7 @@
 # Reference Reply Bot
 
 Category: Support  
-Version: v0.0.12  
+Version: v0.0.13  
 Visibility: Unlisted  
 Summary: Post-only support intake and reference bot for r/grantdb.
 
@@ -71,13 +71,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.13 — 2026-08-23
+- Standard fleet synchronization and maintenance.
+
 0.0.12 — 2026-08-16
 - Standard fleet synchronization and maintenance.
 
 0.0.11 — 2026-08-11
-- Standard fleet synchronization and maintenance.
-
-0.0.10 — 2026-08-11
 - Standard fleet synchronization and maintenance.
 
 ## Links
