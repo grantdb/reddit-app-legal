@@ -1,3 +1,5 @@
+> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest)
+
 # Linux Quest
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
@@ -16,8 +18,6 @@
 
 ## How It Works
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/linux-quest-flowchart.png)
-
 1. A user seeking technical help launches Linux Quest from an established sticky post in the subreddit.
 2. They play through a short, interactive text-adventure scenario where they must diagnose a fictional problem.
 3. The game rewards them for providing system specs and trying basic troubleshooting steps before asking for help.
@@ -28,6 +28,11 @@
 1. **Install**: Add **Linux Quest** to your subreddit via the App Directory.
 2. **Dashboard Initialization**: Navigate to your subreddit's Mod Tools and open the Linux Quest configuration post if you wish to tweak settings.
 3. **Usage**: Users can launch the quest directly from an interactive post in the community. We recommend linking to it from your subreddit's sidebar or rules.
+
+## Support
+
+For help, bug reports, or feature requests, post in r/grantdb.
+Please include the app name, what you expected, what happened, and any error text or screenshots.
 
 ## Legal
 

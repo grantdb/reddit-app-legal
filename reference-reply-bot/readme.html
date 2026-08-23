@@ -1,0 +1,74 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/reference-reply-bot">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Reference Reply Bot (`r/grantdb`)</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Category-Support-blue?style=for-the-badge">Category</a></p>
+<p><strong>Reference Reply Bot</strong> is a post-only support intake and reference utility built for <strong>r/grantdb</strong>. It monitors new support posts, identifies support intent and app references using deterministic heuristic scoring, and posts concise, non-conversational troubleshooting guidance and documentation links.</p>
+<p>---</p>
+<h2>Key Features & Production Design</h2>
+<ul>
+<li><strong>Post-Only Support Focus</strong>: Listens strictly to `onPostSubmit` events to provide immediate triage and reference replies on new support submissions in `r/grantdb`.</li>
+<li><strong>Confidence-Based Reply Shaping</strong>: Categorizes matched results into confidence bands (`high`, `medium`, `low`) to dynamically tailor response length, section visibility, and diagnostic blocks.</li>
+<li><strong>Likely Cause & Safe-First Actions</strong>: Surfaces diagnostic `Likely cause` blocks for high/medium confidence matches and ranks safe, non-disruptive troubleshooting actions first (settings check → Mod Menu test → console logs).</li>
+<li><strong>Semantic Intent Deduplication</strong>: Prunes near-duplicate troubleshooting bullets by intent signature (`dedupeBulletsByIntent`) to keep replies compact and focused.</li>
+<li><strong>Atomic Concurrency Lock</strong>: Uses Redis `watch` and multi-exec transactions (`rrb:processing:<postId>`) to acquire a 30-second processing lock, preventing race conditions when event triggers fire concurrently.</li>
+<li><strong>Post-Execution Replied Marker</strong>: The permanent deduplication marker (`rrb:replied:<postId>`) is written <strong>only after</strong> `submitComment` succeeds. If commenting fails, the lock is released in a `finally` block so the post can be retried safely.</li>
+<li><strong>Structured Redis App Knowledge</strong>: App documentation records are stored in `rrb:apps` and `rrb:aliases` Redis hashes for easy bulk ingestion of fleet README files.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/reference-reply-bot-flowchart.png">Logic Flowchart</a></p>
+<p>```</p>
+<p>[ New Post Submission Received ]</p>
+<p>│</p>
+<p>▼</p>
+<p>[ Check Permanent Replied Marker (rrb:replied:<postId>) ] ──(Replied)──► [ Skip ]</p>
+<p>│</p>
+<p>▼</p>
+<p>[ Acquire Atomic Processing Lock (rrb:processing:<postId>) ] ──(Locked)──► [ Skip ]</p>
+<p>│</p>
+<p>▼</p>
+<p>[ Support Intent & App Alias Scoring ]</p>
+<p>│</p>
+<p>▼</p>
+<p>[ Intake Completeness Analysis ] ──(No App Match)──► [ Missing App Mode Reply ]</p>
+<p>│</p>
+<p>▼ (App Matched)</p>
+<p>[ Completeness >= Threshold? ] ──(No)──► [ Hybrid Mode Reply ]</p>
+<p>│</p>
+<p>▼ (Yes)</p>
+<p>[ Normal Reference Reply ] ──(On Success)──► [ Write Replied Marker & User Cooldown ]</p>
+<p>│</p>
+<p>└───────(Always)──► [ Release Lock via finally Block ]</p>
+<p>```</p>
+<p>---</p>
+<h2>App Settings</h2>
+<p>Configure via <strong>Mod Tools -> App Settings</strong> in `r/grantdb`:</p>
+<p>---</p>
+<h2>Seeding & Testing Data</h2>
+<p>1. Install the app on `r/grantdb` or your dev subreddit.</p>
+<p>2. Go to <strong>Mod Tools -> Subreddit Menu -> click "GrantDB Support: Seed App Knowledge Database"</strong>.</p>
+<p>3. Redis is populated with live knowledge dynamically fetched from `r/grantdb/wiki/bot_knowledge` (or bundled fallback if missing).</p>
+<p>4. Content updates can be re-seeded instantly without needing an app rebuild or deployment.</p>
+<p>5. To reset data, click <strong>"GrantDB Support: Clear Knowledge Database"</strong>.</p>
+<p>---</p>
+<h2>Redis Data Taxonomy</h2>
+<ul>
+<li>`rrb:apps` *(Hash)*: Stores JSON stringified `AppKnowledge` objects keyed by `appId`.</li>
+<li>`rrb:aliases` *(Hash)*: Maps lowercase app aliases to `appId`.</li>
+<li>`rrb:processing:<postId>` *(String, 30s TTL)*: Atomic concurrency processing lock acquired via `watch`.</li>
+<li>`rrb:replied:<postId>` *(String, 7-day TTL)*: Permanent deduplication marker written upon comment success.</li>
+<li>`rrb:cooldown:<authorId>` *(String, N-min TTL)*: Per-user cooldown timer.</li>
+</ul>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/reference-reply-bot/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/reference-reply-bot/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community.*</p>

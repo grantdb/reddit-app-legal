@@ -1,0 +1,70 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/verify-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>GuardHub: Verify Guard</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Security-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Verification_Engine-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Streamline community verification, grant trust badges, and protect member privacy.</strong></p></blockquote>
+<p>Verify Guard provides a privacy-first verification and access engine for your subreddit. Manage multi-tier verification policies—including automated account trust gates, self-declared age gates, and manual role reviews—to award user flairs and approved contributor status without modmail clutter.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Multi-tier verification</strong>: Support automated trust gates, self-declared age gates, and manual mod review.</li>
+<li><strong>Interactive verification post</strong>: Allow community members to verify directly from an interactive custom post.</li>
+<li><strong>Automate flair & access</strong>: Automatically assign verified user flairs and approved contributor permissions.</li>
+<li><strong>Privacy-first design</strong>: Zero storage of raw legal IDs, birthdates, or private personal data.</li>
+<li><strong>Automated expiration</strong>: Automatically expire time-limited verifications and clean up user flairs via cron jobs.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Verify Guard Way</h2>
+<p>---</p>
+<h2>Built for Trust and Privacy</h2>
+<ul>
+<li><strong>Tier 1: Automated Trust Gates</strong>: Automatically verify accounts that meet minimum account age, karma thresholds, and safety criteria.</li>
+<li><strong>Tier 2: Self-Declared Age Gates</strong>: Verify community age-band eligibility (18+ / 21+) with privacy-first boolean confirmations.</li>
+<li><strong>Tier 3: Role & Expert Review</strong>: Custom intake questionnaire with a secure moderator review dashboard for AMA guests and expert badges.</li>
+<li><strong>Custom Post Verification Center</strong>: Launch an unlisted or pinned verification post where community members initiate intake.</li>
+<li><strong>Automated Lifecycle Expiration</strong>: Scheduled background maintenance automatically revokes expired badges and updates user permissions.</li>
+<li><strong>Dedicated Management Center</strong>: Access a private dashboard from Subreddit Mod Tools to review pending applications, inspect logs, and tune tiers.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/verify-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Initiate</strong>: A community member opens the interactive Verification Center post.</p>
+<p>2. <strong>Evaluate</strong>: Automated Tier 1 trust gates verify qualifying accounts instantly, while Tier 3 applications route to the mod queue.</p>
+<p>3. <strong>Approve</strong>: Moderators review pending intake requests in the dashboard with one-click approval or denial.</p>
+<p>4. <strong>Grant</strong>: On approval, Verify Guard assigns the configured user flair and grants contributor permissions.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Verify Guard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure</strong>: Open <strong>GuardHub: VerifyGuard Dashboard</strong> from Subreddit Mod Tools.</p>
+<p>3. <strong>Launch Post</strong>: Click <strong>GuardHub: Create Verification Post</strong> to create your community intake post.</p>
+<p>4. <strong>Activate</strong>: Set your desired verification tiers to begin welcoming verified members.</p>
+<p>*No modmail clutter or sensitive data exposure. Streamlined community verification directly in Reddit.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Verify Guard is engineered for high-concurrency member verification with strict data privacy guarantees.</p>
+<ul>
+<li><strong>Partitioned Redis Hash Storage</strong>: Organizes user verification profiles into partitioned hash buckets (`gh:vg:prof:<subId>:<bucketId>`) to prevent key sprawl.</li>
+<li><strong>Ephemeral Intake Lifecycles</strong>: Applies automatic TTL expirations (48–72h) to intake submissions, hard-deleting answers upon review.</li>
+<li><strong>Automated Revocation Cron</strong>: Executes scheduled daily background tasks to prune expired verification profiles and sync flair states.</li>
+<li><strong>Interactive React Webview</strong>: Provides an intuitive intake wizard for users and a triage dashboard for moderators.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Verify Guard automates verification intake and policy evaluation according to the exact tiers defined by your moderation team. Tier evaluations and intake responses serve as assistive tools—human moderators maintain complete authority to approve, deny, override, or revoke verification statuses at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/verify-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/verify-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

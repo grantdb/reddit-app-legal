@@ -1,0 +1,70 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/gimmecode-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>GuardHub: GimmeCode Guard 🛡️</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Automation-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Filter low-effort code begging and keep developer discussions focused and high-value.</strong></p></blockquote>
+<p>GimmeCode Guard protects programming and tech subreddits from repetitive "give me code" demands, homework begging, and low-effort copy-paste requests. Using pattern scoring and code block awareness, it nudges users toward constructive inquiry while preserving meaningful technical discussions.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Filter low-effort code requests</strong>: Identify phrases like "code please", "send source", or "do this for me".</li>
+<li><strong>Code block awareness</strong>: Automatically ignores comments that include actual code samples or snippets.</li>
+<li><strong>Configurable action thresholds</strong>: Choose between gentle warning replies, mod queue reports, or removals.</li>
+<li><strong>90-day strike memory</strong>: Track repeat offenders across the subreddit with persistent strike history.</li>
+<li><strong>Inspect from comment menus</strong>: Check any user's strike history directly from Reddit's standard comment menus.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The GimmeCode Guard Way</h2>
+<p>---</p>
+<h2>Built for High-Quality Developer Communities</h2>
+<ul>
+<li><strong>Smart Request Detection</strong>: Evaluates multi-token phrases and variations commonly used in low-effort source code requests.</li>
+<li><strong>Context-Aware Immunity</strong>: Intelligently exempts comments containing valid Markdown code blocks (` ``` ` or 4-space indentation).</li>
+<li><strong>Graduated Moderation Actions</strong>: Configure independent score thresholds for automated warning replies, mod reports, or direct removals.</li>
+<li><strong>Long-Term Strike Memory</strong>: Tracks author violation strikes in Redis over 90-day rolling windows to identify habitual freeloaders.</li>
+<li><strong>Comment Menu Inspection</strong>: Access a moderator menu item on any comment to instantly view the author's community strike history.</li>
+<li><strong>Modmail Audit Summaries</strong>: Generate and deliver consolidated audit reports directly to your team modmail thread on demand.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/gimmecode-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Submit</strong>: A user submits a comment in the subreddit.</p>
+<p>2. <strong>Analyze</strong>: GimmeCode Guard evaluates the text for code-begging patterns while checking for valid code blocks.</p>
+<p>3. <strong>Score</strong>: If low-effort request markers exceed threshold scores, the comment is flagged and logged to Redis.</p>
+<p>4. <strong>Action</strong>: The configured action (automated educational warning, mod queue report, or removal) executes immediately.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>GimmeCode Guard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure</strong>: Open <strong>Mod Tools > App Settings > GimmeCode Guard</strong>.</p>
+<p>3. <strong>Set Thresholds</strong>: Configure your desired scores for warning replies, reports, or removals.</p>
+<p>4. <strong>Save</strong>: Automated protection activates immediately across all new comment submissions.</p>
+<p>*No complex regex configuration required. Clean technical discussions for your developer community.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>GimmeCode Guard is engineered for fast comment parsing and accurate intent detection across active programming communities.</p>
+<ul>
+<li><strong>Phrase Scoring Matrix</strong>: Evaluates multi-token phrase dictionaries with weighted keyword matching.</li>
+<li><strong>Markdown AST Code Block Filter</strong>: Detects fenced code blocks, inline snippets, and indented text to protect genuine technical help.</li>
+<li><strong>Rolling 90-Day Redis Hash</strong>: Persists user strike tallies and violation timestamps with automatic TTL decay.</li>
+<li><strong>Native Context Menu Extension</strong>: Registers custom moderator menu actions on comments for rapid historical lookups.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>GimmeCode Guard detects and scores low-effort code requests to assist in maintaining technical discussion standards. Scoring serves as an assistive filter—human moderators maintain full authority to review flagged comments, approve exceptions, and adjust detection sensitivity at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

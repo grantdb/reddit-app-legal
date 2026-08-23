@@ -1,0 +1,70 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/duplicate-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>GuardHub: Duplicate Guard 🛡️</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blueviolet?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Spam_Control-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Catch repost bots, filter duplicate topics, and keep your community feed fresh.</strong></p></blockquote>
+<p>Duplicate Guard stops repetitive topics, reworded reposts, and content floods before they reach your front page. Comparing incoming submission titles against recent community posts using configurable similarity algorithms, it filters duplicates automatically without manual mod queue searching.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Stop repetitive topics</strong>: Catch duplicate submissions covering the exact same subject.</li>
+<li><strong>Configurable match modes</strong>: Choose between strict exact titles or flexible similarity algorithms.</li>
+<li><strong>Adjustable lookback window</strong>: Control how many recent posts or days to evaluate for duplicates.</li>
+<li><strong>Custom moderation actions</strong>: Automatically filter to queue, report, remove, or leave an explanatory comment.</li>
+<li><strong>Granular exemptions</strong>: Protect megathreads, moderator posts, and specific flairs from duplicate checks.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Duplicate Guard Way</h2>
+<p>---</p>
+<h2>Built for High-Quality Feeds</h2>
+<ul>
+<li><strong>Multiple Match Modes</strong>: Select from Strict (exact normalized match), Balanced, or Aggressive similarity matching.</li>
+<li><strong>Configurable Lookback Windows</strong>: Set lookback horizons from 25 to 500 recent submissions to match your community's posting volume.</li>
+<li><strong>Flexible Action Pipelines</strong>: Choose to silently filter for review, flag with reports, or remove immediately with an automated sticky comment.</li>
+<li><strong>Comprehensive Exemptions</strong>: Easily exempt moderators, approved users, designated post flairs, or specific regex title patterns.</li>
+<li><strong>Deduplication Safeguards</strong>: Built-in atomic locking prevents duplicate actions during Reddit event retries.</li>
+<li><strong>Seamless Settings Management</strong>: Configure all threshold settings directly from your native Subreddit Mod Tools.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/duplicate-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Receive</strong>: Duplicate Guard receives new submission events via `PostSubmit` and `PostCreate` triggers.</p>
+<p>2. <strong>Verify</strong>: The author, post flair, and title are verified against configured exemption rules.</p>
+<p>3. <strong>Compare</strong>: The submission title is compared against recent community posts in the lookback cache.</p>
+<p>4. <strong>Enforce</strong>: When a duplicate match is detected, the configured action (e.g. `Filter`, `Remove`, or `Comment & Remove`) executes.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Duplicate Guard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure</strong>: Open <strong>Mod Tools > App Settings > Duplicate Guard</strong>.</p>
+<p>3. <strong>Set Thresholds</strong>: Choose your preferred Match Mode (Strict or Balanced) and lookback post limit.</p>
+<p>4. <strong>Save</strong>: Settings apply immediately to all incoming community submissions.</p>
+<p>*No external tools required. Automated duplicate protection right inside Reddit.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Duplicate Guard is engineered for fast token comparison and reliable event processing across active subreddits.</p>
+<ul>
+<li><strong>Token Similarity Engine</strong>: Uses tokenized text normalization (lowercasing, punctuation stripping, stopword filtering) and Jaccard similarity scoring.</li>
+<li><strong>Redis Lookback Index</strong>: Maintains a rolling sorted-set cache of recent submission titles with automatic TTL expiry.</li>
+<li><strong>Effectively-Once Guarantees</strong>: Employs atomic Redis set locks to prevent duplicate execution across overlapping platform trigger deliveries.</li>
+<li><strong>Custom Comment Templates</strong>: Supports customizable markdown removal comments with dynamic placeholders for original post links.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Duplicate Guard evaluates title similarity to highlight likely duplicate topics and reposts. Similarity scores serve as assistive indicators to help keep feeds organized—human moderators maintain full authority to approve filtered posts, adjust match sensitivity, and grant exemptions at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/duplicate-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/duplicate-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

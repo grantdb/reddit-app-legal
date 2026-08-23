@@ -1,0 +1,70 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/format-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>GuardHub: Format Guard</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Content_Policy-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Enforce clean titles, proper tags, and readable post structures automatically.</strong></p></blockquote>
+<p>Format Guard keeps your subreddit feed clean, consistent, and readable. Enforce character length limits, required title tags, case controls, and regex patterns with instant author guidance—all managed through an intuitive native dashboard without editing complex AutoModerator YAML.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Enforce title requirements</strong>: Mandate required bracket tags (e.g. `[Discussion]`, `[OC]`) or prefix formats.</li>
+<li><strong>Stop formatting abuse</strong>: Detect and block all-caps yelling, excessive punctuation (`???!!!`), or clickbait structures.</li>
+<li><strong>Set length boundaries</strong>: Define minimum and maximum character lengths for titles and post bodies.</li>
+<li><strong>Guide authors instantly</strong>: Deliver clear automated removal reasons so users can fix and resubmit properly.</li>
+<li><strong>Test before enforcing</strong>: Use the in-dashboard Test tab to verify formatting rules against sample submissions.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Format Guard Way</h2>
+<p>---</p>
+<h2>Built for Clean Community Standards</h2>
+<ul>
+<li><strong>Structural Constraints</strong>: Set minimum and maximum length bounds on titles and bodies to stop one-word spam or unreadable text blocks.</li>
+<li><strong>Advanced Regex Validation</strong>: Configure `Must Match` and `Must NOT Match` patterns to enforce custom naming schemes and forbidden phrases.</li>
+<li><strong>Case & Punctuation Control</strong>: Automatically identify all-caps titles, alternating-case spam, and repetitive punctuation strings.</li>
+<li><strong>Instant Author Feedback</strong>: Provide friendly, actionable removal messages so well-meaning users know how to correct their formatting.</li>
+<li><strong>Repeat Offender Escalation</strong>: Track repeat format violations over rolling 7-day windows and notify modmail when thresholds are reached.</li>
+<li><strong>Dedicated Management Center</strong>: Access a private dashboard from Subreddit Mod Tools to adjust rules, view match metrics, and test sample titles.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/format-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Submit</strong>: A user submits a post or comment to your subreddit.</p>
+<p>2. <strong>Scan</strong>: Format Guard evaluates the submission against your active structural and regex rules sequentially.</p>
+<p>3. <strong>Notify</strong>: If a rule is failed, the post is removed and an automated message is sent explaining the formatting requirement.</p>
+<p>4. <strong>Escalate</strong>: Repeat formatting violations are recorded in Redis and escalated to modmail when configured.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Format Guard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure</strong>: Open <strong>GuardHub: FormatGuard Dashboard</strong> from Subreddit Mod Tools.</p>
+<p>3. <strong>Create Rules</strong>: Add your required title tags and length limits, testing them in the Test tab.</p>
+<p>4. <strong>Enforce</strong>: Activate your rules to begin automated formatting validation.</p>
+<p>*No complex AutoMod syntax required. Clean, consistent post formatting across your entire community.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Format Guard is built for high-speed textual analysis and robust regex evaluation across active subreddit queues.</p>
+<ul>
+<li><strong>Dual-Pattern Regex Engine</strong>: Evaluates positive enforcement (`Must Match`) and negative exclusion (`Must NOT Match`) in a single pass.</li>
+<li><strong>Case Distribution Analyzer</strong>: Measures uppercase-to-lowercase character ratios to detect yelling and alternating-case patterns.</li>
+<li><strong>Rolling Repeat Counter</strong>: Tracks user violation frequencies over 7-day rolling windows using Redis counters.</li>
+<li><strong>In-Dashboard Regex Sandbox</strong>: Allows moderators to test complex regular expressions against sample titles directly in the UI.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Format Guard automates the validation of community stylistic and formatting standards according to the exact rules configured by your moderation team. Removal actions provide clear, actionable feedback to authors—human moderators maintain full authority to approve exceptions and adjust formatting guidelines at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/format-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/format-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

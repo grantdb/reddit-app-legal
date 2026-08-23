@@ -1,0 +1,76 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/filter-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>GuardHub: Filter Guard 🛡️</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Gatekeeper-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Combine complex participation rules into simple, reliable community gates.</strong></p></blockquote>
+<p>Filter Guard gives moderation teams layered threshold logic without cryptic syntax. Combine account age, karma requirements, and risk score criteria using clear AND/OR gates, test everything safely in a visual simulator, and manage all your filter policies through a private dashboard.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Combine multiple conditions</strong>: Build rules requiring multiple criteria simultaneously (e.g. account age AND comment karma).</li>
+<li><strong>Flexible logic gates</strong>: Use clear AND/OR decision trees for fine-grained community protection.</li>
+<li><strong>Risk score integration</strong>: Include dynamic 0–100 author safety signals directly in threshold evaluations.</li>
+<li><strong>Automated escalations</strong>: Track repeat threshold triggers across 7-day windows and notify modmail.</li>
+<li><strong>Visual dashboard management</strong>: Configure and test all filter groups without editing code or YAML files.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Filter Guard Way</h2>
+<p>---</p>
+<h2>Built for Layered Protection</h2>
+<ul>
+<li><strong>Multi-Condition Rule Groups</strong>: Combine account age, combined karma, post karma, and comment karma into unified decision gates.</li>
+<li><strong>AND/OR Decision Logic</strong>: Configure flexible criteria—require all conditions to pass or allow any single threshold to qualify.</li>
+<li><strong>Safety Score Gating</strong>: Factor calculated account safety signals into your threshold checks to isolate suspicious submissions.</li>
+<li><strong>Rolling Repeat Escalation</strong>: Automatically count repeated filter hits over 7 days and dispatch summary alerts to modmail.</li>
+<li><strong>Interactive Simulator</strong>: Test rule groups against candidate usernames inside the dashboard before turning them live.</li>
+<li><strong>Dedicated Control Center</strong>: Open a private dashboard from Subreddit Mod Tools to inspect metrics, adjust gates, and monitor activity.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/filter-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Receive</strong>: Filter Guard intercepts new posts and comments as they are submitted to the subreddit.</p>
+<p>2. <strong>Evaluate</strong>: The submitting author's age, karma breakdown, and risk score are measured against active Rule Groups.</p>
+<p>3. <strong>Process</strong>: The AND/OR logic gate processes all conditions to determine whether the submission meets criteria.</p>
+<p>4. <strong>Action</strong>: If thresholds fail, the configured action (`filter`, `remove`, `spam`, or `report`) is applied, and repeat counts update.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Filter Guard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure</strong>: Open <strong>GuardHub: FilterGuard Dashboard</strong> from Subreddit Mod Tools.</p>
+<p>3. <strong>Create Gates</strong>: Define your threshold groups and test them in the Test tab.</p>
+<p>4. <strong>Enforce</strong>: Activate your verified rule groups to start automated gating.</p>
+<p>*No complex YAML syntax required. Clean layered protection managed directly from your dashboard.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Filter Guard is built for high-reliability rule evaluation across high-volume moderation queues.</p>
+<ul>
+<li><strong>Composite Condition Engine</strong>: Evaluates compound logical expressions (AND / OR) across multiple account metrics in a single pass.</li>
+<li><strong>Rolling 7-Day Window Tracking</strong>: Uses Redis counters to record repeat violation frequencies per user without manual tracking.</li>
+<li><strong>Simulated Test Harness</strong>: Provides an in-dashboard sandbox to test live user profiles against active rule definitions.</li>
+<li><strong>Modmail Notification Dispatch</strong>: Automatically formats and sends structured violation reports to modmail upon repeat threshold escalation.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Filter Guard automates the evaluation of multi-factor participation gates based on the criteria configured by your moderation team. Threshold results serve as assistive moderation tools—human moderators retain full authority to review filtered content in mod queue, approve exceptions, and adjust policy sensitivity at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name.</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message.</li>
+<li>Screenshots or relevant details.</li>
+</ul>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/filter-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/filter-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

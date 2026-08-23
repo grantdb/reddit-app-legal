@@ -1,0 +1,70 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/link-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>GuardHub: Link Guard</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Security-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Content_Policy-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Unmask shorteners, detect malicious redirects, and block link threats automatically.</strong></p></blockquote>
+<p>Link Guard protects your subreddit from phishing links, disguised shorteners, affiliate spam, and malicious redirect chains. Combining multi-provider threat intelligence, DNS security lookups, and automated redirect expansion, it audits community links without manual testing.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Unmask shorteners</strong>: Automatically trace redirect chains (`bit.ly`, `t.co`, `tinyurl`) to their final destinations.</li>
+<li><strong>Block malicious links</strong>: Check links against open threat feeds (URLhaus) and DNS-over-HTTPS security lookups.</li>
+<li><strong>Filter affiliate spam</strong>: Detect and remove unauthorized referral codes, tracking query strings, and custom patterns.</li>
+<li><strong>Spot obfuscated links</strong>: Catch disguised link text (e.g. `example[dot]com`) and Punycode homograph attacks.</li>
+<li><strong>Test in Audit Mode</strong>: Preview link matches safely in the background before applying live moderation actions.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Link Guard Way</h2>
+<p>---</p>
+<h2>Built for Comprehensive Link Security</h2>
+<ul>
+<li><strong>Redirect Expansion Engine</strong>: Automatically resolves HTTP redirect hops to reveal destination URLs hidden behind link shorteners.</li>
+<li><strong>Multi-Source Threat Intelligence</strong>: Cross-references links with open threat feeds (URLhaus) and DNS security services (Cloudflare 1.1.1.2 & Quad9).</li>
+<li><strong>VirusTotal Integration</strong>: Optionally connect your VirusTotal API key for deep malware and phishing analysis against custom detection thresholds.</li>
+<li><strong>Heuristics & Homograph Shield</strong>: Detects raw IP hosts, high-risk TLDs, Punycode homograph spoofing, and embedded basic auth credentials.</li>
+<li><strong>Flexible Action Modes</strong>: Configure rules to silently remove, filter to mod queue, report for review, or log exclusively in Audit Mode.</li>
+<li><strong>Dedicated Management Center</strong>: Access a private dashboard from Subreddit Mod Tools to inspect link metrics, test URLs, and configure scanning tiers.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/link-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Extract</strong>: Link Guard extracts raw URLs, Markdown hyperlink targets, and obfuscated link patterns from new submissions and comments.</p>
+<p>2. <strong>Resolve</strong>: Shortened URLs are traced through HTTP redirect chains to identify final canonical destinations.</p>
+<p>3. <strong>Scan</strong>: Target links are evaluated against active security rules, threat feeds, DNS lookups, and custom pattern filters.</p>
+<p>4. <strong>Enforce</strong>: When a violation is detected, Link Guard executes the configured action (`filter`, `remove`, `spam`, or `report`).</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Link Guard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure</strong>: Open <strong>GuardHub: LinkGuard Dashboard</strong> from Subreddit Mod Tools.</p>
+<p>3. <strong>Select Rules</strong>: Enable URL shortener resolution, threat feed matching, and custom pattern filters in Audit Mode.</p>
+<p>4. <strong>Enforce</strong>: Once satisfied with audit logs, switch your rules to Live mode.</p>
+<p>*No dangerous manual URL clicking. Comprehensive automated link security in your native dashboard.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Link Guard is engineered for fast URL analysis and safe redirect resolution across high-volume communities.</p>
+<ul>
+<li><strong>HTTP Redirect Chain Resolver</strong>: Follows HTTP 301/302 redirect locations up to configurable hop limits to uncover destination hosts.</li>
+<li><strong>DNS-over-HTTPS Security Lookups</strong>: Queries Cloudflare Security DNS (`security.cloudflare-dns.com`) and Quad9 (`dns.quad9.net`) without API keys.</li>
+<li><strong>Punycode & Homograph Detector</strong>: Identifies internationalized domain names (IDNs) and Cyrillic/Greek character replacements mimicking popular domains.</li>
+<li><strong>Pattern & Query String Matcher</strong>: Supports regex targeting specific URL paths, query parameters (`utm_source`, `ref`), or specific URL keywords.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Link Guard provides automated link inspection and threat feed scanning to assist community safety. Threat lookups and heuristic indicators serve as assistive signals rather than definitive proof of malicious intent—human moderators retain full authority to approve filtered links in mod queue, whitelist trusted domains, and adjust security sensitivity at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/link-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/link-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

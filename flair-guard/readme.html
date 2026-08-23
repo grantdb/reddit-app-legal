@@ -1,0 +1,70 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/flair-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>GuardHub: Flair Guard</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Community_Styling-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Automate post and user flair assignment to keep your community organized.</strong></p></blockquote>
+<p>Flair Guard ensures your subreddit stays visually structured and searchable by automatically applying post and user flairs. Map keywords, domain links, and author participation standing to specific flair templates—all configured through clean native settings without fragile AutoModerator rules.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Automate post flairing</strong>: Categorize submissions automatically based on title keywords and link domains.</li>
+<li><strong>Dynamic user badges</strong>: Apply user flairs based on contributor reputation, verified status, or milestone criteria.</li>
+<li><strong>Keep feeds searchable</strong>: Ensure consistent flair categorization across all community submissions.</li>
+<li><strong>Reduce mod queue cleanup</strong>: Stop manually flairing untagged posts or sending flair reminder messages.</li>
+<li><strong>Native Devvit settings</strong>: Configure all template mappings directly from Subreddit Mod Tools.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Flair Guard Way</h2>
+<p>---</p>
+<h2>Built for Effortless Content Organization</h2>
+<ul>
+<li><strong>Keyword-to-Flair Mapping</strong>: Automatically assign specific post flairs when submission titles contain designated trigger words or tags.</li>
+<li><strong>Domain-Based Categorization</strong>: Apply custom link flairs based on destination URL hostnames (e.g. News, Video, Official Source).</li>
+<li><strong>Dynamic User Badges</strong>: Assign specialized user flairs to recognize established community contributors or highlight verified members.</li>
+<li><strong>Deduplication Safeguards</strong>: Built-in atomic locking prevents duplicate flair applications during platform trigger retries.</li>
+<li><strong>Author & Moderator Exemptions</strong>: Protect mod announcements and custom author flairs from being overwritten.</li>
+<li><strong>Seamless Settings Management</strong>: Configure all template IDs and matching rules directly from Subreddit Mod Tools.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/flair-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Submit</strong>: A user submits a new post to the subreddit.</p>
+<p>2. <strong>Scan</strong>: Flair Guard scans the title, text body, and link domain against your active flair mapping rules.</p>
+<p>3. <strong>Apply</strong>: When matching criteria are met, the specified Post Flair or User Flair template is applied immediately.</p>
+<p>4. <strong>Log</strong>: Enforcement actions are recorded for transparent audit and history tracking.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Flair Guard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure</strong>: Open <strong>Mod Tools > App Settings > Flair Guard</strong>.</p>
+<p>3. <strong>Map Flairs</strong>: Enter your keyword triggers and corresponding flair template IDs.</p>
+<p>4. <strong>Save</strong>: Automated flair enforcement begins immediately on all incoming community posts.</p>
+<p>*No complex AutoMod YAML required. Clean visual organization for your entire community.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Flair Guard is engineered for fast pattern matching and reliable flair assignment across active subreddit queues.</p>
+<ul>
+<li><strong>Multi-Factor Rule Engine</strong>: Matches against post titles, URL hostnames, and body text patterns in a single evaluation.</li>
+<li><strong>Atomic State Locking</strong>: Prevents race conditions and multiple flair overwrites during concurrent trigger events.</li>
+<li><strong>Template ID Resolution</strong>: Directly integrates with native Reddit flair template GUIDs for precise color and styling retention.</li>
+<li><strong>Execution Logging</strong>: Records all flair assignment events in Redis for review and operational oversight.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Flair Guard automates post and user flair categorization according to the exact mappings defined by your moderation team. Automated flairs serve as organization tools—human moderators maintain full authority to edit, override, remove, or reassign flairs at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/flair-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/flair-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

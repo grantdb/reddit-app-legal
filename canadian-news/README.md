@@ -1,3 +1,5 @@
+> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/canadian-news)
+
 # Canadian News App
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
@@ -5,32 +7,33 @@
 ![News](https://img.shields.io/badge/Category-Regional_News-blue?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-Content_Curation-8A2BE2?style=for-the-badge)
 
-**Canadian News App** is a premier moderator-controlled tool designed to deliver highly curated news from across Canada directly to your subreddit. It specifically prioritizes under-represented regions and specific topics to ensure a truly national, balanced perspective for community content.
+**Canadian News App** is a manual-only, candidate-scouting and pre-editing tool designed to deliver highly curated news from across Canada directly to your subreddit. It operates with zero background automation—moderators scout, review, edit, and approve every post before it hits the live feed.
 
 ## Key Features
 
-- **On-Demand Execution**: Operates strictly under moderator control. The app will never automatically post without explicit manual initiation, allowing you to control the flow of information.
-- **Dynamic Regional Balancing**: Employs an intelligent aggregation algorithm that ensures news is drawn from diverse areas across the country, preventing major metropolitan hubs from dominating the feed.
-- **Configurable Subjects**: Tailor the news feed to your subreddit's interests by selecting specific news categories such as Politics, Health, Science, or Local Events.
-- **Clean Rendering**: Automatically parses and formats article titles to ensure every submitted post is highly readable, professional, and free of clickbait clutter.
+- **100% Manual Moderator Control**: Zero auto-posting or background crons. You decide when news is scouted and published.
+- **Multi-Subject Scouting**: Scout stories across Politics, Health, Science, Technology, Crime, Business, Lifestyle, or Regional news feeds.
+- **Pre-Publish Editor**: Review scouted candidate stories in an interactive Devvit form to customize the post title, target URL, and spoiler tags prior to posting.
+- **Spam Filtering & Deduplication**: Automatically filters promotional and spam content while enforcing 30-day link deduplication in Redis.
 
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/canadian-news-flowchart.png)
 
-1. A moderator opens the subreddit's Mod Menu and selects the **Run News Fetcher** action.
-2. The app aggregates the latest news from authorized Canadian sources based on your configured subject filters.
-3. The stories are passed through the regional engine to ensure a balanced geographical distribution.
-4. The approved stories are formatted into clean, readable posts and submitted to the subreddit.
+1. A moderator opens the subreddit Mod Menu and clicks **Scout Canadian News**.
+2. Configure candidate pool size and subject filters in the **Scout Parameter Form**.
+3. Select a candidate article from the **Candidate Picker Form**.
+4. Fine-tune the post title, target URL, and spoiler settings in the **Editor Form**, then click **Publish Post Now**.
 
 ## Setup & Configuration
 
 1. **Install**: Add **Canadian News App** to your subreddit via the App Directory.
-2. **App Settings**: Navigate to your subreddit's Mod Tools > App Settings > Canadian News App.
-3. **Configure**:
-   - Set your preferred batch size (number of articles to fetch per run).
-   - Select the specific news categories (e.g., Politics, Health) you want to include.
-4. **Usage**: Use the native subreddit Mod Menu action "Run News Fetcher" to initiate a post.
+2. **Usage**: Open the subreddit Mod Menu and click **Scout Canadian News** to launch the interactive scouting workflow.
+
+## Support
+
+For help, bug reports, or feature requests, post in r/grantdb.
+Please include the app name, what you expected, what happened, and any error text or screenshots.
 
 ## Legal
 

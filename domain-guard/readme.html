@@ -1,0 +1,76 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/domain-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>GuardHub: Domain Guard 🛡️</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Security-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Content_Policy-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Block harmful links, stop spam farms, and take full control of community URLs.</strong></p></blockquote>
+<p>Domain Guard protects your subreddit from malicious links, URL shorteners, and repeat spam domains. Define custom allowlists and blocklists, run rules in safe audit mode, and manage everything through a clean native dashboard without editing complex AutoModerator YAML.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Block malicious links</strong>: Prevent phishing and unwanted link farms across posts and comments.</li>
+<li><strong>Allowlist trusted sources</strong>: Restrict submissions exclusively to verified, approved domains.</li>
+<li><strong>Test with zero risk</strong>: Run new rules in Audit Mode to preview matches before enforcing them live.</li>
+<li><strong>Target by content type</strong>: Apply separate policies to link submissions, post bodies, or comments.</li>
+<li><strong>Manage visually</strong>: Control all domain rules through a private moderator dashboard.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Domain Guard Way</h2>
+<p>---</p>
+<h2>Built for Complete URL Safety</h2>
+<ul>
+<li><strong>Granular Domain Control</strong>: Set strict allowlists or blocklists with automated subdomain and wildcard handling.</li>
+<li><strong>Context-Aware Scopes</strong>: Enforce rules across link submissions, text post bodies, comment threads, or all content simultaneously.</li>
+<li><strong>Reputation-Gated Filtering</strong>: Apply domain restrictions exclusively to new or low-karma accounts while leaving established members unaffected.</li>
+<li><strong>Flexible Moderation Actions</strong>: Choose between silent removal, marking as spam, filtering to mod queue, reporting, or audit-only logging.</li>
+<li><strong>Repeat Offender Escalation</strong>: Automatically track repeated violations and escalate repeat link spammers to modmail for team review.</li>
+<li><strong>Dedicated Management Center</strong>: Access a private dashboard from Subreddit Mod Tools to inspect metrics, adjust rules, and run test URLs.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/domain-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Extract</strong>: Domain Guard intercepts new submissions and comments, extracting and normalizing all candidate URLs.</p>
+<p>2. <strong>Evaluate</strong>: Domains are checked against global exemptions, moderator status, content scope, and user risk thresholds.</p>
+<p>3. <strong>Enforce</strong>: When a restricted domain matches an active rule, the configured moderation action (`remove`, `spam`, `filter`, or `report`) executes immediately.</p>
+<p>4. <strong>Escalate</strong>: Repeat violations are recorded, and summary notifications are dispatched to modmail when configured.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Domain Guard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure</strong>: Open <strong>GuardHub: DomainGuard Dashboard</strong> from Subreddit Mod Tools.</p>
+<p>3. <strong>Create Rules</strong>: Add your domain allowlist or blocklist in Audit Mode to safely verify matching behavior.</p>
+<p>4. <strong>Enforce</strong>: Once satisfied with audit results, switch rules to Live mode to begin automated enforcement.</p>
+<p>*No complex regex configuration required. Full control stays in your native dashboard.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Domain Guard is engineered for high-throughput link verification while giving power moderators complete operational visibility.</p>
+<ul>
+<li><strong>Hostname Normalization</strong>: Automatically strips protocols, URL paths, query parameters, and port numbers to evaluate canonical hostnames.</li>
+<li><strong>Scope Isolation</strong>: Dispatches separate checks across post link URLs, Markdown hyperlinked text, and comment bodies.</li>
+<li><strong>Risk Score Gating</strong>: Evaluates submitting account signals (account age, karma standing) before triggering strict link enforcement.</li>
+<li><strong>Audit Simulation Engine</strong>: Simulates policy matches in the background and stores match records in Redis for pre-deployment verification.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Domain Guard automates the extraction and enforcement of domain policies according to the rules and thresholds established by your moderation team. Human moderators retain full authority to override actions, approve filtered submissions in mod queue, and adjust domain permissions at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name.</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message.</li>
+<li>Screenshots or relevant details.</li>
+</ul>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

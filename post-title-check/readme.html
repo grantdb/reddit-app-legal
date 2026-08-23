@@ -1,0 +1,76 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/post-title-check">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Post Title Check</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Content_Policy-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Enforce editorial standards, require title tags, and guide authors automatically.</strong></p></blockquote>
+<p>Post Title Check ensures your subreddit feed stays readable, informative, and clean. Validating submission titles against word counts, bracket tags, banned phrases, and character sets, it delivers instant, friendly removal feedback so authors can fix their titles and resubmit.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Enforce title requirements</strong>: Mandate required category brackets (e.g. `[News]`, `[OC]`, `[Guide]`).</li>
+<li><strong>Set minimum word counts</strong>: Prevent lazy, vague titles like "Help" or "Look at this".</li>
+<li><strong>Block clickbait phrases</strong>: Automatically filter clickbait terms, spoilers, or prohibited phrases.</li>
+<li><strong>Copy & Resubmit guidance</strong>: Provide authors with their original text and clear instructions to fix formatting.</li>
+<li><strong>Distinguished sticky notices</strong>: Leave clear, public removal comments explaining community guidelines.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Post Title Check Way</h2>
+<p>---</p>
+<h2>Built for Clean Community Feeds</h2>
+<ul>
+<li><strong>Comprehensive Rule Engine</strong>: Validate minimum word counts, required bracket prefixes, banned phrases, and ASCII-only character sets.</li>
+<li><strong>Dynamic Removal Reasons</strong>: Configure custom explanations with dynamic placeholders (`{phrase}`, `{minWordCount}`) for precise author feedback.</li>
+<li><strong>Author Education & Guidance</strong>: Delivers a structured private message to authors containing their original submission text and clear correction tips.</li>
+<li><strong>Distinguished Mod Comments</strong>: Posts a distinguished, locked sticky comment on removed submissions for public community transparency.</li>
+<li><strong>Moderator Exemption Controls</strong>: Allow mod posts and official announcements to bypass title formatting rules seamlessly.</li>
+<li><strong>Native Settings Control</strong>: Configure all rules and custom messages directly within Subreddit Mod Tools.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/post-title-check-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Submit</strong>: A user submits a new post to the subreddit.</p>
+<p>2. <strong>Evaluate</strong>: Post Title Check evaluates the title against active formatting, word count, and banned phrase rules.</p>
+<p>3. <strong>Action</strong>: If a violation is detected, the post is removed and a distinguished sticky comment is published.</p>
+<p>4. <strong>Guide</strong>: The author receives a private message with their original text and instructions to correct and resubmit.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Post Title Check</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure Rules</strong>: Open <strong>Mod Tools > App Settings > Post Title Check</strong> to set word counts and required tags.</p>
+<p>3. <strong>Add Banned Words</strong>: Enter prohibited clickbait phrases separated by commas.</p>
+<p>4. <strong>Save</strong>: Automated title validation begins immediately on all incoming community submissions.</p>
+<p>*No complex AutoMod regex scripts required. Clean, professional titles across your entire feed.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Post Title Check is engineered for low-latency title parsing and resilient event handling.</p>
+<ul>
+<li><strong>Multi-Factor Title Parser</strong>: Evaluates word counts, bracket delimiters, character sets, and phrase lists in a single pass.</li>
+<li><strong>Dynamic String Template Engine</strong>: Replaces variables in custom removal reasons with the exact phrase or limit violated.</li>
+<li><strong>Effectively-Once Execution Mutex</strong>: Uses Redis locks to prevent duplicate enforcement actions during Reddit platform retries.</li>
+<li><strong>Eligibility-First Gate</strong>: Verifies submission eligibility before firing notification messages to ensure clean operations.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Post Title Check automates submission title validation according to the exact standards set by your moderation team. Validation rules serve as assistive quality controls—human moderators maintain complete authority to review removed posts, approve exceptions, and adjust title criteria at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name.</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message.</li>
+<li>Screenshots or relevant details.</li>
+</ul>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/post-title-check/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/post-title-check/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit moderators.*</p>

@@ -1,0 +1,76 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-board">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>User Board</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Analytics-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Community_Engagement-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Gamify community engagement and showcase your top contributors in a live leaderboard.</strong></p></blockquote>
+<p>User Board recognizes and rewards your most valuable community members. Calculating participation scores based on custom post and comment weights, it renders a visual, interactive leaderboard post directly inside your subreddit to drive constructive discussion.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Interactive visual leaderboard</strong>: Display top community contributors in a rich, responsive custom post.</li>
+<li><strong>Customizable scoring weights</strong>: Balance points awarded for posts, comments, upvotes, and discussion engagement.</li>
+<li><strong>Automated rank calculations</strong>: Scheduled background jobs keep rankings fresh without manual tallying.</li>
+<li><strong>Moderator customization console</strong>: Tune score formulas, tier cutoffs, and layout styles from App Settings.</li>
+<li><strong>Mobile-friendly custom post</strong>: Fast, client-side rendered experience that loads smoothly on all platforms.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The User Board Way</h2>
+<p>---</p>
+<h2>Built for Vibrant Community Growth</h2>
+<ul>
+<li><strong>Nuanced Contribution Scoring</strong>: Configure independent point multipliers for submission upvotes, comment volume, and discussion activity.</li>
+<li><strong>Interactive React Custom Post</strong>: Features rich leaderboard views with user rank badges, avatars, and historical score milestones.</li>
+<li><strong>Automated Rank Refreshes</strong>: Scheduled background workers re-calculate scores and update cached rankings automatically.</li>
+<li><strong>Zero-Friction Board Generation</strong>: Deploy your leaderboard post with one click using <strong>Create Subreddit User Board</strong> in Subreddit Mod Tools.</li>
+<li><strong>Moderator Tuning Console</strong>: Adjust point weights, calculation time horizons, and display tiers easily from App Settings.</li>
+<li><strong>Privacy-Safe Data Hygiene</strong>: Aggregates public subreddit statistics into anonymous Redis score counters without collecting personal data.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/user-board-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Deploy</strong>: A moderator selects <strong>Create Subreddit User Board</strong> from Subreddit Mod Tools to spawn the interactive hub.</p>
+<p>2. <strong>Collect</strong>: Background tasks scan recent subreddit activity, aggregating post scores and comment counts.</p>
+<p>3. <strong>Calculate</strong>: The engine evaluates activity stats against your custom point weights to generate contributor ranks.</p>
+<p>4. <strong>Render</strong>: The pinned leaderboard post updates its interactive UI to display the latest top community members.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>User Board</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure Weights</strong>: Open <strong>Mod Tools > App Settings > User Board</strong> to adjust point multipliers.</p>
+<p>3. <strong>Generate Post</strong>: Select <strong>Create Subreddit User Board</strong> from Subreddit Mod Tools.</p>
+<p>4. <strong>Pin</strong>: Sticky the generated post to your subreddit to start showcasing top contributors.</p>
+<p>*No manual score tallying required. Automated community gamification directly inside Reddit.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>User Board is engineered for fast score computation and lightweight Custom Post Webview rendering.</p>
+<ul>
+<li><strong>Weighted Score Pipeline</strong>: Computes author scores using linear combination formulas (`points = w1*posts + w2*comments + w3*karma`).</li>
+<li><strong>Redis Sorted Set Ranking</strong>: Stores member scores in high-performance Redis Sorted Sets (`ZSET`) for sub-millisecond rank lookups.</li>
+<li><strong>Multi-Entrypoint Webview</strong>: Supports independent entrypoints for main feed cards, full leaderboards, and settings consoles.</li>
+<li><strong>Automated Ingestion Crons</strong>: Runs scheduled background aggregation cycles to minimize client-side API overhead.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>User Board provides participation analytics and dynamic leaderboards to assist in community gamification and member recognition. Leaderboard rankings serve as engagement tools—human moderators maintain complete authority over point weights, rules, and community visibility.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name.</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message.</li>
+<li>Screenshots or relevant details.</li>
+</ul>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/user-board/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/user-board/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit moderators.*</p>

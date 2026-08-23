@@ -1,0 +1,38 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/malp-scout">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>MALP-Scout</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Focus-Stargate_SG--1-blue?style=for-the-badge">Focus</a></p>
+<p><a href="https://img.shields.io/badge/Security-Moderator_Only-success?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Type-Content_Scout-8A2BE2?style=for-the-badge">Type</a></p>
+<p><strong>MALP-Scout</strong> is a manual-only Stargate SG-1 content scouting tool for subreddit moderators. Styled after the Stargate Reconnaissance Probe (MALP - Mobile Analytic Laboratory Probe), the app operates on demand using a local curated SG-1 dataset as its primary source of truth. It allows moderators to generate, preview, and selectively post high-quality, template-driven SG-1 content without remote web crawling, background schedulers, or automatic posting.</p>
+<h2>Key Features</h2>
+<ul>
+<li><strong>Manual On-Demand Reconnaissance</strong>: Triggered strictly by subreddit moderators via the Mod Menu (`MALP: Launch Reconnaissance`). Zero automatic posting or background schedulers.</li>
+<li><strong>Local Curated SG-1 Knowledge Base</strong>: Built-in, hand-reviewed dataset mapping SG-1 main/recurring cast birthdays, notable episode air dates, and major show milestones.</li>
+<li><strong>Strict Zero-Crossover Policy</strong>: Enforces strict SG-1-only filtering, excluding Stargate Atlantis (SGA) and Stargate Universe (SGU) crossover content.</li>
+<li><strong>Importance Quality Floor</strong>: Allows moderators to select a quality threshold (High, Medium, Low). Returns fewer candidates if not enough items meet the quality floor—never pads with weak filler.</li>
+<li><strong>Moderator Preview & Approval Gate</strong>: Presents candidate titles, quality ranks, and 200-character excerpts in a confirmation form before any post is created on the subreddit.</li>
+</ul>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/malp-scout-flowchart.png">Logic Flowchart</a></p>
+<p>1. A moderator initiates a scout run from the Subreddit Mod Menu or Post overflow menu (<strong>MALP: Launch Reconnaissance</strong>).</p>
+<p>2. The scout engine evaluates active records in `sg1_curated_knowledge.json`, scores candidates, applies secondary SGA/SGU exclusion filters, and builds deterministic markdown templates.</p>
+<p>3. Candidates are presented in a unified Devvit preview & edit form for moderator review.</p>
+<p>4. Upon moderator confirmation, the approved candidate is published as a standard text post to the subreddit by the App Account.</p>
+<h2>Setup & Configuration</h2>
+<p>1. <strong>Install</strong>: Add <strong>MALP-Scout</strong> to your subreddit via the Devvit App Directory.</p>
+<p>2. <strong>Usage</strong>: Open the Subreddit Mod Menu (desktop) or tap the 3-dots on any post menu (mobile) and select <strong>MALP: Launch Reconnaissance</strong>.</p>
+<p>3. <strong>Select & Edit</strong>: Pick your preferred candidate post, customize the title or body markdown if desired.</p>
+<p>4. <strong>Publish</strong>: Tap <strong>Publish Post Now</strong> to submit to the subreddit.</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/malp-scout/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/malp-scout/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community.*</p>

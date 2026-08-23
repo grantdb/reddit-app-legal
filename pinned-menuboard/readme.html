@@ -1,0 +1,76 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/pinned-menuboard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Pinned Menuboard</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Subreddit_Utility-blueviolet?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Community_Styling-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Overcome Reddit's 2-pin limit with an interactive, visual 6-slot community showcase.</strong></p></blockquote>
+<p>Pinned Menuboard gives your subreddit a stylish navigation hub and game launcher. By creating a persistent 3x2 grid of featured threads, announcements, or mini-games, moderators can spotlight up to six posts simultaneously with single-tap post menu toggles.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Bypass the 2-pin limit</strong>: Feature up to six important community posts, wikis, or games at once.</li>
+<li><strong>Visual 3x2 card grid</strong>: Showcase titles, authors, and high-resolution thumbnail preview cards.</li>
+<li><strong>One-tap menu toggling</strong>: Add or remove featured posts directly from Reddit post overflow menus.</li>
+<li><strong>Dynamic board refresh</strong>: The pinned hub updates automatically whenever featured items change.</li>
+<li><strong>Customizable branding</strong>: Personalize header titles, community badges, and card styles.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Pinned Menuboard Way</h2>
+<p>---</p>
+<h2>Built for Rich Community Navigation</h2>
+<ul>
+<li><strong>Interactive 3x2 Showcase Grid</strong>: Displays up to six active cards featuring thumbnails, submission titles, and author attribution.</li>
+<li><strong>Post-Level Menu Actions</strong>: Toggle any post onto the menuboard instantly by selecting <strong>Toggle on Menuboard</strong> in the post mod menu.</li>
+<li><strong>Automatic Thumbnail Resolution</strong>: Pulls thumbnail images and media previews directly from Reddit submission payloads.</li>
+<li><strong>Zero-Friction Board Generation</strong>: Spawn your master menuboard post with one click via <strong>Generate Pinned Menuboard</strong> in Mod Tools.</li>
+<li><strong>Slot Capacity Management</strong>: Automatically validates available card slots and notifies moderators when the board is full.</li>
+<li><strong>Custom Theming & Text</strong>: Adjust display titles and community greeting copy easily in App Settings.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/pinned-menuboard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Create</strong>: A moderator clicks <strong>Generate Pinned Menuboard</strong> from Subreddit Mod Tools to create the master hub.</p>
+<p>2. <strong>Pin</strong>: Sticky the generated Menuboard post to the top of your subreddit.</p>
+<p>3. <strong>Toggle</strong>: When you find a quality post or interactive game to feature, click <strong>Toggle on Menuboard</strong> on that post.</p>
+<p>4. <strong>Refresh</strong>: The master Menuboard post updates its interactive grid immediately for all community visitors.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Pinned Menuboard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Generate Board</strong>: Select <strong>Generate Pinned Menuboard</strong> from Subreddit Mod Tools and sticky the resulting post.</p>
+<p>3. <strong>Feature Content</strong>: Open any post and select <strong>Toggle on Menuboard</strong> to add it to an open slot.</p>
+<p>4. <strong>Customize</strong>: Adjust board headers and styling preferences in App Settings anytime.</p>
+<p>*No markdown link tables to update manually. Visual community navigation directly inside your feed.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Pinned Menuboard is engineered for dynamic Custom Post rendering and fast slot index updates.</p>
+<ul>
+<li><strong>Interactive Webview Grid</strong>: Built with responsive HTML5/CSS grid layouts optimized for mobile and desktop screens.</li>
+<li><strong>Media Asset Resolver</strong>: Automatically fetches and optimizes preview assets via Reddit's native media proxy.</li>
+<li><strong>Redis Slot Indexing</strong>: Stores active card IDs and metadata in Redis hashes with atomic occupancy controls.</li>
+<li><strong>Menu Action Handlers</strong>: Registers dedicated endpoint handlers (`/internal/menu/post-toggle`) for rapid mod toggles.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Pinned Menuboard provides visual post curation and navigation tools to enhance community engagement. Featured posts are selected and managed exclusively by your moderation team—human moderators maintain full control over which posts are showcased or removed.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name.</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message.</li>
+<li>Screenshots or relevant details.</li>
+</ul>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/pinned-menuboard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/pinned-menuboard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit moderators.*</p>

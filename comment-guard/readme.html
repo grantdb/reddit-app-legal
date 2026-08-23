@@ -1,0 +1,70 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/comment-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>GuardHub: Comment Guard</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Automoderator-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Filter low-effort spam and keep comment threads focused and constructive.</strong></p></blockquote>
+<p>Comment Guard protects your comment sections from repetitive spam, low-effort demands, and copy-pasted disruptions. Using weighted pattern scoring and account trust signals, it distinguishes between spammy noise and constructive feedback—all managed from a private moderator dashboard without complex AutoModerator rules.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Filter low-effort comments</strong>: Catch repetitive demands and low-quality spam across threads.</li>
+<li><strong>Weighted pattern scoring</strong>: Score comments using nuanced positive and negative phrase weights.</li>
+<li><strong>Factor user trust</strong>: Give established, high-karma contributors the benefit of the doubt automatically.</li>
+<li><strong>Track repeat offenders</strong>: Escalate persistent spammers to modmail when violation thresholds are met.</li>
+<li><strong>Inspect scoring breakdowns</strong>: View exact pattern matches and penalty weights in your dashboard logs.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Comment Guard Way</h2>
+<p>---</p>
+<h2>Built for High-Quality Discussions</h2>
+<ul>
+<li><strong>Weighted Scoring Engine</strong>: Assign positive scores to low-effort spam patterns and negative scores to constructive markers for balanced decisions.</li>
+<li><strong>Regex Pattern Matching</strong>: Detect disguised spam phrases, intentional misspellings, and bypass attempts with flexible regex.</li>
+<li><strong>User Trust Multipliers</strong>: Integrate account age and karma standing to adjust sensitivity for new accounts versus trusted community regulars.</li>
+<li><strong>Repeat Offender Escalation</strong>: Track repeat low-effort comment bursts over rolling windows and deliver alert summaries to modmail.</li>
+<li><strong>Exemption Protection</strong>: Automatically exempt moderators, AutoModerator, and authenticated service bots from comment filtering.</li>
+<li><strong>Dedicated Management Center</strong>: Access a private dashboard from Subreddit Mod Tools to adjust scoring thresholds, inspect logs, and test comments.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/comment-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Capture</strong>: Comment Guard intercepts new comments as they are submitted across the subreddit.</p>
+<p>2. <strong>Verify</strong>: The author is checked against moderator exemptions, bot lists, and user trust history.</p>
+<p>3. <strong>Score</strong>: Comment text is evaluated against weighted phrase patterns to calculate a net penalty score.</p>
+<p>4. <strong>Action</strong>: If the penalty exceeds your removal threshold, the comment is removed with a detailed scoring breakdown attached.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Comment Guard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure</strong>: Open <strong>GuardHub: CommentGuard Dashboard</strong> from Subreddit Mod Tools.</p>
+<p>3. <strong>Set Thresholds</strong>: Adjust the removal score sensitivity and penalty weights to match your community standards.</p>
+<p>4. <strong>Monitor</strong>: Review enforcement logs in your dashboard to refine pattern weights over time.</p>
+<p>*No complex AutoMod rules required. Intelligent, weighted comment moderation out of the box.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Comment Guard is engineered for high-throughput comment stream processing with transparent scoring mechanics.</p>
+<ul>
+<li><strong>Weighted Pattern Matrix</strong>: Evaluates multi-token phrase dictionaries with configurable positive and negative weight coefficients.</li>
+<li><strong>Account Trust Multiplier</strong>: Dynamically discounts penalty scores for verified users with high subreddit karma standings.</li>
+<li><strong>Rolling Repeat Counter</strong>: Tracks short-term comment duplication per user in Redis to apply escalating penalty modifiers.</li>
+<li><strong>Structured Report Generation</strong>: Attaches exact scoring formulas and pattern hits to moderation reports for full auditability.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Comment Guard provides weighted scoring and pattern detection to help filter low-effort spam and maintain discussion quality. Pattern scores serve as assistive signals rather than definitive proof of intent—human moderators retain complete authority to review removed comments in mod queue, approve false positives, and tune scoring sensitivity at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/comment-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/comment-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

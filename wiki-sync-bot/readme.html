@@ -1,0 +1,45 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-sync-bot">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>WikiSync Bot 📚</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Category-Utility-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Wiki_Engine-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Automated, reliable subreddit wiki synchronization and documentation management for Reddit.</strong></p></blockquote>
+<p>WikiSync Bot provides subreddit moderators with a high-reliability engine to publish, manage, and synchronize wiki documentation and support schemas directly within Reddit. Dual-writes across modern (v2) and legacy (v1) Reddit wiki stores to eliminate rich-text corruption and keep community knowledge up to date.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Dual-Version Subreddit Wiki Writes</strong>: Direct programmatic synchronization to both modern (`v2`) and legacy (`v1`) Reddit wiki endpoints.</li>
+<li><strong>Support Schema Synchronization</strong>: Automatically deploys `bot_knowledge` JSON payloads to `r/grantdb/wiki/bot_knowledge` bypassing rich-text quote mangling.</li>
+<li><strong>Fleet Documentation Sync</strong>: Incremental background hash comparison and synchronization across all fleet application documentation pages.</li>
+<li><strong>Single-App & On-Demand Actions</strong>: Instant moderator menu tools to trigger full fleet re-syncs, single app updates, or schema pushes on demand.</li>
+<li><strong>Moderator-Restricted Controls</strong>: Built-in permissions ensuring only authorized community moderators can trigger wiki sync operations.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The WikiSync Bot Way</h2>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/wiki-sync-bot-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Configure</strong>: Set up background polling intervals and test targets in Mod Tools > App Settings.</p>
+<p>2. <strong>Sync Manifest</strong>: WikiSync Bot checks the remote fleet manifest (`wiki-manifest.json`) for updated content hashes.</p>
+<p>3. <strong>Dual-Write Engine</strong>: Fetches clean HTML/JSON payloads from GitHub and writes directly to Reddit wiki endpoints (`index/all-apps/<slug>` + `<slug>` + `bot_knowledge`).</p>
+<p>4. <strong>Live Verification</strong>: Reads back and verifies the updated wiki page revisions, updating local cache.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>WikiSync Bot</strong> to your subreddit.</p>
+<p>2. <strong>Configure</strong>: Open <strong>Mod Tools > App Settings > WikiSync Bot</strong>.</p>
+<p>3. <strong>Trigger Sync</strong>: Open the subreddit menu and click <strong>GuardHub: Sync Wiki Pages Now</strong> or <strong>GuardHub: Sync Bot Knowledge (Schema)</strong>.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/wiki-sync-bot/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/wiki-sync-bot/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community.*</p>

@@ -1,3 +1,5 @@
+> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/sg1-responder)
+
 # SG-1 Responder
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
@@ -28,6 +30,11 @@
 1. **Install**: Add **SG-1 Responder** to your subreddit via the App Directory.
 2. **Configuration**: This app currently requires no manual configuration. Its response library and cooldown timers are hardcoded for optimal engagement out of the box.
 3. **Usage**: Simply install the app and watch it interact with your community!
+
+## Support
+
+For help, bug reports, or feature requests, post in r/grantdb.
+Please include the app name, what you expected, what happened, and any error text or screenshots.
 
 ## Legal
 

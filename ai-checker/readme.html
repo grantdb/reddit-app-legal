@@ -1,0 +1,76 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/ai-checker">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>AI Checker</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Security-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-AI_Analyzer-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Detect AI-generated text and synthetic images with multi-model confidence scores.</strong></p></blockquote>
+<p>AI Checker helps moderation teams identify and evaluate synthetic text and AI-generated imagery across subreddit submissions. Combining multi-provider vision and language models with unified scoring, it supports both manual post menu audits and automated background queues.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Multi-model detection</strong>: Connect to Google Gemini, GPTZero, Sightengine, or Hive Moderation.</li>
+<li><strong>Text & image analysis</strong>: Scan written submissions as well as synthetic image attachments.</li>
+<li><strong>Unified 1–10 scoring scale</strong>: Normalize complex provider metrics into clear, standardized ratings.</li>
+<li><strong>On-demand & auto-scan</strong>: Audit specific posts via menu actions or scan new submissions automatically.</li>
+<li><strong>Customizable mod feedback</strong>: Publish distinguished sticky replies with score breakdowns and modmail alerts.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The AI Checker Way</h2>
+<p>---</p>
+<h2>Built for Accurate Content Analysis</h2>
+<ul>
+<li><strong>Multi-Provider Architecture</strong>: Choose from Google Gemini (text & vision), GPTZero (text), Sightengine (images), or Hive (multi-modal).</li>
+<li><strong>On-Demand Menu Audits</strong>: Evaluate suspected posts directly from the Reddit post moderator overflow menu.</li>
+<li><strong>Automated Queue Scanning</strong>: Automatically scan incoming submissions after a configurable delay to preserve API quota.</li>
+<li><strong>Eligibility-First Processing</strong>: Validates that posts remain active and unremoved before consuming external API scan requests.</li>
+<li><strong>Flexible Action Reporting</strong>: Attach distinguished sticky comments, lock notice threads, or deliver private notifications to modmail.</li>
+<li><strong>Native Settings Control</strong>: Configure API credentials, scan delays, and comment templates directly from Subreddit Mod Tools.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ai-checker-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Trigger</strong>: A moderator clicks <strong>Check AI Content</strong> from a post menu, or auto-scan picks up a new submission.</p>
+<p>2. <strong>Verify</strong>: AI Checker confirms post eligibility, active status, and community hourly scan quota.</p>
+<p>3. <strong>Analyze</strong>: Post text or image media is transmitted to the configured AI analysis provider.</p>
+<p>4. <strong>Report</strong>: The returned confidence metric is normalized to a 1–10 rating and posted as a mod sticky or log.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>AI Checker</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure Provider</strong>: Open <strong>Mod Tools > App Settings > AI Checker</strong> and add your provider API key.</p>
+<p>3. <strong>Set Preferences</strong>: Choose between on-demand menu auditing or automated background scanning.</p>
+<p>4. <strong>Save</strong>: Start evaluating synthetic content directly from your native moderation workflow.</p>
+<p>*No external browser extensions required. Multi-model AI detection right inside Reddit.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>AI Checker is engineered for resilient API integration and efficient media handling.</p>
+<ul>
+<li><strong>Unified Provider Adapter</strong>: Normalizes REST API responses from Google Gemini, GPTZero, Sightengine, and Hive into a consistent schema.</li>
+<li><strong>Delayed Eligibility Gate</strong>: Delays auto-scans by 30–60 seconds to ensure deleted or AutoMod-removed posts are skipped.</li>
+<li><strong>Hourly Scan Throttling</strong>: Implements Redis-backed rate limiting (default 30 scans/hour) to protect external API budgets.</li>
+<li><strong>Multi-Modal Media Extraction</strong>: Safely fetches image URLs (`i.redd.it`, `preview.redd.it`, `i.imgur.com`) with size and format validation.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>AI Checker provides probabilistic AI detection scores to assist moderators in evaluating suspected synthetic text and media. Detection scores serve as assistive indicators rather than conclusive proof of origin—human moderators maintain full authority to review content, verify context, and make final enforcement decisions.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name.</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message.</li>
+<li>Screenshots or relevant details.</li>
+</ul>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/ai-checker/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/ai-checker/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit moderators.*</p>

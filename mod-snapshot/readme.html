@@ -1,0 +1,76 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod-snapshot">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Mod Snapshot</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Archival-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Backup-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Backup subreddit settings, rules, and AutoMod configurations to modmail in seconds.</strong></p></blockquote>
+<p>Mod Snapshot provides full disaster-recovery and configuration backups for your subreddit. Capturing rules, removal reasons, flair templates, appearance settings, and AutoModerator YAML, it compiles readable, complete backup records delivered straight to your team modmail.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Complete community backups</strong>: Archive rules, removal reasons, post/user flairs, and appearance settings.</li>
+<li><strong>Full AutoMod extraction</strong>: Back up your complete AutoModerator YAML configuration cleanly.</li>
+<li><strong>Delivered to modmail</strong>: Receive structured markdown backup files directly in your moderation inbox.</li>
+<li><strong>Smart multi-part chunking</strong>: Automatically splits large configurations across messages without truncating data.</li>
+<li><strong>One-tap menu triggers</strong>: Generate fresh backups anytime from Subreddit Mod Tools.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Mod Snapshot Way</h2>
+<p>---</p>
+<h2>Built for Disaster Recovery & Auditing</h2>
+<ul>
+<li><strong>Comprehensive Configuration Capture</strong>: Backs up community sidebar rules, removal reasons, user flairs, post flairs, appearance options, and discovered apps.</li>
+<li><strong>Full AutoModerator Archival</strong>: Extracts raw `config/automoderator` YAML for secure offline storage, version auditing, or cross-subreddit replication.</li>
+<li><strong>Rule-Aware Chunking Engine</strong>: Intelligently breaks large backup documents and AutoMod rules cleanly across sequential modmail threads without breaking blocks.</li>
+<li><strong>Atomic Lock & Cooldown Safeguards</strong>: Implements a 2-minute cooldown and daily generation caps to prevent accidental burst triggering.</li>
+<li><strong>Secure Mod-Only Operation</strong>: Available exclusively to authenticated moderators via Subreddit Mod Tools.</li>
+<li><strong>Native Settings Control</strong>: Adjust daily snapshot generation limits and configuration preferences in App Settings.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod-snapshot-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Trigger</strong>: A moderator selects <strong>Generate Mod Snapshot</strong> from Subreddit Mod Tools.</p>
+<p>2. <strong>Lock</strong>: Mod Snapshot acquires an atomic Redis lock and verifies the cooldown period.</p>
+<p>3. <strong>Extract</strong>: The engine queries Reddit APIs to compile subreddit rules, removal reasons, flair templates, and AutoMod YAML.</p>
+<p>4. <strong>Deliver</strong>: Formatted, rule-aware Markdown documents are dispatched directly to team modmail.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Mod Snapshot</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure Settings</strong>: Open <strong>Mod Tools > App Settings > Mod Snapshot</strong> to review snapshot preferences.</p>
+<p>3. <strong>Run Backup</strong>: Select <strong>Generate Mod Snapshot</strong> from Subreddit Mod Tools to create your first archive.</p>
+<p>4. <strong>Verify</strong>: Open modmail to inspect your complete, structured backup document.</p>
+<p>*No external backup servers or manual exports required. Reliable community disaster recovery inside Reddit.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Mod Snapshot is engineered for comprehensive configuration extraction and resilient multi-part delivery.</p>
+<ul>
+<li><strong>Multi-Layer Data Harvester</strong>: Interrogates Reddit metadata endpoints to gather settings, wiki configs, flairs, and active app manifests.</li>
+<li><strong>Rule-Aware YAML Chunking</strong>: Parses AutoMod rule boundary delimiters (`---`) to prevent splitting individual rules across message pages.</li>
+<li><strong>Atomic Concurrency Locks</strong>: Uses Redis mutex locks to ensure only one snapshot process executes at a time.</li>
+<li><strong>Sequential Modmail Dispatch</strong>: Transmits multi-part backup threads sequentially with delivery verification.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Mod Snapshot generates complete archival records of community settings and configurations to assist teams in disaster readiness and change auditing. Backups serve as observational snapshots—human moderators retain full authority over which settings are applied or restored.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name.</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message.</li>
+<li>Screenshots or relevant details.</li>
+</ul>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/mod-snapshot/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/mod-snapshot/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit moderators.*</p>

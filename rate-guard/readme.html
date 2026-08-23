@@ -1,0 +1,70 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/rate-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>GuardHub: Rate Guard 🛡️</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Cadence_Engine-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Prevent spam floods, enforce posting cooldowns, and maintain a healthy community cadence.</strong></p></blockquote>
+<p>Rate Guard protects your subreddit feed from rapid-fire spam floods, karma farming bursts, and excessive multi-posting. Enforce minimum cooldown gaps, rolling daily submission caps, and burst limits with automatic "next allowed post time" calculation—all configured easily within Reddit.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Enforce cooldown gaps</strong>: Require minimum time spacing (e.g. 2 hours) between consecutive submissions.</li>
+<li><strong>Set daily post caps</strong>: Limit the total number of posts a user can submit per 24-hour window.</li>
+<li><strong>Stop burst attacks</strong>: Detect and mitigate rapid multi-post bursts (e.g. 3 posts in 5 minutes).</li>
+<li><strong>Exact time guidance</strong>: Automatically inform users of their exact next allowed submission time.</li>
+<li><strong>Granular exemptions</strong>: Protect moderators, approved contributors, and specific post flairs automatically.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Rate Guard Way</h2>
+<p>---</p>
+<h2>Built for Balanced Posting Cadence</h2>
+<ul>
+<li><strong>Minimum Time Gap Cooldown</strong>: Enforce strict spacing between consecutive user submissions to prevent single authors from dominating the new queue.</li>
+<li><strong>Rolling Window Caps</strong>: Limit total allowed posts across rolling 24-hour windows to ensure diverse community voices.</li>
+<li><strong>Burst Protection Engine</strong>: Intercept rapid multi-submission bursts before they clutter community feeds or overwhelm mod review.</li>
+<li><strong>Clear Author Sticky Comments</strong>: Post automated, transparent notices stating the exact cooldown remaining and next allowed posting time.</li>
+<li><strong>Comprehensive Exemptions</strong>: Easily exempt moderators, approved submitters, or designated post flairs (such as event megathreads).</li>
+<li><strong>Privacy-First Architecture</strong>: Stores only submission timestamps and post IDs in Redis—zero user post text or private data is ever retained.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/rate-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Submit</strong>: A user submits a post to the subreddit.</p>
+<p>2. <strong>Verify</strong>: Rate Guard checks author and flair exemptions (moderators, approved users, exempt post flairs).</p>
+<p>3. <strong>Evaluate</strong>: If not exempt, the submission is evaluated against burst velocity limits, minimum cooldown gaps, and 24-hour caps.</p>
+<p>4. <strong>Enforce</strong>: If a threshold is exceeded, Rate Guard removes the post and sticky-comments the exact next allowed submission time.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Rate Guard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure</strong>: Open <strong>Mod Tools > App Settings > Rate Guard</strong>.</p>
+<p>3. <strong>Set Cadence</strong>: Configure your minimum time gap, 24-hour rolling cap, and burst limit thresholds.</p>
+<p>4. <strong>Save</strong>: The cadence engine applies immediately to all incoming community posts.</p>
+<p>*No external servers or complicated bot hosting required. Clean, automated rate limiting inside Reddit.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Rate Guard is engineered for precise sliding-window rate tracking and zero-latency submission evaluation.</p>
+<ul>
+<li><strong>Redis Sorted Set Timestamps</strong>: Records submission timestamps in per-user sorted sets (`ZSET`) with sliding window score queries.</li>
+<li><strong>Burst Velocity Detection</strong>: Evaluates submission cluster counts across short time intervals (e.g. 5-minute windows).</li>
+<li><strong>Millisecond Timestamp Arithmetic</strong>: Accurately computes remaining cooldown milliseconds and formats localized ISO time strings.</li>
+<li><strong>Privacy-Safe Data Model</strong>: Stores only `postId` keys and epoch timestamps, maintaining clean data hygiene and automatic TTL expiry.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Rate Guard automatically enforces submission frequency and posting cadence limits according to the parameters configured by your moderation team. Cadence limits serve as assistive protections against floods—human moderators maintain full authority to approve exceptions, grant user exemptions, and adjust cadence limits at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/rate-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/rate-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

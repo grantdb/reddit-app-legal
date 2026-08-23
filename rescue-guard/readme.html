@@ -1,0 +1,71 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/rescue-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>GuardHub: RescueGuard 🛡️</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Discovery_Engine-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Surface overlooked submissions, empower manual moderator curation, and spotlight hidden gems across your subreddit.</strong></p></blockquote>
+<p>RescueGuard gives moderation teams an assistive, privacy-first discovery engine to find quality community submissions from the lookback window that slipped through the cracks with low engagement. Review a ranked queue of overlooked posts and manually spotlight worthy contributions with automated post flairs and distinguished sticky notices.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Configurable Lookback Scan</strong>: Analyzes recent subreddit submissions across customizable lookback windows (default: 30 days).</li>
+<li><strong>Engagement Velocity Ranking</strong>: Prioritizes posts with low upvotes and low discussion counts using weighted scoring.</li>
+<li><strong>Minimum Age Filtration</strong>: Prevents brand-new posts from surfacing before they have had natural feed exposure.</li>
+<li><strong>Single-Submission Gate</strong>: Optionally excludes items or apps submitted multiple times across the lookback window.</li>
+<li><strong>Universal Deduplication Strategies</strong>: Auto-detects app store package IDs, link domains, author identities, or normalized titles.</li>
+<li><strong>Moderator-in-the-Loop Review</strong>: Zero automated highlights—human moderators maintain 100% final decision authority.</li>
+<li><strong>Multi-Action Spotlight</strong>: Apply community spotlight post flairs, distinguished sticky comments, or feed pinning upon approval.</li>
+<li><strong>Direct-Key Redis Memory</strong>: Retains audit and spotlight records to ensure reviewed items are never duplicated.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The RescueGuard Way</h2>
+<p>---</p>
+<h2>Built for Community Post Discovery</h2>
+<ul>
+<li><strong>Weighted Attention Scoring</strong>: Ranks candidate submissions using `(score * 0.65) + (commentCount * 0.35)` with logarithmic age dampening.</li>
+<li><strong>Content Hygiene Safeguards</strong>: Automatically filters out removed, spam, stickied, or deleted author posts.</li>
+<li><strong>Customizable Spotlight Flair</strong>: Assign designated community showcase post flairs (e.g. `Community Spotlight`).</li>
+<li><strong>Distinguished Sticky Comments</strong>: Post automated, transparent moderator comments highlighting the author and post.</li>
+<li><strong>Privacy-First Architecture</strong>: Stores only post IDs and decision timestamps in Redis—zero post text or user PII is ever retained.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/rescue-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Trigger</strong>: A moderator clicks <strong>GuardHub: RescueGuard Review</strong> in the subreddit menu.</p>
+<p>2. <strong>Scan & Rank</strong>: RescueGuard scans submissions from the lookback window, excludes multi-submission or moderated items, and ranks low-attention candidates.</p>
+<p>3. <strong>Review</strong>: The moderator inspects candidate posts and URLs and selects <strong>Approve and Spotlight</strong>, <strong>Skip</strong>, or <strong>Dismiss</strong>.</p>
+<p>4. <strong>Spotlight & Log</strong>: If approved, RescueGuard applies the configured flair and sticky comment, then logs the decision in Redis.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>RescueGuard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure</strong>: Open <strong>Mod Tools > App Settings > RescueGuard</strong>.</p>
+<p>3. <strong>Set Thresholds</strong>: Configure your batch size, minimum post age, lookback days, deduplication strategy, and spotlight flair/comment text.</p>
+<p>4. <strong>Launch Review</strong>: Open the subreddit menu and select <strong>GuardHub: RescueGuard Review</strong>.</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>RescueGuard is engineered for zero-latency review queues and clean data hygiene.</p>
+<ul>
+<li><strong>Zero-Scan Redis Architecture</strong>: Uses direct key lookups (`rescue:audit:<postId>`, `rescue:spotlight:<appKey>`) without expensive `KEYS *` operations.</li>
+<li><strong>Automatic TTL Expiry</strong>: All audit keys automatically expire, preventing database clutter.</li>
+<li><strong>Logarithmic Age Dampening</strong>: Normalizes attention scoring across older vs newer candidate submissions.</li>
+<li><strong>Graceful Error Handling</strong>: Resilient execution with try/catch fallbacks if subreddit link flairs are disabled.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>RescueGuard assists moderation teams by surfacing candidate submissions for human review. RescueGuard never automatically promotes or alters posts without explicit moderator review and confirmation.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/rescue-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/rescue-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

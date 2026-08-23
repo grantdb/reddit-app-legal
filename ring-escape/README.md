@@ -1,3 +1,5 @@
+> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/ring-escape)
+
 # Ring Escape
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
@@ -17,8 +19,6 @@
 
 ## How It Works
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ring-escape-flowchart.png)
-
 1. A moderator launches a new Ring Escape event directly from their Mod Menu.
 2. A customized interactive post is generated in the subreddit.
 3. Users interact with the post to begin the stealth-action loop, navigating through increasingly difficult levels.
@@ -28,7 +28,12 @@
 
 1. **Install**: Add **Ring Escape** to your subreddit via the App Directory.
 2. **App Settings**: Open your subreddit's App Settings to configure optional parameters or custom messaging for the leaderboard.
-3. **Usage**: To start a community event, simply open the Mod Menu anywhere in your subreddit and select the "Launch Ring Escape" action to spawn a new game post.
+3. **Usage**: To start a community event, simply open the Mod Menu anywhere in your subreddit and select the "Create Ring Escape Post" action to spawn a new game post.
+
+## Support
+
+For help, bug reports, or feature requests, post in r/grantdb.
+Please include the app name, what you expected, what happened, and any error text or screenshots.
 
 ## Legal
 

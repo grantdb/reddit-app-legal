@@ -1,0 +1,36 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/canucknews-bot">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Canuck News Bot</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Category-News-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Content_Curation-8A2BE2?style=for-the-badge">Type</a></p>
+<p><strong>Canuck News Bot</strong> is a manual-only, candidate-scouting and pre-editing tool designed to deliver curated, balanced, and non-political news from across Canada directly to your subreddit. It operates with zero automated posting—moderators scout, review, edit, and confirm every candidate story before publishing.</p>
+<h2>Key Features</h2>
+<ul>
+<li><strong>100% Manual & Moderator Control</strong>: Operates strictly on-demand. The bot will never auto-post or run background crons.</li>
+<li><strong>Candidate Scouting Pipeline</strong>: Interactively scans CBC, Global News, and Globe & Mail feeds based on your selected subject focus (Health, Science, Tech, Business, Lifestyle, Regional).</li>
+<li><strong>Pre-Publish Editor</strong>: Presents candidate stories in an interactive Devvit form allowing moderators to inspect and customize the post title, link URL, flair, and spoiler settings before publishing.</li>
+<li><strong>Content & Spam Filtering</strong>: Automatically filters out political content and controversial topics to maintain a neutral community environment.</li>
+<li><strong>30-Day Redis Deduplication</strong>: Prevents duplicate link submissions across all scouting runs.</li>
+</ul>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/CanuckNews-bot-flowchart.png">Logic Flowchart</a></p>
+<p>1. A moderator opens the subreddit Mod Menu and launches <strong>Scout Canadian News</strong>.</p>
+<p>2. Select candidate pool size and subject filters in the <strong>Scout Form</strong>.</p>
+<p>3. Inspect scouted candidate articles in the <strong>Candidate Picker Form</strong> and select a story.</p>
+<p>4. Customize the post title, flair ID, and spoiler settings in the <strong>Editor Form</strong>, then click <strong>Publish Post Now</strong>.</p>
+<h2>Setup & Configuration</h2>
+<p>1. <strong>Install</strong>: Add <strong>Canuck News Bot</strong> to your subreddit via the App Directory.</p>
+<p>2. <strong>App Settings</strong>: Navigate to Mod Tools > App Settings > Canuck News Bot to map optional regional post flair IDs.</p>
+<p>3. <strong>Usage</strong>: Open the subreddit Mod Menu and click <strong>Scout Canadian News</strong> to begin scouting.</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/CanuckNews-bot/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/CanuckNews-bot/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community.*</p>

@@ -1,3 +1,5 @@
+> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/gate-defender)
+
 # Gate Defender
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
@@ -17,8 +19,6 @@
 
 ## How It Works
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/gate-defender-flowchart.png)
-
 1. A moderator triggers a new Gate Defender event using the native Mod Menu.
 2. A new interactive post is generated in the subreddit.
 3. Users tap into the post and are greeted with the onboarding screen. They play the arcade survival loop to rack up points.
@@ -29,6 +29,11 @@
 1. **Install**: Add **Gate Defender** to your subreddit via the App Directory.
 2. **App Settings**: (Optional) Use the subreddit's App Settings to tweak gameplay difficulty multipliers if your community wants a harder challenge.
 3. **Usage**: To start a community event, simply open the Mod Menu anywhere in your subreddit and select the "Launch Gate Defender" action to spawn a new game post.
+
+## Support
+
+For help, bug reports, or feature requests, post in r/grantdb.
+Please include the app name, what you expected, what happened, and any error text or screenshots.
 
 ## Legal
 

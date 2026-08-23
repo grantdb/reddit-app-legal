@@ -1,35 +1,102 @@
+> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/domain-guard)
+
 # GuardHub: Domain Guard 🛡️
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
 ![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
+![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
 ![Category](https://img.shields.io/badge/Category-Security-blue?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-Content_Policy-8A2BE2?style=for-the-badge)
 
-**Domain Guard** is a professional-grade URL moderation engine built specifically for Reddit. It empowers moderators to enforce strict domain policies, completely block malicious or spam-heavy link farms, and maintain community integrity—all managed through an intuitive, native control dashboard rather than complex AutoModerator regex.
+> **Block harmful links, stop spam farms, and take full control of community URLs.**
 
-## Key Features
+Domain Guard protects your subreddit from malicious links, URL shorteners, and repeat spam domains. Define custom allowlists and blocklists, run rules in safe audit mode, and manage everything through a clean native dashboard without editing complex AutoModerator YAML.
 
-- **Granular Domain Rules**: Define strict allowlists (only these sites are allowed) or blocklists (these sites are banned) using advanced but easy-to-use hostname matching.
-- **Context-Aware Scopes**: Apply your URL rules globally, or restrict them specifically to Link Submissions, Text Post Bodies, or Comment text.
-- **Safe Testing Mode**: Built-in "Audit Mode" allows you to safely test new domain rules in the background and review logs before enforcing them live on your users.
-- **Private Dashboard**: A fully secure, moderator-only Custom Post Dashboard for managing your policies without needing to touch code.
+---
+
+## At a Glance
+
+- **Block malicious links**: Prevent phishing and unwanted link farms across posts and comments.
+- **Allowlist trusted sources**: Restrict submissions exclusively to verified, approved domains.
+- **Test with zero risk**: Run new rules in Audit Mode to preview matches before enforcing them live.
+- **Target by content type**: Apply separate policies to link submissions, post bodies, or comments.
+- **Manage visually**: Control all domain rules through a private moderator dashboard.
+
+---
+
+## The Old Way vs. The Domain Guard Way
+
+| Traditional Workflow | With Domain Guard |
+| :--- | :--- |
+| Writing and debugging fragile AutoMod regex patterns | **Visual domain rule builder** with instant syntax validation |
+| Deploying unverified rules directly on live users | **Safe Audit Mode** that logs simulated matches without removing content |
+| Manually tracking repeat domain offenders | **Automated strike escalation** and modmail alert delivery |
+| Applying blunt subreddit-wide domain blocks | **Context-aware scopes** isolated to link posts, text bodies, or comments |
+| Mod team guessing why a specific link was removed | **Structured incident logs** detailing exact rule matches and actions |
+
+---
+
+## Built for Complete URL Safety
+
+- **Granular Domain Control**: Set strict allowlists or blocklists with automated subdomain and wildcard handling.
+- **Context-Aware Scopes**: Enforce rules across link submissions, text post bodies, comment threads, or all content simultaneously.
+- **Reputation-Gated Filtering**: Apply domain restrictions exclusively to new or low-karma accounts while leaving established members unaffected.
+- **Flexible Moderation Actions**: Choose between silent removal, marking as spam, filtering to mod queue, reporting, or audit-only logging.
+- **Repeat Offender Escalation**: Automatically track repeated violations and escalate repeat link spammers to modmail for team review.
+- **Dedicated Management Center**: Access a private dashboard from Subreddit Mod Tools to inspect metrics, adjust rules, and run test URLs.
+
+---
 
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/domain-guard-flowchart.png)
 
-1. A user submits a post or comment containing a hyperlink.
-2. Domain Guard extracts the hostname and checks it against your active policy lists.
-3. Depending on the rule and scope, the app will either remove the content, approve it, or (if in Audit Mode) simply log the match for moderator review.
+### Your Four-Step Workflow
 
-## Setup & Configuration
+1. **Extract**: Domain Guard intercepts new submissions and comments, extracting and normalizing all candidate URLs.
+2. **Evaluate**: Domains are checked against global exemptions, moderator status, content scope, and user risk thresholds.
+3. **Enforce**: When a restricted domain matches an active rule, the configured moderation action (`remove`, `spam`, `filter`, or `report`) executes immediately.
+4. **Escalate**: Repeat violations are recorded, and summary notifications are dispatched to modmail when configured.
 
-1. **Install**: Add **Domain Guard** to your subreddit via the App Directory.
-2. **Dashboard Initialization**: Navigate to your subreddit's Mod Tools and open the GuardHub: Domain Guard Dashboard.
-3. **Configure Rules**: 
-   - Navigate to the Rules tab to create your first domain policy.
-   - We recommend starting rules in "Audit" mode to ensure they don't catch legitimate links.
-4. **Enforce**: Once you confirm the rule works via the Test tab, switch it to "Live" mode.
+---
+
+## Quick Setup
+
+1. **Install**: Add **Domain Guard** to your subreddit through the Reddit App Directory.
+2. **Configure**: Open **GuardHub: DomainGuard Dashboard** from Subreddit Mod Tools.
+3. **Create Rules**: Add your domain allowlist or blocklist in Audit Mode to safely verify matching behavior.
+4. **Enforce**: Once satisfied with audit results, switch rules to Live mode to begin automated enforcement.
+
+*No complex regex configuration required. Full control stays in your native dashboard.*
+
+---
+
+## Advanced Capabilities
+
+Domain Guard is engineered for high-throughput link verification while giving power moderators complete operational visibility.
+
+- **Hostname Normalization**: Automatically strips protocols, URL paths, query parameters, and port numbers to evaluate canonical hostnames.
+- **Scope Isolation**: Dispatches separate checks across post link URLs, Markdown hyperlinked text, and comment bodies.
+- **Risk Score Gating**: Evaluates submitting account signals (account age, karma standing) before triggering strict link enforcement.
+- **Audit Simulation Engine**: Simulates policy matches in the background and stores match records in Redis for pre-deployment verification.
+
+---
+
+## Designed to Assist Moderators
+
+Domain Guard automates the extraction and enforcement of domain policies according to the rules and thresholds established by your moderation team. Human moderators retain full authority to override actions, approve filtered submissions in mod queue, and adjust domain permissions at any time.
+
+---
+
+## Support
+
+For help, bug reports, or feature requests, post in r/grantdb.
+Please include:
+- The app name.
+- What you expected to happen.
+- What happened instead.
+- Any error message.
+- Screenshots or relevant details.
 
 ## Legal
 

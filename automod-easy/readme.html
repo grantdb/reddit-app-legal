@@ -1,0 +1,76 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/automod-easy">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>AutoMod Easy</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Dev_Suite-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Write, test, and optimize AutoModerator rules in a visual, safe sandbox.</strong></p></blockquote>
+<p>AutoMod Easy replaces error-prone YAML editing with an interactive rule builder and testing studio. Audit existing rules for safety risks, reverse-engineer filters from sample text, and test rule configurations against dummy posts in a secure sandbox before deploying live.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Visual sandbox simulator</strong>: Test AutoMod YAML against sample submissions without touching live posts.</li>
+<li><strong>Rule health audit</strong>: Inspect your active `config/automoderator` page for syntax errors and risk patterns.</li>
+<li><strong>Reverse code generator</strong>: Paste a spam sample to automatically generate the exact matching AutoMod rule.</li>
+<li><strong>Instant Quick-Ban form</strong>: Ban abusive keywords with one tap from a native moderator form.</li>
+<li><strong>Automatic rollback snapshots</strong>: Compare side-by-side diffs and restore previous configurations safely.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The AutoMod Easy Way</h2>
+<p>---</p>
+<h2>Built for Safe AutoMod Management</h2>
+<ul>
+<li><strong>Interactive Rule Sandbox</strong>: Experiment with rules against custom sample posts and comments without exposing your subreddit to live testing.</li>
+<li><strong>Automated Health Scorecard</strong>: Evaluates active configuration health, flagging missing quotes, unescaped regex characters, and risky wildcards.</li>
+<li><strong>Enforceability Advisor</strong>: Loads your community sidebar rules via Reddit API to provide code blueprints and native safety filter tips.</li>
+<li><strong>Reverse Rule Generator</strong>: Paste offending submission text to generate clean, optimized AutoMod YAML tailored to that content.</li>
+<li><strong>Configuration Diff & Restore</strong>: Compare current YAML against previous versions with side-by-side visual diffs and one-click rollback.</li>
+<li><strong>Native Quick-Ban Form</strong>: Add emergency keyword filters instantly via <strong>AutoMod Easy: Quick Ban Rule</strong> in Subreddit Mod Tools.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/automod-easy-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Launch</strong>: Open <strong>AutoMod Easy Trainer</strong> from Subreddit Mod Tools.</p>
+<p>2. <strong>Build</strong>: Draft rules in the visual Sandbox, use the Reverse Generator, or submit a Quick-Ban form.</p>
+<p>3. <strong>Validate</strong>: AutoMod Easy inspects YAML syntax, validates schema keys, and tests logic against sample payloads.</p>
+<p>4. <strong>Deploy</strong>: Deploy verified rules directly to your subreddit's `config/automoderator` wiki with automated snapshot backup.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>AutoMod Easy</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Open Trainer</strong>: Select <strong>AutoMod Easy Trainer</strong> from Subreddit Mod Tools.</p>
+<p>3. <strong>Audit Rules</strong>: Review the initial health scorecard of your current AutoMod configuration.</p>
+<p>4. <strong>Experiment</strong>: Use the Sandbox Lab to test new rules or generate patterns from spam samples.</p>
+<p>*No scary live-testing mistakes. Safe, visual AutoModerator development inside Reddit.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>AutoMod Easy is engineered for deep YAML parsing, AST validation, and safe wiki synchronization.</p>
+<ul>
+<li><strong>AutoMod Schema Validator</strong>: Verifies valid rule keys, modifier combinations, and action types according to Reddit specifications.</li>
+<li><strong>Regex Safety Linter</strong>: Detects unquoted regex characters, catastrophic backtracking risks, and syntax bugs.</li>
+<li><strong>Wiki Snapshot Engine</strong>: Stores chronological revisions in Redis with unified diff generation and restoration endpoints.</li>
+<li><strong>Interactive React Webview</strong>: Renders a rich desktop and mobile testing laboratory with live syntax highlighting.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>AutoMod Easy provides sandbox simulation and schema validation tools to assist in managing AutoModerator rules. Validation checks and rule generation serve as development aids—human moderators retain full authority over which rules are deployed, updated, or removed from their subreddit.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name.</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message.</li>
+<li>Screenshots or relevant details.</li>
+</ul>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/automod-easy/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/automod-easy/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit moderators.*</p>

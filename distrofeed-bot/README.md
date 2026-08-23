@@ -1,3 +1,5 @@
+> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/distrofeed-bot)
+
 # DistroFeed Bot
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
@@ -5,32 +7,34 @@
 ![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-Content_Automation-8A2BE2?style=for-the-badge)
 
-**DistroFeed Bot** is an automated news curator built for Linux and open-source subreddits. It monitors top distribution news sources and automatically shares major releases and updates with the community, ensuring your members never miss an important OS update or security patch.
+**DistroFeed Bot** is a manual-only, candidate-scouting and pre-editing curator built for Linux and open-source subreddits. It leverages Google Gemini AI with search grounding to scout major Linux distribution releases and technical updates, allowing moderators to inspect, edit, and post clean, summarized updates.
 
 ## Key Features
 
-- **Smart Summaries**: Leverages AI to securely browse news sites and distill long articles into concise, highly readable summaries.
-- **Deduplication Engine**: Tracks article hashes and URLs to ensure no story is ever double-posted across manual fetches or scheduled automated runs.
-- **Auto-Flairing**: Uses intelligent keyword detection to properly tag posts by distribution (e.g., Arch, Fedora, Ubuntu, Mint), keeping the subreddit cleanly organized.
-- **Scheduled or Manual**: Supports automated daily posting via a cron schedule, or on-demand manual fetching when breaking news happens.
+- **100% Manual & Moderator Control**: Zero auto-posting or background crons. Operates via a 2-stage Mod Menu workflow.
+- **AI-Powered Search Grounding**: Uses Google Gemini 2.5 Flash to scan DistroWatch, Phoronix, and 9to5Linux for recent major OS releases and kernel updates.
+- **Interactive Pre-Publish Editor**: Presents candidate updates in an interactive Devvit form where moderators can customize post title, target URL, TL;DR summary, post flair, and sticky comment options.
+- **Deduplication Engine**: Enforces Redis URL and topic slug tracking to prevent duplicate coverage.
 
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/DistroFeed-bot-flowchart.png)
 
-1. The bot wakes up automatically (daily schedule) or is manually triggered by a moderator.
-2. It fetches RSS feeds from authorized Linux news sources.
-3. The AI engine reads the articles, creates a short summary, and determines the primary distribution topic.
-4. The bot checks its history to prevent duplicates, applies the correct post flair, and submits the post.
+1. A moderator opens the Mod Menu and selects **1. Scout Distro Updates** to trigger background AI scanning.
+2. After ~90 seconds, the moderator selects **2. Review Scouted Updates** from the Mod Menu.
+3. Select an update candidate from the **Candidate Picker Form**.
+4. Customize post title, link URL, TL;DR summary, post flair, and sticky comment settings in the **Editor Form**, then click **Publish Post Now**.
 
 ## Setup & Configuration
 
 1. **Install**: Add **DistroFeed Bot** to your subreddit via the App Directory.
-2. **App Settings**: Navigate to your subreddit's Mod Tools > App Settings > DistroFeed Bot.
-3. **Configure**:
-   - Enable or disable the daily automated schedule.
-   - Map specific keywords to your subreddit's existing flairs (e.g., "Ubuntu" -> template_id).
-4. **Manual Fetch**: At any time, use the native Mod Menu action "Post Top Distro Updates" to manually pull in the latest stories.
+2. **App Settings**: Navigate to Mod Tools > App Settings > DistroFeed Bot and provide a Google Gemini API Key (from aistudio.google.com).
+3. **Usage**: Open the subreddit Mod Menu to scout and review updates.
+
+## Support
+
+For help, bug reports, or feature requests, post in r/grantdb.
+Please include the app name, what you expected, what happened, and any error text or screenshots.
 
 ## Legal
 

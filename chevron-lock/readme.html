@@ -1,0 +1,46 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/chevron-lock">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Chevron Lock</h1>
+<p><a href="https://img.shields.io/badge/Platform-Reddit%20Devvit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Category-Interactive-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Game-8A2BE2?style=for-the-badge">Type</a></p>
+<p>Operating an unstable SGC dialing console, players must identify, repair, and reorder gate address sequences under strict time pressure before gate system collapse. <strong>Chevron Lock</strong> brings an authentic Stargate dialing puzzle experience directly into Reddit feeds.</p>
+<h2>Interactive Features</h2>
+<ul>
+<li><strong>Dynamic Dialing Engine</strong>: Encode destination glyphs plus the Point of Origin (Alpha Origin) under strict time pressure across gate sequences scaling from 3 to 7 chevrons.</li>
+<li><strong>3 Dynamic Round Types</strong>:</li>
+<li><strong>Recall</strong>: Memorize a valid gate address during a brief preview window, then reconstruct it from memory.</li>
+<li><strong>Repair</strong>: Detect corrupted DHD chevron slots (`?`) and substitute them with correct glyphs from the DHD pool.</li>
+<li><strong>Reorder</strong>: Observe a memory preview, then swap scrambled chevron slots back into canonical sequence before time expires.</li>
+<li><strong>7-Round Escalating Run</strong>: Smooth 3-round onboarding ramp (3 to 4 chevrons, 0 decoys) that scales up to a full 7-chevron Master Gate Lock in Round 7.</li>
+<li><strong>Daily Seeded Challenge</strong>: A canonical daily address sequence shared deterministically across all players on the same UTC day.</li>
+<li><strong>Server-Authoritative Engine</strong>: All scoring, sequence validation, timing checks, stability penalties, and leaderboard writes are computed strictly on the server.</li>
+<li><strong>Redis Leaderboards & Tie-Handling</strong>: Subreddit all-time and daily sorted sets with score preservation (no lower-score overwrites) and high-precision timestamp tie-breaking.</li>
+<li><strong>SGC Dialing Console UI</strong>: Dark graphite aesthetics, glowing teal chevrons, telemetry readouts, stability bars, and amber/red alert pulses.</li>
+</ul>
+<h2>Gameplay Mechanics & Controls</h2>
+<ul>
+<li><strong>Console Controls</strong>:</li>
+<li><strong>CLEAR</strong>: Reset all slot selections or revert scrambled arrangements for the current round.</li>
+<li><strong>HINT (-15 Pts)</strong>: Reveal the correct glyph for a corrupted slot or position with a score penalty.</li>
+<li><strong>LOCK CHEVRONS</strong>: Transmit the encoded sequence to the gate for verification.</li>
+<li><strong>HUD Telemetry Readouts</strong>:</li>
+<li><strong>Round Counter</strong>: Displays current round progress (e.g. `1/7`).</li>
+<li><strong>Stability Indicator</strong>: Represents remaining DHD stability charges (starts at 3 units; losing all stability collapses the gate).</li>
+<li><strong>Timer</strong>: Active countdown per round with visual warning pulses when under 3 seconds.</li>
+<li><strong>Streak & Score</strong>: Live tracking of consecutive successful locks and running score.</li>
+</ul>
+<h2>Install / Use</h2>
+<p>1. Deploy and install the <strong>Chevron Lock</strong> app on your subreddit.</p>
+<p>2. Open the subreddit post creation menu or moderator actions.</p>
+<p>3. Select <strong>Create Chevron Lock Post</strong> to spawn an interactive dialing console post for your community.</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/chevron-lock/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/chevron-lock/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for fun on Reddit*</p>

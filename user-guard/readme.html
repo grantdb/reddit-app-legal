@@ -1,0 +1,76 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>GuardHub: User Guard 🛡️</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Gatekeeper-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Stop throwaways, filter ban evaders, and set clear community participation thresholds.</strong></p></blockquote>
+<p>User Guard gives moderation teams precise control over who can participate in your subreddit. Set clear account age and karma thresholds, maintain explicit user allowlists and blocklists, and manage everything through a clean native dashboard without editing complex AutoModerator YAML.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Filter new accounts</strong>: Block day-zero throwaways and unverified accounts from flooding your feed.</li>
+<li><strong>Enforce karma requirements</strong>: Ensure contributors have established participation history.</li>
+<li><strong>Override with identity gates</strong>: Maintain direct username allowlists and blocklists that take instant priority.</li>
+<li><strong>Test with zero risk</strong>: Run rules in safe Audit Mode to inspect who would match before enforcing live.</li>
+<li><strong>Control from one place</strong>: Manage all access thresholds from a private moderator dashboard.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The User Guard Way</h2>
+<p>---</p>
+<h2>Built for Confident Community Protection</h2>
+<ul>
+<li><strong>Maturity Thresholds</strong>: Set minimum account age requirements to stop brand-new spam accounts before they can post.</li>
+<li><strong>Participation Gates</strong>: Enforce combined, post, or comment karma minimums to ensure contributors have a proven track record.</li>
+<li><strong>Priority Identity Overrides</strong>: Create exact username allowlists that always pass and blocklists that are always rejected regardless of karma.</li>
+<li><strong>Repeat Offender Escalation</strong>: Automatically log repeat violations and deliver alert summaries to modmail when configured.</li>
+<li><strong>Safe Testing Mode</strong>: Test strict new thresholds in Audit Mode to review simulated match logs without disrupting community activity.</li>
+<li><strong>Dedicated Management Center</strong>: Access a private dashboard from Subreddit Mod Tools to view activity metrics, test accounts, and update rules.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/user-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Intercept</strong>: User Guard receives incoming post and comment submissions from community members.</p>
+<p>2. <strong>Identify</strong>: The author is checked against explicit username allowlists and blocklists for immediate priority handling.</p>
+<p>3. <strong>Evaluate</strong>: If no explicit override matches, account age, karma standing, and risk score are measured against your active thresholds.</p>
+<p>4. <strong>Enforce</strong>: When a threshold is failed, the configured action (`remove`, `spam`, `filter`, or `report`) is applied, or recorded quietly in Audit Mode.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>User Guard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure</strong>: Open <strong>GuardHub: UserGuard Dashboard</strong> from Subreddit Mod Tools.</p>
+<p>3. <strong>Create Rules</strong>: Add your account age and karma thresholds in Audit Mode to preview matching accounts safely.</p>
+<p>4. <strong>Enforce</strong>: Switch verified rules to Live mode to begin automated gatekeeping.</p>
+<p>*No complex YAML syntax required. Clean access controls directly in your community dashboard.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>User Guard is engineered for reliable, high-throughput participation filtering with complete operational oversight.</p>
+<ul>
+<li><strong>Priority Identity Engine</strong>: Evaluates username allowlists and blocklists first before running expensive profile calculations.</li>
+<li><strong>Multi-Factor Thresholds</strong>: Combines account age days, total karma, post karma, and comment karma into unified or separate rules.</li>
+<li><strong>Audit Simulation Engine</strong>: Simulates rule evaluation without modifying content, recording matches to Redis for verification.</li>
+<li><strong>Incident Logging</strong>: Records structured audit events so your mod team can review exactly which criteria caused a filter action.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>User Guard automates account maturity and participation checks according to the exact thresholds set by your moderation team. Account signals and risk scores serve as assistive filters to help protect your community—human moderators maintain full authority to approve exceptions, override filter actions, and adjust rules at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name.</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message.</li>
+<li>Screenshots or relevant details.</li>
+</ul>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/user-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/user-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

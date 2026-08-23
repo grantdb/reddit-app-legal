@@ -1,34 +1,99 @@
-# GuardHub: Audit Guard 🛡️
+> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/audit-guard)
+
+# GuardHub: Audit Guard
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
 ![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
+![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
 ![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-Logging-8A2BE2?style=for-the-badge)
 
-**Audit Guard** is the automated audit logging and change tracking engine for the GuardHub ecosystem. In high-volume or highly sensitive communities, it is essential to have an immutable record of moderation events and system configurations. Audit Guard serves as the central nervous system for observing and recording exactly what actions were taken, by whom, and when.
+> **Maintain a transparent, searchable audit ledger of all moderation actions and config changes.**
 
-## Key Features
+Audit Guard provides your moderation team with a central, chronological security ledger. Ingesting event logs and configuration changes across your subreddit, it gives you complete transparency into what actions were taken, by whom, and when.
 
-- **Automated Logging**: Silently tracks key moderation events, automated enforcements, and configuration changes across all connected GuardHub applications.
-- **Change Tracking**: Maintains an accessible, chronological history for moderation teams, ensuring full transparency and accountability for system adjustments.
-- **Data Integrity**: Provides a reliable source of truth when debugging complex automod behaviors or auditing team activity.
-- **Native Integration**: Seamlessly communicates with other GuardHub apps to ingest event data securely without exposing sensitive information.
+---
+
+## At a Glance
+
+- **Centralized audit ledger**: Ingest and index moderation events across your community in chronological order.
+- **Track configuration shifts**: Maintain a clear history of setting adjustments and policy changes.
+- **Search and filter logs**: Quickly isolate events by moderator, action type, or target user in an interactive dashboard.
+- **Background telemetry ingestion**: Operates silently on automated schedules with zero disruption to active feeds.
+- **Private dashboard access**: Review logs securely from an unlisted custom post inside your subreddit.
+
+---
+
+## The Old Way vs. The Audit Guard Way
+
+| Traditional Workflow | With Audit Guard |
+| :--- | :--- |
+| Sifting through raw, cluttered Reddit mod log exports | **Searchable, filterable audit ledger** in a clean native dashboard |
+| Losing track of who modified bot and filter settings | **Chronological change tracking** recording exact configuration adjustments |
+| Disconnected logs scattered across separate external bots | **Unified event stream** consolidating automated and manual mod actions |
+| Manually compiling compliance reports for senior mods | **Exportable event summaries** with full timestamp and author context |
+| Mod team debating the timeline of a past moderation incident | **Deterministic timestamped records** preserving an immutable history |
+
+---
+
+## Built for Team Accountability & Oversight
+
+- **Automated Event Ingestion**: Silently collects and normalizes moderation events, enforcement actions, and configuration updates.
+- **Historical Change Tracking**: Records a clean, accessible timeline of setting modifications so your team stays aligned on policy changes.
+- **Fast In-Dashboard Search**: Filter events by moderator username, action category, or specific keywords to trace past incidents in seconds.
+- **Automated Retention Management**: Maintains a rolling historical buffer in Redis with automatic deduplication and state hygiene.
+- **Zero-Friction Operation**: Runs passively in the background without requiring manual log exports or external spreadsheet maintenance.
+- **Dedicated Audit Center**: Access an interactive Webview dashboard from Subreddit Mod Tools to inspect logs and review activity trends.
+
+---
 
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/audit-guard-flowchart.png)
 
-1. Any connected GuardHub application executes an action, or a moderator changes a configuration setting.
-2. The relevant app sends a secure telemetry signal to Audit Guard.
-3. Audit Guard ingests, normalizes, and appends the event to a permanent chronological ledger.
-4. Moderators can later review this ledger securely via the GuardHub Dashboard to trace the exact lineage of an enforcement action or config change.
+### Your Four-Step Workflow
 
-## Setup & Configuration
+1. **Record**: Moderation operations and configuration changes generate event payloads.
+2. **Ingest**: Audit Guard ingests and normalizes incoming telemetry through automated background synchronizations.
+3. **Index**: Events are appended to a chronological Redis sorted-set ledger with deduplication safeguards.
+4. **Inspect**: Moderators open the interactive dashboard to search, filter, and review historical audit records.
 
-1. **Install**: Add **Audit Guard** to your subreddit via the App Directory.
-2. **Dashboard Initialization**: Navigate to your subreddit's Mod Tools and open the GuardHub Audit Guard Dashboard.
-3. **Integration**: Audit Guard works passively in the background. Once installed, it will automatically begin listening for signals from your other active GuardHub applications.
-4. **Usage**: Access the historical logs via the native Custom Post Dashboard inside your subreddit.
+---
+
+## Quick Setup
+
+1. **Install**: Add **Audit Guard** to your subreddit through the Reddit App Directory.
+2. **Initialize Dashboard**: Select **GuardHub: Create Audit Dashboard** from Subreddit Mod Tools.
+3. **Passive Ingestion**: Audit Guard automatically begins indexing community moderation events.
+4. **Review**: Open your dashboard anytime to inspect event history and search specific actions.
+
+*No external database setup required. Complete moderation transparency directly in your subreddit.*
+
+---
+
+## Advanced Capabilities
+
+Audit Guard is engineered for high-integrity event ingestion and efficient timeline querying.
+
+- **Chronological Redis Ledger**: Stores events in a Redis Sorted Set (`ZSET`) indexed by millisecond epoch timestamps.
+- **Idempotent Ingestion Engine**: Uses transactional state tracking to prevent duplicate log entries during retries.
+- **Interactive React Webview**: Provides client-side search, filtering by action type, and real-time pagination.
+- **Rolling Buffer Capping**: Automatically trims historical logs to maintain optimal performance and storage limits.
+
+---
+
+## Designed to Assist Moderators
+
+Audit Guard maintains chronological logs of actions and events to assist team oversight and community transparency. Audit records serve as historical reference material—human moderators retain full authority over moderation policies, disciplinary decisions, and community guidelines.
+
+---
+
+## Support
+
+For help, bug reports, or feature requests, post in r/grantdb.
+Please include the app name, what you expected, what happened, and any error text or screenshots.
+
+---
 
 ## Legal
 

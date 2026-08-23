@@ -1,3 +1,5 @@
+> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/sticky-pro)
+
 # Sticky Pro
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
@@ -5,33 +7,57 @@
 ![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-Tool-8A2BE2?style=for-the-badge)
 
-**Sticky Pro** is a high-performance moderation tool designed to streamline the repetitive process of posting and stickying recurring comments on new threads. Instead of keeping a notepad of common moderator responses, Sticky Pro allows your team to deploy pre-configured, formatted comments instantly with a single click natively from the Reddit interface.
+**Sticky Pro** is a high-performance moderation tool designed to streamline the process of posting, customizing, and managing recurring sticky comments on community threads. Instead of keeping a notepad of common moderator responses, Sticky Pro allows your team to deploy pre-configured templates, write ad-hoc markdown notes, schedule auto-unsticky expiration timers, or remove active stickies natively from the Reddit interface.
+
+---
 
 ## Key Features
 
-- **Template System**: Configure up to three unique sticky templates with custom labels and full markdown content directly in the App Settings.
-- **Direct Menu Items**: Dedicated post-menu actions for each template—no popup form required. Works natively on all Reddit platforms (Desktop, iOS, Android).
-- **Auto-Sticky Posting**: Can be configured to automatically submit and lock a sticky comment on *every* new post in the subreddit, with built-in deduplication to prevent double-posting.
+- **Unified Post Menu Modal**: Open **Sticky Pro: Post Sticky** from any post menu to pick from your configured templates, write custom markdown, toggle top-pinning and comment locks, and set an optional auto-unsticky timer.
+- **One-Click Unsticky Action**: Select **Sticky Pro: Remove Sticky** from the post overflow menu to immediately unpin and remove the active sticky comment and cancel any pending timers.
+- **Duration Expiration Timers**: Automatically expire and remove sticky comments after a configurable countdown (1 hour, 6 hours, 12 hours, 24 hours, 3 days, 7 days) via scheduled background jobs.
+- **Auto-Sticky Posting**: Can be configured to automatically submit and lock a sticky comment on every new post in the subreddit, with built-in deduplication and delayed eligibility checking.
+- **Auto-Pin Control**: Configurable setting (`autoPin`) to control whether sticky comments are pinned to the top of the comment section or distinguished as moderator comments without pinning.
+- **Enhanced Comment Commands**: Quick moderator commands (`!sticky 1 24h`, `!sticky 2 3d`, `!sticky 3`, `!unsticky`) available as fast mobile and desktop shortcuts.
 - **Reliable Deliveries**: Automatically retries and bypasses platform rate limits when posting, ensuring your moderation actions never fail silently.
-- **Command Fail-safe**: Robust moderator commands (`!sticky 1`, `!sticky 2`) available as an additional, reliable trigger if the Mod Menu is ever inaccessible.
+
+---
 
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sticky-pro-flowchart.png)
 
-1. A moderator selects one of their configured Sticky templates from a post's Mod Menu, OR a new post triggers the auto-sticky feature.
-2. Sticky Pro retrieves the markdown template from your settings.
-3. It posts the comment, distinguishing it as an official moderator action, sticking it to the top of the thread, and locking it to prevent user replies.
-4. If Reddit's servers are busy, the app queues the action and retries automatically until successful.
+### Workflow Steps
+
+1. **Trigger**: A moderator selects **Sticky Pro: Post Sticky** from a post menu, triggers a comment command (`!sticky 1 24h`), OR a new post triggers the auto-sticky feature.
+2. **Eligibility & Replacement**: For auto-sticky, Sticky Pro evaluates the Delayed Eligibility-First Gate. For manual posts, it automatically cleans up any previous sticky comment and timer on that post.
+3. **Publish**: Sticky Pro retrieves the template markdown or custom input, distinguishes the comment as an official moderator action, pins it to top if requested, and locks it against user replies.
+4. **Timer / Expiry**: If a duration timer is specified, a scheduled background job (`unsticky_timer`) automatically unpins/removes the sticky when time expires.
+5. **Removal**: Selecting **Sticky Pro: Remove Sticky** or commenting `!unsticky` immediately cleans up the active sticky comment.
+
+---
 
 ## Setup & Configuration
 
-1. **Install**: Add **Sticky Pro** to your subreddit via the App Directory.
+1. **Install**: Add **Sticky Pro** to your subreddit via the Reddit App Directory.
 2. **App Settings**: 
-   - Navigate to your subreddit's Mod Tools > App Settings > Sticky Pro.
-   - Define your Markdown text for Template 1, 2, and 3.
-   - Set the custom labels for the Mod Menu (e.g., "Sticky Rule 1 Warning").
-3. **Usage**: Access the tool by selecting your newly named sticky templates from the Mod Actions menu on any post in your community.
+   - Navigate to your subreddit's **Mod Tools > App Settings > Sticky Pro**.
+   - Define your Markdown text and custom display labels for Template 1, 2, and 3.
+   - Toggle **Enable Auto-Sticky on Every Post** and set **Pin Auto-Sticky Comment to Top** (`autoPin`).
+   - Configure Delayed Eligibility-First processing preferences (delay duration, skip if removed, skip if spam).
+3. **Usage**:
+   - On any post, open the moderator menu and select **Sticky Pro: Post Sticky** to launch the configuration modal.
+   - To remove a sticky, select **Sticky Pro: Remove Sticky** or comment `!unsticky`.
+   - Use `!sticky 1 24h` or `!sticky 2` in comment replies for rapid mobile shortcuts.
+
+---
+
+## Support
+
+For help, bug reports, or feature requests, post in r/grantdb.
+Please include the app name, what you expected, what happened, and any error text or screenshots.
+
+---
 
 ## Legal
 

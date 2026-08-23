@@ -1,0 +1,70 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/action-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>GuardHub: Action Guard</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Automation_Engine-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Automate multi-step moderation playbooks and coordinate team enforcement in one click.</strong></p></blockquote>
+<p>Action Guard is the workflow automation and response orchestrator for your subreddit. Trigger multi-action moderation playbooks—combining removals, temporary mutes, flair updates, thread locks, and mod notes—from a single event or menu trigger, managed visually from your private control center.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Multi-action playbooks</strong>: Execute combined actions (e.g. remove, lock, flair, and note) in a single sequence.</li>
+<li><strong>Event-driven triggers</strong>: Respond automatically to new posts, comments, or specific moderator operations.</li>
+<li><strong>Identity & flair sync</strong>: Apply automated user and post flairs to record enforcement states transparently.</li>
+<li><strong>Safe Dry-Run Mode</strong>: Test complex action sequences with simulated logs before deploying live.</li>
+<li><strong>Visual dashboard management</strong>: Configure and test all orchestration rules from a secure moderator dashboard.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Action Guard Way</h2>
+<p>---</p>
+<h2>Built for Coordinated Moderation</h2>
+<ul>
+<li><strong>Orchestration Playbooks</strong>: Chain together removals, locks, flairs, mutes, and internal notes into automated response recipes.</li>
+<li><strong>Event-Driven Automation</strong>: Trigger workflows on post creation, comment submissions, or upstream mod actions.</li>
+<li><strong>Status & Flair Synchronization</strong>: Automatically update user and submission flairs to reflect current moderation status.</li>
+<li><strong>Safe Testing Sandbox</strong>: Run playbooks in Dry-Run Mode to simulate execution and review logs before turning on live enforcement.</li>
+<li><strong>Modmail Notifications</strong>: Format and deliver summary alerts to your team modmail thread when high-priority playbooks fire.</li>
+<li><strong>Dedicated Orchestrator Center</strong>: Access a private dashboard from Subreddit Mod Tools to build playbooks, test triggers, and inspect history.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/action-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Trigger</strong>: Action Guard intercepts a submission, comment event, or moderator action.</p>
+<p>2. <strong>Evaluate</strong>: The event is matched against active playbook criteria and priority rules.</p>
+<p>3. <strong>Execute</strong>: Action Guard fires the configured action sequence (e.g. `Remove` + `Lock` + `Apply Flair` + `Add Mod Note`).</p>
+<p>4. <strong>Log</strong>: All executed actions and dry-run simulations are recorded in the dashboard audit log.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Action Guard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure</strong>: Open <strong>GuardHub: ActionGuard Orchestrator</strong> from Subreddit Mod Tools.</p>
+<p>3. <strong>Create Playbooks</strong>: Build your multi-action response recipes and test them in Dry-Run Mode.</p>
+<p>4. <strong>Activate</strong>: Switch verified playbooks to Live mode to begin automated orchestration.</p>
+<p>*No external bot hosting required. Coordinated multi-action workflows directly within Reddit.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Action Guard is engineered for reliable, sequential action execution and high-concurrency event routing.</p>
+<ul>
+<li><strong>Sequential Action Pipeline</strong>: Executes multi-step moderation operations in deterministic order with individual step error handling.</li>
+<li><strong>Event Dispatch Router</strong>: Handles `onPostCreate`, `onCommentCreate`, and `onModAction` trigger streams through unified handlers.</li>
+<li><strong>Dry-Run Execution Engine</strong>: Simulates API calls and generates detailed mock logs without applying destructive changes to Reddit state.</li>
+<li><strong>Redis Playbook Store</strong>: Persists JSON-encoded playbook definitions and execution logs with atomic state updates.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Action Guard coordinates and automates moderation workflows according to the exact playbooks defined by your moderation team. Automated actions follow strict rules established by human moderators, who maintain full authority to review, override, and modify playbook behaviors at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/action-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/action-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

@@ -1,0 +1,76 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/app-update-checker">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>App Update Checker</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Infrastructure-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Monitoring-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Track installed app versions, discover releases, and receive automated modmail update alerts.</strong></p></blockquote>
+<p>App Update Checker ensures your subreddit's Devvit tools remain secure and up-to-date. Automatically discovering installed apps and checking them against a continuously-updated snapshot of the Reddit App Directory, it delivers clean, consolidated upgrade summaries straight to your modmail.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Automated version audits</strong>: Discover installed apps and check for new releases automatically.</li>
+<li><strong>Modmail upgrade alerts</strong>: Receive formatted summary tables in modmail highlighting pending updates.</li>
+<li><strong>Authoritative version data</strong>: Cross-reference against a directly-scraped snapshot of the Reddit App Directory, with npm/GitHub fallbacks for unlisted apps.</li>
+<li><strong>On-demand menu checks</strong>: Trigger an instant update scan anytime from the subreddit overflow menu.</li>
+<li><strong>Redis-cached lookups</strong>: The version snapshot is cached per-check to avoid redundant network calls.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The App Update Checker Way</h2>
+<p>---</p>
+<h2>Built for Seamless App Maintenance</h2>
+<ul>
+<li><strong>Automated App Discovery</strong>: Identifies installed Devvit applications by matching moderator accounts exactly against the Reddit App Directory, with a heuristic fallback for unlisted apps.</li>
+<li><strong>Authoritative Release Resolution</strong>: Compares against a directly-scraped Reddit App Directory snapshot first, with npm/GitHub fallbacks for apps outside the public directory.</li>
+<li><strong>Daily Automated Checks</strong>: Runs a scheduled daily background audit (12:00 UTC) with zero impact on subreddit operations.</li>
+<li><strong>Instant Menu Scans</strong>: Trigger an immediate update check at any moment using <strong>Check for App Updates</strong> in Subreddit Mod Tools.</li>
+<li><strong>Cache Management Controls</strong>: Clear tracked app data and force a fresh version snapshot with <strong>Reset App Cache</strong>.</li>
+<li><strong>Native Settings Control</strong>: Specify custom app slugs to monitor and configure update check schedules in App Settings.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Discover</strong>: App Update Checker discovers installed Devvit applications from subreddit bot signatures and configured slugs.</p>
+<p>2. <strong>Resolve</strong>: Latest published versions are checked against a directly-scraped Reddit App Directory snapshot, falling back to npm/GitHub for unlisted apps.</p>
+<p>3. <strong>Compare</strong>: Installed version numbers are compared against upstream release tags to identify pending upgrades.</p>
+<p>4. <strong>Notify</strong>: A formatted summary report detailing app upgrade statuses is delivered directly to team modmail.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>App Update Checker</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure Settings</strong>: Open <strong>Mod Tools > App Settings > App Update Checker</strong> to adjust notification preferences.</p>
+<p>3. <strong>Run Initial Check</strong>: Select <strong>Check for App Updates</strong> from the subreddit overflow menu to generate your first report.</p>
+<p>4. <strong>Relax</strong>: Scheduled daily audits will keep your team informed of any future releases.</p>
+<p>*No manual app directory checking. Automated update notifications delivered directly to modmail.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>App Update Checker is engineered for resilient version resolution and lightweight background execution.</p>
+<ul>
+<li><strong>Authoritative Directory Snapshot</strong>: Reads a directly-scraped Reddit App Directory feed from `raw.githubusercontent.com`, falling back to `registry.npmjs.org` and GitHub release manifests for unlisted apps.</li>
+<li><strong>Redis-Cached Snapshot</strong>: The directory snapshot is cached for an hour per check run to avoid redundant network calls.</li>
+<li><strong>Scheduled Cron Runner</strong>: Executes automated checks on a daily cron schedule.</li>
+<li><strong>Modmail Markdown Formatter</strong>: Formats clean, high-contrast markdown tables with direct links to release notes.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>App Update Checker provides automated version monitoring and status reporting to assist in maintaining installed community tools. Update summaries serve as informational alerts—human moderators retain full authority over which apps are installed, updated, or removed.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name.</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message.</li>
+<li>Screenshots or relevant details.</li>
+</ul>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/app-update-checker/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/app-update-checker/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community.*</p>

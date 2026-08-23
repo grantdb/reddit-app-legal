@@ -1,0 +1,70 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/word-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>GuardHub: Word Guard</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Content_Policy-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Filter toxic words, block spam phrases, and organize keyword rules visually.</strong></p></blockquote>
+<p>Word Guard gives your moderation team total control over keyword filtering without complex AutoModerator YAML. Organize sensitive words into modular rule groups, test patterns safely in Audit Mode, and enforce keyword policies across posts and comments from a private dashboard.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Organize by category</strong>: Group keywords into clean buckets (e.g. Hate Speech, Scams, Spoilers).</li>
+<li><strong>Match with precision</strong>: Choose between exact keywords, whole-word boundaries, or regex patterns.</li>
+<li><strong>Test without risk</strong>: Run rules in safe Audit Mode to review simulated matches before live enforcement.</li>
+<li><strong>Factor user risk</strong>: Trigger specific keyword restrictions only when author risk scores exceed thresholds.</li>
+<li><strong>Track repeat offenders</strong>: Automatically escalate users with repeated violations to modmail.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Word Guard Way</h2>
+<p>---</p>
+<h2>Built for Modular Content Filtering</h2>
+<ul>
+<li><strong>Categorized Rule Groups</strong>: Maintain independent keyword lists for hate speech, self-promotion, t-shirt scams, and spoilers.</li>
+<li><strong>Multiple Matching Modes</strong>: Choose between simple substring matching, exact whole-word boundaries, or advanced regular expressions.</li>
+<li><strong>Reputation-Gated Rules</strong>: Apply aggressive keyword filters exclusively to low-karma or high-risk accounts while sparing trusted regulars.</li>
+<li><strong>Safe Testing Sandbox</strong>: Preview matches in Audit Mode to ensure clean discussions are not caught before turning enforcement live.</li>
+<li><strong>Repeat Offender Escalation</strong>: Track repeat keyword triggers across rolling 7-day windows and notify modmail automatically.</li>
+<li><strong>Dedicated Management Center</strong>: Access a private dashboard from Subreddit Mod Tools to manage rule groups, view metrics, and test sample phrases.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/word-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Extract</strong>: Word Guard intercepts new posts and comments across submit and creation events.</p>
+<p>2. <strong>Verify</strong>: Author exemptions and risk score criteria are verified before evaluating active rule groups.</p>
+<p>3. <strong>Scan</strong>: Text is scanned against active keyword groups using exact, whole-word, or regex matching.</p>
+<p>4. <strong>Action</strong>: If a match occurs, Word Guard executes the configured action (`remove`, `filter`, `spam`, or `report`) and logs the match.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Word Guard</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure</strong>: Open <strong>GuardHub: WordGuard Dashboard</strong> from Subreddit Mod Tools.</p>
+<p>3. <strong>Create Groups</strong>: Add your keyword groups (e.g. Scams or Profanity) and test them in Audit Mode.</p>
+<p>4. <strong>Enforce</strong>: Switch verified groups to Live mode to begin automated keyword filtering.</p>
+<p>*No cryptic YAML files required. Clean, modular keyword management directly in your community dashboard.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Word Guard is built for high-throughput text processing and low-latency keyword evaluation across active feeds.</p>
+<ul>
+<li><strong>High-Speed Keyword Index</strong>: Evaluates multi-term dictionaries efficiently across post titles, text bodies, and comments.</li>
+<li><strong>Boundary-Aware Word Engine</strong>: Enforces word-boundary constraints (`\b`) to prevent sub-string false positives.</li>
+<li><strong>Rolling 7-Day Strike Tracker</strong>: Records user strike frequencies in Redis and formats structured escalation summaries for modmail.</li>
+<li><strong>Audit Mode Simulation</strong>: Records simulated match payloads to Redis for historical review without affecting live user posts.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Word Guard automates keyword and phrase filtering according to the exact dictionaries and thresholds defined by your moderation team. Keyword matches serve as assistive filters—human moderators maintain full authority to approve filtered content in mod queue, whitelist false positives, and adjust keyword rules at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/word-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/word-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

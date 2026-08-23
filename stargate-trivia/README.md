@@ -1,3 +1,5 @@
+> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/stargate-trivia)
+
 # Stargate Trivia
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
@@ -16,8 +18,6 @@
 
 ## How It Works
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/stargate-trivia-flowchart.png)
-
 1. A moderator launches a new Stargate Trivia event directly from their Mod Menu.
 2. A customized interactive post is generated in the subreddit.
 3. Users tap into the post to begin the trivia gauntlet.
@@ -28,6 +28,11 @@
 1. **Install**: Add **Stargate Trivia** to your subreddit via the App Directory.
 2. **App Settings**: Open your subreddit's App Settings for Stargate Trivia to configure the number of questions per round or difficulty scaling.
 3. **Usage**: To start a community event, simply open the Mod Menu anywhere in your subreddit and select the "Launch Trivia Event" action.
+
+## Support
+
+For help, bug reports, or feature requests, post in r/grantdb.
+Please include the app name, what you expected, what happened, and any error text or screenshots.
 
 ## Legal
 

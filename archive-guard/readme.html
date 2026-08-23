@@ -1,0 +1,51 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/archive-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Archive-Guard 🛡️</h1>
+<p><a href="https://img.shields.io/badge/Platform-Reddit%20Devvit-FF4500?style=flat-square">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=flat-square">Category</a></p>
+<blockquote><p>*Subreddit memory without the repetition.*</p></blockquote>
+<p>Stop answering the exact same recurring questions every week. <strong>Archive-Guard</strong> is a lightweight, zero-bloat Devvit moderation tool that indexes discussion topics, clusters repeat questions, and points community members directly to your subreddit's definitive canonical threads.</p>
+<p>---</p>
+<h2>Purpose</h2>
+<p>Subreddits frequently suffer from repeat questions (*"Best beginner setup?"*, *"How to fix error code 404?"*, *"Where do I start?"*). Moderators spend excessive energy either re-explaining answers or hunting down old links. Archive-Guard maintains an explainable topic memory, giving moderators 1-click tools to anchor discussions to canonical guides and review community topic leaderboards.</p>
+<p>---</p>
+<h2>Major Features</h2>
+<ul>
+<li><strong>Explainable Topic Clustering</strong>: Automatically extracts meaningful tokens and bigrams to detect recurring discussion subjects on post submission without black-box magic.</li>
+<li><strong>1-Click Canonical Threads</strong>: Mark high-effort community guides as the "definitive source" for any topic directly from Reddit's post menu.</li>
+<li><strong>Mod-Safe by Design</strong>: Operates purely as a moderator assistant with private mod reports and internal logs. No automatic post removals or intrusive user interruptions in v1.</li>
+<li><strong>On-Demand Community Digests</strong>: Generate clean markdown summaries spotlighting your most frequently discussed topics and essential resources.</li>
+<li><strong>Atomic Redis Reliability</strong>: Powered by Redis transactions and strict single-trigger idempotency for exact-once execution.</li>
+</ul>
+<p>---</p>
+<h2>Workflow & Logic</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-guard-flowchart.png">Logic Flowchart</a></p>
+<p>---</p>
+<h2>Moderator Actions</h2>
+<h3>Post-Level Context Menu</h3>
+<ul>
+<li><strong>Archive-Guard: Set as Canonical</strong>: Designates the post as the official canonical guide/answer for its topic cluster.</li>
+<li><strong>Archive-Guard: View Topic History</strong>: Displays topic volume, matching keywords, and past related submissions.</li>
+<li><strong>Archive-Guard: Ignore Match</strong>: Marks false positives so the post will not trigger repeat alerts.</li>
+</ul>
+<h3>Subreddit-Level Context Menu</h3>
+<ul>
+<li><strong>Archive-Guard: Generate Digest Now</strong>: Compiles a markdown leaderboard digest of top recurring topics and canonical guides for moderator review.</li>
+</ul>
+<p>---</p>
+<h2>Install / Use</h2>
+<p>1. Install <strong>Archive-Guard</strong> on your subreddit.</p>
+<p>2. The app automatically listens to new submissions via `onPostSubmit`.</p>
+<p>3. Use the post context menu to set canonical threads as high-quality guides appear.</p>
+<p>4. Use the subreddit menu to generate a topic digest at any time.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<ul>
+<li><a href="TERMS.md">Terms of Service</a></li>
+<li><a href="PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

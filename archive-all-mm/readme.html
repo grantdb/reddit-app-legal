@@ -1,0 +1,76 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/archive-all-mm">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Archive All Modmail</h1>
+<p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
+<p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
+<p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
+<p><a href="https://img.shields.io/badge/Category-Modmail-blue?style=for-the-badge">Category</a></p>
+<p><a href="https://img.shields.io/badge/Type-Tool-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Clear massive modmail backlogs in the background with a single click.</strong></p></blockquote>
+<p>Archive All Modmail effortlessly clears overgrown subreddit inboxes without browser freezing or timeout errors. Running resilient chunked batch jobs in the background, it processes thousands of old modmail threads while your team stays focused on active community support.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>One-click background archiving</strong>: Trigger bulk modmail cleanup from Subreddit Mod Tools.</li>
+<li><strong>Zero browser timeouts</strong>: Delegated background execution runs smoothly without freezing your page.</li>
+<li><strong>Smart queue selection</strong>: Choose whether to archive New, In Progress, Appeals, or custom queues.</li>
+<li><strong>Real-time run progress</strong>: Check live archive statistics anytime from the moderator menu.</li>
+<li><strong>Rate-limited chunking</strong>: Throttles API requests safely to prevent Reddit rate limit penalties.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Archive All Modmail Way</h2>
+<p>---</p>
+<h2>Built for Effortless Inbox Zero</h2>
+<ul>
+<li><strong>Asynchronous Background Workers</strong>: Offloads high-volume archiving operations to reliable server-side tasks so you can close your browser and move on.</li>
+<li><strong>Configurable Target Queues</strong>: Select specific folders to clear (e.g. New, In Progress, Appeals) directly from App Settings.</li>
+<li><strong>Single-Session Concurrency Locks</strong>: Uses Redis locking mechanisms to prevent duplicate concurrent runs or conflicting operations.</li>
+<li><strong>Live Progress Auditing</strong>: Select <strong>Check Modmail Archive Status</strong> from the overflow menu to view running totals and completed batches.</li>
+<li><strong>Built-in Safety Protections</strong>: Automatically identifies and protects restricted moderator discussions from bulk modifications.</li>
+<li><strong>Native Settings Control</strong>: Fine-tune target queues and batch sizes directly from Subreddit Mod Tools.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-all-mm-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Trigger</strong>: A moderator clicks <strong>Archive All Modmail (Background)</strong> from Subreddit Mod Tools.</p>
+<p>2. <strong>Lock</strong>: Redis concurrency locks initialize a dedicated run session and verify target queues.</p>
+<p>3. <strong>Process</strong>: Background workers pull conversations in 100-item batches and archive them in throttled 10-item chunks.</p>
+<p>4. <strong>Complete</strong>: Workers loop automatically until selected queues reach Inbox Zero and report final counts.</p>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>Archive All Modmail</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Configure Queues</strong>: Open <strong>Mod Tools > App Settings > Archive All Modmail</strong> and pick your target queues.</p>
+<p>3. <strong>Start Cleanup</strong>: Click <strong>Archive All Modmail (Background)</strong> from the subreddit action menu.</p>
+<p>4. <strong>Monitor</strong>: Check <strong>Check Modmail Archive Status</strong> anytime to observe real-time progress.</p>
+<p>*No repetitive manual clicking. Safe, automated Inbox Zero in your native workflow.*</p>
+<p>---</p>
+<h2>Advanced Capabilities</h2>
+<p>Archive All Modmail is engineered for high-volume inbox processing and graceful rate-limit handling.</p>
+<ul>
+<li><strong>Throttled Batch Pipeline</strong>: Fetches modmail threads in 100-conversation pages and executes archives in paced 10-item sub-chunks.</li>
+<li><strong>Recursive Task Rescheduling</strong>: Automatically schedules continuation background jobs when conversation counts exceed single-execution quotas.</li>
+<li><strong>Redis Concurrency Mutex</strong>: Prevents overlapping execution runs with atomic lock acquisition and automatic timeout expiry.</li>
+<li><strong>Restricted Thread Bypassing</strong>: Detects API permission boundaries on internal moderator threads and skips them cleanly.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Archive All Modmail automates bulk thread archiving across designated queues based on explicit moderator initiation. Archiving actions follow the exact target queues configured by your team—human moderators maintain full control over when cleanup tasks are started or paused.</p>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name.</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message.</li>
+<li>Screenshots or relevant details.</li>
+</ul>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/archive-all-mm/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/archive-all-mm/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit moderators.*</p>

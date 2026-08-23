@@ -1,3 +1,5 @@
+> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/playscraper-bot)
+
 # Playscraper Bot
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
@@ -34,6 +36,11 @@
    - Choose which sources to detect (e.g., enable GitHub but disable Play Store).
    - Set your preferred Comment Detail Level.
 4. **Monitoring**: The bot operates silently in the background unless configured for Manual mode.
+
+## Support
+
+For help, bug reports, or feature requests, post in r/grantdb.
+Please include the app name, what you expected, what happened, and any error text or screenshots.
 
 ## Legal
 
