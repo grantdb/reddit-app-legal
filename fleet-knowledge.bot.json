@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-23T09:50:04.974Z",
+  "generatedAt": "2026-08-23T10:56:34.561Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2472,9 +2472,7 @@
         "AppUpgrade"
       ],
       "menuItems": [
-        "GrantDB Support: Clear My Cooldown",
-        "GrantDB Support: Seed App Knowledge Database",
-        "GrantDB Support: Clear Knowledge Database",
+        "GrantDB Support: Moderator Hub",
         "GrantDB Support: Analyze & Reply to Post"
       ],
       "settingsCount": 8,
@@ -2489,7 +2487,7 @@
         "troubleshooting": "Check the Reference Reply Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "malp-scout",

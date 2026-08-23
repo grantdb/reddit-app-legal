@@ -1,7 +1,7 @@
 # Reference Reply Bot
 
 Category: Support  
-Version: v0.0.15  
+Version: v0.0.16  
 Visibility: Unlisted  
 Summary: Post-only support intake and reference bot for r/grantdb.
 
@@ -26,9 +26,7 @@ Post-only support intake and reference bot for r/grantdb.
 
 ## Triggers and Activation
 ### Menu Actions
-- GrantDB Support: Clear My Cooldown: Reset your user testing cooldown in Redis so automated replies fire immediately. (Location: subreddit)
-- GrantDB Support: Seed App Knowledge Database: Populate Redis with normalized app reference records from r/grantdb/wiki/bot_knowledge (or bundled fallback). (Location: subreddit)
-- GrantDB Support: Clear Knowledge Database: Wipe stored app reference records, alias mappings, and metadata from Redis. (Location: subreddit)
+- GrantDB Support: Moderator Hub: Manage bot knowledge database, cooldowns, and sync status. (Location: subreddit)
 - GrantDB Support: Analyze & Reply to Post: Manually run support intake analysis and post reference reply on demand. (Location: post)
 
 ### Custom Post Types and Entrypoints
@@ -71,13 +69,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.16 — 2026-08-23
+- Standard fleet synchronization and maintenance.
+
 0.0.15 — 2026-08-23
 - Standard fleet synchronization and maintenance.
 
 0.0.14 — 2026-08-23
-- Standard fleet synchronization and maintenance.
-
-0.0.13 — 2026-08-23
 - Standard fleet synchronization and maintenance.
 
 ## Links

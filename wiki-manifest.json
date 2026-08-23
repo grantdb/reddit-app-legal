@@ -28,7 +28,7 @@
   "post-title-check": "ff4eaefece070b6a",
   "queue-guard": "373ccfe6680cf5a6",
   "rate-guard": "b43be51d8d2a7622",
-  "reference-reply-bot": "5b714ce72500d2cb",
+  "reference-reply-bot": "767d3a08990785cf",
   "rescue-guard": "a8a82a97f10da34b",
   "ring-escape": "48998a5f2db1b4a5",
   "screen-shot-bot": "d81a7ac0b202a8a8",
@@ -43,5 +43,5 @@
   "verify-guard": "b17a0bc38c9c4b1e",
   "wiki-sync-bot": "6dcdffa7f5196c9f",
   "word-guard": "d7247e77caa8c7e6",
-  "bot_knowledge": "b7d356e90fc37077"
+  "bot_knowledge": "73699ef7533d8040"
 }
