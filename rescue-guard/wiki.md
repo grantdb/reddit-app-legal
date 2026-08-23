@@ -1,7 +1,7 @@
 # RescueGuard
 
 Category: Moderation  
-Version: v0.0.8  
+Version: v0.0.9  
 Visibility: Unlisted  
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.
 
@@ -32,7 +32,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - dedup_strategy: Deduplication Strategy (select, default: auto). Strategy used to identify duplicate or recurring submissions across the community.
 - highlight_action: Spotlight Action on Approval (select, default: flair). Moderation action executed when a post is approved.
 - spotlight_flair_text: Spotlight Flair Text (string, default: Community Spotlight). Text applied to post flair when approved (default: "Community Spotlight").
-- spotlight_flair_template_id: Spotlight Flair Template ID (string, default: 8d217d80-9dcc-11f1-8c4e-c629b2ba0d44). Optional specific post flair template ID from Subreddit Settings > Post Flair.
+- spotlight_flair_template_id: Spotlight Flair Template ID (string, default: ). Optional specific post flair template ID from Subreddit Settings > Post Flair (auto-discovered if blank).
 - spotlight_comment_template: Spotlight Comment Template (paragraph, default: Community Spotlight: This post has been selected for the community showcase! Thank you u/{author} for sharing.). Sticky comment text placed on approved posts. Supports {author}, {title}, and {subreddit}.
 
 ## Automation Capabilities
@@ -60,13 +60,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.9 — 2026-08-23
+- Standard fleet synchronization and maintenance.
+
 0.0.8 — 2026-08-22
 - Standard fleet synchronization and maintenance.
 
 0.0.7 — 2026-08-22
-- Standard fleet synchronization and maintenance.
-
-0.0.6 — 2026-08-22
 - Standard fleet synchronization and maintenance.
 
 ## Links
