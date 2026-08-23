@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-23T12:01:06.237Z",
+  "generatedAt": "2026-08-23T12:58:49.767Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -55,6 +55,7 @@
       ],
       "settingsCount": 15,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/suspended-remove",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove",
         "github": "https://github.com/grantdb/suspended-remove",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/TERMS.md",
@@ -121,6 +122,7 @@
       ],
       "settingsCount": 14,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/sticky-pro",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/sticky-pro",
         "github": "https://github.com/grantdb/sticky-pro",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/sticky-pro/TERMS.md",
@@ -181,6 +183,7 @@
       ],
       "settingsCount": 9,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/canucknews-bot",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/canucknews-bot",
         "github": "https://github.com/grantdb/canucknews-bot",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/canucknews-bot/TERMS.md",
@@ -191,7 +194,7 @@
         "troubleshooting": "Check the CanuckNews Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "playscraper-bot",
@@ -248,6 +251,7 @@
       ],
       "settingsCount": 10,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/playscraper-bot",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/playscraper-bot",
         "github": "https://github.com/grantdb/playscraper-bot",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/playscraper-bot/TERMS.md",
@@ -258,7 +262,7 @@
         "troubleshooting": "Check the Playscraper Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "screen-shot-bot",
@@ -317,6 +321,7 @@
       ],
       "settingsCount": 7,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/screen-shot-bot",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/screen-shot-bot",
         "github": "https://github.com/grantdb/screen-shot-bot",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/screen-shot-bot/TERMS.md",
@@ -327,7 +332,7 @@
         "troubleshooting": "Check the Screen-Shot Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "post-title-check",
@@ -381,6 +386,7 @@
       "menuItems": [],
       "settingsCount": 12,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/post-title-check",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/post-title-check",
         "github": "https://github.com/grantdb/post-title-check",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/post-title-check/TERMS.md",
@@ -391,7 +397,7 @@
         "troubleshooting": "Check the Post Title Check troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "stargate-trivia",
@@ -440,6 +446,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/stargate-trivia",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/stargate-trivia",
         "github": "https://github.com/grantdb/stargate-trivia",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/stargate-trivia/TERMS.md",
@@ -450,7 +457,7 @@
         "troubleshooting": "Check the Stargate Trivia troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-15"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "canadian-news",
@@ -499,6 +506,7 @@
       ],
       "settingsCount": 1,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/canadian-news",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/canadian-news",
         "github": "https://github.com/grantdb/canadian-news",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/canadian-news/TERMS.md",
@@ -509,7 +517,7 @@
         "troubleshooting": "Check the Canadian News troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "distrofeed-bot",
@@ -561,6 +569,7 @@
       ],
       "settingsCount": 3,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/distrofeed-bot",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/distrofeed-bot",
         "github": "https://github.com/grantdb/distrofeed-bot",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/distrofeed-bot/TERMS.md",
@@ -571,7 +580,7 @@
         "troubleshooting": "Check the DistroFeed Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "linux-quest",
@@ -620,6 +629,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/linux-quest",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest",
         "github": "https://github.com/grantdb/linux-quest",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/linux-quest/TERMS.md",
@@ -630,7 +640,7 @@
         "troubleshooting": "Check the Linux Quest troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-15"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "archive-all-mm",
@@ -682,6 +692,7 @@
       ],
       "settingsCount": 1,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/archive-all-mm",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/archive-all-mm",
         "github": "https://github.com/grantdb/archive-all-mm",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/archive-all-mm/TERMS.md",
@@ -692,7 +703,7 @@
         "troubleshooting": "Check the Archive All MM troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "ring-escape",
@@ -743,6 +754,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/ring-escape",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/ring-escape",
         "github": "https://github.com/grantdb/ring-escape",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/ring-escape/TERMS.md",
@@ -753,7 +765,7 @@
         "troubleshooting": "Check the Ring Escape: Serpent Flagship troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-15"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "app-update-checker",
@@ -809,6 +821,7 @@
       ],
       "settingsCount": 2,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/app-update-checker",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/app-update-checker",
         "github": "https://github.com/grantdb/app-update-checker",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/app-update-checker/TERMS.md",
@@ -819,7 +832,7 @@
         "troubleshooting": "Check the App Update Checker troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "gate-defender",
@@ -866,6 +879,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/gate-defender",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/gate-defender",
         "github": "https://github.com/grantdb/gate-defender",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/gate-defender/TERMS.md",
@@ -876,7 +890,7 @@
         "troubleshooting": "Check the Gate Defender troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-15"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "ai-checker",
@@ -929,6 +943,7 @@
       ],
       "settingsCount": 15,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/ai-checker",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/ai-checker",
         "github": "https://github.com/grantdb/ai-checker",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/ai-checker/TERMS.md",
@@ -939,7 +954,7 @@
         "troubleshooting": "Check the AI Checker troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "mod-snapshot",
@@ -990,6 +1005,7 @@
       ],
       "settingsCount": 1,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/mod-snapshot",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod-snapshot",
         "github": "https://github.com/grantdb/mod-snapshot",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/mod-snapshot/TERMS.md",
@@ -1000,7 +1016,7 @@
         "troubleshooting": "Check the Mod Snapshot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "word-guard",
@@ -1054,6 +1070,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/word-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/word-guard",
         "github": "https://github.com/grantdb/word-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/word-guard/TERMS.md",
@@ -1064,7 +1081,7 @@
         "troubleshooting": "Check the WordGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "sg1-responder",
@@ -1118,6 +1135,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/sg1-responder",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/sg1-responder",
         "github": "https://github.com/grantdb/sg1-responder",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/sg1-responder/TERMS.md",
@@ -1128,7 +1146,7 @@
         "troubleshooting": "Check the SG-1 Responder troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-15"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "domain-guard",
@@ -1182,6 +1200,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/domain-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/domain-guard",
         "github": "https://github.com/grantdb/domain-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/TERMS.md",
@@ -1192,7 +1211,7 @@
         "troubleshooting": "Check the DomainGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "user-guard",
@@ -1246,6 +1265,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/user-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-guard",
         "github": "https://github.com/grantdb/user-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/user-guard/TERMS.md",
@@ -1256,7 +1276,7 @@
         "troubleshooting": "Check the UserGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "filter-guard",
@@ -1310,6 +1330,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/filter-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/filter-guard",
         "github": "https://github.com/grantdb/filter-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/filter-guard/TERMS.md",
@@ -1320,7 +1341,7 @@
         "troubleshooting": "Check the FilterGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "format-guard",
@@ -1374,6 +1395,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/format-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/format-guard",
         "github": "https://github.com/grantdb/format-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/format-guard/TERMS.md",
@@ -1384,7 +1406,7 @@
         "troubleshooting": "Check the FormatGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "comment-guard",
@@ -1436,6 +1458,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/comment-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/comment-guard",
         "github": "https://github.com/grantdb/comment-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/comment-guard/TERMS.md",
@@ -1446,7 +1469,7 @@
         "troubleshooting": "Check the CommentGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "automod-easy",
@@ -1495,6 +1518,7 @@
       "menuItems": [],
       "settingsCount": 3,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/automod-easy",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/automod-easy",
         "github": "https://github.com/grantdb/automod-easy",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/automod-easy/TERMS.md",
@@ -1505,7 +1529,7 @@
         "troubleshooting": "Check the AutoMod Easy troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "pinned-menuboard",
@@ -1554,6 +1578,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/pinned-menuboard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/pinned-menuboard",
         "github": "https://github.com/grantdb/pinned-menuboard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/pinned-menuboard/TERMS.md",
@@ -1564,7 +1589,7 @@
         "troubleshooting": "Check the Pinned Menuboard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "user-board",
@@ -1615,6 +1640,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/user-board",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-board",
         "github": "https://github.com/grantdb/user-board",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/user-board/TERMS.md",
@@ -1625,7 +1651,7 @@
         "troubleshooting": "Check the User Board troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "queue-guard",
@@ -1674,6 +1700,7 @@
       "menuItems": [],
       "settingsCount": 2,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/queue-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/queue-guard",
         "github": "https://github.com/grantdb/queue-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/queue-guard/TERMS.md",
@@ -1684,7 +1711,7 @@
         "troubleshooting": "Check the QueueGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "duplicate-guard",
@@ -1738,6 +1765,7 @@
       ],
       "settingsCount": 15,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/duplicate-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/duplicate-guard",
         "github": "https://github.com/grantdb/duplicate-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/duplicate-guard/TERMS.md",
@@ -1748,7 +1776,7 @@
         "troubleshooting": "Check the Duplicate Guard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "gimmecode-guard",
@@ -1802,6 +1830,7 @@
       ],
       "settingsCount": 7,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/gimmecode-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/gimmecode-guard",
         "github": "https://github.com/grantdb/gimmecode-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/TERMS.md",
@@ -1812,7 +1841,7 @@
         "troubleshooting": "Check the GimmeCode Guard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "action-guard",
@@ -1865,6 +1894,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/action-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/action-guard",
         "github": "https://github.com/grantdb/action-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/action-guard/TERMS.md",
@@ -1875,7 +1905,7 @@
         "troubleshooting": "Check the ActionGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "audit-guard",
@@ -1924,6 +1954,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/audit-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/audit-guard",
         "github": "https://github.com/grantdb/audit-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/audit-guard/TERMS.md",
@@ -1934,7 +1965,7 @@
         "troubleshooting": "Check the AuditGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "flair-guard",
@@ -1986,6 +2017,7 @@
       "menuItems": [],
       "settingsCount": 8,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/flair-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/flair-guard",
         "github": "https://github.com/grantdb/flair-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/flair-guard/TERMS.md",
@@ -1996,7 +2028,7 @@
         "troubleshooting": "Check the FlairGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "guard-hub",
@@ -2047,6 +2079,7 @@
       ],
       "settingsCount": 1,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/guard-hub",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/guard-hub",
         "github": "https://github.com/grantdb/guard-hub",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/guard-hub/TERMS.md",
@@ -2057,7 +2090,7 @@
         "troubleshooting": "Check the Guard Hub troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "link-guard",
@@ -2111,6 +2144,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/link-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/link-guard",
         "github": "https://github.com/grantdb/link-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/link-guard/TERMS.md",
@@ -2121,7 +2155,7 @@
         "troubleshooting": "Check the LinkGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "verify-guard",
@@ -2179,6 +2213,7 @@
       ],
       "settingsCount": 1,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/verify-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/verify-guard",
         "github": "https://github.com/grantdb/verify-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/verify-guard/TERMS.md",
@@ -2189,7 +2224,7 @@
         "troubleshooting": "Check the VerifyGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "rate-guard",
@@ -2243,6 +2278,7 @@
       ],
       "settingsCount": 9,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/rate-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/rate-guard",
         "github": "https://github.com/grantdb/rate-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/rate-guard/TERMS.md",
@@ -2253,7 +2289,7 @@
         "troubleshooting": "Check the RateGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "sgteam-dispatch",
@@ -2302,6 +2338,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/sgteam-dispatch",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/sgteam-dispatch",
         "github": "https://github.com/grantdb/sgteam-dispatch",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/sgteam-dispatch/TERMS.md",
@@ -2312,7 +2349,7 @@
         "troubleshooting": "Check the SG Team Dispatch troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-15"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "chevron-lock",
@@ -2355,6 +2392,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/chevron-lock",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/chevron-lock",
         "github": "https://github.com/grantdb/chevron-lock",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/chevron-lock/TERMS.md",
@@ -2365,7 +2403,7 @@
         "troubleshooting": "Check the Chevron Lock troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-15"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "testrank",
@@ -2414,6 +2452,7 @@
       "menuItems": [],
       "settingsCount": 0,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/testrank",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/testrank",
         "github": "https://github.com/grantdb/testrank",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/testrank/TERMS.md",
@@ -2424,7 +2463,7 @@
         "troubleshooting": "Check the TestRank troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-18"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "reference-reply-bot",
@@ -2473,6 +2512,7 @@
       ],
       "settingsCount": 8,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/reference-reply-bot",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/reference-reply-bot",
         "github": "https://github.com/grantdb/reference-reply-bot",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/reference-reply-bot/TERMS.md",
@@ -2534,6 +2574,7 @@
       ],
       "settingsCount": 5,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/malp-scout",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/malp-scout",
         "github": "https://github.com/grantdb/malp-scout",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/malp-scout/TERMS.md",
@@ -2544,7 +2585,7 @@
         "troubleshooting": "Check the MALP-Scout troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-15"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "archive-guard",
@@ -2594,6 +2635,7 @@
       ],
       "settingsCount": 2,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/archive-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/archive-guard",
         "github": "https://github.com/grantdb/archive-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/archive-guard/TERMS.md",
@@ -2604,7 +2646,7 @@
         "troubleshooting": "Check the Archive-Guard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "wiki-sync-bot",
@@ -2661,6 +2703,7 @@
       ],
       "settingsCount": 2,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/wiki-sync-bot",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-sync-bot",
         "github": "https://github.com/grantdb/wiki-sync-bot",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/wiki-sync-bot/TERMS.md",
@@ -2721,6 +2764,7 @@
       ],
       "settingsCount": 9,
       "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/rescue-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/rescue-guard",
         "github": "https://github.com/grantdb/rescue-guard",
         "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/rescue-guard/TERMS.md",
@@ -2731,7 +2775,7 @@
         "troubleshooting": "Check the RescueGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-22"
+      "lastUpdated": "2026-08-23"
     }
   ]
 }
