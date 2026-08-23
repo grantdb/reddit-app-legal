@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-23T04:31:40.499Z",
+  "generatedAt": "2026-08-23T04:43:54.570Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2633,8 +2633,7 @@
       "setupSteps": [
         "Install: Add WikiSync Bot to your subreddit.",
         "Configure: Open Mod Tools > App Settings > WikiSync Bot.",
-        "Set Target Path: Enter the target wiki page path (e.g. `index/all-apps/wiki-sync-bot-test`).",
-        "Test Write: Open the subreddit menu and click Update Wiki (Manual Test)** to verify the write."
+        "Trigger Sync: Open the subreddit menu and click GuardHub: Sync Wiki Pages Now or GuardHub: Sync Bot Knowledge (Schema)**."
       ],
       "commonIssues": [],
       "troubleshooting": {
