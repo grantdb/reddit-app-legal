@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-23T06:42:17.292Z",
+  "generatedAt": "2026-08-23T09:50:04.974Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -42,7 +42,7 @@
         ]
       },
       "capabilities": {
-        "reddit": false,
+        "reddit": true,
         "redis": true,
         "http": false,
         "scheduler": true,
@@ -67,7 +67,7 @@
         "troubleshooting": "Check the Suspended Remover troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-20"
+      "lastUpdated": "2026-08-23"
     },
     {
       "appId": "sticky-pro",

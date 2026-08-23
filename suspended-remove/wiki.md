@@ -1,7 +1,7 @@
 # Suspended Remover
 
 Category: Security  
-Version: v1.0.80  
+Version: v1.0.81  
 Visibility: Public  
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.
 
@@ -15,6 +15,7 @@ High-precision account purification engine. Fleet-wide security infrastructure.
 - Not documented yet.
 
 ## Permissions Used
+- reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
 - redis: Redis key-value storage (state tracking, caching, strike memory)
 
 ## Triggers and Activation
@@ -69,13 +70,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.81 — 2026-08-23
+- Standard fleet synchronization and maintenance.
+
 1.0.80 — 2026-08-16
 - Fix: Removed duplicate manifest menu declaration in `devvit.json` to resolve double menu trigger in subreddit moderator tools.
 
 1.0.79 — 2026-08-15
-- Standard fleet synchronization and maintenance.
-
-1.0.78 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
