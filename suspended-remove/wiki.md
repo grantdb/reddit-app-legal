@@ -1,4 +1,4 @@
-# Suspended Remover
+# Suspended Remove
 
 Category: Security  
 Version: v1.0.82  

@@ -1,25 +1,23 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-23T11:39:15.304Z",
+  "generatedAt": "2026-08-23T12:01:06.237Z",
   "subreddit": "grantdb",
   "apps": [
     {
       "appId": "suspended-remove",
       "slug": "suspended-remove",
-      "appName": "Suspended Remover",
+      "appName": "Suspended Remove",
       "aliases": [
         "suspended-remove",
-        "suspended remover",
-        "suspendedremove",
-        "suspended remove"
+        "suspended remove",
+        "suspendedremove"
       ],
       "summary": "High-precision account purification engine. Fleet-wide security infrastructure.",
       "keywords": [
         "suspended-remove",
-        "suspended remover",
+        "suspended remove",
         "security",
-        "suspendedremove",
-        "suspended remove"
+        "suspendedremove"
       ],
       "setupSteps": [
         "Install: Add Suspended Remove to your subreddit through the Reddit App Directory.",
@@ -63,8 +61,8 @@
         "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/PRIVACY.md"
       },
       "replyTemplates": {
-        "welcome": "Welcome to r/grantdb support! Here is reference information for Suspended Remover.",
-        "troubleshooting": "Check the Suspended Remover troubleshooting guide or view logs via devvit logs."
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Suspended Remove.",
+        "troubleshooting": "Check the Suspended Remove troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
       "lastUpdated": "2026-08-23"
