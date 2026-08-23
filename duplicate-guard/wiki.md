@@ -1,7 +1,7 @@
 # Duplicate Guard
 
 Category: Moderation  
-Version: v0.0.33  
+Version: v0.0.34  
 Visibility: Unlisted  
 Summary: Moderation app that uses onPostSubmit to detect recent duplicate subject/topic posts.
 
@@ -70,13 +70,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.34 — 2026-08-23
+- Standard fleet synchronization and maintenance.
+
 0.0.33 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 0.0.32 — 2026-08-01
-- Standard fleet synchronization and maintenance.
-
-0.0.31 — 2026-08-01
 - Standard fleet synchronization and maintenance.
 
 ## Links
