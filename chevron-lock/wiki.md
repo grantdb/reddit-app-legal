@@ -1,16 +1,17 @@
-Chevron Lock
-Category: Interactive
-Version: v0.0.10
-Visibility: Unlisted
+# Chevron Lock
+
+Category: Interactive  
+Version: v0.0.10  
+Visibility: Unlisted  
 Summary: Stargate-inspired 7-chevron dialing console puzzle game.
 
-Overview
+## Overview
 Stargate-inspired 7-chevron dialing console puzzle game.
 
-Flowchart
+## Flowchart
 [View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/chevron-lock-flowchart.png)
 
-Key Features
+## Key Features
 - Dynamic Dialing Engine: Encode destination glyphs plus the Point of Origin (Alpha Origin) under strict time pressure across gate sequences scaling from 3 to 7 chevrons.
 - Dynamic Round Types:
 - Recall: Memorize a valid gate address during a brief preview window, then reconstruct it from memory.
@@ -22,52 +23,59 @@ Key Features
 - Redis Leaderboards & Tie-Handling: Subreddit all-time and daily sorted sets with score preservation (no lower-score overwrites) and high-precision timestamp tie-breaking.
 - SGC Dialing Console UI: Dark graphite aesthetics, glowing teal chevrons, telemetry readouts, stability bars, and amber/red alert pulses.
 
-Permissions Used
+## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
 - redis: Redis key-value storage (state tracking, caching, strike memory)
 
-Triggers and Activation
-Event Triggers
+## Triggers and Activation
+### Menu Actions
 - Not documented yet.
 
-Custom Post Types and Entrypoints
+### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
 
-Settings Reference
-App settings are configured via Mod Tools -> App Settings.
+## Settings Reference
+Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-Automation Capabilities
-- Submits Automated Comments: No
-- Attaches Removal Notes: No
-- Approves Content: No
-- Removes or Filters Content: Yes
-- Dispatches Modmail Alerts: No
-- Updates User or Post Flair: No
+- No custom app settings.
 
-Data Storage
-This app utilizes Reddit Redis storage:
+## Automation Capabilities
+- Submits Automated Comments: No — Does not submit automated comments.
+- Attaches Removal Notes: No — Does not attach removal notes.
+- Approves Content: No — Does not approve content.
+- Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
+- Dispatches Modmail Alerts: No — Does not send modmail notifications.
+- Updates User or Post Flair: No — Does not update flair.
+
+## Data Storage
+This app utilizes Reddit Redis storage for state management, caching, and rate limiting.
+
 - Key-Value Strings (deduplication & cooldown markers)
 - Hashes (structured records & alias indices)
 - Sorted Sets (time-series audit logs)
-- Key Patterns: node:http, chevlock:daily
+- Key patterns: node:http, chevlock:daily
 
-Setup and Usage
+## Setup and Usage
 - Install: Add app via Reddit App Directory.
-- Open: Open Mod Tools -> App Settings in your subreddit to configure options.
-- Configure: Set app options as desired.
+- Configure: Open Mod Tools -> App Settings in your subreddit to configure options.
+- Launch: Use mod menu or triggers as configured.
 
-Troubleshooting
+## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
+- Ensure all required app settings and API keys are properly configured in Mod Tools.
 
-Version History
+## Version History
 0.0.10 — 2026-08-15
 - Standard fleet synchronization and maintenance.
+
 0.0.9 — 2026-08-01
 - Standard fleet synchronization and maintenance.
+
 0.0.8 — 2026-08-01
 - Standard fleet synchronization and maintenance.
 
-Links
+## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/chevron-lock/TERMS.md)
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/chevron-lock/PRIVACY.md)
 - [GitHub Repository](https://github.com/grantdb/chevron-lock)
+- [Support](https://www.reddit.com/r/grantdb)

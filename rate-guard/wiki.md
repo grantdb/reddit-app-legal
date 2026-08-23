@@ -1,66 +1,78 @@
-RateGuard
-Category: Moderation
-Version: v0.0.5
-Visibility: Public
+# RateGuard
+
+Category: Moderation  
+Version: v0.0.5  
+Visibility: Public  
 Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 
-Overview
+## Overview
 Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 
-Flowchart
+## Flowchart
 [View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/rate-guard-flowchart.png)
 
-Key Features
+## Key Features
 - Not documented yet.
 
-Permissions Used
+## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
 - redis: Redis key-value storage (state tracking, caching, strike memory)
 
-Triggers and Activation
-Event Triggers
-- PostSubmit: Delivered by Reddit event router to endpoint /internal/trigger/post.
-- PostCreate: Delivered by Reddit event router to endpoint /internal/trigger/post.
+## Triggers and Activation
+### Menu Actions
+- GuardHub: RateGuard Settings: Configure posting frequency limits and cooldowns. (Location: subreddit)
 
-Custom Post Types and Entrypoints
-- None
+## Settings Reference
+Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-Settings Reference
-App settings are configured via Mod Tools -> App Settings.
+- appEnabled: Enable RateGuard (boolean, default: true). Master toggle to enable or pause RateGuard posting frequency limits.
+- appMode: App Enforcement Mode (select, default: dry_run). App Enforcement Mode
+- minGapMinutes: Minimum Gap Cooldown (Minutes) (number, default: 120). Minimum required time between consecutive user submissions (e.g. 120 = 2 hours). 0 = disabled.
+- maxPosts24h: Rolling 24-Hour Post Cap (number, default: 3). Maximum posts allowed per user in a 24-hour rolling window. 0 = disabled.
+- burstMaxPosts: Burst Post Cap (number, default: 3). Maximum posts allowed within the burst window.
+- burstWindowMinutes: Burst Window (Minutes) (number, default: 5). Window size in minutes for burst detection (e.g. 5 minutes).
+- exemptMods: Exempt Subreddit Moderators (boolean, default: true). Exempt subreddit moderators from all rate limits.
+- exemptApproved: Exempt Approved Contributors (boolean, default: true). Exempt approved submitters from all rate limits.
+- exemptFlairs: Exempt Post Flairs (string, default: ). Comma-separated list of post flair names exempt from rate limits (e.g. "Megathread, Announcement").
 
-Automation Capabilities
-- Submits Automated Comments: Yes
-- Attaches Removal Notes: No
-- Approves Content: No
-- Removes or Filters Content: Yes
-- Dispatches Modmail Alerts: No
-- Updates User or Post Flair: No
+## Automation Capabilities
+- Submits Automated Comments: Yes — Posts automated comments on target submissions.
+- Attaches Removal Notes: No — Does not attach removal notes.
+- Approves Content: No — Does not approve content.
+- Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
+- Dispatches Modmail Alerts: No — Does not send modmail notifications.
+- Updates User or Post Flair: No — Does not update flair.
 
-Data Storage
-This app utilizes Reddit Redis storage:
+## Data Storage
+This app utilizes Reddit Redis storage for state management, caching, and rate limiting.
+
 - Key-Value Strings (deduplication & cooldown markers)
 - Hashes (structured records & alias indices)
 - Sorted Sets (time-series audit logs)
 
-Setup and Usage
+## Setup and Usage
 - Install: Add Rate Guard to your subreddit through the Reddit App Directory.
 - Configure: Open Mod Tools > App Settings > Rate Guard.
 - Set Cadence: Configure your minimum time gap, 24-hour rolling cap, and burst limit thresholds.
 - Save: The cadence engine applies immediately to all incoming community posts.
 - No external servers or complicated bot hosting required. Clean, automated rate limiting inside Reddit.*
 
-Troubleshooting
+## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
+- Ensure all required app settings and API keys are properly configured in Mod Tools.
 
-Version History
+## Version History
 0.0.5 — 2026-08-20
 - Standard fleet synchronization and maintenance.
+
 0.0.4 — 2026-08-20
 - Standard fleet synchronization and maintenance.
+
 0.0.3 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
-Links
+## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/rate-guard/TERMS.md)
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/rate-guard/PRIVACY.md)
 - [GitHub Repository](https://github.com/grantdb/rate-guard)
+- [Support](https://www.reddit.com/r/grantdb)
