@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-23T12:58:49.767Z",
+  "generatedAt": "2026-08-24T01:39:31.762Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -1491,7 +1491,7 @@
         "Install: Add AutoMod Easy to your subreddit through the Reddit App Directory.",
         "Open Trainer: Select AutoMod Easy Trainer from Subreddit Mod Tools.",
         "Audit Rules: Review the initial health scorecard of your current AutoMod configuration.",
-        "Experiment: Use the Sandbox Lab to test new rules or generate patterns from spam samples.",
+        "Experiment: Use the Sandbox Lab to test new rules or verify starter templates.",
         "No scary live-testing mistakes. Safe, visual AutoModerator development inside Reddit.*"
       ],
       "commonIssues": [],
@@ -1529,7 +1529,7 @@
         "troubleshooting": "Check the AutoMod Easy troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-24"
     },
     {
       "appId": "pinned-menuboard",

@@ -10,15 +10,15 @@
 
 > **Write, test, and optimize AutoModerator rules in a visual, safe sandbox.**
 
-AutoMod Easy replaces error-prone YAML editing with an interactive rule builder and testing studio. Audit existing rules for safety risks, reverse-engineer filters from sample text, and test rule configurations against dummy posts in a secure sandbox before deploying live.
+AutoMod Easy replaces error-prone YAML editing with an interactive rule builder and testing studio. Audit existing rules for safety risks, test rule configurations against dummy posts in a secure sandbox, draft curated starter templates, and safely deploy changes to your subreddit wiki with automated revision snapshots.
 
 ---
 
 ## At a Glance
 
-- **Visual sandbox simulator**: Test AutoMod YAML against sample submissions without touching live posts.
-- **Rule health audit**: Inspect your active `config/automoderator` page for syntax errors and risk patterns.
-- **Reverse code generator**: Paste a spam sample to automatically generate the exact matching AutoMod rule.
+- **Visual sandbox simulator**: Test AutoMod YAML against sample submissions with accurate word-boundary matching without touching live posts.
+- **Rule health audit**: Inspect your active `config/automoderator` page for syntax errors, missing colons, and risk patterns.
+- **Curated starter pack templates**: Rapidly customize and deploy common filter patterns for profanity, spam links, title tags, and account age gates.
 - **Instant Quick-Ban form**: Ban abusive keywords with one tap from a native moderator form.
 - **Automatic rollback snapshots**: Compare side-by-side diffs and restore previous configurations safely.
 
@@ -29,7 +29,7 @@ AutoMod Easy replaces error-prone YAML editing with an interactive rule builder 
 | Traditional Workflow | With AutoMod Easy |
 | :--- | :--- |
 | Editing live YAML in the Reddit wiki and breaking the queue | **Isolated sandbox environment** validating rules before saving |
-| Guessing how to write complex regex for tricky spam patterns | **Reverse generator** creating clean YAML from sample spam text |
+| Guessing how to write complex regex for tricky spam patterns | **Visual rule builder** generating clean YAML with word-boundary safeguards |
 | Spending hours troubleshooting misplaced indentations | **Real-time syntax and schema linter** highlighting errors visually |
 | Losing working configurations when someone makes an edit | **Automated revision snapshots** with instant one-click restores |
 | Navigating through multiple wiki pages to add a single keyword | **Quick-Ban modal form** adding new filter rules in seconds |
@@ -41,7 +41,7 @@ AutoMod Easy replaces error-prone YAML editing with an interactive rule builder 
 - **Interactive Rule Sandbox**: Experiment with rules against custom sample posts and comments without exposing your subreddit to live testing.
 - **Automated Health Scorecard**: Evaluates active configuration health, flagging missing quotes, unescaped regex characters, and risky wildcards.
 - **Enforceability Advisor**: Loads your community sidebar rules via Reddit API to provide code blueprints and native safety filter tips.
-- **Reverse Rule Generator**: Paste offending submission text to generate clean, optimized AutoMod YAML tailored to that content.
+- **Starter Pack Templates**: Pre-configured, customizable rules for common moderation tasks including banned words, shorteners, title brackets, and age gates.
 - **Configuration Diff & Restore**: Compare current YAML against previous versions with side-by-side visual diffs and one-click rollback.
 - **Native Quick-Ban Form**: Add emergency keyword filters instantly via **AutoMod Easy: Quick Ban Rule** in Subreddit Mod Tools.
 
@@ -54,8 +54,8 @@ AutoMod Easy replaces error-prone YAML editing with an interactive rule builder 
 ### Your Four-Step Workflow
 
 1. **Launch**: Open **AutoMod Easy Trainer** from Subreddit Mod Tools.
-2. **Build**: Draft rules in the visual Sandbox, use the Reverse Generator, or submit a Quick-Ban form.
-3. **Validate**: AutoMod Easy inspects YAML syntax, validates schema keys, and tests logic against sample payloads.
+2. **Build**: Draft rules in the visual Sandbox, customize Starter Templates, or submit a Quick-Ban form.
+3. **Validate**: AutoMod Easy inspects multi-document YAML syntax, validates schema keys, and tests logic against sample payloads.
 4. **Deploy**: Deploy verified rules directly to your subreddit's `config/automoderator` wiki with automated snapshot backup.
 
 ---
@@ -65,7 +65,7 @@ AutoMod Easy replaces error-prone YAML editing with an interactive rule builder 
 1. **Install**: Add **AutoMod Easy** to your subreddit through the Reddit App Directory.
 2. **Open Trainer**: Select **AutoMod Easy Trainer** from Subreddit Mod Tools.
 3. **Audit Rules**: Review the initial health scorecard of your current AutoMod configuration.
-4. **Experiment**: Use the Sandbox Lab to test new rules or generate patterns from spam samples.
+4. **Experiment**: Use the Sandbox Lab to test new rules or verify starter templates.
 
 *No scary live-testing mistakes. Safe, visual AutoModerator development inside Reddit.*
 
@@ -105,4 +105,4 @@ This application is subject to the following legal agreements:
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/automod-easy/PRIVACY.md)
 
 ---
-*Built for Reddit moderators.*
+*Built for Reddit's moderator community.*

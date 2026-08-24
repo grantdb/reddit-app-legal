@@ -1,7 +1,7 @@
 # AutoMod Easy
 
 Category: Moderation  
-Version: v0.0.135  
+Version: v0.0.136  
 Visibility: Public  
 Summary: No-code visual rule builder for AutoModerator. Generates and validates YAML configurations automatically.
 
@@ -51,7 +51,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Install: Add AutoMod Easy to your subreddit through the Reddit App Directory.
 - Open Trainer: Select AutoMod Easy Trainer from Subreddit Mod Tools.
 - Audit Rules: Review the initial health scorecard of your current AutoMod configuration.
-- Experiment: Use the Sandbox Lab to test new rules or generate patterns from spam samples.
+- Experiment: Use the Sandbox Lab to test new rules or verify starter templates.
 - No scary live-testing mistakes. Safe, visual AutoModerator development inside Reddit.*
 
 ## Troubleshooting
@@ -59,13 +59,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.136 — 2026-08-24
+- Standard fleet synchronization and maintenance.
+
 0.0.135 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 0.0.134 — 2026-07-29
-- Standard fleet synchronization and maintenance.
-
-0.0.133 — 2026-07-29
 - Standard fleet synchronization and maintenance.
 
 ## Links
