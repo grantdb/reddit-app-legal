@@ -1,0 +1,222 @@
+{
+  "suspended-remove": {
+    "name": "Suspended Remove",
+    "version": "1.0.82",
+    "visibility": "public"
+  },
+  "sticky-pro": {
+    "name": "Sticky-Pro",
+    "version": "1.0.107",
+    "visibility": "public"
+  },
+  "canucknews-bot": {
+    "name": "CanuckNews Bot",
+    "version": "1.1.40",
+    "visibility": "public"
+  },
+  "playscraper-bot": {
+    "name": "Playscraper Bot",
+    "version": "1.0.136",
+    "visibility": "public"
+  },
+  "screen-shot-bot": {
+    "name": "Screen-Shot Bot",
+    "version": "1.0.77",
+    "visibility": "public"
+  },
+  "post-title-check": {
+    "name": "Post Title Check",
+    "version": "0.0.82",
+    "visibility": "public"
+  },
+  "stargate-trivia": {
+    "name": "Stargate Trivia",
+    "version": "0.0.123",
+    "visibility": "public"
+  },
+  "canadian-news": {
+    "name": "Canadian News",
+    "version": "0.0.55",
+    "visibility": "public"
+  },
+  "distrofeed-bot": {
+    "name": "DistroFeed Bot",
+    "version": "0.1.106",
+    "visibility": "public"
+  },
+  "linux-quest": {
+    "name": "Linux Quest",
+    "version": "0.0.123",
+    "visibility": "public"
+  },
+  "archive-all-mm": {
+    "name": "Archive All MM",
+    "version": "0.0.66",
+    "visibility": "public"
+  },
+  "ring-escape": {
+    "name": "Ring Escape: Serpent Flagship",
+    "version": "0.0.63",
+    "visibility": "unlisted"
+  },
+  "app-update-checker": {
+    "name": "App Update Checker",
+    "version": "0.0.65",
+    "visibility": "unlisted"
+  },
+  "gate-defender": {
+    "name": "Gate Defender",
+    "version": "0.0.98",
+    "visibility": "public"
+  },
+  "ai-checker": {
+    "name": "AI Checker",
+    "version": "0.0.81",
+    "visibility": "public"
+  },
+  "mod-snapshot": {
+    "name": "Mod Snapshot",
+    "version": "0.0.80",
+    "visibility": "public"
+  },
+  "word-guard": {
+    "name": "WordGuard",
+    "version": "0.0.186",
+    "visibility": "public"
+  },
+  "sg1-responder": {
+    "name": "SG-1 Responder",
+    "version": "0.0.61",
+    "visibility": "public"
+  },
+  "domain-guard": {
+    "name": "DomainGuard",
+    "version": "0.0.147",
+    "visibility": "public"
+  },
+  "user-guard": {
+    "name": "UserGuard",
+    "version": "0.0.70",
+    "visibility": "public"
+  },
+  "filter-guard": {
+    "name": "FilterGuard",
+    "version": "0.0.76",
+    "visibility": "unlisted"
+  },
+  "format-guard": {
+    "name": "FormatGuard",
+    "version": "0.0.63",
+    "visibility": "unlisted"
+  },
+  "comment-guard": {
+    "name": "CommentGuard",
+    "version": "0.0.49",
+    "visibility": "unlisted"
+  },
+  "automod-easy": {
+    "name": "AutoMod Easy",
+    "version": "0.0.136",
+    "visibility": "public"
+  },
+  "pinned-menuboard": {
+    "name": "Pinned Menuboard",
+    "version": "0.0.61",
+    "visibility": "public"
+  },
+  "user-board": {
+    "name": "User Board",
+    "version": "0.0.33",
+    "visibility": "public"
+  },
+  "queue-guard": {
+    "name": "QueueGuard",
+    "version": "0.0.40",
+    "visibility": "unlisted"
+  },
+  "duplicate-guard": {
+    "name": "Duplicate Guard",
+    "version": "0.0.35",
+    "visibility": "unlisted"
+  },
+  "gimmecode-guard": {
+    "name": "GimmeCode Guard",
+    "version": "0.0.34",
+    "visibility": "unlisted"
+  },
+  "action-guard": {
+    "name": "ActionGuard",
+    "version": "0.0.24",
+    "visibility": "unlisted"
+  },
+  "audit-guard": {
+    "name": "AuditGuard",
+    "version": "0.0.15",
+    "visibility": "unlisted"
+  },
+  "flair-guard": {
+    "name": "FlairGuard",
+    "version": "0.0.13",
+    "visibility": "unlisted"
+  },
+  "guard-hub": {
+    "name": "Guard Hub",
+    "version": "0.0.12",
+    "visibility": "unlisted"
+  },
+  "link-guard": {
+    "name": "LinkGuard",
+    "version": "0.0.13",
+    "visibility": "public"
+  },
+  "verify-guard": {
+    "name": "VerifyGuard",
+    "version": "0.0.4",
+    "visibility": "public"
+  },
+  "rate-guard": {
+    "name": "RateGuard",
+    "version": "0.0.4",
+    "visibility": "public"
+  },
+  "sgteam-dispatch": {
+    "name": "SG Team Dispatch",
+    "version": "0.0.4",
+    "visibility": "unlisted"
+  },
+  "chevron-lock": {
+    "name": "Chevron Lock",
+    "version": "0.0.10",
+    "visibility": "unlisted"
+  },
+  "testrank": {
+    "name": "TestRank",
+    "version": "0.0.14",
+    "visibility": "unlisted"
+  },
+  "reference-reply-bot": {
+    "name": "Reference Reply Bot",
+    "version": "0.0.25",
+    "visibility": "unlisted"
+  },
+  "malp-scout": {
+    "name": "MALP-Scout",
+    "version": "0.0.17",
+    "visibility": "unlisted"
+  },
+  "archive-guard": {
+    "name": "Archive-Guard",
+    "version": "0.0.2",
+    "visibility": "unlisted"
+  },
+  "wiki-sync-bot": {
+    "name": "WikiSync Bot",
+    "version": "0.0.20",
+    "visibility": "unlisted"
+  },
+  "rescue-guard": {
+    "name": "RescueGuard",
+    "version": "0.0.11",
+    "visibility": "unlisted"
+  }
+}
