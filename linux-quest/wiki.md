@@ -1,7 +1,7 @@
 # Linux Quest
 
 Category: Community  
-Version: v0.0.122  
+Version: v0.0.123  
 Visibility: Public  
 Summary: Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.
 
@@ -58,14 +58,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.123 — 2026-08-25
+- Standard fleet synchronization and maintenance.
+
 0.0.122 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 0.0.121 — 2026-07-27
 - Verification & Sync: Standardized server error status code handling and Redis ZSET leaderboard query performance.
-
-0.0.120 — 2026-07-24
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/linux-quest/TERMS.md)
