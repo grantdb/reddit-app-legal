@@ -1,7 +1,7 @@
 # Canadian News
 
 Category: News  
-Version: v0.0.54  
+Version: v0.0.55  
 Visibility: Public  
 Summary: Regional Canadian news aggregator. Refactored to include political news as an optional subject.
 
@@ -47,7 +47,6 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 This app utilizes Reddit Redis storage for state management, caching, and rate limiting.
 
 - Key-Value Strings (deduplication & cooldown markers)
-- Key patterns: canadian-news:scouted
 
 ## Setup and Usage
 - Install: Add Canadian News App to your subreddit via the App Directory.
@@ -58,13 +57,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.55 — 2026-08-25
+- Standard fleet synchronization and maintenance.
+
 0.0.54 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 0.0.53 — 2026-08-09
-- Standard fleet synchronization and maintenance.
-
-0.0.52 — 2026-08-08
 - Standard fleet synchronization and maintenance.
 
 ## Links
