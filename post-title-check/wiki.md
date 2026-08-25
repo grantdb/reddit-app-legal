@@ -1,7 +1,7 @@
 # Post Title Check
 
 Category: Validation  
-Version: v0.0.81  
+Version: v0.0.82  
 Visibility: Public  
 Summary: Real-time title validation against community guidelines. Now with support for customizable removal reasons per rule.
 
@@ -36,7 +36,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - removalCommentTemplate: Removal Comment Template (string, default: {preamble}
 
 **Reason:** {reason}). Full template for the removal comment. Use {preamble} for the global preamble and {reason} for the specific rule reason. Markdown is supported.
-- minWordCount: Minimum Word Count (number, default: 3). Posts whose titles have fewer words than this will be removed.
+- minWordCount: Minimum Word Count (number, default: 3). Posts whose titles have fewer words than this will be removed. Set to 0 to disable minimum word count checking.
 - reasonMinWordCount: Custom Removal Reason (paragraph, default: Your title is too short (minimum {minWordCount} words required). Please use more words so the post is descriptive enough for other users.). The reason appended to the removal comment when this rule is violated. Use {minWordCount} for required word count.
 - bannedPhrases: Banned Phrases (comma-separated) (string, default: ). A comma-separated list of phrases. Any post title containing one of these phrases will be removed. Case-insensitive. Single words are matched as whole words only (e.g. "SYN" will NOT match "SYNWAVE"). Multi-word phrases are matched anywhere in the title.
 - reasonBannedPhrases: Custom Removal Reason (paragraph, default: Your title contains a banned phrase: "{phrase}". Please rewrite your title without this phrase.). The reason appended to the removal comment when this rule is violated. Use {phrase} to inject the matched phrase.
@@ -71,13 +71,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.82 — 2026-08-25
+- Standard fleet synchronization and maintenance.
+
 0.0.81 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 0.0.80 — 2026-08-15
-- Standard fleet synchronization and maintenance.
-
-0.0.79 — 2026-08-11
 - Standard fleet synchronization and maintenance.
 
 ## Links
