@@ -1,7 +1,7 @@
 # RescueGuard
 
 Category: Moderation  
-Version: v0.0.10  
+Version: v0.0.11  
 Visibility: Unlisted  
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.
 
@@ -60,13 +60,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.11 — 2026-08-25
+- Standard fleet synchronization and maintenance.
+
 0.0.10 — 2026-08-23
 - Standard fleet synchronization and maintenance.
 
 0.0.9 — 2026-08-23
-- Standard fleet synchronization and maintenance.
-
-0.0.8 — 2026-08-22
 - Standard fleet synchronization and maintenance.
 
 ## Links
