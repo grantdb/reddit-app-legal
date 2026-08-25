@@ -1,7 +1,7 @@
 <h1>GimmeCode Guard</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.32<br>
+Version: v0.0.33<br>
 Visibility: Unlisted<br>
 Summary: Detects low-effort give me code requests</p>
 
@@ -34,6 +34,7 @@ Summary: Detects low-effort give me code requests</p>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
 <ul>
 <li>exemptModsAndApproved: Exempt Moderators and Approved Users (-5 points) (boolean, default: true). Exempt Moderators and Approved Users (-5 points)</li>
+<li>exemptPostAuthor: Exempt Submission Author (OP) in their own thread (boolean, default: true). When enabled, the author of the post will never be scored or flagged when commenting in their own submission.</li>
 <li>useDefaultPhrases: Use Default Phrases (e.g. "code please", "send source") (boolean, default: true). Use Default Phrases (e.g. "code please", "send source")</li>
 <li>customPhrases: Custom Phrases (comma-separated) (string, default: ). Custom Phrases (comma-separated)</li>
 <li>warnThreshold: Tier 1: Warning Auto-Reply Threshold - Cumulative Points (0 to disable) (number, default: 30). Posts an automated polite warning reply to the user once their cumulative low-effort score reaches this value (default: 30).</li>
@@ -75,11 +76,11 @@ Summary: Detects low-effort give me code requests</p>
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.33 — 2026-08-25<br>
+Standard fleet synchronization and maintenance.</p>
 <p>0.0.32 — 2026-08-23<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.31 — 2026-08-23<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.30 — 2026-08-15<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>

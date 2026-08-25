@@ -1,7 +1,7 @@
 # GimmeCode Guard
 
 Category: Moderation  
-Version: v0.0.32  
+Version: v0.0.33  
 Visibility: Unlisted  
 Summary: Detects low-effort give me code requests
 
@@ -30,6 +30,7 @@ Detects low-effort give me code requests
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
 - exemptModsAndApproved: Exempt Moderators and Approved Users (-5 points) (boolean, default: true). Exempt Moderators and Approved Users (-5 points)
+- exemptPostAuthor: Exempt Submission Author (OP) in their own thread (boolean, default: true). When enabled, the author of the post will never be scored or flagged when commenting in their own submission.
 - useDefaultPhrases: Use Default Phrases (e.g. "code please", "send source") (boolean, default: true). Use Default Phrases (e.g. "code please", "send source")
 - customPhrases: Custom Phrases (comma-separated) (string, default: ). Custom Phrases (comma-separated)
 - warnThreshold: Tier 1: Warning Auto-Reply Threshold - Cumulative Points (0 to disable) (number, default: 30). Posts an automated polite warning reply to the user once their cumulative low-effort score reaches this value (default: 30).
@@ -63,13 +64,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.33 — 2026-08-25
+- Standard fleet synchronization and maintenance.
+
 0.0.32 — 2026-08-23
 - Standard fleet synchronization and maintenance.
 
 0.0.31 — 2026-08-23
-- Standard fleet synchronization and maintenance.
-
-0.0.30 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
