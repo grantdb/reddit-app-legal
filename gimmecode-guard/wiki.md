@@ -1,7 +1,7 @@
 # GimmeCode Guard
 
 Category: Moderation  
-Version: v0.0.33  
+Version: v0.0.34  
 Visibility: Unlisted  
 Summary: Detects low-effort give me code requests
 
@@ -22,6 +22,8 @@ Detects low-effort give me code requests
 ### Menu Actions
 - Check User GimmeCode History: Moderator menu action (Location: comment)
 - View GimmeCode Audit Logs: Moderator menu action (Location: subreddit)
+- GimmeCode: Reset User Scores Database: Wipe all user strikes, scores, and audit flags for this subreddit (Location: subreddit)
+- GimmeCode: Default Settings Guide: View recommended defaults and settings guide (Location: subreddit)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
@@ -64,13 +66,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.34 — 2026-08-25
+- Standard fleet synchronization and maintenance.
+
 0.0.33 — 2026-08-25
 - Standard fleet synchronization and maintenance.
 
 0.0.32 — 2026-08-23
-- Standard fleet synchronization and maintenance.
-
-0.0.31 — 2026-08-23
 - Standard fleet synchronization and maintenance.
 
 ## Links
