@@ -1,7 +1,7 @@
 # CanuckNews Bot
 
 Category: News  
-Version: v1.1.39  
+Version: v1.1.40  
 Visibility: Public  
 Summary: Regional Canadian news aggregation with moderator triggers.
 
@@ -56,7 +56,6 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 This app utilizes Reddit Redis storage for state management, caching, and rate limiting.
 
 - Key-Value Strings (deduplication & cooldown markers)
-- Key patterns: canucknews:scouted
 
 ## Setup and Usage
 - Install: Add Canuck News Bot to your subreddit via the App Directory.
@@ -68,13 +67,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.1.40 — 2026-08-25
+- Standard fleet synchronization and maintenance.
+
 1.1.39 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 1.1.38 — 2026-08-09
-- Standard fleet synchronization and maintenance.
-
-1.1.37 — 2026-08-08
 - Standard fleet synchronization and maintenance.
 
 ## Links

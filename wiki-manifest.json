@@ -7,7 +7,7 @@
   "audit-guard": "da631ae69b607dff",
   "automod-easy": "a0650630e76e985c",
   "canadian-news": "a54f52fd62592e27",
-  "canucknews-bot": "9b5afc58c40a5cd2",
+  "canucknews-bot": "03c3f79e557bbc98",
   "chevron-lock": "73a608697ae591e1",
   "comment-guard": "6707033006806a14",
   "distrofeed-bot": "6ac858f3a5922e53",
@@ -43,5 +43,5 @@
   "verify-guard": "b17a0bc38c9c4b1e",
   "wiki-sync-bot": "6dcdffa7f5196c9f",
   "word-guard": "4db5c055eb2299fa",
-  "bot_knowledge": "e0ef791c6e6b06c0"
+  "bot_knowledge": "6807ef45d52d8dba"
 }
