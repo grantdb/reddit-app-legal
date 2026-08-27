@@ -176,7 +176,7 @@
   },
   "rate-guard": {
     "name": "RateGuard",
-    "version": "0.0.4",
+    "version": "0.0.6",
     "visibility": "public"
   },
   "sgteam-dispatch": {
@@ -201,7 +201,7 @@
   },
   "malp-scout": {
     "name": "MALP-Scout",
-    "version": "0.0.17",
+    "version": "0.0.18",
     "visibility": "unlisted"
   },
   "archive-guard": {
