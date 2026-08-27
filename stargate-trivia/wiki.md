@@ -1,7 +1,7 @@
 # Stargate Trivia
 
 Category: Interactive  
-Version: v0.0.123  
+Version: v0.0.124  
 Visibility: Public  
 Summary: Interactive trivia engine with rich UI and global leaderboards.
 
@@ -49,22 +49,22 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key patterns: node:http, node:events
 
 ## Setup and Usage
-- Install: Add Stargate Trivia to your subreddit via the App Directory.
-- App Settings: Open your subreddit's App Settings for Stargate Trivia to configure the number of questions per round or difficulty scaling.
-- Usage: To start a community event, simply open the Mod Menu anywhere in your subreddit and select the "Launch Trivia Event" action.
+- Install: Add Stargate Trivia to your subreddit via the Reddit App Directory.
+- Launch Event: Open the Mod Menu on your subreddit and select Create Stargate Trivia Post.
+- Autonomous Execution: The interactive game post will automatically handle player sessions, answer validation, and score tracking with zero ongoing maintenance.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.124 — 2026-08-27
+- Standard fleet synchronization and maintenance.
+
+0.0.124 — 2026-08-27
+- Standard fleet synchronization and maintenance.
+
 0.0.123 — 2026-08-15
-- Standard fleet synchronization and maintenance.
-
-0.0.122 — 2026-07-24
-- Standard fleet synchronization and maintenance.
-
-0.0.121 — 2026-07-22
 - Standard fleet synchronization and maintenance.
 
 ## Links

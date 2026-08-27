@@ -18,16 +18,16 @@
 
 ## How It Works
 
-1. A moderator launches a new Stargate Trivia event directly from their Mod Menu.
-2. A customized interactive post is generated in the subreddit.
-3. Users tap into the post to begin the trivia gauntlet.
-4. When a player answers incorrectly and their game ends, their final score is automatically tallied and added to the post's live leaderboard.
+1. A moderator launches a new Stargate Trivia event directly from the subreddit Mod Menu (**Create Stargate Trivia Post**).
+2. A customized interactive post is generated and pinned in the subreddit feed.
+3. Users tap into the post to launch the expanded 10-question trivia gauntlet.
+4. Correct answers award points (+100 each). Upon completing the round, the player's final score is verified and saved to the post's live persistent leaderboard.
 
 ## Setup & Configuration
 
-1. **Install**: Add **Stargate Trivia** to your subreddit via the App Directory.
-2. **App Settings**: Open your subreddit's App Settings for Stargate Trivia to configure the number of questions per round or difficulty scaling.
-3. **Usage**: To start a community event, simply open the Mod Menu anywhere in your subreddit and select the "Launch Trivia Event" action.
+1. **Install**: Add **Stargate Trivia** to your subreddit via the Reddit App Directory.
+2. **Launch Event**: Open the Mod Menu on your subreddit and select **Create Stargate Trivia Post**.
+3. **Autonomous Execution**: The interactive game post will automatically handle player sessions, answer validation, and score tracking with zero ongoing maintenance.
 
 ## Support
 
