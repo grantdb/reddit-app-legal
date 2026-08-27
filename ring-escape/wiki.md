@@ -8,9 +8,6 @@ Summary: Stealth infiltration game. Sabotage four systems aboard a Serpent Empir
 ## Overview
 Stealth infiltration game. Sabotage four systems aboard a Serpent Empire warship and escape through the rings.
 
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ring-escape-flowchart.png)
-
 ## Key Features
 - Stealth & Sabotage Mechanics: Deep gameplay loop requiring players to navigate a multi-level ship, stun guards tactically, and sabotage critical systems to unlock the extraction point.
 - Multi-Level Progression: Escalating challenges across multiple distinct levels, ensuring players remain engaged over long play sessions.

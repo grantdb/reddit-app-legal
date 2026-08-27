@@ -8,9 +8,6 @@ Summary: Replayable Stargate SG-1 inspired tactical mission command game.
 ## Overview
 Replayable Stargate SG-1 inspired tactical mission command game.
 
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sgteam-dispatch-flowchart.png)
-
 ## Key Features
 - Tactical SG Team Roster Selection: Assemble specialized 4-member SG teams (Commander, Archaeologist, Engineer, Heavy Specialist, Tactical Specialist) with unique stat bonuses and role synergies.
 - Dynamic Offworld Encounters: Multi-phase tactical missions (Opener, Mid-Game, Extraction) with branching risk choices influenced by biome, threat levels, and team role perks.

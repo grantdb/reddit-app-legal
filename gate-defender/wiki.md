@@ -8,9 +8,6 @@ Summary: Community security gatekeeper. React Webview-based entry validation.
 ## Overview
 Community security gatekeeper. React Webview-based entry validation.
 
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/gate-defender-flowchart.png)
-
 ## Key Features
 - High-Velocity Survival Mechanics: Fast-paced, responsive arcade gameplay that relies on quick reflexes and pattern recognition.
 - Persistent Global Leaderboards: Features a real-time "Top 10" ranking system embedded directly in the post to encourage recurring community engagement and rivalry.

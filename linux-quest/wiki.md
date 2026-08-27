@@ -8,9 +8,6 @@ Summary: Industrial OS simulator. Refactored architecture for direct webview ren
 ## Overview
 Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.
 
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/linux-quest-flowchart.png)
-
 ## Key Features
 - Context-Aware Scenarios: Features engaging, interactive simulations covering common issues like installations, hardware compatibility, and terminal troubleshooting.
 - Support Readiness Brief: Upon completing the quest, the game generates a formatted, shareable summary including the user's system context and attempted fixes, ready to be pasted into a real support thread.

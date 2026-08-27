@@ -8,9 +8,6 @@ Summary: Stargate-inspired 7-chevron dialing console puzzle game.
 ## Overview
 Stargate-inspired 7-chevron dialing console puzzle game.
 
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/chevron-lock-flowchart.png)
-
 ## Key Features
 - Dynamic Dialing Engine: Encode destination glyphs plus the Point of Origin (Alpha Origin) under strict time pressure across gate sequences scaling from 3 to 7 chevrons.
 - Dynamic Round Types:
