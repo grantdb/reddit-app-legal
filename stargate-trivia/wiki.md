@@ -8,9 +8,6 @@ Summary: Interactive trivia engine with rich UI and global leaderboards.
 ## Overview
 Interactive trivia engine with rich UI and global leaderboards.
 
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/stargate-trivia-flowchart.png)
-
 ## Key Features
 - Curated Content: Features a proprietary library of unique, canonical trivia questions ensuring that hardcore fans are challenged.
 - Persistent Leaderboards: Encourages long-term community engagement by tracking high scores and milestones directly on the event post.
@@ -59,12 +56,12 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Version History
 0.0.124 — 2026-08-27
-- Standard fleet synchronization and maintenance.
-
-0.0.124 — 2026-08-27
-- Standard fleet synchronization and maintenance.
+- Added custom cybernetic app icon, structured lifecycle logging, and runtime moderator security validation. Updated baseline to Devvit 0.14.1.
 
 0.0.123 — 2026-08-15
+- Standard fleet synchronization and maintenance.
+
+0.0.122 — 2026-07-24
 - Standard fleet synchronization and maintenance.
 
 ## Links
