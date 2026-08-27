@@ -1,7 +1,7 @@
 # RateGuard
 
 Category: Moderation  
-Version: v0.0.5  
+Version: v0.0.6  
 Visibility: Public  
 Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 
@@ -22,12 +22,16 @@ Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 ### Menu Actions
 - GuardHub: RateGuard Settings: Configure posting frequency limits and cooldowns. (Location: subreddit)
 
+### Custom Post Types and Entrypoints
+- Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/server/index.ts)
+
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
 - appEnabled: Enable RateGuard (boolean, default: true). Master toggle to enable or pause RateGuard posting frequency limits.
 - appMode: App Enforcement Mode (select, default: dry_run). App Enforcement Mode
-- minGapMinutes: Minimum Gap Cooldown (Minutes) (number, default: 120). Minimum required time between consecutive user submissions (e.g. 120 = 2 hours). 0 = disabled.
+- minGapDays: Time Between Posts (Days) (number, default: 0). Minimum required days between consecutive user submissions (e.g. 2 = user can only post once every 2 days). Set to 0 if using minutes cooldown below.
+- minGapMinutes: Minimum Gap Cooldown (Minutes) (number, default: 120). Minimum required time in minutes between consecutive user submissions (e.g. 120 = 2 hours, 1440 = 1 day, 2880 = 2 days). 0 = disabled.
 - maxPosts24h: Rolling 24-Hour Post Cap (number, default: 3). Maximum posts allowed per user in a 24-hour rolling window. 0 = disabled.
 - burstMaxPosts: Burst Post Cap (number, default: 3). Maximum posts allowed within the burst window.
 - burstWindowMinutes: Burst Window (Minutes) (number, default: 5). Window size in minutes for burst detection (e.g. 5 minutes).
@@ -53,7 +57,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 ## Setup and Usage
 - Install: Add Rate Guard to your subreddit through the Reddit App Directory.
 - Configure: Open Mod Tools > App Settings > Rate Guard.
-- Set Cadence: Configure your minimum time gap, 24-hour rolling cap, and burst limit thresholds.
+- Set Cadence: Configure your time between posts (in days or minutes), 24-hour rolling cap, and burst limit thresholds.
 - Save: The cadence engine applies immediately to all incoming community posts.
 - No external servers or complicated bot hosting required. Clean, automated rate limiting inside Reddit.*
 
@@ -62,13 +66,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.6 — 2026-08-27
+- Add minGapDays multi-day cooldown and fix blocks manifest
+
 0.0.5 — 2026-08-20
 - Standard fleet synchronization and maintenance.
 
 0.0.4 — 2026-08-20
-- Standard fleet synchronization and maintenance.
-
-0.0.3 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links

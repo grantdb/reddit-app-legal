@@ -16,10 +16,10 @@ Rate Guard protects your subreddit feed from rapid-fire spam floods, karma farmi
 
 ## At a Glance
 
-- **Enforce cooldown gaps**: Require minimum time spacing (e.g. 2 hours) between consecutive submissions.
+- **Multi-day cooldowns & gap limits**: Enforce custom days (e.g. 2 days) or minutes between consecutive user submissions.
 - **Set daily post caps**: Limit the total number of posts a user can submit per 24-hour window.
 - **Stop burst attacks**: Detect and mitigate rapid multi-post bursts (e.g. 3 posts in 5 minutes).
-- **Exact time guidance**: Automatically inform users of their exact next allowed submission time.
+- **Exact time guidance**: Automatically inform users of their exact next allowed submission time (formatted in days/hours).
 - **Granular exemptions**: Protect moderators, approved contributors, and specific post flairs automatically.
 
 ---
@@ -64,7 +64,7 @@ Rate Guard protects your subreddit feed from rapid-fire spam floods, karma farmi
 
 1. **Install**: Add **Rate Guard** to your subreddit through the Reddit App Directory.
 2. **Configure**: Open **Mod Tools > App Settings > Rate Guard**.
-3. **Set Cadence**: Configure your minimum time gap, 24-hour rolling cap, and burst limit thresholds.
+3. **Set Cadence**: Configure your time between posts (in days or minutes), 24-hour rolling cap, and burst limit thresholds.
 4. **Save**: The cadence engine applies immediately to all incoming community posts.
 
 *No external servers or complicated bot hosting required. Clean, automated rate limiting inside Reddit.*

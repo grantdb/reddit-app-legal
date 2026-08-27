@@ -27,7 +27,7 @@
   "playscraper-bot": "f10629e5821d3fe0",
   "post-title-check": "ff4eaefece070b6a",
   "queue-guard": "373ccfe6680cf5a6",
-  "rate-guard": "b43be51d8d2a7622",
+  "rate-guard": "171a6f0e8e06f701",
   "reference-reply-bot": "bbefb2d5d051e3a4",
   "rescue-guard": "a8a82a97f10da34b",
   "ring-escape": "48998a5f2db1b4a5",
@@ -43,5 +43,5 @@
   "verify-guard": "b17a0bc38c9c4b1e",
   "wiki-sync-bot": "06cfc46e968a91d1",
   "word-guard": "4db5c055eb2299fa",
-  "bot_knowledge": "9243f487cc17a2a6"
+  "bot_knowledge": "e288f147cda98c45"
 }

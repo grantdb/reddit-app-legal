@@ -1,7 +1,7 @@
 <h1>RateGuard</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.5<br>
+Version: v0.0.6<br>
 Visibility: Public<br>
 Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.</p>
 
@@ -20,20 +20,23 @@ Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 <h2>Triggers and Activation</h2>
 <h3>Event Triggers</h3>
 <ul>
-<li>PostSubmit: Delivered by Reddit event router to endpoint /internal/trigger/post.</li>
-<li>PostCreate: Delivered by Reddit event router to endpoint /internal/trigger/post.</li>
+<li>PostSubmit: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostSubmit' }).</li>
+<li>PostCreate: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostCreate' }).</li>
 </ul>
 <h3>Menu Actions</h3>
 <ul>
 <li>GuardHub: RateGuard Settings: Configure posting frequency limits and cooldowns. (Location: subreddit)</li>
 </ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/server/index.ts</p>
 
 <h2>Settings Reference</h2>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
 <ul>
 <li>appEnabled: Enable RateGuard (boolean, default: true). Master toggle to enable or pause RateGuard posting frequency limits.</li>
 <li>appMode: App Enforcement Mode (select, default: dry_run). App Enforcement Mode</li>
-<li>minGapMinutes: Minimum Gap Cooldown (Minutes) (number, default: 120). Minimum required time between consecutive user submissions (e.g. 120 = 2 hours). 0 = disabled.</li>
+<li>minGapDays: Time Between Posts (Days) (number, default: 0). Minimum required days between consecutive user submissions (e.g. 2 = user can only post once every 2 days). Set to 0 if using minutes cooldown below.</li>
+<li>minGapMinutes: Minimum Gap Cooldown (Minutes) (number, default: 120). Minimum required time in minutes between consecutive user submissions (e.g. 120 = 2 hours, 1440 = 1 day, 2880 = 2 days). 0 = disabled.</li>
 <li>maxPosts24h: Rolling 24-Hour Post Cap (number, default: 3). Maximum posts allowed per user in a 24-hour rolling window. 0 = disabled.</li>
 <li>burstMaxPosts: Burst Post Cap (number, default: 3). Maximum posts allowed within the burst window.</li>
 <li>burstWindowMinutes: Burst Window (Minutes) (number, default: 5). Window size in minutes for burst detection (e.g. 5 minutes).</li>
@@ -64,7 +67,7 @@ Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 <ul>
 <li>Install: Add Rate Guard to your subreddit through the Reddit App Directory.</li>
 <li>Configure: Open Mod Tools > App Settings > Rate Guard.</li>
-<li>Set Cadence: Configure your minimum time gap, 24-hour rolling cap, and burst limit thresholds.</li>
+<li>Set Cadence: Configure your time between posts (in days or minutes), 24-hour rolling cap, and burst limit thresholds.</li>
 <li>Save: The cadence engine applies immediately to all incoming community posts.</li>
 <li>No external servers or complicated bot hosting required. Clean, automated rate limiting inside Reddit.*</li>
 </ul>
@@ -76,11 +79,11 @@ Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.6 — 2026-08-27<br>
+Add minGapDays multi-day cooldown and fix blocks manifest</p>
 <p>0.0.5 — 2026-08-20<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.4 — 2026-08-20<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.3 — 2026-08-15<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>

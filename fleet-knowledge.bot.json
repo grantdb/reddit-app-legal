@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-25T06:58:46.847Z",
+  "generatedAt": "2026-08-27T04:54:36.612Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2247,7 +2247,7 @@
       "setupSteps": [
         "Install: Add Rate Guard to your subreddit through the Reddit App Directory.",
         "Configure: Open Mod Tools > App Settings > Rate Guard.",
-        "Set Cadence: Configure your minimum time gap, 24-hour rolling cap, and burst limit thresholds.",
+        "Set Cadence: Configure your time between posts (in days or minutes), 24-hour rolling cap, and burst limit thresholds.",
         "Save: The cadence engine applies immediately to all incoming community posts.",
         "No external servers or complicated bot hosting required. Clean, automated rate limiting inside Reddit.*"
       ],
@@ -2269,7 +2269,7 @@
         "redis": true,
         "http": false,
         "scheduler": false,
-        "customPost": false
+        "customPost": true
       },
       "triggers": [
         "PostSubmit",
@@ -2278,7 +2278,7 @@
       "menuItems": [
         "GuardHub: RateGuard Settings"
       ],
-      "settingsCount": 9,
+      "settingsCount": 10,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/rate-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/rate-guard",
@@ -2291,7 +2291,7 @@
         "troubleshooting": "Check the RateGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-27"
     },
     {
       "appId": "sgteam-dispatch",
