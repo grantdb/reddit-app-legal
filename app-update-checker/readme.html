@@ -5,52 +5,53 @@
 <p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
 <p><a href="https://img.shields.io/badge/Category-Infrastructure-blue?style=for-the-badge">Category</a></p>
 <p><a href="https://img.shields.io/badge/Type-Monitoring-8A2BE2?style=for-the-badge">Type</a></p>
-<blockquote><p><strong>Track installed app versions, discover releases, and receive automated modmail update alerts.</strong></p></blockquote>
-<p>App Update Checker ensures your subreddit's Devvit tools remain secure and up-to-date. Automatically discovering installed apps and checking them against a continuously-updated snapshot of the Reddit App Directory, it delivers clean, consolidated upgrade summaries straight to your modmail.</p>
+<blockquote><p><strong>Track installed app versions, discover new releases, and receive automated modmail update alerts for any subreddit.</strong></p></blockquote>
+<p>App Update Checker ensures your subreddit's Devvit tools and moderation bots remain secure and up-to-date. By automatically discovering installed applications, establishing baseline versions on install, and running silent daily checks against the Reddit App Directory, it keeps your mod team informed whenever an update is published.</p>
 <p>---</p>
 <h2>At a Glance</h2>
 <ul>
-<li><strong>Automated version audits</strong>: Discover installed apps and check for new releases automatically.</li>
-<li><strong>Modmail upgrade alerts</strong>: Receive formatted summary tables in modmail highlighting pending updates.</li>
-<li><strong>Authoritative version data</strong>: Cross-reference against a directly-scraped snapshot of the Reddit App Directory, with npm/GitHub fallbacks for unlisted apps.</li>
-<li><strong>On-demand menu checks</strong>: Trigger an instant update scan anytime from the subreddit overflow menu.</li>
-<li><strong>Redis-cached lookups</strong>: The version snapshot is cached per-check to avoid redundant network calls.</li>
+<li><strong>Automated zero-config setup</strong>: Discovers installed apps and establishes your starting baseline automatically upon installation.</li>
+<li><strong>Silent daily audits</strong>: Runs a lightweight background check every day at 12:00 UTC with zero modmail spam—alerts are sent only when a new update is released.</li>
+<li><strong>Modmail upgrade alerts</strong>: Delivers high-contrast summary tables with direct links to update pages on the Reddit App Directory.</li>
+<li><strong>Universal directory support</strong>: Cross-references against 150+ public apps in the Reddit App Directory and official developer manifests.</li>
+<li><strong>On-demand moderator tools</strong>: Trigger an instant update scan or sync baselines anytime from the subreddit overflow menu (`...`).</li>
 </ul>
 <p>---</p>
 <h2>The Old Way vs. The App Update Checker Way</h2>
 <p>---</p>
-<h2>Built for Seamless App Maintenance</h2>
+<h2>Built for Seamless Community Maintenance</h2>
 <ul>
-<li><strong>Automated App Discovery</strong>: Identifies installed Devvit applications by matching moderator accounts exactly against the Reddit App Directory, with a heuristic fallback for unlisted apps.</li>
-<li><strong>Authoritative Release Resolution</strong>: Compares against a directly-scraped Reddit App Directory snapshot first, with npm/GitHub fallbacks for apps outside the public directory.</li>
-<li><strong>Daily Automated Checks</strong>: Runs a scheduled daily background audit (12:00 UTC) with zero impact on subreddit operations.</li>
+<li><strong>Automated App Discovery</strong>: Identifies installed Devvit applications by matching moderator accounts against known app manifests.</li>
+<li><strong>Auto-Baseline on Install</strong>: Locks in current versions upon installation so you only receive alerts for future releases.</li>
+<li><strong>Silent Daily Audits</strong>: Runs daily background checks without filling your modmail when everything is current.</li>
 <li><strong>Instant Menu Scans</strong>: Trigger an immediate update check at any moment using <strong>Check for App Updates</strong> in Subreddit Mod Tools.</li>
-<li><strong>Cache Management Controls</strong>: Clear tracked app data and force a fresh version snapshot with <strong>Reset App Cache</strong>.</li>
-<li><strong>Native Settings Control</strong>: Specify custom app slugs to monitor and configure update check schedules in App Settings.</li>
+<li><strong>Sync Installed Baselines</strong>: Select <strong>Sync Installed Baselines</strong> after updating apps in Mod Tools to lock in new versions.</li>
+<li><strong>Cache Management Controls</strong>: Clear tracked app data and force a fresh discovery scan with <strong>Reset App Cache</strong>.</li>
+<li><strong>Native Settings Control</strong>: Specify custom app slugs to monitor, toggle unlisted bot reporting, and configure check schedules in App Settings.</li>
 </ul>
 <p>---</p>
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png">Logic Flowchart</a></p>
-<h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Discover</strong>: App Update Checker discovers installed Devvit applications from subreddit bot signatures and configured slugs.</p>
-<p>2. <strong>Resolve</strong>: Latest published versions are checked against a directly-scraped Reddit App Directory snapshot, falling back to npm/GitHub for unlisted apps.</p>
-<p>3. <strong>Compare</strong>: Installed version numbers are compared against upstream release tags to identify pending upgrades.</p>
-<p>4. <strong>Notify</strong>: A formatted summary report detailing app upgrade statuses is delivered directly to team modmail.</p>
+<h3>Your Four-Step Lifecycle</h3>
+<p>1. <strong>Discover</strong>: App Update Checker discovers installed Devvit applications from subreddit bot signatures and configured custom slugs.</p>
+<p>2. <strong>Auto-Baseline</strong>: Sets detected app versions as the active baseline and delivers a one-time Welcome Report to Modmail.</p>
+<p>3. <strong>Silent Audit</strong>: Runs automated daily checks against authoritative Reddit App Directory snapshots.</p>
+<p>4. <strong>Notify</strong>: Delivers an actionable Modmail alert only when an app author publishes a new release.</p>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>App Update Checker</strong> to your subreddit through the Reddit App Directory.</p>
-<p>2. <strong>Configure Settings</strong>: Open <strong>Mod Tools > App Settings > App Update Checker</strong> to adjust notification preferences.</p>
-<p>3. <strong>Run Initial Check</strong>: Select <strong>Check for App Updates</strong> from the subreddit overflow menu to generate your first report.</p>
+<p>2. <strong>Review Welcome Report</strong>: Check your Modmail for the initial monitored inventory and baseline summary.</p>
+<p>3. <strong>Configure Settings (Optional)</strong>: Open <strong>Mod Tools > App Settings > App Update Checker</strong> to adjust notification preferences or add custom slugs.</p>
 <p>4. <strong>Relax</strong>: Scheduled daily audits will keep your team informed of any future releases.</p>
 <p>*No manual app directory checking. Automated update notifications delivered directly to modmail.*</p>
 <p>---</p>
 <h2>Advanced Capabilities</h2>
 <p>App Update Checker is engineered for resilient version resolution and lightweight background execution.</p>
 <ul>
-<li><strong>Authoritative Directory Snapshot</strong>: Reads a directly-scraped Reddit App Directory feed from `raw.githubusercontent.com`, falling back to `registry.npmjs.org` and GitHub release manifests for unlisted apps.</li>
+<li><strong>Authoritative Directory Snapshot</strong>: Reads a continuously updated Reddit App Directory feed and manifest from `raw.githubusercontent.com`.</li>
 <li><strong>Redis-Cached Snapshot</strong>: The directory snapshot is cached for an hour per check run to avoid redundant network calls.</li>
-<li><strong>Scheduled Cron Runner</strong>: Executes automated checks on a daily cron schedule.</li>
-<li><strong>Modmail Markdown Formatter</strong>: Formats clean, high-contrast markdown tables with direct links to release notes.</li>
+<li><strong>Scheduled Cron Runner</strong>: Executes automated checks on a daily cron schedule at 12:00 UTC.</li>
+<li><strong>Modmail Markdown Formatter</strong>: Formats clean, high-contrast markdown tables with direct links to app install pages.</li>
 </ul>
 <p>---</p>
 <h2>Designed to Assist Moderators</h2>

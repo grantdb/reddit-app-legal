@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-27T06:54:02.170Z",
+  "generatedAt": "2026-08-28T02:45:30.212Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -785,8 +785,8 @@
       ],
       "setupSteps": [
         "Install: Add App Update Checker to your subreddit through the Reddit App Directory.",
-        "Configure Settings: Open Mod Tools > App Settings > App Update Checker to adjust notification preferences.",
-        "Run Initial Check: Select Check for App Updates from the subreddit overflow menu to generate your first report.",
+        "Review Welcome Report: Check your Modmail for the initial monitored inventory and baseline summary.",
+        "Configure Settings (Optional)**: Open Mod Tools > App Settings > App Update Checker to adjust notification preferences or add custom slugs.",
         "Relax: Scheduled daily audits will keep your team informed of any future releases.",
         "No manual app directory checking. Automated update notifications delivered directly to modmail.*"
       ],
@@ -816,10 +816,10 @@
       ],
       "menuItems": [
         "Check for App Updates",
-        "Mark Apps Up-to-Date",
+        "Sync Installed Baselines",
         "Reset App Cache"
       ],
-      "settingsCount": 2,
+      "settingsCount": 4,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/app-update-checker",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/app-update-checker",
@@ -832,7 +832,7 @@
         "troubleshooting": "Check the App Update Checker troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-28"
     },
     {
       "appId": "gate-defender",
