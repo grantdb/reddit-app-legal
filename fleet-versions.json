@@ -206,7 +206,7 @@
   },
   "archive-guard": {
     "name": "Archive-Guard",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "visibility": "unlisted"
   },
   "wiki-sync-bot": {
