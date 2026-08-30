@@ -10,17 +10,17 @@
 
 > **Track installed app versions, discover new releases, and receive automated modmail update alerts for any subreddit.**
 
-App Update Checker ensures your subreddit's Devvit tools and moderation bots remain secure and up-to-date. By automatically discovering installed applications, establishing baseline versions on install, and running silent daily checks against the Reddit App Directory, it keeps your mod team informed whenever an update is published.
+App Update Checker ensures your subreddit's Devvit tools and moderation bots remain secure and up-to-date. Automatically discovering active tools on your subreddit and running silent daily audits against the Reddit App Directory, it keeps your mod team informed whenever an app author publishes a new release.
 
 ---
 
 ## At a Glance
 
-- **Automated zero-config setup**: Discovers installed apps and establishes your starting baseline automatically upon installation.
-- **Silent daily audits**: Runs a lightweight background check every day at 12:00 UTC with zero modmail spam—alerts are sent only when a new update is released.
-- **Modmail upgrade alerts**: Delivers high-contrast summary tables with direct links to update pages on the Reddit App Directory.
+- **Clear, verified onboarding**: Guides your mod team to update apps in Mod Tools and sync baseline tracking on initial install.
+- **Silent daily audits**: Runs a lightweight background check every day at 12:00 UTC with zero modmail spam—alerts are sent only when a new update is published.
+- **Modmail upgrade alerts**: Delivers clean, text-formatted summary tables with direct links to update pages on the Reddit App Directory.
 - **Universal directory support**: Cross-references against 150+ public apps in the Reddit App Directory and official developer manifests.
-- **On-demand moderator tools**: Trigger an instant update scan or sync baselines anytime from the subreddit overflow menu (`...`).
+- **Consolidated moderator controls**: Access on-demand scans, baseline syncing, and cache resets from a single **App Update Checker** menu popout.
 
 ---
 
@@ -39,11 +39,11 @@ App Update Checker ensures your subreddit's Devvit tools and moderation bots rem
 ## Built for Seamless Community Maintenance
 
 - **Automated App Discovery**: Identifies installed Devvit applications by matching moderator accounts against known app manifests.
-- **Auto-Baseline on Install**: Locks in current versions upon installation so you only receive alerts for future releases.
 - **Silent Daily Audits**: Runs daily background checks without filling your modmail when everything is current.
-- **Instant Menu Scans**: Trigger an immediate update check at any moment using **Check for App Updates** in Subreddit Mod Tools.
-- **Sync Installed Baselines**: Select **Sync Installed Baselines** after updating apps in Mod Tools to lock in new versions.
-- **Cache Management Controls**: Clear tracked app data and force a fresh discovery scan with **Reset App Cache**.
+- **Unified Moderator Menu Popout**: Open **App Update Checker** from the subreddit overflow menu (`...`) to access:
+  - **Check for App Updates**: Run an immediate scan and receive a full status report in Modmail.
+  - **Sync All Apps as Updated**: Lock in current versions as the baseline after updating apps in Mod Tools.
+  - **Reset App Cache**: Clear cached data and trigger a fresh discovery scan.
 - **Native Settings Control**: Specify custom app slugs to monitor, toggle unlisted bot reporting, and configure check schedules in App Settings.
 
 ---
@@ -55,8 +55,8 @@ App Update Checker ensures your subreddit's Devvit tools and moderation bots rem
 ### Your Four-Step Lifecycle
 
 1. **Discover**: App Update Checker discovers installed Devvit applications from subreddit bot signatures and configured custom slugs.
-2. **Auto-Baseline**: Sets detected app versions as the active baseline and delivers a one-time Welcome Report to Modmail.
-3. **Silent Audit**: Runs automated daily checks against authoritative Reddit App Directory snapshots.
+2. **Setup & Sync**: Make sure to update all your apps via Reddit's **Mod Tools > Installed Apps**, then run **Sync All Apps as Updated** in the menu popout.
+3. **Silent Audit**: Runs automated daily checks against authoritative Reddit App Directory snapshots at 12:00 UTC.
 4. **Notify**: Delivers an actionable Modmail alert only when an app author publishes a new release.
 
 ---
@@ -64,9 +64,9 @@ App Update Checker ensures your subreddit's Devvit tools and moderation bots rem
 ## Quick Setup
 
 1. **Install**: Add **App Update Checker** to your subreddit through the Reddit App Directory.
-2. **Review Welcome Report**: Check your Modmail for the initial monitored inventory and baseline summary.
-3. **Configure Settings (Optional)**: Open **Mod Tools > App Settings > App Update Checker** to adjust notification preferences or add custom slugs.
-4. **Relax**: Scheduled daily audits will keep your team informed of any future releases.
+2. **Update Apps in Mod Tools**: Open **Mod Tools > Installed Apps** in Reddit and update any outdated applications.
+3. **Sync Baseline**: Open the subreddit menu (`...`), select **App Update Checker**, and choose **Sync All Apps as Updated** to establish your confirmed tracking baseline.
+4. **Relax**: Scheduled daily audits will silently keep your team informed of any future releases.
 
 *No manual app directory checking. Automated update notifications delivered directly to modmail.*
 
@@ -79,7 +79,7 @@ App Update Checker is engineered for resilient version resolution and lightweigh
 - **Authoritative Directory Snapshot**: Reads a continuously updated Reddit App Directory feed and manifest from `raw.githubusercontent.com`.
 - **Redis-Cached Snapshot**: The directory snapshot is cached for an hour per check run to avoid redundant network calls.
 - **Scheduled Cron Runner**: Executes automated checks on a daily cron schedule at 12:00 UTC.
-- **Modmail Markdown Formatter**: Formats clean, high-contrast markdown tables with direct links to app install pages.
+- **Modmail Markdown Formatter**: Formats clean markdown tables with direct links to app install pages.
 
 ---
 
