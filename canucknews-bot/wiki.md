@@ -25,8 +25,8 @@ Regional Canadian news aggregation with moderator triggers.
 
 ## Triggers and Activation
 ### Menu Actions
-- Scout Canadian News: Moderator menu action (Location: subreddit)
-- Scout Canadian News: Moderator menu action (Location: post)
+- CanuckNews: Scout News: Scout Canadian news feeds and draft posts (Location: subreddit)
+- CanuckNews: Scout News: Scout Canadian news feeds and draft posts (Location: post)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)

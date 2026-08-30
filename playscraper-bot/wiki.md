@@ -25,7 +25,7 @@ AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with
 
 ## Triggers and Activation
 ### Menu Actions
-- Trigger App Scraper: Manually run the scraper bot on this post (Location: post)
+- Playscraper Bot: Scan Post: Manually run the scraper bot on this post (Location: post)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)

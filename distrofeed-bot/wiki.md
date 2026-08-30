@@ -24,10 +24,8 @@ Linux aggregator. Upgraded to Gemini 2.5 metadata extraction. Fixed network perm
 
 ## Triggers and Activation
 ### Menu Actions
-- 1. Scout Distro Updates: Moderator menu action (Location: subreddit)
-- 1. Scout Distro Updates: Moderator menu action (Location: post)
-- 2. Review Scouted Updates: Moderator menu action (Location: subreddit)
-- 2. Review Scouted Updates: Moderator menu action (Location: post)
+- DistroFeed Bot: Scout Linux distro feeds, review articles, and publish posts (Location: subreddit)
+- DistroFeed Bot: Scout Linux distro feeds, review articles, and publish posts (Location: post)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)

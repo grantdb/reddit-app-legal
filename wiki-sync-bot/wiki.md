@@ -21,10 +21,7 @@ Subreddit wiki synchronization engine for Reddit communities.
 
 ## Triggers and Activation
 ### Menu Actions
-- GuardHub: Sync Single App Wiki: Select and immediately sync the wiki page for a specific fleet app. (Location: subreddit)
-- GuardHub: Sync Wiki Pages Now: Check the fleet manifest and push any newly changed wiki pages. (Location: subreddit)
-- GuardHub: Force Sync All Wiki Pages: Force a complete background re-sync of all 44 app wiki pages, bypassing cache. (Location: subreddit)
-- GuardHub: Sync Bot Knowledge (Schema): Fetch latest fleet-knowledge.bot.json from GitHub and push raw JSON directly to r/grantdb/wiki/bot_knowledge in both v2 and v1. (Location: subreddit)
+- WikiSync Bot: Manage wiki documentation synchronization and schemas (Location: subreddit)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)

@@ -25,7 +25,7 @@ Automated screen-capture and visual logging utility.
 
 ## Triggers and Activation
 ### Menu Actions
-- Extract text from image (Gemini): Uses Gemini Vision to extract text from screenshots or terminal photos (Location: post)
+- Screenshot Bot: Extract Text: Uses Gemini Vision to extract text from screenshots or terminal photos (Location: post)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)

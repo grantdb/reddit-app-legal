@@ -20,8 +20,7 @@ Modmail archival utility. High-volume message indexing and backup.
 
 ## Triggers and Activation
 ### Menu Actions
-- Archive All Modmail (Background): Moderator menu action (Location: subreddit)
-- Check Modmail Archive Status: Moderator menu action (Location: subreddit)
+- Archive All Modmail: Manage background Modmail archiving and review progress (Location: subreddit)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)

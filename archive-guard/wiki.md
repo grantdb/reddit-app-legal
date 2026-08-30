@@ -24,10 +24,8 @@ Subreddit memory engine that detects recurring discussion topics, clusters repea
 
 ## Triggers and Activation
 ### Menu Actions
-- Archive-Guard: Set as Canonical: Moderator menu action (Location: post)
-- Archive-Guard: View Topic History: Moderator menu action (Location: post)
-- Archive-Guard: Ignore Match: Moderator menu action (Location: post)
-- Archive-Guard: Generate Digest Now: Moderator menu action (Location: subreddit)
+- Archive-Guard: Manage topic canonicals, recurring history, and ignore exemptions (Location: post)
+- Archive-Guard: Generate Digest: Compile and preview the latest recurring topic digest (Location: subreddit)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)

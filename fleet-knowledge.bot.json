@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-30T19:12:14.704Z",
+  "generatedAt": "2026-08-30T20:04:23.876Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -117,8 +117,7 @@
         "CommentSubmit"
       ],
       "menuItems": [
-        "Sticky Pro: Post Sticky",
-        "Sticky Pro: Remove Sticky"
+        "Sticky Pro"
       ],
       "settingsCount": 14,
       "links": {
@@ -133,7 +132,7 @@
         "troubleshooting": "Check the Sticky-Pro troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-30"
     },
     {
       "appId": "canucknews-bot",
@@ -178,8 +177,8 @@
       },
       "triggers": [],
       "menuItems": [
-        "Scout Canadian News",
-        "Scout Canadian News"
+        "CanuckNews: Scout News",
+        "CanuckNews: Scout News"
       ],
       "settingsCount": 9,
       "links": {
@@ -194,7 +193,7 @@
         "troubleshooting": "Check the CanuckNews Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-30"
     },
     {
       "appId": "playscraper-bot",
@@ -247,7 +246,7 @@
         "AppUpgrade"
       ],
       "menuItems": [
-        "Trigger App Scraper"
+        "Playscraper Bot: Scan Post"
       ],
       "settingsCount": 10,
       "links": {
@@ -262,7 +261,7 @@
         "troubleshooting": "Check the Playscraper Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-30"
     },
     {
       "appId": "screen-shot-bot",
@@ -317,7 +316,7 @@
         "AppUpgrade"
       ],
       "menuItems": [
-        "Extract text from image (Gemini)"
+        "Screenshot Bot: Extract Text"
       ],
       "settingsCount": 7,
       "links": {
@@ -332,7 +331,7 @@
         "troubleshooting": "Check the Screen-Shot Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-30"
     },
     {
       "appId": "post-title-check",
@@ -501,8 +500,8 @@
       },
       "triggers": [],
       "menuItems": [
-        "Scout Canadian News",
-        "Scout Canadian News"
+        "Canadian News: Scout News",
+        "Canadian News: Scout News"
       ],
       "settingsCount": 1,
       "links": {
@@ -517,7 +516,7 @@
         "troubleshooting": "Check the Canadian News troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-30"
     },
     {
       "appId": "distrofeed-bot",
@@ -562,10 +561,8 @@
       },
       "triggers": [],
       "menuItems": [
-        "1. Scout Distro Updates",
-        "1. Scout Distro Updates",
-        "2. Review Scouted Updates",
-        "2. Review Scouted Updates"
+        "DistroFeed Bot",
+        "DistroFeed Bot"
       ],
       "settingsCount": 3,
       "links": {
@@ -580,7 +577,7 @@
         "troubleshooting": "Check the DistroFeed Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-30"
     },
     {
       "appId": "linux-quest",
@@ -687,8 +684,7 @@
       },
       "triggers": [],
       "menuItems": [
-        "Archive All Modmail (Background)",
-        "Check Modmail Archive Status"
+        "Archive All Modmail"
       ],
       "settingsCount": 1,
       "links": {
@@ -703,7 +699,7 @@
         "troubleshooting": "Check the Archive All MM troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-30"
     },
     {
       "appId": "ring-escape",
@@ -937,7 +933,7 @@
         "PostCreate"
       ],
       "menuItems": [
-        "Check AI Content"
+        "AI Checker: Scan Post"
       ],
       "settingsCount": 15,
       "links": {
@@ -952,7 +948,7 @@
         "troubleshooting": "Check the AI Checker troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-30"
     },
     {
       "appId": "mod-snapshot",
@@ -1759,7 +1755,7 @@
         "PostCreate"
       ],
       "menuItems": [
-        "Clear Duplicate Lock"
+        "Duplicate Guard: Clear Lock"
       ],
       "settingsCount": 15,
       "links": {
@@ -1774,7 +1770,7 @@
         "troubleshooting": "Check the Duplicate Guard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-30"
     },
     {
       "appId": "gimmecode-guard",
@@ -1823,10 +1819,8 @@
         "CommentSubmit"
       ],
       "menuItems": [
-        "Check User GimmeCode History",
-        "View GimmeCode Audit Logs",
-        "GimmeCode: Reset User Scores Database",
-        "GimmeCode: Default Settings Guide"
+        "GimmeCode: Check User History",
+        "GimmeCode Guard"
       ],
       "settingsCount": 8,
       "links": {
@@ -1841,7 +1835,7 @@
         "troubleshooting": "Check the GimmeCode Guard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-25"
+      "lastUpdated": "2026-08-30"
     },
     {
       "appId": "action-guard",
@@ -2208,10 +2202,9 @@
         "AppInstall"
       ],
       "menuItems": [
-        "GuardHub: VerifyGuard Dashboard",
-        "GuardHub: Create Verification Post"
+        "VerifyGuard"
       ],
-      "settingsCount": 1,
+      "settingsCount": 2,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/verify-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/verify-guard",
@@ -2224,7 +2217,7 @@
         "troubleshooting": "Check the VerifyGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-30"
     },
     {
       "appId": "rate-guard",
@@ -2628,10 +2621,8 @@
         "PostSubmit"
       ],
       "menuItems": [
-        "Archive-Guard: Set as Canonical",
-        "Archive-Guard: View Topic History",
-        "Archive-Guard: Ignore Match",
-        "Archive-Guard: Generate Digest Now"
+        "Archive-Guard",
+        "Archive-Guard: Generate Digest"
       ],
       "settingsCount": 2,
       "links": {
@@ -2646,7 +2637,7 @@
         "troubleshooting": "Check the Archive-Guard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-30"
     },
     {
       "appId": "wiki-sync-bot",
@@ -2696,10 +2687,7 @@
         "AppUpgrade"
       ],
       "menuItems": [
-        "GuardHub: Sync Single App Wiki",
-        "GuardHub: Sync Wiki Pages Now",
-        "GuardHub: Force Sync All Wiki Pages",
-        "GuardHub: Sync Bot Knowledge (Schema)"
+        "WikiSync Bot"
       ],
       "settingsCount": 2,
       "links": {
@@ -2714,7 +2702,7 @@
         "troubleshooting": "Check the WikiSync Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-30"
     },
     {
       "appId": "rescue-guard",

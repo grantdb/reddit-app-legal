@@ -21,7 +21,7 @@ Moderator-triggered AI detection engine. Upgraded to native Gemini 1.5 Flash for
 
 ## Triggers and Activation
 ### Menu Actions
-- Check AI Content: Moderator menu action (Location: post)
+- AI Checker: Scan Post: Manually scan this post for AI-generated content (Location: post)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.tsx)

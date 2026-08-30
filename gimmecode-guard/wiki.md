@@ -20,10 +20,8 @@ Detects low-effort give me code requests
 
 ## Triggers and Activation
 ### Menu Actions
-- Check User GimmeCode History: Moderator menu action (Location: comment)
-- View GimmeCode Audit Logs: Moderator menu action (Location: subreddit)
-- GimmeCode: Reset User Scores Database: Wipe all user strikes, scores, and audit flags for this subreddit (Location: subreddit)
-- GimmeCode: Default Settings Guide: View recommended defaults and settings guide (Location: subreddit)
+- GimmeCode: Check User History: View user strikes and flagged request history (Location: comment)
+- GimmeCode Guard: View audit logs, manage user databases, and view settings (Location: subreddit)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)

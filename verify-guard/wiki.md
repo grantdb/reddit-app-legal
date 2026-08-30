@@ -19,12 +19,12 @@ Configurable multi-tier verification engine for user trust, age, and role verifi
 
 ## Triggers and Activation
 ### Menu Actions
-- GuardHub: VerifyGuard Dashboard: Open the verification moderation dashboard. (Location: subreddit)
-- GuardHub: Create Verification Post: Create a community user verification launcher post. (Location: subreddit)
+- VerifyGuard: Open verification moderation dashboard or create intake post (Location: subreddit)
 
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
+- action: Select Action (select, default: -). Select Action
 - daily-expiration-cron: Pending Queue (${queue.length}) (success, default: -). Pending Queue (${queue.length})
 
 ## Automation Capabilities

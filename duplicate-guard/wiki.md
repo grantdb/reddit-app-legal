@@ -20,7 +20,7 @@ Moderation app that uses onPostSubmit to detect recent duplicate subject/topic p
 
 ## Triggers and Activation
 ### Menu Actions
-- Clear Duplicate Lock: Moderator menu action (Location: post)
+- Duplicate Guard: Clear Lock: Clear duplicate lock and cache entry for this post (Location: post)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)

@@ -26,8 +26,7 @@ Automated moderator sticky suite with dynamic form population.
 
 ## Triggers and Activation
 ### Menu Actions
-- Sticky Pro: Post Sticky: Post, customize, and schedule a sticky comment on this post (Location: post)
-- Sticky Pro: Remove Sticky: Unpin or remove the active sticky comment from this post (Location: post)
+- Sticky Pro: Post, customize, schedule, or remove sticky comments on this submission (Location: post)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
