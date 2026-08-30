@@ -41,7 +41,7 @@
   },
   "distrofeed-bot": {
     "name": "DistroFeed Bot",
-    "version": "0.1.106",
+    "version": "0.1.107",
     "visibility": "public"
   },
   "linux-quest": {
