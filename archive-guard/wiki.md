@@ -1,7 +1,7 @@
 # Archive-Guard
 
 Category: Moderation  
-Version: v0.0.2  
+Version: v0.0.3  
 Visibility: Unlisted  
 Summary: Subreddit memory engine that detects recurring discussion topics, clusters repeat questions, and tracks canonical threads.
 
@@ -61,19 +61,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.3 — 2026-08-30
+- Standard fleet synchronization and maintenance.
+
 0.0.2 — 2026-08-18
 - Standard fleet synchronization and maintenance.
 
 0.0.1 — 2026-08-18
 - Standard fleet synchronization and maintenance.
-
-0.1.0 — 2026-08-17
-- Initial release of Archive-Guard.
-- Real-time `onPostSubmit` ingestion with deterministic token and bigram overlap topic clustering.
-- Redis transaction safety for atomic hit counts, post deduplication, and topic cluster indexing.
-- Contextual moderator post actions: Set as Canonical, View Topic History, and Ignore Match.
-- Subreddit-level moderator menu action: Generate Digest Now with structured markdown preview.
-- Mod-only safety defaults with explainable match reasons and zero auto-removals.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/archive-guard/TERMS.md)
