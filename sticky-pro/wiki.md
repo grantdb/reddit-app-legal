@@ -12,8 +12,8 @@ Automated moderator sticky suite with dynamic form population.
 [View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sticky-pro-flowchart.png)
 
 ## Key Features
-- Unified Post Menu Modal: Open Sticky Pro: Post Sticky from any post menu to pick from your configured templates, write custom markdown, toggle top-pinning and comment locks, and set an optional auto-unsticky timer.
-- One-Click Unsticky Action: Select Sticky Pro: Remove Sticky from the post overflow menu to immediately unpin and remove the active sticky comment and cancel any pending timers.
+- Unified Post Menu Popout: Open Sticky Pro from any post menu (`...`) to pick from configured templates, write custom markdown, toggle pinning and comment locks, set auto-unsticky timers, or remove active stickies.
+- One-Click Unsticky Action: Select Remove Active Sticky inside the popout to immediately unpin and remove the active sticky comment and cancel any pending timers.
 - Duration Expiration Timers: Automatically expire and remove sticky comments after a configurable countdown (1 hour, 6 hours, 12 hours, 24 hours, 3 days, 7 days) via scheduled background jobs.
 - Auto-Sticky Posting: Can be configured to automatically submit and lock a sticky comment on every new post in the subreddit, with built-in deduplication and delayed eligibility checking.
 - Auto-Pin Control: Configurable setting (`autoPin`) to control whether sticky comments are pinned to the top of the comment section or distinguished as moderator comments without pinning.
@@ -70,8 +70,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Toggle Enable Auto-Sticky on Every Post and set Pin Auto-Sticky Comment to Top (`autoPin`).
 - Configure Delayed Eligibility-First processing preferences (delay duration, skip if removed, skip if spam).
 - Usage:
-- On any post, open the moderator menu and select Sticky Pro: Post Sticky to launch the configuration modal.
-- To remove a sticky, select Sticky Pro: Remove Sticky or comment `!unsticky`.
+- On any post, open the moderator menu (`...`), select Sticky Pro, and choose Post / Customize Sticky or Remove Active Sticky.
 - Use `!sticky 1 24h` or `!sticky 2` in comment replies for rapid mobile shortcuts.
 
 ## Troubleshooting

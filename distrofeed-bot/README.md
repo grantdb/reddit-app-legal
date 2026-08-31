@@ -7,34 +7,49 @@
 ![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-Content_Automation-8A2BE2?style=for-the-badge)
 
-**DistroFeed Bot** is a manual-only, candidate-scouting and pre-editing curator built for Linux and open-source subreddits. It leverages Google Gemini AI with search grounding to scout major Linux distribution releases and technical updates, allowing moderators to inspect, edit, and post clean, summarized updates.
+> **Manual-only Linux release curation and candidate scouting engine for Reddit moderators.**
+
+**DistroFeed Bot** is a manual-only candidate-scouting and pre-editing curator built for Linux and open-source subreddits. It leverages Google Gemini AI with search grounding to scout major Linux distribution releases and technical updates, allowing moderators to inspect, edit, and post clean, summarized community updates.
+
+---
 
 ## Key Features
 
-- **100% Manual & Moderator Control**: Zero auto-posting or background crons. Operates via a 2-stage Mod Menu workflow.
+- **100% Manual & Moderator Control**: Zero auto-posting or background crons. Operates via an interactive Mod Menu popout workflow.
 - **AI-Powered Search Grounding**: Uses Google Gemini 2.5 Flash to scan DistroWatch, Phoronix, and 9to5Linux for recent major OS releases and kernel updates.
 - **Interactive Pre-Publish Editor**: Presents candidate updates in an interactive Devvit form where moderators can customize post title, target URL, TL;DR summary, post flair, and sticky comment options.
+- **Unified Menu Popout**: Access both scouting and candidate review flows from a single **DistroFeed Bot** menu item.
 - **Deduplication Engine**: Enforces Redis URL and topic slug tracking to prevent duplicate coverage.
+
+---
 
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/DistroFeed-bot-flowchart.png)
 
-1. A moderator opens the Mod Menu and selects **1. Scout Distro Updates** to trigger background AI scanning.
-2. After ~90 seconds, the moderator selects **2. Review Scouted Updates** from the Mod Menu.
-3. Select an update candidate from the **Candidate Picker Form**.
-4. Customize post title, link URL, TL;DR summary, post flair, and sticky comment settings in the **Editor Form**, then click **Publish Post Now**.
+### Your Four-Step Workflow
+
+1. **Scout Updates**: Open the subreddit menu (`...`), select **DistroFeed Bot**, and choose **1. Scout Updates** to trigger background AI scanning.
+2. **Review Candidates**: After ~90 seconds, open **DistroFeed Bot** and choose **2. Review & Publish**.
+3. **Pick Update**: Select an update candidate from the interactive Candidate Picker Form.
+4. **Customize & Publish**: Review and customize post title, link URL, TL;DR summary, post flair, and sticky comment settings, then click **Publish Post Now**.
+
+---
 
 ## Setup & Configuration
 
 1. **Install**: Add **DistroFeed Bot** to your subreddit via the App Directory.
-2. **App Settings**: Navigate to Mod Tools > App Settings > DistroFeed Bot and provide a Google Gemini API Key (from aistudio.google.com).
-3. **Usage**: Open the subreddit Mod Menu to scout and review updates.
+2. **App Settings**: Navigate to **Mod Tools > App Settings > DistroFeed Bot** and provide a Google Gemini API Key (from aistudio.google.com).
+3. **Usage**: Open the subreddit menu (`...`), click **DistroFeed Bot**, and scout or review updates on your schedule.
+
+---
 
 ## Support
 
 For help, bug reports, or feature requests, post in r/grantdb.
 Please include the app name, what you expected, what happened, and any error text or screenshots.
+
+---
 
 ## Legal
 

@@ -44,9 +44,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install: Add Verify Guard to your subreddit through the Reddit App Directory.
-- Configure: Open GuardHub: VerifyGuard Dashboard from Subreddit Mod Tools.
-- Launch Post: Click GuardHub: Create Verification Post to create your community intake post.
-- Activate: Set your desired verification tiers to begin welcoming verified members.
+- Launch Dashboard: Open the subreddit menu (`...`), select VerifyGuard, and choose Open Verification Dashboard.
+- Launch Post: Open VerifyGuard and choose Create Verification Post to generate your community intake post.
+- Activate: Set your desired verification tiers in the dashboard to begin welcoming verified members.
 - No modmail clutter or sensitive data exposure. Streamlined community verification directly in Reddit.*
 
 ## Troubleshooting

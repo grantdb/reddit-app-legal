@@ -13,7 +13,7 @@ Subreddit memory engine that detects recurring discussion topics, clusters repea
 
 ## Key Features
 - Explainable Topic Clustering: Automatically extracts meaningful tokens and bigrams to detect recurring discussion subjects on post submission without black-box magic.
-- Click Canonical Threads: Mark high-effort community guides as the "definitive source" for any topic directly from Reddit's post menu.
+- Unified Post Menu Popout: Open Archive-Guard on any post to designate canonical guides, view topic history, or exempt false positives.
 - Mod-Safe by Design: Operates purely as a moderator assistant with private mod reports and internal logs. No automatic post removals or intrusive user interruptions in v1.
 - On-Demand Community Digests: Generate clean markdown summaries spotlighting your most frequently discussed topics and essential resources.
 - Atomic Redis Reliability: Powered by Redis transactions and strict single-trigger idempotency for exact-once execution.

@@ -20,7 +20,8 @@ GimmeCode Guard protects programming and tech subreddits from repetitive "give m
 - **Code block awareness**: Automatically ignores comments that include actual code samples or snippets.
 - **Configurable action thresholds**: Choose between gentle warning replies, mod queue reports, or removals.
 - **90-day strike memory**: Track repeat offenders across the subreddit with persistent strike history.
-- **Inspect from comment menus**: Check any user's strike history directly from Reddit's standard comment menus.
+- **Unified moderator controls**: Access audit logs, database maintenance, and configuration guides from the **GimmeCode Guard** menu popout.
+- **Direct comment inspections**: Check any user's strike history directly from comment menus using **GimmeCode: Check User History**.
 
 ---
 
@@ -42,8 +43,11 @@ GimmeCode Guard protects programming and tech subreddits from repetitive "give m
 - **Context-Aware Immunity**: Intelligently exempts comments containing valid Markdown code blocks (` ``` ` or 4-space indentation).
 - **Graduated Moderation Actions**: Configure independent score thresholds for automated warning replies, mod reports, or direct removals.
 - **Long-Term Strike Memory**: Tracks author violation strikes in Redis over 90-day rolling windows to identify habitual freeloaders.
-- **Comment Menu Inspection**: Access a moderator menu item on any comment to instantly view the author's community strike history.
-- **Modmail Audit Summaries**: Generate and deliver consolidated audit reports directly to your team modmail thread on demand.
+- **Unified Subreddit Menu Popout**: Select **GimmeCode Guard** from the subreddit overflow menu (`...`) to access:
+  - **Audit Logs**: Generate and deliver consolidated audit reports directly to team Modmail on demand.
+  - **Reset Database**: Purge cached violation tallies and start fresh.
+  - **Settings Guide**: Review current threshold rules and detection sensitivity.
+- **Comment Menu Inspection**: Open any comment menu (`...`) and click **GimmeCode: Check User History** to view the author's community strike records instantly.
 
 ---
 

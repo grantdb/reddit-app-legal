@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-31T02:43:20.954Z",
+  "generatedAt": "2026-08-31T03:14:10.809Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -537,7 +537,7 @@
       "setupSteps": [
         "Install: Add DistroFeed Bot to your subreddit via the App Directory.",
         "App Settings: Navigate to Mod Tools > App Settings > DistroFeed Bot and provide a Google Gemini API Key (from aistudio.google.com).",
-        "Usage: Open the subreddit Mod Menu to scout and review updates."
+        "Usage: Open the subreddit menu (`...`), click DistroFeed Bot, and scout or review updates on your schedule."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -577,7 +577,7 @@
         "troubleshooting": "Check the DistroFeed Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-30"
+      "lastUpdated": "2026-08-31"
     },
     {
       "appId": "linux-quest",
@@ -658,8 +658,8 @@
       "setupSteps": [
         "Install: Add Archive All Modmail to your subreddit through the Reddit App Directory.",
         "Configure Queues: Open Mod Tools > App Settings > Archive All Modmail and pick your target queues.",
-        "Start Cleanup: Click Archive All Modmail (Background)** from the subreddit action menu.",
-        "Monitor: Check Check Modmail Archive Status anytime to observe real-time progress.",
+        "Start Cleanup: Open the subreddit menu (`...`), select Archive All Modmail, and choose Start Background Archive.",
+        "Monitor: Open Archive All Modmail and choose Check Status anytime to observe real-time progress.",
         "No repetitive manual clicking. Safe, automated Inbox Zero in your native workflow.*"
       ],
       "commonIssues": [],
@@ -699,7 +699,7 @@
         "troubleshooting": "Check the Archive All MM troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-30"
+      "lastUpdated": "2026-08-31"
     },
     {
       "appId": "ring-escape",
@@ -2169,9 +2169,9 @@
       ],
       "setupSteps": [
         "Install: Add Verify Guard to your subreddit through the Reddit App Directory.",
-        "Configure: Open GuardHub: VerifyGuard Dashboard from Subreddit Mod Tools.",
-        "Launch Post: Click GuardHub: Create Verification Post to create your community intake post.",
-        "Activate: Set your desired verification tiers to begin welcoming verified members.",
+        "Launch Dashboard: Open the subreddit menu (`...`), select VerifyGuard, and choose Open Verification Dashboard.",
+        "Launch Post: Open VerifyGuard and choose Create Verification Post to generate your community intake post.",
+        "Activate: Set your desired verification tiers in the dashboard to begin welcoming verified members.",
         "No modmail clutter or sensitive data exposure. Streamlined community verification directly in Reddit.*"
       ],
       "commonIssues": [],
@@ -2217,7 +2217,7 @@
         "troubleshooting": "Check the VerifyGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-30"
+      "lastUpdated": "2026-08-31"
     },
     {
       "appId": "rate-guard",
@@ -2660,7 +2660,9 @@
       "setupSteps": [
         "Install: Add WikiSync Bot to your subreddit.",
         "Configure: Open Mod Tools > App Settings > WikiSync Bot.",
-        "Trigger Sync: Open the subreddit menu and click GuardHub: Sync Wiki Pages Now or GuardHub: Sync Bot Knowledge (Schema)**."
+        "Trigger Operations: Open the subreddit menu (`...`), select WikiSync Bot, and choose your action:",
+        "Sync Changed Wiki Pages: Check manifest and update modified app pages incrementally.",
+        "Sync Single App Wiki: Fetch and update a specific app's documentation page."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -2702,7 +2704,7 @@
         "troubleshooting": "Check the WikiSync Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-30"
+      "lastUpdated": "2026-08-31"
     },
     {
       "appId": "rescue-guard",

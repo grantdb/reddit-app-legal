@@ -11,7 +11,7 @@
 <h2>Major Features</h2>
 <ul>
 <li><strong>Explainable Topic Clustering</strong>: Automatically extracts meaningful tokens and bigrams to detect recurring discussion subjects on post submission without black-box magic.</li>
-<li><strong>1-Click Canonical Threads</strong>: Mark high-effort community guides as the "definitive source" for any topic directly from Reddit's post menu.</li>
+<li><strong>Unified Post Menu Popout</strong>: Open <strong>Archive-Guard</strong> on any post to designate canonical guides, view topic history, or exempt false positives.</li>
 <li><strong>Mod-Safe by Design</strong>: Operates purely as a moderator assistant with private mod reports and internal logs. No automatic post removals or intrusive user interruptions in v1.</li>
 <li><strong>On-Demand Community Digests</strong>: Generate clean markdown summaries spotlighting your most frequently discussed topics and essential resources.</li>
 <li><strong>Atomic Redis Reliability</strong>: Powered by Redis transactions and strict single-trigger idempotency for exact-once execution.</li>
@@ -21,21 +21,22 @@
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-guard-flowchart.png">Logic Flowchart</a></p>
 <p>---</p>
 <h2>Moderator Actions</h2>
-<h3>Post-Level Context Menu</h3>
+<h3>Post Overflow Menu Popout</h3>
+<p>Open the post menu (`...`) and click <strong>Archive-Guard</strong> to access:</p>
 <ul>
-<li><strong>Archive-Guard: Set as Canonical</strong>: Designates the post as the official canonical guide/answer for its topic cluster.</li>
-<li><strong>Archive-Guard: View Topic History</strong>: Displays topic volume, matching keywords, and past related submissions.</li>
-<li><strong>Archive-Guard: Ignore Match</strong>: Marks false positives so the post will not trigger repeat alerts.</li>
+<li><strong>Set as Canonical Guide</strong>: Designates the post as the master reference thread for this topic cluster.</li>
+<li><strong>View Topic History</strong>: Displays topic volume, matching keywords, and past related submissions.</li>
+<li><strong>Ignore Match</strong>: Exempts false positives so the post will not trigger repeat alerts.</li>
 </ul>
-<h3>Subreddit-Level Context Menu</h3>
+<h3>Subreddit Overflow Menu</h3>
 <ul>
-<li><strong>Archive-Guard: Generate Digest Now</strong>: Compiles a markdown leaderboard digest of top recurring topics and canonical guides for moderator review.</li>
+<li><strong>Archive-Guard: Generate Digest</strong>: Compiles a markdown leaderboard digest of top recurring topics and canonical guides for moderator review.</li>
 </ul>
 <p>---</p>
 <h2>Install / Use</h2>
-<p>1. Install <strong>Archive-Guard</strong> on your subreddit.</p>
+<p>1. Install <strong>Archive-Guard</strong> on your subreddit through the Reddit App Directory.</p>
 <p>2. The app automatically listens to new submissions via `onPostSubmit`.</p>
-<p>3. Use the post context menu to set canonical threads as high-quality guides appear.</p>
+<p>3. Use the post <strong>Archive-Guard</strong> popout to manage canonical threads as high-quality guides appear.</p>
 <p>4. Use the subreddit menu to generate a topic digest at any time.</p>
 <p>---</p>
 <h2>Support</h2>
@@ -43,9 +44,10 @@
 <p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
 <p>---</p>
 <h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
 <ul>
-<li><a href="TERMS.md">Terms of Service</a></li>
-<li><a href="PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/archive-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/archive-guard/PRIVACY.md">Privacy Policy</a></li>
 </ul>
 <p>---</p>
 <p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

@@ -19,6 +19,7 @@ Verify Guard provides a privacy-first verification and access engine for your su
 - **Multi-tier verification**: Support automated trust gates, self-declared age gates, and manual mod review.
 - **Interactive verification post**: Allow community members to verify directly from an interactive custom post.
 - **Automate flair & access**: Automatically assign verified user flairs and approved contributor permissions.
+- **Unified moderator controls**: Access dashboard webviews and post launcher creation from a single **VerifyGuard** menu popout.
 - **Privacy-first design**: Zero storage of raw legal IDs, birthdates, or private personal data.
 - **Automated expiration**: Automatically expire time-limited verifications and clean up user flairs via cron jobs.
 
@@ -43,7 +44,9 @@ Verify Guard provides a privacy-first verification and access engine for your su
 - **Tier 3: Role & Expert Review**: Custom intake questionnaire with a secure moderator review dashboard for AMA guests and expert badges.
 - **Custom Post Verification Center**: Launch an unlisted or pinned verification post where community members initiate intake.
 - **Automated Lifecycle Expiration**: Scheduled background maintenance automatically revokes expired badges and updates user permissions.
-- **Dedicated Management Center**: Access a private dashboard from Subreddit Mod Tools to review pending applications, inspect logs, and tune tiers.
+- **Unified Moderator Menu Popout**: Select **VerifyGuard** from the subreddit overflow menu (`...`) to access:
+  - **Open Verification Dashboard**: Launch the React Webview triage center to configure policies, inspect logs, and review pending requests.
+  - **Create Verification Post**: Submit an interactive user intake launcher post directly to your subreddit.
 
 ---
 
@@ -63,9 +66,9 @@ Verify Guard provides a privacy-first verification and access engine for your su
 ## Quick Setup
 
 1. **Install**: Add **Verify Guard** to your subreddit through the Reddit App Directory.
-2. **Configure**: Open **GuardHub: VerifyGuard Dashboard** from Subreddit Mod Tools.
-3. **Launch Post**: Click **GuardHub: Create Verification Post** to create your community intake post.
-4. **Activate**: Set your desired verification tiers to begin welcoming verified members.
+2. **Launch Dashboard**: Open the subreddit menu (`...`), select **VerifyGuard**, and choose **Open Verification Dashboard**.
+3. **Launch Post**: Open **VerifyGuard** and choose **Create Verification Post** to generate your community intake post.
+4. **Activate**: Set your desired verification tiers in the dashboard to begin welcoming verified members.
 
 *No modmail clutter or sensitive data exposure. Streamlined community verification directly in Reddit.*
 

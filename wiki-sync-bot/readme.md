@@ -18,7 +18,7 @@ WikiSync Bot provides subreddit moderators with a high-reliability engine to pub
 - **Dual-Version Subreddit Wiki Writes**: Direct programmatic synchronization to both modern (`v2`) and legacy (`v1`) Reddit wiki endpoints.
 - **Support Schema Synchronization**: Automatically deploys `bot_knowledge` JSON payloads to `r/grantdb/wiki/bot_knowledge` bypassing rich-text quote mangling.
 - **Fleet Documentation Sync**: Incremental background hash comparison and synchronization across all fleet application documentation pages.
-- **Single-App & On-Demand Actions**: Instant moderator menu tools to trigger full fleet re-syncs, single app updates, or schema pushes on demand.
+- **Unified Moderator Menu Popout**: Open **WikiSync Bot** from the subreddit overflow menu (`...`) to run incremental syncs, single-app updates, full re-syncs, or schema deployments.
 - **Moderator-Restricted Controls**: Built-in permissions ensuring only authorized community moderators can trigger wiki sync operations.
 
 ---
@@ -51,7 +51,11 @@ WikiSync Bot provides subreddit moderators with a high-reliability engine to pub
 
 1. **Install**: Add **WikiSync Bot** to your subreddit.
 2. **Configure**: Open **Mod Tools > App Settings > WikiSync Bot**.
-3. **Trigger Sync**: Open the subreddit menu and click **GuardHub: Sync Wiki Pages Now** or **GuardHub: Sync Bot Knowledge (Schema)**.
+3. **Trigger Operations**: Open the subreddit menu (`...`), select **WikiSync Bot**, and choose your action:
+   - **Sync Changed Wiki Pages**: Check manifest and update modified app pages incrementally.
+   - **Sync Single App Wiki**: Fetch and update a specific app's documentation page.
+   - **Force Sync All Wiki Pages**: Full re-synchronization of all fleet wiki pages in the background.
+   - **Sync Bot Knowledge Schema**: Update `bot_knowledge` JSON schema directly.
 
 ---
 

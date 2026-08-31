@@ -12,7 +12,7 @@
 <li><strong>Dual-Version Subreddit Wiki Writes</strong>: Direct programmatic synchronization to both modern (`v2`) and legacy (`v1`) Reddit wiki endpoints.</li>
 <li><strong>Support Schema Synchronization</strong>: Automatically deploys `bot_knowledge` JSON payloads to `r/grantdb/wiki/bot_knowledge` bypassing rich-text quote mangling.</li>
 <li><strong>Fleet Documentation Sync</strong>: Incremental background hash comparison and synchronization across all fleet application documentation pages.</li>
-<li><strong>Single-App & On-Demand Actions</strong>: Instant moderator menu tools to trigger full fleet re-syncs, single app updates, or schema pushes on demand.</li>
+<li><strong>Unified Moderator Menu Popout</strong>: Open <strong>WikiSync Bot</strong> from the subreddit overflow menu (`...`) to run incremental syncs, single-app updates, full re-syncs, or schema deployments.</li>
 <li><strong>Moderator-Restricted Controls</strong>: Built-in permissions ensuring only authorized community moderators can trigger wiki sync operations.</li>
 </ul>
 <p>---</p>
@@ -29,7 +29,13 @@
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>WikiSync Bot</strong> to your subreddit.</p>
 <p>2. <strong>Configure</strong>: Open <strong>Mod Tools > App Settings > WikiSync Bot</strong>.</p>
-<p>3. <strong>Trigger Sync</strong>: Open the subreddit menu and click <strong>GuardHub: Sync Wiki Pages Now</strong> or <strong>GuardHub: Sync Bot Knowledge (Schema)</strong>.</p>
+<p>3. <strong>Trigger Operations</strong>: Open the subreddit menu (`...`), select <strong>WikiSync Bot</strong>, and choose your action:</p>
+<ul>
+<li><strong>Sync Changed Wiki Pages</strong>: Check manifest and update modified app pages incrementally.</li>
+<li><strong>Sync Single App Wiki</strong>: Fetch and update a specific app's documentation page.</li>
+<li><strong>Force Sync All Wiki Pages</strong>: Full re-synchronization of all fleet wiki pages in the background.</li>
+<li><strong>Sync Bot Knowledge Schema</strong>: Update `bot_knowledge` JSON schema directly.</li>
+</ul>
 <p>---</p>
 <h2>Support</h2>
 <p>For help, bug reports, or feature requests, post in r/grantdb.</p>

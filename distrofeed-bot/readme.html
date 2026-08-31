@@ -4,27 +4,35 @@
 <p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
 <p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
 <p><a href="https://img.shields.io/badge/Type-Content_Automation-8A2BE2?style=for-the-badge">Type</a></p>
-<p><strong>DistroFeed Bot</strong> is a manual-only, candidate-scouting and pre-editing curator built for Linux and open-source subreddits. It leverages Google Gemini AI with search grounding to scout major Linux distribution releases and technical updates, allowing moderators to inspect, edit, and post clean, summarized updates.</p>
+<blockquote><p><strong>Manual-only Linux release curation and candidate scouting engine for Reddit moderators.</strong></p></blockquote>
+<p><strong>DistroFeed Bot</strong> is a manual-only candidate-scouting and pre-editing curator built for Linux and open-source subreddits. It leverages Google Gemini AI with search grounding to scout major Linux distribution releases and technical updates, allowing moderators to inspect, edit, and post clean, summarized community updates.</p>
+<p>---</p>
 <h2>Key Features</h2>
 <ul>
-<li><strong>100% Manual & Moderator Control</strong>: Zero auto-posting or background crons. Operates via a 2-stage Mod Menu workflow.</li>
+<li><strong>100% Manual & Moderator Control</strong>: Zero auto-posting or background crons. Operates via an interactive Mod Menu popout workflow.</li>
 <li><strong>AI-Powered Search Grounding</strong>: Uses Google Gemini 2.5 Flash to scan DistroWatch, Phoronix, and 9to5Linux for recent major OS releases and kernel updates.</li>
 <li><strong>Interactive Pre-Publish Editor</strong>: Presents candidate updates in an interactive Devvit form where moderators can customize post title, target URL, TL;DR summary, post flair, and sticky comment options.</li>
+<li><strong>Unified Menu Popout</strong>: Access both scouting and candidate review flows from a single <strong>DistroFeed Bot</strong> menu item.</li>
 <li><strong>Deduplication Engine</strong>: Enforces Redis URL and topic slug tracking to prevent duplicate coverage.</li>
 </ul>
+<p>---</p>
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/DistroFeed-bot-flowchart.png">Logic Flowchart</a></p>
-<p>1. A moderator opens the Mod Menu and selects <strong>1. Scout Distro Updates</strong> to trigger background AI scanning.</p>
-<p>2. After ~90 seconds, the moderator selects <strong>2. Review Scouted Updates</strong> from the Mod Menu.</p>
-<p>3. Select an update candidate from the <strong>Candidate Picker Form</strong>.</p>
-<p>4. Customize post title, link URL, TL;DR summary, post flair, and sticky comment settings in the <strong>Editor Form</strong>, then click <strong>Publish Post Now</strong>.</p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Scout Updates</strong>: Open the subreddit menu (`...`), select <strong>DistroFeed Bot</strong>, and choose <strong>1. Scout Updates</strong> to trigger background AI scanning.</p>
+<p>2. <strong>Review Candidates</strong>: After ~90 seconds, open <strong>DistroFeed Bot</strong> and choose <strong>2. Review & Publish</strong>.</p>
+<p>3. <strong>Pick Update</strong>: Select an update candidate from the interactive Candidate Picker Form.</p>
+<p>4. <strong>Customize & Publish</strong>: Review and customize post title, link URL, TL;DR summary, post flair, and sticky comment settings, then click <strong>Publish Post Now</strong>.</p>
+<p>---</p>
 <h2>Setup & Configuration</h2>
 <p>1. <strong>Install</strong>: Add <strong>DistroFeed Bot</strong> to your subreddit via the App Directory.</p>
-<p>2. <strong>App Settings</strong>: Navigate to Mod Tools > App Settings > DistroFeed Bot and provide a Google Gemini API Key (from aistudio.google.com).</p>
-<p>3. <strong>Usage</strong>: Open the subreddit Mod Menu to scout and review updates.</p>
+<p>2. <strong>App Settings</strong>: Navigate to <strong>Mod Tools > App Settings > DistroFeed Bot</strong> and provide a Google Gemini API Key (from aistudio.google.com).</p>
+<p>3. <strong>Usage</strong>: Open the subreddit menu (`...`), click <strong>DistroFeed Bot</strong>, and scout or review updates on your schedule.</p>
+<p>---</p>
 <h2>Support</h2>
 <p>For help, bug reports, or feature requests, post in r/grantdb.</p>
 <p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
 <h2>Legal</h2>
 <p>This application is subject to the following legal agreements:</p>
 <ul>

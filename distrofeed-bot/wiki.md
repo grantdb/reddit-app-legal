@@ -12,9 +12,10 @@ Linux aggregator. Upgraded to Gemini 2.5 metadata extraction. Fixed network perm
 [View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/DistroFeed-bot-flowchart.png)
 
 ## Key Features
-- % Manual & Moderator Control: Zero auto-posting or background crons. Operates via a 2-stage Mod Menu workflow.
+- % Manual & Moderator Control: Zero auto-posting or background crons. Operates via an interactive Mod Menu popout workflow.
 - AI-Powered Search Grounding: Uses Google Gemini 2.5 Flash to scan DistroWatch, Phoronix, and 9to5Linux for recent major OS releases and kernel updates.
 - Interactive Pre-Publish Editor: Presents candidate updates in an interactive Devvit form where moderators can customize post title, target URL, TL;DR summary, post flair, and sticky comment options.
+- Unified Menu Popout: Access both scouting and candidate review flows from a single DistroFeed Bot menu item.
 - Deduplication Engine: Enforces Redis URL and topic slug tracking to prevent duplicate coverage.
 
 ## Permissions Used
@@ -55,7 +56,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 ## Setup and Usage
 - Install: Add DistroFeed Bot to your subreddit via the App Directory.
 - App Settings: Navigate to Mod Tools > App Settings > DistroFeed Bot and provide a Google Gemini API Key (from aistudio.google.com).
-- Usage: Open the subreddit Mod Menu to scout and review updates.
+- Usage: Open the subreddit menu (`...`), click DistroFeed Bot, and scout or review updates on your schedule.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.

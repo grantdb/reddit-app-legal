@@ -19,7 +19,7 @@ Archive All Modmail effortlessly clears overgrown subreddit inboxes without brow
 - **One-click background archiving**: Trigger bulk modmail cleanup from Subreddit Mod Tools.
 - **Zero browser timeouts**: Delegated background execution runs smoothly without freezing your page.
 - **Smart queue selection**: Choose whether to archive New, In Progress, Appeals, or custom queues.
-- **Real-time run progress**: Check live archive statistics anytime from the moderator menu.
+- **Unified moderator controls**: Access start commands and real-time progress checks from a single **Archive All Modmail** menu popout.
 - **Rate-limited chunking**: Throttles API requests safely to prevent Reddit rate limit penalties.
 
 ---
@@ -41,7 +41,9 @@ Archive All Modmail effortlessly clears overgrown subreddit inboxes without brow
 - **Asynchronous Background Workers**: Offloads high-volume archiving operations to reliable server-side tasks so you can close your browser and move on.
 - **Configurable Target Queues**: Select specific folders to clear (e.g. New, In Progress, Appeals) directly from App Settings.
 - **Single-Session Concurrency Locks**: Uses Redis locking mechanisms to prevent duplicate concurrent runs or conflicting operations.
-- **Live Progress Auditing**: Select **Check Modmail Archive Status** from the overflow menu to view running totals and completed batches.
+- **Unified Moderator Menu Popout**: Select **Archive All Modmail** from the overflow menu (`...`) to access:
+  - **Start Background Archive**: Launch a background job to archive pending modmail conversations across selected queues.
+  - **Check Status**: Inspect running session statistics, active worker state, and completed conversation counts.
 - **Built-in Safety Protections**: Automatically identifies and protects restricted moderator discussions from bulk modifications.
 - **Native Settings Control**: Fine-tune target queues and batch sizes directly from Subreddit Mod Tools.
 
@@ -53,7 +55,7 @@ Archive All Modmail effortlessly clears overgrown subreddit inboxes without brow
 
 ### Your Four-Step Workflow
 
-1. **Trigger**: A moderator clicks **Archive All Modmail (Background)** from Subreddit Mod Tools.
+1. **Trigger**: A moderator opens **Archive All Modmail** and selects **Start Background Archive**.
 2. **Lock**: Redis concurrency locks initialize a dedicated run session and verify target queues.
 3. **Process**: Background workers pull conversations in 100-item batches and archive them in throttled 10-item chunks.
 4. **Complete**: Workers loop automatically until selected queues reach Inbox Zero and report final counts.
@@ -64,8 +66,8 @@ Archive All Modmail effortlessly clears overgrown subreddit inboxes without brow
 
 1. **Install**: Add **Archive All Modmail** to your subreddit through the Reddit App Directory.
 2. **Configure Queues**: Open **Mod Tools > App Settings > Archive All Modmail** and pick your target queues.
-3. **Start Cleanup**: Click **Archive All Modmail (Background)** from the subreddit action menu.
-4. **Monitor**: Check **Check Modmail Archive Status** anytime to observe real-time progress.
+3. **Start Cleanup**: Open the subreddit menu (`...`), select **Archive All Modmail**, and choose **Start Background Archive**.
+4. **Monitor**: Open **Archive All Modmail** and choose **Check Status** anytime to observe real-time progress.
 
 *No repetitive manual clicking. Safe, automated Inbox Zero in your native workflow.*
 

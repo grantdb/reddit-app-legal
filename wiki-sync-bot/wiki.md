@@ -51,7 +51,11 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 ## Setup and Usage
 - Install: Add WikiSync Bot to your subreddit.
 - Configure: Open Mod Tools > App Settings > WikiSync Bot.
-- Trigger Sync: Open the subreddit menu and click GuardHub: Sync Wiki Pages Now or GuardHub: Sync Bot Knowledge (Schema)**.
+- Trigger Operations: Open the subreddit menu (`...`), select WikiSync Bot, and choose your action:
+- Sync Changed Wiki Pages: Check manifest and update modified app pages incrementally.
+- Sync Single App Wiki: Fetch and update a specific app's documentation page.
+- Force Sync All Wiki Pages: Full re-synchronization of all fleet wiki pages in the background.
+- Sync Bot Knowledge Schema: Update `bot_knowledge` JSON schema directly.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.

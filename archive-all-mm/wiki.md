@@ -46,8 +46,8 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 ## Setup and Usage
 - Install: Add Archive All Modmail to your subreddit through the Reddit App Directory.
 - Configure Queues: Open Mod Tools > App Settings > Archive All Modmail and pick your target queues.
-- Start Cleanup: Click Archive All Modmail (Background)** from the subreddit action menu.
-- Monitor: Check Check Modmail Archive Status anytime to observe real-time progress.
+- Start Cleanup: Open the subreddit menu (`...`), select Archive All Modmail, and choose Start Background Archive.
+- Monitor: Open Archive All Modmail and choose Check Status anytime to observe real-time progress.
 - No repetitive manual clicking. Safe, automated Inbox Zero in your native workflow.*
 
 ## Troubleshooting
