@@ -1,7 +1,7 @@
 # App Update Checker
 
 Category: Utility  
-Version: v0.0.69  
+Version: v0.0.70  
 Visibility: Unlisted  
 Summary: AI-powered version tracking across the fleet. Uses Gemini 2.5 to bypass external scraper blocks.
 
