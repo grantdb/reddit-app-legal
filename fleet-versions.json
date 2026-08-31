@@ -141,7 +141,7 @@
   },
   "gimmecode-guard": {
     "name": "GimmeCode Guard",
-    "version": "0.0.35",
+    "version": "0.0.36",
     "visibility": "unlisted"
   },
   "action-guard": {
