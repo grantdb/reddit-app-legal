@@ -55,7 +55,7 @@ RescueGuard gives moderation teams an assistive, privacy-first discovery engine 
 
 ### Your Four-Step Workflow
 
-1. **Trigger**: A moderator clicks **GuardHub: RescueGuard Review** in the subreddit menu.
+1. **Trigger**: A moderator clicks **GuardHub: RescueGuard Review Hub** in the subreddit menu.
 2. **Scan & Rank**: RescueGuard scans submissions from the lookback window, excludes multi-submission or moderated items, and ranks low-attention candidates.
 3. **Review**: The moderator inspects candidate posts and URLs and selects **Approve and Spotlight**, **Skip**, or **Dismiss**.
 4. **Spotlight & Log**: If approved, RescueGuard applies the configured flair and sticky comment, then logs the decision in Redis.
@@ -67,7 +67,7 @@ RescueGuard gives moderation teams an assistive, privacy-first discovery engine 
 1. **Install**: Add **RescueGuard** to your subreddit through the Reddit App Directory.
 2. **Configure**: Open **Mod Tools > App Settings > RescueGuard**.
 3. **Set Thresholds**: Configure your batch size, minimum post age, lookback days, deduplication strategy, and spotlight flair/comment text.
-4. **Launch Review**: Open the subreddit menu and select **GuardHub: RescueGuard Review**.
+4. **Launch Review**: Open the subreddit menu and select **GuardHub: RescueGuard Review Hub**.
 
 ---
 

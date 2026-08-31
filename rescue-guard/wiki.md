@@ -22,6 +22,9 @@ Subreddit post-discovery & manual spotlight moderation engine for Reddit.
 ### Menu Actions
 - GuardHub: RescueGuard Review: Review low-attention posts from the lookback window for community spotlighting (Location: subreddit)
 
+### Custom Post Types and Entrypoints
+- Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
+
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
@@ -53,7 +56,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Install: Add RescueGuard to your subreddit through the Reddit App Directory.
 - Configure: Open Mod Tools > App Settings > RescueGuard.
 - Set Thresholds: Configure your batch size, minimum post age, lookback days, deduplication strategy, and spotlight flair/comment text.
-- Launch Review: Open the subreddit menu and select GuardHub: RescueGuard Review.
+- Launch Review: Open the subreddit menu and select GuardHub: RescueGuard Review Hub.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.

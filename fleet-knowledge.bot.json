@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-31T03:14:10.809Z",
+  "generatedAt": "2026-08-31T05:46:21.046Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2726,7 +2726,7 @@
         "Install: Add RescueGuard to your subreddit through the Reddit App Directory.",
         "Configure: Open Mod Tools > App Settings > RescueGuard.",
         "Set Thresholds: Configure your batch size, minimum post age, lookback days, deduplication strategy, and spotlight flair/comment text.",
-        "Launch Review: Open the subreddit menu and select GuardHub: RescueGuard Review."
+        "Launch Review: Open the subreddit menu and select GuardHub: RescueGuard Review Hub."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -2746,7 +2746,7 @@
         "redis": true,
         "http": false,
         "scheduler": false,
-        "customPost": false
+        "customPost": true
       },
       "triggers": [],
       "menuItems": [
@@ -2765,7 +2765,7 @@
         "troubleshooting": "Check the RescueGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-08-31"
     }
   ]
 }
