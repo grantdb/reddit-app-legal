@@ -1,21 +1,28 @@
 > 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/playscraper-bot)
 
-# Playscraper Bot
+# Playscraper Bot 📱
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
 ![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
 ![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-AI_Analyzer-8A2BE2?style=for-the-badge)
 
+> **Instantly extract, summarize, and display app store metadata, cost, and developer details for community submissions.**
+
 **Playscraper Bot** is a professional moderator utility that leverages AI to extract and summarize metadata from app stores and open-source repositories. By automatically posting standardized, highly informative comment headers on submissions containing links to these platforms, it helps moderators and users verify shared software content at a glance without having to click away from Reddit.
+
+---
 
 ## Key Features
 
 - **Multi-Source Detection**: Seamlessly identifies links from the Google Play Store, F-Droid, GitHub, GitLab, and Codeberg.
+- **Cost & Pricing Transparency**: Highlights app pricing (Free, Paid) and in-app purchase requirements directly in summary comments.
 - **AI-Powered Summaries**: Integrates with Gemini 2.5 Flash to rapidly extract key metrics like developer name, download counts, categories, user ratings, and content ratings.
 - **Eligibility-First Processing**: Employs a sophisticated delayed-processing pattern. It waits a configurable amount of time to confirm a new post is still live (not caught by Reddit's spam filters or AutoModerator) before making any expensive external API calls, saving your quota.
 - **Automated or Manual Automation**: Can run automatically on all new posts, or be set to manual mode where it only scans when a moderator clicks "Trigger App Scraper" in the Mod menu.
 - **Configurable Detail Levels**: Tailor the output comment's length by choosing between "Confirmed Only", "General Details", or "Full Details".
+
+---
 
 ## How It Works
 
@@ -27,6 +34,8 @@
 4. The raw HTML is fed to Gemini to extract structured metadata.
 5. A highly readable, stickied comment is posted summarizing the app for the community.
 
+---
+
 ## Setup & Configuration
 
 1. **Install**: Add **Playscraper Bot** via the App Directory.
@@ -37,10 +46,14 @@
    - Set your preferred Comment Detail Level.
 4. **Monitoring**: The bot operates silently in the background unless configured for Manual mode.
 
+---
+
 ## Support
 
 For help, bug reports, or feature requests, post in r/grantdb.
 Please include the app name, what you expected, what happened, and any error text or screenshots.
+
+---
 
 ## Legal
 

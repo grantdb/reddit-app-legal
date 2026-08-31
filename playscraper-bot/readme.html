@@ -1,18 +1,22 @@
 <blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/playscraper-bot">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
-<h1>Playscraper Bot</h1>
+<h1>Playscraper Bot 📱</h1>
 <p><a href="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white">Reddit</a></p>
 <p><a href="https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge">Devvit</a></p>
 <p><a href="https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge">Category</a></p>
 <p><a href="https://img.shields.io/badge/Type-AI_Analyzer-8A2BE2?style=for-the-badge">Type</a></p>
+<blockquote><p><strong>Instantly extract, summarize, and display app store metadata, cost, and developer details for community submissions.</strong></p></blockquote>
 <p><strong>Playscraper Bot</strong> is a professional moderator utility that leverages AI to extract and summarize metadata from app stores and open-source repositories. By automatically posting standardized, highly informative comment headers on submissions containing links to these platforms, it helps moderators and users verify shared software content at a glance without having to click away from Reddit.</p>
+<p>---</p>
 <h2>Key Features</h2>
 <ul>
 <li><strong>Multi-Source Detection</strong>: Seamlessly identifies links from the Google Play Store, F-Droid, GitHub, GitLab, and Codeberg.</li>
+<li><strong>Cost & Pricing Transparency</strong>: Highlights app pricing (Free, Paid) and in-app purchase requirements directly in summary comments.</li>
 <li><strong>AI-Powered Summaries</strong>: Integrates with Gemini 2.5 Flash to rapidly extract key metrics like developer name, download counts, categories, user ratings, and content ratings.</li>
 <li><strong>Eligibility-First Processing</strong>: Employs a sophisticated delayed-processing pattern. It waits a configurable amount of time to confirm a new post is still live (not caught by Reddit's spam filters or AutoModerator) before making any expensive external API calls, saving your quota.</li>
 <li><strong>Automated or Manual Automation</strong>: Can run automatically on all new posts, or be set to manual mode where it only scans when a moderator clicks "Trigger App Scraper" in the Mod menu.</li>
 <li><strong>Configurable Detail Levels</strong>: Tailor the output comment's length by choosing between "Confirmed Only", "General Details", or "Full Details".</li>
 </ul>
+<p>---</p>
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/playscraper-bot-flowchart.png">Logic Flowchart</a></p>
 <p>1. A user posts a link to a supported app store or repository.</p>
@@ -20,6 +24,7 @@
 <p>3. If the post is still valid, the bot scrapes the external URL.</p>
 <p>4. The raw HTML is fed to Gemini to extract structured metadata.</p>
 <p>5. A highly readable, stickied comment is posted summarizing the app for the community.</p>
+<p>---</p>
 <h2>Setup & Configuration</h2>
 <p>1. <strong>Install</strong>: Add <strong>Playscraper Bot</strong> via the App Directory.</p>
 <p>2. <strong>API Key Requirement</strong>: Obtain a free Google Gemini API Key from Google AI Studio.</p>
@@ -30,9 +35,11 @@
 <li>Set your preferred Comment Detail Level.</li>
 </ul>
 <p>4. <strong>Monitoring</strong>: The bot operates silently in the background unless configured for Manual mode.</p>
+<p>---</p>
 <h2>Support</h2>
 <p>For help, bug reports, or feature requests, post in r/grantdb.</p>
 <p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
 <h2>Legal</h2>
 <p>This application is subject to the following legal agreements:</p>
 <ul>
