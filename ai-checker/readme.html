@@ -6,11 +6,11 @@
 <p><a href="https://img.shields.io/badge/Category-Security-blue?style=for-the-badge">Category</a></p>
 <p><a href="https://img.shields.io/badge/Type-AI_Analyzer-8A2BE2?style=for-the-badge">Type</a></p>
 <blockquote><p><strong>Detect AI-generated text and synthetic images with multi-model confidence scores.</strong></p></blockquote>
-<p>AI Checker helps moderation teams identify and evaluate synthetic text and AI-generated imagery across subreddit submissions. Combining multi-provider vision and language models with unified scoring, it supports both manual post menu audits and automated background queues.</p>
+<p>AI Checker helps moderation teams identify and evaluate synthetic text and AI-generated imagery across subreddit submissions. Combining multi-provider vision and language models (including native Google Gemini 2.5 Flash / Pro) with unified scoring, it supports both manual post menu audits and automated background queues.</p>
 <p>---</p>
 <h2>At a Glance</h2>
 <ul>
-<li><strong>Multi-model detection</strong>: Connect to Google Gemini, GPTZero, Sightengine, or Hive Moderation.</li>
+<li><strong>Multi-model detection</strong>: Connect to Google Gemini (2.5 Flash for text, 2.5 Pro for vision), GPTZero, Sightengine, or Hive Moderation.</li>
 <li><strong>Text & image analysis</strong>: Scan written submissions as well as synthetic image attachments.</li>
 <li><strong>Unified 1–10 scoring scale</strong>: Normalize complex provider metrics into clear, standardized ratings.</li>
 <li><strong>On-demand & auto-scan</strong>: Audit specific posts via menu actions or scan new submissions automatically.</li>
@@ -22,7 +22,7 @@
 <h2>Built for Accurate Content Analysis</h2>
 <ul>
 <li><strong>Multi-Provider Architecture</strong>: Choose from Google Gemini (text & vision), GPTZero (text), Sightengine (images), or Hive (multi-modal).</li>
-<li><strong>On-Demand Menu Audits</strong>: Evaluate suspected posts directly from the Reddit post moderator overflow menu.</li>
+<li><strong>On-Demand Menu Audits</strong>: Evaluate suspected posts directly from the Reddit post moderator overflow menu with <strong>AI Checker: Scan Post</strong>.</li>
 <li><strong>Automated Queue Scanning</strong>: Automatically scan incoming submissions after a configurable delay to preserve API quota.</li>
 <li><strong>Eligibility-First Processing</strong>: Validates that posts remain active and unremoved before consuming external API scan requests.</li>
 <li><strong>Flexible Action Reporting</strong>: Attach distinguished sticky comments, lock notice threads, or deliver private notifications to modmail.</li>
@@ -32,7 +32,7 @@
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ai-checker-flowchart.png">Logic Flowchart</a></p>
 <h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Trigger</strong>: A moderator clicks <strong>Check AI Content</strong> from a post menu, or auto-scan picks up a new submission.</p>
+<p>1. <strong>Trigger</strong>: A moderator clicks <strong>AI Checker: Scan Post</strong> from a post menu, or auto-scan picks up a new submission.</p>
 <p>2. <strong>Verify</strong>: AI Checker confirms post eligibility, active status, and community hourly scan quota.</p>
 <p>3. <strong>Analyze</strong>: Post text or image media is transmitted to the configured AI analysis provider.</p>
 <p>4. <strong>Report</strong>: The returned confidence metric is normalized to a 1–10 rating and posted as a mod sticky or log.</p>

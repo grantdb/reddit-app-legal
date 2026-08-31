@@ -10,13 +10,13 @@
 
 > **Detect AI-generated text and synthetic images with multi-model confidence scores.**
 
-AI Checker helps moderation teams identify and evaluate synthetic text and AI-generated imagery across subreddit submissions. Combining multi-provider vision and language models with unified scoring, it supports both manual post menu audits and automated background queues.
+AI Checker helps moderation teams identify and evaluate synthetic text and AI-generated imagery across subreddit submissions. Combining multi-provider vision and language models (including native Google Gemini 2.5 Flash / Pro) with unified scoring, it supports both manual post menu audits and automated background queues.
 
 ---
 
 ## At a Glance
 
-- **Multi-model detection**: Connect to Google Gemini, GPTZero, Sightengine, or Hive Moderation.
+- **Multi-model detection**: Connect to Google Gemini (2.5 Flash for text, 2.5 Pro for vision), GPTZero, Sightengine, or Hive Moderation.
 - **Text & image analysis**: Scan written submissions as well as synthetic image attachments.
 - **Unified 1–10 scoring scale**: Normalize complex provider metrics into clear, standardized ratings.
 - **On-demand & auto-scan**: Audit specific posts via menu actions or scan new submissions automatically.
@@ -39,7 +39,7 @@ AI Checker helps moderation teams identify and evaluate synthetic text and AI-ge
 ## Built for Accurate Content Analysis
 
 - **Multi-Provider Architecture**: Choose from Google Gemini (text & vision), GPTZero (text), Sightengine (images), or Hive (multi-modal).
-- **On-Demand Menu Audits**: Evaluate suspected posts directly from the Reddit post moderator overflow menu.
+- **On-Demand Menu Audits**: Evaluate suspected posts directly from the Reddit post moderator overflow menu with **AI Checker: Scan Post**.
 - **Automated Queue Scanning**: Automatically scan incoming submissions after a configurable delay to preserve API quota.
 - **Eligibility-First Processing**: Validates that posts remain active and unremoved before consuming external API scan requests.
 - **Flexible Action Reporting**: Attach distinguished sticky comments, lock notice threads, or deliver private notifications to modmail.
@@ -53,7 +53,7 @@ AI Checker helps moderation teams identify and evaluate synthetic text and AI-ge
 
 ### Your Four-Step Workflow
 
-1. **Trigger**: A moderator clicks **Check AI Content** from a post menu, or auto-scan picks up a new submission.
+1. **Trigger**: A moderator clicks **AI Checker: Scan Post** from a post menu, or auto-scan picks up a new submission.
 2. **Verify**: AI Checker confirms post eligibility, active status, and community hourly scan quota.
 3. **Analyze**: Post text or image media is transmitted to the configured AI analysis provider.
 4. **Report**: The returned confidence metric is normalized to a 1–10 rating and posted as a mod sticky or log.
