@@ -10,12 +10,13 @@
 
 > **Track installed app versions, discover new releases, and receive automated modmail update alerts for any subreddit.**
 
-App Update Checker ensures your subreddit's Devvit tools and moderation bots remain secure and up-to-date. Automatically discovering active tools on your subreddit and running silent daily audits against the Reddit App Directory, it keeps your mod team informed whenever an app author publishes a new release.
+App Update Checker ensures your subreddit's Devvit tools and moderation bots remain secure and up-to-date. Powered by an automated backend directory scraper that continuously tracks public Reddit App Directory releases, it runs silent daily audits and keeps your mod team informed whenever an app author publishes a new version.
 
 ---
 
 ## At a Glance
 
+- **Automated backend directory scraper**: Continuously monitors and extracts release versions from public Reddit App Directory listings into an up-to-date manifest feed.
 - **Clear, verified onboarding**: Guides your mod team to update apps in Mod Tools and sync baseline tracking on initial install.
 - **Silent daily audits**: Runs a lightweight background check every day at 12:00 UTC with zero modmail spam—alerts are sent only when a new update is published.
 - **Modmail upgrade alerts**: Delivers clean, text-formatted summary tables with direct links to update pages on the Reddit App Directory.
@@ -56,7 +57,7 @@ App Update Checker ensures your subreddit's Devvit tools and moderation bots rem
 
 1. **Discover**: App Update Checker discovers installed Devvit applications from subreddit bot signatures and configured custom slugs.
 2. **Setup & Sync**: Make sure to update all your apps via Reddit's **Mod Tools > Installed Apps**, then run **Sync All Apps as Updated** in the menu popout.
-3. **Silent Audit**: Runs automated daily checks against authoritative Reddit App Directory snapshots at 12:00 UTC.
+3. **Silent Audit**: Runs automated daily checks at 12:00 UTC, comparing active community tools against version feeds compiled by our backend directory scraper.
 4. **Notify**: Delivers an actionable Modmail alert only when an app author publishes a new release.
 
 ---
@@ -76,8 +77,9 @@ App Update Checker ensures your subreddit's Devvit tools and moderation bots rem
 
 App Update Checker is engineered for resilient version resolution and lightweight background execution.
 
-- **Authoritative Directory Snapshot**: Reads a continuously updated Reddit App Directory feed and manifest from `raw.githubusercontent.com`.
-- **Redis-Cached Snapshot**: The directory snapshot is cached for an hour per check run to avoid redundant network calls.
+- **Automated Backend Directory Scraper**: An automated backend pipeline crawls and scrapes public listings on `developers.reddit.com/apps/...` to maintain a continuously updated version dataset (`latest_versions.json`).
+- **Redis-Cached Feed Delivery**: The directory snapshot is fetched from `raw.githubusercontent.com` and cached in Redis for fast, lightweight checks within platform limits.
+- **Deterministic Semver Comparison**: Standard semver parsing reliably detects patch, minor, and major version increments without false positives.
 - **Scheduled Cron Runner**: Executes automated checks on a daily cron schedule at 12:00 UTC.
 - **Modmail Markdown Formatter**: Formats clean markdown tables with direct links to app install pages.
 
