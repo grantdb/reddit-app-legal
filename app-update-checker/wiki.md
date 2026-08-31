@@ -3,10 +3,10 @@
 Category: Utility  
 Version: v0.0.70  
 Visibility: Unlisted  
-Summary: AI-powered version tracking across the fleet. Uses Gemini 2.5 to bypass external scraper blocks.
+Summary: Automated version tracking and release notification engine for Reddit Devvit apps. Daily silent audits and modmail alerts.
 
 ## Overview
-AI-powered version tracking across the fleet. Uses Gemini 2.5 to bypass external scraper blocks.
+Automated version tracking and release notification engine for Reddit Devvit apps. Daily silent audits and modmail alerts.
 
 ## Flowchart
 [View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png)

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-30T20:04:23.876Z",
+  "generatedAt": "2026-08-31T02:43:20.954Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -772,7 +772,7 @@
         "app update checker",
         "appupdatechecker"
       ],
-      "summary": "AI-powered version tracking across the fleet. Uses Gemini 2.5 to bypass external scraper blocks.",
+      "summary": "Automated version tracking and release notification engine for Reddit Devvit apps. Daily silent audits and modmail alerts.",
       "keywords": [
         "app-update-checker",
         "app update checker",
@@ -826,7 +826,7 @@
         "troubleshooting": "Check the App Update Checker troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-30"
+      "lastUpdated": "2026-08-31"
     },
     {
       "appId": "gate-defender",
