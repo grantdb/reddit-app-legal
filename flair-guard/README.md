@@ -8,16 +8,15 @@
 ![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-Community_Styling-8A2BE2?style=for-the-badge)
 
-> **Automate post and user flair assignment to keep your community organized.**
+> **Automate post flair assignment to keep your community organized and searchable.**
 
-Flair Guard ensures your subreddit stays visually structured and searchable by automatically applying post and user flairs. Map keywords, domain links, and author participation standing to specific flair templates—all configured through clean native settings without fragile AutoModerator rules.
+Flair Guard ensures your subreddit stays visually structured and searchable by automatically applying post flairs on submission. Map keywords and domain links to specific flair templates—all configured through clean native settings without fragile AutoModerator rules.
 
 ---
 
 ## At a Glance
 
 - **Automate post flairing**: Categorize submissions automatically based on title keywords and link domains.
-- **Dynamic user badges**: Apply user flairs based on contributor reputation, verified status, or milestone criteria.
 - **Keep feeds searchable**: Ensure consistent flair categorization across all community submissions.
 - **Reduce mod queue cleanup**: Stop manually flairing untagged posts or sending flair reminder messages.
 - **Native Devvit settings**: Configure all template mappings directly from Subreddit Mod Tools.
@@ -32,7 +31,7 @@ Flair Guard ensures your subreddit stays visually structured and searchable by a
 | Writing complex AutoMod regex for flair template IDs | **Clean settings configuration** linking keywords to flair templates |
 | Sending repetitive modmail reminders for missing flairs | **Instant automated categorization** without user friction |
 | Inconsistent flair styling across different moderators | **Uniform community organization** enforced with 100% consistency |
-| Mod team manually updating user status flairs | **Automated reputation-based flairing** based on author standing |
+| Mod team manually updating user status flairs | **Consistent automated categorization** enforced across all submissions |
 
 ---
 
@@ -40,7 +39,7 @@ Flair Guard ensures your subreddit stays visually structured and searchable by a
 
 - **Keyword-to-Flair Mapping**: Automatically assign specific post flairs when submission titles contain designated trigger words or tags.
 - **Domain-Based Categorization**: Apply custom link flairs based on destination URL hostnames (e.g. News, Video, Official Source).
-- **Dynamic User Badges**: Assign specialized user flairs to recognize established community contributors or highlight verified members.
+- **Dynamic Post Categorization**: Assign specialized post flairs based on title keywords, link hostnames, or text body patterns.
 - **Deduplication Safeguards**: Built-in atomic locking prevents duplicate flair applications during platform trigger retries.
 - **Author & Moderator Exemptions**: Protect mod announcements and custom author flairs from being overwritten.
 - **Seamless Settings Management**: Configure all template IDs and matching rules directly from Subreddit Mod Tools.
@@ -84,7 +83,7 @@ Flair Guard is engineered for fast pattern matching and reliable flair assignmen
 
 ## Designed to Assist Moderators
 
-Flair Guard automates post and user flair categorization according to the exact mappings defined by your moderation team. Automated flairs serve as organization tools—human moderators maintain full authority to edit, override, remove, or reassign flairs at any time.
+Flair Guard automates post flair categorization according to the exact mappings defined by your moderation team. Automated flairs serve as organization tools—human moderators maintain full authority to edit, override, remove, or reassign flairs at any time.
 
 ---
 

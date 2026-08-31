@@ -40,7 +40,7 @@ WikiSync Bot provides subreddit moderators with a high-reliability engine to pub
 
 ### Your Four-Step Workflow
 
-1. **Configure**: Set up background polling intervals and test targets in Mod Tools > App Settings.
+1. **Install \u0026 Schedule**: WikiSync Bot automatically schedules a recurring 15-minute background sync and configures test targets in Mod Tools > App Settings.
 2. **Sync Manifest**: WikiSync Bot checks the remote fleet manifest (`wiki-manifest.json`) for updated content hashes.
 3. **Dual-Write Engine**: Fetches clean HTML/JSON payloads from GitHub and writes directly to Reddit wiki endpoints (`index/all-apps/<slug>` + `<slug>` + `bot_knowledge`).
 4. **Live Verification**: Reads back and verifies the updated wiki page revisions, updating local cache.

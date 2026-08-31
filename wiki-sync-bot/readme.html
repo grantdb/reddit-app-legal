@@ -21,7 +21,7 @@
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/wiki-sync-bot-flowchart.png">Logic Flowchart</a></p>
 <h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Configure</strong>: Set up background polling intervals and test targets in Mod Tools > App Settings.</p>
+<p>1. <strong>Install \u0026 Schedule</strong>: WikiSync Bot automatically schedules a recurring 15-minute background sync and configures test targets in Mod Tools > App Settings.</p>
 <p>2. <strong>Sync Manifest</strong>: WikiSync Bot checks the remote fleet manifest (`wiki-manifest.json`) for updated content hashes.</p>
 <p>3. <strong>Dual-Write Engine</strong>: Fetches clean HTML/JSON payloads from GitHub and writes directly to Reddit wiki endpoints (`index/all-apps/<slug>` + `<slug>` + `bot_knowledge`).</p>
 <p>4. <strong>Live Verification</strong>: Reads back and verifies the updated wiki page revisions, updating local cache.</p>

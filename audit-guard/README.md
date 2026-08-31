@@ -8,18 +8,18 @@
 ![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
 ![Type](https://img.shields.io/badge/Type-Logging-8A2BE2?style=for-the-badge)
 
-> **Maintain a transparent, searchable audit ledger of all moderation actions and config changes.**
+> **Maintain a transparent, searchable audit ledger of moderation actions and config changes.**
 
-Audit Guard provides your moderation team with a central, chronological security ledger. Ingesting event logs and configuration changes across your subreddit, it gives you complete transparency into what actions were taken, by whom, and when.
+Audit Guard provides your moderation team with a central, chronological security ledger. Record and review moderation events and configuration changes across your subreddit through an interactive dashboard, giving you complete transparency into what actions were taken, by whom, and when.
 
 ---
 
 ## At a Glance
 
-- **Centralized audit ledger**: Ingest and index moderation events across your community in chronological order.
+- **Centralized audit ledger**: Index moderation events across your community in chronological order.
 - **Track configuration shifts**: Maintain a clear history of setting adjustments and policy changes.
 - **Search and filter logs**: Quickly isolate events by moderator, action type, or target user in an interactive dashboard.
-- **Background telemetry ingestion**: Operates silently on automated schedules with zero disruption to active feeds.
+- **On-demand recording**: Record and log moderation actions directly from the dashboard interface.
 - **Private dashboard access**: Review logs securely from an unlisted custom post inside your subreddit.
 
 ---
@@ -38,11 +38,11 @@ Audit Guard provides your moderation team with a central, chronological security
 
 ## Built for Team Accountability & Oversight
 
-- **Automated Event Ingestion**: Silently collects and normalizes moderation events, enforcement actions, and configuration updates.
+- **Dashboard Event Recording**: Record moderation events, enforcement actions, and configuration updates directly from the interactive dashboard.
 - **Historical Change Tracking**: Records a clean, accessible timeline of setting modifications so your team stays aligned on policy changes.
 - **Fast In-Dashboard Search**: Filter events by moderator username, action category, or specific keywords to trace past incidents in seconds.
 - **Automated Retention Management**: Maintains a rolling historical buffer in Redis with automatic deduplication and state hygiene.
-- **Zero-Friction Operation**: Runs passively in the background without requiring manual log exports or external spreadsheet maintenance.
+- **Low-Friction Operation**: Log events from the dashboard without requiring manual log exports or external spreadsheet maintenance.
 - **Dedicated Audit Center**: Access an interactive Webview dashboard from Subreddit Mod Tools to inspect logs and review activity trends.
 
 ---
@@ -53,8 +53,8 @@ Audit Guard provides your moderation team with a central, chronological security
 
 ### Your Four-Step Workflow
 
-1. **Record**: Moderation operations and configuration changes generate event payloads.
-2. **Ingest**: Audit Guard ingests and normalizes incoming telemetry through automated background synchronizations.
+1. **Record**: A moderator logs a moderation action or configuration change from the dashboard.
+2. **Normalize**: Audit Guard normalizes the event payload with timestamps and metadata.
 3. **Index**: Events are appended to a chronological Redis sorted-set ledger with deduplication safeguards.
 4. **Inspect**: Moderators open the interactive dashboard to search, filter, and review historical audit records.
 
@@ -64,7 +64,7 @@ Audit Guard provides your moderation team with a central, chronological security
 
 1. **Install**: Add **Audit Guard** to your subreddit through the Reddit App Directory.
 2. **Initialize Dashboard**: Select **GuardHub: Create Audit Dashboard** from Subreddit Mod Tools.
-3. **Passive Ingestion**: Audit Guard automatically begins indexing community moderation events.
+3. **Record Events**: Use the dashboard to log moderation actions and configuration changes.
 4. **Review**: Open your dashboard anytime to inspect event history and search specific actions.
 
 *No external database setup required. Complete moderation transparency directly in your subreddit.*

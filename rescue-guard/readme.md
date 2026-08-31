@@ -16,7 +16,7 @@ RescueGuard gives moderation teams an assistive, privacy-first discovery engine 
 
 ## At a Glance
 
-- **Configurable Lookback Scan**: Analyzes recent subreddit submissions across customizable lookback windows (default: 30 days).
+- **On-Demand Lookback Scan**: Scans recent subreddit submissions across customizable lookback windows (default: 30 days) when triggered by a moderator.
 - **Engagement Velocity Ranking**: Prioritizes posts with low upvotes and low discussion counts using weighted scoring.
 - **Minimum Age Filtration**: Prevents brand-new posts from surfacing before they have had natural feed exposure.
 - **Single-Submission Gate**: Optionally excludes items or apps submitted multiple times across the lookback window.
@@ -31,7 +31,7 @@ RescueGuard gives moderation teams an assistive, privacy-first discovery engine 
 
 | Traditional Workflow | With RescueGuard |
 | :--- | :--- |
-| Good posts getting lost in fast-moving subreddit feeds | **Automated low-attention discovery** surfacing overlooked content |
+| Good posts getting lost in fast-moving subreddit feeds | **On-demand low-attention discovery** surfacing overlooked content |
 | Manually scrolling weeks of back-catalog looking for uncredited gems | **Ranked candidate review queue** delivered directly in Mod Tools |
 | Accidental repeat reviews of previously dismissed posts | **Direct Redis audit memory** pruning reviewed posts automatically |
 | Complicated external analytics scrapers and cron jobs | **Native Devvit architecture** operating securely inside Reddit |

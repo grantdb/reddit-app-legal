@@ -48,7 +48,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 ## Setup and Usage
 - Install: Add Audit Guard to your subreddit through the Reddit App Directory.
 - Initialize Dashboard: Select GuardHub: Create Audit Dashboard from Subreddit Mod Tools.
-- Passive Ingestion: Audit Guard automatically begins indexing community moderation events.
+- Record Events: Use the dashboard to log moderation actions and configuration changes.
 - Review: Open your dashboard anytime to inspect event history and search specific actions.
 - No external database setup required. Complete moderation transparency directly in your subreddit.*
 
