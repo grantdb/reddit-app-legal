@@ -61,7 +61,7 @@
   },
   "app-update-checker": {
     "name": "App Update Checker",
-    "version": "0.0.73",
+    "version": "0.0.74",
     "visibility": "unlisted"
   },
   "gate-defender": {

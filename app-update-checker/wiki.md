@@ -1,7 +1,7 @@
 # App Update Checker
 
 Category: Utility  
-Version: v0.0.74  
+Version: v0.0.75  
 Visibility: Unlisted  
 Summary: Automated version tracking and release notification engine for Reddit Devvit apps. Daily silent audits and modmail alerts.
 
@@ -22,7 +22,6 @@ Automated version tracking and release notification engine for Reddit Devvit app
 ## Triggers and Activation
 ### Menu Actions
 - App Update Checker: Open moderator controls for update checks, baselines, and cache (Location: subreddit)
-- App Update Checker: Open moderator controls for update checks, baselines, and cache (Location: post)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
@@ -60,13 +59,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.75 — 2026-09-01
+- Standard fleet synchronization and maintenance.
+
 0.0.73 — 2026-09-01
 - Standard fleet synchronization and maintenance.
 
 0.0.71 — 2026-08-31
-- Standard fleet synchronization and maintenance.
-
-0.0.69 — 2026-08-30
 - Standard fleet synchronization and maintenance.
 
 ## Links
