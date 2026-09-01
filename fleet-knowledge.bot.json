@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-01T06:46:57.070Z",
+  "generatedAt": "2026-09-01T20:50:18.245Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -1182,17 +1182,20 @@
         "reddit": true,
         "redis": true,
         "http": false,
-        "scheduler": false,
+        "scheduler": true,
         "customPost": true
       },
       "triggers": [
         "PostCreate",
         "PostSubmit",
+        "PostUpdate",
         "CommentCreate",
-        "CommentSubmit"
+        "CommentSubmit",
+        "AppInstall",
+        "AppUpgrade"
       ],
       "menuItems": [],
-      "settingsCount": 0,
+      "settingsCount": 1,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/domain-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/domain-guard",
@@ -1205,7 +1208,7 @@
         "troubleshooting": "Check the DomainGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-09-01"
     },
     {
       "appId": "user-guard",

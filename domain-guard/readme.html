@@ -23,6 +23,7 @@
 <ul>
 <li><strong>Granular Domain Control</strong>: Set strict allowlists or blocklists with automated subdomain and wildcard handling.</li>
 <li><strong>Context-Aware Scopes</strong>: Enforce rules across link submissions, text post bodies, comment threads, or all content simultaneously.</li>
+<li><strong>Automated Filter Re-Checking & Expiration</strong>: Automatically re-evaluates filtered posts upon edit and on schedule. Auto-approves when authors remove restricted links, or auto-removes after a configurable grace period.</li>
 <li><strong>Reputation-Gated Filtering</strong>: Apply domain restrictions exclusively to new or low-karma accounts while leaving established members unaffected.</li>
 <li><strong>Flexible Moderation Actions</strong>: Choose between silent removal, marking as spam, filtering to mod queue, reporting, or audit-only logging.</li>
 <li><strong>Repeat Offender Escalation</strong>: Automatically track repeated violations and escalate repeat link spammers to modmail for team review.</li>
@@ -31,11 +32,12 @@
 <p>---</p>
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/domain-guard-flowchart.png">Logic Flowchart</a></p>
-<h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Extract</strong>: Domain Guard intercepts new submissions and comments, extracting and normalizing all candidate URLs.</p>
+<h3>Your Five-Step Lifecycle</h3>
+<p>1. <strong>Extract</strong>: Domain Guard intercepts new submissions, edits, and comments, extracting and normalizing all candidate URLs.</p>
 <p>2. <strong>Evaluate</strong>: Domains are checked against global exemptions, moderator status, content scope, and user risk thresholds.</p>
 <p>3. <strong>Enforce</strong>: When a restricted domain matches an active rule, the configured moderation action (`remove`, `spam`, `filter`, or `report`) executes immediately.</p>
-<p>4. <strong>Escalate</strong>: Repeat violations are recorded, and summary notifications are dispatched to modmail when configured.</p>
+<p>4. <strong>Auto-Recheck</strong>: Filtered submissions in the mod queue are automatically tracked and re-checked on edits (`onPostUpdate`) and recurring schedule. Cleaned posts are auto-approved; unedited posts exceeding the grace period are auto-removed.</p>
+<p>5. <strong>Escalate</strong>: Repeat violations are recorded, and summary notifications are dispatched to modmail when configured.</p>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>Domain Guard</strong> to your subreddit through the Reddit App Directory.</p>

@@ -1,7 +1,7 @@
 # DomainGuard
 
 Category: Security  
-Version: v0.0.147  
+Version: v0.0.148  
 Visibility: Public  
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
@@ -22,8 +22,11 @@ Professional URL and domain moderation engine with singleton architecture and ha
 ### Menu Actions
 - PostCreate: Delivered by Reddit event router to endpoint /internal/trigger/post.
 - PostSubmit: Delivered by Reddit event router to endpoint /internal/trigger/post.
+- PostUpdate: Delivered by Reddit event router to endpoint /internal/trigger/post-update.
 - CommentCreate: Delivered by Reddit event router to endpoint /internal/trigger/comment.
 - CommentSubmit: Delivered by Reddit event router to endpoint /internal/trigger/comment.
+- AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.
+- AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-install.
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
@@ -31,12 +34,12 @@ Professional URL and domain moderation engine with singleton architecture and ha
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- No custom app settings.
+- recheckFilteredPostsJob: Anywhere (live, default: -). Anywhere
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
 - Attaches Removal Notes: No — Does not attach removal notes.
-- Approves Content: No — Does not approve content.
+- Approves Content: Yes — Approves content.
 - Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
 - Dispatches Modmail Alerts: Yes — Sends modmail notifications.
 - Updates User or Post Flair: No — Does not update flair.
@@ -61,13 +64,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.148 — 2026-09-01
+- Standard fleet synchronization and maintenance.
+
 0.0.147 — 2026-08-18
 - Standard fleet synchronization and maintenance.
 
 0.0.146 — 2026-08-15
-- Standard fleet synchronization and maintenance.
-
-0.0.145 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links

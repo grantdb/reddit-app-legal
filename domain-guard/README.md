@@ -40,6 +40,7 @@ Domain Guard protects your subreddit from malicious links, URL shorteners, and r
 
 - **Granular Domain Control**: Set strict allowlists or blocklists with automated subdomain and wildcard handling.
 - **Context-Aware Scopes**: Enforce rules across link submissions, text post bodies, comment threads, or all content simultaneously.
+- **Automated Filter Re-Checking & Expiration**: Automatically re-evaluates filtered posts upon edit and on schedule. Auto-approves when authors remove restricted links, or auto-removes after a configurable grace period.
 - **Reputation-Gated Filtering**: Apply domain restrictions exclusively to new or low-karma accounts while leaving established members unaffected.
 - **Flexible Moderation Actions**: Choose between silent removal, marking as spam, filtering to mod queue, reporting, or audit-only logging.
 - **Repeat Offender Escalation**: Automatically track repeated violations and escalate repeat link spammers to modmail for team review.
@@ -51,12 +52,13 @@ Domain Guard protects your subreddit from malicious links, URL shorteners, and r
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/domain-guard-flowchart.png)
 
-### Your Four-Step Workflow
+### Your Five-Step Lifecycle
 
-1. **Extract**: Domain Guard intercepts new submissions and comments, extracting and normalizing all candidate URLs.
+1. **Extract**: Domain Guard intercepts new submissions, edits, and comments, extracting and normalizing all candidate URLs.
 2. **Evaluate**: Domains are checked against global exemptions, moderator status, content scope, and user risk thresholds.
 3. **Enforce**: When a restricted domain matches an active rule, the configured moderation action (`remove`, `spam`, `filter`, or `report`) executes immediately.
-4. **Escalate**: Repeat violations are recorded, and summary notifications are dispatched to modmail when configured.
+4. **Auto-Recheck**: Filtered submissions in the mod queue are automatically tracked and re-checked on edits (`onPostUpdate`) and recurring schedule. Cleaned posts are auto-approved; unedited posts exceeding the grace period are auto-removed.
+5. **Escalate**: Repeat violations are recorded, and summary notifications are dispatched to modmail when configured.
 
 ---
 
