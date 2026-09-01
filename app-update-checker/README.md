@@ -41,7 +41,7 @@ App Update Checker ensures your subreddit's Devvit tools and moderation bots rem
 
 - **Automated App Discovery**: Identifies installed Devvit applications by matching moderator accounts against known app manifests.
 - **Silent Daily Audits**: Runs daily background checks without filling your modmail when everything is current.
-- **Unified Moderator Menu Popout**: Open **App Update Checker** from the subreddit overflow menu (`...`) to access:
+- **Unified Moderator Menu Popout**: Open **App Update Checker** from either the subreddit menu or any post overflow menu (`...`) across desktop, mobile, and tablet to access:
   - **Check for App Updates**: Run an immediate scan and receive a full status report in Modmail.
   - **Sync All Apps as Updated**: Lock in current versions as the baseline after updating apps in Mod Tools.
   - **Reset App Cache**: Clear cached data and trigger a fresh discovery scan.
