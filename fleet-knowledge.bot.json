@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-31T08:50:31.301Z",
+  "generatedAt": "2026-09-01T03:16:58.920Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2189,11 +2189,11 @@
         ]
       },
       "capabilities": {
-        "reddit": false,
+        "reddit": true,
         "redis": true,
         "http": false,
         "scheduler": true,
-        "customPost": false
+        "customPost": true
       },
       "triggers": [
         "PostCreate",
@@ -2202,10 +2202,8 @@
         "CommentSubmit",
         "AppInstall"
       ],
-      "menuItems": [
-        "VerifyGuard"
-      ],
-      "settingsCount": 2,
+      "menuItems": [],
+      "settingsCount": 1,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/verify-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/verify-guard",
@@ -2218,7 +2216,7 @@
         "troubleshooting": "Check the VerifyGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-31"
+      "lastUpdated": "2026-09-01"
     },
     {
       "appId": "rate-guard",

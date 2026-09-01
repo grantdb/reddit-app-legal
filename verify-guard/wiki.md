@@ -1,7 +1,7 @@
 # VerifyGuard
 
 Category: Security  
-Version: v0.0.5  
+Version: v0.0.6  
 Visibility: Public  
 Summary: Configurable multi-tier verification engine for user trust, age, and role verification.
 
@@ -15,16 +15,23 @@ Configurable multi-tier verification engine for user trust, age, and role verifi
 - Not documented yet.
 
 ## Permissions Used
+- reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
 - redis: Redis key-value storage (state tracking, caching, strike memory)
 
 ## Triggers and Activation
 ### Menu Actions
-- VerifyGuard: Open verification moderation dashboard or create intake post (Location: subreddit)
+- PostCreate: Delivered by Reddit event router to endpoint /internal/trigger/post.
+- PostSubmit: Delivered by Reddit event router to endpoint /internal/trigger/post.
+- CommentCreate: Delivered by Reddit event router to endpoint /internal/trigger/comment.
+- CommentSubmit: Delivered by Reddit event router to endpoint /internal/trigger/comment.
+- AppInstall: Delivered by Reddit event router to endpoint /internal/trigger/app-install.
+
+### Custom Post Types and Entrypoints
+- Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
 
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- action: Select Action (select, default: -). Select Action
 - daily-expiration-cron: Pending Queue (${queue.length}) (success, default: -). Pending Queue (${queue.length})
 
 ## Automation Capabilities
@@ -41,6 +48,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key-Value Strings (deduplication & cooldown markers)
 - Hashes (structured records & alias indices)
 - Sorted Sets (time-series audit logs)
+- Key patterns: node:http, verify_guard:dashboard_post_id
 
 ## Setup and Usage
 - Install: Add Verify Guard to your subreddit through the Reddit App Directory.
@@ -54,13 +62,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.6 — 2026-09-01
+- Standard fleet synchronization and maintenance.
+
 0.0.5 — 2026-08-31
 - Standard fleet synchronization and maintenance.
 
 0.0.4 — 2026-08-15
-- Standard fleet synchronization and maintenance.
-
-0.0.3 — 2026-08-10
 - Standard fleet synchronization and maintenance.
 
 ## Links
