@@ -94,5 +94,9 @@
   "gate-defender": {
     "version": "0.0.99",
     "updatedAt": "2026-09-02T07:47:37.685Z"
+  },
+  "rate-guard": {
+    "version": "0.0.8",
+    "updatedAt": "2026-09-02T07:52:02.695Z"
   }
 }
