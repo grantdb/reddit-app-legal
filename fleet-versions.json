@@ -161,12 +161,12 @@
   },
   "guard-hub": {
     "name": "Guard Hub",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "visibility": "unlisted"
   },
   "link-guard": {
     "name": "LinkGuard",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "visibility": "public"
   },
   "verify-guard": {

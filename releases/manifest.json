@@ -62,5 +62,9 @@
   "guard-hub": {
     "version": "0.0.13",
     "updatedAt": "2026-09-02T07:13:43.842Z"
+  },
+  "suspended-remove": {
+    "version": "1.0.83",
+    "updatedAt": "2026-09-02T07:42:22.126Z"
   }
 }
