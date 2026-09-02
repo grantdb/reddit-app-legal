@@ -1,7 +1,7 @@
 # App Update Checker
 
 Category: Utility  
-Version: v0.0.76  
+Version: v0.0.77  
 Visibility: Unlisted  
 Summary: Automated version tracking and release notification engine for Reddit Devvit apps. Daily silent audits and modmail alerts.
 
@@ -59,13 +59,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.77 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.76 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 0.0.75 — 2026-09-01
-- Standard fleet synchronization and maintenance.
-
-0.0.73 — 2026-09-01
 - Standard fleet synchronization and maintenance.
 
 ## Links

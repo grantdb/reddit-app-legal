@@ -1,16 +1,16 @@
 {
   "slug": "app-update-checker",
   "title": "App Update Checker",
-  "version": "0.0.76",
+  "version": "0.0.77",
   "date": "2026-09-02",
   "category": "Utility",
   "description": "Automated version tracking and release notification engine for Reddit Devvit apps. Daily silent audits and modmail alerts.",
   "visibility": "Unlisted",
   "notes": "- Standard fleet synchronization and maintenance.",
-  "postTitle": "[App Update] App Update Checker v0.0.76 Released",
-  "postBody": "# 🚀 App Update Checker v0.0.76 is Now Available\n\n> **Automated version tracking and release notification engine for Reddit Devvit apps. Daily silent audits and modmail alerts.**\n\n---\n\n### 📝 What's New in v0.0.76\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Utility\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/app-update-checker)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/app-update-checker)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **App Update Checker** and click **Update** (or verify it displays `v0.0.76`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "postTitle": "[App Update] App Update Checker v0.0.77 Released",
+  "postBody": "# 🚀 App Update Checker v0.0.77 is Now Available\n\n> **Automated version tracking and release notification engine for Reddit Devvit apps. Daily silent audits and modmail alerts.**\n\n---\n\n### 📝 What's New in v0.0.77\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Utility\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/app-update-checker)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/app-update-checker)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **App Update Checker** and click **Update** (or verify it displays `v0.0.77`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/app-update-checker",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/app-update-checker",
-  "generatedAt": "2026-09-02T05:44:18.841Z"
+  "generatedAt": "2026-09-02T06:15:33.190Z"
 }
