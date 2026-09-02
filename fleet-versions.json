@@ -81,7 +81,7 @@
   },
   "word-guard": {
     "name": "WordGuard",
-    "version": "0.0.186",
+    "version": "0.0.187",
     "visibility": "public"
   },
   "sg1-responder": {
