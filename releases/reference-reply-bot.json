@@ -1,0 +1,16 @@
+{
+  "slug": "reference-reply-bot",
+  "title": "Reference Reply Bot",
+  "version": "0.0.26",
+  "date": "2026-09-02",
+  "category": "Support",
+  "description": "Post-only support intake and reference bot for r/grantdb.",
+  "visibility": "Unlisted",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] Reference Reply Bot v0.0.26 Released",
+  "postBody": "# 🚀 Reference Reply Bot v0.0.26 is Now Available\n\n> **Post-only support intake and reference bot for r/grantdb.**\n\n---\n\n### 📝 What's New in v0.0.26\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Support\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/reference-reply-bot)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/reference-reply-bot-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/reference-reply-bot)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Reference Reply Bot** and click **Update** (or verify it displays `v0.0.26`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/reference-reply-bot",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/reference-reply-bot-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/reference-reply-bot",
+  "generatedAt": "2026-09-02T07:53:07.257Z"
+}

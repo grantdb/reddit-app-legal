@@ -176,7 +176,7 @@
   },
   "rate-guard": {
     "name": "RateGuard",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "visibility": "public"
   },
   "sgteam-dispatch": {
