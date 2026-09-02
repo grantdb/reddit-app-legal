@@ -1,0 +1,16 @@
+{
+  "slug": "verify-guard",
+  "title": "VerifyGuard",
+  "version": "0.0.7",
+  "date": "2026-09-02",
+  "category": "Security",
+  "description": "Configurable multi-tier verification engine for user trust, age, and role verification.",
+  "visibility": "Public",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] VerifyGuard v0.0.7 Released",
+  "postBody": "# 🚀 VerifyGuard v0.0.7 is Now Available\n\n> **Configurable multi-tier verification engine for user trust, age, and role verification.**\n\n---\n\n### 📝 What's New in v0.0.7\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Security\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/verify-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/verify-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/verify-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **VerifyGuard** and click **Update** (or verify it displays `v0.0.7`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/verify-guard",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/verify-guard-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/verify-guard",
+  "generatedAt": "2026-09-02T10:19:16.386Z"
+}

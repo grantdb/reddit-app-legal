@@ -1,7 +1,7 @@
 # VerifyGuard
 
 Category: Security  
-Version: v0.0.6  
+Version: v0.0.7  
 Visibility: Public  
 Summary: Configurable multi-tier verification engine for user trust, age, and role verification.
 
@@ -62,13 +62,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.7 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.6 — 2026-09-01
 - Standard fleet synchronization and maintenance.
 
 0.0.5 — 2026-08-31
-- Standard fleet synchronization and maintenance.
-
-0.0.4 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
