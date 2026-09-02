@@ -86,7 +86,7 @@
   },
   "sg1-responder": {
     "name": "SG-1 Responder",
-    "version": "0.0.61",
+    "version": "0.0.62",
     "visibility": "public"
   },
   "domain-guard": {
