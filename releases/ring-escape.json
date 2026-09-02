@@ -1,0 +1,16 @@
+{
+  "slug": "ring-escape",
+  "title": "Ring Escape: Serpent Flagship",
+  "version": "0.0.64",
+  "date": "2026-09-02",
+  "category": "Interactive",
+  "description": "Stealth infiltration game. Sabotage four systems aboard a Serpent Empire warship and escape through the rings.",
+  "visibility": "Unlisted",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] Ring Escape: Serpent Flagship v0.0.64 Released",
+  "postBody": "# 🚀 Ring Escape: Serpent Flagship v0.0.64 is Now Available\n\n> **Stealth infiltration game. Sabotage four systems aboard a Serpent Empire warship and escape through the rings.**\n\n---\n\n### 📝 What's New in v0.0.64\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Interactive\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/ring-escape)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ring-escape-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/ring-escape)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Ring Escape: Serpent Flagship** and click **Update** (or verify it displays `v0.0.64`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/ring-escape",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ring-escape-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/ring-escape",
+  "generatedAt": "2026-09-02T06:13:53.399Z"
+}
