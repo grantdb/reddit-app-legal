@@ -1,0 +1,16 @@
+{
+  "slug": "guard-hub",
+  "title": "Guard Hub",
+  "version": "0.0.13",
+  "date": "2026-09-02",
+  "category": "Moderation",
+  "description": "Central GuardHub integration platform.",
+  "visibility": "Unlisted",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] Guard Hub v0.0.13 Released",
+  "postBody": "# 🚀 Guard Hub v0.0.13 is Now Available\n\n> **Central GuardHub integration platform.**\n\n---\n\n### 📝 What's New in v0.0.13\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/guard-hub)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/guard-hub-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/guard-hub)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Guard Hub** and click **Update** (or verify it displays `v0.0.13`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/guard-hub",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/guard-hub-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/guard-hub",
+  "generatedAt": "2026-09-02T07:13:43.839Z"
+}

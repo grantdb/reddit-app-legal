@@ -58,5 +58,9 @@
   "flair-guard": {
     "version": "0.0.14",
     "updatedAt": "2026-09-02T07:13:04.853Z"
+  },
+  "guard-hub": {
+    "version": "0.0.13",
+    "updatedAt": "2026-09-02T07:13:43.842Z"
   }
 }

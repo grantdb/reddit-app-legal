@@ -1,7 +1,7 @@
 # Guard Hub
 
 Category: Moderation  
-Version: v0.0.12  
+Version: v0.0.13  
 Visibility: Unlisted  
 Summary: Central GuardHub integration platform.
 
@@ -52,15 +52,14 @@ This app does not store persistent state in Redis.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.13 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.12 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 0.0.11 — 2026-07-27
 - Standard fleet synchronization and maintenance.
-
-0.0.61 — 2026-07-27
-- Configuration: Added `Devvit.configure({ redditAPI: true, redis: true })`.
-- UX: Restricted Status menu item to moderators (`forUserType: 'moderator'`).
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/guard-hub/TERMS.md)
