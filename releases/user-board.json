@@ -1,0 +1,16 @@
+{
+  "slug": "user-board",
+  "title": "User Board",
+  "version": "0.0.34",
+  "date": "2026-09-02",
+  "category": "Moderation",
+  "description": "Subreddit top-poster analytics and custom post leaderboard.",
+  "visibility": "Public",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] User Board v0.0.34 Released",
+  "postBody": "# 🚀 User Board v0.0.34 is Now Available\n\n> **Subreddit top-poster analytics and custom post leaderboard.**\n\n---\n\n### 📝 What's New in v0.0.34\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-board)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/user-board-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/user-board)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **User Board** and click **Update** (or verify it displays `v0.0.34`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-board",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/user-board-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/user-board",
+  "generatedAt": "2026-09-02T10:25:32.740Z"
+}

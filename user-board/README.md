@@ -105,4 +105,4 @@ This application is subject to the following legal agreements:
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/user-board/PRIVACY.md)
 
 ---
-*Built for Reddit moderators.*
+*Built for Reddit's moderator community.*

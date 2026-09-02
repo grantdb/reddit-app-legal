@@ -116,12 +116,12 @@
   },
   "automod-easy": {
     "name": "AutoMod Easy",
-    "version": "0.0.136",
+    "version": "0.0.137",
     "visibility": "public"
   },
   "pinned-menuboard": {
     "name": "Pinned Menuboard",
-    "version": "0.0.62",
+    "version": "0.0.63",
     "visibility": "public"
   },
   "user-board": {
