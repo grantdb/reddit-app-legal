@@ -16,32 +16,32 @@
   },
   "playscraper-bot": {
     "name": "Playscraper Bot",
-    "version": "1.0.138",
+    "version": "1.0.139",
     "visibility": "public"
   },
   "screen-shot-bot": {
     "name": "Screen-Shot Bot",
-    "version": "1.0.77",
+    "version": "1.0.78",
     "visibility": "public"
   },
   "post-title-check": {
     "name": "Post Title Check",
-    "version": "0.0.82",
+    "version": "0.0.83",
     "visibility": "public"
   },
   "stargate-trivia": {
     "name": "Stargate Trivia",
-    "version": "0.0.124",
+    "version": "0.0.125",
     "visibility": "public"
   },
   "canadian-news": {
     "name": "Canadian News",
-    "version": "0.0.55",
+    "version": "0.0.56",
     "visibility": "public"
   },
   "distrofeed-bot": {
     "name": "DistroFeed Bot",
-    "version": "0.1.107",
+    "version": "0.1.108",
     "visibility": "public"
   },
   "linux-quest": {

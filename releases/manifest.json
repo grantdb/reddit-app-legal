@@ -22,5 +22,9 @@
   "distrofeed-bot": {
     "version": "0.1.108",
     "updatedAt": "2026-09-02T06:06:40.049Z"
+  },
+  "linux-quest": {
+    "version": "0.0.124",
+    "updatedAt": "2026-09-02T06:08:18.841Z"
   }
 }
