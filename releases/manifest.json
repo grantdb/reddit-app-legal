@@ -78,5 +78,9 @@
   "screen-shot-bot": {
     "version": "1.0.78",
     "updatedAt": "2026-09-02T07:44:37.488Z"
+  },
+  "post-title-check": {
+    "version": "0.0.83",
+    "updatedAt": "2026-09-02T07:45:16.926Z"
   }
 }

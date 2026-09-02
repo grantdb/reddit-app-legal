@@ -1,7 +1,7 @@
 # Post Title Check
 
 Category: Validation  
-Version: v0.0.82  
+Version: v0.0.83  
 Visibility: Public  
 Summary: Real-time title validation against community guidelines. Now with support for customizable removal reasons per rule.
 
@@ -71,13 +71,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.83 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
+0.0.83 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.82 — 2026-08-25
-- Standard fleet synchronization and maintenance.
-
-0.0.81 — 2026-08-15
-- Standard fleet synchronization and maintenance.
-
-0.0.80 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links

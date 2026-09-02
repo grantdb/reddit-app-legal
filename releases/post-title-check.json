@@ -1,0 +1,16 @@
+{
+  "slug": "post-title-check",
+  "title": "Post Title Check",
+  "version": "0.0.83",
+  "date": "2026-09-02",
+  "category": "Validation",
+  "description": "Real-time title validation against community guidelines. Now with support for customizable removal reasons per rule.",
+  "visibility": "Public",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] Post Title Check v0.0.83 Released",
+  "postBody": "# 🚀 Post Title Check v0.0.83 is Now Available\n\n> **Real-time title validation against community guidelines. Now with support for customizable removal reasons per rule.**\n\n---\n\n### 📝 What's New in v0.0.83\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Validation\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/post-title-check)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/post-title-check-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/post-title-check)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Post Title Check** and click **Update** (or verify it displays `v0.0.83`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/post-title-check",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/post-title-check-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/post-title-check",
+  "generatedAt": "2026-09-02T07:45:16.922Z"
+}
