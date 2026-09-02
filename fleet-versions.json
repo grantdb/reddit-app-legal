@@ -76,7 +76,7 @@
   },
   "mod-snapshot": {
     "name": "Mod Snapshot",
-    "version": "0.0.80",
+    "version": "0.0.81",
     "visibility": "public"
   },
   "word-guard": {
