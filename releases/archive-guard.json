@@ -1,0 +1,16 @@
+{
+  "slug": "archive-guard",
+  "title": "Archive-Guard",
+  "version": "0.0.4",
+  "date": "2026-09-02",
+  "category": "Moderation",
+  "description": "Subreddit memory engine that detects recurring discussion topics, clusters repeat questions, and tracks canonical threads.",
+  "visibility": "Unlisted",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] Archive-Guard v0.0.4 Released",
+  "postBody": "# 🚀 Archive-Guard v0.0.4 is Now Available\n\n> **Subreddit memory engine that detects recurring discussion topics, clusters repeat questions, and tracks canonical threads.**\n\n---\n\n### 📝 What's New in v0.0.4\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/archive-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/archive-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Archive-Guard** and click **Update** (or verify it displays `v0.0.4`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/archive-guard",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-guard-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/archive-guard",
+  "generatedAt": "2026-09-02T07:54:25.805Z"
+}

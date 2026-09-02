@@ -106,5 +106,9 @@
   "malp-scout": {
     "version": "0.0.19",
     "updatedAt": "2026-09-02T07:53:45.108Z"
+  },
+  "archive-guard": {
+    "version": "0.0.4",
+    "updatedAt": "2026-09-02T07:54:25.808Z"
   }
 }

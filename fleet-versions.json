@@ -201,7 +201,7 @@
   },
   "malp-scout": {
     "name": "MALP-Scout",
-    "version": "0.0.18",
+    "version": "0.0.19",
     "visibility": "unlisted"
   },
   "archive-guard": {
