@@ -1,7 +1,7 @@
 # WikiSync Bot
 
 Category: Utility  
-Version: v0.0.23  
+Version: v0.0.24  
 Visibility: Unlisted  
 Summary: Subreddit wiki synchronization engine for Reddit communities.
 
@@ -64,13 +64,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.24 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.23 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 0.0.22 — 2026-08-31
-- Standard fleet synchronization and maintenance.
-
-0.0.21 — 2026-08-30
 - Standard fleet synchronization and maintenance.
 
 ## Links
