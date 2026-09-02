@@ -1,7 +1,7 @@
 # FlairGuard
 
 Category: Moderation  
-Version: v0.0.13  
+Version: v0.0.14  
 Visibility: Unlisted  
 Summary: Professional flair moderation engine.
 
@@ -63,13 +63,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.14 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.13 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 0.0.12 — 2026-08-04
-- Standard fleet synchronization and maintenance.
-
-0.0.11 — 2026-08-04
 - Standard fleet synchronization and maintenance.
 
 ## Links

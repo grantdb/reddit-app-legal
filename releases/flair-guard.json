@@ -1,0 +1,16 @@
+{
+  "slug": "flair-guard",
+  "title": "FlairGuard",
+  "version": "0.0.14",
+  "date": "2026-09-02",
+  "category": "Moderation",
+  "description": "Professional flair moderation engine.",
+  "visibility": "Unlisted",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] FlairGuard v0.0.14 Released",
+  "postBody": "# 🚀 FlairGuard v0.0.14 is Now Available\n\n> **Professional flair moderation engine.**\n\n---\n\n### 📝 What's New in v0.0.14\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/flair-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/flair-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/flair-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **FlairGuard** and click **Update** (or verify it displays `v0.0.14`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/flair-guard",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/flair-guard-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/flair-guard",
+  "generatedAt": "2026-09-02T07:13:04.849Z"
+}
