@@ -1,7 +1,7 @@
 # ActionGuard
 
 Category: Moderation  
-Version: v0.0.24  
+Version: v0.0.25  
 Visibility: Unlisted  
 Summary: Professional action moderation engine.
 
@@ -60,13 +60,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.25 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.24 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 0.0.23 — 2026-07-29
-- Standard fleet synchronization and maintenance.
-
-0.0.22 — 2026-07-29
 - Standard fleet synchronization and maintenance.
 
 ## Links

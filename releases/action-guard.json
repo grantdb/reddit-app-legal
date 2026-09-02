@@ -1,0 +1,16 @@
+{
+  "slug": "action-guard",
+  "title": "ActionGuard",
+  "version": "0.0.25",
+  "date": "2026-09-02",
+  "category": "Moderation",
+  "description": "Professional action moderation engine.",
+  "visibility": "Unlisted",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] ActionGuard v0.0.25 Released",
+  "postBody": "# 🚀 ActionGuard v0.0.25 is Now Available\n\n> **Professional action moderation engine.**\n\n---\n\n### 📝 What's New in v0.0.25\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/action-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/action-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/action-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **ActionGuard** and click **Update** (or verify it displays `v0.0.25`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/action-guard",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/action-guard-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/action-guard",
+  "generatedAt": "2026-09-02T10:17:24.614Z"
+}

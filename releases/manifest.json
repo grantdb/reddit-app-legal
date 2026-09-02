@@ -130,5 +130,9 @@
   "queue-guard": {
     "version": "0.0.41",
     "updatedAt": "2026-09-02T10:16:21.457Z"
+  },
+  "action-guard": {
+    "version": "0.0.25",
+    "updatedAt": "2026-09-02T10:17:24.617Z"
   }
 }

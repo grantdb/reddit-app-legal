@@ -131,7 +131,7 @@
   },
   "queue-guard": {
     "name": "QueueGuard",
-    "version": "0.0.40",
+    "version": "0.0.41",
     "visibility": "unlisted"
   },
   "duplicate-guard": {
