@@ -1,6 +1,6 @@
 > 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/audit-guard)
 
-# GuardHub: Audit Guard
+# GuardHub: Audit Guard 🛡️
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
 ![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
