@@ -10,5 +10,9 @@
   "ai-checker": {
     "version": "0.0.84",
     "updatedAt": "2026-09-02T04:08:13.005Z"
+  },
+  "app-update-checker": {
+    "version": "0.0.76",
+    "updatedAt": "2026-09-02T05:44:18.845Z"
   }
 }
