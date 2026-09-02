@@ -166,5 +166,9 @@
   "pinned-menuboard": {
     "version": "0.0.63",
     "updatedAt": "2026-09-02T10:43:05.336Z"
+  },
+  "testrank": {
+    "version": "0.0.15",
+    "updatedAt": "2026-09-02T10:43:58.806Z"
   }
 }

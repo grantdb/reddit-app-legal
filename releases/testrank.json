@@ -1,0 +1,16 @@
+{
+  "slug": "testrank",
+  "title": "TestRank",
+  "version": "0.0.15",
+  "date": "2026-09-02",
+  "category": "Utility",
+  "description": "Tester recognition and ranking app for r/droidapptesters.",
+  "visibility": "Unlisted",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] TestRank v0.0.15 Released",
+  "postBody": "# 🚀 TestRank v0.0.15 is Now Available\n\n> **Tester recognition and ranking app for r/droidapptesters.**\n\n---\n\n### 📝 What's New in v0.0.15\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Utility\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/testrank)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/testrank-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/testrank)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **TestRank** and click **Update** (or verify it displays `v0.0.15`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/testrank",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/testrank-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/testrank",
+  "generatedAt": "2026-09-02T10:43:58.803Z"
+}

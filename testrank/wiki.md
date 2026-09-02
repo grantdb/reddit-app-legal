@@ -1,7 +1,7 @@
 # TestRank
 
 Category: Utility  
-Version: v0.0.14  
+Version: v0.0.15  
 Visibility: Unlisted  
 Summary: Tester recognition and ranking app for r/droidapptesters.
 
@@ -65,13 +65,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.15 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.14 — 2026-08-18
 - Standard fleet synchronization and maintenance.
 
 0.0.13 — 2026-08-18
-- Standard fleet synchronization and maintenance.
-
-0.0.12 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
