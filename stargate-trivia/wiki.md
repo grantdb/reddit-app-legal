@@ -1,7 +1,7 @@
 # Stargate Trivia
 
 Category: Interactive  
-Version: v0.0.124  
+Version: v0.0.125  
 Visibility: Public  
 Summary: Interactive trivia engine with rich UI and global leaderboards.
 
@@ -55,14 +55,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.125 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
+0.0.125 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.124 — 2026-08-27
 - Added custom cybernetic app icon, structured lifecycle logging, and runtime moderator security validation. Updated baseline to Devvit 0.14.1.
-
-0.0.123 — 2026-08-15
-- Standard fleet synchronization and maintenance.
-
-0.0.122 — 2026-07-24
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/stargate-trivia/TERMS.md)

@@ -82,5 +82,9 @@
   "post-title-check": {
     "version": "0.0.83",
     "updatedAt": "2026-09-02T07:45:16.926Z"
+  },
+  "stargate-trivia": {
+    "version": "0.0.125",
+    "updatedAt": "2026-09-02T07:46:01.413Z"
   }
 }

@@ -1,0 +1,16 @@
+{
+  "slug": "stargate-trivia",
+  "title": "Stargate Trivia",
+  "version": "0.0.125",
+  "date": "2026-09-02",
+  "category": "Interactive",
+  "description": "Interactive trivia engine with rich UI and global leaderboards.",
+  "visibility": "Public",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] Stargate Trivia v0.0.125 Released",
+  "postBody": "# 🚀 Stargate Trivia v0.0.125 is Now Available\n\n> **Interactive trivia engine with rich UI and global leaderboards.**\n\n---\n\n### 📝 What's New in v0.0.125\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Interactive\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/stargate-trivia)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/stargate-trivia-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/stargate-trivia)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Stargate Trivia** and click **Update** (or verify it displays `v0.0.125`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/stargate-trivia",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/stargate-trivia-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/stargate-trivia",
+  "generatedAt": "2026-09-02T07:46:01.408Z"
+}
