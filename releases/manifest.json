@@ -118,5 +118,9 @@
   "user-guard": {
     "version": "0.0.71",
     "updatedAt": "2026-09-02T10:11:37.149Z"
+  },
+  "filter-guard": {
+    "version": "0.0.77",
+    "updatedAt": "2026-09-02T10:12:41.535Z"
   }
 }

@@ -1,7 +1,7 @@
 # FilterGuard
 
 Category: Moderation  
-Version: v0.0.76  
+Version: v0.0.77  
 Visibility: Unlisted  
 Summary: Grouped threshold-based and gate-style filtering engine for complex community safety gates.
 
@@ -61,17 +61,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.77 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.76 — 2026-08-18
 - Standard fleet synchronization and maintenance.
 
 0.0.75 — 2026-08-15
 - Standard fleet synchronization and maintenance.
-
-0.0.74 — 2026-07-27
-- Optimization: Standardized GuardHub moderator caching (`guardhub:mods:{id}`) with 15-minute Redis expiration.
-- Resilience: Added live item eligibility pre-check (`getPostById` / `getCommentById`) before processing triggers.
-- Server: Streamlined permission checks and normalized error responses `{ error, status }`.
-- Webview UX & Performance: Added keyboard shortcuts (`Escape` modal close), floating toast notifications, and deferred data fetching (`requestIdleCallback`).
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/filter-guard/TERMS.md)
