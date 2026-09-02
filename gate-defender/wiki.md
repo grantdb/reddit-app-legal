@@ -1,7 +1,7 @@
 # Gate Defender
 
 Category: Interactive  
-Version: v0.0.98  
+Version: v0.0.99  
 Visibility: Public  
 Summary: Community security gatekeeper. React Webview-based entry validation.
 
@@ -56,14 +56,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.99 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.98 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 0.0.97 — 2026-07-27
 - Server: Standardized error status code handling and response structure.
-
-0.0.96 — 2026-07-24
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/gate-defender/TERMS.md)
