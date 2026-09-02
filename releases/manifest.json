@@ -146,5 +146,9 @@
   "sgteam-dispatch": {
     "version": "0.0.5",
     "updatedAt": "2026-09-02T10:20:29.626Z"
+  },
+  "chevron-lock": {
+    "version": "0.0.11",
+    "updatedAt": "2026-09-02T10:21:16.026Z"
   }
 }

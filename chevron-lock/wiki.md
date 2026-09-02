@@ -1,7 +1,7 @@
 # Chevron Lock
 
 Category: Interactive  
-Version: v0.0.10  
+Version: v0.0.11  
 Visibility: Unlisted  
 Summary: Stargate-inspired 7-chevron dialing console puzzle game.
 
@@ -62,13 +62,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.11 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.10 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 0.0.9 — 2026-08-01
-- Standard fleet synchronization and maintenance.
-
-0.0.8 — 2026-08-01
 - Standard fleet synchronization and maintenance.
 
 ## Links
