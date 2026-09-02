@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-01T20:50:18.245Z",
+  "generatedAt": "2026-09-02T00:52:36.401Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2661,7 +2661,7 @@
       ],
       "setupSteps": [
         "Install: Add WikiSync Bot to your subreddit.",
-        "Configure: Open Mod Tools > App Settings > WikiSync Bot.",
+        "Configure: Open Mod Tools > App Settings > WikiSync Bot to toggle wiki sync and release announcements.",
         "Trigger Operations: Open the subreddit menu (`...`), select WikiSync Bot, and choose your action:",
         "Sync Changed Wiki Pages: Check manifest and update modified app pages incrementally.",
         "Sync Single App Wiki: Fetch and update a specific app's documentation page."
@@ -2693,7 +2693,7 @@
       "menuItems": [
         "WikiSync Bot"
       ],
-      "settingsCount": 2,
+      "settingsCount": 3,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/wiki-sync-bot",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-sync-bot",
@@ -2706,7 +2706,7 @@
         "troubleshooting": "Check the WikiSync Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-31"
+      "lastUpdated": "2026-09-02"
     },
     {
       "appId": "rescue-guard",

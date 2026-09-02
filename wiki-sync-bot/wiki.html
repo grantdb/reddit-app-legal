@@ -1,7 +1,7 @@
 <h1>WikiSync Bot</h1>
 
 <p>Category: Utility<br>
-Version: v0.0.22<br>
+Version: v0.0.23<br>
 Visibility: Unlisted<br>
 Summary: Subreddit wiki synchronization engine for Reddit communities.</p>
 
@@ -34,6 +34,7 @@ Summary: Subreddit wiki synchronization engine for Reddit communities.</p>
 <h2>Settings Reference</h2>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
 <ul>
+<li>enable_release_announcements: Enable App Release Announcements (boolean, default: true). Automatically post release notes and changelog announcements to r/grantdb when an app is updated.</li>
 <li>test_page_name: Test Wiki Page Path (paragraph, default: index/all-apps/wiki-sync-bot-test). The wiki page path to create or update (e.g. index/all-apps/wiki-sync-bot-test).</li>
 <li>test_content: Test Wiki Content (paragraph, default: # WikiSync Bot Test Page
 
@@ -54,18 +55,19 @@ This is a test wiki page created by WikiSync Bot manual verification.). Markdown
 <p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
 <ul>
 <li>Key-Value Strings (deduplication & cooldown markers)</li>
-<li>Key patterns: wikisync:hash:</li>
+<li>Key patterns: announcement:posted:, announcement:lock:, wikisync:hash:</li>
 </ul>
 
 <h2>Setup and Usage</h2>
 <ul>
 <li>Install: Add WikiSync Bot to your subreddit.</li>
-<li>Configure: Open Mod Tools > App Settings > WikiSync Bot.</li>
+<li>Configure: Open Mod Tools > App Settings > WikiSync Bot to toggle wiki sync and release announcements.</li>
 <li>Trigger Operations: Open the subreddit menu (`...`), select WikiSync Bot, and choose your action:</li>
 <li>Sync Changed Wiki Pages: Check manifest and update modified app pages incrementally.</li>
 <li>Sync Single App Wiki: Fetch and update a specific app's documentation page.</li>
 <li>Force Sync All Wiki Pages: Full re-synchronization of all fleet wiki pages in the background.</li>
 <li>Sync Bot Knowledge Schema: Update `bot_knowledge` JSON schema directly.</li>
+<li>Broadcast App Release Announcement: Immediately publish or re-publish an update announcement post for any fleet app.</li>
 </ul>
 
 <h2>Troubleshooting</h2>
@@ -75,11 +77,11 @@ This is a test wiki page created by WikiSync Bot manual verification.). Markdown
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.23 — 2026-09-02<br>
+Standard fleet synchronization and maintenance.</p>
 <p>0.0.22 — 2026-08-31<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.21 — 2026-08-30<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.20 — 2026-08-25<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>

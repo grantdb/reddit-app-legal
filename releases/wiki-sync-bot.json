@@ -1,0 +1,16 @@
+{
+  "slug": "wiki-sync-bot",
+  "title": "WikiSync Bot",
+  "version": "0.0.23",
+  "date": "2026-09-02",
+  "category": "Utility",
+  "description": "Subreddit wiki synchronization engine for Reddit communities.",
+  "visibility": "Unlisted",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] WikiSync Bot v0.0.23 Released",
+  "postBody": "# 🚀 WikiSync Bot v0.0.23 is Now Available\n\n> **Subreddit wiki synchronization engine for Reddit communities.**\n\n---\n\n### 📝 What's New in v0.0.23\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Utility\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-sync-bot)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/wiki-sync-bot-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/wiki-sync-bot)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **WikiSync Bot** and click **Update** (or verify it displays `v0.0.23`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-sync-bot",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/wiki-sync-bot-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/wiki-sync-bot",
+  "generatedAt": "2026-09-02T00:58:27.693Z"
+}
