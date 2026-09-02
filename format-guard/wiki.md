@@ -1,7 +1,7 @@
 # FormatGuard
 
 Category: Moderation  
-Version: v0.0.63  
+Version: v0.0.64  
 Visibility: Unlisted  
 Summary: Focused structure-first moderation engine for formatting, title-shape, and stylistic rules.
 
@@ -61,6 +61,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.64 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.63 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
@@ -69,9 +72,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Resilience: Added live item eligibility pre-check (`getPostById` / `getCommentById`).
 - Server: Streamlined permission checks and normalized error responses `{ error, status }`.
 - Webview UX: Added keyboard shortcuts (`Escape` modal close), floating toast notifications, and deferred data fetching (`requestIdleCallback`).
-
-0.0.61 — 2026-07-24
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/format-guard/TERMS.md)
