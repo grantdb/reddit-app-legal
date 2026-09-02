@@ -1,0 +1,16 @@
+{
+  "slug": "pinned-menuboard",
+  "title": "Pinned Menuboard",
+  "version": "0.0.63",
+  "date": "2026-09-02",
+  "category": "Moderation",
+  "description": "A centralized menu board for pinned posts",
+  "visibility": "Public",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] Pinned Menuboard v0.0.63 Released",
+  "postBody": "# 🚀 Pinned Menuboard v0.0.63 is Now Available\n\n> **A centralized menu board for pinned posts**\n\n---\n\n### 📝 What's New in v0.0.63\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/pinned-menuboard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/pinned-menuboard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/pinned-menuboard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Pinned Menuboard** and click **Update** (or verify it displays `v0.0.63`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/pinned-menuboard",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/pinned-menuboard-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/pinned-menuboard",
+  "generatedAt": "2026-09-02T10:43:05.334Z"
+}
