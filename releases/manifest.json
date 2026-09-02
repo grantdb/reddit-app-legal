@@ -114,5 +114,9 @@
   "rescue-guard": {
     "version": "0.0.13",
     "updatedAt": "2026-09-02T07:55:10.654Z"
+  },
+  "user-guard": {
+    "version": "0.0.71",
+    "updatedAt": "2026-09-02T10:11:37.149Z"
   }
 }
