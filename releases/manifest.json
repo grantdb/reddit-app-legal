@@ -74,5 +74,9 @@
   "playscraper-bot": {
     "version": "1.0.139",
     "updatedAt": "2026-09-02T07:43:49.358Z"
+  },
+  "screen-shot-bot": {
+    "version": "1.0.78",
+    "updatedAt": "2026-09-02T07:44:37.488Z"
   }
 }
