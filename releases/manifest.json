@@ -126,5 +126,9 @@
   "format-guard": {
     "version": "0.0.64",
     "updatedAt": "2026-09-02T10:13:45.719Z"
+  },
+  "queue-guard": {
+    "version": "0.0.41",
+    "updatedAt": "2026-09-02T10:16:21.457Z"
   }
 }

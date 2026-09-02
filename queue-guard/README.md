@@ -104,4 +104,4 @@ This application is subject to the following legal agreements:
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/queue-guard/PRIVACY.md)
 
 ---
-*Built for Reddit moderators. Part of the GuardHub family.*
+*Built for Reddit's moderator community. Part of the GuardHub family.*
