@@ -150,5 +150,9 @@
   "chevron-lock": {
     "version": "0.0.11",
     "updatedAt": "2026-09-02T10:21:16.026Z"
+  },
+  "automod-easy": {
+    "version": "0.0.137",
+    "updatedAt": "2026-09-02T10:24:28.393Z"
   }
 }
