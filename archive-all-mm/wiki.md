@@ -1,7 +1,7 @@
 # Archive All MM
 
 Category: Modmail  
-Version: v0.0.68  
+Version: v0.0.69  
 Visibility: Public  
 Summary: Modmail archival utility. High-volume message indexing and backup.
 
@@ -55,14 +55,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.69 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.68 — 2026-08-30
 - Standard fleet synchronization and maintenance.
 
 0.0.67 — 2026-08-27
 - Fix recursive pagination deadlock and namespace locks
-
-0.0.66 — 2026-08-15
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/archive-all-mm/TERMS.md)

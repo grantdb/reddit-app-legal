@@ -1,0 +1,16 @@
+{
+  "slug": "archive-all-mm",
+  "title": "Archive All MM",
+  "version": "0.0.69",
+  "date": "2026-09-02",
+  "category": "Modmail",
+  "description": "Modmail archival utility. High-volume message indexing and backup.",
+  "visibility": "Public",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] Archive All MM v0.0.69 Released",
+  "postBody": "# 🚀 Archive All MM v0.0.69 is Now Available\n\n> **Modmail archival utility. High-volume message indexing and backup.**\n\n---\n\n### 📝 What's New in v0.0.69\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Modmail\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/archive-all-mm)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-all-mm-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/archive-all-mm)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Archive All MM** and click **Update** (or verify it displays `v0.0.69`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/archive-all-mm",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-all-mm-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/archive-all-mm",
+  "generatedAt": "2026-09-02T06:08:59.398Z"
+}
