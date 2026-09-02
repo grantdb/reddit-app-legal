@@ -1,7 +1,7 @@
 # Mod Snapshot
 
 Category: Archival  
-Version: v0.0.80  
+Version: v0.0.81  
 Visibility: Public  
 Summary: Professional-grade subreddit configuration backup. Delivers comprehensive archival snapshots and best-effort app discovery to Modmail.
 
@@ -55,14 +55,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.81 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.80 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 0.0.79 — 2026-08-02
 - Standard fleet synchronization and maintenance.
-
-0.0.78 — 2026-07-27
-- Configuration: Added `Devvit.configure({ redditAPI: true, redis: true, http: true })`.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/mod-snapshot/TERMS.md)

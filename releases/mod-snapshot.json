@@ -1,0 +1,16 @@
+{
+  "slug": "mod-snapshot",
+  "title": "Mod Snapshot",
+  "version": "0.0.81",
+  "date": "2026-09-02",
+  "category": "Archival",
+  "description": "Professional-grade subreddit configuration backup. Delivers comprehensive archival snapshots and best-effort app discovery to Modmail.",
+  "visibility": "Public",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] Mod Snapshot v0.0.81 Released",
+  "postBody": "# 🚀 Mod Snapshot v0.0.81 is Now Available\n\n> **Professional-grade subreddit configuration backup. Delivers comprehensive archival snapshots and best-effort app discovery to Modmail.**\n\n---\n\n### 📝 What's New in v0.0.81\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Archival\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod-snapshot)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod-snapshot-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/mod-snapshot)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Mod Snapshot** and click **Update** (or verify it displays `v0.0.81`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod-snapshot",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod-snapshot-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/mod-snapshot",
+  "generatedAt": "2026-09-02T06:21:26.508Z"
+}
