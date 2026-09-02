@@ -71,7 +71,7 @@
   },
   "ai-checker": {
     "name": "AI Checker",
-    "version": "0.0.84",
+    "version": "0.0.85",
     "visibility": "public"
   },
   "mod-snapshot": {
@@ -211,7 +211,7 @@
   },
   "wiki-sync-bot": {
     "name": "WikiSync Bot",
-    "version": "0.0.23",
+    "version": "0.0.24",
     "visibility": "unlisted"
   },
   "rescue-guard": {

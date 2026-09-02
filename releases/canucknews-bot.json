@@ -1,0 +1,16 @@
+{
+  "slug": "canucknews-bot",
+  "title": "CanuckNews Bot",
+  "version": "1.1.41",
+  "date": "2026-09-02",
+  "category": "News",
+  "description": "Regional Canadian news aggregation with moderator triggers.",
+  "visibility": "Public",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] CanuckNews Bot v1.1.41 Released",
+  "postBody": "# 🚀 CanuckNews Bot v1.1.41 is Now Available\n\n> **Regional Canadian news aggregation with moderator triggers.**\n\n---\n\n### 📝 What's New in v1.1.41\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: News\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/canucknews-bot)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/canucknews-bot-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/canucknews-bot)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **CanuckNews Bot** and click **Update** (or verify it displays `v1.1.41`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/canucknews-bot",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/canucknews-bot-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/canucknews-bot",
+  "generatedAt": "2026-09-02T05:58:24.171Z"
+}
