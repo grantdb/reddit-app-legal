@@ -1,7 +1,7 @@
 # SG Team Dispatch
 
 Category: Interactive  
-Version: v0.0.4  
+Version: v0.0.5  
 Visibility: Unlisted  
 Summary: Replayable Stargate SG-1 inspired tactical mission command game.
 
@@ -58,13 +58,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.5 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.4 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 0.0.3 — 2026-07-27
-- Standard fleet synchronization and maintenance.
-
-0.0.2 — 2026-07-27
 - Standard fleet synchronization and maintenance.
 
 ## Links
