@@ -110,5 +110,9 @@
   "archive-guard": {
     "version": "0.0.4",
     "updatedAt": "2026-09-02T07:54:25.808Z"
+  },
+  "rescue-guard": {
+    "version": "0.0.13",
+    "updatedAt": "2026-09-02T07:55:10.654Z"
   }
 }
