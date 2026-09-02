@@ -1,0 +1,16 @@
+{
+  "slug": "canadian-news",
+  "title": "Canadian News",
+  "version": "0.0.56",
+  "date": "2026-09-02",
+  "category": "News",
+  "description": "Regional Canadian news aggregator. Refactored to include political news as an optional subject.",
+  "visibility": "Public",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] Canadian News v0.0.56 Released",
+  "postBody": "# 🚀 Canadian News v0.0.56 is Now Available\n\n> **Regional Canadian news aggregator. Refactored to include political news as an optional subject.**\n\n---\n\n### 📝 What's New in v0.0.56\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: News\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/canadian-news)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/canadian-news-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/canadian-news)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Canadian News** and click **Update** (or verify it displays `v0.0.56`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/canadian-news",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/canadian-news-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/canadian-news",
+  "generatedAt": "2026-09-02T07:46:53.170Z"
+}

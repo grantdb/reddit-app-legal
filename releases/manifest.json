@@ -86,5 +86,9 @@
   "stargate-trivia": {
     "version": "0.0.125",
     "updatedAt": "2026-09-02T07:46:01.413Z"
+  },
+  "canadian-news": {
+    "version": "0.0.56",
+    "updatedAt": "2026-09-02T07:46:53.181Z"
   }
 }
