@@ -1,7 +1,7 @@
 # CommentGuard
 
 Category: Moderation  
-Version: v0.0.49  
+Version: v0.0.50  
 Visibility: Unlisted  
 Summary: Hardened code-request moderation engine with weighted scoring and Shadow DOM stability.
 
@@ -58,16 +58,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.50 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.0.49 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 0.0.48 — 2026-08-04
 - Standard fleet synchronization and maintenance.
-
-0.0.47 — 2026-07-27
-- Optimization: Standardized GuardHub moderator caching (`guardhub:mods:{id}`) to cache full mod list array and eliminate per-event API calls.
-- Safety: Added per-thread removal cap (`maxRemovalsPerThread`, default 10) to prevent over-moderation in high-volume threads.
-- Feature: Added `ImportExport` webview component for settings JSON backup & restore.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/comment-guard/TERMS.md)

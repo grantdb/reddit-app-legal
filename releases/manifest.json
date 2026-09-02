@@ -158,5 +158,9 @@
   "user-board": {
     "version": "0.0.34",
     "updatedAt": "2026-09-02T10:25:32.744Z"
+  },
+  "comment-guard": {
+    "version": "0.0.50",
+    "updatedAt": "2026-09-02T10:42:19.564Z"
   }
 }

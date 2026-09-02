@@ -1,0 +1,16 @@
+{
+  "slug": "comment-guard",
+  "title": "CommentGuard",
+  "version": "0.0.50",
+  "date": "2026-09-02",
+  "category": "Moderation",
+  "description": "Hardened code-request moderation engine with weighted scoring and Shadow DOM stability.",
+  "visibility": "Unlisted",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] CommentGuard v0.0.50 Released",
+  "postBody": "# 🚀 CommentGuard v0.0.50 is Now Available\n\n> **Hardened code-request moderation engine with weighted scoring and Shadow DOM stability.**\n\n---\n\n### 📝 What's New in v0.0.50\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/comment-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/comment-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/comment-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **CommentGuard** and click **Update** (or verify it displays `v0.0.50`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/comment-guard",
+  "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/comment-guard-flowchart.png",
+  "directoryUrl": "https://developers.reddit.com/apps/comment-guard",
+  "generatedAt": "2026-09-02T10:42:19.559Z"
+}
