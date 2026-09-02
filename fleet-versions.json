@@ -1,17 +1,17 @@
 {
   "suspended-remove": {
     "name": "Suspended Remove",
-    "version": "1.0.82",
+    "version": "1.0.83",
     "visibility": "public"
   },
   "sticky-pro": {
     "name": "Sticky-Pro",
-    "version": "1.0.108",
+    "version": "1.0.109",
     "visibility": "public"
   },
   "canucknews-bot": {
     "name": "CanuckNews Bot",
-    "version": "1.1.40",
+    "version": "1.1.41",
     "visibility": "public"
   },
   "playscraper-bot": {

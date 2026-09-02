@@ -1,7 +1,7 @@
 # DistroFeed Bot
 
 Category: Automation  
-Version: v0.1.107  
+Version: v0.1.108  
 Visibility: Public  
 Summary: Linux aggregator. Upgraded to Gemini 2.5 metadata extraction. Fixed network permissions.
 
@@ -63,13 +63,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.1.108 — 2026-09-02
+- Standard fleet synchronization and maintenance.
+
 0.1.107 — 2026-08-30
 - Standard fleet synchronization and maintenance.
 
 0.1.106 — 2026-08-25
-- Standard fleet synchronization and maintenance.
-
-0.1.105 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
