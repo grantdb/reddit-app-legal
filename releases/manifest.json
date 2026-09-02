@@ -50,5 +50,9 @@
   "duplicate-guard": {
     "version": "0.0.36",
     "updatedAt": "2026-09-02T07:01:10.476Z"
+  },
+  "gimmecode-guard": {
+    "version": "0.0.37",
+    "updatedAt": "2026-09-02T07:03:11.383Z"
   }
 }
