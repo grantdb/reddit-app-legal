@@ -51,12 +51,13 @@ AI Checker helps moderation teams identify and evaluate synthetic text and AI-ge
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ai-checker-flowchart.png)
 
-### Your Four-Step Workflow
+### Your Five-Step Workflow
 
-1. **Trigger**: A moderator clicks **AI Checker: Scan Post** from a post menu, or auto-scan picks up a new submission.
-2. **Verify**: AI Checker confirms post eligibility, active status, and community hourly scan quota.
-3. **Analyze**: Post text or image media is transmitted to the configured AI analysis provider.
-4. **Report**: The returned confidence metric is normalized to a 1–10 rating and posted as a mod sticky or log.
+1. **Ingress Gate**: A moderator clicks **AI Checker: Scan Post** from a post menu, or the background trigger schedules an automatic audit on new submissions.
+2. **Delayed Eligibility Check**: Verifies the post remains active and unremoved by AutoMod, checks moderator exemptions, and enforces hourly quota limits.
+3. **Multi-Model AI Analysis**: Securely transmits submission text or image media to the configured model (Google Gemini 2.5 Flash/Pro, GPTZero, Sightengine, or Hive).
+4. **Score Normalization**: Maps raw provider confidence metrics to a standardized 1–10 risk rating.
+5. **Moderator Action & Dispatch**: Posts a formatted sticky comment breakdown and delivers private modmail alerts if configured.
 
 ---
 

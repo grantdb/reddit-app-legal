@@ -31,11 +31,12 @@
 <p>---</p>
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ai-checker-flowchart.png">Logic Flowchart</a></p>
-<h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Trigger</strong>: A moderator clicks <strong>AI Checker: Scan Post</strong> from a post menu, or auto-scan picks up a new submission.</p>
-<p>2. <strong>Verify</strong>: AI Checker confirms post eligibility, active status, and community hourly scan quota.</p>
-<p>3. <strong>Analyze</strong>: Post text or image media is transmitted to the configured AI analysis provider.</p>
-<p>4. <strong>Report</strong>: The returned confidence metric is normalized to a 1–10 rating and posted as a mod sticky or log.</p>
+<h3>Your Five-Step Workflow</h3>
+<p>1. <strong>Ingress Gate</strong>: A moderator clicks <strong>AI Checker: Scan Post</strong> from a post menu, or the background trigger schedules an automatic audit on new submissions.</p>
+<p>2. <strong>Delayed Eligibility Check</strong>: Verifies the post remains active and unremoved by AutoMod, checks moderator exemptions, and enforces hourly quota limits.</p>
+<p>3. <strong>Multi-Model AI Analysis</strong>: Securely transmits submission text or image media to the configured model (Google Gemini 2.5 Flash/Pro, GPTZero, Sightengine, or Hive).</p>
+<p>4. <strong>Score Normalization</strong>: Maps raw provider confidence metrics to a standardized 1–10 risk rating.</p>
+<p>5. <strong>Moderator Action & Dispatch</strong>: Posts a formatted sticky comment breakdown and delivers private modmail alerts if configured.</p>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>AI Checker</strong> to your subreddit through the Reddit App Directory.</p>
