@@ -1,7 +1,7 @@
 # Sticky-Pro
 
 Category: Moderation  
-Version: v1.0.111  
+Version: v1.0.112  
 Visibility: Public  
 Summary: Automated moderator sticky suite with dynamic form population.
 
@@ -16,6 +16,7 @@ Automated moderator sticky suite with dynamic form population.
 - One-Click Unsticky Action: Select Remove Active Sticky inside the popout to immediately unpin and remove the active sticky comment and cancel any pending timers.
 - Duration Expiration Timers: Automatically expire and remove sticky comments after a configurable countdown (1 hour, 6 hours, 12 hours, 24 hours, 3 days, 7 days) via scheduled background jobs.
 - Auto-Sticky Posting: Can be configured to automatically submit and lock a sticky comment on every new post in the subreddit, with built-in deduplication and delayed eligibility checking.
+- Author & Post Exemptions: Configurable settings to automatically skip posting auto-stickies on submissions authored by subreddit moderators (`skipModeratorPosts`) and submissions created by Reddit apps, bots, AutoModerator, or Devvit custom posts (`skipAppAndBotPosts`).
 - Auto-Pin Control: Configurable setting (`autoPin`) to control whether sticky comments are pinned to the top of the comment section or distinguished as moderator comments without pinning.
 - Enhanced Comment Commands: Quick moderator commands (`!sticky 1 24h`, `!sticky 2 3d`, `!sticky 3`, `!unsticky`) available as fast mobile and desktop shortcuts.
 - Reliable Deliveries: Automatically retries and bypasses platform rate limits when posting, ensuring your moderation actions never fail silently.
@@ -48,6 +49,8 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - skipIfRemoved: Skip if Post is Removed (boolean, default: true). Skip auto-sticky if the post is removed by the time the delay expires.
 - skipIfFiltered: Skip if Post is Filtered (In Modqueue) (boolean, default: false). Skip auto-sticky if awaiting mod approval. Default OFF - mods often want stickies on filtered posts.
 - skipIfSpam: Skip if Post is Marked as Spam (boolean, default: true). Skip auto-sticky if the post is marked as spam when the delay expires.
+- skipModeratorPosts: Skip Moderator Posts (boolean, default: true). When enabled, auto-sticky comments will not be posted on submissions by subreddit moderators.
+- skipAppAndBotPosts: Skip App and Bot Posts (boolean, default: true). When enabled, auto-sticky comments will not be posted on Reddit apps, automod, bot accounts, or Devvit custom posts.
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
@@ -68,6 +71,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Navigate to your subreddit's Mod Tools > App Settings > Sticky Pro.
 - Define your Markdown text and custom display labels for Template 1, 2, and 3.
 - Toggle Enable Auto-Sticky on Every Post and set Pin Auto-Sticky Comment to Top (`autoPin`).
+- Configure Author & Post Exemptions: Toggle Skip Moderator Posts and Skip App and Bot Posts.
 - Configure Delayed Eligibility-First processing preferences (delay duration, skip if removed, skip if spam).
 - Usage:
 - On any post, open the moderator menu (`...`), select Sticky Pro, and choose Post / Customize Sticky or Remove Active Sticky.
@@ -78,13 +82,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.112 — 2026-09-04
+- Standard fleet synchronization and maintenance.
+
 1.0.111 — 2026-09-04
 - Standard fleet synchronization and maintenance.
 
 1.0.110 — 2026-09-03
-- Standard fleet synchronization and maintenance.
-
-1.0.109 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 ## Links
