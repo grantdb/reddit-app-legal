@@ -20,10 +20,10 @@ Real-time title validation against community guidelines. Now with support for cu
 
 ## Triggers and Activation
 ### Menu Actions
-- PostSubmit: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostSubmit' }).
-- PostCreate: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostCreate' }).
-- AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).
-- AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).
+- PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.
+- PostCreate: Delivered by Reddit event router to endpoint /internal/on-post-create.
+- AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.
+- AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-upgrade.
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
