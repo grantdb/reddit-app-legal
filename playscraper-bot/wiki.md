@@ -1,7 +1,7 @@
 # Playscraper Bot
 
 Category: Metadata  
-Version: v1.0.139  
+Version: v1.0.140  
 Visibility: Public  
 Summary: AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with configurable delay. Security-hardened moderator gates.
 
@@ -73,13 +73,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-1.0.139 — 2026-09-02
+1.0.140 — 2026-09-04
 - Standard fleet synchronization and maintenance.
 
 1.0.139 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
-1.0.138 — 2026-08-31
+1.0.139 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 ## Links
