@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-04T02:40:30.908Z",
+  "generatedAt": "2026-09-04T04:32:20.698Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -112,9 +112,9 @@
         "customPost": true
       },
       "triggers": [
-        "CommentSubmit",
         "PostSubmit",
-        "PostCreate"
+        "PostCreate",
+        "CommentSubmit"
       ],
       "menuItems": [
         "Sticky Pro"

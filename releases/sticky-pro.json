@@ -1,16 +1,16 @@
 {
   "slug": "sticky-pro",
   "title": "Sticky-Pro",
-  "version": "1.0.110",
-  "date": "2026-09-03",
+  "version": "1.0.111",
+  "date": "2026-09-04",
   "category": "Moderation",
   "description": "Automated moderator sticky suite with dynamic form population.",
   "visibility": "Public",
   "notes": "- Standard fleet synchronization and maintenance.",
-  "postTitle": "[App Update] Sticky-Pro v1.0.110 Released",
-  "postBody": "# 🚀 Sticky-Pro v1.0.110 is Now Available\n\n> **Automated moderator sticky suite with dynamic form population.**\n\n---\n\n### 📝 What's New in v1.0.110\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/sticky-pro)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sticky-pro-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/sticky-pro)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Sticky-Pro** and click **Update** (or verify it displays `v1.0.110`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "postTitle": "[App Update] Sticky-Pro v1.0.111 Released",
+  "postBody": "# 🚀 Sticky-Pro v1.0.111 is Now Available\n\n> **Automated moderator sticky suite with dynamic form population.**\n\n---\n\n### 📝 What's New in v1.0.111\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/sticky-pro)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sticky-pro-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/sticky-pro)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Sticky-Pro** and click **Update** (or verify it displays `v1.0.111`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/sticky-pro",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sticky-pro-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/sticky-pro",
-  "generatedAt": "2026-09-04T00:00:16.125Z"
+  "generatedAt": "2026-09-04T04:39:26.666Z"
 }
