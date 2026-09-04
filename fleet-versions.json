@@ -216,7 +216,7 @@
   },
   "rescue-guard": {
     "name": "RescueGuard",
-    "version": "0.0.14",
-    "visibility": "unlisted"
+    "version": "0.0.15",
+    "visibility": "public"
   }
 }

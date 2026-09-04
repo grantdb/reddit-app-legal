@@ -1,7 +1,7 @@
 # DomainGuard
 
 Category: Security  
-Version: v0.0.149  
+Version: v0.0.150  
 Visibility: Public  
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
@@ -64,13 +64,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.150 — 2026-09-04
+- Standard fleet synchronization and maintenance.
+
 0.0.149 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 0.0.148 — 2026-09-01
-- Standard fleet synchronization and maintenance.
-
-0.0.147 — 2026-08-18
 - Standard fleet synchronization and maintenance.
 
 ## Links
