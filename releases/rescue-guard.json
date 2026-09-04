@@ -1,16 +1,16 @@
 {
   "slug": "rescue-guard",
   "title": "RescueGuard",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "date": "2026-09-04",
   "category": "Moderation",
   "description": "Subreddit post-discovery & manual spotlight moderation engine for Reddit.",
-  "visibility": "Unlisted",
+  "visibility": "Public",
   "notes": "- Standard fleet synchronization and maintenance.",
-  "postTitle": "[App Update] RescueGuard v0.0.14 Released",
-  "postBody": "# 🚀 RescueGuard v0.0.14 is Now Available\n\n> **Subreddit post-discovery & manual spotlight moderation engine for Reddit.**\n\n---\n\n### 📝 What's New in v0.0.14\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/rescue-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/rescue-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/rescue-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **RescueGuard** and click **Update** (or verify it displays `v0.0.14`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "postTitle": "[App Update] RescueGuard v0.0.15 Released",
+  "postBody": "# 🚀 RescueGuard v0.0.15 is Now Available\n\n> **Subreddit post-discovery & manual spotlight moderation engine for Reddit.**\n\n---\n\n### 📝 What's New in v0.0.15\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/rescue-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/rescue-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/rescue-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **RescueGuard** and click **Update** (or verify it displays `v0.0.15`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/rescue-guard",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/rescue-guard-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/rescue-guard",
-  "generatedAt": "2026-09-04T05:14:21.728Z"
+  "generatedAt": "2026-09-04T05:17:42.744Z"
 }
