@@ -1,7 +1,7 @@
 # DomainGuard
 
 Category: Security  
-Version: v0.0.150  
+Version: v0.0.151  
 Visibility: Public  
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
@@ -64,13 +64,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.151 — 2026-09-04
+- Feature: Added automated removal reason comment cleanup (`c.delete()` / `reddit.remove()`) when filtered posts are auto-approved upon edit or manually approved from the Filtered Queue.
+- Feature: Added automated post unlocking on approval if the post was previously locked.
+- Feature: Added `notificationCommentId` tracking to `FilteredPostEntry` for direct targeted comment deletion.
+
 0.0.150 — 2026-09-04
 - Standard fleet synchronization and maintenance.
 
 0.0.149 — 2026-09-02
-- Standard fleet synchronization and maintenance.
-
-0.0.148 — 2026-09-01
 - Standard fleet synchronization and maintenance.
 
 ## Links
