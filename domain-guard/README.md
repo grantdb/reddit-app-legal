@@ -40,7 +40,7 @@ Domain Guard protects your subreddit from malicious links, URL shorteners, and r
 
 - **Granular Domain Control**: Set strict allowlists or blocklists with automated subdomain and wildcard handling.
 - **Context-Aware Scopes**: Enforce rules across link submissions, text post bodies, comment threads, or all content simultaneously.
-- **Automated Filter Re-Checking & Expiration**: Automatically re-evaluates filtered posts upon edit and on schedule. Auto-approves when authors remove restricted links, automatically deletes the bot's previous moderation notification comment, unlocks the post, or auto-removes after a configurable grace period.
+- **Automated Filter Re-Checking & Expiration**: Automatically re-evaluates filtered posts upon edit and on schedule. Auto-approves when authors remove restricted links, automatically deletes the bot's previous moderation notification comment, unlocks the post, and honors moderator approvals by exempting approved posts from further scanning, or auto-removes after a configurable grace period.
 - **Reputation-Gated Filtering**: Apply domain restrictions exclusively to new or low-karma accounts while leaving established members unaffected.
 - **Flexible Moderation Actions**: Choose between silent removal, marking as spam, filtering to mod queue, reporting, or audit-only logging.
 - **Repeat Offender Escalation**: Automatically track repeated violations and escalate repeat link spammers to modmail for team review.

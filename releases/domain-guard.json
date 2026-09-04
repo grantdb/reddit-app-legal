@@ -1,16 +1,16 @@
 {
   "slug": "domain-guard",
   "title": "DomainGuard",
-  "version": "0.0.151",
+  "version": "0.0.152",
   "date": "2026-09-04",
   "category": "Security",
   "description": "Professional URL and domain moderation engine with singleton architecture and hardened API gates.",
   "visibility": "Public",
-  "notes": "- Feature: Added automated removal reason comment cleanup (`c.delete()` / `reddit.remove()`) when filtered posts are auto-approved upon edit or manually approved from the Filtered Queue.\n- Feature: Added automated post unlocking on approval if the post was previously locked.\n- Feature: Added `notificationCommentId` tracking to `FilteredPostEntry` for direct targeted comment deletion.",
-  "postTitle": "[App Update] DomainGuard v0.0.151 Released",
-  "postBody": "# 🚀 DomainGuard v0.0.151 is Now Available\n\n> **Professional URL and domain moderation engine with singleton architecture and hardened API gates.**\n\n---\n\n### 📝 What's New in v0.0.151\n- Feature: Added automated removal reason comment cleanup (`c.delete()` / `reddit.remove()`) when filtered posts are auto-approved upon edit or manually approved from the Filtered Queue.\n- Feature: Added automated post unlocking on approval if the post was previously locked.\n- Feature: Added `notificationCommentId` tracking to `FilteredPostEntry` for direct targeted comment deletion.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Security\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/domain-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/domain-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/domain-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **DomainGuard** and click **Update** (or verify it displays `v0.0.151`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] DomainGuard v0.0.152 Released",
+  "postBody": "# 🚀 DomainGuard v0.0.152 is Now Available\n\n> **Professional URL and domain moderation engine with singleton architecture and hardened API gates.**\n\n---\n\n### 📝 What's New in v0.0.152\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Security\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/domain-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/domain-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/domain-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **DomainGuard** and click **Update** (or verify it displays `v0.0.152`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/domain-guard",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/domain-guard-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/domain-guard",
-  "generatedAt": "2026-09-04T07:15:45.362Z"
+  "generatedAt": "2026-09-04T08:24:56.909Z"
 }
