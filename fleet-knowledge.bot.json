@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-04T00:00:16.060Z",
+  "generatedAt": "2026-09-04T02:40:30.908Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -1754,10 +1754,7 @@
         "scheduler": false,
         "customPost": true
       },
-      "triggers": [
-        "PostSubmit",
-        "PostCreate"
-      ],
+      "triggers": [],
       "menuItems": [
         "Duplicate Guard: Clear Lock"
       ],
@@ -1774,7 +1771,7 @@
         "troubleshooting": "Check the Duplicate Guard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-30"
+      "lastUpdated": "2026-09-04"
     },
     {
       "appId": "gimmecode-guard",

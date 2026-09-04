@@ -20,8 +20,8 @@ Real-time title validation against community guidelines. Now with support for cu
 
 ## Triggers and Activation
 ### Menu Actions
-- PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.
-- PostCreate: Delivered by Reddit event router to endpoint /internal/on-post-create.
+- PostSubmit: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostSubmit' }).
+- PostCreate: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostCreate' }).
 - AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).
 - AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).
 

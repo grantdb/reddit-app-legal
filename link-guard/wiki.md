@@ -1,7 +1,7 @@
 # LinkGuard
 
 Category: Security  
-Version: v0.0.13  
+Version: v0.0.14  
 Visibility: Public  
 Summary: Strict URL policy enforcement & link shortener filter for Reddit posts and comments.
 
