@@ -1,7 +1,7 @@
 <h1>RescueGuard</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.15<br>
+Version: v0.0.16<br>
 Visibility: Public<br>
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.</p>
 
@@ -43,7 +43,7 @@ Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddi
 <ul>
 <li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
 <li>Attaches Removal Notes: No — Does not attach removal notes.</li>
-<li>Approves Content: No — Does not approve content.</li>
+<li>Approves Content: Yes — Automatically approves eligible content.</li>
 <li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
 <li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
 <li>Updates User or Post Flair: Yes — Updates post or user flair based on rules.</li>
@@ -71,11 +71,11 @@ Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddi
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.16 — 2026-09-04<br>
+Fix: Converted webview button actions from inline `onclick` attributes to CSP-compliant event delegation (`data-action`, `data-post-id`, and `addEventListener`) so buttons work across all Reddit webview environments.; Feature: Added `reddit.approve(postId)` execution on Spotlight action so posts are cleared from the mod queue.; Feature: Added dynamic subreddit flair discovery in the Settings modal with auto-detection, a `None (Approve Only)` action option, and clear warning banners when flair is unconfigured.</p>
 <p>0.0.15 — 2026-09-04<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.14 — 2026-09-04<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.13 — 2026-09-02<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>

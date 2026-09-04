@@ -1,7 +1,7 @@
 # RescueGuard
 
 Category: Moderation  
-Version: v0.0.15  
+Version: v0.0.16  
 Visibility: Public  
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.
 
@@ -41,7 +41,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
 - Attaches Removal Notes: No — Does not attach removal notes.
-- Approves Content: No — Does not approve content.
+- Approves Content: Yes — Approves content.
 - Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
 - Dispatches Modmail Alerts: No — Does not send modmail notifications.
 - Updates User or Post Flair: Yes — Updates post or user flair based on rules.
@@ -63,13 +63,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.16 — 2026-09-04
+- Fix: Converted webview button actions from inline `onclick` attributes to CSP-compliant event delegation (`data-action`, `data-post-id`, and `addEventListener`) so buttons work across all Reddit webview environments.
+- Feature: Added `reddit.approve(postId)` execution on Spotlight action so posts are cleared from the mod queue.
+- Feature: Added dynamic subreddit flair discovery in the Settings modal with auto-detection, a `None (Approve Only)` action option, and clear warning banners when flair is unconfigured.
+
 0.0.15 — 2026-09-04
 - Standard fleet synchronization and maintenance.
 
 0.0.14 — 2026-09-04
-- Standard fleet synchronization and maintenance.
-
-0.0.13 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 ## Links
