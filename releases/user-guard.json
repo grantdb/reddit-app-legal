@@ -1,16 +1,16 @@
 {
   "slug": "user-guard",
   "title": "UserGuard",
-  "version": "0.0.71",
-  "date": "2026-09-02",
+  "version": "0.0.72",
+  "date": "2026-09-05",
   "category": "Moderation",
   "description": "Native author-based moderation engine with exact username and threshold resolution.",
   "visibility": "Public",
   "notes": "- Standard fleet synchronization and maintenance.",
-  "postTitle": "[App Update] UserGuard v0.0.71 Released",
-  "postBody": "# 🚀 UserGuard v0.0.71 is Now Available\n\n> **Native author-based moderation engine with exact username and threshold resolution.**\n\n---\n\n### 📝 What's New in v0.0.71\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/user-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/user-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **UserGuard** and click **Update** (or verify it displays `v0.0.71`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "postTitle": "[App Update] UserGuard v0.0.72 Released",
+  "postBody": "# 🚀 UserGuard v0.0.72 is Now Available\n\n> **Native author-based moderation engine with exact username and threshold resolution.**\n\n---\n\n### 📝 What's New in v0.0.72\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/user-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/user-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **UserGuard** and click **Update** (or verify it displays `v0.0.72`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-guard",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/user-guard-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/user-guard",
-  "generatedAt": "2026-09-02T10:11:37.141Z"
+  "generatedAt": "2026-09-05T22:00:36.822Z"
 }
