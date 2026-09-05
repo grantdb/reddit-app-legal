@@ -1,7 +1,7 @@
 # Playscraper Bot
 
 Category: Metadata  
-Version: v1.0.140  
+Version: v1.0.141  
 Visibility: Public  
 Summary: AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with configurable delay. Security-hardened moderator gates.
 
@@ -16,7 +16,7 @@ AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with
 - Cost & Pricing Transparency: Highlights app pricing (Free, Paid) and in-app purchase requirements directly in summary comments.
 - AI-Powered Summaries: Integrates with Gemini 2.5 Flash to rapidly extract key metrics like developer name, download counts, categories, user ratings, and content ratings.
 - Eligibility-First Processing: Employs a sophisticated delayed-processing pattern. It waits a configurable amount of time to confirm a new post is still live (not caught by Reddit's spam filters or AutoModerator) before making any expensive external API calls, saving your quota.
-- Automated or Manual Automation: Can run automatically on all new posts, or be set to manual mode where it only scans when a moderator clicks "Trigger App Scraper" in the Mod menu.
+- Automated or Manual Automation: Can run automatically on all new posts, or be set to manual mode where it only scans when a moderator clicks "Playscraper Bot: Scan Post" in the post menu.
 - Configurable Detail Levels: Tailor the output comment's length by choosing between "Confirmed Only", "General Details", or "Full Details".
 
 ## Permissions Used
@@ -73,10 +73,10 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-1.0.140 — 2026-09-04
+1.0.141 — 2026-09-05
 - Standard fleet synchronization and maintenance.
 
-1.0.139 — 2026-09-02
+1.0.140 — 2026-09-04
 - Standard fleet synchronization and maintenance.
 
 1.0.139 — 2026-09-02

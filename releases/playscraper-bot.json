@@ -1,16 +1,16 @@
 {
   "slug": "playscraper-bot",
   "title": "Playscraper Bot",
-  "version": "1.0.140",
-  "date": "2026-09-04",
+  "version": "1.0.141",
+  "date": "2026-09-05",
   "category": "Metadata",
   "description": "AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with configurable delay. Security-hardened moderator gates.",
   "visibility": "Public",
   "notes": "- Standard fleet synchronization and maintenance.",
-  "postTitle": "[App Update] Playscraper Bot v1.0.140 Released",
-  "postBody": "# 🚀 Playscraper Bot v1.0.140 is Now Available\n\n> **AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with configurable delay. Security-hardened moderator gates.**\n\n---\n\n### 📝 What's New in v1.0.140\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Metadata\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/playscraper-bot)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/playscraper-bot-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/playscraper-bot)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Playscraper Bot** and click **Update** (or verify it displays `v1.0.140`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "postTitle": "[App Update] Playscraper Bot v1.0.141 Released",
+  "postBody": "# 🚀 Playscraper Bot v1.0.141 is Now Available\n\n> **AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with configurable delay. Security-hardened moderator gates.**\n\n---\n\n### 📝 What's New in v1.0.141\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Metadata\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/playscraper-bot)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/playscraper-bot-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/playscraper-bot)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Playscraper Bot** and click **Update** (or verify it displays `v1.0.141`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/playscraper-bot",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/playscraper-bot-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/playscraper-bot",
-  "generatedAt": "2026-09-04T03:22:55.658Z"
+  "generatedAt": "2026-09-05T19:39:29.418Z"
 }
