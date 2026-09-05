@@ -1,16 +1,16 @@
 {
   "slug": "filter-guard",
   "title": "FilterGuard",
-  "version": "0.0.77",
-  "date": "2026-09-02",
+  "version": "0.0.78",
+  "date": "2026-09-05",
   "category": "Moderation",
   "description": "Grouped threshold-based and gate-style filtering engine for complex community safety gates.",
   "visibility": "Unlisted",
   "notes": "- Standard fleet synchronization and maintenance.",
-  "postTitle": "[App Update] FilterGuard v0.0.77 Released",
-  "postBody": "# 🚀 FilterGuard v0.0.77 is Now Available\n\n> **Grouped threshold-based and gate-style filtering engine for complex community safety gates.**\n\n---\n\n### 📝 What's New in v0.0.77\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/filter-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/filter-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/filter-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **FilterGuard** and click **Update** (or verify it displays `v0.0.77`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "postTitle": "[App Update] FilterGuard v0.0.78 Released",
+  "postBody": "# 🚀 FilterGuard v0.0.78 is Now Available\n\n> **Grouped threshold-based and gate-style filtering engine for complex community safety gates.**\n\n---\n\n### 📝 What's New in v0.0.78\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/filter-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/filter-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/filter-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **FilterGuard** and click **Update** (or verify it displays `v0.0.78`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/filter-guard",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/filter-guard-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/filter-guard",
-  "generatedAt": "2026-09-02T10:12:41.531Z"
+  "generatedAt": "2026-09-05T21:44:13.358Z"
 }

@@ -1,7 +1,7 @@
 # FilterGuard
 
 Category: Moderation  
-Version: v0.0.77  
+Version: v0.0.78  
 Visibility: Unlisted  
 Summary: Grouped threshold-based and gate-style filtering engine for complex community safety gates.
 
@@ -61,13 +61,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.78 — 2026-09-05
+- Standard fleet synchronization and maintenance.
+
 0.0.77 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 0.0.76 — 2026-08-18
-- Standard fleet synchronization and maintenance.
-
-0.0.75 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
