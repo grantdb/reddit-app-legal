@@ -170,5 +170,9 @@
   "testrank": {
     "version": "0.0.15",
     "updatedAt": "2026-09-02T10:43:58.806Z"
+  },
+  "link-guard": {
+    "version": "0.0.14",
+    "updatedAt": "2026-09-05T22:48:25.083Z"
   }
 }

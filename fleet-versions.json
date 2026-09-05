@@ -106,7 +106,7 @@
   },
   "format-guard": {
     "name": "FormatGuard",
-    "version": "0.0.64",
+    "version": "0.0.65",
     "visibility": "unlisted"
   },
   "comment-guard": {
