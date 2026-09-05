@@ -1,16 +1,16 @@
 {
   "slug": "audit-guard",
   "title": "AuditGuard",
-  "version": "0.0.16",
-  "date": "2026-09-02",
+  "version": "0.0.17",
+  "date": "2026-09-05",
   "category": "Moderation",
   "description": "Professional audit log moderation engine.",
   "visibility": "Unlisted",
   "notes": "- Standard fleet synchronization and maintenance.",
-  "postTitle": "[App Update] AuditGuard v0.0.16 Released",
-  "postBody": "# 🚀 AuditGuard v0.0.16 is Now Available\n\n> **Professional audit log moderation engine.**\n\n---\n\n### 📝 What's New in v0.0.16\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/audit-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/audit-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/audit-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **AuditGuard** and click **Update** (or verify it displays `v0.0.16`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "postTitle": "[App Update] AuditGuard v0.0.17 Released",
+  "postBody": "# 🚀 AuditGuard v0.0.17 is Now Available\n\n> **Professional audit log moderation engine.**\n\n---\n\n### 📝 What's New in v0.0.17\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/audit-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/audit-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/audit-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **AuditGuard** and click **Update** (or verify it displays `v0.0.17`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/audit-guard",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/audit-guard-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/audit-guard",
-  "generatedAt": "2026-09-02T10:18:25.646Z"
+  "generatedAt": "2026-09-05T22:04:07.533Z"
 }
