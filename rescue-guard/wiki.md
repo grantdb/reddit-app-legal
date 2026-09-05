@@ -1,7 +1,7 @@
 # RescueGuard
 
 Category: Moderation  
-Version: v0.0.18  
+Version: v0.0.19  
 Visibility: Public  
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.
 
@@ -63,16 +63,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.19 — 2026-09-05
+- Standard fleet synchronization and maintenance.
+
 0.0.18 — 2026-09-04
 - Standard fleet synchronization and maintenance.
 
 0.0.17 — 2026-09-04
 - Standard fleet synchronization and maintenance.
-
-0.0.17 — 2026-09-04
-- Fix: Changed default spotlight action from None (Approve Only) to Pin to Community Highlights so clicking Spotlight pins candidate posts to the top of the subreddit feed.
-- Feature: Added Spotlight Action stat indicator to Review Hub header bar and informative action toasts detailing specific actions performed (pinned, flaired, approved).
-- Polish: Ensured clean, professional UI text across all notices, status indicators, and notification toasts.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/rescue-guard/TERMS.md)
