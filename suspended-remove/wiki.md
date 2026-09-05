@@ -1,7 +1,7 @@
 # Suspended Remove
 
 Category: Security  
-Version: v1.0.84  
+Version: v1.0.85  
 Visibility: Public  
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.
 
@@ -70,10 +70,10 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-1.0.84 — 2026-09-04
+1.0.85 — 2026-09-05
 - Standard fleet synchronization and maintenance.
 
-1.0.83 — 2026-09-02
+1.0.84 — 2026-09-04
 - Standard fleet synchronization and maintenance.
 
 1.0.83 — 2026-09-02

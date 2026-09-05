@@ -1,16 +1,16 @@
 {
   "slug": "suspended-remove",
   "title": "Suspended Remove",
-  "version": "1.0.84",
-  "date": "2026-09-04",
+  "version": "1.0.85",
+  "date": "2026-09-05",
   "category": "Security",
   "description": "High-precision account purification engine. Fleet-wide security infrastructure.",
   "visibility": "Public",
   "notes": "- Standard fleet synchronization and maintenance.",
-  "postTitle": "[App Update] Suspended Remove v1.0.84 Released",
-  "postBody": "# 🚀 Suspended Remove v1.0.84 is Now Available\n\n> **High-precision account purification engine. Fleet-wide security infrastructure.**\n\n---\n\n### 📝 What's New in v1.0.84\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Security\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/suspended-remove-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/suspended-remove)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Suspended Remove** and click **Update** (or verify it displays `v1.0.84`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "postTitle": "[App Update] Suspended Remove v1.0.85 Released",
+  "postBody": "# 🚀 Suspended Remove v1.0.85 is Now Available\n\n> **High-precision account purification engine. Fleet-wide security infrastructure.**\n\n---\n\n### 📝 What's New in v1.0.85\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Security\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/suspended-remove-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/suspended-remove)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Suspended Remove** and click **Update** (or verify it displays `v1.0.85`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/suspended-remove-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/suspended-remove",
-  "generatedAt": "2026-09-04T03:21:17.807Z"
+  "generatedAt": "2026-09-05T21:00:24.211Z"
 }
