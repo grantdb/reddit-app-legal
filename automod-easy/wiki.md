@@ -1,7 +1,7 @@
 # AutoMod Easy
 
 Category: Moderation  
-Version: v0.0.137  
+Version: v0.0.138  
 Visibility: Public  
 Summary: No-code visual rule builder for AutoModerator. Generates and validates YAML configurations automatically.
 
@@ -59,13 +59,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.138 — 2026-09-05
+- Standard fleet synchronization and maintenance.
+
 0.0.137 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 0.0.136 — 2026-08-24
-- Standard fleet synchronization and maintenance.
-
-0.0.135 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
