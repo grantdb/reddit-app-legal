@@ -12,7 +12,7 @@
   "comment-guard": "211775582c5c0ce1",
   "distrofeed-bot": "b5e1bbf805b5454a",
   "domain-guard": "439b276e7d0c5db7",
-  "duplicate-guard": "ff08888f3ef8912a",
+  "duplicate-guard": "2a435744103382cd",
   "filter-guard": "2418fa69e1a51e72",
   "flair-guard": "eba22f019cc655e0",
   "format-guard": "d515918d370eb133",
@@ -43,5 +43,5 @@
   "verify-guard": "0dfbdfcfdf9bc919",
   "wiki-sync-bot": "215eb097c578f535",
   "word-guard": "11cb97eb518ab5ee",
-  "bot_knowledge": "5735eb561025f4c6"
+  "bot_knowledge": "003127ebb3ba9dd2"
 }

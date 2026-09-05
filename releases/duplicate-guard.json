@@ -1,16 +1,16 @@
 {
   "slug": "duplicate-guard",
   "title": "Duplicate Guard",
-  "version": "0.0.36",
-  "date": "2026-09-02",
+  "version": "0.0.37",
+  "date": "2026-09-05",
   "category": "Moderation",
   "description": "Moderation app that uses onPostSubmit to detect recent duplicate subject/topic posts.",
   "visibility": "Unlisted",
   "notes": "- Standard fleet synchronization and maintenance.",
-  "postTitle": "[App Update] Duplicate Guard v0.0.36 Released",
-  "postBody": "# 🚀 Duplicate Guard v0.0.36 is Now Available\n\n> **Moderation app that uses onPostSubmit to detect recent duplicate subject/topic posts.**\n\n---\n\n### 📝 What's New in v0.0.36\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/duplicate-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/duplicate-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/duplicate-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Duplicate Guard** and click **Update** (or verify it displays `v0.0.36`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "postTitle": "[App Update] Duplicate Guard v0.0.37 Released",
+  "postBody": "# 🚀 Duplicate Guard v0.0.37 is Now Available\n\n> **Moderation app that uses onPostSubmit to detect recent duplicate subject/topic posts.**\n\n---\n\n### 📝 What's New in v0.0.37\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/duplicate-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/duplicate-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/duplicate-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Duplicate Guard** and click **Update** (or verify it displays `v0.0.37`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/duplicate-guard",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/duplicate-guard-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/duplicate-guard",
-  "generatedAt": "2026-09-02T07:01:10.471Z"
+  "generatedAt": "2026-09-05T22:40:00.467Z"
 }

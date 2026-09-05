@@ -1,7 +1,7 @@
 <h1>Duplicate Guard</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.36<br>
+Version: v0.0.37<br>
 Visibility: Unlisted<br>
 Summary: Moderation app that uses onPostSubmit to detect recent duplicate subject/topic posts.</p>
 
@@ -18,6 +18,11 @@ Summary: Moderation app that uses onPostSubmit to detect recent duplicate subjec
 </ul>
 
 <h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.</li>
+<li>PostCreate: Delivered by Reddit event router to endpoint /internal/on-post-create.</li>
+</ul>
 <h3>Menu Actions</h3>
 <ul>
 <li>Duplicate Guard: Clear Lock: Clear duplicate lock and cache entry for this post (Location: post)</li>
@@ -78,11 +83,11 @@ Summary: Moderation app that uses onPostSubmit to detect recent duplicate subjec
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.37 — 2026-09-05<br>
+Standard fleet synchronization and maintenance.</p>
 <p>0.0.36 — 2026-09-02<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.35 — 2026-08-23<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.34 — 2026-08-23<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
