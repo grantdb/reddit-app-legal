@@ -1,16 +1,16 @@
 {
   "slug": "screen-shot-bot",
   "title": "Screen-Shot Bot",
-  "version": "1.0.78",
-  "date": "2026-09-02",
+  "version": "1.0.79",
+  "date": "2026-09-05",
   "category": "Rendering",
   "description": "Automated screen-capture and visual logging utility.",
   "visibility": "Public",
   "notes": "- Standard fleet synchronization and maintenance.",
-  "postTitle": "[App Update] Screen-Shot Bot v1.0.78 Released",
-  "postBody": "# 🚀 Screen-Shot Bot v1.0.78 is Now Available\n\n> **Automated screen-capture and visual logging utility.**\n\n---\n\n### 📝 What's New in v1.0.78\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Rendering\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/screen-shot-bot)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/screen-shot-bot-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/screen-shot-bot)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Screen-Shot Bot** and click **Update** (or verify it displays `v1.0.78`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "postTitle": "[App Update] Screen-Shot Bot v1.0.79 Released",
+  "postBody": "# 🚀 Screen-Shot Bot v1.0.79 is Now Available\n\n> **Automated screen-capture and visual logging utility.**\n\n---\n\n### 📝 What's New in v1.0.79\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Rendering\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/screen-shot-bot)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/screen-shot-bot-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/screen-shot-bot)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Screen-Shot Bot** and click **Update** (or verify it displays `v1.0.79`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/screen-shot-bot",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/screen-shot-bot-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/screen-shot-bot",
-  "generatedAt": "2026-09-02T07:44:37.484Z"
+  "generatedAt": "2026-09-05T21:23:41.111Z"
 }
