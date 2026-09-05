@@ -71,7 +71,7 @@
   },
   "ai-checker": {
     "name": "AI Checker",
-    "version": "0.0.85",
+    "version": "0.0.86",
     "visibility": "public"
   },
   "mod-snapshot": {
