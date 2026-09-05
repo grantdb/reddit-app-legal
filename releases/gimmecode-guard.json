@@ -1,16 +1,16 @@
 {
   "slug": "gimmecode-guard",
   "title": "GimmeCode Guard",
-  "version": "0.0.37",
-  "date": "2026-09-02",
+  "version": "0.0.38",
+  "date": "2026-09-05",
   "category": "Moderation",
   "description": "Detects low-effort give me code requests",
   "visibility": "Unlisted",
   "notes": "- Standard fleet synchronization and maintenance.",
-  "postTitle": "[App Update] GimmeCode Guard v0.0.37 Released",
-  "postBody": "# 🚀 GimmeCode Guard v0.0.37 is Now Available\n\n> **Detects low-effort give me code requests**\n\n---\n\n### 📝 What's New in v0.0.37\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/gimmecode-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/gimmecode-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/gimmecode-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **GimmeCode Guard** and click **Update** (or verify it displays `v0.0.37`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "postTitle": "[App Update] GimmeCode Guard v0.0.38 Released",
+  "postBody": "# 🚀 GimmeCode Guard v0.0.38 is Now Available\n\n> **Detects low-effort give me code requests**\n\n---\n\n### 📝 What's New in v0.0.38\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Unlisted\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/gimmecode-guard)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/gimmecode-guard-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/gimmecode-guard)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **GimmeCode Guard** and click **Update** (or verify it displays `v0.0.38`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/gimmecode-guard",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/gimmecode-guard-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/gimmecode-guard",
-  "generatedAt": "2026-09-02T07:03:11.380Z"
+  "generatedAt": "2026-09-05T22:27:25.303Z"
 }
