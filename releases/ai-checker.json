@@ -1,16 +1,16 @@
 {
   "slug": "ai-checker",
   "title": "AI Checker",
-  "version": "0.0.85",
-  "date": "2026-09-02",
+  "version": "0.0.86",
+  "date": "2026-09-05",
   "category": "Security",
   "description": "Moderator-triggered AI detection engine. Upgraded to native Gemini 1.5 Flash for high-speed analysis.",
   "visibility": "Public",
   "notes": "- Standard fleet synchronization and maintenance.",
-  "postTitle": "[App Update] AI Checker v0.0.85 Released",
-  "postBody": "# 🚀 AI Checker v0.0.85 is Now Available\n\n> **Moderator-triggered AI detection engine. Upgraded to native Gemini 1.5 Flash for high-speed analysis.**\n\n---\n\n### 📝 What's New in v0.0.85\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Security\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/ai-checker)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ai-checker-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/ai-checker)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **AI Checker** and click **Update** (or verify it displays `v0.0.85`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "postTitle": "[App Update] AI Checker v0.0.86 Released",
+  "postBody": "# 🚀 AI Checker v0.0.86 is Now Available\n\n> **Moderator-triggered AI detection engine. Upgraded to native Gemini 1.5 Flash for high-speed analysis.**\n\n---\n\n### 📝 What's New in v0.0.86\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Security\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/ai-checker)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ai-checker-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/ai-checker)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **AI Checker** and click **Update** (or verify it displays `v0.0.86`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/ai-checker",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ai-checker-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/ai-checker",
-  "generatedAt": "2026-09-02T06:18:53.385Z"
+  "generatedAt": "2026-09-05T21:04:43.183Z"
 }
