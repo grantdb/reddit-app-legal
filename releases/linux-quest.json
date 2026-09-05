@@ -1,16 +1,16 @@
 {
   "slug": "linux-quest",
   "title": "Linux Quest",
-  "version": "0.0.124",
-  "date": "2026-09-02",
+  "version": "0.0.125",
+  "date": "2026-09-05",
   "category": "Community",
   "description": "Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.",
   "visibility": "Public",
   "notes": "- Standard fleet synchronization and maintenance.",
-  "postTitle": "[App Update] Linux Quest v0.0.124 Released",
-  "postBody": "# 🚀 Linux Quest v0.0.124 is Now Available\n\n> **Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.**\n\n---\n\n### 📝 What's New in v0.0.124\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Community\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/linux-quest-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/linux-quest)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Linux Quest** and click **Update** (or verify it displays `v0.0.124`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "postTitle": "[App Update] Linux Quest v0.0.125 Released",
+  "postBody": "# 🚀 Linux Quest v0.0.125 is Now Available\n\n> **Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.**\n\n---\n\n### 📝 What's New in v0.0.125\n- Standard fleet synchronization and maintenance.\n\n---\n\n### 🛠️ Key Capabilities & Highlights\n- **Category**: Community\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/linux-quest-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/linux-quest)\n\n---\n\n### 📦 How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Linux Quest** and click **Update** (or verify it displays `v0.0.125`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/linux-quest-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/linux-quest",
-  "generatedAt": "2026-09-02T06:08:18.836Z"
+  "generatedAt": "2026-09-05T22:36:48.376Z"
 }
