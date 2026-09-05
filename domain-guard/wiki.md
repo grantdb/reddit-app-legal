@@ -1,7 +1,7 @@
 # DomainGuard
 
 Category: Security  
-Version: v0.0.153  
+Version: v0.0.154  
 Visibility: Public  
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
@@ -64,16 +64,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.154 — 2026-09-05
+- Standard fleet synchronization and maintenance.
+
 0.0.153 — 2026-09-04
 - Standard fleet synchronization and maintenance.
 
 0.0.152 — 2026-09-04
 - Standard fleet synchronization and maintenance.
-
-0.0.152 — 2026-09-04
-- Security: Implemented Domain Delta Inspection on post edits (`onPostUpdate`). When an approved post is edited, Domain Guard compares current domains against the approved domain snapshot (`domain-guard:approved-domains:${postId}`). Edits containing only already-approved domains skip rescanning (preventing duplicate modqueue filter loops), while edits introducing NEW unapproved domains are actively evaluated against policy rules to stop post-approval bait-and-switch attacks.
-- Feature: Added domain snapshotting (`setApprovedDomains` / `getApprovedDomains`) with 30-day Redis TTL across manual moderator approvals, control center approvals, and clean-edit auto-approvals.
-- Feature: Added automatic tracking cleanup and notification comment deletion if a post in the filtered queue is manually approved by a moderator directly on Reddit.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/TERMS.md)
