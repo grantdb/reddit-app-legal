@@ -211,7 +211,7 @@
   },
   "wiki-sync-bot": {
     "name": "WikiSync Bot",
-    "version": "0.0.25",
+    "version": "0.0.26",
     "visibility": "unlisted"
   },
   "rescue-guard": {
