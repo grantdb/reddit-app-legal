@@ -1,7 +1,7 @@
 # WordGuard
 
 Category: Moderation  
-Version: v0.0.187  
+Version: v0.0.188  
 Visibility: Public  
 Summary: Premium keyword moderation engine with singleton control center and hardened security architecture.
 
@@ -61,13 +61,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.188 — 2026-09-08
+- Standard fleet synchronization and maintenance.
+
 0.0.187 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 0.0.186 — 2026-08-25
-- Standard fleet synchronization and maintenance.
-
-0.0.185 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
