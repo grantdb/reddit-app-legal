@@ -29,6 +29,13 @@ Summary: Strict URL policy enforcement & link shortener filter for Reddit posts 
 <h3>Custom Post Types and Entrypoints</h3>
 <p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
 
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>vtApiKey: VirusTotal API Key (Optional) (string, default: -). Enter your VirusTotal v3 API key to enable deep link malware scanning. Leave blank to disable VirusTotal scanning. Get a free key at virustotal.com.</li>
+<li>dohResolver: DNS-over-HTTPS Security Provider (select, default: both). Security DNS resolver used to check domains against malware/phishing blocklists. No API key required.</li>
+</ul>
+
 <h2>Automation Capabilities</h2>
 <ul>
 <li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>

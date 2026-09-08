@@ -1,7 +1,7 @@
 # Canadian News
 
 Category: News  
-Version: v0.0.56  
+Version: v0.0.57  
 Visibility: Public  
 Summary: Regional Canadian news aggregator. Refactored to include political news as an optional subject.
 
@@ -13,8 +13,9 @@ Regional Canadian news aggregator. Refactored to include political news as an op
 
 ## Key Features
 - % Manual Moderator Control: Zero auto-posting or background crons. You decide when news is scouted and published.
-- Multi-Subject Scouting: Scout stories across Politics, Health, Science, Technology, Crime, Business, Lifestyle, or Regional news feeds.
-- Pre-Publish Editor: Review scouted candidate stories in an interactive Devvit form to customize the post title, target URL, and spoiler tags prior to posting.
+- Optimized Moderator Control Dialog: Unified moderator menu offering fresh feed scouting, instant review of cached session candidates, and cache management.
+- Multi-Subject Scouting: Scout stories across Politics, Health, Science, Technology, Business, Lifestyle, or Regional news feeds.
+- Pre-Publish Editor & Regional Flair Support: Review scouted candidate stories in an interactive Devvit form to customize the post title, target URL, regional post flair, and spoiler tags prior to posting.
 - Spam Filtering & Deduplication: Automatically filters promotional and spam content while enforcing 30-day link deduplication in Redis.
 
 ## Permissions Used
@@ -24,8 +25,8 @@ Regional Canadian news aggregator. Refactored to include political news as an op
 
 ## Triggers and Activation
 ### Menu Actions
-- Canadian News: Scout News: Scout Canadian news feeds and draft posts (Location: subreddit)
-- Canadian News: Scout News: Scout Canadian news feeds and draft posts (Location: post)
+- Canadian News: Scout Canadian news feeds, review cached candidates, and publish posts (Location: subreddit)
+- Canadian News: Scout Canadian news feeds, review cached candidates, and publish posts (Location: post)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
@@ -34,6 +35,14 @@ Regional Canadian news aggregator. Refactored to include political news as an op
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
 - legal_docs: Terms & Privacy (string, default: See help text for official documentation links.). legal.legal_docs_url
+- flair_national: Canada / National Flair ID (string, default: -). Canada / National Flair ID
+- flair_bc: British Columbia Flair ID (string, default: -). British Columbia Flair ID
+- flair_ab: Alberta Flair ID (string, default: -). Alberta Flair ID
+- flair_prairies: Sask/Manitoba Flair ID (string, default: -). Sask/Manitoba Flair ID
+- flair_on: Ontario Flair ID (string, default: -). Ontario Flair ID
+- flair_qc: Quebec Flair ID (string, default: -). Quebec Flair ID
+- flair_atlantic: Atlantic Flair ID (string, default: -). Atlantic Flair ID
+- flair_north: North/Territories Flair ID (string, default: -). North/Territories Flair ID
 
 ## Automation Capabilities
 - Submits Automated Comments: No — Does not submit automated comments.
@@ -50,20 +59,24 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install: Add Canadian News App to your subreddit via the App Directory.
-- Usage: Open the subreddit Mod Menu and click Scout Canadian News to launch the interactive scouting workflow.
+- Post Flair Configuration (Optional)**:
+- Navigate to Subreddit Settings > Apps > Canadian News App.
+- Under Post Flair IDs, enter the flair template IDs for National and provincial feeds (`flair_national`, `flair_bc`, `flair_ab`, etc.).
+- When a story from a matching region is scouted, the app automatically pre-populates its flair in the editor form.
+- Usage: Open the subreddit Mod Menu or post menu and click Canadian News to launch the interactive scouting workflow.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.56 — 2026-09-02
+0.0.57 — 2026-09-08
 - Standard fleet synchronization and maintenance.
 
 0.0.56 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
-0.0.55 — 2026-08-25
+0.0.56 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 ## Links

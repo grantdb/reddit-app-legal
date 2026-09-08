@@ -103,8 +103,10 @@ As testers accumulate testing points, TestRank updates their standing and automa
 - Watch your subreddit user flair automatically upgrade as you climb the prestige ladder.
 
 ### For Subreddit Moderators
-- Select **Open TestRank Mod Dashboard** from the subreddit menu to inspect real-time weekly/monthly leaderboards, toggle post or user participation, and view the immutable audit log.
-- Select **Create TestRank Custom Post** to generate a pinned public leaderboard post for the community.
+- Select **Create TestRank Leaderboard Post** from the subreddit overflow menu to generate or open the pinned public leaderboard custom post for the community.
+- Select **Recreate TestRank Leaderboard Post** to force-generate a fresh public leaderboard post with a 5-minute spam prevention cooldown.
+- Select **Open TestRank Mod Dashboard** to inspect the live audit log, toggle post or user participation, and issue score corrections with mandatory audit reasons.
+- Customize point values and onboarding modmail rules via **Mod Tools -> Apps -> testrank -> Settings**.
 
 ---
 

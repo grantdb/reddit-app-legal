@@ -1,7 +1,7 @@
 <h1>Canadian News</h1>
 
 <p>Category: News<br>
-Version: v0.0.56<br>
+Version: v0.0.57<br>
 Visibility: Public<br>
 Summary: Regional Canadian news aggregator. Refactored to include political news as an optional subject.</p>
 
@@ -14,8 +14,9 @@ Summary: Regional Canadian news aggregator. Refactored to include political news
 <h2>Key Features</h2>
 <ul>
 <li>% Manual Moderator Control: Zero auto-posting or background crons. You decide when news is scouted and published.</li>
-<li>Multi-Subject Scouting: Scout stories across Politics, Health, Science, Technology, Crime, Business, Lifestyle, or Regional news feeds.</li>
-<li>Pre-Publish Editor: Review scouted candidate stories in an interactive Devvit form to customize the post title, target URL, and spoiler tags prior to posting.</li>
+<li>Optimized Moderator Control Dialog: Unified moderator menu offering fresh feed scouting, instant review of cached session candidates, and cache management.</li>
+<li>Multi-Subject Scouting: Scout stories across Politics, Health, Science, Technology, Business, Lifestyle, or Regional news feeds.</li>
+<li>Pre-Publish Editor & Regional Flair Support: Review scouted candidate stories in an interactive Devvit form to customize the post title, target URL, regional post flair, and spoiler tags prior to posting.</li>
 <li>Spam Filtering & Deduplication: Automatically filters promotional and spam content while enforcing 30-day link deduplication in Redis.</li>
 </ul>
 
@@ -29,8 +30,8 @@ Summary: Regional Canadian news aggregator. Refactored to include political news
 <h2>Triggers and Activation</h2>
 <h3>Menu Actions</h3>
 <ul>
-<li>Canadian News: Scout News: Scout Canadian news feeds and draft posts (Location: subreddit)</li>
-<li>Canadian News: Scout News: Scout Canadian news feeds and draft posts (Location: post)</li>
+<li>Canadian News: Scout Canadian news feeds, review cached candidates, and publish posts (Location: subreddit)</li>
+<li>Canadian News: Scout Canadian news feeds, review cached candidates, and publish posts (Location: post)</li>
 </ul>
 <h3>Custom Post Types and Entrypoints</h3>
 <p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
@@ -39,6 +40,14 @@ Summary: Regional Canadian news aggregator. Refactored to include political news
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
 <ul>
 <li>legal_docs: Terms & Privacy (string, default: See help text for official documentation links.). legal.legal_docs_url</li>
+<li>flair_national: Canada / National Flair ID (string, default: -). Canada / National Flair ID</li>
+<li>flair_bc: British Columbia Flair ID (string, default: -). British Columbia Flair ID</li>
+<li>flair_ab: Alberta Flair ID (string, default: -). Alberta Flair ID</li>
+<li>flair_prairies: Sask/Manitoba Flair ID (string, default: -). Sask/Manitoba Flair ID</li>
+<li>flair_on: Ontario Flair ID (string, default: -). Ontario Flair ID</li>
+<li>flair_qc: Quebec Flair ID (string, default: -). Quebec Flair ID</li>
+<li>flair_atlantic: Atlantic Flair ID (string, default: -). Atlantic Flair ID</li>
+<li>flair_north: North/Territories Flair ID (string, default: -). North/Territories Flair ID</li>
 </ul>
 
 <h2>Automation Capabilities</h2>
@@ -60,7 +69,11 @@ Summary: Regional Canadian news aggregator. Refactored to include political news
 <h2>Setup and Usage</h2>
 <ul>
 <li>Install: Add Canadian News App to your subreddit via the App Directory.</li>
-<li>Usage: Open the subreddit Mod Menu and click Scout Canadian News to launch the interactive scouting workflow.</li>
+<li>Post Flair Configuration (Optional)**:</li>
+<li>Navigate to Subreddit Settings > Apps > Canadian News App.</li>
+<li>Under Post Flair IDs, enter the flair template IDs for National and provincial feeds (`flair_national`, `flair_bc`, `flair_ab`, etc.).</li>
+<li>When a story from a matching region is scouted, the app automatically pre-populates its flair in the editor form.</li>
+<li>Usage: Open the subreddit Mod Menu or post menu and click Canadian News to launch the interactive scouting workflow.</li>
 </ul>
 
 <h2>Troubleshooting</h2>
@@ -70,11 +83,11 @@ Summary: Regional Canadian news aggregator. Refactored to include political news
 </ul>
 
 <h2>Version History</h2>
-<p>0.0.56 — 2026-09-02<br>
+<p>0.0.57 — 2026-09-08<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.56 — 2026-09-02<br>
 Standard fleet synchronization and maintenance.</p>
-<p>0.0.55 — 2026-08-25<br>
+<p>0.0.56 — 2026-09-02<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>

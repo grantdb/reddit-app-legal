@@ -16,6 +16,7 @@ Stealth infiltration game. Sabotage four systems aboard a Serpent Empire warship
 - Autonomous Game Logic: Fully automated score submission and level management. Once the event is launched, it runs entirely on its own without requiring any moderator oversight.
 
 ## Permissions Used
+- reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
 - redis: Redis key-value storage (state tracking, caching, strike memory)
 
 ## Triggers and Activation

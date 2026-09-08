@@ -15,6 +15,7 @@ Premium keyword moderation engine with singleton control center and hardened sec
 - Not documented yet.
 
 ## Permissions Used
+- reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
 - redis: Redis key-value storage (state tracking, caching, strike memory)
 
 ## Triggers and Activation

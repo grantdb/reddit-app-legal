@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-05T22:40:00.432Z",
+  "generatedAt": "2026-09-08T01:31:55.864Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -476,7 +476,10 @@
       ],
       "setupSteps": [
         "Install: Add Canadian News App to your subreddit via the App Directory.",
-        "Usage: Open the subreddit Mod Menu and click Scout Canadian News to launch the interactive scouting workflow."
+        "Post Flair Configuration (Optional)**:",
+        "Navigate to Subreddit Settings > Apps > Canadian News App.",
+        "Under Post Flair IDs, enter the flair template IDs for National and provincial feeds (`flair_national`, `flair_bc`, `flair_ab`, etc.).",
+        "When a story from a matching region is scouted, the app automatically pre-populates its flair in the editor form."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -500,10 +503,10 @@
       },
       "triggers": [],
       "menuItems": [
-        "Canadian News: Scout News",
-        "Canadian News: Scout News"
+        "Canadian News",
+        "Canadian News"
       ],
-      "settingsCount": 1,
+      "settingsCount": 9,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/canadian-news",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/canadian-news",
@@ -516,7 +519,7 @@
         "troubleshooting": "Check the Canadian News troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-30"
+      "lastUpdated": "2026-09-08"
     },
     {
       "appId": "distrofeed-bot",
@@ -738,7 +741,7 @@
         ]
       },
       "capabilities": {
-        "reddit": false,
+        "reddit": true,
         "redis": true,
         "http": false,
         "scheduler": false,
@@ -761,7 +764,7 @@
         "troubleshooting": "Check the Ring Escape: Serpent Flagship troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-09-06"
     },
     {
       "appId": "app-update-checker",
@@ -1050,7 +1053,7 @@
         ]
       },
       "capabilities": {
-        "reddit": false,
+        "reddit": true,
         "redis": true,
         "http": false,
         "scheduler": false,
@@ -1076,7 +1079,7 @@
         "troubleshooting": "Check the WordGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-09-06"
     },
     {
       "appId": "sg1-responder",
@@ -1626,7 +1629,7 @@
         ]
       },
       "capabilities": {
-        "reddit": false,
+        "reddit": true,
         "redis": true,
         "http": false,
         "scheduler": true,
@@ -1649,7 +1652,7 @@
         "troubleshooting": "Check the User Board troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-09-06"
     },
     {
       "appId": "queue-guard",
@@ -2141,7 +2144,7 @@
         "CommentSubmit"
       ],
       "menuItems": [],
-      "settingsCount": 0,
+      "settingsCount": 2,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/link-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/link-guard",
@@ -2154,7 +2157,7 @@
         "troubleshooting": "Check the LinkGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-09-08"
     },
     {
       "appId": "verify-guard",
@@ -2434,7 +2437,7 @@
         ]
       },
       "capabilities": {
-        "reddit": false,
+        "reddit": true,
         "redis": true,
         "http": false,
         "scheduler": false,
@@ -2442,11 +2445,14 @@
       },
       "triggers": [
         "AppInstall",
+        "AppUpgrade",
         "PostSubmit",
-        "CommentCreate"
+        "PostCreate",
+        "CommentCreate",
+        "CommentSubmit"
       ],
       "menuItems": [],
-      "settingsCount": 0,
+      "settingsCount": 5,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/testrank",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/testrank",
@@ -2459,7 +2465,7 @@
         "troubleshooting": "Check the TestRank troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-09-08"
     },
     {
       "appId": "reference-reply-bot",

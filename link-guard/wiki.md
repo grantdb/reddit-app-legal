@@ -32,7 +32,8 @@ Strict URL policy enforcement & link shortener filter for Reddit posts and comme
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- No custom app settings.
+- vtApiKey: VirusTotal API Key (Optional) (string, default: -). Enter your VirusTotal v3 API key to enable deep link malware scanning. Leave blank to disable VirusTotal scanning. Get a free key at virustotal.com.
+- dohResolver: DNS-over-HTTPS Security Provider (select, default: both). Security DNS resolver used to check domains against malware/phishing blocklists. No API key required.
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.

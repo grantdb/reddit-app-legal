@@ -13,6 +13,7 @@ Summary: Tester recognition and ranking app for r/droidapptesters.</p>
 
 <h2>Permissions Used</h2>
 <ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
 <li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
 </ul>
 
@@ -20,11 +21,24 @@ Summary: Tester recognition and ranking app for r/droidapptesters.</p>
 <h3>Event Triggers</h3>
 <ul>
 <li>AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
+<li>AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
 <li>PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.</li>
+<li>PostCreate: Delivered by Reddit event router to endpoint /internal/on-post-submit.</li>
 <li>CommentCreate: Delivered by Reddit event router to endpoint /internal/on-comment-create.</li>
+<li>CommentSubmit: Delivered by Reddit event router to endpoint /internal/on-comment-create.</li>
 </ul>
 <h3>Custom Post Types and Entrypoints</h3>
 <p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>enableOpOnboardingModmail: Enable OP Onboarding Modmail (boolean, default: true). Send guidance modmail to post authors when a new testing thread is submitted</li>
+<li>requirePostFlair: Require Post Flair for Testing Eligibility (boolean, default: true). Only onboard posts that have a post flair</li>
+<li>pointsHelpfulFeedback: Points: Helpful Feedback (number, default: 10). XP awarded for general helpful feedback comments</li>
+<li>pointsBugFound: Points: Bug Found (number, default: 25). XP awarded for verified bug reports</li>
+<li>pointsRetest: Points: Retest Verified (number, default: 15). XP awarded for verified bug fix retests</li>
+</ul>
 
 <h2>Automation Capabilities</h2>
 <ul>
@@ -56,8 +70,10 @@ Summary: Tester recognition and ranking app for r/droidapptesters.</p>
 <li>Test apps shared in the subreddit and leave descriptive feedback.</li>
 <li>Track your cumulative XP, current rank, and unlocked milestone badges directly in the TestRank dashboard.</li>
 <li>Watch your subreddit user flair automatically upgrade as you climb the prestige ladder.</li>
-<li>Select Open TestRank Mod Dashboard from the subreddit menu to inspect real-time weekly/monthly leaderboards, toggle post or user participation, and view the immutable audit log.</li>
-<li>Select Create TestRank Custom Post to generate a pinned public leaderboard post for the community.</li>
+<li>Select Create TestRank Leaderboard Post from the subreddit overflow menu to generate or open the pinned public leaderboard custom post for the community.</li>
+<li>Select Recreate TestRank Leaderboard Post to force-generate a fresh public leaderboard post with a 5-minute spam prevention cooldown.</li>
+<li>Select Open TestRank Mod Dashboard to inspect the live audit log, toggle post or user participation, and issue score corrections with mandatory audit reasons.</li>
+<li>Customize point values and onboarding modmail rules via Mod Tools -> Apps -> testrank -> Settings.</li>
 </ul>
 
 <h2>Troubleshooting</h2>

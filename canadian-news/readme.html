@@ -8,19 +8,31 @@
 <h2>Key Features</h2>
 <ul>
 <li><strong>100% Manual Moderator Control</strong>: Zero auto-posting or background crons. You decide when news is scouted and published.</li>
-<li><strong>Multi-Subject Scouting</strong>: Scout stories across Politics, Health, Science, Technology, Crime, Business, Lifestyle, or Regional news feeds.</li>
-<li><strong>Pre-Publish Editor</strong>: Review scouted candidate stories in an interactive Devvit form to customize the post title, target URL, and spoiler tags prior to posting.</li>
+<li><strong>Optimized Moderator Control Dialog</strong>: Unified moderator menu offering fresh feed scouting, instant review of cached session candidates, and cache management.</li>
+<li><strong>Multi-Subject Scouting</strong>: Scout stories across Politics, Health, Science, Technology, Business, Lifestyle, or Regional news feeds.</li>
+<li><strong>Pre-Publish Editor & Regional Flair Support</strong>: Review scouted candidate stories in an interactive Devvit form to customize the post title, target URL, regional post flair, and spoiler tags prior to posting.</li>
 <li><strong>Spam Filtering & Deduplication</strong>: Automatically filters promotional and spam content while enforcing 30-day link deduplication in Redis.</li>
 </ul>
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/canadian-news-flowchart.png">Logic Flowchart</a></p>
-<p>1. A moderator opens the subreddit Mod Menu and clicks <strong>Scout Canadian News</strong>.</p>
-<p>2. Configure candidate pool size and subject filters in the <strong>Scout Parameter Form</strong>.</p>
+<p>1. A moderator opens the subreddit Mod Menu or post overflow menu and clicks <strong>Canadian News</strong>.</p>
+<p>2. From the <strong>Moderator Controls</strong>, choose an action:</p>
+<ul>
+<li><strong>Scout Canadian News</strong>: Configure candidate pool size and subject filters in the <strong>Scout Parameter Form</strong>.</li>
+<li><strong>Review Scouted Articles</strong>: Instantly review cached candidates from your active session without re-fetching feeds.</li>
+<li><strong>Reset Scouting Cache</strong>: Clear your session cache to perform a completely fresh discovery scan.</li>
+</ul>
 <p>3. Select a candidate article from the <strong>Candidate Picker Form</strong>.</p>
-<p>4. Fine-tune the post title, target URL, and spoiler settings in the <strong>Editor Form</strong>, then click <strong>Publish Post Now</strong>.</p>
+<p>4. Fine-tune the post title, target URL, regional post flair ID, and spoiler settings in the <strong>Editor Form</strong>, then click <strong>Publish Post Now</strong>.</p>
 <h2>Setup & Configuration</h2>
 <p>1. <strong>Install</strong>: Add <strong>Canadian News App</strong> to your subreddit via the App Directory.</p>
-<p>2. <strong>Usage</strong>: Open the subreddit Mod Menu and click <strong>Scout Canadian News</strong> to launch the interactive scouting workflow.</p>
+<p>2. <strong>Post Flair Configuration (Optional)</strong>:</p>
+<ul>
+<li>Navigate to <strong>Subreddit Settings</strong> > <strong>Apps</strong> > <strong>Canadian News App</strong>.</li>
+<li>Under <strong>Post Flair IDs</strong>, enter the flair template IDs for National and provincial feeds (`flair_national`, `flair_bc`, `flair_ab`, etc.).</li>
+<li>When a story from a matching region is scouted, the app automatically pre-populates its flair in the editor form.</li>
+</ul>
+<p>3. <strong>Usage</strong>: Open the subreddit Mod Menu or post menu and click <strong>Canadian News</strong> to launch the interactive scouting workflow.</p>
 <h2>Support</h2>
 <p>For help, bug reports, or feature requests, post in r/grantdb.</p>
 <p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>

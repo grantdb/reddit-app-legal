@@ -1,6 +1,6 @@
 > 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/link-guard)
 
-# GuardHub: Link Guard 🛡️
+# GuardHub: Link Guard 🛡️
 
 ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
 ![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
@@ -16,9 +16,9 @@ Link Guard protects your subreddit from phishing links, disguised shorteners, af
 
 ## At a Glance
 
-- **Unmask shorteners**: Automatically trace redirect chains (`bit.ly`, `t.co`, `tinyurl`) to their final destinations.
-- **Block malicious links**: Check links against open threat feeds (URLhaus) and DNS-over-HTTPS security lookups.
-- **Filter affiliate spam**: Detect and remove unauthorized referral codes, tracking query strings, and custom patterns.
+- **Unmask shorteners**: Automatically trace redirect chains (`bit.ly`, `t.co`, `tinyurl`) to their final destinations using the `unshortener_resolve` rule mode.
+- **Block malicious links**: Check links against a curated built-in blocklist, open threat feeds (URLhaus), and DNS-over-HTTPS security lookups.
+- **Filter affiliate spam**: Detect and remove unauthorized referral codes, tracking query strings, and custom keyword patterns.
 - **Spot obfuscated links**: Catch disguised link text (e.g. `example[dot]com`) and Punycode homograph attacks.
 - **Test in Audit Mode**: Preview link matches safely in the background before applying live moderation actions.
 
@@ -38,9 +38,9 @@ Link Guard protects your subreddit from phishing links, disguised shorteners, af
 
 ## Built for Comprehensive Link Security
 
-- **Redirect Expansion Engine**: Automatically resolves HTTP redirect hops to reveal destination URLs hidden behind link shorteners.
-- **Multi-Source Threat Intelligence**: Cross-references links with open threat feeds (URLhaus) and DNS security services (Cloudflare 1.1.1.2 & Quad9).
-- **VirusTotal Integration**: Optionally connect your VirusTotal API key for deep malware and phishing analysis against custom detection thresholds.
+- **Redirect Expansion Engine**: Automatically resolves HTTP redirect hops to reveal destination URLs hidden behind link shorteners. Activated via the `unshortener_resolve` rule mode.
+- **Multi-Source Threat Intelligence**: Cross-references links with a curated built-in domain blocklist, open threat feeds (URLhaus), and DNS security services (Cloudflare 1.1.1.2 & Quad9).
+- **VirusTotal Integration**: Optionally connect your VirusTotal API key in **Mod Tools → Apps → Link Guard → Settings** for deep malware and phishing analysis against custom detection thresholds.
 - **Heuristics & Homograph Shield**: Detects raw IP hosts, high-risk TLDs, Punycode homograph spoofing, and embedded basic auth credentials.
 - **Flexible Action Modes**: Configure rules to silently remove, filter to mod queue, report for review, or log exclusively in Audit Mode.
 - **Dedicated Management Center**: Access a private dashboard from Subreddit Mod Tools to inspect link metrics, test URLs, and configure scanning tiers.
@@ -54,8 +54,8 @@ Link Guard protects your subreddit from phishing links, disguised shorteners, af
 ### Your Four-Step Workflow
 
 1. **Extract**: Link Guard extracts raw URLs, Markdown hyperlink targets, and obfuscated link patterns from new submissions and comments.
-2. **Resolve**: Shortened URLs are traced through HTTP redirect chains to identify final canonical destinations.
-3. **Scan**: Target links are evaluated against active security rules, threat feeds, DNS lookups, and custom pattern filters.
+2. **Resolve**: When the `unshortener_resolve` rule mode is active, shortened URLs are traced through HTTP redirect chains to identify final canonical destinations.
+3. **Scan**: Target links are evaluated against active security rules, threat feeds, DNS lookups, and custom keyword pattern filters.
 4. **Enforce**: When a violation is detected, Link Guard executes the configured action (`filter`, `remove`, `spam`, or `report`).
 
 ---
@@ -75,10 +75,10 @@ Link Guard protects your subreddit from phishing links, disguised shorteners, af
 
 Link Guard is engineered for fast URL analysis and safe redirect resolution across high-volume communities.
 
-- **HTTP Redirect Chain Resolver**: Follows HTTP 301/302 redirect locations up to configurable hop limits to uncover destination hosts.
-- **DNS-over-HTTPS Security Lookups**: Queries Cloudflare Security DNS (`security.cloudflare-dns.com`) and Quad9 (`dns.quad9.net`) without API keys.
-- **Punycode & Homograph Detector**: Identifies internationalized domain names (IDNs) and Cyrillic/Greek character replacements mimicking popular domains.
-- **Pattern & Query String Matcher**: Supports regex targeting specific URL paths, query parameters (`utm_source`, `ref`), or specific URL keywords.
+- **HTTP Redirect Chain Resolver**: Follows HTTP 301/302 redirect locations up to 5 hops to uncover destination hosts hidden behind shorteners.
+- **DNS-over-HTTPS Security Lookups**: Queries Cloudflare Security DNS (`security.cloudflare-dns.com`) and Quad9 (`dns.quad9.net`) without API keys. Configurable in App Settings.
+- **Punycode & Homograph Detector**: Identifies internationalized domain names (IDNs) and character spoofing attacks mimicking popular domains.
+- **Pattern & Keyword Matcher**: Supports keyword/substring pattern matching targeting specific URL paths, query parameters (`utm_source`, `ref`), or domain keywords.
 
 ---
 

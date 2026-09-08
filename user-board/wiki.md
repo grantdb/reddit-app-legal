@@ -15,6 +15,7 @@ Subreddit top-poster analytics and custom post leaderboard.
 - Not documented yet.
 
 ## Permissions Used
+- reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
 - redis: Redis key-value storage (state tracking, caching, strike memory)
 
 ## Triggers and Activation

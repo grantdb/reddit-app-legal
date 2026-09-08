@@ -15,13 +15,17 @@ Tester recognition and ranking app for r/droidapptesters.
 - Not documented yet.
 
 ## Permissions Used
+- reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
 - redis: Redis key-value storage (state tracking, caching, strike memory)
 
 ## Triggers and Activation
 ### Menu Actions
 - AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.
+- AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-install.
 - PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.
+- PostCreate: Delivered by Reddit event router to endpoint /internal/on-post-submit.
 - CommentCreate: Delivered by Reddit event router to endpoint /internal/on-comment-create.
+- CommentSubmit: Delivered by Reddit event router to endpoint /internal/on-comment-create.
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
@@ -29,7 +33,11 @@ Tester recognition and ranking app for r/droidapptesters.
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- No custom app settings.
+- enableOpOnboardingModmail: Enable OP Onboarding Modmail (boolean, default: true). Send guidance modmail to post authors when a new testing thread is submitted
+- requirePostFlair: Require Post Flair for Testing Eligibility (boolean, default: true). Only onboard posts that have a post flair
+- pointsHelpfulFeedback: Points: Helpful Feedback (number, default: 10). XP awarded for general helpful feedback comments
+- pointsBugFound: Points: Bug Found (number, default: 25). XP awarded for verified bug reports
+- pointsRetest: Points: Retest Verified (number, default: 15). XP awarded for verified bug fix retests
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
@@ -57,8 +65,10 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Test apps shared in the subreddit and leave descriptive feedback.
 - Track your cumulative XP, current rank, and unlocked milestone badges directly in the TestRank dashboard.
 - Watch your subreddit user flair automatically upgrade as you climb the prestige ladder.
-- Select Open TestRank Mod Dashboard from the subreddit menu to inspect real-time weekly/monthly leaderboards, toggle post or user participation, and view the immutable audit log.
-- Select Create TestRank Custom Post to generate a pinned public leaderboard post for the community.
+- Select Create TestRank Leaderboard Post from the subreddit overflow menu to generate or open the pinned public leaderboard custom post for the community.
+- Select Recreate TestRank Leaderboard Post to force-generate a fresh public leaderboard post with a 5-minute spam prevention cooldown.
+- Select Open TestRank Mod Dashboard to inspect the live audit log, toggle post or user participation, and issue score corrections with mandatory audit reasons.
+- Customize point values and onboarding modmail rules via Mod Tools -> Apps -> testrank -> Settings.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
