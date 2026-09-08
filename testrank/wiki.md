@@ -1,7 +1,7 @@
 # TestRank
 
 Category: Utility  
-Version: v0.0.15  
+Version: v0.0.16  
 Visibility: Unlisted  
 Summary: Tester recognition and ranking app for r/droidapptesters.
 
@@ -75,13 +75,19 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.16 — 2026-09-08
+- Standard fleet synchronization and maintenance.
+- Fixed leaderboard custom post creation by wiring dedicated `entry: 'leaderboard'` (`leaderboard.html`) endpoint.
+- Harmonized dual-event triggers (`onPostCreate` / `onPostSubmit`, `onCommentCreate` / `onCommentSubmit`, `onAppInstall` / `onAppUpgrade`).
+- Hardened server-side moderator checks on leaderboard creation and dashboard access.
+- Added native Reddit installation settings for onboarding modmail and customizable XP points.
+- Fixed default webview tab in `index.html` to display leaderboards first and dynamically hide Moderator Hub from non-moderators.
+- Added deduplication lock on leaderboard creation to prevent duplicate custom posts.
+
 0.0.15 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 0.0.14 — 2026-08-18
-- Standard fleet synchronization and maintenance.
-
-0.0.13 — 2026-08-18
 - Standard fleet synchronization and maintenance.
 
 ## Links

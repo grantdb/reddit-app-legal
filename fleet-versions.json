@@ -166,7 +166,7 @@
   },
   "link-guard": {
     "name": "LinkGuard",
-    "version": "0.0.14",
+    "version": "0.0.15",
     "visibility": "public"
   },
   "verify-guard": {
