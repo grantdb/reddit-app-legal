@@ -126,7 +126,7 @@
   },
   "user-board": {
     "name": "User Board",
-    "version": "0.0.34",
+    "version": "0.0.35",
     "visibility": "public"
   },
   "queue-guard": {
