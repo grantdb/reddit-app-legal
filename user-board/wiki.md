@@ -1,7 +1,7 @@
 # User Board
 
 Category: Moderation  
-Version: v0.0.34  
+Version: v0.0.35  
 Visibility: Public  
 Summary: Subreddit top-poster analytics and custom post leaderboard.
 
@@ -56,13 +56,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.35 — 2026-09-08
+- Standard fleet synchronization and maintenance.
+
 0.0.34 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 0.0.33 — 2026-08-15
-- Standard fleet synchronization and maintenance.
-
-0.0.32 — 2026-08-10
 - Standard fleet synchronization and maintenance.
 
 ## Links
