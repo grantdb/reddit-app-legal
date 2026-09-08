@@ -36,7 +36,7 @@
   },
   "canadian-news": {
     "name": "Canadian News",
-    "version": "0.0.56",
+    "version": "0.0.57",
     "visibility": "public"
   },
   "distrofeed-bot": {
