@@ -1,7 +1,7 @@
 # FormatGuard
 
 Category: Moderation  
-Version: v0.0.65  
+Version: v0.0.66  
 Visibility: Unlisted  
 Summary: Focused structure-first moderation engine for formatting, title-shape, and stylistic rules.
 
@@ -61,13 +61,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.66 — 2026-09-09
+- Standard fleet synchronization and maintenance.
+
 0.0.65 — 2026-09-05
 - Standard fleet synchronization and maintenance.
 
 0.0.64 — 2026-09-02
-- Standard fleet synchronization and maintenance.
-
-0.0.63 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
