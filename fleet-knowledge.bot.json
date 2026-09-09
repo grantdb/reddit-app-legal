@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-08T01:31:55.864Z",
+  "generatedAt": "2026-09-09T00:44:49.759Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2113,7 +2113,7 @@
       "setupSteps": [
         "Install: Add Link Guard to your subreddit through the Reddit App Directory.",
         "Configure: Open GuardHub: LinkGuard Dashboard from Subreddit Mod Tools.",
-        "Select Rules: Enable URL shortener resolution, threat feed matching, and custom pattern filters in Audit Mode.",
+        "Select Rules: Enable URL shortener filtering, threat directory matching, and custom pattern filters in Audit Mode.",
         "Enforce: Once satisfied with audit logs, switch your rules to Live mode.",
         "No dangerous manual URL clicking. Comprehensive automated link security in your native dashboard.*"
       ],
@@ -2133,7 +2133,7 @@
       "capabilities": {
         "reddit": true,
         "redis": true,
-        "http": true,
+        "http": false,
         "scheduler": false,
         "customPost": true
       },
@@ -2141,10 +2141,12 @@
         "PostCreate",
         "PostSubmit",
         "CommentCreate",
-        "CommentSubmit"
+        "CommentSubmit",
+        "AppInstall",
+        "AppUpgrade"
       ],
       "menuItems": [],
-      "settingsCount": 2,
+      "settingsCount": 0,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/link-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/link-guard",
@@ -2157,7 +2159,7 @@
         "troubleshooting": "Check the LinkGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-08"
+      "lastUpdated": "2026-09-09"
     },
     {
       "appId": "verify-guard",

@@ -1,7 +1,7 @@
 # LinkGuard
 
 Category: Security  
-Version: v0.0.15  
+Version: v0.0.16  
 Visibility: Public  
 Summary: Strict URL policy enforcement & link shortener filter for Reddit posts and comments.
 
@@ -17,7 +17,6 @@ Strict URL policy enforcement & link shortener filter for Reddit posts and comme
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
 - redis: Redis key-value storage (state tracking, caching, strike memory)
-- http: External HTTP Fetch access [Domains: www.virustotal.com, security.cloudflare-dns.com, dns.quad9.net, urlhaus.abuse.ch, raw.githubusercontent.com]
 
 ## Triggers and Activation
 ### Menu Actions
@@ -25,6 +24,8 @@ Strict URL policy enforcement & link shortener filter for Reddit posts and comme
 - PostSubmit: Delivered by Reddit event router to endpoint /internal/trigger/post.
 - CommentCreate: Delivered by Reddit event router to endpoint /internal/trigger/comment.
 - CommentSubmit: Delivered by Reddit event router to endpoint /internal/trigger/comment.
+- AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.
+- AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-install.
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
@@ -32,8 +33,7 @@ Strict URL policy enforcement & link shortener filter for Reddit posts and comme
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- vtApiKey: VirusTotal API Key (Optional) (string, default: -). Enter your VirusTotal v3 API key to enable deep link malware scanning. Leave blank to disable VirusTotal scanning. Get a free key at virustotal.com.
-- dohResolver: DNS-over-HTTPS Security Provider (select, default: both). Security DNS resolver used to check domains against malware/phishing blocklists. No API key required.
+- No custom app settings.
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
@@ -54,7 +54,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 ## Setup and Usage
 - Install: Add Link Guard to your subreddit through the Reddit App Directory.
 - Configure: Open GuardHub: LinkGuard Dashboard from Subreddit Mod Tools.
-- Select Rules: Enable URL shortener resolution, threat feed matching, and custom pattern filters in Audit Mode.
+- Select Rules: Enable URL shortener filtering, threat directory matching, and custom pattern filters in Audit Mode.
 - Enforce: Once satisfied with audit logs, switch your rules to Live mode.
 - No dangerous manual URL clicking. Comprehensive automated link security in your native dashboard.*
 
@@ -63,13 +63,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.16 — 2026-09-09
+- Standard fleet synchronization and maintenance.
+
 0.0.15 — 2026-09-08
 - Standard fleet synchronization and maintenance.
 
 0.0.14 — 2026-09-05
-- Standard fleet synchronization and maintenance.
-
-0.0.13 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links

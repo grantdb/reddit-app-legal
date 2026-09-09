@@ -5,15 +5,15 @@
 <p><a href="https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge">Security</a></p>
 <p><a href="https://img.shields.io/badge/Category-Security-blue?style=for-the-badge">Category</a></p>
 <p><a href="https://img.shields.io/badge/Type-Content_Policy-8A2BE2?style=for-the-badge">Type</a></p>
-<blockquote><p><strong>Unmask shorteners, detect malicious redirects, and block link threats automatically.</strong></p></blockquote>
-<p>Link Guard protects your subreddit from phishing links, disguised shorteners, affiliate spam, and malicious redirect chains. Combining multi-provider threat intelligence, DNS security lookups, and automated redirect expansion, it audits community links without manual testing.</p>
+<blockquote><p><strong>Unmask shorteners, decode obfuscated links, and enforce link policies automatically.</strong></p></blockquote>
+<p>Link Guard protects your subreddit from disguised link shorteners, phishing attempts, affiliate tracking spam, and obfuscated domain tricks (`example[dot]com`). Operating entirely within Reddit's sandboxed environment with zero external API dependencies, it audits community submissions and comments with zero-latency local evaluation.</p>
 <p>---</p>
 <h2>At a Glance</h2>
 <ul>
-<li><strong>Unmask shorteners</strong>: Automatically trace redirect chains (`bit.ly`, `t.co`, `tinyurl`) to their final destinations using the `unshortener_resolve` rule mode.</li>
-<li><strong>Block malicious links</strong>: Check links against a curated built-in blocklist, open threat feeds (URLhaus), and DNS-over-HTTPS security lookups.</li>
-<li><strong>Filter affiliate spam</strong>: Detect and remove unauthorized referral codes, tracking query strings, and custom keyword patterns.</li>
-<li><strong>Spot obfuscated links</strong>: Catch disguised link text (e.g. `example[dot]com`) and Punycode homograph attacks.</li>
+<li><strong>Block disguised shorteners</strong>: Automatically catch 30+ known URL shortener domains (`bit.ly`, `tinyurl.com`, `t.co`, `cutt.ly`) before users leave Reddit.</li>
+<li><strong>Spot obfuscated links</strong>: Decode disguised syntax such as `domain[dot]com` or `domain (dot) com` and Punycode homograph spoofing attacks (`xn--`).</li>
+<li><strong>Filter affiliate & tracking spam</strong>: Detect and remove unauthorized referral links, tracking query parameters, and custom keyword patterns.</li>
+<li><strong>Curated threat directory</strong>: Check incoming links against a built-in directory of high-risk TLDs, raw IP hostnames, and known threat indicators.</li>
 <li><strong>Test in Audit Mode</strong>: Preview link matches safely in the background before applying live moderation actions.</li>
 </ul>
 <p>---</p>
@@ -21,40 +21,39 @@
 <p>---</p>
 <h2>Built for Comprehensive Link Security</h2>
 <ul>
-<li><strong>Redirect Expansion Engine</strong>: Automatically resolves HTTP redirect hops to reveal destination URLs hidden behind link shorteners. Activated via the `unshortener_resolve` rule mode.</li>
-<li><strong>Multi-Source Threat Intelligence</strong>: Cross-references links with a curated built-in domain blocklist, open threat feeds (URLhaus), and DNS security services (Cloudflare 1.1.1.2 & Quad9).</li>
-<li><strong>VirusTotal Integration</strong>: Optionally connect your VirusTotal API key in <strong>Mod Tools → Apps → Link Guard → Settings</strong> for deep malware and phishing analysis against custom detection thresholds.</li>
-<li><strong>Heuristics & Homograph Shield</strong>: Detects raw IP hosts, high-risk TLDs, Punycode homograph spoofing, and embedded basic auth credentials.</li>
+<li><strong>Shortener Shield</strong>: Instantly detects links originating from link shorteners and redirection relays without leaking community URLs to external servers.</li>
+<li><strong>Obfuscation Decoder</strong>: Automatically extracts hidden URLs written in evasion syntax like `site[dot]xyz` or `paypal (dot) com`.</li>
+<li><strong>Heuristics & Homograph Shield</strong>: Detects raw IP hosts, high-risk TLDs, Punycode homograph spoofing, embedded credentials, and excessive subdomain nesting.</li>
 <li><strong>Flexible Action Modes</strong>: Configure rules to silently remove, filter to mod queue, report for review, or log exclusively in Audit Mode.</li>
-<li><strong>Dedicated Management Center</strong>: Access a private dashboard from Subreddit Mod Tools to inspect link metrics, test URLs, and configure scanning tiers.</li>
+<li><strong>Dedicated Management Center</strong>: Access a private dashboard from Subreddit Mod Tools to inspect link metrics, test URLs, and configure scanning rules.</li>
 </ul>
 <p>---</p>
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/link-guard-flowchart.png">Logic Flowchart</a></p>
 <h3>Your Four-Step Workflow</h3>
 <p>1. <strong>Extract</strong>: Link Guard extracts raw URLs, Markdown hyperlink targets, and obfuscated link patterns from new submissions and comments.</p>
-<p>2. <strong>Resolve</strong>: When the `unshortener_resolve` rule mode is active, shortened URLs are traced through HTTP redirect chains to identify final canonical destinations.</p>
-<p>3. <strong>Scan</strong>: Target links are evaluated against active security rules, threat feeds, DNS lookups, and custom keyword pattern filters.</p>
+<p>2. <strong>Decode</strong>: Normalizes obfuscated syntax, flags known shortener domains, and inspects Punycode hostnames.</p>
+<p>3. <strong>Evaluate</strong>: Evaluates links against the curated threat directory, heuristic risk indicators, and custom pattern filters.</p>
 <p>4. <strong>Enforce</strong>: When a violation is detected, Link Guard executes the configured action (`filter`, `remove`, `spam`, or `report`).</p>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>Link Guard</strong> to your subreddit through the Reddit App Directory.</p>
 <p>2. <strong>Configure</strong>: Open <strong>GuardHub: LinkGuard Dashboard</strong> from Subreddit Mod Tools.</p>
-<p>3. <strong>Select Rules</strong>: Enable URL shortener resolution, threat feed matching, and custom pattern filters in Audit Mode.</p>
+<p>3. <strong>Select Rules</strong>: Enable URL shortener filtering, threat directory matching, and custom pattern filters in Audit Mode.</p>
 <p>4. <strong>Enforce</strong>: Once satisfied with audit logs, switch your rules to Live mode.</p>
 <p>*No dangerous manual URL clicking. Comprehensive automated link security in your native dashboard.*</p>
 <p>---</p>
 <h2>Advanced Capabilities</h2>
-<p>Link Guard is engineered for fast URL analysis and safe redirect resolution across high-volume communities.</p>
+<p>Link Guard is engineered for fast URL analysis across high-volume communities.</p>
 <ul>
-<li><strong>HTTP Redirect Chain Resolver</strong>: Follows HTTP 301/302 redirect locations up to 5 hops to uncover destination hosts hidden behind shorteners.</li>
-<li><strong>DNS-over-HTTPS Security Lookups</strong>: Queries Cloudflare Security DNS (`security.cloudflare-dns.com`) and Quad9 (`dns.quad9.net`) without API keys. Configurable in App Settings.</li>
+<li><strong>Instant Local Analysis</strong>: Zero outbound network requests—100% compliant with Reddit's data privacy and security sandbox.</li>
 <li><strong>Punycode & Homograph Detector</strong>: Identifies internationalized domain names (IDNs) and character spoofing attacks mimicking popular domains.</li>
-<li><strong>Pattern & Keyword Matcher</strong>: Supports keyword/substring pattern matching targeting specific URL paths, query parameters (`utm_source`, `ref`), or domain keywords.</li>
+<li><strong>Pattern & Keyword Matcher</strong>: Supports keyword and substring pattern matching targeting specific URL paths, query parameters (`utm_source`, `ref`), or domain keywords.</li>
+<li><strong>Mod Exemption Controls</strong>: Configurable exemption rules allow moderators to post administrative or verification links without triggering automated filters.</li>
 </ul>
 <p>---</p>
 <h2>Designed to Assist Moderators</h2>
-<p>Link Guard provides automated link inspection and threat feed scanning to assist community safety. Threat lookups and heuristic indicators serve as assistive signals rather than definitive proof of malicious intent—human moderators retain full authority to approve filtered links in mod queue, whitelist trusted domains, and adjust security sensitivity at any time.</p>
+<p>Link Guard provides automated link inspection and threat directory matching to assist community safety. Heuristic indicators serve as assistive signals rather than definitive proof of malicious intent—human moderators retain full authority to approve filtered links in mod queue, whitelist trusted domains, and adjust security sensitivity at any time.</p>
 <p>---</p>
 <h2>Support</h2>
 <p>For help, bug reports, or feature requests, post in r/grantdb.</p>
