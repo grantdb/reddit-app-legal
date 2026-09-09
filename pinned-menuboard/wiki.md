@@ -1,7 +1,7 @@
 # Pinned Menuboard
 
 Category: Moderation  
-Version: v0.0.64  
+Version: v0.0.65  
 Visibility: Public  
 Summary: A centralized menu board for pinned posts
 
@@ -55,13 +55,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.65 — 2026-09-09
+- Standard fleet synchronization and maintenance.
+
 0.0.64 — 2026-09-09
 - Standard fleet synchronization and maintenance.
 
 0.0.63 — 2026-09-02
-- Standard fleet synchronization and maintenance.
-
-0.0.62 — 2026-08-31
 - Standard fleet synchronization and maintenance.
 
 ## Links
