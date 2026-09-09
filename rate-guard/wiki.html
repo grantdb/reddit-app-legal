@@ -1,7 +1,7 @@
 <h1>RateGuard</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.10<br>
+Version: v0.0.11<br>
 Visibility: Public<br>
 Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.</p>
 
@@ -61,12 +61,12 @@ Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.11 — 2026-09-09<br>
+Standard fleet synchronization and maintenance.</p>
 <p>0.0.10 — 2026-09-09<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.9 — 2026-09-09<br>
 Standard fleet synchronization and maintenance.</p>
-<p>0.0.9 — 2026-09-08<br>
-Transformed into full Server + Webview GuardHub moderation app.; Added interactive Webview Control Center with Cadence Policy, Template Editor with live preview, Live Redis Audit Logs, and User Cooldown Simulator.; Added "Filter to Mod Queue" violation enforcement action alternative to post removals.; Added customizable sticky comment removal notice template with dynamic tokens (`{next_allowed_time}`, `{time_remaining}`).; Fixed moderator and approved user exemption verification API signatures.; Added atomic post event deduplication (`gh:rg:proc:${postId}`) across PostSubmit and PostCreate.; Filtered current postId from historical lookups to eliminate self-comparison false violations.; Upgraded to Devvit SDK v0.14.3 with full Vitest test suite.</p>
 
 <h2>Links</h2>
 <ul>

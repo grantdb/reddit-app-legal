@@ -1,7 +1,7 @@
 # RateGuard
 
 Category: Moderation  
-Version: v0.0.10  
+Version: v0.0.11  
 Visibility: Public  
 Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 
@@ -59,21 +59,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.11 — 2026-09-09
+- Standard fleet synchronization and maintenance.
+
 0.0.10 — 2026-09-09
 - Standard fleet synchronization and maintenance.
 
 0.0.9 — 2026-09-09
 - Standard fleet synchronization and maintenance.
-
-0.0.9 — 2026-09-08
-- Transformed into full Server + Webview GuardHub moderation app.
-- Added interactive Webview Control Center with Cadence Policy, Template Editor with live preview, Live Redis Audit Logs, and User Cooldown Simulator.
-- Added "Filter to Mod Queue" violation enforcement action alternative to post removals.
-- Added customizable sticky comment removal notice template with dynamic tokens (`{next_allowed_time}`, `{time_remaining}`).
-- Fixed moderator and approved user exemption verification API signatures.
-- Added atomic post event deduplication (`gh:rg:proc:${postId}`) across PostSubmit and PostCreate.
-- Filtered current postId from historical lookups to eliminate self-comparison false violations.
-- Upgraded to Devvit SDK v0.14.3 with full Vitest test suite.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/rate-guard/TERMS.md)
