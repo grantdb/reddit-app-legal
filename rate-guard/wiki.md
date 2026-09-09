@@ -1,7 +1,7 @@
 # RateGuard
 
 Category: Moderation  
-Version: v0.0.9  
+Version: v0.0.10  
 Visibility: Public  
 Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 
@@ -22,8 +22,6 @@ Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 ### Menu Actions
 - PostSubmit: Delivered by Reddit event router to endpoint /internal/trigger/post.
 - PostCreate: Delivered by Reddit event router to endpoint /internal/trigger/post.
-- AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.
-- AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-install.
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
@@ -61,6 +59,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.10 — 2026-09-09
+- Standard fleet synchronization and maintenance.
+
 0.0.9 — 2026-09-09
 - Standard fleet synchronization and maintenance.
 
@@ -73,9 +74,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Added atomic post event deduplication (`gh:rg:proc:${postId}`) across PostSubmit and PostCreate.
 - Filtered current postId from historical lookups to eliminate self-comparison false violations.
 - Upgraded to Devvit SDK v0.14.3 with full Vitest test suite.
-
-0.0.8 — 2026-09-02
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/rate-guard/TERMS.md)

@@ -1,7 +1,7 @@
 <h1>RateGuard</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.9<br>
+Version: v0.0.10<br>
 Visibility: Public<br>
 Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.</p>
 
@@ -22,8 +22,6 @@ Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 <ul>
 <li>PostSubmit: Delivered by Reddit event router to endpoint /internal/trigger/post.</li>
 <li>PostCreate: Delivered by Reddit event router to endpoint /internal/trigger/post.</li>
-<li>AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
-<li>AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
 </ul>
 <h3>Custom Post Types and Entrypoints</h3>
 <p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
@@ -63,12 +61,12 @@ Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.10 — 2026-09-09<br>
+Standard fleet synchronization and maintenance.</p>
 <p>0.0.9 — 2026-09-09<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.9 — 2026-09-08<br>
 Transformed into full Server + Webview GuardHub moderation app.; Added interactive Webview Control Center with Cadence Policy, Template Editor with live preview, Live Redis Audit Logs, and User Cooldown Simulator.; Added "Filter to Mod Queue" violation enforcement action alternative to post removals.; Added customizable sticky comment removal notice template with dynamic tokens (`{next_allowed_time}`, `{time_remaining}`).; Fixed moderator and approved user exemption verification API signatures.; Added atomic post event deduplication (`gh:rg:proc:${postId}`) across PostSubmit and PostCreate.; Filtered current postId from historical lookups to eliminate self-comparison false violations.; Upgraded to Devvit SDK v0.14.3 with full Vitest test suite.</p>
-<p>0.0.8 — 2026-09-02<br>
-Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
 <ul>
