@@ -1,7 +1,7 @@
 # Pinned Menuboard
 
 Category: Moderation  
-Version: v0.0.63  
+Version: v0.0.64  
 Visibility: Public  
 Summary: A centralized menu board for pinned posts
 
@@ -34,7 +34,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - Submits Automated Comments: No — Does not submit automated comments.
 - Attaches Removal Notes: No — Does not attach removal notes.
 - Approves Content: No — Does not approve content.
-- Removes or Filters Content: No — Does not remove or filter content.
+- Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
 - Dispatches Modmail Alerts: No — Does not send modmail notifications.
 - Updates User or Post Flair: No — Does not update flair.
 
@@ -46,23 +46,22 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install: Add Pinned Menuboard to your subreddit through the Reddit App Directory.
-- Generate Board: Select Generate Pinned Menuboard from Subreddit Mod Tools and sticky the resulting post.
-- Feature Content: Open any post and select Toggle on Menuboard to add it to an open slot.
-- Customize: Adjust board headers and styling preferences in App Settings anytime.
-- No markdown link tables to update manually. Visual community navigation directly inside your feed.*
+- Generate Board: Select Generate Pinned Menuboard from Subreddit Mod Tools.
+- Feature Threads: Open any post menu (`...`) and click Toggle on Menuboard, or use the in-webview Customize panel.
+- Tune Settings: Click Customize in the top-right corner of the board to set your preferred theme, title, and slot count.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.64 — 2026-09-09
+- Standard fleet synchronization and maintenance.
+
 0.0.63 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 0.0.62 — 2026-08-31
-- Standard fleet synchronization and maintenance.
-
-0.0.61 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links

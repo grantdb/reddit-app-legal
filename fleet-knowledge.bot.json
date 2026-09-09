@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-09T00:44:49.759Z",
+  "generatedAt": "2026-09-09T02:38:04.035Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -1550,10 +1550,9 @@
       ],
       "setupSteps": [
         "Install: Add Pinned Menuboard to your subreddit through the Reddit App Directory.",
-        "Generate Board: Select Generate Pinned Menuboard from Subreddit Mod Tools and sticky the resulting post.",
-        "Feature Content: Open any post and select Toggle on Menuboard to add it to an open slot.",
-        "Customize: Adjust board headers and styling preferences in App Settings anytime.",
-        "No markdown link tables to update manually. Visual community navigation directly inside your feed.*"
+        "Generate Board: Select Generate Pinned Menuboard from Subreddit Mod Tools.",
+        "Feature Threads: Open any post menu (`...`) and click Toggle on Menuboard, or use the in-webview Customize panel.",
+        "Tune Settings: Click Customize in the top-right corner of the board to set your preferred theme, title, and slot count."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -1590,7 +1589,7 @@
         "troubleshooting": "Check the Pinned Menuboard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-09-09"
     },
     {
       "appId": "user-board",

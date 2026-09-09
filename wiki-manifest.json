@@ -23,7 +23,7 @@
   "linux-quest": "15fa38c316a0c2c1",
   "malp-scout": "5dedc36493eddab6",
   "mod-snapshot": "e7fbdb376bd4e272",
-  "pinned-menuboard": "fae0c4bec899c5c9",
+  "pinned-menuboard": "6d073b35a6acb74e",
   "playscraper-bot": "d2e8cad325328168",
   "post-title-check": "8fcd577f4973f1eb",
   "queue-guard": "3b9e8dc7fc476c57",
@@ -43,5 +43,5 @@
   "verify-guard": "0dfbdfcfdf9bc919",
   "wiki-sync-bot": "5eef26e190a75c16",
   "word-guard": "b229fc1b8dd722eb",
-  "bot_knowledge": "57ba66cf28eeaba3"
+  "bot_knowledge": "f0a1b5ea18ec060a"
 }
