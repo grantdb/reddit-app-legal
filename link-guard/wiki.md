@@ -1,7 +1,7 @@
 # LinkGuard
 
 Category: Security  
-Version: v0.0.16  
+Version: v0.0.17  
 Visibility: Public  
 Summary: Strict URL policy enforcement & link shortener filter for Reddit posts and comments.
 
@@ -63,13 +63,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.17 — 2026-09-09
+- Standard fleet synchronization and maintenance.
+
 0.0.16 — 2026-09-09
 - Standard fleet synchronization and maintenance.
 
 0.0.15 — 2026-09-08
-- Standard fleet synchronization and maintenance.
-
-0.0.14 — 2026-09-05
 - Standard fleet synchronization and maintenance.
 
 ## Links
