@@ -1,7 +1,7 @@
 # RateGuard
 
 Category: Moderation  
-Version: v0.0.11  
+Version: v0.0.12  
 Visibility: Public  
 Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 
@@ -59,13 +59,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.12 — 2026-09-09
+- Standard fleet synchronization and maintenance.
+
 0.0.11 — 2026-09-09
 - Standard fleet synchronization and maintenance.
 
 0.0.10 — 2026-09-09
-- Standard fleet synchronization and maintenance.
-
-0.0.9 — 2026-09-09
 - Standard fleet synchronization and maintenance.
 
 ## Links

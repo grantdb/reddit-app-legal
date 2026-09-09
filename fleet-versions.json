@@ -61,8 +61,8 @@
   },
   "app-update-checker": {
     "name": "App Update Checker",
-    "version": "0.0.79",
-    "visibility": "unlisted"
+    "version": "0.0.80",
+    "visibility": "public"
   },
   "gate-defender": {
     "name": "Gate Defender",
