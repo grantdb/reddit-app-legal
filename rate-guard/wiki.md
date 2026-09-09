@@ -1,7 +1,7 @@
 # RateGuard
 
 Category: Moderation  
-Version: v0.0.8  
+Version: v0.0.9  
 Visibility: Public  
 Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 
@@ -20,24 +20,18 @@ Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 
 ## Triggers and Activation
 ### Menu Actions
-- GuardHub: RateGuard Settings: Configure posting frequency limits and cooldowns. (Location: subreddit)
+- PostSubmit: Delivered by Reddit event router to endpoint /internal/trigger/post.
+- PostCreate: Delivered by Reddit event router to endpoint /internal/trigger/post.
+- AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.
+- AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-install.
 
 ### Custom Post Types and Entrypoints
-- Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/server/index.ts)
+- Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
 
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- appEnabled: Enable RateGuard (boolean, default: true). Master toggle to enable or pause RateGuard posting frequency limits.
-- appMode: App Enforcement Mode (select, default: dry_run). App Enforcement Mode
-- minGapDays: Time Between Posts (Days) (number, default: 0). Minimum required days between consecutive user submissions (e.g. 2 = user can only post once every 2 days). Set to 0 if using minutes cooldown below.
-- minGapMinutes: Minimum Gap Cooldown (Minutes) (number, default: 120). Minimum required time in minutes between consecutive user submissions (e.g. 120 = 2 hours, 1440 = 1 day, 2880 = 2 days). 0 = disabled.
-- maxPosts24h: Rolling 24-Hour Post Cap (number, default: 3). Maximum posts allowed per user in a 24-hour rolling window. 0 = disabled.
-- burstMaxPosts: Burst Post Cap (number, default: 3). Maximum posts allowed within the burst window.
-- burstWindowMinutes: Burst Window (Minutes) (number, default: 5). Window size in minutes for burst detection (e.g. 5 minutes).
-- exemptMods: Exempt Subreddit Moderators (boolean, default: true). Exempt subreddit moderators from all rate limits.
-- exemptApproved: Exempt Approved Contributors (boolean, default: true). Exempt approved submitters from all rate limits.
-- exemptFlairs: Exempt Post Flairs (string, default: ). Comma-separated list of post flair names exempt from rate limits (e.g. "Megathread, Announcement").
+- No custom app settings.
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
@@ -53,10 +47,11 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key-Value Strings (deduplication & cooldown markers)
 - Hashes (structured records & alias indices)
 - Sorted Sets (time-series audit logs)
+- Key patterns: node:http, rate_guard:dashboard_post_id, rate_guard:meta
 
 ## Setup and Usage
 - Install: Add Rate Guard to your subreddit through the Reddit App Directory.
-- Configure: Open Mod Tools > App Settings > Rate Guard.
+- Open Dashboard: Click GuardHub: RateGuard Dashboard from your subreddit menu.
 - Set Cadence: Configure your time between posts (in days or minutes), 24-hour rolling cap, and burst limit thresholds.
 - Save: The cadence engine applies immediately to all incoming community posts.
 - No external servers or complicated bot hosting required. Clean, automated rate limiting inside Reddit.*
@@ -66,14 +61,21 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.9 — 2026-09-09
+- Standard fleet synchronization and maintenance.
+
+0.0.9 — 2026-09-08
+- Transformed into full Server + Webview GuardHub moderation app.
+- Added interactive Webview Control Center with Cadence Policy, Template Editor with live preview, Live Redis Audit Logs, and User Cooldown Simulator.
+- Added "Filter to Mod Queue" violation enforcement action alternative to post removals.
+- Added customizable sticky comment removal notice template with dynamic tokens (`{next_allowed_time}`, `{time_remaining}`).
+- Fixed moderator and approved user exemption verification API signatures.
+- Added atomic post event deduplication (`gh:rg:proc:${postId}`) across PostSubmit and PostCreate.
+- Filtered current postId from historical lookups to eliminate self-comparison false violations.
+- Upgraded to Devvit SDK v0.14.3 with full Vitest test suite.
+
 0.0.8 — 2026-09-02
 - Standard fleet synchronization and maintenance.
-
-0.0.7 — 2026-08-31
-- Standard fleet synchronization and maintenance.
-
-0.0.6 — 2026-08-27
-- Add minGapDays multi-day cooldown and fix blocks manifest
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/rate-guard/TERMS.md)
