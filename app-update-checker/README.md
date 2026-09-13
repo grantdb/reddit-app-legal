@@ -19,7 +19,7 @@ App Update Checker ensures your subreddit's Devvit tools and moderation bots rem
 - **Automated backend directory scraper**: Continuously monitors and extracts release versions from public Reddit App Directory listings into an up-to-date manifest feed.
 - **Clear, verified onboarding**: Guides your mod team to update apps in Mod Tools and sync baseline tracking on initial install.
 - **Silent daily audits**: Runs a lightweight background check every day at 12:00 UTC with zero modmail spam—alerts are sent only when a new update is published.
-- **Modmail upgrade alerts**: Delivers clean, text-formatted summary tables with direct links to update pages on the Reddit App Directory.
+- **Archivable Modmail alerts**: Delivers clean, text-formatted summary tables directly to your Modmail Inbox where they can be archived to keep your inbox clean.
 - **Universal directory support**: Cross-references against 150+ public apps in the Reddit App Directory and official developer manifests.
 - **Consolidated moderator controls**: Access on-demand scans, baseline syncing, and cache resets from a single **App Update Checker** menu popout.
 
@@ -45,7 +45,7 @@ App Update Checker ensures your subreddit's Devvit tools and moderation bots rem
   - **Check for App Updates**: Run an immediate scan and receive a full status report in Modmail.
   - **Sync All Apps as Updated**: Lock in current versions as the baseline after updating apps in Mod Tools.
   - **Reset App Cache**: Clear cached data and trigger a fresh discovery scan.
-- **Native Settings Control**: Specify custom app slugs to monitor, toggle unlisted bot reporting, and configure check schedules in App Settings.
+- **Native Settings Control**: Specify custom app slugs to monitor, toggle unlisted bot reporting, select your preferred Modmail delivery destination (Inbox, Discussions, or Notifications), and configure check schedules in App Settings.
 
 ---
 
@@ -81,7 +81,7 @@ App Update Checker is engineered for resilient version resolution and lightweigh
 - **Redis-Cached Feed Delivery**: The directory snapshot is fetched from `raw.githubusercontent.com` and cached in Redis for fast, lightweight checks within platform limits.
 - **Deterministic Semver Comparison**: Standard semver parsing reliably detects patch, minor, and major version increments without false positives.
 - **Scheduled Cron Runner**: Executes automated checks on a daily cron schedule at 12:00 UTC.
-- **Modmail Markdown Formatter**: Formats clean markdown tables with direct links to app install pages.
+- **Archivable Modmail Deliveries**: Formats clean markdown tables delivered directly to your Modmail Inbox with native archive support, preventing clutter.
 
 ---
 

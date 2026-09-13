@@ -1,7 +1,7 @@
 {
   "action-guard": "eb37f62fcc7e380e",
   "ai-checker": "d178b4cea39dcbd6",
-  "app-update-checker": "693cdf4729bf6855",
+  "app-update-checker": "3fb68990e28fe95b",
   "archive-all-mm": "3f3e7fc472b426a8",
   "archive-guard": "617c2a048885cc32",
   "audit-guard": "fefddd451de4c7dd",
@@ -43,5 +43,5 @@
   "verify-guard": "0dfbdfcfdf9bc919",
   "wiki-sync-bot": "5eef26e190a75c16",
   "word-guard": "b229fc1b8dd722eb",
-  "bot_knowledge": "4885134014c48960"
+  "bot_knowledge": "2e01c5cd5f46dd01"
 }

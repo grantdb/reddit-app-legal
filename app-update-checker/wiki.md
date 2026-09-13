@@ -1,7 +1,7 @@
 # App Update Checker
 
 Category: Utility  
-Version: v0.0.80  
+Version: v0.0.81  
 Visibility: Public  
 Summary: Automated version tracking and release notification engine for Reddit Devvit apps. Daily silent audits and modmail alerts.
 
@@ -33,13 +33,14 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - auto_check_enabled: Enable Daily Auto Check (boolean, default: true). Automatically checks for app updates daily at 12:00 UTC. Modmail is only sent when a new update is found.
 - include_unlisted_bots: Include Unlisted / Custom Bots in Manual Reports (boolean, default: true). Include detected moderator bots that are not in the public Reddit App Directory in manual reports as informational entries.
 - extra_slugs: Extra App Slugs to Track (paragraph, default: -). Optional. Comma or newline-separated app slugs to monitor (e.g. comment-mop, bot-bouncer, sticky-pro). Add a baseline with slug:version (e.g. domain-guard:0.0.38).
+- modmail_destination: Modmail Delivery Destination (select, default: inbox). Choose where app update reports are delivered. "Modmail Inbox" allows reports to be archived to remove them from view once reviewed.
 
 ## Automation Capabilities
 - Submits Automated Comments: No — Does not submit automated comments.
 - Attaches Removal Notes: No — Does not attach removal notes.
 - Approves Content: No — Does not approve content.
 - Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
-- Dispatches Modmail Alerts: No — Does not send modmail notifications.
+- Dispatches Modmail Alerts: Yes — Sends modmail notifications.
 - Updates User or Post Flair: No — Does not update flair.
 
 ## Data Storage
@@ -60,13 +61,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.81 — 2026-09-13
+- Standard fleet synchronization and maintenance.
+
+0.0.80 — 2026-09-13
+- Feature: Added archivable Modmail delivery to standard Modmail Inbox (`createModInboxConversation`) with multi-tier API fallbacks (`createConversation`, `createModNotification`).
+- Feature: Added configurable `modmail_destination` setting allowing moderator teams to choose between Modmail Inbox (Archivable), Mod Discussions (Internal), and Mod Notifications (Read-Only).
+- Maintenance: Enhanced structured lifecycle logging to record destination channel and conversation IDs.
+
 0.0.79 — 2026-09-05
-- Standard fleet synchronization and maintenance.
-
-0.0.78 — 2026-09-02
-- Standard fleet synchronization and maintenance.
-
-0.0.77 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 ## Links

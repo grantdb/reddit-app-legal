@@ -13,7 +13,7 @@
 <li><strong>Automated backend directory scraper</strong>: Continuously monitors and extracts release versions from public Reddit App Directory listings into an up-to-date manifest feed.</li>
 <li><strong>Clear, verified onboarding</strong>: Guides your mod team to update apps in Mod Tools and sync baseline tracking on initial install.</li>
 <li><strong>Silent daily audits</strong>: Runs a lightweight background check every day at 12:00 UTC with zero modmail spam—alerts are sent only when a new update is published.</li>
-<li><strong>Modmail upgrade alerts</strong>: Delivers clean, text-formatted summary tables with direct links to update pages on the Reddit App Directory.</li>
+<li><strong>Archivable Modmail alerts</strong>: Delivers clean, text-formatted summary tables directly to your Modmail Inbox where they can be archived to keep your inbox clean.</li>
 <li><strong>Universal directory support</strong>: Cross-references against 150+ public apps in the Reddit App Directory and official developer manifests.</li>
 <li><strong>Consolidated moderator controls</strong>: Access on-demand scans, baseline syncing, and cache resets from a single <strong>App Update Checker</strong> menu popout.</li>
 </ul>
@@ -28,7 +28,7 @@
 <li><strong>Check for App Updates</strong>: Run an immediate scan and receive a full status report in Modmail.</li>
 <li><strong>Sync All Apps as Updated</strong>: Lock in current versions as the baseline after updating apps in Mod Tools.</li>
 <li><strong>Reset App Cache</strong>: Clear cached data and trigger a fresh discovery scan.</li>
-<li><strong>Native Settings Control</strong>: Specify custom app slugs to monitor, toggle unlisted bot reporting, and configure check schedules in App Settings.</li>
+<li><strong>Native Settings Control</strong>: Specify custom app slugs to monitor, toggle unlisted bot reporting, select your preferred Modmail delivery destination (Inbox, Discussions, or Notifications), and configure check schedules in App Settings.</li>
 </ul>
 <p>---</p>
 <h2>How It Works</h2>
@@ -53,7 +53,7 @@
 <li><strong>Redis-Cached Feed Delivery</strong>: The directory snapshot is fetched from `raw.githubusercontent.com` and cached in Redis for fast, lightweight checks within platform limits.</li>
 <li><strong>Deterministic Semver Comparison</strong>: Standard semver parsing reliably detects patch, minor, and major version increments without false positives.</li>
 <li><strong>Scheduled Cron Runner</strong>: Executes automated checks on a daily cron schedule at 12:00 UTC.</li>
-<li><strong>Modmail Markdown Formatter</strong>: Formats clean markdown tables with direct links to app install pages.</li>
+<li><strong>Archivable Modmail Deliveries</strong>: Formats clean markdown tables delivered directly to your Modmail Inbox with native archive support, preventing clutter.</li>
 </ul>
 <p>---</p>
 <h2>Designed to Assist Moderators</h2>
