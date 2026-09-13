@@ -2,12 +2,6 @@
 
 # AI Checker
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Security-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-AI_Analyzer-8A2BE2?style=for-the-badge)
-
 > **Detect AI-generated text and synthetic images with multi-model confidence scores.**
 
 AI Checker helps moderation teams identify and evaluate synthetic text and AI-generated imagery across subreddit submissions. Combining multi-provider vision and language models (including native Google Gemini 2.5 Flash / Pro) with unified scoring, it supports both manual post menu audits and automated background queues.

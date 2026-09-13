@@ -2,12 +2,6 @@
 
 # GuardHub: Format Guard 🛡️
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Content_Policy-8A2BE2?style=for-the-badge)
-
 > **Enforce clean titles, proper tags, and readable post structures automatically.**
 
 Format Guard keeps your subreddit feed clean, consistent, and readable. Enforce character length limits, required title tags, case controls, and regex patterns with instant author guidance—all managed through an intuitive native dashboard without editing complex AutoModerator YAML.

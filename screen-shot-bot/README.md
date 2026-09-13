@@ -2,11 +2,6 @@
 
 # Screen Shot Bot
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Utility](https://img.shields.io/badge/Category-Utility-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-AI_Analyzer-8A2BE2?style=for-the-badge)
-
 **Screen Shot Bot** is a specialized accessibility and support tool designed to bridge the gap between technical image uploads and searchable community data. Rather than forcing users to manually re-type long error logs from a photo, this bot uses advanced AI to automatically transcribe text from terminal windows, boot logs, and configuration screens into clean, indexable comments.
 
 ## Key Features

@@ -2,12 +2,6 @@
 
 # GuardHub: Flair Guard 🛡️
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Community_Styling-8A2BE2?style=for-the-badge)
-
 > **Automate post flair assignment to keep your community organized and searchable.**
 
 Flair Guard ensures your subreddit stays visually structured and searchable by automatically applying post flairs on submission. Map keywords and domain links to specific flair templates—all configured through clean native settings without fragile AutoModerator rules.

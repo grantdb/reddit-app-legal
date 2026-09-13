@@ -2,12 +2,6 @@
 
 # GuardHub: Queue-Guard 🛡️
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blueviolet?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Monitoring-8A2BE2?style=for-the-badge)
-
 > **Moderate faster, catch more, and stay in your flow.**
 
 Queue-Guard gives moderators fast reputation checks, duplicate detection, and one-click actions directly inside Reddit. No extra tabs, no clunky handoffs, and no breaking your moderation rhythm.

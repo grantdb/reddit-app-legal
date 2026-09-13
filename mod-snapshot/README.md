@@ -2,12 +2,6 @@
 
 # Mod Snapshot
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Archival-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Backup-8A2BE2?style=for-the-badge)
-
 > **Backup subreddit settings, rules, and AutoMod configurations to modmail in seconds.**
 
 Mod Snapshot provides full disaster-recovery and configuration backups for your subreddit. Capturing rules, removal reasons, flair templates, appearance settings, and AutoModerator YAML, it compiles readable, complete backup records delivered straight to your team modmail.

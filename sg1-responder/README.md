@@ -2,11 +2,6 @@
 
 # SG-1 Responder
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Automation-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Community_Engagement-8A2BE2?style=for-the-badge)
-
 **SG-1 Responder** is an automated community engagement utility designed specifically for themed Stargate subreddits. It actively monitors community activity and delivers contextually relevant, flavor-accurate responses to maintain a fun, immersive thematic consistency for fans of the franchise.
 
 ## Key Features

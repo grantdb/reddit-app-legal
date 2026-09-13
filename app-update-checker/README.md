@@ -2,12 +2,6 @@
 
 # App Update Checker
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Infrastructure-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Monitoring-8A2BE2?style=for-the-badge)
-
 > **Track installed app versions, discover new releases, and receive automated modmail update alerts for any subreddit.**
 
 App Update Checker ensures your subreddit's Devvit tools and moderation bots remain secure and up-to-date. Powered by an automated backend directory scraper that continuously tracks public Reddit App Directory releases, it runs silent daily audits and keeps your mod team informed whenever an app author publishes a new version.

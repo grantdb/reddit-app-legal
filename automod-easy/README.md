@@ -2,12 +2,6 @@
 
 # AutoMod Easy
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Dev_Suite-8A2BE2?style=for-the-badge)
-
 > **Write, test, and optimize AutoModerator rules in a visual, safe sandbox.**
 
 AutoMod Easy replaces error-prone YAML editing with an interactive rule builder and testing studio. Audit existing rules for safety risks, test rule configurations against dummy posts in a secure sandbox, draft curated starter templates, and safely deploy changes to your subreddit wiki with automated revision snapshots.

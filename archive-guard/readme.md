@@ -2,9 +2,6 @@
 
 # Archive-Guard 🛡️
 
-![Reddit](https://img.shields.io/badge/Platform-Reddit%20Devvit-FF4500?style=flat-square)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=flat-square)
-
 > *Subreddit memory without the repetition.*
 
 Stop answering the exact same recurring questions every week. **Archive-Guard** is a lightweight, zero-bloat Devvit moderation tool that indexes discussion topics, clusters repeat questions, and points community members directly to your subreddit's definitive canonical threads.

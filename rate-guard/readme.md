@@ -2,12 +2,6 @@
 
 # GuardHub: Rate Guard 🛡️
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Cadence_Engine-8A2BE2?style=for-the-badge)
-
 > **Prevent spam floods, enforce posting cooldowns, and maintain a healthy community cadence.**
 
 Rate Guard protects your subreddit feed from rapid-fire spam floods, karma farming bursts, and excessive multi-posting. Enforce minimum cooldown gaps, rolling daily submission caps, and burst limits with automatic "next allowed post time" calculation—managed through an in-webview Control Center directly within Reddit.

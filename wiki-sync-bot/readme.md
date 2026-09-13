@@ -2,11 +2,6 @@
 
 # WikiSync Bot
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Utility-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Wiki_Engine-8A2BE2?style=for-the-badge)
-
 > **Automated, reliable subreddit wiki synchronization and documentation management for Reddit.**
 
 WikiSync Bot provides subreddit moderators with a high-reliability engine to publish, manage, and synchronize wiki documentation and support schemas directly within Reddit. Dual-writes across modern (v2) and legacy (v1) Reddit wiki stores to eliminate rich-text corruption and keep community knowledge up to date.

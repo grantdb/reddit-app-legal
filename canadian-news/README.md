@@ -2,11 +2,6 @@
 
 # Canadian News App
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![News](https://img.shields.io/badge/Category-Regional_News-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Content_Curation-8A2BE2?style=for-the-badge)
-
 **Canadian News App** is a manual-only, candidate-scouting and pre-editing tool designed to deliver highly curated news from across Canada directly to your subreddit. It operates with zero background automation—moderators scout, review, edit, and approve every post before it hits the live feed.
 
 ## Key Features

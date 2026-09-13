@@ -2,11 +2,6 @@
 
 # SG Team Dispatch
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Gaming](https://img.shields.io/badge/Category-Interactive-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Game-8A2BE2?style=for-the-badge)
-
 **SG Team Dispatch** is a replayable Stargate SG-1 inspired tactical mission command game engineered directly for Reddit custom posts. Commanders assemble specialized SG team rosters, manage offworld resources, and navigate multi-stage tactical encounters against Goa'uld, Replicator, and environmental threats.
 
 ## Key Features

@@ -2,11 +2,6 @@
 
 # Gate Defender
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Gaming](https://img.shields.io/badge/Category-Gaming-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Game-8A2BE2?style=for-the-badge)
-
 **Gate Defender** is an intensive, arcade-style survival game engineered directly within the Reddit client. Designed to foster community spirit through friendly competition, it challenges players to defend their perimeter against escalating waves of obstacles and secure their name on the subreddit's global leaderboard.
 
 ## Key Features

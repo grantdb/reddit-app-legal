@@ -2,12 +2,6 @@
 
 # Post Title Check
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Content_Policy-8A2BE2?style=for-the-badge)
-
 > **Enforce editorial standards, require title tags, and guide authors automatically.**
 
 Post Title Check ensures your subreddit feed stays readable, informative, and clean. Validating submission titles against word counts, bracket tags, banned phrases, and character sets, it delivers instant, friendly removal feedback so authors can fix their titles and resubmit.

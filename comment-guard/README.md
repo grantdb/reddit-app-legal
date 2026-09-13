@@ -2,12 +2,6 @@
 
 # GuardHub: Comment Guard 🛡️
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Automoderator-8A2BE2?style=for-the-badge)
-
 > **Filter low-effort spam and keep comment threads focused and constructive.**
 
 Comment Guard protects your comment sections from repetitive spam, low-effort demands, and copy-pasted disruptions. Using weighted pattern scoring and account trust signals, it distinguishes between spammy noise and constructive feedback—all managed from a private moderator dashboard without complex AutoModerator rules.

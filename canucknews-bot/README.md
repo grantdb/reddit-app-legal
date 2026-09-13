@@ -2,11 +2,6 @@
 
 # Canuck News Bot
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-News-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Content_Curation-8A2BE2?style=for-the-badge)
-
 **Canuck News Bot** is a manual-only, candidate-scouting and pre-editing tool designed to deliver curated, balanced, and non-political news from across Canada directly to your subreddit. It operates with zero automated posting—moderators scout, review, edit, and confirm every candidate story before publishing.
 
 ## Key Features

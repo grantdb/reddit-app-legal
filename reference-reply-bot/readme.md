@@ -2,10 +2,6 @@
 
 # Reference Reply Bot (`r/grantdb`)
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Support-blue?style=for-the-badge)
-
 **Reference Reply Bot** is a post-only support intake and reference utility built for **r/grantdb**. It monitors new support posts, identifies support intent and app references using deterministic heuristic scoring, and posts concise, non-conversational troubleshooting guidance and documentation links.
 
 ---

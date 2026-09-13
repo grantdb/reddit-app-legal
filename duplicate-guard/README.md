@@ -2,12 +2,6 @@
 
 # GuardHub: Duplicate Guard 🛡️
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blueviolet?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Spam_Control-8A2BE2?style=for-the-badge)
-
 > **Catch repost bots, filter duplicate topics, and keep your community feed fresh.**
 
 Duplicate Guard stops repetitive topics, reworded reposts, and content floods before they reach your front page. Comparing incoming submission titles against recent community posts using configurable similarity algorithms, it filters duplicates automatically without manual mod queue searching.

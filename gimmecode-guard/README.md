@@ -2,12 +2,6 @@
 
 # GuardHub: GimmeCode Guard 🛡️
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Automation-8A2BE2?style=for-the-badge)
-
 > **Filter low-effort code begging and keep developer discussions focused and high-value.**
 
 GimmeCode Guard protects programming and tech subreddits from repetitive "give me code" demands, homework begging, and low-effort copy-paste requests. Using pattern scoring and code block awareness, it nudges users toward constructive inquiry while preserving meaningful technical discussions.

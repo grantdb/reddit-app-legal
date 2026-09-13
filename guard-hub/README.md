@@ -2,12 +2,6 @@
 
 # GuardHub: Guard Hub 🛡️
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Administration-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Administration-8A2BE2?style=for-the-badge)
-
 > **Monitor, coordinate, and inspect your entire GuardHub moderation defense system from one central hub.**
 
 Guard Hub is the unified control center and observability dashboard for the GuardHub moderation ecosystem. Monitor installed guard modules, detect configuration drift, check defense layer health, and inspect cross-app audit telemetry—all from a single native dashboard inside your subreddit.

@@ -2,11 +2,6 @@
 
 # Ring Escape
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Gaming](https://img.shields.io/badge/Category-Gaming-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Game-8A2BE2?style=for-the-badge)
-
 **Ring Escape** is a high-fidelity stealth-action infiltration game engineered directly within the Reddit client. Designed to engage communities with interactive content, players are challenged to infiltrate a flagship, avoid patrolling guards, sabotage critical systems, and successfully extract before the clock runs out.
 
 ## Key Features

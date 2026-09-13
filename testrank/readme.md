@@ -2,11 +2,6 @@
 
 # TestRank
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Utility-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Recognition_System-8A2BE2?style=for-the-badge)
-
 > **Empower developers to reward quality feedback, recognize dedicated testers, and gamify app testing across your subreddit.**
 
 **TestRank** is an automated tester recognition, reputation, and leaderboard engine for Android beta testing communities like **r/droidapptesters**. It allows app developers (OPs) to confirm helpful feedback directly from comment menus, awards structured XP points, maintains real-time weekly and monthly leaderboards, syncs Reddit user flairs across a prestige ladder, and equips moderators with complete audit and override capabilities.

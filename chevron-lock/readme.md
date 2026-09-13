@@ -2,10 +2,6 @@
 
 # Chevron Lock
 
-![Reddit](https://img.shields.io/badge/Platform-Reddit%20Devvit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Category](https://img.shields.io/badge/Category-Interactive-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Game-8A2BE2?style=for-the-badge)
-
 Operating an unstable SGC dialing console, players must identify, repair, and reorder gate address sequences under strict time pressure before gate system collapse. **Chevron Lock** brings an authentic Stargate dialing puzzle experience directly into Reddit feeds.
 
 ## Interactive Features

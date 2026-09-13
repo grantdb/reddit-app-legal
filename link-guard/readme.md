@@ -2,12 +2,6 @@
 
 # GuardHub: Link Guard 🛡️
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Security-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Content_Policy-8A2BE2?style=for-the-badge)
-
 > **Unmask shorteners, decode obfuscated links, and enforce link policies automatically.**
 
 Link Guard protects your subreddit from disguised link shorteners, phishing attempts, affiliate tracking spam, and obfuscated domain tricks (`example[dot]com`). Operating entirely within Reddit's sandboxed environment with zero external API dependencies, it audits community submissions and comments with zero-latency local evaluation.

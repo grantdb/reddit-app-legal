@@ -2,11 +2,6 @@
 
 # Playscraper Bot 📱
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-AI_Analyzer-8A2BE2?style=for-the-badge)
-
 > **Instantly extract, summarize, and display app store metadata, cost, and developer details for community submissions.**
 
 **Playscraper Bot** is a professional moderator utility that leverages AI to extract and summarize metadata from app stores and open-source repositories. By automatically posting standardized, highly informative comment headers on submissions containing links to these platforms, it helps moderators and users verify shared software content at a glance without having to click away from Reddit.

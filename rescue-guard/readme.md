@@ -2,12 +2,6 @@
 
 # GuardHub: RescueGuard 🛡️
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Discovery_Engine-8A2BE2?style=for-the-badge)
-
 > **Surface overlooked submissions, empower manual moderator curation, and spotlight hidden gems across your subreddit.**
 
 RescueGuard gives moderation teams an assistive, privacy-first discovery engine to find quality community submissions from the lookback window that slipped through the cracks with low engagement. Review a ranked queue of overlooked posts and manually spotlight worthy contributions with automated post flairs and distinguished sticky notices.

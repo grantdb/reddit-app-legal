@@ -2,12 +2,6 @@
 
 # Pinned Menuboard
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Subreddit_Utility-blueviolet?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Community_Styling-8A2BE2?style=for-the-badge)
-
 > **Overcome Reddit's 2-pin limit with an interactive, visual showcase featuring high-resolution previews, customizable themes, and in-webview moderator controls.**
 
 Pinned Menuboard gives your subreddit a stylish navigation hub and game launcher. By creating a persistent showcase of featured threads, announcements, or community resources, moderators can spotlight up to twelve posts simultaneously with single-tap post menu toggles or direct in-webview management.

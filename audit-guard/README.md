@@ -2,12 +2,6 @@
 
 # GuardHub: Audit Guard 🛡️
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Logging-8A2BE2?style=for-the-badge)
-
 > **Maintain a transparent, searchable audit ledger of moderation actions and config changes.**
 
 Audit Guard provides your moderation team with a central, chronological security ledger. Record and review moderation events and configuration changes across your subreddit through an interactive dashboard, giving you complete transparency into what actions were taken, by whom, and when.

@@ -2,12 +2,6 @@
 
 # Archive All Modmail
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Modmail-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Tool-8A2BE2?style=for-the-badge)
-
 > **Clear massive modmail backlogs in the background with a single click.**
 
 Archive All Modmail effortlessly clears overgrown subreddit inboxes without browser freezing or timeout errors. Running resilient chunked batch jobs in the background, it processes thousands of old modmail threads while your team stays focused on active community support.

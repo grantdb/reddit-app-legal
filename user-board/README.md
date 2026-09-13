@@ -2,12 +2,6 @@
 
 # User Board
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Analytics-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Community_Engagement-8A2BE2?style=for-the-badge)
-
 > **Gamify community engagement and showcase your top contributors in a live leaderboard.**
 
 User Board recognizes and rewards your most valuable community members. Calculating participation scores based on custom post and comment weights, it renders a visual, interactive leaderboard post directly inside your subreddit to drive constructive discussion.

@@ -2,12 +2,6 @@
 
 # GuardHub: Verify Guard 🛡️
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Security-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Verification_Engine-8A2BE2?style=for-the-badge)
-
 > **Streamline community verification, grant trust badges, and protect member privacy.**
 
 Verify Guard provides a privacy-first verification and access engine for your subreddit. Manage multi-tier verification policies—including automated account trust gates, self-declared age gates, and manual role reviews—to award user flairs and approved contributor status without modmail clutter.

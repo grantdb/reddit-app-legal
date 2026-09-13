@@ -2,12 +2,6 @@
 
 # GuardHub: Filter Guard 🛡️
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Gatekeeper-8A2BE2?style=for-the-badge)
-
 > **Combine complex participation rules into simple, reliable community gates.**
 
 Filter Guard gives moderation teams layered threshold logic without cryptic syntax. Combine account age, karma requirements, and risk score criteria using clear AND/OR gates, test everything safely in a visual simulator, and manage all your filter policies through a private dashboard.

@@ -2,12 +2,6 @@
 
 # MALP-Scout
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Focus](https://img.shields.io/badge/Focus-Stargate_SG--1-blue?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Moderator_Only-success?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Content_Scout-8A2BE2?style=for-the-badge)
-
 **MALP-Scout** is a manual-only Stargate SG-1 content scouting tool for subreddit moderators. Styled after the Stargate Reconnaissance Probe (MALP - Mobile Analytic Laboratory Probe), the app operates on demand using a local curated SG-1 dataset as its primary source of truth. It allows moderators to generate, preview, and selectively post high-quality, template-driven SG-1 content without remote web crawling, background schedulers, or automatic posting.
 
 ## Key Features

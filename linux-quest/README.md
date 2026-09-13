@@ -2,11 +2,6 @@
 
 # Linux Quest
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Linux](https://img.shields.io/badge/Focus-Support_Readiness-E33332?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Game-8A2BE2?style=for-the-badge)
-
 **Linux Quest** is an educational RPG built natively in Reddit, designed to act as a "support-readiness" proof layer for Linux and tech communities. Instead of punishing users for asking poor questions, it gamifies the process of learning *how* to ask for help. It teaches users the essential habits required to submit high-quality, actionable support requests, reducing friction and speeding up resolution times for the whole community.
 
 ## Key Features
