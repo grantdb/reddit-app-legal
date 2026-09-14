@@ -154,11 +154,6 @@
     "version": "0.0.17",
     "visibility": "unlisted"
   },
-  "flair-guard": {
-    "name": "FlairGuard",
-    "version": "0.0.14",
-    "visibility": "unlisted"
-  },
   "guard-hub": {
     "name": "Guard Hub",
     "version": "0.0.13",
@@ -176,7 +171,7 @@
   },
   "rate-guard": {
     "name": "RateGuard",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "visibility": "public"
   },
   "sgteam-dispatch": {
@@ -216,7 +211,12 @@
   },
   "rescue-guard": {
     "name": "RescueGuard",
-    "version": "0.0.19",
+    "version": "0.0.20",
     "visibility": "public"
+  },
+  "flair-guard": {
+    "name": "Flair Guard",
+    "version": "0.0.14",
+    "visibility": "unlisted"
   }
 }
