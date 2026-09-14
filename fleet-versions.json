@@ -216,7 +216,7 @@
   },
   "flair-guard": {
     "name": "Flair Guard",
-    "version": "0.0.14",
+    "version": "0.0.15",
     "visibility": "unlisted"
   }
 }
