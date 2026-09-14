@@ -1,10 +1,6 @@
-# Flair Guard 🛡️
+> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/flair-guard)
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Community_Styling-8A2BE2?style=for-the-badge)
+# Flair Guard 🛡️
 
 > **Automate post flair assignment to keep your community organized and searchable.**
 

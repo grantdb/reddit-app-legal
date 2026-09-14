@@ -29,7 +29,7 @@ Subreddit wiki synchronization engine for Reddit communities.
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- enable_release_announcements: Enable App Release Announcements (boolean, default: true). Automatically post release notes and changelog announcements to r/grantdb when an app is updated.
+- enable_release_announcements: Enable App Release Announcements (boolean, default: true). Automatically post release notes and changelog announcements to r/grantdb when a public app is updated.
 - test_page_name: Test Wiki Page Path (paragraph, default: index/all-apps/wiki-sync-bot-test). The wiki page path to create or update (e.g. index/all-apps/wiki-sync-bot-test).
 - test_content: Test Wiki Content (paragraph, default: # WikiSync Bot Test Page
 

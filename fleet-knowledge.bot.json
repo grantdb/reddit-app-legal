@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-13T22:01:58.315Z",
+  "generatedAt": "2026-09-14T15:47:33.020Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -1971,25 +1971,25 @@
     {
       "appId": "flair-guard",
       "slug": "flair-guard",
-      "appName": "FlairGuard",
+      "appName": "Flair Guard",
       "aliases": [
         "flair-guard",
-        "flairguard",
-        "flair guard"
+        "flair guard",
+        "flairguard"
       ],
-      "summary": "Professional flair moderation engine.",
+      "summary": "Automated rule-based post flair assignment engine with delayed eligibility checks.",
       "keywords": [
         "flair-guard",
-        "flairguard",
+        "flair guard",
         "moderation",
-        "flair guard"
+        "flairguard"
       ],
       "setupSteps": [
         "Install: Add Flair Guard to your subreddit through the Reddit App Directory.",
         "Configure: Open Mod Tools > App Settings > Flair Guard.",
-        "Map Flairs: Enter your keyword triggers and corresponding flair template IDs.",
-        "Save: Automated flair enforcement begins immediately on all incoming community posts.",
-        "No complex AutoMod YAML required. Clean visual organization for your entire community.*"
+        "Set Template ID: Paste your subreddit post flair template UUID into Target Post Flair Template ID.",
+        "Define Keywords: Enter comma-separated trigger keywords (e.g. `urgent, help, question`).",
+        "Save: Automated flair enforcement begins immediately on all incoming community posts."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -2025,11 +2025,11 @@
         "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/flair-guard/PRIVACY.md"
       },
       "replyTemplates": {
-        "welcome": "Welcome to r/grantdb support! Here is reference information for FlairGuard.",
-        "troubleshooting": "Check the FlairGuard troubleshooting guide or view logs via devvit logs."
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Flair Guard.",
+        "troubleshooting": "Check the Flair Guard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-09-14"
     },
     {
       "appId": "guard-hub",

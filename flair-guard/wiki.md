@@ -1,12 +1,12 @@
-# FlairGuard
+# Flair Guard
 
 Category: Moderation  
 Version: v0.0.14  
 Visibility: Unlisted  
-Summary: Professional flair moderation engine.
+Summary: Automated rule-based post flair assignment engine with delayed eligibility checks.
 
 ## Overview
-Professional flair moderation engine.
+Automated rule-based post flair assignment engine with delayed eligibility checks.
 
 ## Flowchart
 [View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/flair-guard-flowchart.png)
@@ -29,14 +29,14 @@ Professional flair moderation engine.
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- delayedProcessingEnabled: Enable Delayed Processing (boolean, default: true). Enable Delayed Processing
-- delayedProcessingSeconds: Processing Delay (seconds) (number, default: DEFAULT_DELAY_SECONDS). Processing Delay (seconds)
-- skipIfRemoved: Skip if Post is Removed (boolean, default: true). Skip if Post is Removed
-- skipIfFiltered: Skip if Post is Filtered (In Modqueue) (boolean, default: true). Skip if Post is Filtered (In Modqueue)
-- skipIfSpam: Skip if Post is Marked as Spam (boolean, default: true). Skip if Post is Marked as Spam
-- moderatorExempt: Exempt Moderators (boolean, default: true). Exempt Moderators
-- triggerKeywords: Trigger Keywords (comma separated) (string, default: urgent, help, question). Trigger Keywords (comma separated)
-- targetPostFlairId: Target Post Flair Template ID (string, default: ). Target Post Flair Template ID
+- delayedProcessingEnabled: Enable Delayed Processing (boolean, default: true). When enabled, the bot waits before processing a new post to confirm it is still valid.
+- delayedProcessingSeconds: Processing Delay (seconds) (number, default: DEFAULT_DELAY_SECONDS). How many seconds to wait before checking eligibility (min: 5, max: 100). Default: 20.
+- skipIfRemoved: Skip if Post is Removed (boolean, default: true). Skip processing if the post is removed by the time the check runs.
+- skipIfFiltered: Skip if Post is Filtered (In Modqueue) (boolean, default: true). Skip processing if the post is awaiting mod approval.
+- skipIfSpam: Skip if Post is Marked as Spam (boolean, default: true). Skip processing if the post is marked as spam.
+- moderatorExempt: Exempt Moderators (boolean, default: true). Exempt moderator submissions from automated flair assignment.
+- triggerKeywords: Trigger Keywords (comma separated) (string, default: urgent, help, question). Comma-separated keywords to match against the submission title.
+- targetPostFlairId: Target Post Flair Template ID (string, default: ). The Reddit post flair template UUID to apply when a keyword matches.
 
 ## Automation Capabilities
 - Submits Automated Comments: No — Does not submit automated comments.
@@ -54,7 +54,8 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 ## Setup and Usage
 - Install: Add Flair Guard to your subreddit through the Reddit App Directory.
 - Configure: Open Mod Tools > App Settings > Flair Guard.
-- Map Flairs: Enter your keyword triggers and corresponding flair template IDs.
+- Set Template ID: Paste your subreddit post flair template UUID into Target Post Flair Template ID.
+- Define Keywords: Enter comma-separated trigger keywords (e.g. `urgent, help, question`).
 - Save: Automated flair enforcement begins immediately on all incoming community posts.
 - No complex AutoMod YAML required. Clean visual organization for your entire community.*
 

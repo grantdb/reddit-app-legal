@@ -60,6 +60,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 ## Version History
 0.0.51 — 2026-09-05
 - Standard fleet synchronization and maintenance.
+- Fix: Unlocked root viewport and enabled `touch-action: pan-y` with momentum scrolling for mobile webview.
 
 0.0.50 — 2026-09-02
 - Standard fleet synchronization and maintenance.
