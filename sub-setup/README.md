@@ -2,10 +2,6 @@
 
 # Sub Setup
 
-![Platform](https://img.shields.io/badge/Platform-Reddit%20Devvit-FF4500?style=flat-square)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=flat-square)
-![Interface](https://img.shields.io/badge/Interface-Interactive%20Webview-00f2fe?style=flat-square)
-
 ## Purpose
 Interactive subreddit setup guide and configuration wizard for Reddit communities.
 

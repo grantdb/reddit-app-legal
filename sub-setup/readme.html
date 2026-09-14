@@ -1,52 +1,45 @@
 <blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/sub-setup">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>Sub Setup</h1>
 <h2>Purpose</h2>
-<p>Comprehensive subreddit setup guide and configuration auditor for Reddit communities.</p>
-<p>`sub-setup` performs an in-depth, 19-section audit of your subreddit configuration, providing direct Mod Tools deep links, official Reddit documentation references, prioritized quick wins, and structured checklists. The completed audit report is formatted cleanly and delivered privately to your subreddit's Modmail (Mod Discussions).</p>
+<p>Interactive subreddit setup guide and configuration wizard for Reddit communities.</p>
+<p>`sub-setup` guides moderators through an in-depth, 19-section setup across 9 progressive wizard steps. It combines automated API inspections with persistent manual checklists, direct 1-click Mod Tools launchers, official Reddit documentation references, prioritized quick wins, and on-demand Modmail export.</p>
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sub-setup-flowchart.png">Logic Flowchart</a></p>
 <h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Moderator Action</strong>: A moderator selects <strong>Run Subreddit Setup Audit</strong> from the subreddit menu.</p>
-<p>2. <strong>Dual Audit Engine</strong>: The engine runs batched API execution for 8 verified sections with error isolation, followed by 11 guided manual reviews and optional checks.</p>
-<p>3. <strong>Dual-Score Processing</strong>: The app calculates an API-inspected score (0-100%), extracts top priorities and quick wins, and caches audit state in Redis.</p>
-<p>4. <strong>Modmail Delivery</strong>: Safe multi-part chunking (under 9,000 characters per message) delivers formatted reports directly to team Mod Discussions.</p>
+<p>1. <strong>Moderator Launch</strong>: A moderator clicks <strong>Run Subreddit Setup Audit</strong> in the subreddit menu. The server retrieves or generates a private, stealth custom post accessible only to moderators.</p>
+<p>2. <strong>Dual Audit & Interactive Wizard</strong>: The app loads an interactive 9-step React webview. Automated checks inspect 8 API-accessible areas, while guided checklists track manual settings with Redis persistence.</p>
+<p>3. <strong>Step-by-Step Configuration</strong>: Moderators work through settings, check off manual tasks with optimistic UI updates, launch 1-click Mod Tools deep links, or batch-complete steps.</p>
+<p>4. <strong>Export & Sharing</strong>: On demand, moderators can dispatch a structured Markdown summary directly to Modmail (Mod Discussions) or copy progress snippets to clipboard for team coordination.</p>
 <h2>Major Features</h2>
 <ul>
-<li><strong>Dual-Score Integrity</strong>: Separates API-inspected settings (which contribute to your numeric configuration score) from guided manual reviews and optional features.</li>
-<li><strong>Direct Mod Tools Links</strong>: Every section includes direct links with confirmed or best-effort routing and fallback URLs to the exact settings page.</li>
+<li><strong>Interactive 9-Step Wizard</strong>: Structured progression from community identity and AutoModerator to rules, flairs, safety filters, onboarding, team health, and operations.</li>
+<li><strong>Mod-Only Stealth Post</strong>: Runs in an expanded custom post that is automatically removed from the public subreddit feed so it never clutters member views.</li>
+<li><strong>Persistent Manual Checklists</strong>: Tracks your manual verification progress in Redis (`v1` namespace), completely decoupled from API audit runs so you never lose progress.</li>
+<li><strong>Optimistic UI Updates</strong>: Checkboxes update instantaneously with automatic rollback and toast notifications on network interruption.</li>
+<li><strong>Batch Step Completion</strong>: "Mark All Complete in This Step" allows rapid completion of verified configuration areas.</li>
+<li><strong>Remaining Items Quick Filter</strong>: 1-click modal listing all pending tasks across the entire subreddit with direct jump navigation.</li>
+<li><strong>Rate-Limited Audit Engine</strong>: 60-second cooldown protects platform resources and displays live retry timers.</li>
+<li><strong>Direct Mod Tools Launchers</strong>: Every section includes deep links with confirmed or best-effort routing to the exact Mod Tools page.</li>
 <li><strong>Official Documentation</strong>: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.</li>
 <li><strong>Zero-PII & Privacy-First</strong>: Reads only high-level community settings; never inspects private user profiles, post bodies, or modmail conversations.</li>
-<li><strong>Clean Plain-Text Formatting</strong>: Formatted with high-contrast, professional labels without emojis for clear readability across all Reddit clients.</li>
-<li><strong>Automatic Modmail Delivery</strong>: Seamless chunking ensures reports exceeding Reddit character limits arrive as cleanly sequenced parts.</li>
+<li><strong>On-Demand Modmail Delivery</strong>: Safe multi-part chunking (under 9,000 characters per message) delivers formatted reports to team Mod Discussions on demand.</li>
 </ul>
 <h2>Install / Use</h2>
 <p>1. Install <strong>Sub Setup</strong> on your subreddit.</p>
 <p>2. Open your subreddit's menu and select <strong>Run Subreddit Setup Audit</strong>.</p>
-<p>3. A toast will confirm that the audit is running.</p>
-<p>4. Check your subreddit's <strong>Modmail (Mod Discussions)</strong> for the complete audit report.</p>
-<h2>Audit Sections (19 Total)</h2>
-<h3>Part 1: API-Inspected Configuration (8 Sections)</h3>
-<p>1. <strong>Basic Settings and Community Identity</strong>: Title, description, sidebar length, community avatar, banner image, discoverability, and NSFW status.</p>
-<p>2. <strong>AutoModerator</strong>: Wiki configuration existence, rule blocks, YAML syntax validation (tab detection), new account filtering, and action reasons.</p>
-<p>3. <strong>Post and User Flairs</strong>: Post flair enablement, template counts, user flair enablement, and assignment permissions.</p>
-<p>4. <strong>Community Rules</strong>: Rule definitions, depth, rule fatigue checks, descriptions, and custom report reasons.</p>
-<p>5. <strong>Removal Reasons</strong>: Reason definitions, 1:1 rule mapping, explanatory depth, and appeal instructions.</p>
-<p>6. <strong>Wiki and Documentation</strong>: Wiki enablement, index landing page presence, and documentation pages.</p>
-<p>7. <strong>Moderator Team and Permissions</strong>: Team size, single-point-of-failure redundancy analysis, and scoped permissions.</p>
-<p>8. <strong>Posting and Content Settings</strong>: Allowed submission types, media uploads, crossposting, spoilers, and restriction status.</p>
-<h3>Part 2: Guided Manual Reviews (9 Sections)</h3>
-<p>9. <strong>Rules Hub and Post Check</strong>: Pre-submission rule warnings and keyword trigger checks.</p>
-<p>10. <strong>Poster Eligibility and Requirements</strong>: Native account age, karma, and verified email requirements.</p>
-<p>11. <strong>Safety Filters</strong>: Crowd Control, Reputation Filter, Ban Evasion Filter, and Harassment filtering.</p>
-<p>12. <strong>Saved Responses</strong>: Standardized modmail replies, ban appeal templates, and macro consistency.</p>
-<p>13. <strong>Community Guide and Onboarding</strong>: New member welcome messages, resource links, and flair prompts.</p>
-<p>14. <strong>Temporary Events and Scheduled Posts</strong>: Setting overrides during traffic spikes and recurring posts.</p>
-<p>15. <strong>Moderator Notifications</strong>: Milestone alerts, activity spikes, and report threshold alerts.</p>
-<p>16. <strong>Queue, Reports, Mod Log, and Modmail Workflow</strong>: Operational triage routines and audit trails.</p>
-<p>17. <strong>Insights and Operational Health</strong>: Traffic growth, team health, and safety tool catch rates.</p>
-<h3>Part 3: Optional and Eligibility-Gated Features (2 Sections)</h3>
-<p>18. <strong>Optional Reddit Programs and Training</strong>: Mod Guide training modules, app directory extensions, and contributor programs.</p>
-<p>19. <strong>Feature Availability and API Limitations</strong>: Overview of Devvit 0.14.2 API visibility and progressive rollout status.</p>
+<p>3. You will be routed directly to the interactive setup guide.</p>
+<p>4. Complete the 9 steps at your own pace — your progress is saved automatically.</p>
+<p>5. When ready, click <strong>Send to Modmail</strong> in Step 9 to archive your setup report in Mod Discussions.</p>
+<h2>9 Wizard Steps (19 Configuration Sections)</h2>
+<p>1. <strong>Step 1 — Community Identity & Settings</strong>: Title, description, sidebar length, community avatar, banner image, discoverability, and NSFW status.</p>
+<p>2. <strong>Step 2 — AutoModerator Protection</strong>: Wiki configuration existence, rule blocks, YAML syntax validation (tab detection), new account filtering, and action reasons.</p>
+<p>3. <strong>Step 3 — Rules Hub & Enforcement</strong>: Rule definitions, depth, rule fatigue checks, removal reasons, and pre-submission Post Check triggers.</p>
+<p>4. <strong>Step 4 — Flairs & Taxonomy</strong>: Post flair enablement, template counts, user flair enablement, media uploads, and wiki pages.</p>
+<p>5. <strong>Step 5 — Safety Filters & Auto-Triage</strong>: Native Crowd Control, Reputation Filter, Ban Evasion Filter, and Poster Eligibility.</p>
+<p>6. <strong>Step 6 — Onboarding & Community Guide</strong>: New member welcome messages, resource links, flair prompts, saved responses, and temporary event overrides.</p>
+<p>7. <strong>Step 7 — Moderator Team & Notifications</strong>: Team coverage, single-point-of-failure redundancy analysis, scoped permissions, and activity alert thresholds.</p>
+<p>8. <strong>Step 8 — Operations & Insights</strong>: Queue daily triage routines, Mod Log audit trails, Modmail workflow, and Mod Insights traffic growth.</p>
+<p>9. <strong>Step 9 — Final Review & Export</strong>: Overall score summary, remaining quick wins, progress reset, clipboard copy, and Modmail export.</p>
 <h2>Support</h2>
 <p>For help, bug reports, or feature requests, post in r/grantdb.</p>
 <p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T20:17:08.472Z",
+  "generatedAt": "2026-09-14T20:49:52.266Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2792,11 +2792,11 @@
         "subsetup"
       ],
       "setupSteps": [
-        "![Reddit](https://img.shields.io/badge/Platform-Reddit%20Devvit-FF4500?style=flat-square)",
+        "![Platform](https://img.shields.io/badge/Platform-Reddit%20Devvit-FF4500?style=flat-square)",
         "![Category](https://img.shields.io/badge/Category-Moderation-blue?style=flat-square)",
-        "Comprehensive subreddit setup guide and configuration auditor for Reddit communities.",
-        "`sub-setup` performs an in-depth, 19-section audit of your subreddit configuration, providing direct Mod Tools deep links, official Reddit documentation references, prioritized quick wins, and structured checklists. The completed audit report is formatted cleanly and delivered privately to your subreddit's Modmail (Mod Discussions).",
-        "![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sub-setup-flowchart.png)"
+        "![Interface](https://img.shields.io/badge/Interface-Interactive%20Webview-00f2fe?style=flat-square)",
+        "Interactive subreddit setup guide and configuration wizard for Reddit communities.",
+        "`sub-setup` guides moderators through an in-depth, 19-section setup across 9 progressive wizard steps. It combines automated API inspections with persistent manual checklists, direct 1-click Mod Tools launchers, official Reddit documentation references, prioritized quick wins, and on-demand Modmail export."
       ],
       "commonIssues": [],
       "troubleshooting": {
