@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T15:47:33.020Z",
+  "generatedAt": "2026-09-14T20:17:08.472Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2774,6 +2774,68 @@
       },
       "status": "active",
       "lastUpdated": "2026-08-31"
+    },
+    {
+      "appId": "sub-setup",
+      "slug": "sub-setup",
+      "appName": "Sub Setup",
+      "aliases": [
+        "sub-setup",
+        "sub setup",
+        "subsetup"
+      ],
+      "summary": "Comprehensive subreddit setup guide and configuration auditor.",
+      "keywords": [
+        "sub-setup",
+        "sub setup",
+        "moderation",
+        "subsetup"
+      ],
+      "setupSteps": [
+        "![Reddit](https://img.shields.io/badge/Platform-Reddit%20Devvit-FF4500?style=flat-square)",
+        "![Category](https://img.shields.io/badge/Category-Moderation-blue?style=flat-square)",
+        "Comprehensive subreddit setup guide and configuration auditor for Reddit communities.",
+        "`sub-setup` performs an in-depth, 19-section audit of your subreddit configuration, providing direct Mod Tools deep links, official Reddit documentation references, prioritized quick wins, and structured checklists. The completed audit report is formatted cleanly and delivered privately to your subreddit's Modmail (Mod Discussions).",
+        "![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sub-setup-flowchart.png)"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [
+        "Run Subreddit Setup Audit"
+      ],
+      "settingsCount": 3,
+      "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/sub-setup",
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/sub-setup",
+        "github": "https://github.com/grantdb/sub-setup",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Sub Setup.",
+        "troubleshooting": "Check the Sub Setup troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-09-14"
     }
   ]
 }

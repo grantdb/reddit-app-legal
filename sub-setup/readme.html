@@ -1,0 +1,60 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/sub-setup">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Sub Setup</h1>
+<h2>Purpose</h2>
+<p>Comprehensive subreddit setup guide and configuration auditor for Reddit communities.</p>
+<p>`sub-setup` performs an in-depth, 19-section audit of your subreddit configuration, providing direct Mod Tools deep links, official Reddit documentation references, prioritized quick wins, and structured checklists. The completed audit report is formatted cleanly and delivered privately to your subreddit's Modmail (Mod Discussions).</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sub-setup-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Moderator Action</strong>: A moderator selects <strong>Run Subreddit Setup Audit</strong> from the subreddit menu.</p>
+<p>2. <strong>Dual Audit Engine</strong>: The engine runs batched API execution for 8 verified sections with error isolation, followed by 11 guided manual reviews and optional checks.</p>
+<p>3. <strong>Dual-Score Processing</strong>: The app calculates an API-inspected score (0-100%), extracts top priorities and quick wins, and caches audit state in Redis.</p>
+<p>4. <strong>Modmail Delivery</strong>: Safe multi-part chunking (under 9,000 characters per message) delivers formatted reports directly to team Mod Discussions.</p>
+<h2>Major Features</h2>
+<ul>
+<li><strong>Dual-Score Integrity</strong>: Separates API-inspected settings (which contribute to your numeric configuration score) from guided manual reviews and optional features.</li>
+<li><strong>Direct Mod Tools Links</strong>: Every section includes direct links with confirmed or best-effort routing and fallback URLs to the exact settings page.</li>
+<li><strong>Official Documentation</strong>: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.</li>
+<li><strong>Zero-PII & Privacy-First</strong>: Reads only high-level community settings; never inspects private user profiles, post bodies, or modmail conversations.</li>
+<li><strong>Clean Plain-Text Formatting</strong>: Formatted with high-contrast, professional labels without emojis for clear readability across all Reddit clients.</li>
+<li><strong>Automatic Modmail Delivery</strong>: Seamless chunking ensures reports exceeding Reddit character limits arrive as cleanly sequenced parts.</li>
+</ul>
+<h2>Install / Use</h2>
+<p>1. Install <strong>Sub Setup</strong> on your subreddit.</p>
+<p>2. Open your subreddit's menu and select <strong>Run Subreddit Setup Audit</strong>.</p>
+<p>3. A toast will confirm that the audit is running.</p>
+<p>4. Check your subreddit's <strong>Modmail (Mod Discussions)</strong> for the complete audit report.</p>
+<h2>Audit Sections (19 Total)</h2>
+<h3>Part 1: API-Inspected Configuration (8 Sections)</h3>
+<p>1. <strong>Basic Settings and Community Identity</strong>: Title, description, sidebar length, community avatar, banner image, discoverability, and NSFW status.</p>
+<p>2. <strong>AutoModerator</strong>: Wiki configuration existence, rule blocks, YAML syntax validation (tab detection), new account filtering, and action reasons.</p>
+<p>3. <strong>Post and User Flairs</strong>: Post flair enablement, template counts, user flair enablement, and assignment permissions.</p>
+<p>4. <strong>Community Rules</strong>: Rule definitions, depth, rule fatigue checks, descriptions, and custom report reasons.</p>
+<p>5. <strong>Removal Reasons</strong>: Reason definitions, 1:1 rule mapping, explanatory depth, and appeal instructions.</p>
+<p>6. <strong>Wiki and Documentation</strong>: Wiki enablement, index landing page presence, and documentation pages.</p>
+<p>7. <strong>Moderator Team and Permissions</strong>: Team size, single-point-of-failure redundancy analysis, and scoped permissions.</p>
+<p>8. <strong>Posting and Content Settings</strong>: Allowed submission types, media uploads, crossposting, spoilers, and restriction status.</p>
+<h3>Part 2: Guided Manual Reviews (9 Sections)</h3>
+<p>9. <strong>Rules Hub and Post Check</strong>: Pre-submission rule warnings and keyword trigger checks.</p>
+<p>10. <strong>Poster Eligibility and Requirements</strong>: Native account age, karma, and verified email requirements.</p>
+<p>11. <strong>Safety Filters</strong>: Crowd Control, Reputation Filter, Ban Evasion Filter, and Harassment filtering.</p>
+<p>12. <strong>Saved Responses</strong>: Standardized modmail replies, ban appeal templates, and macro consistency.</p>
+<p>13. <strong>Community Guide and Onboarding</strong>: New member welcome messages, resource links, and flair prompts.</p>
+<p>14. <strong>Temporary Events and Scheduled Posts</strong>: Setting overrides during traffic spikes and recurring posts.</p>
+<p>15. <strong>Moderator Notifications</strong>: Milestone alerts, activity spikes, and report threshold alerts.</p>
+<p>16. <strong>Queue, Reports, Mod Log, and Modmail Workflow</strong>: Operational triage routines and audit trails.</p>
+<p>17. <strong>Insights and Operational Health</strong>: Traffic growth, team health, and safety tool catch rates.</p>
+<h3>Part 3: Optional and Eligibility-Gated Features (2 Sections)</h3>
+<p>18. <strong>Optional Reddit Programs and Training</strong>: Mod Guide training modules, app directory extensions, and contributor programs.</p>
+<p>19. <strong>Feature Availability and API Limitations</strong>: Overview of Devvit 0.14.2 API visibility and progressive rollout status.</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community.*</p>

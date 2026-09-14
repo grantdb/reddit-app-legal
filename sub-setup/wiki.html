@@ -1,0 +1,128 @@
+<h1>Sub Setup</h1>
+
+<p>Category: Moderation<br>
+Version: v0.0.1<br>
+Visibility: Unlisted<br>
+Summary: Comprehensive subreddit setup guide and configuration auditor.</p>
+
+<h2>Overview</h2>
+<p>Comprehensive subreddit setup guide and configuration auditor.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sub-setup-flowchart.png">View flowchart image</a></p>
+
+<h2>Key Features</h2>
+<ul>
+<li>Dual-Score Integrity: Separates API-inspected settings (which contribute to your numeric configuration score) from guided manual reviews and optional features.</li>
+<li>Direct Mod Tools Links: Every section includes direct links with confirmed or best-effort routing and fallback URLs to the exact settings page.</li>
+<li>Official Documentation: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.</li>
+<li>Zero-PII & Privacy-First: Reads only high-level community settings; never inspects private user profiles, post bodies, or modmail conversations.</li>
+<li>Clean Plain-Text Formatting: Formatted with high-contrast, professional labels without emojis for clear readability across all Reddit clients.</li>
+<li>Automatic Modmail Delivery: Seamless chunking ensures reports exceeding Reddit character limits arrive as cleanly sequenced parts.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Menu Actions</h3>
+<ul>
+<li>Run Subreddit Setup Audit: Moderator menu action (Location: subreddit)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>includeSuggestions: Include fix suggestions (boolean, default: true). Show actionable recommendations for each issue found in the report</li>
+<li>showDocLinks: Show documentation links (boolean, default: true). Include official Reddit documentation links in the report</li>
+<li>showDeepLinks: Show Mod Tools links (boolean, default: true). Include direct links to each Mod Tools section for quick access</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: Yes — Sends notifications or summaries to modmail.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>![Reddit](https://img.shields.io/badge/Platform-Reddit%20Devvit-FF4500?style=flat-square)</li>
+<li>![Category](https://img.shields.io/badge/Category-Moderation-blue?style=flat-square)</li>
+<li>Comprehensive subreddit setup guide and configuration auditor for Reddit communities.</li>
+<li>`sub-setup` performs an in-depth, 19-section audit of your subreddit configuration, providing direct Mod Tools deep links, official Reddit documentation references, prioritized quick wins, and structured checklists. The completed audit report is formatted cleanly and delivered privately to your subreddit's Modmail (Mod Discussions).</li>
+<li>![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sub-setup-flowchart.png)</li>
+<li>Moderator Action: A moderator selects Run Subreddit Setup Audit from the subreddit menu.</li>
+<li>Dual Audit Engine: The engine runs batched API execution for 8 verified sections with error isolation, followed by 11 guided manual reviews and optional checks.</li>
+<li>Dual-Score Processing: The app calculates an API-inspected score (0-100%), extracts top priorities and quick wins, and caches audit state in Redis.</li>
+<li>Modmail Delivery: Safe multi-part chunking (under 9,000 characters per message) delivers formatted reports directly to team Mod Discussions.</li>
+<li>Dual-Score Integrity: Separates API-inspected settings (which contribute to your numeric configuration score) from guided manual reviews and optional features.</li>
+<li>Direct Mod Tools Links: Every section includes direct links with confirmed or best-effort routing and fallback URLs to the exact settings page.</li>
+<li>Official Documentation: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.</li>
+<li>Zero-PII & Privacy-First: Reads only high-level community settings; never inspects private user profiles, post bodies, or modmail conversations.</li>
+<li>Clean Plain-Text Formatting: Formatted with high-contrast, professional labels without emojis for clear readability across all Reddit clients.</li>
+<li>Automatic Modmail Delivery: Seamless chunking ensures reports exceeding Reddit character limits arrive as cleanly sequenced parts.</li>
+<li>Install Sub Setup on your subreddit.</li>
+<li>Open your subreddit's menu and select Run Subreddit Setup Audit.</li>
+<li>A toast will confirm that the audit is running.</li>
+<li>Check your subreddit's Modmail (Mod Discussions)** for the complete audit report.</li>
+<li>Basic Settings and Community Identity: Title, description, sidebar length, community avatar, banner image, discoverability, and NSFW status.</li>
+<li>AutoModerator: Wiki configuration existence, rule blocks, YAML syntax validation (tab detection), new account filtering, and action reasons.</li>
+<li>Post and User Flairs: Post flair enablement, template counts, user flair enablement, and assignment permissions.</li>
+<li>Community Rules: Rule definitions, depth, rule fatigue checks, descriptions, and custom report reasons.</li>
+<li>Removal Reasons: Reason definitions, 1:1 rule mapping, explanatory depth, and appeal instructions.</li>
+<li>Wiki and Documentation: Wiki enablement, index landing page presence, and documentation pages.</li>
+<li>Moderator Team and Permissions: Team size, single-point-of-failure redundancy analysis, and scoped permissions.</li>
+<li>Posting and Content Settings: Allowed submission types, media uploads, crossposting, spoilers, and restriction status.</li>
+<li>Rules Hub and Post Check: Pre-submission rule warnings and keyword trigger checks.</li>
+<li>Poster Eligibility and Requirements: Native account age, karma, and verified email requirements.</li>
+<li>Safety Filters: Crowd Control, Reputation Filter, Ban Evasion Filter, and Harassment filtering.</li>
+<li>Saved Responses: Standardized modmail replies, ban appeal templates, and macro consistency.</li>
+<li>Community Guide and Onboarding: New member welcome messages, resource links, and flair prompts.</li>
+<li>Temporary Events and Scheduled Posts: Setting overrides during traffic spikes and recurring posts.</li>
+<li>Moderator Notifications: Milestone alerts, activity spikes, and report threshold alerts.</li>
+<li>Queue, Reports, Mod Log, and Modmail Workflow: Operational triage routines and audit trails.</li>
+<li>Insights and Operational Health: Traffic growth, team health, and safety tool catch rates.</li>
+<li>Optional Reddit Programs and Training: Mod Guide training modules, app directory extensions, and contributor programs.</li>
+<li>Feature Availability and API Limitations: Overview of Devvit 0.14.2 API visibility and progressive rollout status.</li>
+<li>For help, bug reports, or feature requests, post in r/grantdb.</li>
+<li>Please include the app name, what you expected, what happened, and any error text or screenshots.</li>
+<li>This application is subject to the following legal agreements:</li>
+<li>[Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/TERMS.md)</li>
+<li>[Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/PRIVACY.md)</li>
+<li>Built for Reddit's moderator community.*</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.1 — 2026-09-14<br>
+Standard fleet synchronization and maintenance.</p>
+<p>1.0.1 — 2026-09-14<br>
+Standard fleet synchronization and maintenance.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/sub-setup">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>
