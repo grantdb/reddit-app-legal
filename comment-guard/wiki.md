@@ -1,7 +1,7 @@
 # CommentGuard
 
 Category: Moderation  
-Version: v0.0.52  
+Version: v0.0.53  
 Visibility: Unlisted  
 Summary: Hardened code-request moderation engine with weighted scoring and Shadow DOM stability.
 
@@ -58,15 +58,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.53 — 2026-09-15
+- Standard fleet synchronization and maintenance.
+
 0.0.52 — 2026-09-14
 - Standard fleet synchronization and maintenance.
 
 0.0.51 — 2026-09-05
 - Standard fleet synchronization and maintenance.
 - Fix: Unlocked root viewport and enabled `touch-action: pan-y` with momentum scrolling for mobile webview.
-
-0.0.50 — 2026-09-02
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/comment-guard/TERMS.md)
