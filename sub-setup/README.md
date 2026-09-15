@@ -1,11 +1,55 @@
 > 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/sub-setup)
 
-# Sub Setup
+# Sub Setup 🛠️
 
-## Purpose
-Interactive subreddit setup guide and configuration wizard for Reddit communities.
+![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
+![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
+![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
+![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
+![Type](https://img.shields.io/badge/Type-Setup_Wizard-8A2BE2?style=for-the-badge)
 
-`sub-setup` guides moderators through an in-depth, 19-section setup across 9 progressive wizard steps. It combines automated API inspections with persistent manual checklists, direct 1-click Mod Tools launchers, official Reddit documentation references, prioritized quick wins, and on-demand Modmail export.
+> **Step-by-step interactive setup wizard, live configuration audits, and Mod Tools guidance for Reddit communities.**
+
+Sub Setup guides new and experienced moderators through a comprehensive 19-section setup across 9 progressive wizard steps. It combines automated API inspections with persistent manual checklists, direct 1-click Mod Tools launchers, official Reddit documentation references, prioritized quick wins, and on-demand Modmail export.
+
+---
+
+## At a Glance
+
+- **In-webview Setup Wizard**: Interactive React webview embedded directly within Reddit, opened via your subreddit menu.
+- **Mod-only stealth post**: Automatically removed from the public feed so it remains 100% private to your moderator team.
+- **Persistent Redis checklists**: Check off manual tasks with instant optimistic UI updates, safely decoupled from API audit re-runs.
+- **1-Click Mod Tools launchers**: Direct deep links to `/about/edit`, `/wiki/config/automoderator`, `/about/rules`, and `/safety`.
+- **Batch step completion**: Mark all manual checklist items in a step complete with one click.
+- **Remaining items filter**: Dedicated modal listing all incomplete items across all 9 steps with instant jump navigation.
+- **Rate-limited audit engine**: 60-second cooldown protects platform resources and displays live retry countdowns.
+- **On-demand Modmail dispatch**: Export structured, zero-emoji Markdown reports directly to Subreddit Mod Discussions.
+
+---
+
+## The Old Way vs. The Sub Setup Way
+
+| Traditional Workflow | With Sub Setup |
+| :--- | :--- |
+| Hunting through dozens of desktop Mod Tools menus | **9 guided wizard steps** with direct 1-click deep links to each setting |
+| Guessing which settings AutoMod or Safety Filters need | **Automated API inspection** scoring live rules, flairs, and configuration |
+| Losing track of which mod finished which setting | **Persistent Redis checklists** tracking team setup progress across sessions |
+| Confusing manual settings with automated checks | **Clear visual badges and tooltips** distinguishing API vs. manual reviews |
+| Forgetting pre-submission post checks or removal reasons | **Structured checklists** ensuring 1:1 rule-to-removal-reason parity |
+| Static, overwhelming wall-of-text audit dumps | **Interactive wizard with progress gauges**, remaining items modal, and Modmail export |
+
+---
+
+## Built for Seamless Subreddit Onboarding
+
+- **Dual-Score Integrity**: Separates automated API inspections (which contribute to your numeric configuration score) from guided manual checklists and optional programs.
+- **Official Documentation**: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.
+- **Zero-PII & Privacy-First**: Inspects only public community configuration flags and rules; never inspects private user profiles, post bodies, or modmail conversations.
+- **Clean Plain-Text Formatting**: Formatted with high-contrast, professional labels without emojis for clear readability across all Reddit clients.
+- **Continue Where You Left Off**: Restores your active step and checklist state upon returning to the guide.
+- **Demo Mode**: Allows previewing sample community data and guided steps even without moderator privileges.
+
+---
 
 ## How It Works
 
@@ -18,27 +62,7 @@ Interactive subreddit setup guide and configuration wizard for Reddit communitie
 3. **Step-by-Step Configuration**: Moderators work through settings, check off manual tasks with optimistic UI updates, launch 1-click Mod Tools deep links, or batch-complete steps.
 4. **Export & Sharing**: On demand, moderators can dispatch a structured Markdown summary directly to Modmail (Mod Discussions) or copy progress snippets to clipboard for team coordination.
 
-## Major Features
-
-- **Interactive 9-Step Wizard**: Structured progression from community identity and AutoModerator to rules, flairs, safety filters, onboarding, team health, and operations.
-- **Mod-Only Stealth Post**: Runs in an expanded custom post that is automatically removed from the public subreddit feed so it never clutters member views.
-- **Persistent Manual Checklists**: Tracks your manual verification progress in Redis (`v1` namespace), completely decoupled from API audit runs so you never lose progress.
-- **Optimistic UI Updates**: Checkboxes update instantaneously with automatic rollback and toast notifications on network interruption.
-- **Batch Step Completion**: "Mark All Complete in This Step" allows rapid completion of verified configuration areas.
-- **Remaining Items Quick Filter**: 1-click modal listing all pending tasks across the entire subreddit with direct jump navigation.
-- **Rate-Limited Audit Engine**: 60-second cooldown protects platform resources and displays live retry timers.
-- **Direct Mod Tools Launchers**: Every section includes deep links with confirmed or best-effort routing to the exact Mod Tools page.
-- **Official Documentation**: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.
-- **Zero-PII & Privacy-First**: Reads only high-level community settings; never inspects private user profiles, post bodies, or modmail conversations.
-- **On-Demand Modmail Delivery**: Safe multi-part chunking (under 9,000 characters per message) delivers formatted reports to team Mod Discussions on demand.
-
-## Install / Use
-
-1. Install **Sub Setup** on your subreddit.
-2. Open your subreddit's menu and select **Run Subreddit Setup Audit**.
-3. You will be routed directly to the interactive setup guide.
-4. Complete the 9 steps at your own pace — your progress is saved automatically.
-5. When ready, click **Send to Modmail** in Step 9 to archive your setup report in Mod Discussions.
+---
 
 ## 9 Wizard Steps (19 Configuration Sections)
 
@@ -52,10 +76,24 @@ Interactive subreddit setup guide and configuration wizard for Reddit communitie
 8. **Step 8 — Operations & Insights**: Queue daily triage routines, Mod Log audit trails, Modmail workflow, and Mod Insights traffic growth.
 9. **Step 9 — Final Review & Export**: Overall score summary, remaining quick wins, progress reset, clipboard copy, and Modmail export.
 
+---
+
+## Install / Use
+
+1. Install **Sub Setup** on your subreddit.
+2. Open your subreddit's menu and select **Run Subreddit Setup Audit**.
+3. You will be routed directly to the interactive setup guide.
+4. Complete the 9 steps at your own pace — your progress is saved automatically.
+5. When ready, click **Send to Modmail** in Step 9 to archive your setup report in Mod Discussions.
+
+---
+
 ## Support
 
 For help, bug reports, or feature requests, post in r/grantdb.
 Please include the app name, what you expected, what happened, and any error text or screenshots.
+
+---
 
 ## Legal
 
