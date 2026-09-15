@@ -1,7 +1,7 @@
 # Sub Setup
 
 Category: Moderation  
-Version: v0.0.4  
+Version: v0.0.5  
 Visibility: Unlisted  
 Summary: Comprehensive subreddit setup guide and configuration auditor.
 
@@ -61,13 +61,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.5 — 2026-09-15
+- Standard fleet synchronization and maintenance.
+
 0.0.4 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 0.0.3 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-0.0.2 — 2026-09-14
 - Standard fleet synchronization and maintenance.
 
 ## Links
