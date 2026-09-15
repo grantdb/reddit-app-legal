@@ -1,7 +1,7 @@
 # UserGuard
 
 Category: Moderation  
-Version: v0.0.73  
+Version: v0.0.74  
 Visibility: Public  
 Summary: Native author-based moderation engine with exact username and threshold resolution.
 
@@ -61,15 +61,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.74 — 2026-09-15
+- Standard fleet synchronization and maintenance.
+
 0.0.73 — 2026-09-14
 - Standard fleet synchronization and maintenance.
 
 0.0.72 — 2026-09-05
 - Standard fleet synchronization and maintenance.
 - Fix: Unlocked root viewport and enabled `touch-action: pan-y` with momentum scrolling for mobile webview.
-
-0.0.71 — 2026-09-02
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/user-guard/TERMS.md)
