@@ -1,7 +1,7 @@
 # RescueGuard
 
 Category: Moderation  
-Version: v0.0.20  
+Version: v0.0.21  
 Visibility: Public  
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.
 
@@ -63,6 +63,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.21 — 2026-09-15
+- Standard fleet synchronization and maintenance.
+
 0.0.20 — 2026-09-14
 - Fix: Unlocked document-level mobile webview scrolling by removing root `overflow: hidden` on `html, body` and adding `touch-action: pan-y` and `-webkit-overflow-scrolling: touch`.
 - Fix: Converted `.app-container` from fixed-height scrollbox to flexible document container, restoring native inertial touch scrolling on iOS WKWebView and Android WebView.
@@ -70,9 +73,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Polish: Added mobile media queries with touch-friendly button targets (>= 40px) and active tap feedback.
 
 0.0.19 — 2026-09-05
-- Standard fleet synchronization and maintenance.
-
-0.0.18 — 2026-09-04
 - Standard fleet synchronization and maintenance.
 
 ## Links
