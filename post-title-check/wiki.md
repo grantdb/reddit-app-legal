@@ -1,7 +1,7 @@
 # Post Title Check
 
 Category: Validation  
-Version: v0.0.86  
+Version: v0.0.87  
 Visibility: Public  
 Summary: Real-time title validation against community guidelines. Now with support for customizable removal reasons per rule.
 
@@ -22,8 +22,8 @@ Real-time title validation against community guidelines. Now with support for cu
 ### Menu Actions
 - PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.
 - PostCreate: Delivered by Reddit event router to endpoint /internal/on-post-create.
-- AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.
-- AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-upgrade.
+- AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).
+- AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
@@ -71,13 +71,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.87 — 2026-09-15
+- Standard fleet synchronization and maintenance.
+
 0.0.86 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 0.0.85 — 2026-09-05
-- Standard fleet synchronization and maintenance.
-
-0.0.84 — 2026-09-04
 - Standard fleet synchronization and maintenance.
 
 ## Links
