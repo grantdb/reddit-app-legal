@@ -1,7 +1,7 @@
 # AutoMod Easy
 
 Category: Moderation  
-Version: v0.0.140  
+Version: v0.0.141  
 Visibility: Public  
 Summary: No-code visual rule builder for AutoModerator. Generates and validates YAML configurations automatically.
 
@@ -28,9 +28,7 @@ No-code visual rule builder for AutoModerator. Generates and validates YAML conf
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- Harassment Filter: Rule Name (string, default: -). Rule Name
-- keywords: Keywords to Ban (comma separated) (string, default: -). Keywords to Ban (comma separated)
-- reason: Internal Mod Note (e.g. (string, default: -). Internal Mod Note (e.g.
+- No custom app settings.
 
 ## Automation Capabilities
 - Submits Automated Comments: No — Does not submit automated comments.
@@ -59,13 +57,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.141 — 2026-09-15
+- Standard fleet synchronization and maintenance.
+
 0.0.140 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 0.0.139 — 2026-09-14
-- Standard fleet synchronization and maintenance.
-
-0.0.138 — 2026-09-05
 - Standard fleet synchronization and maintenance.
 
 ## Links

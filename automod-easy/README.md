@@ -13,7 +13,7 @@ AutoMod Easy replaces error-prone YAML editing with an interactive rule builder 
 - **Visual sandbox simulator**: Test AutoMod YAML against sample submissions with accurate word-boundary matching without touching live posts.
 - **Rule health audit**: Inspect your active `config/automoderator` page for syntax errors, missing colons, and risk patterns.
 - **Curated starter pack templates**: Rapidly customize and deploy common filter patterns for profanity, spam links, title tags, and account age gates.
-- **Instant Quick-Ban form**: Ban abusive keywords with one tap from a native moderator form.
+- **One-click wiki deployment**: Deploy verified rules directly to `config/automoderator` with automated rollback backups.
 - **Automatic rollback snapshots**: Compare side-by-side diffs and restore previous configurations safely.
 
 ---
@@ -26,7 +26,7 @@ AutoMod Easy replaces error-prone YAML editing with an interactive rule builder 
 | Guessing how to write complex regex for tricky spam patterns | **Visual rule builder** generating clean YAML with word-boundary safeguards |
 | Spending hours troubleshooting misplaced indentations | **Real-time syntax and schema linter** highlighting errors visually |
 | Losing working configurations when someone makes an edit | **Automated revision snapshots** with instant one-click restores |
-| Navigating through multiple wiki pages to add a single keyword | **Quick-Ban modal form** adding new filter rules in seconds |
+| Guessing whether a new rule will conflict with existing syntax | **Rule Health Scorecard** auditing configurations for risks |
 
 ---
 
@@ -37,7 +37,6 @@ AutoMod Easy replaces error-prone YAML editing with an interactive rule builder 
 - **Enforceability Advisor**: Loads your community sidebar rules via Reddit API to provide code blueprints and native safety filter tips.
 - **Starter Pack Templates**: Pre-configured, customizable rules for common moderation tasks including banned words, shorteners, title brackets, and age gates.
 - **Configuration Diff & Restore**: Compare current YAML against previous versions with side-by-side visual diffs and one-click rollback.
-- **Native Quick-Ban Form**: Add emergency keyword filters instantly via **AutoMod Easy: Quick Ban Rule** in Subreddit Mod Tools.
 
 ---
 
@@ -48,7 +47,7 @@ AutoMod Easy replaces error-prone YAML editing with an interactive rule builder 
 ### Your Four-Step Workflow
 
 1. **Launch**: Open **AutoMod Easy Trainer** from Subreddit Mod Tools.
-2. **Build**: Draft rules in the visual Sandbox, customize Starter Templates, or submit a Quick-Ban form.
+2. **Build**: Draft rules in the visual Sandbox or customize Starter Templates.
 3. **Validate**: AutoMod Easy inspects multi-document YAML syntax, validates schema keys, and tests logic against sample payloads.
 4. **Deploy**: Deploy verified rules directly to your subreddit's `config/automoderator` wiki with automated snapshot backup.
 
