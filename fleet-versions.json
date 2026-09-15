@@ -116,57 +116,57 @@
   },
   "automod-easy": {
     "name": "AutoMod Easy",
-    "version": "0.0.139",
+    "version": "0.0.140",
     "visibility": "public"
   },
   "pinned-menuboard": {
     "name": "Pinned Menuboard",
-    "version": "0.0.66",
+    "version": "0.0.67",
     "visibility": "public"
   },
   "user-board": {
     "name": "User Board",
-    "version": "0.0.35",
+    "version": "0.0.36",
     "visibility": "public"
   },
   "queue-guard": {
     "name": "QueueGuard",
-    "version": "0.0.43",
+    "version": "0.0.44",
     "visibility": "unlisted"
   },
   "duplicate-guard": {
     "name": "Duplicate Guard",
-    "version": "0.0.38",
+    "version": "0.0.39",
     "visibility": "unlisted"
   },
   "gimmecode-guard": {
     "name": "GimmeCode Guard",
-    "version": "0.0.39",
+    "version": "0.0.40",
     "visibility": "unlisted"
   },
   "action-guard": {
     "name": "ActionGuard",
-    "version": "0.0.27",
+    "version": "0.0.28",
     "visibility": "unlisted"
   },
   "audit-guard": {
     "name": "AuditGuard",
-    "version": "0.0.18",
+    "version": "0.0.19",
     "visibility": "unlisted"
   },
   "guard-hub": {
     "name": "Guard Hub",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "visibility": "unlisted"
   },
   "link-guard": {
     "name": "LinkGuard",
-    "version": "0.0.17",
+    "version": "0.0.18",
     "visibility": "public"
   },
   "verify-guard": {
     "name": "VerifyGuard",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "visibility": "public"
   },
   "rate-guard": {
@@ -176,52 +176,52 @@
   },
   "sgteam-dispatch": {
     "name": "SG Team Dispatch",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "visibility": "unlisted"
   },
   "chevron-lock": {
     "name": "Chevron Lock",
-    "version": "0.0.11",
+    "version": "0.0.12",
     "visibility": "unlisted"
   },
   "testrank": {
     "name": "TestRank",
-    "version": "0.0.16",
+    "version": "0.0.17",
     "visibility": "unlisted"
   },
   "reference-reply-bot": {
     "name": "Reference Reply Bot",
-    "version": "0.0.27",
+    "version": "0.0.28",
     "visibility": "unlisted"
   },
   "malp-scout": {
     "name": "MALP-Scout",
-    "version": "0.0.19",
+    "version": "0.0.20",
     "visibility": "unlisted"
   },
   "archive-guard": {
     "name": "Archive-Guard",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "visibility": "unlisted"
   },
   "wiki-sync-bot": {
     "name": "WikiSync Bot",
-    "version": "0.0.28",
+    "version": "0.0.29",
     "visibility": "unlisted"
   },
   "rescue-guard": {
     "name": "RescueGuard",
-    "version": "0.0.20",
+    "version": "0.0.21",
     "visibility": "public"
   },
   "flair-guard": {
     "name": "Flair Guard",
-    "version": "0.0.15",
+    "version": "0.0.16",
     "visibility": "unlisted"
   },
   "sub-setup": {
     "name": "Sub Setup",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "visibility": "unlisted"
   }
 }
