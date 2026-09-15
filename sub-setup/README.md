@@ -13,7 +13,7 @@ Sub Setup guides new and experienced moderators through a comprehensive 19-secti
 - **In-webview Setup Wizard**: Interactive React webview embedded directly within Reddit, opened via your subreddit menu.
 - **Mod-only stealth post**: Automatically removed from the public feed so it remains 100% private to your moderator team.
 - **Persistent Redis checklists**: Check off manual tasks with instant optimistic UI updates, safely decoupled from API audit re-runs.
-- **1-Click Mod Tools launchers**: Direct deep links to `/about/edit`, `/wiki/config/automoderator`, `/about/rules`, and `/safety`.
+- **1-Click Mod Tools launchers**: Direct deep links to modern Mod Tools (`/mod/...`), including General Settings, Content Controls, Rules Hub, Safety Filters, and Modmail.
 - **Batch step completion**: Mark all manual checklist items in a step complete with one click.
 - **Remaining items filter**: Dedicated modal listing all incomplete items across all 9 steps with instant jump navigation.
 - **Rate-limited audit engine**: 60-second cooldown protects platform resources and displays live retry countdowns.
