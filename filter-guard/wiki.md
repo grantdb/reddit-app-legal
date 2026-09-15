@@ -1,7 +1,7 @@
 # FilterGuard
 
 Category: Moderation  
-Version: v0.0.80  
+Version: v0.0.81  
 Visibility: Unlisted  
 Summary: Grouped threshold-based and gate-style filtering engine for complex community safety gates.
 
@@ -34,7 +34,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - No custom app settings.
 
 ## Automation Capabilities
-- Submits Automated Comments: No — Does not submit automated comments.
+- Submits Automated Comments: Yes — Posts automated comments on target submissions.
 - Attaches Removal Notes: No — Does not attach removal notes.
 - Approves Content: Yes — Approves content.
 - Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
@@ -61,13 +61,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.81 — 2026-09-15
+- Standard fleet synchronization and maintenance.
+
 0.0.80 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 0.0.79 — 2026-09-14
-- Standard fleet synchronization and maintenance.
-
-0.0.78 — 2026-09-05
 - Standard fleet synchronization and maintenance.
 
 ## Links
