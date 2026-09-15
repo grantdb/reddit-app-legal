@@ -1,112 +1,112 @@
 {
   "suspended-remove": {
     "name": "Suspended Remove",
-    "version": "1.0.85",
+    "version": "1.0.86",
     "visibility": "public"
   },
   "sticky-pro": {
     "name": "Sticky-Pro",
-    "version": "1.0.112",
+    "version": "1.0.113",
     "visibility": "public"
   },
   "canucknews-bot": {
     "name": "CanuckNews Bot",
-    "version": "1.1.41",
+    "version": "1.1.42",
     "visibility": "public"
   },
   "playscraper-bot": {
     "name": "Playscraper Bot",
-    "version": "1.0.141",
+    "version": "1.0.142",
     "visibility": "public"
   },
   "screen-shot-bot": {
     "name": "Screen-Shot Bot",
-    "version": "1.0.79",
+    "version": "1.0.80",
     "visibility": "public"
   },
   "post-title-check": {
     "name": "Post Title Check",
-    "version": "0.0.85",
+    "version": "0.0.86",
     "visibility": "public"
   },
   "stargate-trivia": {
     "name": "Stargate Trivia",
-    "version": "0.0.125",
+    "version": "0.0.126",
     "visibility": "public"
   },
   "canadian-news": {
     "name": "Canadian News",
-    "version": "0.0.57",
+    "version": "0.0.58",
     "visibility": "public"
   },
   "distrofeed-bot": {
     "name": "DistroFeed Bot",
-    "version": "0.1.108",
+    "version": "0.1.109",
     "visibility": "public"
   },
   "linux-quest": {
     "name": "Linux Quest",
-    "version": "0.0.125",
+    "version": "0.0.126",
     "visibility": "public"
   },
   "archive-all-mm": {
     "name": "Archive All MM",
-    "version": "0.0.69",
+    "version": "0.0.70",
     "visibility": "public"
   },
   "ring-escape": {
     "name": "Ring Escape: Serpent Flagship",
-    "version": "0.0.66",
+    "version": "0.0.67",
     "visibility": "unlisted"
   },
   "app-update-checker": {
     "name": "App Update Checker",
-    "version": "0.0.81",
+    "version": "0.0.82",
     "visibility": "public"
   },
   "gate-defender": {
     "name": "Gate Defender",
-    "version": "0.0.99",
+    "version": "0.0.100",
     "visibility": "public"
   },
   "ai-checker": {
     "name": "AI Checker",
-    "version": "0.0.86",
+    "version": "0.0.87",
     "visibility": "public"
   },
   "mod-snapshot": {
     "name": "Mod Snapshot",
-    "version": "0.0.81",
+    "version": "0.0.82",
     "visibility": "public"
   },
   "word-guard": {
     "name": "WordGuard",
-    "version": "0.0.188",
+    "version": "0.0.189",
     "visibility": "public"
   },
   "sg1-responder": {
     "name": "SG-1 Responder",
-    "version": "0.0.63",
+    "version": "0.0.64",
     "visibility": "public"
   },
   "domain-guard": {
     "name": "DomainGuard",
-    "version": "0.0.155",
+    "version": "0.0.156",
     "visibility": "public"
   },
   "user-guard": {
     "name": "UserGuard",
-    "version": "0.0.73",
+    "version": "0.0.74",
     "visibility": "public"
   },
   "filter-guard": {
     "name": "FilterGuard",
-    "version": "0.0.79",
+    "version": "0.0.80",
     "visibility": "unlisted"
   },
   "format-guard": {
     "name": "FormatGuard",
-    "version": "0.0.66",
+    "version": "0.0.67",
     "visibility": "unlisted"
   },
   "comment-guard": {
@@ -221,7 +221,7 @@
   },
   "sub-setup": {
     "name": "Sub Setup",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "visibility": "unlisted"
   }
 }
