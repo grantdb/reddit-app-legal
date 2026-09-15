@@ -1,7 +1,7 @@
 # App Update Checker
 
 Category: Utility  
-Version: v0.0.81  
+Version: v0.0.82  
 Visibility: Public  
 Summary: Automated version tracking and release notification engine for Reddit Devvit apps. Daily silent audits and modmail alerts.
 
