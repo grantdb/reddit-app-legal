@@ -1,7 +1,7 @@
 # Canadian News
 
 Category: News  
-Version: v0.0.57  
+Version: v0.0.58  
 Visibility: Public  
 Summary: Regional Canadian news aggregator. Refactored to include political news as an optional subject.
 
@@ -70,10 +70,10 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.57 — 2026-09-08
+0.0.58 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
-0.0.56 — 2026-09-02
+0.0.57 — 2026-09-08
 - Standard fleet synchronization and maintenance.
 
 0.0.56 — 2026-09-02
