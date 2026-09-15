@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-14T20:49:52.266Z",
+  "generatedAt": "2026-09-15T03:14:30.572Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2792,11 +2792,11 @@
         "subsetup"
       ],
       "setupSteps": [
-        "![Platform](https://img.shields.io/badge/Platform-Reddit%20Devvit-FF4500?style=flat-square)",
-        "![Category](https://img.shields.io/badge/Category-Moderation-blue?style=flat-square)",
-        "![Interface](https://img.shields.io/badge/Interface-Interactive%20Webview-00f2fe?style=flat-square)",
-        "Interactive subreddit setup guide and configuration wizard for Reddit communities.",
-        "`sub-setup` guides moderators through an in-depth, 19-section setup across 9 progressive wizard steps. It combines automated API inspections with persistent manual checklists, direct 1-click Mod Tools launchers, official Reddit documentation references, prioritized quick wins, and on-demand Modmail export."
+        "| Traditional Workflow | With Sub Setup |",
+        "| :--- | :--- |",
+        "| Hunting through dozens of desktop Mod Tools menus | 9 guided wizard steps with direct 1-click deep links to each setting |",
+        "| Guessing which settings AutoMod or Safety Filters need | Automated API inspection scoring live rules, flairs, and configuration |",
+        "| Losing track of which mod finished which setting | Persistent Redis checklists tracking team setup progress across sessions |"
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -2835,7 +2835,7 @@
         "troubleshooting": "Check the Sub Setup troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-14"
+      "lastUpdated": "2026-09-15"
     }
   ]
 }

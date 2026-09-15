@@ -1,8 +1,32 @@
 <blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/sub-setup">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
-<h1>Sub Setup</h1>
-<h2>Purpose</h2>
-<p>Interactive subreddit setup guide and configuration wizard for Reddit communities.</p>
-<p>`sub-setup` guides moderators through an in-depth, 19-section setup across 9 progressive wizard steps. It combines automated API inspections with persistent manual checklists, direct 1-click Mod Tools launchers, official Reddit documentation references, prioritized quick wins, and on-demand Modmail export.</p>
+<h1>Sub Setup 🛠️</h1>
+<blockquote><p><strong>Step-by-step interactive setup wizard, live configuration audits, and Mod Tools guidance for Reddit communities.</strong></p></blockquote>
+<p>Sub Setup guides new and experienced moderators through a comprehensive 19-section setup across 9 progressive wizard steps. It combines automated API inspections with persistent manual checklists, direct 1-click Mod Tools launchers, official Reddit documentation references, prioritized quick wins, and on-demand Modmail export.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>In-webview Setup Wizard</strong>: Interactive React webview embedded directly within Reddit, opened via your subreddit menu.</li>
+<li><strong>Mod-only stealth post</strong>: Automatically removed from the public feed so it remains 100% private to your moderator team.</li>
+<li><strong>Persistent Redis checklists</strong>: Check off manual tasks with instant optimistic UI updates, safely decoupled from API audit re-runs.</li>
+<li><strong>1-Click Mod Tools launchers</strong>: Direct deep links to `/about/edit`, `/wiki/config/automoderator`, `/about/rules`, and `/safety`.</li>
+<li><strong>Batch step completion</strong>: Mark all manual checklist items in a step complete with one click.</li>
+<li><strong>Remaining items filter</strong>: Dedicated modal listing all incomplete items across all 9 steps with instant jump navigation.</li>
+<li><strong>Rate-limited audit engine</strong>: 60-second cooldown protects platform resources and displays live retry countdowns.</li>
+<li><strong>On-demand Modmail dispatch</strong>: Export structured, zero-emoji Markdown reports directly to Subreddit Mod Discussions.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Sub Setup Way</h2>
+<p>---</p>
+<h2>Built for Seamless Subreddit Onboarding</h2>
+<ul>
+<li><strong>Dual-Score Integrity</strong>: Separates automated API inspections (which contribute to your numeric configuration score) from guided manual checklists and optional programs.</li>
+<li><strong>Official Documentation</strong>: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.</li>
+<li><strong>Zero-PII & Privacy-First</strong>: Inspects only public community configuration flags and rules; never inspects private user profiles, post bodies, or modmail conversations.</li>
+<li><strong>Clean Plain-Text Formatting</strong>: Formatted with high-contrast, professional labels without emojis for clear readability across all Reddit clients.</li>
+<li><strong>Continue Where You Left Off</strong>: Restores your active step and checklist state upon returning to the guide.</li>
+<li><strong>Demo Mode</strong>: Allows previewing sample community data and guided steps even without moderator privileges.</li>
+</ul>
+<p>---</p>
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sub-setup-flowchart.png">Logic Flowchart</a></p>
 <h3>Your Four-Step Workflow</h3>
@@ -10,26 +34,7 @@
 <p>2. <strong>Dual Audit & Interactive Wizard</strong>: The app loads an interactive 9-step React webview. Automated checks inspect 8 API-accessible areas, while guided checklists track manual settings with Redis persistence.</p>
 <p>3. <strong>Step-by-Step Configuration</strong>: Moderators work through settings, check off manual tasks with optimistic UI updates, launch 1-click Mod Tools deep links, or batch-complete steps.</p>
 <p>4. <strong>Export & Sharing</strong>: On demand, moderators can dispatch a structured Markdown summary directly to Modmail (Mod Discussions) or copy progress snippets to clipboard for team coordination.</p>
-<h2>Major Features</h2>
-<ul>
-<li><strong>Interactive 9-Step Wizard</strong>: Structured progression from community identity and AutoModerator to rules, flairs, safety filters, onboarding, team health, and operations.</li>
-<li><strong>Mod-Only Stealth Post</strong>: Runs in an expanded custom post that is automatically removed from the public subreddit feed so it never clutters member views.</li>
-<li><strong>Persistent Manual Checklists</strong>: Tracks your manual verification progress in Redis (`v1` namespace), completely decoupled from API audit runs so you never lose progress.</li>
-<li><strong>Optimistic UI Updates</strong>: Checkboxes update instantaneously with automatic rollback and toast notifications on network interruption.</li>
-<li><strong>Batch Step Completion</strong>: "Mark All Complete in This Step" allows rapid completion of verified configuration areas.</li>
-<li><strong>Remaining Items Quick Filter</strong>: 1-click modal listing all pending tasks across the entire subreddit with direct jump navigation.</li>
-<li><strong>Rate-Limited Audit Engine</strong>: 60-second cooldown protects platform resources and displays live retry timers.</li>
-<li><strong>Direct Mod Tools Launchers</strong>: Every section includes deep links with confirmed or best-effort routing to the exact Mod Tools page.</li>
-<li><strong>Official Documentation</strong>: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.</li>
-<li><strong>Zero-PII & Privacy-First</strong>: Reads only high-level community settings; never inspects private user profiles, post bodies, or modmail conversations.</li>
-<li><strong>On-Demand Modmail Delivery</strong>: Safe multi-part chunking (under 9,000 characters per message) delivers formatted reports to team Mod Discussions on demand.</li>
-</ul>
-<h2>Install / Use</h2>
-<p>1. Install <strong>Sub Setup</strong> on your subreddit.</p>
-<p>2. Open your subreddit's menu and select <strong>Run Subreddit Setup Audit</strong>.</p>
-<p>3. You will be routed directly to the interactive setup guide.</p>
-<p>4. Complete the 9 steps at your own pace — your progress is saved automatically.</p>
-<p>5. When ready, click <strong>Send to Modmail</strong> in Step 9 to archive your setup report in Mod Discussions.</p>
+<p>---</p>
 <h2>9 Wizard Steps (19 Configuration Sections)</h2>
 <p>1. <strong>Step 1 — Community Identity & Settings</strong>: Title, description, sidebar length, community avatar, banner image, discoverability, and NSFW status.</p>
 <p>2. <strong>Step 2 — AutoModerator Protection</strong>: Wiki configuration existence, rule blocks, YAML syntax validation (tab detection), new account filtering, and action reasons.</p>
@@ -40,9 +45,18 @@
 <p>7. <strong>Step 7 — Moderator Team & Notifications</strong>: Team coverage, single-point-of-failure redundancy analysis, scoped permissions, and activity alert thresholds.</p>
 <p>8. <strong>Step 8 — Operations & Insights</strong>: Queue daily triage routines, Mod Log audit trails, Modmail workflow, and Mod Insights traffic growth.</p>
 <p>9. <strong>Step 9 — Final Review & Export</strong>: Overall score summary, remaining quick wins, progress reset, clipboard copy, and Modmail export.</p>
+<p>---</p>
+<h2>Install / Use</h2>
+<p>1. Install <strong>Sub Setup</strong> on your subreddit.</p>
+<p>2. Open your subreddit's menu and select <strong>Run Subreddit Setup Audit</strong>.</p>
+<p>3. You will be routed directly to the interactive setup guide.</p>
+<p>4. Complete the 9 steps at your own pace — your progress is saved automatically.</p>
+<p>5. When ready, click <strong>Send to Modmail</strong> in Step 9 to archive your setup report in Mod Discussions.</p>
+<p>---</p>
 <h2>Support</h2>
 <p>For help, bug reports, or feature requests, post in r/grantdb.</p>
 <p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
 <h2>Legal</h2>
 <p>This application is subject to the following legal agreements:</p>
 <ul>

@@ -11,21 +11,6 @@ Summary: Comprehensive subreddit setup guide and configuration auditor.</p>
 <h2>Flowchart</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sub-setup-flowchart.png">View flowchart image</a></p>
 
-<h2>Key Features</h2>
-<ul>
-<li>Interactive 9-Step Wizard: Structured progression from community identity and AutoModerator to rules, flairs, safety filters, onboarding, team health, and operations.</li>
-<li>Mod-Only Stealth Post: Runs in an expanded custom post that is automatically removed from the public subreddit feed so it never clutters member views.</li>
-<li>Persistent Manual Checklists: Tracks your manual verification progress in Redis (`v1` namespace), completely decoupled from API audit runs so you never lose progress.</li>
-<li>Optimistic UI Updates: Checkboxes update instantaneously with automatic rollback and toast notifications on network interruption.</li>
-<li>Batch Step Completion: "Mark All Complete in This Step" allows rapid completion of verified configuration areas.</li>
-<li>Remaining Items Quick Filter: 1-click modal listing all pending tasks across the entire subreddit with direct jump navigation.</li>
-<li>Rate-Limited Audit Engine: 60-second cooldown protects platform resources and displays live retry timers.</li>
-<li>Direct Mod Tools Launchers: Every section includes deep links with confirmed or best-effort routing to the exact Mod Tools page.</li>
-<li>Official Documentation: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.</li>
-<li>Zero-PII & Privacy-First: Reads only high-level community settings; never inspects private user profiles, post bodies, or modmail conversations.</li>
-<li>On-Demand Modmail Delivery: Safe multi-part chunking (under 9,000 characters per message) delivers formatted reports to team Mod Discussions on demand.</li>
-</ul>
-
 <h2>Permissions Used</h2>
 <ul>
 <li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
@@ -67,47 +52,14 @@ Summary: Comprehensive subreddit setup guide and configuration auditor.</p>
 
 <h2>Setup and Usage</h2>
 <ul>
-<li>![Platform](https://img.shields.io/badge/Platform-Reddit%20Devvit-FF4500?style=flat-square)</li>
-<li>![Category](https://img.shields.io/badge/Category-Moderation-blue?style=flat-square)</li>
-<li>![Interface](https://img.shields.io/badge/Interface-Interactive%20Webview-00f2fe?style=flat-square)</li>
-<li>Interactive subreddit setup guide and configuration wizard for Reddit communities.</li>
-<li>`sub-setup` guides moderators through an in-depth, 19-section setup across 9 progressive wizard steps. It combines automated API inspections with persistent manual checklists, direct 1-click Mod Tools launchers, official Reddit documentation references, prioritized quick wins, and on-demand Modmail export.</li>
-<li>![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sub-setup-flowchart.png)</li>
-<li>Moderator Launch: A moderator clicks Run Subreddit Setup Audit in the subreddit menu. The server retrieves or generates a private, stealth custom post accessible only to moderators.</li>
-<li>Dual Audit & Interactive Wizard: The app loads an interactive 9-step React webview. Automated checks inspect 8 API-accessible areas, while guided checklists track manual settings with Redis persistence.</li>
-<li>Step-by-Step Configuration: Moderators work through settings, check off manual tasks with optimistic UI updates, launch 1-click Mod Tools deep links, or batch-complete steps.</li>
-<li>Export & Sharing: On demand, moderators can dispatch a structured Markdown summary directly to Modmail (Mod Discussions) or copy progress snippets to clipboard for team coordination.</li>
-<li>Interactive 9-Step Wizard: Structured progression from community identity and AutoModerator to rules, flairs, safety filters, onboarding, team health, and operations.</li>
-<li>Mod-Only Stealth Post: Runs in an expanded custom post that is automatically removed from the public subreddit feed so it never clutters member views.</li>
-<li>Persistent Manual Checklists: Tracks your manual verification progress in Redis (`v1` namespace), completely decoupled from API audit runs so you never lose progress.</li>
-<li>Optimistic UI Updates: Checkboxes update instantaneously with automatic rollback and toast notifications on network interruption.</li>
-<li>Batch Step Completion: "Mark All Complete in This Step" allows rapid completion of verified configuration areas.</li>
-<li>Remaining Items Quick Filter: 1-click modal listing all pending tasks across the entire subreddit with direct jump navigation.</li>
-<li>Rate-Limited Audit Engine: 60-second cooldown protects platform resources and displays live retry timers.</li>
-<li>Direct Mod Tools Launchers: Every section includes deep links with confirmed or best-effort routing to the exact Mod Tools page.</li>
-<li>Official Documentation: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.</li>
-<li>Zero-PII & Privacy-First: Reads only high-level community settings; never inspects private user profiles, post bodies, or modmail conversations.</li>
-<li>On-Demand Modmail Delivery: Safe multi-part chunking (under 9,000 characters per message) delivers formatted reports to team Mod Discussions on demand.</li>
-<li>Install Sub Setup on your subreddit.</li>
-<li>Open your subreddit's menu and select Run Subreddit Setup Audit.</li>
-<li>You will be routed directly to the interactive setup guide.</li>
-<li>Complete the 9 steps at your own pace — your progress is saved automatically.</li>
-<li>When ready, click Send to Modmail in Step 9 to archive your setup report in Mod Discussions.</li>
-<li>Step 1 — Community Identity & Settings: Title, description, sidebar length, community avatar, banner image, discoverability, and NSFW status.</li>
-<li>Step 2 — AutoModerator Protection: Wiki configuration existence, rule blocks, YAML syntax validation (tab detection), new account filtering, and action reasons.</li>
-<li>Step 3 — Rules Hub & Enforcement: Rule definitions, depth, rule fatigue checks, removal reasons, and pre-submission Post Check triggers.</li>
-<li>Step 4 — Flairs & Taxonomy: Post flair enablement, template counts, user flair enablement, media uploads, and wiki pages.</li>
-<li>Step 5 — Safety Filters & Auto-Triage: Native Crowd Control, Reputation Filter, Ban Evasion Filter, and Poster Eligibility.</li>
-<li>Step 6 — Onboarding & Community Guide: New member welcome messages, resource links, flair prompts, saved responses, and temporary event overrides.</li>
-<li>Step 7 — Moderator Team & Notifications: Team coverage, single-point-of-failure redundancy analysis, scoped permissions, and activity alert thresholds.</li>
-<li>Step 8 — Operations & Insights: Queue daily triage routines, Mod Log audit trails, Modmail workflow, and Mod Insights traffic growth.</li>
-<li>Step 9 — Final Review & Export: Overall score summary, remaining quick wins, progress reset, clipboard copy, and Modmail export.</li>
-<li>For help, bug reports, or feature requests, post in r/grantdb.</li>
-<li>Please include the app name, what you expected, what happened, and any error text or screenshots.</li>
-<li>This application is subject to the following legal agreements:</li>
-<li>[Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/TERMS.md)</li>
-<li>[Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/PRIVACY.md)</li>
-<li>Built for Reddit's moderator community.*</li>
+<li>| Traditional Workflow | With Sub Setup |</li>
+<li>| :--- | :--- |</li>
+<li>| Hunting through dozens of desktop Mod Tools menus | 9 guided wizard steps with direct 1-click deep links to each setting |</li>
+<li>| Guessing which settings AutoMod or Safety Filters need | Automated API inspection scoring live rules, flairs, and configuration |</li>
+<li>| Losing track of which mod finished which setting | Persistent Redis checklists tracking team setup progress across sessions |</li>
+<li>| Confusing manual settings with automated checks | Clear visual badges and tooltips distinguishing API vs. manual reviews |</li>
+<li>| Forgetting pre-submission post checks or removal reasons | Structured checklists ensuring 1:1 rule-to-removal-reason parity |</li>
+<li>| Static, overwhelming wall-of-text audit dumps | Interactive wizard with progress gauges, remaining items modal, and Modmail export |</li>
 </ul>
 
 <h2>Troubleshooting</h2>
