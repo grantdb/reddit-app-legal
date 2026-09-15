@@ -1,7 +1,7 @@
 # Sub Setup
 
 Category: Moderation  
-Version: v0.0.7  
+Version: v0.0.8  
 Visibility: Unlisted  
 Summary: Comprehensive subreddit setup guide and configuration auditor.
 
@@ -44,7 +44,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 This app utilizes Reddit Redis storage for state management, caching, and rate limiting.
 
 - Key-Value Strings (deduplication & cooldown markers)
-- Key patterns: node:http
+- Key patterns: node:http, sub-setup:toast
 
 ## Setup and Usage
 - | Traditional Workflow | With Sub Setup |
@@ -61,13 +61,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.8 — 2026-09-15
+- Standard fleet synchronization and maintenance.
+
 0.0.7 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 0.0.6 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-0.0.5 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
