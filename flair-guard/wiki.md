@@ -1,7 +1,7 @@
 # Flair Guard
 
 Category: Moderation  
-Version: v0.0.15  
+Version: v0.0.16  
 Visibility: Unlisted  
 Summary: Automated rule-based post flair assignment engine with delayed eligibility checks.
 
