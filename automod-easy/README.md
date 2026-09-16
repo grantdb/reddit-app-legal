@@ -46,7 +46,7 @@ AutoMod Easy replaces error-prone YAML editing with an interactive rule builder 
 
 ### Your Four-Step Workflow
 
-1. **Launch**: Open **AutoMod Easy Trainer** from Subreddit Mod Tools.
+1. **Launch**: Open **AutoMod Easy** from Subreddit Mod Tools.
 2. **Build**: Draft rules in the visual Sandbox or customize Starter Templates.
 3. **Validate**: AutoMod Easy inspects multi-document YAML syntax, validates schema keys, and tests logic against sample payloads.
 4. **Deploy**: Deploy verified rules directly to your subreddit's `config/automoderator` wiki with automated snapshot backup.
@@ -56,7 +56,7 @@ AutoMod Easy replaces error-prone YAML editing with an interactive rule builder 
 ## Quick Setup
 
 1. **Install**: Add **AutoMod Easy** to your subreddit through the Reddit App Directory.
-2. **Open Trainer**: Select **AutoMod Easy Trainer** from Subreddit Mod Tools.
+2. **Open App**: Select **AutoMod Easy** from Subreddit Mod Tools.
 3. **Audit Rules**: Review the initial health scorecard of your current AutoMod configuration.
 4. **Experiment**: Use the Sandbox Lab to test new rules or verify starter templates.
 

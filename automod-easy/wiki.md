@@ -47,7 +47,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install: Add AutoMod Easy to your subreddit through the Reddit App Directory.
-- Open Trainer: Select AutoMod Easy Trainer from Subreddit Mod Tools.
+- Open App: Select AutoMod Easy from Subreddit Mod Tools.
 - Audit Rules: Review the initial health scorecard of your current AutoMod configuration.
 - Experiment: Use the Sandbox Lab to test new rules or verify starter templates.
 - No scary live-testing mistakes. Safe, visual AutoModerator development inside Reddit.*
