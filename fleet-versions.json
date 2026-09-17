@@ -223,5 +223,10 @@
     "name": "Sub Setup",
     "version": "0.0.13",
     "visibility": "unlisted"
+  },
+  "ultimate-wwe": {
+    "name": "Ultimate WWE Hub",
+    "version": "0.0.1",
+    "visibility": "unlisted"
   }
 }

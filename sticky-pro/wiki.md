@@ -1,7 +1,7 @@
 # Sticky-Pro
 
 Category: Moderation  
-Version: v1.0.113  
+Version: v1.0.114  
 Visibility: Public  
 Summary: Automated moderator sticky suite with dynamic form population.
 
@@ -36,13 +36,13 @@ Automated moderator sticky suite with dynamic form population.
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
 - label1: Custom Toast Name 1 (string, default: FAQ). Sets the display name for Template 1.
-- text1: Sticky Content 1 (paragraph, default: -). Sticky Content 1
+- text1: Sticky Content 1 (paragraph, default: ). Content for Template 1.
 - label2: Custom Toast Name 2 (string, default: Rules). Sets the display name for Template 2.
-- text2: Sticky Content 2 (paragraph, default: -). Sticky Content 2
+- text2: Sticky Content 2 (paragraph, default: ). Content for Template 2.
 - label3: Custom Toast Name 3 (string, default: Custom). Sets the display name for Template 3.
-- text3: Sticky Content 3 (paragraph, default: -). Sticky Content 3
-- enableAutoSticky: Enable Auto-Sticky on Every Post (boolean, default: false). Enable Auto-Sticky on Every Post
-- autoStickyText: Auto-Sticky Content (paragraph, default: -). Auto-Sticky Content
+- text3: Sticky Content 3 (paragraph, default: ). Content for Template 3.
+- enableAutoSticky: Enable Auto-Sticky on Every Post (boolean, default: false). Automatically sticky a comment when a new post is submitted.
+- autoStickyText: Auto-Sticky Content (paragraph, default: ). Content for the automated sticky comment.
 - autoPin: Pin Auto-Sticky Comment to Top (boolean, default: true). When enabled, auto-sticky comments are stickied to top of thread. When disabled, comments are distinguished as moderator without pinning.
 - delayedProcessingEnabled: Enable Delayed Processing (PostCreate path) (boolean, default: true). When enabled, auto-sticky via PostCreate waits before posting to confirm the post is still live. PostSubmit always fires immediately.
 - delayedProcessingSeconds: Processing Delay (seconds) (number, default: 10). How many seconds to wait on the PostCreate path before checking eligibility (min: 5, max: 100). Default: 10.
@@ -82,13 +82,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.114 — 2026-09-17
+- Standard fleet synchronization and maintenance.
+
 1.0.113 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 1.0.112 — 2026-09-04
-- Standard fleet synchronization and maintenance.
-
-1.0.111 — 2026-09-04
 - Standard fleet synchronization and maintenance.
 
 ## Links
