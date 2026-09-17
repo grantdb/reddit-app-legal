@@ -1,21 +1,72 @@
 > 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/testrank)
 
-# TestRank
+# TestRank 🧪
 
-> **Empower developers to reward quality feedback, recognize dedicated testers, and gamify app testing across your subreddit.**
+> **Empower developers to reward quality feedback, recognize dedicated beta testers, and gamify community app testing across your subreddit.**
 
-**TestRank** is an automated tester recognition, reputation, and leaderboard engine for Android beta testing communities like **r/droidapptesters**. It allows app developers (OPs) to confirm helpful feedback directly from comment menus, awards structured XP points, maintains real-time weekly and monthly leaderboards, syncs Reddit user flairs across a prestige ladder, and equips moderators with complete audit and override capabilities.
+**TestRank** is an automated tester recognition, reputation, and leaderboard engine built specifically for Android testing communities like **r/droidapptesters**. It enables app developers (OPs) to confirm helpful feedback directly from comment context menus, awards structured XP points, maintains real-time weekly and monthly leaderboards, syncs Reddit user flairs across a prestige ladder, and equips moderators with complete audit and override capabilities.
+
+### ⚡ Key Highlights
+- **Direct Developer Awards**: App creators reward testers straight from Reddit comment overflow menus with one click.
+- **Automated Flair Progression**: Automatically promotes users through tiered prestige flairs (`App Explorer` → `Grandmaster Tester`) as XP climbs.
+- **Live Community Leaderboards**: Spawns dedicated, interactive custom post leaderboards backed by real-time Redis Sorted Sets.
+- **Cryptographic Anti-Abuse**: Prevents duplicate awards and strictly blocks self-crediting with cryptographic deduplication keys.
 
 ---
 
-## At a Glance
+## How It Works
 
-- **Direct Developer Recognition**: App creators reward testers straight from comment overflow menus with one click.
-- **Structured 10x XP Points**: Distinct point weights for general feedback, bug reports, and fix verifications.
-- **Clean Prestige Ladder**: Automatic user progression from App Explorer to Grandmaster Tester without messy emojis.
-- **Automated User Flair Sync**: Syncs Reddit subreddit user flairs in real time as community members level up.
-- **Public & Sticky Leaderboards**: Generates dedicated, live-updating custom post leaderboards for the community.
-- **Full Moderator Oversight**: Audit trail, participation toggles, opt-out mechanisms, and manual score overrides.
+![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/testrank-flowchart.png)
+
+### The 5-Step Recognition Pipeline
+
+1. **Post Eligibility & Onboarding**: A developer posts an app testing thread with flair. TestRank validates eligibility and sends a deduplicated onboarding modmail with usage guidance.
+2. **Tester Feedback & Activity**: Community members join tests, reply with testing feedback, bug reproductions, or bug fix confirmations.
+3. **Developer Confirmation**: The developer selects **Mark Registered Tester (+5 pts)**, **Mark Helpful Feedback (+10 pts)**, **Mark Bug Found (+25 pts)**, or **Mark Fix Verified (+30 pts)** directly from the comment menu (`...`).
+4. **Prestige Ladder & Flair Sync**: Redis Sorted Set leaderboards update instantly; user point totals advance toward higher prestige ranks with automatic Reddit user flair upgrades.
+5. **Moderator Audit & Override Hub**: Moderators access the mod dashboard to inspect live audit logs, toggle post/user eligibility, or issue score corrections with mandatory reason logging.
+
+---
+
+## Quick Setup (60-Second Onboarding)
+
+1. **Install App**: Install TestRank to your subreddit from the Reddit App Directory.
+2. **Configure Settings**: Adjust point weights and onboarding modmail rules via **Mod Tools -> Apps -> testrank -> Settings**.
+3. **Generate Leaderboard Post**: Open the subreddit overflow menu (`...`) and click **Create TestRank Leaderboard Post** to provision the pinned community board.
+4. **Reward & Rank**: Developers click comment menus on helpful replies to confirm points and immediately trigger leaderboard and flair updates.
+
+---
+
+## Core Capabilities
+
+### 1. Action Types & Point Matrix
+Reward different contributions according to testing depth:
+- **Registered Tester (`+5 pts`)**: Low-friction confirmation that a tester joined the Google Group, opted into the closed test, or installed the app build.
+- **Helpful Feedback (`+10 pts`)**: Clear, actionable UX notes, device compatibility reports, or initial impressions.
+- **Bug Found (`+25 pts`)**: Confirmed, reproducible bug reports with error logs, device specs, or screenshots.
+- **Fix Verified (`+30 pts`)**: Verification confirming that a reported bug has been resolved in an updated build or patch.
+
+### 2. Prestige Ladder & Automated Flair Sync
+As testers accumulate testing points, TestRank updates their standing and automatically assigns their Reddit user flair:
+
+| Tier | Prestige Title | Min Points | Subreddit User Flair |
+| :---: | :--- | :---: | :--- |
+| **1** | **App Explorer** | `0 pts` | `App Explorer` |
+| **2** | **Helpful Tester** | `50 pts` | `Helpful Tester` |
+| **3** | **Bug Hunter** | `150 pts` | `Bug Hunter` |
+| **4** | **Elite Tester** | `350 pts` | `Elite Tester` |
+| **5** | **Master Tester** | `750 pts` | `Master Tester` |
+| **6** | **Grandmaster Tester** | `1,500 pts` | `Grandmaster Tester` |
+
+### 3. Comment-Driven & Dashboard Workflows
+- **Context Menu Actions**: Developers award points right inside the comment thread (`Mark Registered Tester`, `Mark Helpful Feedback`, `Mark Bug Found`, `Mark Fix Verified`).
+- **Per-Post TestRank Dashboard**: OPs and mods can open **Open This Post’s TestRank Dashboard** to view all commenters on a submission and issue summary awards.
+- **Opt-Out Controls**: Developers can opt out individual posts at any time by commenting `!testrank-optout`.
+
+### 4. Moderator Governance & Audit Trail
+- **Live Audit Logging**: Every award creation, reversal, and mod correction is permanently recorded in Redis with timestamps and reason strings.
+- **Recreation Cooldown**: Force-recreating the leaderboard post is protected by a 5-minute spam prevention cooldown.
+- **Global Toggles**: Moderators can disable awards for specific abusive users or posts while preserving historical data.
 
 ---
 
@@ -26,82 +77,16 @@
 | Testers leave feedback with no acknowledgment or track record | **Verifiable reputation** and persistent community prestige |
 | Developers manually replying "thanks" with no lasting recognition | **Instant one-click awards** directly from comment context menus |
 | No way to identify high-quality, reliable beta testers | **Real-time leaderboards** and automated tier flairs highlighting top contributors |
-| Frequent duplicate rewards and uncontrolled self-crediting | **Strict idempotency keys** and server-enforced anti-cheat safeguards |
+| Frequent duplicate rewards and uncontrolled self-crediting | **Atomic Redis locks** and server-enforced anti-cheat safeguards |
 | Moderators lacking visibility into tester activity and awards | **Comprehensive audit logging** with mandatory reason tracking on reversals |
 
 ---
 
-## Built for High-Impact Tester Recognition
+## Designed to Assist Moderators & Protect Privacy
 
-- **Comment-Driven Award Flow**: Developers confirm testing feedback directly via comment menu items (**Mark Helpful Feedback**, **Mark Bug Found**, **Mark Retest**), or manage all commenters via the post dashboard.
-- **Anti-Self-Credit & Deduplication**: Cryptographic dedupe keys prevent duplicate awards on the same comment and block OPs from self-crediting.
-- **Automated OP Onboarding**: Sends a friendly, deduplicated modmail to the OP when an eligible testing post is submitted, explaining tools and opt-out commands.
-- **Community Leaderboard Custom Posts**: Moderators can spawn dedicated, pinned custom post leaderboards that update live from Redis Sorted Sets.
-- **Participation Controls**: Developers can opt out individual posts with `!testrank-optout`, while moderators can toggle post or user participation globally.
-- **Immutable Audit Trail**: Logs all award creations, reversals, and manual mod corrections with mandatory reason preservation.
-
----
-
-## Action Types & Point Matrix
-
-| Action Type | XP Points | Purpose & Description |
-| :--- | :---: | :--- |
-| **Helpful Feedback** | `+10 pts` | Clear, actionable user feedback, UX notes, or initial testing impressions. |
-| **Bug Found** | `+25 pts` | Confirmed, reproducible bug report with error details, device specs, or screenshots. |
-| **Retest Verified** | `+15 pts` | Verification of an updated build confirming that a reported bug has been resolved. |
-
----
-
-## Prestige Ladder & User Flair Tiers
-
-As testers accumulate testing points, TestRank updates their standing and automatically sets their Reddit user flair:
-
-| Level | Prestige Title | Min Points | User Flair |
-| :--- | :--- | :---: | :--- |
-| **Tier 1** | **App Explorer** | `0 pts` | `App Explorer` |
-| **Tier 2** | **Helpful Tester** | `50 pts` | `Helpful Tester` |
-| **Tier 3** | **Bug Hunter** | `150 pts` | `Bug Hunter` |
-| **Tier 4** | **Elite Tester** | `350 pts` | `Elite Tester` |
-| **Tier 5** | **Master Tester** | `750 pts` | `Master Tester` |
-| **Tier 6** | **Grandmaster Tester** | `1,500 pts` | `Grandmaster Tester` |
-
----
-
-## How It Works
-
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/testrank-flowchart.png)
-
-### Your Five-Step Recognition Pipeline
-
-1. **Post Eligibility & Onboarding**: A developer posts an app testing thread with flair. TestRank validates eligibility and sends an onboarding modmail with usage guidance.
-2. **Tester Feedback & Activity**: Community members test the app build and reply with testing feedback, bug reproductions, or retest confirmations.
-3. **Developer Confirmation**: The developer selects **Mark Helpful Feedback (+10 pts)**, **Mark Bug Found (+25 pts)**, or **Mark Retest (+15 pts)** from the comment menu.
-4. **Prestige Ladder & Flair Sync**: Redis Sorted Set leaderboards update instantly; user point totals advance toward higher prestige ranks with automatic Reddit user flair updates.
-5. **Moderator Audit & Override Hub**: Moderators access the mod dashboard to inspect live audit logs, toggle post/user eligibility, or issue score corrections with mandatory reason logging.
-
----
-
-## Usage & Controls
-
-### For App Developers (OPs)
-1. Post your app testing thread in the subreddit with an appropriate link flair.
-2. Review comments from testers. On helpful replies, open the comment menu (`...`) and click:
-   - **Mark Helpful Feedback** (+10 pts)
-   - **Mark Bug Found** (+25 pts)
-   - **Mark Retest** (+15 pts)
-3. Alternatively, open **Open This Post’s TestRank Dashboard** from the post overflow menu to view all post commenters and award summary cards.
-4. To opt out a specific thread from TestRank, comment `!testrank-optout` on your post.
-
-### For Community Testers
-- Test apps shared in the subreddit and leave descriptive feedback.
-- Track your cumulative XP, current rank, and unlocked milestone badges directly in the TestRank dashboard.
-- Watch your subreddit user flair automatically upgrade as you climb the prestige ladder.
-
-### For Subreddit Moderators
-- Select **Create TestRank Leaderboard Post** from the subreddit overflow menu to generate or open the pinned public leaderboard custom post for the community.
-- Select **Recreate TestRank Leaderboard Post** to force-generate a fresh public leaderboard post with a 5-minute spam prevention cooldown.
-- Select **Open TestRank Mod Dashboard** to inspect the live audit log, toggle post or user participation, and issue score corrections with mandatory audit reasons.
-- Customize point values and onboarding modmail rules via **Mod Tools -> Apps -> testrank -> Settings**.
+TestRank operates as an automated community utility designed to empower human moderators and developers:
+- **Moderator Authority**: Moderators retain absolute authority to reverse any award, edit points, or exclude users from leaderboards.
+- **Privacy & Zero PII**: TestRank never collects, stores, or transmits private personal data. All state is strictly indexed by public Reddit usernames and item IDs in isolated Redis storage.
 
 ---
 
