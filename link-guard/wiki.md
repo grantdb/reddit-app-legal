@@ -1,12 +1,12 @@
 # LinkGuard
 
 Category: Security  
-Version: v0.0.19  
-Visibility: Public  
-Summary: Strict URL policy enforcement & link shortener filter for Reddit posts and comments.
+Version: v0.0.20  
+Visibility: Unlisted  
+Summary: Strict URL policy enforcement, shortener filter, and link moderation engine for Reddit.
 
 ## Overview
-Strict URL policy enforcement & link shortener filter for Reddit posts and comments.
+Strict URL policy enforcement, shortener filter, and link moderation engine for Reddit.
 
 ## Flowchart
 [View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/link-guard-flowchart.png)
@@ -63,8 +63,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.19 — 2026-09-17
+0.0.20 — 2026-09-17
 - Standard fleet synchronization and maintenance.
+
+0.0.20 — 2026-09-17
+- Fix: Connected webview App.tsx to backend server endpoints (`/api/get-dashboard`, `/api/save-rule`, `/api/delete-rule`, `/api/save-settings`) replacing static mock state.
+- Fix: Ensured rule creation, edits, deletion, and toggle persist directly to Redis and reload dynamically.
+- Fix: Persisted Execution Mode (Live vs Dry Run) and Master App Switch via `/api/save-settings`.
+- UI: Applied universal scrolling standard with `html, body { overflow-y: auto; overscroll-behavior-y: auto; touch-action: pan-y; }`, high-contrast scrollbars, modal viewport scroll locks, and iOS 16px input zoom guard.
 
 0.0.19 — 2026-09-17
 - Fix: Migrated dashboard creation to the Queue-Free Self-Heal pattern (`reddit.approve` + `lock` + `ignoreReports`) preventing "Something went wrong" toast crashes on desktop.
@@ -72,9 +78,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Fix: Added fallback endpoint alias for `/create-dashboard-post` and safe subreddit name resolution.
 - Configuration: Added `Devvit.configure({ redditAPI: true, redis: true })` in server initialization.
 - Scoping: Scoped Redis dashboard post and lock keys by `subredditId`.
-
-0.0.18 — 2026-09-15
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/link-guard/TERMS.md)

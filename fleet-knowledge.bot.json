@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T06:23:44.082Z",
+  "generatedAt": "2026-09-17T10:46:43.978Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2103,7 +2103,7 @@
         "linkguard",
         "link guard"
       ],
-      "summary": "Strict URL policy enforcement & link shortener filter for Reddit posts and comments.",
+      "summary": "Strict URL policy enforcement, shortener filter, and link moderation engine for Reddit.",
       "keywords": [
         "link-guard",
         "linkguard",
@@ -2159,7 +2159,7 @@
         "troubleshooting": "Check the LinkGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-09"
+      "lastUpdated": "2026-09-17"
     },
     {
       "appId": "verify-guard",

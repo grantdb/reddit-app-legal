@@ -56,7 +56,7 @@
   },
   "ring-escape": {
     "name": "Ring Escape: Serpent Flagship",
-    "version": "0.0.67",
+    "version": "0.0.68",
     "visibility": "unlisted"
   },
   "app-update-checker": {
@@ -81,7 +81,7 @@
   },
   "word-guard": {
     "name": "WordGuard",
-    "version": "0.0.192",
+    "version": "0.0.193",
     "visibility": "public"
   },
   "sg1-responder": {
@@ -161,7 +161,7 @@
   },
   "link-guard": {
     "name": "LinkGuard",
-    "version": "0.0.18",
+    "version": "0.0.19",
     "visibility": "public"
   },
   "verify-guard": {
