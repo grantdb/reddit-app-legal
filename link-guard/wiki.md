@@ -1,7 +1,7 @@
 # LinkGuard
 
 Category: Security  
-Version: v0.0.18  
+Version: v0.0.19  
 Visibility: Public  
 Summary: Strict URL policy enforcement & link shortener filter for Reddit posts and comments.
 
@@ -38,7 +38,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
 - Attaches Removal Notes: No — Does not attach removal notes.
-- Approves Content: No — Does not approve content.
+- Approves Content: Yes — Approves content.
 - Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
 - Dispatches Modmail Alerts: Yes — Sends modmail notifications.
 - Updates User or Post Flair: No — Does not update flair.
@@ -49,7 +49,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key-Value Strings (deduplication & cooldown markers)
 - Hashes (structured records & alias indices)
 - Sorted Sets (time-series audit logs)
-- Key patterns: node:http, link_guard:dashboard_post_id, link_guard:meta
+- Key patterns: node:http
 
 ## Setup and Usage
 - Install: Add Link Guard to your subreddit through the Reddit App Directory.
@@ -63,13 +63,17 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.19 — 2026-09-17
+- Standard fleet synchronization and maintenance.
+
+0.0.19 — 2026-09-17
+- Fix: Migrated dashboard creation to the Queue-Free Self-Heal pattern (`reddit.approve` + `lock` + `ignoreReports`) preventing "Something went wrong" toast crashes on desktop.
+- Fix: Added `location: "post"` alongside `location: "subreddit"` in `devvit.json` for full menu coverage.
+- Fix: Added fallback endpoint alias for `/create-dashboard-post` and safe subreddit name resolution.
+- Configuration: Added `Devvit.configure({ redditAPI: true, redis: true })` in server initialization.
+- Scoping: Scoped Redis dashboard post and lock keys by `subredditId`.
+
 0.0.18 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-0.0.17 — 2026-09-09
-- Standard fleet synchronization and maintenance.
-
-0.0.16 — 2026-09-09
 - Standard fleet synchronization and maintenance.
 
 ## Links

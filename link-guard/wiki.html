@@ -1,7 +1,7 @@
 <h1>LinkGuard</h1>
 
 <p>Category: Security<br>
-Version: v0.0.18<br>
+Version: v0.0.19<br>
 Visibility: Public<br>
 Summary: Strict URL policy enforcement & link shortener filter for Reddit posts and comments.</p>
 
@@ -34,7 +34,7 @@ Summary: Strict URL policy enforcement & link shortener filter for Reddit posts 
 <ul>
 <li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
 <li>Attaches Removal Notes: No — Does not attach removal notes.</li>
-<li>Approves Content: No — Does not approve content.</li>
+<li>Approves Content: Yes — Automatically approves eligible content.</li>
 <li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
 <li>Dispatches Modmail Alerts: Yes — Sends notifications or summaries to modmail.</li>
 <li>Updates User or Post Flair: No — Does not update flair.</li>
@@ -46,7 +46,7 @@ Summary: Strict URL policy enforcement & link shortener filter for Reddit posts 
 <li>Key-Value Strings (deduplication & cooldown markers)</li>
 <li>Hashes (structured records & alias indices)</li>
 <li>Sorted Sets (time-series audit logs)</li>
-<li>Key patterns: node:http, link_guard:dashboard_post_id, link_guard:meta</li>
+<li>Key patterns: node:http</li>
 </ul>
 
 <h2>Setup and Usage</h2>
@@ -65,11 +65,11 @@ Summary: Strict URL policy enforcement & link shortener filter for Reddit posts 
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.19 — 2026-09-17<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.19 — 2026-09-17<br>
+Fix: Migrated dashboard creation to the Queue-Free Self-Heal pattern (`reddit.approve` + `lock` + `ignoreReports`) preventing "Something went wrong" toast crashes on desktop.; Fix: Added `location: "post"` alongside `location: "subreddit"` in `devvit.json` for full menu coverage.; Fix: Added fallback endpoint alias for `/create-dashboard-post` and safe subreddit name resolution.; Configuration: Added `Devvit.configure({ redditAPI: true, redis: true })` in server initialization.; Scoping: Scoped Redis dashboard post and lock keys by `subredditId`.</p>
 <p>0.0.18 — 2026-09-15<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.17 — 2026-09-09<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.16 — 2026-09-09<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
