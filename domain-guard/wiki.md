@@ -1,7 +1,7 @@
 # DomainGuard
 
 Category: Security  
-Version: v0.0.160  
+Version: v0.0.161  
 Visibility: Public  
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
@@ -25,6 +25,7 @@ Professional URL and domain moderation engine with singleton architecture and ha
 - PostUpdate: Delivered by Reddit event router to endpoint /internal/trigger/post-update.
 - CommentCreate: Delivered by Reddit event router to endpoint /internal/trigger/comment.
 - CommentSubmit: Delivered by Reddit event router to endpoint /internal/trigger/comment.
+- ModAction: Delivered by Reddit event router to endpoint /internal/trigger/modaction.
 - AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.
 - AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-install.
 
@@ -54,8 +55,8 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install: Add Domain Guard to your subreddit through the Reddit App Directory.
-- Configure: Open GuardHub: DomainGuard Dashboard from Subreddit Mod Tools.
-- Create Rules: Add your domain allowlist or blocklist in Audit Mode to safely verify matching behavior.
+- Open Dashboard: Launch GuardHub: DomainGuard Dashboard from Subreddit Mod Tools or the subreddit menu.
+- Configure Rules: Add your domain allowlist or blocklist in Audit Mode to safely verify matching behavior.
 - Enforce: Once satisfied with audit results, switch rules to Live mode to begin automated enforcement.
 - No complex regex configuration required. Full control stays in your native dashboard.*
 
@@ -64,13 +65,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.161 — 2026-09-17
+- Standard fleet synchronization and maintenance.
+
+0.0.161 — 2026-09-16
+- Fix: Subscribed to `onModAction` trigger stream (`approvelink` / `approvecomment`) to automatically detect moderator approvals directly on Reddit. Automatically registers approval in Redis (`markItemApproved`), seeds the approved domain baseline (`setApprovedDomains`), removes the item from the filtered tracking queue, and deletes the bot's warning comment.
+- Resilience: Hardened live post status check on `onPostUpdate` and `recheckFilteredPost` to ensure moderator-approved posts are never falsely re-filtered upon author edit unless brand new unapproved domains are introduced.
+- Fix: Resolved `ERR_INVALID_ARG_TYPE` in `addModNote` by ensuring resolved author usernames are passed directly to `executeAction` and guarded against undefined proto values.
+- Docs: Reorganized `README.md` to Option A (Visual-First & Feature-Forward) with `Quick Setup` immediately below `How It Works`.
+
 0.0.160 — 2026-09-16
-- Standard fleet synchronization and maintenance.
-
-0.0.157 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-0.0.156 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links

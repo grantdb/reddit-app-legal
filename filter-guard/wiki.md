@@ -51,10 +51,10 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install: Add Filter Guard to your subreddit through the Reddit App Directory.
-- Configure: Open GuardHub: FilterGuard Dashboard from Subreddit Mod Tools.
-- Create Gates: Define your threshold groups and test them in the Test tab.
-- Enforce: Activate your verified rule groups to start automated gating.
-- No complex YAML syntax required. Clean layered protection managed directly from your dashboard.*
+- Open Dashboard: Access the GuardHub: FilterGuard Dashboard from your Subreddit Mod Tools.
+- Configure Gates: Define your threshold groups and test them against candidate users in the Test tab.
+- Enforce: Activate your verified rule groups to start automated community gating.
+- No complex YAML syntax required. Clean layered protection managed directly from your native dashboard.*
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.

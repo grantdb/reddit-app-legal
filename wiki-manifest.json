@@ -11,7 +11,7 @@
   "chevron-lock": "f43c0f44d00645d3",
   "comment-guard": "8378b61608f8f420",
   "distrofeed-bot": "5980ac854d094f29",
-  "domain-guard": "e67cdc720f52f61f",
+  "domain-guard": "3c5b5118c2a17620",
   "duplicate-guard": "527129218fbf3575",
   "filter-guard": "1b66e68c8db083be",
   "flair-guard": "d2120cc330111da6",
@@ -43,6 +43,6 @@
   "verify-guard": "6facbfbbec587fcc",
   "wiki-sync-bot": "2ce96744b1804c67",
   "word-guard": "26096c014a301bc8",
-  "bot_knowledge": "4e1bb554bc847f66",
+  "bot_knowledge": "5f87b94722b0fe24",
   "sub-setup": "40c1106be6bd9130"
 }

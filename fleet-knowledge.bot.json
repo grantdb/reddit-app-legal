@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16T23:06:38.944Z",
+  "generatedAt": "2026-09-17T02:26:06.704Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -1164,8 +1164,8 @@
       ],
       "setupSteps": [
         "Install: Add Domain Guard to your subreddit through the Reddit App Directory.",
-        "Configure: Open GuardHub: DomainGuard Dashboard from Subreddit Mod Tools.",
-        "Create Rules: Add your domain allowlist or blocklist in Audit Mode to safely verify matching behavior.",
+        "Open Dashboard: Launch GuardHub: DomainGuard Dashboard from Subreddit Mod Tools or the subreddit menu.",
+        "Configure Rules: Add your domain allowlist or blocklist in Audit Mode to safely verify matching behavior.",
         "Enforce: Once satisfied with audit results, switch rules to Live mode to begin automated enforcement.",
         "No complex regex configuration required. Full control stays in your native dashboard.*"
       ],
@@ -1195,6 +1195,7 @@
         "PostUpdate",
         "CommentCreate",
         "CommentSubmit",
+        "ModAction",
         "AppInstall",
         "AppUpgrade"
       ],
@@ -1212,7 +1213,7 @@
         "troubleshooting": "Check the DomainGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-01"
+      "lastUpdated": "2026-09-17"
     },
     {
       "appId": "user-guard",
@@ -1297,10 +1298,10 @@
       ],
       "setupSteps": [
         "Install: Add Filter Guard to your subreddit through the Reddit App Directory.",
-        "Configure: Open GuardHub: FilterGuard Dashboard from Subreddit Mod Tools.",
-        "Create Gates: Define your threshold groups and test them in the Test tab.",
-        "Enforce: Activate your verified rule groups to start automated gating.",
-        "No complex YAML syntax required. Clean layered protection managed directly from your dashboard.*"
+        "Open Dashboard: Access the GuardHub: FilterGuard Dashboard from your Subreddit Mod Tools.",
+        "Configure Gates: Define your threshold groups and test them against candidate users in the Test tab.",
+        "Enforce: Activate your verified rule groups to start automated community gating.",
+        "No complex YAML syntax required. Clean layered protection managed directly from your native dashboard.*"
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -1342,7 +1343,7 @@
         "troubleshooting": "Check the FilterGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-09-17"
     },
     {
       "appId": "format-guard",
