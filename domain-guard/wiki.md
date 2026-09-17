@@ -1,7 +1,7 @@
 # DomainGuard
 
 Category: Security  
-Version: v0.0.161  
+Version: v0.0.162  
 Visibility: Public  
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
@@ -65,16 +65,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.161 — 2026-09-17
+0.0.162 — 2026-09-17
 - Standard fleet synchronization and maintenance.
 
-0.0.161 — 2026-09-16
-- Fix: Subscribed to `onModAction` trigger stream (`approvelink` / `approvecomment`) to automatically detect moderator approvals directly on Reddit. Automatically registers approval in Redis (`markItemApproved`), seeds the approved domain baseline (`setApprovedDomains`), removes the item from the filtered tracking queue, and deletes the bot's warning comment.
-- Resilience: Hardened live post status check on `onPostUpdate` and `recheckFilteredPost` to ensure moderator-approved posts are never falsely re-filtered upon author edit unless brand new unapproved domains are introduced.
-- Fix: Resolved `ERR_INVALID_ARG_TYPE` in `addModNote` by ensuring resolved author usernames are passed directly to `executeAction` and guarded against undefined proto values.
-- Docs: Reorganized `README.md` to Option A (Visual-First & Feature-Forward) with `Quick Setup` immediately below `How It Works`.
+0.0.162 — 2026-09-17
+- Fix: Resolved Rule Editor modal UI collisions in Reddit custom post webviews by tightening modal header/footer vertical padding and applying solid opaque backgrounds (`bg-slate-900`) with top drop-shadows to prevent scrolled text from showing underneath action buttons.
+- Fix: Resolved scroll controls overlapping option selector borders and checkboxes by adding `padding-right: 48px` to `.modal-body` and hiding the background page floating action button (`.mobile-scroll-fab-container`) when modals are open.
+- Fix: Resolved `targetId` resolution in `onModActionTrigger` by extracting `event.targetPost?.id || event.targetComment?.id || event.targetId` from Devvit Protobuf `ModAction` events so native moderator approvals are accurately captured.
 
-0.0.160 — 2026-09-16
+0.0.161 — 2026-09-17
 - Standard fleet synchronization and maintenance.
 
 ## Links
