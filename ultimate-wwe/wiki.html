@@ -1,0 +1,68 @@
+<h1>Ultimate WWE Hub</h1>
+
+<p>Category: Interactive<br>
+Version: v0.1.0<br>
+Visibility: Unlisted<br>
+Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.</p>
+
+<h2>Overview</h2>
+<p>Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.</p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Hashes (structured records & alias indices)</li>
+<li>Sorted Sets (time-series audit logs)</li>
+<li>Key patterns: node:http</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add Ultimate WWE Hub to your subreddit via the Reddit Developer portal or App Directory.</li>
+<li>Launch Thread: From your subreddit menu, select Create WWE Live Event Thread to deploy an official live thread.</li>
+<li>Customize / Lock: Open the post and use Mod Controls to adjust match stipulations or lock predictions at showtime.</li>
+<li>Score & Celebrate: Declare winners as the broadcast unfolds and click Score Event Results to crown community winners!</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.1.0 — 2026-09-15<br>
+Initial release of Ultimate WWE Hub for r/UltimateWWE.; Devvit 0.14+ Webview Custom Post engine (`wwe-event-live-thread`).; Reusable event mega-thread template for WWE PLEs, Raw, SmackDown, and NXT.; Match card scoreboard with championship indicators, match status, and live winner banners.; Fan prediction game allowing users to pick winners with automatic lock enforcement at bell time.; Redis-backed event leaderboard and cumulative all-time subreddit leaderboard using sorted sets.; Moderator tools for spawning threads, manually locking predictions, and scoring results.; Dedicated live-comments callout banner reminding fans to sort by "New / Live".</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/ultimate-wwe">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

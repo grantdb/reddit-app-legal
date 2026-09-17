@@ -1,0 +1,55 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/ultimate-wwe">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Ultimate WWE Hub 🏆</h1>
+<blockquote><p><strong>Transform standard WWE live discussion threads into high-engagement interactive match scoreboards and prediction battlegrounds.</strong></p></blockquote>
+<p>Ultimate WWE Hub powers interactive, multi-match live event mega-threads for r/UltimateWWE and wrestling communities. Each custom post is tied to a specific WWE event (PLEs, Raw, SmackDown, NXT) and features an event-specific match card scoreboard, fan prediction game, dual real-time leaderboards, and a live-comments-optimized experience.</p>
+<h3>⚡ Key Highlights</h3>
+<ul>
+<li><strong>Interactive Match Scoreboard</strong>: Live card tracking match stipulations, championship indicators, match progress, and official winner banners.</li>
+<li><strong>Fan Pick 'Em Game</strong>: Intuitive prediction ballots enabling community members to predict match outcomes before showtime with one-click locks.</li>
+<li><strong>Dual Redis Leaderboards</strong>: Live event standings combined with persistent cumulative all-time subreddit points.</li>
+<li><strong>Universal Mobile Scrolling</strong>: Engineered with zero-scroll-trap mobile navigation (`overscroll-behavior-y: auto`) for smooth Reddit feed browsing.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<h3>The 4-Step Lifecycle</h3>
+<p>1. <strong>Thread Deployment</strong>: A moderator selects <strong>Create WWE Live Event Thread</strong> from the subreddit menu. The app provisions an interactive post with pre-configured or custom event cards.</p>
+<p>2. <strong>Pre-Show Predictions</strong>: Before the opening bell, community members pick winners for every scheduled match. Picks are saved securely to Redis.</p>
+<p>3. <strong>Showtime Lock</strong>: When the event start time is reached (or when a moderator toggles the lock), predictions lock immediately across all clients.</p>
+<p>4. <strong>Live Scoring & Leaderboards</strong>: As matches conclude, moderators declare official winners. The scoring engine evaluates submitted ballots, awards points, and updates both event and cumulative subreddit leaderboards in real time.</p>
+<p>---</p>
+<h2>Quick Setup (60-Second Onboarding)</h2>
+<p>1. <strong>Install</strong>: Add <strong>Ultimate WWE Hub</strong> to your subreddit via the Reddit Developer portal or App Directory.</p>
+<p>2. <strong>Launch Thread</strong>: From your subreddit menu, select <strong>Create WWE Live Event Thread</strong> to deploy an official live thread.</p>
+<p>3. <strong>Customize / Lock</strong>: Open the post and use <strong>Mod Controls</strong> to adjust match stipulations or lock predictions at showtime.</p>
+<p>4. <strong>Score & Celebrate</strong>: Declare winners as the broadcast unfolds and click <strong>Score Event Results</strong> to crown community winners!</p>
+<p>---</p>
+<h2>Core Capabilities</h2>
+<ul>
+<li>🏆 <strong>Event Live Scoreboard</strong>: Full match cards with championship badges, match stipulations, participant details, real-time match statuses, and official winner declarations.</li>
+<li>🎯 <strong>Pick 'Em Prediction Game</strong>: Fans predict match winners directly inside the thread before showtime. Predictions automatically lock at bell time or on mod toggle.</li>
+<li>🥇 <strong>Dual Leaderboards</strong>:</li>
+<li><strong>Event Leaderboard</strong>: Top-ranked fans for the current live show.</li>
+<li><strong>All-Time Leaderboard</strong>: Cumulative leaderboard tracking points across every WWE event in the subreddit.</li>
+<li>💬 <strong>Live-Discussion Optimized</strong>: Prominent banner urging fans to sort comments by "New / Live" while the post maintains canonical scores and standings.</li>
+<li>🛠️ <strong>Reusable Mod Template</strong>: Standardized live mega-threads for any PLE, Raw, SmackDown, or NXT show.</li>
+</ul>
+<p>---</p>
+<h2>The Old Way vs. The Ultimate WWE Hub Way</h2>
+<p>---</p>
+<h2>Designed for Subreddit Moderators</h2>
+<ul>
+<li><strong>Moderator Authority</strong>: Moderators retain full control over match cards, lock timing, and official winner determinations.</li>
+<li><strong>Zero PII & Sandbox Storage</strong>: All predictions, match outcomes, and scores are processed exclusively inside Reddit's isolated, sandboxed Redis infrastructure without external third-party data collection.</li>
+</ul>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for fun on Reddit*</p>

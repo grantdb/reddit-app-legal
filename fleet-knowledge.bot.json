@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T05:58:33.760Z",
+  "generatedAt": "2026-09-17T06:23:44.082Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2836,6 +2836,69 @@
       },
       "status": "active",
       "lastUpdated": "2026-09-15"
+    },
+    {
+      "appId": "ultimate-wwe",
+      "slug": "ultimate-wwe",
+      "appName": "Ultimate WWE Hub",
+      "aliases": [
+        "ultimate-wwe",
+        "ultimate wwe hub",
+        "ultimatewwe",
+        "ultimate wwe"
+      ],
+      "summary": "Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.",
+      "keywords": [
+        "ultimate-wwe",
+        "ultimate wwe hub",
+        "interactive",
+        "ultimatewwe",
+        "ultimate wwe"
+      ],
+      "setupSteps": [
+        "Install: Add Ultimate WWE Hub to your subreddit via the Reddit Developer portal or App Directory.",
+        "Launch Thread: From your subreddit menu, select Create WWE Live Event Thread to deploy an official live thread.",
+        "Customize / Lock: Open the post and use Mod Controls to adjust match stipulations or lock predictions at showtime.",
+        "Score & Celebrate: Declare winners as the broadcast unfolds and click Score Event Results to crown community winners!"
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "AppInstall"
+      ],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/ultimate-wwe",
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/ultimate-wwe",
+        "github": "https://github.com/grantdb/ultimate-wwe",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Ultimate WWE Hub.",
+        "troubleshooting": "Check the Ultimate WWE Hub troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-09-17"
     }
   ]
 }
