@@ -1,7 +1,7 @@
 # ActionGuard
 
 Category: Moderation  
-Version: v0.0.28  
+Version: v0.0.29  
 Visibility: Unlisted  
 Summary: Professional action moderation engine.
 
@@ -30,7 +30,7 @@ Professional action moderation engine.
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- No custom app settings.
+- test_user: Dashboard (success, default: -). Dashboard
 
 ## Automation Capabilities
 - Submits Automated Comments: No — Does not submit automated comments.
@@ -60,13 +60,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.29 — 2026-09-18
+- Standard fleet synchronization and maintenance.
+
+0.0.29 — 2026-09-17
+- Feat: Applied fleet scrolling standard with canonical two-tier top bar header scrolling (◀ and ▶), 48px fine-tuned steps, continuous long-press, visible scrollbars, and active-tab auto-alignment.
+- UI: Added mobile floating scroll controls (▲ and ▼ 48px FABs) via `ScrollSidebar`.
+- UI: Added gutter-docked modal scroll controls in `RuleEditor` with `body.modal-open` viewport scroll locking.
+- Fix: Replaced nested scroll trap with `overscroll-y-auto` and full desktop/mobile high-contrast scrollbars.
+
 0.0.28 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-0.0.27 — 2026-09-14
-- Standard fleet synchronization and maintenance.
-
-0.0.26 — 2026-09-05
 - Standard fleet synchronization and maintenance.
 
 ## Links
