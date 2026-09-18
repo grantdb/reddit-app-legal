@@ -1,7 +1,7 @@
 <h1>RescueGuard</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.21<br>
+Version: v0.0.22<br>
 Visibility: Public<br>
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.</p>
 
@@ -71,11 +71,11 @@ Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddi
 </ul>
 
 <h2>Version History</h2>
-<p>0.0.21 — 2026-09-15<br>
+<p>0.0.22 — 2026-09-18<br>
 Standard fleet synchronization and maintenance.</p>
-<p>0.0.20 — 2026-09-14<br>
-Fix: Unlocked document-level mobile webview scrolling by removing root `overflow: hidden` on `html, body` and adding `touch-action: pan-y` and `-webkit-overflow-scrolling: touch`.; Fix: Converted `.app-container` from fixed-height scrollbox to flexible document container, restoring native inertial touch scrolling on iOS WKWebView and Android WebView.; Fix: Hardened `#settings-modal` with touch isolation (`modal-open` class on `body`) and safe dynamic viewport height constraints (`88dvh`).; Polish: Added mobile media queries with touch-friendly button targets (>= 40px) and active tap feedback.</p>
-<p>0.0.19 — 2026-09-05<br>
+<p>0.0.22 — 2026-09-18<br>
+Apply fleet scrolling standard & eliminate inline scroll traps:; Added button-based pagination for candidate cards (2 per page with ◀ Prev and Next ▶ controls) ensuring cards fit comfortably within fixed 512px tall viewport without unbounded vertical scrolling in the feed.; Added fleet-standard floating 48px page scroll controls (▲ and ▼) with 48px fine-tuned steps, 280ms/70ms continuous long-press interval scrolling, and dynamic boundary visibility.; Added modal gutter-docked 32px scroll controls (▲ and ▼) in Settings modal with `padding-right: 28px` clearance to prevent input collision.; Enforced modal viewport locking (`body.modal-open`) isolating scroll to modal body and hiding page-level FABs.; Added swipe-drag gesture guard on candidate cards (> 8px drag suppresses clicks) to prevent accidental clicks when swiping feed.; Fixed scrollbar color theme CSS variable from undefined `--color-success` to high-contrast `--accent-cyan`.</p>
+<p>0.0.21 — 2026-09-15<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
