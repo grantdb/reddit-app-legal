@@ -159,11 +159,6 @@
     "version": "0.0.14",
     "visibility": "unlisted"
   },
-  "link-guard": {
-    "name": "LinkGuard",
-    "version": "0.0.19",
-    "visibility": "public"
-  },
   "verify-guard": {
     "name": "VerifyGuard",
     "version": "0.0.8",
@@ -227,6 +222,11 @@
   "ultimate-wwe": {
     "name": "Ultimate WWE Hub",
     "version": "0.0.1",
+    "visibility": "unlisted"
+  },
+  "link-guard": {
+    "name": "LinkGuard",
+    "version": "0.0.20",
     "visibility": "unlisted"
   }
 }

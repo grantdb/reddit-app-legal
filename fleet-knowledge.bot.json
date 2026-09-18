@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T10:46:43.978Z",
+  "generatedAt": "2026-09-18T04:38:36.406Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -1894,7 +1894,7 @@
         "ModAction"
       ],
       "menuItems": [],
-      "settingsCount": 0,
+      "settingsCount": 1,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/action-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/action-guard",
@@ -1907,7 +1907,7 @@
         "troubleshooting": "Check the ActionGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-09-18"
     },
     {
       "appId": "audit-guard",
