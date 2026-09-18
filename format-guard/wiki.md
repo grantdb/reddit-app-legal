@@ -1,7 +1,7 @@
 # FormatGuard
 
 Category: Moderation  
-Version: v0.0.67  
+Version: v0.0.68  
 Visibility: Unlisted  
 Summary: Focused structure-first moderation engine for formatting, title-shape, and stylistic rules.
 
@@ -61,13 +61,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.68 — 2026-09-18
+- Standard fleet synchronization and maintenance.
+
+0.0.68 — 2026-09-17
+- Feat: Applied fleet scrolling standard with canonical two-tier top bar header scrolling (◀ and ▶), 48px fine-tuned steps, continuous long-press, visible scrollbars, and active-tab auto-alignment.
+- UI: Added mobile floating scroll controls (▲ and ▼ 48px FABs) via `ScrollSidebar`.
+- UI: Added gutter-docked modal scroll controls in `RuleEditor` with `body.modal-open` viewport scroll locking.
+- Fix: Replaced nested scroll trap with `overscroll-y-auto` and full desktop/mobile high-contrast scrollbars.
+
 0.0.67 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-0.0.66 — 2026-09-09
-- Standard fleet synchronization and maintenance.
-
-0.0.65 — 2026-09-05
 - Standard fleet synchronization and maintenance.
 
 ## Links
