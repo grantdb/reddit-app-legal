@@ -44,7 +44,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 - Key-Value Strings (deduplication & cooldown markers)
 - Sorted Sets (time-series audit logs)
-- Key patterns: node:http, node:events, comment_guard:dashboard_post_id
+- Key patterns: node:http, node:events, comment_guard:dashboard_post_id, comment_guard:creation_lock
 
 ## Setup and Usage
 - Install: Add Comment Guard to your subreddit through the Reddit App Directory.

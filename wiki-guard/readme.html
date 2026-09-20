@@ -1,0 +1,68 @@
+<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Wiki-Guard 🛡️</h1>
+<blockquote><p><strong>Mobile-first, full-fidelity subreddit wiki management and editing for Reddit moderators.</strong></p></blockquote>
+<p>Subreddit wiki pages are essential for community guidelines, FAQs, wikis, and resource indexes, but managing them on mobile devices or inside Reddit mobile apps has historically been difficult or impossible. <strong>Wiki-Guard</strong> provides a dedicated, mobile-optimized moderator portal for browsing, creating, editing, previewing, and configuring subreddit wiki pages directly from inline custom posts and mobile browsers.</p>
+<h3>⚡ Key Highlights</h3>
+<ul>
+<li><strong>Mobile-First Markdown Editor</strong>: Clean, distraction-free editing with full support for line breaks, indentation, and standard Reddit Markdown syntax.</li>
+<li><strong>Instant Client-Side Preview</strong>: Real-time sanitized Markdown preview with XSS protection and safe link validation.</li>
+<li><strong>Dual V1/V2 Wiki Compatibility</strong>: Intelligently resolves between modern Wiki V2 and legacy V1 systems with fallback and manual mode overrides.</li>
+<li><strong>Strict Server-Side Authorization</strong>: Every write and configuration operation is verified server-side against live moderator rosters.</li>
+<li><strong>Focused Scope</strong>: Dedicated solely to subreddit wiki pages. Intentionally contains zero AutoModerator tools, post queues, or unrelated mod functions.</li>
+</ul>
+<p>---</p>
+<h2>Core Features</h2>
+<ul>
+<li><strong>Zero-Friction Page Navigation</strong>: Quickly filter and locate nested wiki pages (e.g. `rules`, `faq`, `resources/setup`).</li>
+<li><strong>Preserved Source of Truth</strong>: The raw Markdown text is preserved verbatim without destructive HTML conversion or stripping.</li>
+<li><strong>Version Awareness</strong>: Automatically checks whether your subreddit supports Reddit's Wiki V2 platform, while supporting legacy V1 subreddits seamlessly.</li>
+<li><strong>Granular Page Settings</strong>: Manage whether pages are listed in the subreddit index and enforce subreddit or moderator-only permission levels.</li>
+</ul>
+<p>---</p>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/wiki-guard-flowchart.png">Logic Flowchart</a></p>
+<p>```</p>
+<p>[Moderator Menu] ──> [Portal Custom Post] ──> [Server Auth Guard]</p>
+<p>│</p>
+<p>┌──────────────────────────────┴──────────────────────────────┐</p>
+<p>▼                                                             ▼</p>
+<p>[Wiki Page Browser]                                            [Markdown Editor]</p>
+<p>• Search / Filter Slugs                                      • Raw Textarea Source</p>
+<p>• V1 / V2 Version Tags                                       • Dirty State Detection</p>
+<p>• Metadata Inspection                                        • Sanitized Live Preview</p>
+<p>│                                                             │</p>
+<p>└──────────────────────► [Reddit API] ◄───────────────────────┘</p>
+<p>• createWikiPage</p>
+<p>• updateWikiPage</p>
+<p>• updateWikiPageSettings</p>
+<p>```</p>
+<h3>The 4-Step Lifecycle</h3>
+<p>1. <strong>Launch Portal</strong>: The moderator triggers the `Wiki-Guard: Subreddit Wiki Editor` menu item from their subreddit, opening the dedicated custom post portal.</p>
+<p>2. <strong>Server-Side Verification</strong>: Wiki-Guard validates that the active user is an authorized moderator of the subreddit before displaying controls or accepting API requests.</p>
+<p>3. <strong>Browse & Edit</strong>: The moderator navigates existing wiki pages or initiates a new page, drafting content in a mobile-friendly editor with instant sanitized previewing.</p>
+<p>4. <strong>Direct Reddit Commit</strong>: Changes are committed directly to Reddit's official Wiki API with explicit revision reasons and version targeting.</p>
+<p>---</p>
+<h2>Quick Setup (60-Second Onboarding)</h2>
+<p>1. <strong>Install App</strong>: Install Wiki-Guard to your subreddit from the Reddit Developer portal.</p>
+<p>2. <strong>Open Portal</strong>: From your subreddit menu, select <strong>Wiki-Guard: Subreddit Wiki Editor</strong>.</p>
+<p>3. <strong>Browse Pages</strong>: View your community's active wiki pages, search existing paths, or tap <strong>Create New Page</strong>.</p>
+<p>4. <strong>Draft & Save</strong>: Edit Markdown content, verify using the <strong>Preview</strong> tab, and commit your changes instantly.</p>
+<p>---</p>
+<h2>The Old Way vs. The Wiki-Guard Way</h2>
+<p>---</p>
+<h2>Designed to Assist Moderators / Privacy & Ethics</h2>
+<ul>
+<li><strong>Moderator Authority</strong>: Wiki-Guard empowers human moderators. All edits, saves, and settings changes are performed explicitly by authenticated moderators.</li>
+<li><strong>Strict Scope Isolation</strong>: Wiki-Guard is a focused wiki editing tool. It does not read, edit, validate, deploy, or manage AutoModerator.</li>
+<li><strong>Zero PII & No HTTP Egress</strong>: Wiki-Guard operates with zero external network access, storing no personal user data or tracking credentials.</li>
+</ul>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>---</p>
+<h2>Legal</h2>
+<ul>
+<li><a href="TERMS.md">Terms of Service</a></li>
+<li><a href="PRIVACY.md">Privacy Policy</a></li>
+</ul>

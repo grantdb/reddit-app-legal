@@ -1,7 +1,7 @@
 # ActionGuard
 
 Category: Moderation  
-Version: v0.0.29  
+Version: v0.0.30  
 Visibility: Unlisted  
 Summary: Professional action moderation engine.
 
@@ -46,7 +46,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key-Value Strings (deduplication & cooldown markers)
 - Hashes (structured records & alias indices)
 - Sorted Sets (time-series audit logs)
-- Key patterns: node:http, node:events, action_guard:dashboard_post_id, action_guard:meta
+- Key patterns: node:http, node:events, action_guard:dashboard_post_id, action_guard:creation_lock
 
 ## Setup and Usage
 - Install: Add Action Guard to your subreddit through the Reddit App Directory.
@@ -60,6 +60,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.30 — 2026-09-20
+- Standard fleet synchronization and maintenance.
+
 0.0.29 — 2026-09-18
 - Standard fleet synchronization and maintenance.
 
@@ -68,9 +71,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - UI: Added mobile floating scroll controls (▲ and ▼ 48px FABs) via `ScrollSidebar`.
 - UI: Added gutter-docked modal scroll controls in `RuleEditor` with `body.modal-open` viewport scroll locking.
 - Fix: Replaced nested scroll trap with `overscroll-y-auto` and full desktop/mobile high-contrast scrollbars.
-
-0.0.28 — 2026-09-15
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/action-guard/TERMS.md)

@@ -1,0 +1,69 @@
+<h1>Wiki-Guard</h1>
+
+<p>Category: Moderation<br>
+Version: v0.1.0<br>
+Visibility: Unlisted<br>
+Summary: Mobile-friendly Reddit wiki editor for subreddit moderators.</p>
+
+<h2>Overview</h2>
+<p>Mobile-friendly Reddit wiki editor for subreddit moderators.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/wiki-guard-flowchart.png">View flowchart image</a></p>
+
+<h2>Key Features</h2>
+<ul>
+<li>Zero-Friction Page Navigation: Quickly filter and locate nested wiki pages (e.g. `rules`, `faq`, `resources/setup`).</li>
+<li>Preserved Source of Truth: The raw Markdown text is preserved verbatim without destructive HTML conversion or stripping.</li>
+<li>Version Awareness: Automatically checks whether your subreddit supports Reddit's Wiki V2 platform, while supporting legacy V1 subreddits seamlessly.</li>
+<li>Granular Page Settings: Manage whether pages are listed in the subreddit index and enforce subreddit or moderator-only permission levels.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: Yes — Automatically approves eligible content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Key patterns: node:http</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install App: Install Wiki-Guard to your subreddit from the Reddit Developer portal.</li>
+<li>Open Portal: From your subreddit menu, select Wiki-Guard: Subreddit Wiki Editor.</li>
+<li>Browse Pages: View your community's active wiki pages, search existing paths, or tap Create New Page.</li>
+<li>Draft & Save: Edit Markdown content, verify using the Preview tab, and commit your changes instantly.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/wiki-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/wiki-guard/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/wiki-guard">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-20T02:28:58.430Z",
+  "generatedAt": "2026-09-20T22:55:42.070Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2896,6 +2896,65 @@
       "replyTemplates": {
         "welcome": "Welcome to r/grantdb support! Here is reference information for Ultimate WWE Hub.",
         "troubleshooting": "Check the Ultimate WWE Hub troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-09-20"
+    },
+    {
+      "appId": "wiki-guard",
+      "slug": "wiki-guard",
+      "appName": "Wiki-Guard",
+      "aliases": [
+        "wiki-guard",
+        "wikiguard",
+        "wiki guard"
+      ],
+      "summary": "Mobile-friendly Reddit wiki editor for subreddit moderators.",
+      "keywords": [
+        "wiki-guard",
+        "moderation",
+        "wikiguard",
+        "wiki guard"
+      ],
+      "setupSteps": [
+        "Install App: Install Wiki-Guard to your subreddit from the Reddit Developer portal.",
+        "Open Portal: From your subreddit menu, select Wiki-Guard: Subreddit Wiki Editor.",
+        "Browse Pages: View your community's active wiki pages, search existing paths, or tap Create New Page.",
+        "Draft & Save: Edit Markdown content, verify using the Preview tab, and commit your changes instantly."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [],
+      "settingsCount": 0,
+      "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/wiki-guard",
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-guard",
+        "github": "https://github.com/grantdb/wiki-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/wiki-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/wiki-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Wiki-Guard.",
+        "troubleshooting": "Check the Wiki-Guard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
       "lastUpdated": "2026-09-20"
