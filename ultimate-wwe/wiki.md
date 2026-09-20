@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.1  
+Version: v0.0.2  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -45,15 +45,31 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install: Add Ultimate WWE Hub to your subreddit via the Reddit Developer portal or App Directory.
-- Launch Thread: From your subreddit menu, select Create WWE Live Event Thread to deploy an official live thread.
-- Customize / Lock: Open the post and use Mod Controls to adjust match stipulations or lock predictions at showtime.
-- Score & Celebrate: Declare winners as the broadcast unfolds and click Score Event Results to crown community winners!
+- Launch Pinned Hub Posts: From your subreddit menu (`...`), deploy the Championship Belts & Leaderboard Post and Upcoming Matches & Schedule Post as pinned community anchors.
+- Deploy Live Event Thread: On event night, select Create WWE Live Event Thread to launch the show mega-thread.
+- Score & Crown Champions: Declare winners as the broadcast unfolds and click Score Event & Defend Belts to crown champions and update community rankings!
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.2 — 2026-09-20
+- Standard fleet synchronization and maintenance.
+- All notable changes to the Ultimate WWE Hub application will be documented in this file.
+
+0.2.0 — 2026-09-20
+- Expanded Ultimate WWE Hub into a multi-post ecosystem with 3 dedicated custom post types:
+- Live Event & Prediction Mega-Threads
+- Community Championship Belts Trophy Case & All-Time Leaderboards
+- Upcoming Matches & PLE Schedule Hub
+- Implemented Community Championship Belts Engine featuring World Heavyweight, Intercontinental, PLE Cup, 24/7 Hardcore, and Women's World Championship titles with automated title defense and transfers on event scoring.
+- Added Live PLE Countdown Timer with millisecond precision and weekly broadcast schedule guide (Raw on Netflix, SmackDown on USA, NXT on CW).
+- Added Community Hype Voting Meter for upcoming fight cards and shows.
+- Added cross-post navigation hub banner connecting all community posts.
+- Implemented canonical horizontal top-bar navigation scrolling (◀ and ▶) with 48px fine-tuned steps, continuous long-press acceleration, and visible high-contrast scrollbars.
+- Added moderator controls to manually award championship belts to community members.
+
 0.1.0 — 2026-09-17
 - Initial release of Ultimate WWE Hub for r/UltimateWWE.
 - Devvit 0.14+ Webview Custom Post engine (`wwe-event-live-thread`).
