@@ -1,7 +1,7 @@
 # CommentGuard
 
 Category: Moderation  
-Version: v0.0.54  
+Version: v0.0.55  
 Visibility: Unlisted  
 Summary: Hardened code-request moderation engine with weighted scoring and Shadow DOM stability.
 
@@ -58,6 +58,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.55 — 2026-09-20
+- Standard fleet synchronization and maintenance.
+
 0.0.54 — 2026-09-18
 - Standard fleet synchronization and maintenance.
 
@@ -65,9 +68,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Feat: Applied fleet scrolling standard with canonical two-tier top bar header scrolling (◀ and ▶), 48px fine-tuned steps, continuous long-press, visible scrollbars, and active-tab auto-alignment.
 - UI: Added mobile floating scroll controls (▲ and ▼ 48px FABs) via `ScrollSidebar`.
 - Fix: Replaced nested scroll trap with `overscroll-y-auto` and full desktop/mobile high-contrast scrollbars.
-
-0.0.53 — 2026-09-15
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/comment-guard/TERMS.md)
