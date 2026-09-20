@@ -90,3 +90,6 @@ Please include the app name, what you expected, what happened, and any error tex
 
 - [Terms of Service](TERMS.md)
 - [Privacy Policy](PRIVACY.md)
+
+---
+*Built for Reddit's moderator community. Part of the GuardHub family.*
