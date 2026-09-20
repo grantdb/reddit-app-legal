@@ -1,7 +1,7 @@
 # QueueGuard
 
 Category: Moderation  
-Version: v0.0.44  
+Version: v0.0.45  
 Visibility: Unlisted  
 Summary: Queue triage and decision-support tool. Surfaces duplicate context, account signals, and prior handling history before moderators approve or remove queued posts.
 
@@ -58,13 +58,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.45 — 2026-09-20
+- Standard fleet synchronization and maintenance.
+
 0.0.44 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 0.0.43 — 2026-09-14
-- Standard fleet synchronization and maintenance.
-
-0.0.42 — 2026-09-05
 - Standard fleet synchronization and maintenance.
 
 ## Links
