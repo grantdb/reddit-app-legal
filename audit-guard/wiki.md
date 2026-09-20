@@ -1,7 +1,7 @@
 # AuditGuard
 
 Category: Moderation  
-Version: v0.0.19  
+Version: v0.0.20  
 Visibility: Unlisted  
 Summary: Professional audit log moderation engine.
 
@@ -57,13 +57,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.20 — 2026-09-20
+- Standard fleet synchronization and maintenance.
+
 0.0.19 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 0.0.18 — 2026-09-14
-- Standard fleet synchronization and maintenance.
-
-0.0.17 — 2026-09-05
 - Standard fleet synchronization and maintenance.
 
 ## Links
