@@ -146,7 +146,7 @@
   },
   "action-guard": {
     "name": "ActionGuard",
-    "version": "0.0.29",
+    "version": "0.0.30",
     "visibility": "unlisted"
   },
   "audit-guard": {
@@ -227,6 +227,11 @@
   "link-guard": {
     "name": "LinkGuard",
     "version": "0.0.20",
+    "visibility": "unlisted"
+  },
+  "wiki-guard": {
+    "name": "Wiki-Guard",
+    "version": "0.1.0",
     "visibility": "unlisted"
   }
 }
