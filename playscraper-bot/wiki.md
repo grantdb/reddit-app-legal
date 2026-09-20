@@ -1,7 +1,7 @@
 # Playscraper Bot
 
 Category: Metadata  
-Version: v1.0.143  
+Version: v1.0.144  
 Visibility: Public  
 Summary: AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with configurable delay. Security-hardened moderator gates.
 
@@ -49,7 +49,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
 - Attaches Removal Notes: No — Does not attach removal notes.
 - Approves Content: No — Does not approve content.
-- Removes or Filters Content: No — Does not remove or filter content.
+- Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
 - Dispatches Modmail Alerts: No — Does not send modmail notifications.
 - Updates User or Post Flair: No — Does not update flair.
 
@@ -73,13 +73,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.144 — 2026-09-20
+- Standard fleet synchronization and maintenance.
+
+1.0.144 — 2026-09-20
+- Fix manual scan menu trigger rejecting verified moderators with "Unauthorized: Moderator only" by resolving the active subreddit via context.reddit.getCurrentSubreddit().
+- Scope moderator status caching to subreddit ID with a 15-minute TTL.
+- Add structured entry and exit lifecycle logging to manual trigger menu action.
+
 1.0.143 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-1.0.142 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-1.0.141 — 2026-09-05
 - Standard fleet synchronization and maintenance.
 
 ## Links
