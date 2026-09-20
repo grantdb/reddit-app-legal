@@ -1,7 +1,7 @@
 # RescueGuard
 
 Category: Moderation  
-Version: v0.0.22  
+Version: v0.0.23  
 Visibility: Public  
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.
 
@@ -63,8 +63,21 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.22 — 2026-09-18
+0.0.23 — 2026-09-20
 - Standard fleet synchronization and maintenance.
+
+0.0.23 — 2026-09-18
+- Align with canonical GuardHub Control Center Architecture & Universal Scrolling Standard:
+- Upgraded to canonical Two-Tier Header Layout:
+- Tier 1: Brand "G" badge, Title "GuardHub: RescueGuard", Subtitle "COMMUNITY POST DISCOVERY - V0.0.23", and live pulse status badge.
+- Tier 2: Flanked horizontal tab navigation with ◀ and ▶ circular scroll buttons, 48px fine-tuned step, continuous long-press interval repeat, and visible high-contrast scrollbars.
+- Reconstructed 4-Tab Information Architecture:
+- ` Overview`: 4 Hero StatCards (Review Candidates, Lookback Window, Deduplication Guard, Spotlight Action) + Discovery Engine status banner with quick scan shortcuts.
+- ` Review Queue`: Candidate cards with score/author badges, snippet, direct permalink, and actions (Spotlight, Skip, Dismiss) with swipe-drag gesture guard (>8px drag guard).
+- ` Spotlight History`: Subreddit-isolated audit log of previously spotlighted, skipped, or dismissed submissions with action metadata, timestamps, and moderator attribution.
+- `️ Settings`: Dedicated full-page inline configuration console (batch size, min age, lookback, deduplication strategy, spotlight action, auto-detected flairs, custom flair text/UUID, comment template) eliminating awkward mobile modal traps.
+- Added fleet-standard floating 48px page scroll FABs (▲ and ▼) with 48px fine-tuned steps and continuous long-press interval repeat.
+- Enforced canonical document root scroller (`overscroll-behavior-y: auto`, `touch-action: pan-y`).
 
 0.0.22 — 2026-09-18
 - Apply fleet scrolling standard & eliminate inline scroll traps:
@@ -74,9 +87,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Enforced modal viewport locking (`body.modal-open`) isolating scroll to modal body and hiding page-level FABs.
 - Added swipe-drag gesture guard on candidate cards (> 8px drag suppresses clicks) to prevent accidental clicks when swiping feed.
 - Fixed scrollbar color theme CSS variable from undefined `--color-success` to high-contrast `--accent-cyan`.
-
-0.0.21 — 2026-09-15
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/rescue-guard/TERMS.md)
