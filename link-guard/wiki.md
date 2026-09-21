@@ -1,7 +1,7 @@
 # LinkGuard
 
 Category: Security  
-Version: v0.0.21  
+Version: v0.0.22  
 Visibility: Unlisted  
 Summary: Strict URL policy enforcement, shortener filter, and link moderation engine for Reddit.
 
@@ -63,17 +63,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.22 — 2026-09-21
+- Standard fleet synchronization and maintenance.
+
 0.0.21 — 2026-09-21
 - Standard fleet synchronization and maintenance.
 
 0.0.20 — 2026-09-17
 - Standard fleet synchronization and maintenance.
-
-0.0.20 — 2026-09-17
-- Fix: Connected webview App.tsx to backend server endpoints (`/api/get-dashboard`, `/api/save-rule`, `/api/delete-rule`, `/api/save-settings`) replacing static mock state.
-- Fix: Ensured rule creation, edits, deletion, and toggle persist directly to Redis and reload dynamically.
-- Fix: Persisted Execution Mode (Live vs Dry Run) and Master App Switch via `/api/save-settings`.
-- UI: Applied universal scrolling standard with `html, body { overflow-y: auto; overscroll-behavior-y: auto; touch-action: pan-y; }`, high-contrast scrollbars, modal viewport scroll locks, and iOS 16px input zoom guard.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/link-guard/TERMS.md)
