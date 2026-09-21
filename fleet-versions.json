@@ -226,7 +226,7 @@
   },
   "link-guard": {
     "name": "LinkGuard",
-    "version": "0.0.21",
+    "version": "0.0.22",
     "visibility": "unlisted"
   },
   "wiki-guard": {
