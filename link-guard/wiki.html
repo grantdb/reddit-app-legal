@@ -1,7 +1,7 @@
 <h1>LinkGuard</h1>
 
 <p>Category: Security<br>
-Version: v0.0.20<br>
+Version: v0.0.21<br>
 Visibility: Unlisted<br>
 Summary: Strict URL policy enforcement, shortener filter, and link moderation engine for Reddit.</p>
 
@@ -65,12 +65,12 @@ Summary: Strict URL policy enforcement, shortener filter, and link moderation en
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.21 — 2026-09-21<br>
+Standard fleet synchronization and maintenance.</p>
 <p>0.0.20 — 2026-09-17<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.20 — 2026-09-17<br>
 Fix: Connected webview App.tsx to backend server endpoints (`/api/get-dashboard`, `/api/save-rule`, `/api/delete-rule`, `/api/save-settings`) replacing static mock state.; Fix: Ensured rule creation, edits, deletion, and toggle persist directly to Redis and reload dynamically.; Fix: Persisted Execution Mode (Live vs Dry Run) and Master App Switch via `/api/save-settings`.; UI: Applied universal scrolling standard with `html, body { overflow-y: auto; overscroll-behavior-y: auto; touch-action: pan-y; }`, high-contrast scrollbars, modal viewport scroll locks, and iOS 16px input zoom guard.</p>
-<p>0.0.19 — 2026-09-17<br>
-Fix: Migrated dashboard creation to the Queue-Free Self-Heal pattern (`reddit.approve` + `lock` + `ignoreReports`) preventing "Something went wrong" toast crashes on desktop.; Fix: Added `location: "post"` alongside `location: "subreddit"` in `devvit.json` for full menu coverage.; Fix: Added fallback endpoint alias for `/create-dashboard-post` and safe subreddit name resolution.; Configuration: Added `Devvit.configure({ redditAPI: true, redis: true })` in server initialization.; Scoping: Scoped Redis dashboard post and lock keys by `subredditId`.</p>
 
 <h2>Links</h2>
 <ul>
