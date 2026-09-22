@@ -233,5 +233,10 @@
     "name": "Wiki-Guard",
     "version": "0.0.5",
     "visibility": "unlisted"
+  },
+  "mod360pro": {
+    "name": "Mod360 Pro",
+    "version": "0.0.12",
+    "visibility": "unlisted"
   }
 }
