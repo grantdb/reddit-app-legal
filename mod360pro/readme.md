@@ -80,8 +80,4 @@ Need assistance or want to suggest a feature?
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/PRIVACY.md)
 
 ---
-
-<sub>Built with ❤️ by GrantDB for the Reddit Developer Platform</sub>
-
----
 *Built for Reddit's moderator community.*
