@@ -236,7 +236,7 @@
   },
   "automod-easy": {
     "name": "AutoMod Easy",
-    "version": "0.0.148",
-    "visibility": "unlisted"
+    "version": "0.0.149",
+    "visibility": "public"
   }
 }

@@ -11,6 +11,22 @@ Summary: Unified 360-degree moderation engine and waterfall pipeline consolidati
 <h2>Flowchart</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod360pro-flowchart.png">View flowchart image</a></p>
 
+<h2>Key Features</h2>
+<ul>
+<li>Suspended Account Pre-Filter: Sub-10ms fast gate rejecting suspended, shadowbanned, or deleted accounts before other checks run.</li>
+<li>Timed Quarantine State Machine: Configure blocked domains and suspended accounts to filter into temporary quarantine for a set duration (15m, 30m, 1h, 2h, 4h, 8h, 24h, 48h) before permanent removal.</li>
+<li>Verification Tiers & Email Gates: Require approved author flair templates, flair badges, or verified Reddit email addresses.</li>
+<li>Canonical Guide Suggestions: Automatically match submissions against community guide topics and post helpful guide links on clean posts.</li>
+<li>Reputation Safety Score & Mod Menu Actions: 0–100 reputation score calculated from account age, karma, and status with in-feed menu actions (`Check Reputation`, `Quick Approve`, `Quick Remove`).</li>
+<li>False-Positive Rescue Hub: Triage hub in dashboard capturing edge-case removals for instant 1-click restoration.</li>
+<li>Two-Way Wiki Policy Sync: Synchronize active content rules, domain policies, and user gates directly to and from `r/subreddit/wiki/mod360_rules`.</li>
+<li>Disaster Recovery Backup: 1-click snapshot dispatching the entire encrypted configuration to mod team modmail for permanent backup.</li>
+<li>Sliding-Window Frequency Limiter: Redis sliding-window counters preventing burst spam, rapid submissions, and cross-posting floods.</li>
+<li>Domain & Shortener Guard: Built-in blocklists for URL shorteners, chat invites, tracking parameters, and unapproved domains.</li>
+<li>Regex & Keyword Engine: Multi-pattern keyword groups with word-boundary matching, case-sensitivity controls, and instant test simulation.</li>
+<li>High-Contrast Responsive Dashboard: Native webview control center with theme switching, fullscreen mode, 48px stepped tab navigation, zero raw emojis, and mobile auto-zoom protection.</li>
+</ul>
+
 <h2>Permissions Used</h2>
 <ul>
 <li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
@@ -49,7 +65,7 @@ Summary: Unified 360-degree moderation engine and waterfall pipeline consolidati
 <h2>Setup and Usage</h2>
 <ul>
 <li>Install: Add Mod360 Pro to your community via the Reddit App Directory.</li>
-<li>Open Dashboard: Click GuardHub: Mod360 Pro Dashboard in Subreddit Mod Tools.</li>
+<li>Open Dashboard: Click Mod360 Pro Dashboard in Subreddit Mod Tools.</li>
 <li>Review Shadow Mode: Review the pre-configured rules in Shadow Mode to verify accuracy against live community traffic.</li>
 <li>Activate Live Enforcement: Once verified, toggle the operational mode to Live Enforcement in the Overview tab.</li>
 <li>All settings, rules, wiki sync, and audit logs are managed directly within your native dashboard.*</li>
