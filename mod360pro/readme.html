@@ -1,13 +1,13 @@
 <blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod360pro">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>Mod360 Pro</h1>
 <blockquote><p><strong>The ultimate 360-degree Reddit moderation control center delivering an enterprise-grade, lightning-fast waterfall evaluation engine.</strong></p></blockquote>
-<p>Mod360 Pro unifies keyword filters, domain policies, sliding-window rate limits, duplicate detection, user eligibility gates, timed quarantine state machines, canonical guide suggestions, false-positive rescue triage, two-way wiki sync, and disaster recovery snapshots into a single atomic moderation pipeline. End fragmented moderation scripts, eliminate competing bot sticky comments, and govern community safety from an intuitive, high-contrast dashboard.</p>
+<p>Mod360 Pro unifies keyword filters, domain policies, sliding-window rate limits, duplicate detection, user eligibility gates, timed quarantine state machines, topic guide suggestions, false-positive rescue triage, two-way wiki sync, and disaster recovery snapshots into a single atomic moderation pipeline. End fragmented moderation scripts, eliminate competing bot sticky comments, and govern community safety from an intuitive, high-contrast dashboard.</p>
 <h3>⚡ Key Highlights</h3>
 <ul>
 <li><strong>Atomic Two-Phase Waterfall Engine</strong>: Sub-10ms pre-AutoMod Redis fast-path (`onPostSubmit`) for spam floods, followed by deep multi-module content evaluation (`onPostCreate`).</li>
 <li><strong>Timed Quarantine State Machine</strong>: Filter blocked domains and unverified accounts into a timed quarantine with configurable auto-removal countdowns and 1-click mod release.</li>
 <li><strong>Single Consolidated Moderation Notice</strong>: No more competing bot comments. Violations across all modules accumulate into exactly one structured, professional notice.</li>
-<li><strong>Modular Safety Architecture</strong>: Native modules for account status filtering, flair & email verification tiers, canonical wiki guide suggestions, 0–100 safety score calculation, false-positive rescue triage, two-way wiki sync, and modmail disaster recovery snapshots.</li>
+<li><strong>Modular Safety Architecture</strong>: Native modules for account status filtering, flair & email verification tiers, topic wiki guide suggestions, 0–100 safety score calculation, false-positive rescue triage, two-way wiki sync, and modmail disaster recovery snapshots.</li>
 <li><strong>In-Feed Mod Quick Actions</strong>: Instant context menu tools (`Check Reputation`, `Quick Approve`, `Quick Remove`, and `Export Backup to Modmail`) directly on community posts and comments.</li>
 <li><strong>Mutual-Exclusion Atomic Verdict Lock</strong>: `SET NX` concurrency locks eliminate double-removal race conditions and container collisions across all trigger events.</li>
 <li><strong>Zero-Risk Shadow Testing Mode</strong>: Safely run Mod360 Pro in background shadow mode with automated divergence tracking before switching to live enforcement.</li>
@@ -19,7 +19,7 @@
 <p>1. <strong>Pre-Filter (onPostSubmit)</strong>: New submissions hit fast Redis-only gates (< 10ms) to check suspended/shadowbanned authors, sliding-window rate limits, duplicate hash fingerprints, and verification gates.</p>
 <p>2. <strong>Deep Content Evaluation (onPostCreate)</strong>: Surviving posts undergo modular inspection for domain allow/blocklists, prohibited keywords, title formatting, and composite rules.</p>
 <p>3. <strong>Timed Quarantine Triage</strong>: Configurable rules route suspicious links or edge-case users into a temporary quarantine state with automated expiration timers.</p>
-<p>4. <strong>Canonical Guide Suggestions</strong>: Clean, non-violating submissions are evaluated against community topic keywords to suggest authoritative guides.</p>
+<p>4. <strong>Topic Guide Suggestions</strong>: Clean, non-violating submissions are evaluated against community topic keywords to suggest helpful wiki guides and FAQs.</p>
 <p>5. <strong>Atomic Verdict & Single Sticky Notice</strong>: When violations occur, Mod360 Pro locks the verdict atomically, logs candidate details for false-positive rescue, and formats a single clean markdown notice.</p>
 <p>6. <strong>Auto-Flair & Mod Actions</strong>: Clean submissions receive automated flair matching, while removed content is automatically locked and logged to the unified audit trail.</p>
 <p>---</p>
@@ -35,7 +35,7 @@
 <li><strong>Suspended Account Pre-Filter</strong>: Sub-10ms fast gate rejecting suspended, shadowbanned, or deleted accounts before other checks run.</li>
 <li><strong>Timed Quarantine State Machine</strong>: Configure blocked domains and suspended accounts to filter into temporary quarantine for a set duration (15m, 30m, 1h, 2h, 4h, 8h, 24h, 48h) before permanent removal.</li>
 <li><strong>Verification Tiers & Email Gates</strong>: Require approved author flair templates, flair badges, or verified Reddit email addresses.</li>
-<li><strong>Canonical Guide Suggestions</strong>: Automatically match submissions against community guide topics and post helpful guide links on clean posts.</li>
+<li><strong>Topic Guide Suggestions</strong>: Automatically match submissions against community guide topics and post helpful guide links on clean posts.</li>
 <li><strong>Reputation Safety Score & Mod Menu Actions</strong>: 0–100 reputation score calculated from account age, karma, and status with in-feed menu actions (`Check Reputation`, `Quick Approve`, `Quick Remove`).</li>
 <li><strong>False-Positive Rescue Hub</strong>: Triage hub in dashboard capturing edge-case removals for instant 1-click restoration.</li>
 <li><strong>Two-Way Wiki Policy Sync</strong>: Synchronize active content rules, domain policies, and user gates directly to and from `r/subreddit/wiki/mod360_rules`.</li>

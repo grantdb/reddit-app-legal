@@ -15,7 +15,7 @@ Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ mo
 - Suspended Account Pre-Filter: Sub-10ms fast gate rejecting suspended, shadowbanned, or deleted accounts before other checks run.
 - Timed Quarantine State Machine: Configure blocked domains and suspended accounts to filter into temporary quarantine for a set duration (15m, 30m, 1h, 2h, 4h, 8h, 24h, 48h) before permanent removal.
 - Verification Tiers & Email Gates: Require approved author flair templates, flair badges, or verified Reddit email addresses.
-- Canonical Guide Suggestions: Automatically match submissions against community guide topics and post helpful guide links on clean posts.
+- Topic Guide Suggestions: Automatically match submissions against community guide topics and post helpful guide links on clean posts.
 - Reputation Safety Score & Mod Menu Actions: 0–100 reputation score calculated from account age, karma, and status with in-feed menu actions (`Check Reputation`, `Quick Approve`, `Quick Remove`).
 - False-Positive Rescue Hub: Triage hub in dashboard capturing edge-case removals for instant 1-click restoration.
 - Two-Way Wiki Policy Sync: Synchronize active content rules, domain policies, and user gates directly to and from `r/subreddit/wiki/mod360_rules`.
