@@ -1,7 +1,7 @@
 <h1>GimmeCode Guard</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.42<br>
+Version: v0.0.43<br>
 Visibility: Unlisted<br>
 Summary: Detects low-effort give me code requests</p>
 
@@ -39,8 +39,8 @@ Summary: Detects low-effort give me code requests</p>
 <li>useDefaultPhrases: Use Default Phrases (e.g. "code please", "send source") (boolean, default: true). Use Default Phrases (e.g. "code please", "send source")</li>
 <li>customPhrases: Custom Phrases (comma-separated) (string, default: ). Custom Phrases (comma-separated)</li>
 <li>warnThreshold: Tier 1: Warning Auto-Reply Threshold - Cumulative Points (0 to disable) (number, default: 30). Posts an automated polite warning reply to the user once their cumulative low-effort score reaches this value (default: 30).</li>
-<li>reportThreshold: Tier 2: Filter to Needs Review Threshold - Cumulative Points (0 to disable) (number, default: 60). Filters comment from public view and queues it into Modqueue for review once cumulative score reaches this value (default: 60).</li>
-<li>removeThreshold: Tier 3: Removal + Modmail Alert Threshold - Cumulative Points (0 to disable) (number, default: 90). Removes comment and dispatches an instant Modmail alert to the mod team once cumulative score reaches this value (default: 90).</li>
+<li>reportThreshold: Tier 2: Mod Queue Report Threshold (Needs Review) - Cumulative Points (0 to disable) (number, default: 60). Reports comment to Modqueue for moderator review once cumulative score reaches this value (default: 60). Comment remains visible to the public until reviewed.</li>
+<li>removeThreshold: Tier 3: Removal + Modmail Alert Threshold - Cumulative Points (0 to disable) (number, default: 90). Removes comment from public view and dispatches an archivable Modmail alert once cumulative score reaches this value (default: 90).</li>
 <li>warningTemplate: Warning Auto-Reply Message (string, default: Hi! It looks like you're asking for code or links. Please take a moment to leave some feedback or appreciation (e.g. 'Wow, looks great!') for the creator when making requests.). Warning Auto-Reply Message</li>
 </ul>
 
@@ -77,11 +77,11 @@ Summary: Detects low-effort give me code requests</p>
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.43 — 2026-09-23<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.43 — 2026-09-23<br>
+Decouple Tier 2 report from automated comment removal so comments are queued to Modqueue (Needs Review) without premature deletion.; Standardize all Modmail deliveries (Tier 3 alerts and Audit Summary reports) to use archivable Modmail Inbox (`createModInboxConversation`).; Clarify Tier 2 and Tier 3 setting labels and help text in settings schema.</p>
 <p>0.0.42 — 2026-09-21<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.41 — 2026-09-20<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.40 — 2026-09-15<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>

@@ -1,7 +1,7 @@
 # GimmeCode Guard
 
 Category: Moderation  
-Version: v0.0.42  
+Version: v0.0.43  
 Visibility: Unlisted  
 Summary: Detects low-effort give me code requests
 
@@ -34,8 +34,8 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - useDefaultPhrases: Use Default Phrases (e.g. "code please", "send source") (boolean, default: true). Use Default Phrases (e.g. "code please", "send source")
 - customPhrases: Custom Phrases (comma-separated) (string, default: ). Custom Phrases (comma-separated)
 - warnThreshold: Tier 1: Warning Auto-Reply Threshold - Cumulative Points (0 to disable) (number, default: 30). Posts an automated polite warning reply to the user once their cumulative low-effort score reaches this value (default: 30).
-- reportThreshold: Tier 2: Filter to Needs Review Threshold - Cumulative Points (0 to disable) (number, default: 60). Filters comment from public view and queues it into Modqueue for review once cumulative score reaches this value (default: 60).
-- removeThreshold: Tier 3: Removal + Modmail Alert Threshold - Cumulative Points (0 to disable) (number, default: 90). Removes comment and dispatches an instant Modmail alert to the mod team once cumulative score reaches this value (default: 90).
+- reportThreshold: Tier 2: Mod Queue Report Threshold (Needs Review) - Cumulative Points (0 to disable) (number, default: 60). Reports comment to Modqueue for moderator review once cumulative score reaches this value (default: 60). Comment remains visible to the public until reviewed.
+- removeThreshold: Tier 3: Removal + Modmail Alert Threshold - Cumulative Points (0 to disable) (number, default: 90). Removes comment from public view and dispatches an archivable Modmail alert once cumulative score reaches this value (default: 90).
 - warningTemplate: Warning Auto-Reply Message (string, default: Hi! It looks like you're asking for code or links. Please take a moment to leave some feedback or appreciation (e.g. 'Wow, looks great!') for the creator when making requests.). Warning Auto-Reply Message
 
 ## Automation Capabilities
@@ -64,13 +64,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.43 — 2026-09-23
+- Standard fleet synchronization and maintenance.
+
+0.0.43 — 2026-09-23
+- Decouple Tier 2 report from automated comment removal so comments are queued to Modqueue (Needs Review) without premature deletion.
+- Standardize all Modmail deliveries (Tier 3 alerts and Audit Summary reports) to use archivable Modmail Inbox (`createModInboxConversation`).
+- Clarify Tier 2 and Tier 3 setting labels and help text in settings schema.
+
 0.0.42 — 2026-09-21
-- Standard fleet synchronization and maintenance.
-
-0.0.41 — 2026-09-20
-- Standard fleet synchronization and maintenance.
-
-0.0.40 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
