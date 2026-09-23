@@ -114,11 +114,6 @@
     "version": "0.0.55",
     "visibility": "unlisted"
   },
-  "automod-easy": {
-    "name": "AutoMod Easy",
-    "version": "0.0.147",
-    "visibility": "public"
-  },
   "pinned-menuboard": {
     "name": "Pinned Menuboard",
     "version": "0.0.79",
@@ -237,6 +232,11 @@
   "mod360pro": {
     "name": "Mod360 Pro",
     "version": "0.0.23",
+    "visibility": "unlisted"
+  },
+  "automod-easy": {
+    "name": "AutoMod Easy",
+    "version": "0.0.148",
     "visibility": "unlisted"
   }
 }
