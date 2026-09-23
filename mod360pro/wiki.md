@@ -12,11 +12,7 @@ Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ mo
 [View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod360pro-flowchart.png)
 
 ## Key Features
-- Unified Frequency Limiter: Sliding-window rate limiter preventing submission floods, burst spam, and rapid-fire cross-posting.
-- Domain & Shortener Guard: Built-in protection against link shorteners, affiliate redirects, and unapproved external domains.
-- Regex & Keyword Engine: Multi-pattern keyword groups with word-boundary matching, case-sensitivity controls, and instant test simulation.
-- Automated Shadow Parity Queue: Automatically logs discrepancies between legacy moderation actions and Mod360 Pro predictions for zero-risk migration.
-- Fleet Standard Responsive Dashboard: Native, inline webview control center with smooth 48px stepped tab scrolling and mobile auto-zoom protection.
+- Not documented yet.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
@@ -41,9 +37,9 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
 - Attaches Removal Notes: No — Does not attach removal notes.
-- Approves Content: No — Does not approve content.
+- Approves Content: Yes — Approves content.
 - Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
-- Dispatches Modmail Alerts: No — Does not send modmail notifications.
+- Dispatches Modmail Alerts: Yes — Sends modmail notifications.
 - Updates User or Post Flair: Yes — Updates post or user flair based on rules.
 
 ## Data Storage
@@ -57,7 +53,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Open Dashboard: Click GuardHub: Mod360 Pro Dashboard in Subreddit Mod Tools.
 - Review Shadow Mode: Review the pre-configured rules in Shadow Mode to verify accuracy against live community traffic.
 - Activate Live Enforcement: Once verified, toggle the operational mode to Live Enforcement in the Overview tab.
-- All settings, rules, and audit logs are managed directly within your native dashboard.*
+- All settings, rules, wiki sync, and audit logs are managed directly within your native dashboard.*
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.

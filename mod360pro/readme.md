@@ -2,13 +2,15 @@
 
 # Mod360 Pro
 
-> **The ultimate 360-degree Reddit moderation powerhouse consolidating 14+ moderation tools into a single, lightning-fast waterfall engine.**
+> **The ultimate 360-degree Reddit moderation powerhouse consolidating 14+ moderation tools — including suspended-remove, verify-guard, archive-guard, queue-guard, rescue-guard, wiki-guard, and mod-snapshot — into a single, lightning-fast waterfall engine.**
 
-Mod360 Pro unifies keyword filters, domain policies, rate limits, duplicate detection, user eligibility gates, auto-flairing, and AI spam inspection into a coordinated, atomic moderation pipeline. Eliminate container duplication, end multi-bot sticky comment spam, and control your entire community protection from a sleek glassmorphic dashboard.
+Mod360 Pro unifies keyword filters, domain policies, rate limits, duplicate detection, user eligibility & verification gates, canonical guide clustering, false-positive rescue triage, two-way wiki sync, and disaster recovery snapshots into a coordinated, atomic moderation pipeline. Eliminate container duplication, end multi-bot sticky comment spam, and control your entire community protection from a sleek glassmorphic dashboard.
 
 ### ⚡ Key Highlights
-- **Atomic Two-Phase Waterfall Engine**: Sub-50ms pre-AutoMod Redis fast-path (`onPostSubmit`) for spam floods, followed by deep multi-module content evaluation (`onPostCreate`).
+- **Atomic Two-Phase Waterfall Engine**: Sub-10ms pre-AutoMod Redis fast-path (`onPostSubmit`) for spam floods, followed by deep multi-module content evaluation (`onPostCreate`).
 - **Single Consolidated Moderation Notice**: No more competing bot comments. Violations across all modules accumulate into exactly one structured, professional notice.
+- **7 Consolidated Moderation Powerhouses**: Built-in gates for suspended account pre-filtering, flair & email verification tiers, canonical wiki guide suggestions, 0–100 safety score calculation, false-positive rescue triage, two-way wiki sync, and modmail disaster recovery snapshots.
+- **In-Feed Mod Quick Actions**: Instant context menu tools (`Check Reputation`, `Quick Approve`, `Quick Remove`, and `Export Backup to Modmail`) directly on community posts and comments.
 - **Mutual-Exclusion Atomic Verdict Lock**: `SET NX` concurrency locks eliminate double-removal race conditions and container collisions across all trigger events.
 - **Zero-Risk Shadow Testing Mode**: Safely run Mod360 Pro in background shadow mode with automated divergence tracking before switching to live enforcement.
 
@@ -20,10 +22,10 @@ Mod360 Pro unifies keyword filters, domain policies, rate limits, duplicate dete
 
 ### The 5-Step Lifecycle
 
-1. **Pre-Filter (onPostSubmit)**: New submissions hit fast Redis-only gates (< 50ms) to check suspended authors, sliding-window rate limits, duplicate hash fingerprints, and karma/age eligibility.
+1. **Pre-Filter (onPostSubmit)**: New submissions hit fast Redis-only gates (< 10ms) to check suspended/shadowbanned authors (`suspended-remove`), sliding-window rate limits, duplicate hash fingerprints, and verification gates (`verify-guard`).
 2. **Deep Content Evaluation (onPostCreate)**: Surviving posts undergo modular inspection for domain allow/blocklists, prohibited keywords, title formatting, and composite rules.
-3. **Asynchronous AI Inspection**: Content requiring deep semantic analysis is scheduled with zero delay for background Gemini evaluation without blocking the trigger handler.
-4. **Atomic Verdict & Single Sticky Notice**: When violations occur, Mod360 Pro locks the verdict atomically and formats a single, clean markdown notice with clear community guidelines.
+3. **Canonical Guide Suggestions**: Clean, non-violating submissions are evaluated against community topic keywords to suggest authoritative guides (`archive-guard`).
+4. **Atomic Verdict & Single Sticky Notice**: When violations occur, Mod360 Pro locks the verdict atomically, logs candidate details for false-positive rescue (`rescue-guard`), and formats a single clean markdown notice.
 5. **Auto-Flair & Mod Actions**: Clean submissions receive automated flair matching, while removed content is automatically locked and logged to the unified audit trail.
 
 ---
@@ -35,17 +37,23 @@ Mod360 Pro unifies keyword filters, domain policies, rate limits, duplicate dete
 3. **Review Shadow Mode**: Review the pre-configured rules in Shadow Mode to verify accuracy against live community traffic.
 4. **Activate Live Enforcement**: Once verified, toggle the operational mode to **Live Enforcement** in the Overview tab.
 
-*All settings, rules, and audit logs are managed directly within your native dashboard.*
+*All settings, rules, wiki sync, and audit logs are managed directly within your native dashboard.*
 
 ---
 
-## Core Features
+## Core Capabilities & Consolidated Powerhouses
 
-- **Unified Frequency Limiter**: Sliding-window rate limiter preventing submission floods, burst spam, and rapid-fire cross-posting.
-- **Domain & Shortener Guard**: Built-in protection against link shorteners, affiliate redirects, and unapproved external domains.
+- **Suspended Account Pre-Filter (`suspended-remove`)**: Sub-10ms fast gate rejecting suspended, shadowbanned, or deleted accounts before other checks run.
+- **Verification Tiers & Email Gates (`verify-guard`)**: Require approved author flair templates, flair badges, or verified Reddit email addresses.
+- **Canonical Guide Suggestions (`archive-guard`)**: Automatically match submissions against community guide topics and post helpful guide links on clean posts.
+- **Reputation Safety Score & Mod Menu Actions (`queue-guard`)**: 0–100 reputation score calculated from account age, karma, and status with in-feed menu actions (`Check Reputation`, `Quick Approve`, `Quick Remove`).
+- **False-Positive Rescue Hub (`rescue-guard`)**: Triage hub in dashboard capturing edge-case removals for instant 1-click restoration.
+- **Two-Way Wiki Policy Sync (`wiki-guard`)**: Synchronize active content rules, domain policies, and user gates directly to and from `r/subreddit/wiki/mod360_rules`.
+- **Disaster Recovery Backup (`mod-snapshot`)**: 1-click snapshot dispatching the entire encrypted configuration to mod team modmail for permanent backup.
+- **Sliding-Window Frequency Limiter**: Redis sliding-window counters preventing burst spam, rapid submissions, and cross-posting floods.
+- **Domain & Shortener Guard**: Built-in blocklists for URL shorteners, chat invites, tracking parameters, and unapproved domains.
 - **Regex & Keyword Engine**: Multi-pattern keyword groups with word-boundary matching, case-sensitivity controls, and instant test simulation.
-- **Automated Shadow Parity Queue**: Automatically logs discrepancies between legacy moderation actions and Mod360 Pro predictions for zero-risk migration.
-- **Fleet Standard Responsive Dashboard**: Native, inline webview control center with smooth 48px stepped tab scrolling and mobile auto-zoom protection.
+- **Fleet Standard Responsive Dashboard**: Native webview control center with theme switching (☀️/🌙), fullscreen mode (⛶/🗗), 48px stepped tab navigation, and mobile auto-zoom protection.
 
 ---
 
@@ -55,8 +63,9 @@ Mod360 Pro unifies keyword filters, domain policies, rate limits, duplicate dete
 | :--- | :--- |
 | 10–15 separate apps spinning up redundant containers per post | **Single container, unified pipeline** with 93% less resource overhead |
 | 2–3 different bots posting competing sticky comments on removed posts | **Exactly one consolidated notice** detailing all rule violations clearly |
-| Multiple fragmented settings panels across a dozen different apps | **One centralized glassmorphic control center** with 7 organized tabs |
-| Untraceable race conditions and double-removals in mod log | **Atomic `SET NX` locks** guaranteeing deterministic, single-owner execution |
+| Multiple fragmented settings panels across a dozen different apps | **One centralized glassmorphic control center** with 10 organized tabs |
+| Manual, untraceable false-positive recoveries across separate queues | **Integrated Rescue Hub & 0–100 Reputation Safety Score** |
+| Fragile local settings lost on app uninstall or reinstall | **Automated Two-Way Wiki Sync & Modmail Disaster Backups** |
 
 ---
 

@@ -11,15 +11,6 @@ Summary: Unified 360-degree moderation engine and waterfall pipeline consolidati
 <h2>Flowchart</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod360pro-flowchart.png">View flowchart image</a></p>
 
-<h2>Key Features</h2>
-<ul>
-<li>Unified Frequency Limiter: Sliding-window rate limiter preventing submission floods, burst spam, and rapid-fire cross-posting.</li>
-<li>Domain & Shortener Guard: Built-in protection against link shorteners, affiliate redirects, and unapproved external domains.</li>
-<li>Regex & Keyword Engine: Multi-pattern keyword groups with word-boundary matching, case-sensitivity controls, and instant test simulation.</li>
-<li>Automated Shadow Parity Queue: Automatically logs discrepancies between legacy moderation actions and Mod360 Pro predictions for zero-risk migration.</li>
-<li>Fleet Standard Responsive Dashboard: Native, inline webview control center with smooth 48px stepped tab scrolling and mobile auto-zoom protection.</li>
-</ul>
-
 <h2>Permissions Used</h2>
 <ul>
 <li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
@@ -42,9 +33,9 @@ Summary: Unified 360-degree moderation engine and waterfall pipeline consolidati
 <ul>
 <li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
 <li>Attaches Removal Notes: No — Does not attach removal notes.</li>
-<li>Approves Content: No — Does not approve content.</li>
+<li>Approves Content: Yes — Automatically approves eligible content.</li>
 <li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
-<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Dispatches Modmail Alerts: Yes — Sends notifications or summaries to modmail.</li>
 <li>Updates User or Post Flair: Yes — Updates post or user flair based on rules.</li>
 </ul>
 
@@ -61,7 +52,7 @@ Summary: Unified 360-degree moderation engine and waterfall pipeline consolidati
 <li>Open Dashboard: Click GuardHub: Mod360 Pro Dashboard in Subreddit Mod Tools.</li>
 <li>Review Shadow Mode: Review the pre-configured rules in Shadow Mode to verify accuracy against live community traffic.</li>
 <li>Activate Live Enforcement: Once verified, toggle the operational mode to Live Enforcement in the Overview tab.</li>
-<li>All settings, rules, and audit logs are managed directly within your native dashboard.*</li>
+<li>All settings, rules, wiki sync, and audit logs are managed directly within your native dashboard.*</li>
 </ul>
 
 <h2>Troubleshooting</h2>

@@ -1,11 +1,13 @@
 <blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod360pro">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>Mod360 Pro</h1>
-<blockquote><p><strong>The ultimate 360-degree Reddit moderation powerhouse consolidating 14+ moderation tools into a single, lightning-fast waterfall engine.</strong></p></blockquote>
-<p>Mod360 Pro unifies keyword filters, domain policies, rate limits, duplicate detection, user eligibility gates, auto-flairing, and AI spam inspection into a coordinated, atomic moderation pipeline. Eliminate container duplication, end multi-bot sticky comment spam, and control your entire community protection from a sleek glassmorphic dashboard.</p>
+<blockquote><p><strong>The ultimate 360-degree Reddit moderation powerhouse consolidating 14+ moderation tools — including suspended-remove, verify-guard, archive-guard, queue-guard, rescue-guard, wiki-guard, and mod-snapshot — into a single, lightning-fast waterfall engine.</strong></p></blockquote>
+<p>Mod360 Pro unifies keyword filters, domain policies, rate limits, duplicate detection, user eligibility & verification gates, canonical guide clustering, false-positive rescue triage, two-way wiki sync, and disaster recovery snapshots into a coordinated, atomic moderation pipeline. Eliminate container duplication, end multi-bot sticky comment spam, and control your entire community protection from a sleek glassmorphic dashboard.</p>
 <h3>⚡ Key Highlights</h3>
 <ul>
-<li><strong>Atomic Two-Phase Waterfall Engine</strong>: Sub-50ms pre-AutoMod Redis fast-path (`onPostSubmit`) for spam floods, followed by deep multi-module content evaluation (`onPostCreate`).</li>
+<li><strong>Atomic Two-Phase Waterfall Engine</strong>: Sub-10ms pre-AutoMod Redis fast-path (`onPostSubmit`) for spam floods, followed by deep multi-module content evaluation (`onPostCreate`).</li>
 <li><strong>Single Consolidated Moderation Notice</strong>: No more competing bot comments. Violations across all modules accumulate into exactly one structured, professional notice.</li>
+<li><strong>7 Consolidated Moderation Powerhouses</strong>: Built-in gates for suspended account pre-filtering, flair & email verification tiers, canonical wiki guide suggestions, 0–100 safety score calculation, false-positive rescue triage, two-way wiki sync, and modmail disaster recovery snapshots.</li>
+<li><strong>In-Feed Mod Quick Actions</strong>: Instant context menu tools (`Check Reputation`, `Quick Approve`, `Quick Remove`, and `Export Backup to Modmail`) directly on community posts and comments.</li>
 <li><strong>Mutual-Exclusion Atomic Verdict Lock</strong>: `SET NX` concurrency locks eliminate double-removal race conditions and container collisions across all trigger events.</li>
 <li><strong>Zero-Risk Shadow Testing Mode</strong>: Safely run Mod360 Pro in background shadow mode with automated divergence tracking before switching to live enforcement.</li>
 </ul>
@@ -13,10 +15,10 @@
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod360pro-flowchart.png">Logic Flowchart</a></p>
 <h3>The 5-Step Lifecycle</h3>
-<p>1. <strong>Pre-Filter (onPostSubmit)</strong>: New submissions hit fast Redis-only gates (< 50ms) to check suspended authors, sliding-window rate limits, duplicate hash fingerprints, and karma/age eligibility.</p>
+<p>1. <strong>Pre-Filter (onPostSubmit)</strong>: New submissions hit fast Redis-only gates (< 10ms) to check suspended/shadowbanned authors (`suspended-remove`), sliding-window rate limits, duplicate hash fingerprints, and verification gates (`verify-guard`).</p>
 <p>2. <strong>Deep Content Evaluation (onPostCreate)</strong>: Surviving posts undergo modular inspection for domain allow/blocklists, prohibited keywords, title formatting, and composite rules.</p>
-<p>3. <strong>Asynchronous AI Inspection</strong>: Content requiring deep semantic analysis is scheduled with zero delay for background Gemini evaluation without blocking the trigger handler.</p>
-<p>4. <strong>Atomic Verdict & Single Sticky Notice</strong>: When violations occur, Mod360 Pro locks the verdict atomically and formats a single, clean markdown notice with clear community guidelines.</p>
+<p>3. <strong>Canonical Guide Suggestions</strong>: Clean, non-violating submissions are evaluated against community topic keywords to suggest authoritative guides (`archive-guard`).</p>
+<p>4. <strong>Atomic Verdict & Single Sticky Notice</strong>: When violations occur, Mod360 Pro locks the verdict atomically, logs candidate details for false-positive rescue (`rescue-guard`), and formats a single clean markdown notice.</p>
 <p>5. <strong>Auto-Flair & Mod Actions</strong>: Clean submissions receive automated flair matching, while removed content is automatically locked and logged to the unified audit trail.</p>
 <p>---</p>
 <h2>Quick Setup (60-Second Onboarding)</h2>
@@ -24,15 +26,21 @@
 <p>2. <strong>Open Dashboard</strong>: Click <strong>GuardHub: Mod360 Pro Dashboard</strong> in Subreddit Mod Tools.</p>
 <p>3. <strong>Review Shadow Mode</strong>: Review the pre-configured rules in Shadow Mode to verify accuracy against live community traffic.</p>
 <p>4. <strong>Activate Live Enforcement</strong>: Once verified, toggle the operational mode to <strong>Live Enforcement</strong> in the Overview tab.</p>
-<p>*All settings, rules, and audit logs are managed directly within your native dashboard.*</p>
+<p>*All settings, rules, wiki sync, and audit logs are managed directly within your native dashboard.*</p>
 <p>---</p>
-<h2>Core Features</h2>
+<h2>Core Capabilities & Consolidated Powerhouses</h2>
 <ul>
-<li><strong>Unified Frequency Limiter</strong>: Sliding-window rate limiter preventing submission floods, burst spam, and rapid-fire cross-posting.</li>
-<li><strong>Domain & Shortener Guard</strong>: Built-in protection against link shorteners, affiliate redirects, and unapproved external domains.</li>
+<li><strong>Suspended Account Pre-Filter (`suspended-remove`)</strong>: Sub-10ms fast gate rejecting suspended, shadowbanned, or deleted accounts before other checks run.</li>
+<li><strong>Verification Tiers & Email Gates (`verify-guard`)</strong>: Require approved author flair templates, flair badges, or verified Reddit email addresses.</li>
+<li><strong>Canonical Guide Suggestions (`archive-guard`)</strong>: Automatically match submissions against community guide topics and post helpful guide links on clean posts.</li>
+<li><strong>Reputation Safety Score & Mod Menu Actions (`queue-guard`)</strong>: 0–100 reputation score calculated from account age, karma, and status with in-feed menu actions (`Check Reputation`, `Quick Approve`, `Quick Remove`).</li>
+<li><strong>False-Positive Rescue Hub (`rescue-guard`)</strong>: Triage hub in dashboard capturing edge-case removals for instant 1-click restoration.</li>
+<li><strong>Two-Way Wiki Policy Sync (`wiki-guard`)</strong>: Synchronize active content rules, domain policies, and user gates directly to and from `r/subreddit/wiki/mod360_rules`.</li>
+<li><strong>Disaster Recovery Backup (`mod-snapshot`)</strong>: 1-click snapshot dispatching the entire encrypted configuration to mod team modmail for permanent backup.</li>
+<li><strong>Sliding-Window Frequency Limiter</strong>: Redis sliding-window counters preventing burst spam, rapid submissions, and cross-posting floods.</li>
+<li><strong>Domain & Shortener Guard</strong>: Built-in blocklists for URL shorteners, chat invites, tracking parameters, and unapproved domains.</li>
 <li><strong>Regex & Keyword Engine</strong>: Multi-pattern keyword groups with word-boundary matching, case-sensitivity controls, and instant test simulation.</li>
-<li><strong>Automated Shadow Parity Queue</strong>: Automatically logs discrepancies between legacy moderation actions and Mod360 Pro predictions for zero-risk migration.</li>
-<li><strong>Fleet Standard Responsive Dashboard</strong>: Native, inline webview control center with smooth 48px stepped tab scrolling and mobile auto-zoom protection.</li>
+<li><strong>Fleet Standard Responsive Dashboard</strong>: Native webview control center with theme switching (☀️/🌙), fullscreen mode (⛶/🗗), 48px stepped tab navigation, and mobile auto-zoom protection.</li>
 </ul>
 <p>---</p>
 <h2>The Old Way vs. The Mod360 Pro Way</h2>
