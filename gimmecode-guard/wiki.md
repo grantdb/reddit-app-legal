@@ -1,7 +1,7 @@
 # GimmeCode Guard
 
 Category: Moderation  
-Version: v0.0.43  
+Version: v0.0.44  
 Visibility: Unlisted  
 Summary: Detects low-effort give me code requests
 
@@ -64,6 +64,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.44 — 2026-09-24
+- Standard fleet synchronization and maintenance.
+
 0.0.43 — 2026-09-23
 - Standard fleet synchronization and maintenance.
 
@@ -71,9 +74,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Decouple Tier 2 report from automated comment removal so comments are queued to Modqueue (Needs Review) without premature deletion.
 - Standardize all Modmail deliveries (Tier 3 alerts and Audit Summary reports) to use archivable Modmail Inbox (`createModInboxConversation`).
 - Clarify Tier 2 and Tier 3 setting labels and help text in settings schema.
-
-0.0.42 — 2026-09-21
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/TERMS.md)
