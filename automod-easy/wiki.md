@@ -1,7 +1,7 @@
 # AutoMod Easy
 
 Category: Moderation  
-Version: v0.0.149  
+Version: v0.0.150  
 Visibility: Public  
 Summary: No-code visual rule builder and testing studio for AutoModerator.
 
@@ -57,13 +57,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.150 — 2026-09-24
+- Standard fleet synchronization and maintenance.
+
 0.0.149 — 2026-09-23
 - Standard fleet synchronization and maintenance.
 
 0.0.148 — 2026-09-23
-- Standard fleet synchronization and maintenance.
-
-0.0.147 — 2026-09-21
 - Standard fleet synchronization and maintenance.
 
 ## Links
