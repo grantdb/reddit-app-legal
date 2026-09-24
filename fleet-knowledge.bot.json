@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-23T21:36:57.443Z",
+  "generatedAt": "2026-09-24T03:13:14.284Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2974,11 +2974,10 @@
         "moderation"
       ],
       "setupSteps": [
-        "Install: Add Mod360 Pro to your community via the Reddit App Directory.",
-        "Open Dashboard: Click Mod360 Pro Dashboard in Subreddit Mod Tools.",
-        "Review Shadow Mode: Review the pre-configured rules in Shadow Mode to verify accuracy against live community traffic.",
-        "Activate Live Enforcement: Once verified, toggle the operational mode to Live Enforcement in the Overview tab.",
-        "All settings, rules, wiki sync, and audit logs are managed directly within your native dashboard.*"
+        "Install: Add Mod360 Pro to your subreddit from the Reddit App Directory.",
+        "Open Control Center: Navigate to Mod Tools > Mod360 Pro Dashboard.",
+        "Verify Settings in Shadow Mode: Test rules and run simulations using the in-dashboard test benches.",
+        "Switch to Live Enforcement: Toggle operational status to Live in the Overview tab."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -3020,7 +3019,7 @@
         "troubleshooting": "Check the Mod360 Pro troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-23"
+      "lastUpdated": "2026-09-24"
     }
   ]
 }
