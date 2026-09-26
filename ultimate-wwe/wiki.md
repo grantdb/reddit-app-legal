@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.8  
+Version: v0.0.9  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -54,17 +54,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.8 — 2026-09-26
+0.0.9 — 2026-09-26
 - Standard fleet synchronization and maintenance.
 
-0.0.8 — 2026-09-26
-- Resolve custom post loading failure by adding canonical entry: default and textFallback to all submitCustomPost endpoints.
-- Update PLE calendar to active late 2026 slate: WWE Bad Blood (Oct 3, 2026), Crown Jewel (Nov 7, 2026), and Survivor Series: WarGames (Nov 28, 2026) with automated Redis schedule migration.
-- Add defensive null guards and error boundaries across renderUpcomingSchedule and startCountdownTimer.
-- Isolate hypeVotes per-user state from shared Redis post storage.
-- Align devvit.json entrypoint configuration with single canonical default webview.
+0.0.9 — 2026-09-26
+- Removed top pinned community hub cross-navigation banner to eliminate sandbox popup failures and blank pages.
+- Streamlined post layout to start directly with the event brand header and canonical fleet navigation tab bar.
+- Removed footer Terms and Privacy external links for clean, private subreddit in-webview operation.
+- Eliminated redundant hub banner styles, click listeners, and active state synchronizers.
 
-0.0.7 — 2026-09-26
+0.0.8 — 2026-09-26
 - Standard fleet synchronization and maintenance.
 
 ## Links

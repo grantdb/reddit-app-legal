@@ -17,7 +17,7 @@ All three post types share synchronized Redis state across the subreddit so poin
 - **Fan Pick 'Em Game**: Intuitive prediction ballots enabling community members to predict match outcomes before showtime with one-click locks.
 - **Championship Belts Trophy Case**: Automated belt defense and transfers (World Heavyweight Title to all-time #1, PLE Cup to top event scorer) with complete title reign histories.
 - **PLE Countdown & Broadcast Guide**: Real-time live countdown timer to the next major event alongside weekly TV show schedules and community hype voting.
-- **Cross-Post Navigation Hub**: Seamless banner links connecting fans directly between the live show thread, trophy case, and upcoming schedule.
+- **Unified Section Navigation**: Smooth tab navigation allowing fans to instantly explore the live match card, pick 'em game, championship trophy case, and PLE schedule within any hub post.
 - **Universal Mobile Scrolling**: Engineered with zero-scroll-trap mobile navigation (`overscroll-behavior-y: auto`) and 48px fine-tuned horizontal tab scrolling.
 
 ---
