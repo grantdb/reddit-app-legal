@@ -1,6 +1,6 @@
-> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/ultimate-wwe)
+> **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/ultimate-wwe)
 
-# Ultimate WWE Hub 🏆
+# Ultimate WWE Hub
 
 > **Transform standard WWE live discussion threads into high-engagement interactive match scoreboards, championship battlegrounds, and PLE schedule hubs.**
 
@@ -11,7 +11,7 @@ Ultimate WWE Hub powers a synchronized multi-post ecosystem for r/UltimateWWE an
 
 All three post types share synchronized Redis state across the subreddit so points scored in any live event immediately update championship belt holders, reign counters, and leaderboards.
 
-### ⚡ Key Highlights
+### Key Highlights
 - **Multi-Post Architecture**: 3 dedicated custom post types provisioned directly from the subreddit moderator menu (`...`).
 - **Interactive Match Scoreboard**: Live card tracking match stipulations, championship indicators, match progress, and official winner banners.
 - **Fan Pick 'Em Game**: Intuitive prediction ballots enabling community members to predict match outcomes before showtime with one-click locks.
@@ -43,23 +43,23 @@ All three post types share synchronized Redis state across the subreddit so poin
 
 ## Core Capabilities
 
-- 🏆 **Event Live Scoreboard**: Full match cards with championship badges, match stipulations, participant details, real-time match statuses, and official winner declarations.
-- 🎯 **Pick 'Em Prediction Game**: Fans predict match winners directly inside the thread before showtime. Predictions automatically lock at bell time or on mod toggle.
-- 👑 **Championship Belts Trophy Case**:
+- **Event Live Scoreboard**: Full match cards with championship badges, match stipulations, participant details, real-time match statuses, and official winner declarations.
+- **Pick 'Em Prediction Game**: Fans predict match winners directly inside the thread before showtime. Predictions automatically lock at bell time or on mod toggle.
+- **Championship Belts Trophy Case**:
   - **WWE World Heavyweight Title**: Held by the #1 all-time points leader in the subreddit.
   - **Intercontinental Title**: Awarded to the current season/month workhorse predictor.
   - **PLE Main Event Cup**: Awarded live to tonight's highest-scoring fan ballot.
   - **24/7 Hardcore Community Title**: Defended across weekly shows and television threads.
   - **Complete Title History**: Track every champion, reign length (days), and successful defenses.
-- 📅 **Upcoming Schedule & Live PLE Countdown**:
+- **Upcoming Schedule & Live PLE Countdown**:
   - Precision countdown clock (Days, Hours, Minutes, Seconds) to the next major PLE.
   - Broadcast schedules for Monday Night Raw (Netflix), Friday Night SmackDown (USA), and WWE NXT (The CW).
   - Community hype meter voting.
-- 🥇 **Dual Leaderboards**:
+- **Dual Leaderboards**:
   - **Event Leaderboard**: Top-ranked fans for the current live show.
   - **All-Time Leaderboard**: Cumulative leaderboard tracking points across every WWE event in the subreddit.
-- 🔗 **Cross-Post Community Hub**: Pinned shortcuts linking fans across all 3 WWE posts.
-- 💬 **Live-Discussion Optimized**: Prominent banner urging fans to sort comments by "New / Live".
+- **Cross-Post Community Hub**: Pinned shortcuts linking fans across all 3 WWE posts.
+- **Live-Discussion Optimized**: Prominent banner urging fans to sort comments by "New / Live".
 
 ---
 
