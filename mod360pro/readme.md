@@ -1,4 +1,4 @@
-> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod360pro)
+> **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod360pro)
 
 # Mod360 Pro
 
@@ -60,12 +60,12 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
 - **Multi-Group Keyword & Regex Engine**: Case-insensitive matching, word boundaries, and customizable match thresholds with built-in test simulators.
 - **Author Verification Tiers**: Restrict posting privileges based on verified email requirements, subreddit flair templates, or minimum karma milestones.
 
-### ⏱️ Timed Quarantine State Machine
+### Timed Quarantine State Machine
 - **Configurable Countdown Windows**: Hold flagged items for 15m, 30m, 1h, 2h, 4h, 8h, 24h, or 48h.
 - **Auto-Expiration Handling**: Unreviewed items in quarantine automatically expire to permanent removal once the timer concludes.
 - **1-Click Mod Release**: Release and approve quarantined items directly from the mod dashboard or feed action menu.
 
-### 📊 In-Feed Moderator Tools & Reputation Score
+### In-Feed Moderator Tools & Reputation Score
 - **0–100 Community Safety Score**: Calculated from author age, karma ratios, email verification, and community post history.
 - **Native Post & Comment Menu Actions**:
   - `Check Reputation`: Displays comprehensive trust breakdown and violation count.
@@ -73,7 +73,7 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
   - `Quick Remove`: Removes post with optional preset removal reason.
   - `Export Backup to Modmail`: Dispatches full encrypted config snapshot to modmail.
 
-### 🔄 Wiki Sync & Disaster Recovery
+### Wiki Sync & Disaster Recovery
 - **Two-Way Wiki Synchronization**: Edit your rules in `r/subreddit/wiki/mod360_rules` or in the visual dashboard; changes sync bi-directionally.
 - **Encrypted Modmail Snapshots**: Export complete configuration snapshots directly to Subreddit Modmail for permanent, tamper-proof archival.
 - **Zero-Risk Shadow Mode**: Run new rules in passive shadow mode with audit logging before switching them to active live enforcement.
