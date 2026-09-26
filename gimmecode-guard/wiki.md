@@ -1,7 +1,7 @@
 # GimmeCode Guard
 
 Category: Moderation  
-Version: v0.0.44  
+Version: v0.0.45  
 Visibility: Unlisted  
 Summary: Detects low-effort give me code requests
 
@@ -20,8 +20,8 @@ Detects low-effort give me code requests
 
 ## Triggers and Activation
 ### Menu Actions
-- GimmeCode: Check User History: View user strikes and flagged request history (Location: comment)
-- GimmeCode Guard: View audit logs, manage user databases, and view settings (Location: subreddit)
+- CommentSubmit: Delivered by Reddit event router to endpoint /internal/trigger/comment-submit.
+- CommentDelete: Delivered by Reddit event router to endpoint /internal/trigger/comment-delete.
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
@@ -29,14 +29,7 @@ Detects low-effort give me code requests
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- exemptModsAndApproved: Exempt Moderators and Approved Users (-5 points) (boolean, default: true). Exempt Moderators and Approved Users (-5 points)
-- exemptPostAuthor: Exempt Submission Author (OP) in their own thread (boolean, default: true). When enabled, the author of the post will never be scored or flagged when commenting in their own submission.
-- useDefaultPhrases: Use Default Phrases (e.g. "code please", "send source") (boolean, default: true). Use Default Phrases (e.g. "code please", "send source")
-- customPhrases: Custom Phrases (comma-separated) (string, default: ). Custom Phrases (comma-separated)
-- warnThreshold: Tier 1: Warning Auto-Reply Threshold - Cumulative Points (0 to disable) (number, default: 30). Posts an automated polite warning reply to the user once their cumulative low-effort score reaches this value (default: 30).
-- reportThreshold: Tier 2: Mod Queue Report Threshold (Needs Review) - Cumulative Points (0 to disable) (number, default: 60). Reports comment to Modqueue for moderator review once cumulative score reaches this value (default: 60). Comment remains visible to the public until reviewed.
-- removeThreshold: Tier 3: Removal + Modmail Alert Threshold - Cumulative Points (0 to disable) (number, default: 90). Removes comment from public view and dispatches an archivable Modmail alert once cumulative score reaches this value (default: 90).
-- warningTemplate: Warning Auto-Reply Message (string, default: Hi! It looks like you're asking for code or links. Please take a moment to leave some feedback or appreciation (e.g. 'Wow, looks great!') for the creator when making requests.). Warning Auto-Reply Message
+- No custom app settings.
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
@@ -51,29 +44,27 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 - Key-Value Strings (deduplication & cooldown markers)
 - Sorted Sets (time-series audit logs)
+- Key patterns: node:http, gimmecode_guard:dashboard_post_id, gimmecode_guard:creation_lock
 
 ## Setup and Usage
-- Install: Add GimmeCode Guard to your subreddit through the Reddit App Directory.
-- Configure: Open Mod Tools > App Settings > GimmeCode Guard.
-- Set Thresholds: Configure your desired scores for warning replies, reports, or removals.
-- Save: Automated protection activates immediately across all new comment submissions.
-- No complex regex configuration required. Clean technical discussions for your developer community.*
+- Install: Add GimmeCode Guard to your subreddit via the Reddit App Directory.
+- Launch Dashboard: Open the subreddit menu (`...`) and click GimmeCode Guard Dashboard to open the interactive control center.
+- Configure Thresholds: Review or adjust Tier 1 Warning, Tier 2 Report, and Tier 3 Removal point thresholds directly in the Webview.
+- Test & Enforce: Test custom community expressions in the Comment Playground. Automated protection activates immediately across all new comment submissions.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.45 — 2026-09-26
+- Standard fleet synchronization and maintenance.
+
 0.0.44 — 2026-09-24
 - Standard fleet synchronization and maintenance.
 
 0.0.43 — 2026-09-23
 - Standard fleet synchronization and maintenance.
-
-0.0.43 — 2026-09-23
-- Decouple Tier 2 report from automated comment removal so comments are queued to Modqueue (Needs Review) without premature deletion.
-- Standardize all Modmail deliveries (Tier 3 alerts and Audit Summary reports) to use archivable Modmail Inbox (`createModInboxConversation`).
-- Clarify Tier 2 and Tier 3 setting labels and help text in settings schema.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/TERMS.md)

@@ -1,47 +1,16 @@
-> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/gimmecode-guard)
+> **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/gimmecode-guard)
 
-# GuardHub: GimmeCode Guard 🛡️
+# GimmeCode Guard 🛡️
 
-> **Filter low-effort code begging and keep developer discussions focused and high-value.**
+> **Filter low-effort code requests and protect constructive technical discussions across developer subreddits.**
 
-GimmeCode Guard protects programming and tech subreddits from repetitive "give me code" demands, homework begging, and low-effort copy-paste requests. Using pattern scoring and code block awareness, it nudges users toward constructive inquiry while preserving meaningful technical discussions.
+GimmeCode Guard safeguards programming, Android/iOS, and creator subreddits from repetitive "give me code" demands, homework begging, and low-effort copy-paste requests. Powered by a real-time Webview Control Center, pattern scoring matrix, and Markdown code-block awareness, it nudges users toward constructive inquiry while preserving meaningful technical discussions.
 
----
-
-## At a Glance
-
-- **Filter low-effort code requests**: Identify phrases like "code please", "send source", or "do this for me".
-- **Code block awareness**: Automatically ignores comments that include actual code samples or snippets.
-- **Configurable action thresholds**: Choose between gentle warning replies, mod queue reports, or removals.
-- **90-day strike memory**: Track repeat offenders across the subreddit with persistent strike history.
-- **Unified moderator controls**: Access audit logs, database maintenance, and configuration guides from the **GimmeCode Guard** menu popout.
-- **Direct comment inspections**: Check any user's strike history directly from comment menus using **GimmeCode: Check User History**.
-
----
-
-## The Old Way vs. The GimmeCode Guard Way
-
-| Traditional Workflow | With GimmeCode Guard |
-| :--- | :--- |
-| Comment sections flooded with "plz send code" begging | **Automated phrase detection** filtering low-effort requests instantly |
-| Manually writing repetitive warnings explaining rule requirements | **Automated educational replies** guiding users to ask better questions |
-| Accidental filter flags on legitimate code explanations | **Context-aware parsing** exempting Markdown and indented code blocks |
-| Forgetting which users repeatedly beg for homework solutions | **90-day rolling strike memory** tracking repeat offender infractions |
-| Searching mod logs to review an author's history | **Native comment action menu** inspecting user strikes with one tap |
-
----
-
-## Built for High-Quality Developer Communities
-
-- **Smart Request Detection**: Evaluates multi-token phrases and variations commonly used in low-effort source code requests.
-- **Context-Aware Immunity**: Intelligently exempts comments containing valid Markdown code blocks (` ``` ` or 4-space indentation).
-- **Graduated Moderation Actions**: Configure independent score thresholds for automated warning replies, mod reports, or direct removals.
-- **Long-Term Strike Memory**: Tracks author violation strikes in Redis over 90-day rolling windows to identify habitual freeloaders.
-- **Unified Subreddit Menu Popout**: Select **GimmeCode Guard** from the subreddit overflow menu (`...`) to access:
-  - **Audit Logs**: Generate and deliver consolidated audit reports directly to team Modmail on demand.
-  - **Reset Database**: Purge cached violation tallies and start fresh.
-  - **Settings Guide**: Review current threshold rules and detection sensitivity.
-- **Comment Menu Inspection**: Open any comment menu (`...`) and click **GimmeCode: Check User History** to view the author's community strike records instantly.
+### Key Highlights
+- **Interactive Webview Control Center**: Real-time moderation dashboard embedded in a dedicated custom post for live audit feeds, metric counters, and instant configuration.
+- **Three-Tier Escalation Lifecycle**: Progressive enforcement from polite educational warning replies to modqueue review reports and automated removals with archivable Modmail alerts.
+- **Context-Aware Code Immunity**: Automatically exempts comments containing genuine Markdown code fences or indented blocks, creator fulfillment replies ("code sent", "dm sent"), and post authors (OP).
+- **Interactive Comment Simulator**: Test phrase dictionaries, word-count heuristics, and score verdicts directly inside the Webview playground before saving changes.
 
 ---
 
@@ -49,34 +18,43 @@ GimmeCode Guard protects programming and tech subreddits from repetitive "give m
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/gimmecode-guard-flowchart.png)
 
-### Your Four-Step Workflow
+### The 4-Step Lifecycle
 
-1. **Submit**: A user submits a comment in the subreddit.
-2. **Analyze**: GimmeCode Guard evaluates the text for code-begging patterns while checking for valid code blocks.
-3. **Score**: If low-effort request markers exceed threshold scores, the comment is flagged and logged to Redis.
-4. **Action**: The configured action (automated educational warning, mod queue report, or removal) executes immediately.
-
----
-
-## Quick Setup
-
-1. **Install**: Add **GimmeCode Guard** to your subreddit through the Reddit App Directory.
-2. **Configure**: Open **Mod Tools > App Settings > GimmeCode Guard**.
-3. **Set Thresholds**: Configure your desired scores for warning replies, reports, or removals.
-4. **Save**: Automated protection activates immediately across all new comment submissions.
-
-*No complex regex configuration required. Clean technical discussions for your developer community.*
+1. **Submission & Ingestion**: A comment is submitted in the subreddit and delivered to the GimmeCode Guard server trigger.
+2. **Context & Immunity Evaluation**: GimmeCode Guard verifies exemptions—skipping post authors in their own submissions (OP), community moderators, creator fulfillment replies ("code sent", "dm sent"), and comments containing valid Markdown code blocks.
+3. **Multi-Token Phrase Scoring**: Brief low-effort comments (4 words or fewer) matching request patterns ("code please", "send source", "apk please") accumulate violation points in Redis with 90-day strike persistence.
+4. **Graduated Escalation & Dashboard Sync**: The configured action (Tier 1 polite warning reply, Tier 2 modqueue report, or Tier 3 removal) executes immediately, and the violation record streams to the Webview audit feed.
 
 ---
 
-## Advanced Capabilities
+## Quick Setup (60-Second Onboarding)
 
-GimmeCode Guard is engineered for fast comment parsing and accurate intent detection across active programming communities.
+1. **Install**: Add **GimmeCode Guard** to your subreddit via the Reddit App Directory.
+2. **Launch Dashboard**: Open the subreddit menu (`...`) and click **GimmeCode Guard Dashboard** to open the interactive control center.
+3. **Configure Thresholds**: Review or adjust Tier 1 Warning, Tier 2 Report, and Tier 3 Removal point thresholds directly in the Webview.
+4. **Test & Enforce**: Test custom community expressions in the Comment Playground. Automated protection activates immediately across all new comment submissions.
 
-- **Phrase Scoring Matrix**: Evaluates multi-token phrase dictionaries with weighted keyword matching.
-- **Markdown AST Code Block Filter**: Detects fenced code blocks, inline snippets, and indented text to protect genuine technical help.
-- **Rolling 90-Day Redis Hash**: Persists user strike tallies and violation timestamps with automatic TTL decay.
-- **Native Context Menu Extension**: Registers custom moderator menu actions on comments for rapid historical lookups.
+---
+
+## Core Capabilities
+
+- **Real-Time Webview Audit Feed**: Replaces awkward Modmail dumps with an interactive, searchable data table displaying flagged authors, comment snippets, score breakdowns, and action verdicts.
+- **Graduated Moderation Actions**: Configure independent score thresholds for automated polite educational warnings (default: 3 pts), modqueue review reports (default: 9 pts), or direct public removals (default: 15 pts).
+- **Interactive Comment Playground**: Live sandbox where moderators can test sample comments and verify word counts, matched phrases, and projected verdicts before saving rules.
+- **Rolling 90-Day Strike Memory**: Tracks author violation strikes in Redis over 90-day rolling windows to identify habitual freeloaders while honoring author right-to-be-forgotten upon comment deletion.
+- **Creator Fulfillment Immunity**: Automatically detects creator fulfillment replies ("code sent", "dm sent", "check inbox") so authors distributing requested materials are never penalized.
+
+---
+
+## The Old Way vs. The GimmeCode Guard Way
+
+| Traditional Workflow | With GimmeCode Guard |
+| :--- | :--- |
+| Comment sections flooded with repetitive "send code" begging | **Automated phrase scoring** filtering low-effort requests instantly |
+| Manual, repetitive warning comments explaining rule requirements | **Automated educational replies** politely guiding users to ask better questions |
+| Accidental filter flags on legitimate code explanations | **Markdown code-block awareness** exempting genuine code snippets |
+| Static Modmail dumps flooding moderator inboxes with raw text | **Interactive Webview Dashboard** with searchable audit logs and live stats |
+| Guessing how a new rule or keyword phrase will perform | **Live Comment Playground** simulating score verdicts before activation |
 
 ---
 

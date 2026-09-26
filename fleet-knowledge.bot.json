@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T23:16:19.986Z",
+  "generatedAt": "2026-09-26T08:25:52.392Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -1796,11 +1796,10 @@
         "gimmecodeguard"
       ],
       "setupSteps": [
-        "Install: Add GimmeCode Guard to your subreddit through the Reddit App Directory.",
-        "Configure: Open Mod Tools > App Settings > GimmeCode Guard.",
-        "Set Thresholds: Configure your desired scores for warning replies, reports, or removals.",
-        "Save: Automated protection activates immediately across all new comment submissions.",
-        "No complex regex configuration required. Clean technical discussions for your developer community.*"
+        "Install: Add GimmeCode Guard to your subreddit via the Reddit App Directory.",
+        "Launch Dashboard: Open the subreddit menu (`...`) and click GimmeCode Guard Dashboard to open the interactive control center.",
+        "Configure Thresholds: Review or adjust Tier 1 Warning, Tier 2 Report, and Tier 3 Removal point thresholds directly in the Webview.",
+        "Test & Enforce: Test custom community expressions in the Comment Playground. Automated protection activates immediately across all new comment submissions."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -1824,14 +1823,10 @@
       },
       "triggers": [
         "CommentSubmit",
-        "CommentCreate",
         "CommentDelete"
       ],
-      "menuItems": [
-        "GimmeCode: Check User History",
-        "GimmeCode Guard"
-      ],
-      "settingsCount": 8,
+      "menuItems": [],
+      "settingsCount": 0,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/gimmecode-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/gimmecode-guard",
@@ -1844,7 +1839,7 @@
         "troubleshooting": "Check the GimmeCode Guard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-24"
+      "lastUpdated": "2026-09-26"
     },
     {
       "appId": "action-guard",
