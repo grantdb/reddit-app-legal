@@ -1,7 +1,7 @@
 # GimmeCode Guard
 
 Category: Moderation  
-Version: v0.0.45  
+Version: v0.0.46  
 Visibility: Unlisted  
 Summary: Detects low-effort give me code requests
 
@@ -57,13 +57,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.46 — 2026-09-26
+- Standard fleet synchronization and maintenance.
+
 0.0.45 — 2026-09-26
 - Standard fleet synchronization and maintenance.
 
 0.0.44 — 2026-09-24
-- Standard fleet synchronization and maintenance.
-
-0.0.43 — 2026-09-23
 - Standard fleet synchronization and maintenance.
 
 ## Links
