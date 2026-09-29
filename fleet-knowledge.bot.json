@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-26T08:25:52.392Z",
+  "generatedAt": "2026-09-29T00:52:39.621Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -1601,17 +1601,17 @@
         "user board",
         "userboard"
       ],
-      "summary": "Subreddit top-poster analytics and custom post leaderboard.",
+      "summary": "Interactive subreddit contributor leaderboard and gamification dashboard.",
       "keywords": [
         "user-board",
         "user board",
-        "moderation",
+        "utility",
         "userboard"
       ],
       "setupSteps": [
         "Install: Add User Board to your subreddit through the Reddit App Directory.",
-        "Configure Weights: Open Mod Tools > App Settings > User Board to adjust point multipliers.",
         "Generate Post: Select Create Subreddit User Board from Subreddit Mod Tools.",
+        "Configure Weights: Click  Settings in the top-right corner of the generated post to adjust point multipliers and timeframes.",
         "Pin: Sticky the generated post to your subreddit to start showcasing top contributors.",
         "No manual score tallying required. Automated community gamification directly inside Reddit.*"
       ],
@@ -1652,7 +1652,7 @@
         "troubleshooting": "Check the User Board troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-06"
+      "lastUpdated": "2026-09-29"
     },
     {
       "appId": "queue-guard",
@@ -2414,7 +2414,7 @@
       ],
       "setupSteps": [
         "Install App: Install TestRank to your subreddit from the Reddit App Directory.",
-        "Configure Settings: Adjust point weights and onboarding modmail rules via Mod Tools -> Apps -> testrank -> Settings.",
+        "Configure Settings: Adjust point weights and onboarding delivery channels via Mod Tools -> Apps -> testrank -> Settings.",
         "Generate Leaderboard Post: Open the subreddit overflow menu (`...`) and click Create TestRank Leaderboard Post to provision the pinned community board.",
         "Reward & Rank: Developers click comment menus on helpful replies to confirm points and immediately trigger leaderboard and flair updates."
       ],
@@ -2447,7 +2447,7 @@
         "CommentSubmit"
       ],
       "menuItems": [],
-      "settingsCount": 6,
+      "settingsCount": 7,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/testrank",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/testrank",
@@ -2460,7 +2460,7 @@
         "troubleshooting": "Check the TestRank troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-17"
+      "lastUpdated": "2026-09-29"
     },
     {
       "appId": "reference-reply-bot",

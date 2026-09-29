@@ -1,4 +1,4 @@
-> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-board)
+> **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-board)
 
 # User Board
 
@@ -13,7 +13,7 @@ User Board recognizes and rewards your most valuable community members. Calculat
 - **Interactive visual leaderboard**: Display top community contributors in a rich, responsive custom post.
 - **Customizable scoring weights**: Balance points awarded for posts, comments, upvotes, and discussion engagement.
 - **Automated rank calculations**: Scheduled background jobs keep rankings fresh without manual tallying.
-- **Moderator customization console**: Tune score formulas, tier cutoffs, and layout styles from App Settings.
+- **Moderator customization console**: Tune score formulas, tier cutoffs, and layout styles from the inline **⚙ Settings** console.
 - **Mobile-friendly custom post**: Fast, client-side rendered experience that loads smoothly on all platforms.
 
 ---
@@ -36,7 +36,7 @@ User Board recognizes and rewards your most valuable community members. Calculat
 - **Interactive React Custom Post**: Features rich leaderboard views with user rank badges, avatars, and historical score milestones.
 - **Automated Rank Refreshes**: Scheduled background workers re-calculate scores and update cached rankings automatically.
 - **Zero-Friction Board Generation**: Deploy your leaderboard post with one click using **Create Subreddit User Board** in Subreddit Mod Tools.
-- **Moderator Tuning Console**: Adjust point weights, calculation time horizons, and display tiers easily from App Settings.
+- **Moderator Tuning Console**: Adjust point weights, calculation time horizons, and exclusion rules easily from the inline **⚙ Settings** button.
 - **Privacy-Safe Data Hygiene**: Aggregates public subreddit statistics into anonymous Redis score counters without collecting personal data.
 
 ---
@@ -57,8 +57,8 @@ User Board recognizes and rewards your most valuable community members. Calculat
 ## Quick Setup
 
 1. **Install**: Add **User Board** to your subreddit through the Reddit App Directory.
-2. **Configure Weights**: Open **Mod Tools > App Settings > User Board** to adjust point multipliers.
-3. **Generate Post**: Select **Create Subreddit User Board** from Subreddit Mod Tools.
+2. **Generate Post**: Select **Create Subreddit User Board** from Subreddit Mod Tools.
+3. **Configure Weights**: Click **⚙ Settings** in the top-right corner of the generated post to adjust point multipliers and timeframes.
 4. **Pin**: Sticky the generated post to your subreddit to start showcasing top contributors.
 
 *No manual score tallying required. Automated community gamification directly inside Reddit.*
@@ -70,8 +70,8 @@ User Board recognizes and rewards your most valuable community members. Calculat
 User Board is engineered for fast score computation and lightweight Custom Post Webview rendering.
 
 - **Weighted Score Pipeline**: Computes author scores using linear combination formulas (`points = w1*posts + w2*comments + w3*karma`).
-- **Redis Sorted Set Ranking**: Stores member scores in high-performance Redis Sorted Sets (`ZSET`) for sub-millisecond rank lookups.
-- **Multi-Entrypoint Webview**: Supports independent entrypoints for main feed cards, full leaderboards, and settings consoles.
+- **Redis High-Performance Snapshot Caching**: Stores subreddit contributor rankings and active timeframe slices in Redis for sub-millisecond retrieval.
+- **Inline Modal Architecture**: Renders full leaderboards and moderator consoles inline without intrusive full-page redirects.
 - **Automated Ingestion Crons**: Runs scheduled background aggregation cycles to minimize client-side API overhead.
 
 ---

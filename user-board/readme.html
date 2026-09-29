@@ -1,4 +1,4 @@
-<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-board">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-board">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>User Board</h1>
 <blockquote><p><strong>Gamify community engagement and showcase your top contributors in a live leaderboard.</strong></p></blockquote>
 <p>User Board recognizes and rewards your most valuable community members. Calculating participation scores based on custom post and comment weights, it renders a visual, interactive leaderboard post directly inside your subreddit to drive constructive discussion.</p>
@@ -8,7 +8,7 @@
 <li><strong>Interactive visual leaderboard</strong>: Display top community contributors in a rich, responsive custom post.</li>
 <li><strong>Customizable scoring weights</strong>: Balance points awarded for posts, comments, upvotes, and discussion engagement.</li>
 <li><strong>Automated rank calculations</strong>: Scheduled background jobs keep rankings fresh without manual tallying.</li>
-<li><strong>Moderator customization console</strong>: Tune score formulas, tier cutoffs, and layout styles from App Settings.</li>
+<li><strong>Moderator customization console</strong>: Tune score formulas, tier cutoffs, and layout styles from the inline <strong>⚙ Settings</strong> console.</li>
 <li><strong>Mobile-friendly custom post</strong>: Fast, client-side rendered experience that loads smoothly on all platforms.</li>
 </ul>
 <p>---</p>
@@ -20,7 +20,7 @@
 <li><strong>Interactive React Custom Post</strong>: Features rich leaderboard views with user rank badges, avatars, and historical score milestones.</li>
 <li><strong>Automated Rank Refreshes</strong>: Scheduled background workers re-calculate scores and update cached rankings automatically.</li>
 <li><strong>Zero-Friction Board Generation</strong>: Deploy your leaderboard post with one click using <strong>Create Subreddit User Board</strong> in Subreddit Mod Tools.</li>
-<li><strong>Moderator Tuning Console</strong>: Adjust point weights, calculation time horizons, and display tiers easily from App Settings.</li>
+<li><strong>Moderator Tuning Console</strong>: Adjust point weights, calculation time horizons, and exclusion rules easily from the inline <strong>⚙ Settings</strong> button.</li>
 <li><strong>Privacy-Safe Data Hygiene</strong>: Aggregates public subreddit statistics into anonymous Redis score counters without collecting personal data.</li>
 </ul>
 <p>---</p>
@@ -34,8 +34,8 @@
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>User Board</strong> to your subreddit through the Reddit App Directory.</p>
-<p>2. <strong>Configure Weights</strong>: Open <strong>Mod Tools > App Settings > User Board</strong> to adjust point multipliers.</p>
-<p>3. <strong>Generate Post</strong>: Select <strong>Create Subreddit User Board</strong> from Subreddit Mod Tools.</p>
+<p>2. <strong>Generate Post</strong>: Select <strong>Create Subreddit User Board</strong> from Subreddit Mod Tools.</p>
+<p>3. <strong>Configure Weights</strong>: Click <strong>⚙ Settings</strong> in the top-right corner of the generated post to adjust point multipliers and timeframes.</p>
 <p>4. <strong>Pin</strong>: Sticky the generated post to your subreddit to start showcasing top contributors.</p>
 <p>*No manual score tallying required. Automated community gamification directly inside Reddit.*</p>
 <p>---</p>
@@ -43,8 +43,8 @@
 <p>User Board is engineered for fast score computation and lightweight Custom Post Webview rendering.</p>
 <ul>
 <li><strong>Weighted Score Pipeline</strong>: Computes author scores using linear combination formulas (`points = w1*posts + w2*comments + w3*karma`).</li>
-<li><strong>Redis Sorted Set Ranking</strong>: Stores member scores in high-performance Redis Sorted Sets (`ZSET`) for sub-millisecond rank lookups.</li>
-<li><strong>Multi-Entrypoint Webview</strong>: Supports independent entrypoints for main feed cards, full leaderboards, and settings consoles.</li>
+<li><strong>Redis High-Performance Snapshot Caching</strong>: Stores subreddit contributor rankings and active timeframe slices in Redis for sub-millisecond retrieval.</li>
+<li><strong>Inline Modal Architecture</strong>: Renders full leaderboards and moderator consoles inline without intrusive full-page redirects.</li>
 <li><strong>Automated Ingestion Crons</strong>: Runs scheduled background aggregation cycles to minimize client-side API overhead.</li>
 </ul>
 <p>---</p>

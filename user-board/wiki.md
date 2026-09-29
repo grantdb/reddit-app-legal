@@ -1,12 +1,12 @@
 # User Board
 
-Category: Moderation  
-Version: v0.0.40  
-Visibility: Public  
-Summary: Subreddit top-poster analytics and custom post leaderboard.
+Category: Utility  
+Version: v0.0.41  
+Visibility: Unlisted  
+Summary: Interactive subreddit contributor leaderboard and gamification dashboard.
 
 ## Overview
-Subreddit top-poster analytics and custom post leaderboard.
+Interactive subreddit contributor leaderboard and gamification dashboard.
 
 ## Flowchart
 [View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/user-board-flowchart.png)
@@ -46,8 +46,8 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install: Add User Board to your subreddit through the Reddit App Directory.
-- Configure Weights: Open Mod Tools > App Settings > User Board to adjust point multipliers.
 - Generate Post: Select Create Subreddit User Board from Subreddit Mod Tools.
+- Configure Weights: Click  Settings in the top-right corner of the generated post to adjust point multipliers and timeframes.
 - Pin: Sticky the generated post to your subreddit to start showcasing top contributors.
 - No manual score tallying required. Automated community gamification directly inside Reddit.*
 
@@ -56,13 +56,19 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.41 — 2026-09-29
+- Standard fleet synchronization and maintenance.
+
+0.0.41 — 2026-09-28
+- Fix: Resolved HTTP 403 on settings save and manual recompute by using `getAuthUser` to resolve user session from `context.username`, `reddit.getUserById(context.userId)`, and `reddit.getCurrentUser()`.
+- Fix: Resolved missing user detection by ensuring `resolveSubredditName` converts raw `t5_` subreddit IDs to actual subreddit names before querying Reddit post listings.
+- Fix: Resolved HTTP 400 Zod validation errors on inline modal settings save by making `enabledTypes` optional with default values in `BoardSettingsSchema` and passing `enabledTypes` from `index.html`.
+- Fix: Passed `subredditId` and `subredditName` in `scheduler.runJob` data payload so background recurring jobs target the correct subreddit instead of defaulting to `global`.
+- Fix: Supported dynamic `timeframeDays` (7, 30, 90 days) in `GET /api/board/snapshot` with dedicated Redis caching.
+- Reliability: Added removed/spam submission filters and structured lifecycle logging.
+- Docs: Updated README to accurately reflect inline webview settings access.
+
 0.0.40 — 2026-09-16
-- Standard fleet synchronization and maintenance.
-
-0.0.37 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-0.0.36 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
