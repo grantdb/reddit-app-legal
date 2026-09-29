@@ -1,4 +1,4 @@
-> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/pinned-menuboard)
+> **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/pinned-menuboard)
 
 # Pinned Menuboard
 

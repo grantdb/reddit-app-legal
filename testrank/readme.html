@@ -1,4 +1,4 @@
-<blockquote><p>📖 <strong>User Guide &amp; Overview</strong> | ⚙️ <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/testrank">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/testrank">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>TestRank 🧪</h1>
 <blockquote><p><strong>Empower developers to reward quality feedback, recognize dedicated beta testers, and gamify community app testing across your subreddit.</strong></p></blockquote>
 <p><strong>TestRank</strong> is an automated tester recognition, reputation, and leaderboard engine built specifically for Android testing communities like <strong>r/droidapptesters</strong>. It enables app developers (OPs) to confirm helpful feedback directly from comment context menus, awards structured XP points, maintains real-time weekly and monthly leaderboards, syncs Reddit user flairs across a prestige ladder, and equips moderators with complete audit and override capabilities.</p>
@@ -13,7 +13,7 @@
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/testrank-flowchart.png">Logic Flowchart</a></p>
 <h3>The 5-Step Recognition Pipeline</h3>
-<p>1. <strong>Post Eligibility & Onboarding</strong>: A developer posts an app testing thread with flair. TestRank validates eligibility and sends a deduplicated onboarding modmail with usage guidance.</p>
+<p>1. <strong>Post Eligibility & Onboarding</strong>: A developer posts an app testing thread with flair. TestRank validates eligibility and delivers deduplicated onboarding instructions (via pinned post comment or direct message) with clear usage guidance.</p>
 <p>2. <strong>Tester Feedback & Activity</strong>: Community members join tests, reply with testing feedback, bug reproductions, or bug fix confirmations.</p>
 <p>3. <strong>Developer Confirmation</strong>: The developer selects <strong>Mark Registered Tester (+5 pts)</strong>, <strong>Mark Helpful Feedback (+10 pts)</strong>, <strong>Mark Bug Found (+25 pts)</strong>, or <strong>Mark Fix Verified (+30 pts)</strong> directly from the comment menu (`...`).</p>
 <p>4. <strong>Prestige Ladder & Flair Sync</strong>: Redis Sorted Set leaderboards update instantly; user point totals advance toward higher prestige ranks with automatic Reddit user flair upgrades.</p>
@@ -21,7 +21,7 @@
 <p>---</p>
 <h2>Quick Setup (60-Second Onboarding)</h2>
 <p>1. <strong>Install App</strong>: Install TestRank to your subreddit from the Reddit App Directory.</p>
-<p>2. <strong>Configure Settings</strong>: Adjust point weights and onboarding modmail rules via <strong>Mod Tools -> Apps -> testrank -> Settings</strong>.</p>
+<p>2. <strong>Configure Settings</strong>: Adjust point weights and onboarding delivery channels via <strong>Mod Tools -> Apps -> testrank -> Settings</strong>.</p>
 <p>3. <strong>Generate Leaderboard Post</strong>: Open the subreddit overflow menu (`...`) and click <strong>Create TestRank Leaderboard Post</strong> to provision the pinned community board.</p>
 <p>4. <strong>Reward & Rank</strong>: Developers click comment menus on helpful replies to confirm points and immediately trigger leaderboard and flair updates.</p>
 <p>---</p>

@@ -1,4 +1,4 @@
-> 📖 **User Guide & Overview** | ⚙️ [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/testrank)
+> **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/testrank)
 
 # TestRank 🧪
 
@@ -20,7 +20,7 @@
 
 ### The 5-Step Recognition Pipeline
 
-1. **Post Eligibility & Onboarding**: A developer posts an app testing thread with flair. TestRank validates eligibility and sends a deduplicated onboarding modmail with usage guidance.
+1. **Post Eligibility & Onboarding**: A developer posts an app testing thread with flair. TestRank validates eligibility and delivers deduplicated onboarding instructions (via pinned post comment or direct message) with clear usage guidance.
 2. **Tester Feedback & Activity**: Community members join tests, reply with testing feedback, bug reproductions, or bug fix confirmations.
 3. **Developer Confirmation**: The developer selects **Mark Registered Tester (+5 pts)**, **Mark Helpful Feedback (+10 pts)**, **Mark Bug Found (+25 pts)**, or **Mark Fix Verified (+30 pts)** directly from the comment menu (`...`).
 4. **Prestige Ladder & Flair Sync**: Redis Sorted Set leaderboards update instantly; user point totals advance toward higher prestige ranks with automatic Reddit user flair upgrades.
@@ -31,7 +31,7 @@
 ## Quick Setup (60-Second Onboarding)
 
 1. **Install App**: Install TestRank to your subreddit from the Reddit App Directory.
-2. **Configure Settings**: Adjust point weights and onboarding modmail rules via **Mod Tools -> Apps -> testrank -> Settings**.
+2. **Configure Settings**: Adjust point weights and onboarding delivery channels via **Mod Tools -> Apps -> testrank -> Settings**.
 3. **Generate Leaderboard Post**: Open the subreddit overflow menu (`...`) and click **Create TestRank Leaderboard Post** to provision the pinned community board.
 4. **Reward & Rank**: Developers click comment menus on helpful replies to confirm points and immediately trigger leaderboard and flair updates.
 

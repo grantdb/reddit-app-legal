@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.30  
+Version: v0.0.31  
 Visibility: Unlisted  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -15,7 +15,7 @@ Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ mo
 - Sliding-Window Frequency Limiter: Configurable post-per-minute counters that clamp burst submissions and coordinated spam floods.
 - Duplicate Content Fingerprinting: Per-subreddit hash caching that catches identical link and text spam across multiple accounts.
 - Suspended & Shadowban Filter: Real-time user API check identifying deleted or suspended accounts before they clutter the moderation queue.
-- Domain & URL Shortener Guard: Native detection for link shorteners, tracking parameters, chat links, and blacklisted domains.
+- Domain & URL Shortener Engine: Native detection for link shorteners, tracking parameters, chat links, and blacklisted domains.
 - Multi-Group Keyword & Regex Engine: Case-insensitive matching, word boundaries, and customizable match thresholds with built-in test simulators.
 - Author Verification Tiers: Restrict posting privileges based on verified email requirements, subreddit flair templates, or minimum karma milestones.
 - Configurable Countdown Windows: Hold flagged items for 15m, 30m, 1h, 2h, 4h, 8h, 24h, or 48h.
@@ -67,7 +67,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install: Add Mod360 Pro to your subreddit from the Reddit App Directory.
-- Open Control Center: Navigate to Mod Tools > Mod360 Pro Dashboard.
+- Open Control Center: Navigate to Mod Tools > Mod360 Pro: Control Center.
 - Verify Settings in Shadow Mode: Test rules and run simulations using the in-dashboard test benches.
 - Switch to Live Enforcement: Toggle operational status to Live in the Overview tab.
 
@@ -76,13 +76,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.31 — 2026-09-29
+- UX & Architecture: Consolidated 11 horizontal tabs into 5 clean primary functional domains (Overview & Triage, Content Policies, Author & Cadence, Enforcement & Actions, Wiki & Backups) with secondary segmented sub-navigation pills.
+- Brand Purification: Removed all vestigial sub-app code names and references (GuardHub, Verify-Guard, Queue-Guard, Quarantine-Guard, Rescue-Guard, Wiki-Guard, Mod-Snapshot, Archive-Guard) in favor of clean, native Mod360 Pro modules.
+- Settings Overhaul: Upgraded raw form inputs into descriptive cards with clear labels, contextual explanations, and recommended community defaults.
+- Devvit SDK 0.14.6: Aligned platform dependencies to Devvit 0.14.6 with persistent dynamic cron job support and streamlined lifecycle logging.
+
 0.0.30 — 2026-09-26
 - Standard fleet synchronization and maintenance.
 
 0.0.29 — 2026-09-26
-- Standard fleet synchronization and maintenance.
-
-0.0.28 — 2026-09-25
 - Standard fleet synchronization and maintenance.
 
 ## Links

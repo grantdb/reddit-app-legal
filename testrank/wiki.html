@@ -33,7 +33,8 @@ Summary: Tester recognition and ranking app for r/droidapptesters.</p>
 <h2>Settings Reference</h2>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
 <ul>
-<li>enableOpOnboardingModmail: Enable OP Onboarding Modmail (boolean, default: true). Send guidance modmail to post authors when a new testing thread is submitted</li>
+<li>onboardingDeliveryMethod: OP Guidance Delivery Method (select, default: comment). Select how testing instructions are delivered to the post author (OP)</li>
+<li>enableOpOnboardingModmail: Enable OP Onboarding Guidance (Master Toggle) (boolean, default: true). Toggle whether TestRank delivers onboarding instructions to post authors</li>
 <li>requirePostFlair: Require Post Flair for Testing Eligibility (boolean, default: true). Only onboard posts that have a post flair</li>
 <li>pointsHelpfulFeedback: Points: Helpful Feedback (number, default: 10). XP awarded for general helpful feedback comments</li>
 <li>pointsRegisteredTester: Points: Registered Tester (number, default: 5). XP awarded when a user signs up or registers as a tester</li>
@@ -47,7 +48,7 @@ Summary: Tester recognition and ranking app for r/droidapptesters.</p>
 <li>Attaches Removal Notes: No — Does not attach removal notes.</li>
 <li>Approves Content: No — Does not approve content.</li>
 <li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
-<li>Dispatches Modmail Alerts: Yes — Sends notifications or summaries to modmail.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
 <li>Updates User or Post Flair: Yes — Updates post or user flair based on rules.</li>
 </ul>
 
@@ -62,7 +63,7 @@ Summary: Tester recognition and ranking app for r/droidapptesters.</p>
 <h2>Setup and Usage</h2>
 <ul>
 <li>Install App: Install TestRank to your subreddit from the Reddit App Directory.</li>
-<li>Configure Settings: Adjust point weights and onboarding modmail rules via Mod Tools -> Apps -> testrank -> Settings.</li>
+<li>Configure Settings: Adjust point weights and onboarding delivery channels via Mod Tools -> Apps -> testrank -> Settings.</li>
 <li>Generate Leaderboard Post: Open the subreddit overflow menu (`...`) and click Create TestRank Leaderboard Post to provision the pinned community board.</li>
 <li>Reward & Rank: Developers click comment menus on helpful replies to confirm points and immediately trigger leaderboard and flair updates.</li>
 </ul>
@@ -74,12 +75,12 @@ Summary: Tester recognition and ranking app for r/droidapptesters.</p>
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.29 — 2026-09-26<br>
+Fix: Eliminated automatic Modmail creation on OP onboarding guidance when post authors have direct messages blocked (`NOT_WHITELISTED_BY_USER_MESSAGE`), preventing Modmail inbox pollution in target subreddits.; Feature: Added pinned/distinguished post comment delivery channel (`sendOpOnboardingComment`) that directly reaches post authors with zero Modmail interaction and informs community beta testers of reward criteria.; Feature: Added `onboardingDeliveryMethod` configuration setting (`comment` [default], `pm_only`, `pm_with_comment_fallback`, `disabled`) and wired up live `settings` resolution in onboarding trigger routes.; Docs: Updated README and templates to reflect non-modmail guidance delivery.</p>
 <p>0.0.28 — 2026-09-17<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.27 — 2026-09-17<br>
 Tuning: Bumped "Fix Verified" reward to 30 points across all action constants, settings, comment menus, dashboard, and documentation to position it as the highest-value tester recognition tier.; Fix: Resolved issue where floating scroll buttons (FABs) stopped scrolling after only a few lines by locking pointer capture (`setPointerCapture`), removing button scale transforms during active state, applying `touch-action: none`, and switching to continuous deterministic scrolling.</p>
-<p>0.0.26 — 2026-09-17<br>
-Feature: Added new "Registered Tester (+5 pts)" action category for quick confirmation of community members who join Google Groups, opt into closed tests, or install app builds.; Feature: Added "Mark Registered Tester" comment context menu action in `devvit.json` and `/internal/menu/comment-registered`.; Feature: Added "Registered Recruit" badge unlocked on first registered tester award.; UX: Added 4th stat column for "Registered" testers on user profiles and live post awards summary.; Config: Added `pointsRegisteredTester` installation setting (default: 5 pts).</p>
 
 <h2>Links</h2>
 <ul>

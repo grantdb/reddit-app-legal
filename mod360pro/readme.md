@@ -56,7 +56,7 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
 - **Suspended & Shadowban Filter**: Real-time user API check identifying deleted or suspended accounts before they clutter the moderation queue.
 
 ### Deep Content Policies
-- **Domain & URL Shortener Guard**: Native detection for link shorteners, tracking parameters, chat links, and blacklisted domains.
+- **Domain & URL Shortener Engine**: Native detection for link shorteners, tracking parameters, chat links, and blacklisted domains.
 - **Multi-Group Keyword & Regex Engine**: Case-insensitive matching, word boundaries, and customizable match thresholds with built-in test simulators.
 - **Author Verification Tiers**: Restrict posting privileges based on verified email requirements, subreddit flair templates, or minimum karma milestones.
 
@@ -83,7 +83,7 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
 ## Quick Setup (60 Seconds)
 
 1. **Install**: Add **Mod360 Pro** to your subreddit from the Reddit App Directory.
-2. **Open Control Center**: Navigate to **Mod Tools > Mod360 Pro Dashboard**.
+2. **Open Control Center**: Navigate to **Mod Tools > Mod360 Pro: Control Center**.
 3. **Verify Settings in Shadow Mode**: Test rules and run simulations using the in-dashboard test benches.
 4. **Switch to Live Enforcement**: Toggle operational status to **Live** in the Overview tab.
 
