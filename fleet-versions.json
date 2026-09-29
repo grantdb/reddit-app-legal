@@ -119,11 +119,6 @@
     "version": "0.0.79",
     "visibility": "public"
   },
-  "user-board": {
-    "name": "User Board",
-    "version": "0.0.40",
-    "visibility": "public"
-  },
   "queue-guard": {
     "name": "QueueGuard",
     "version": "0.0.46",
@@ -238,5 +233,10 @@
     "name": "AutoMod Easy",
     "version": "0.0.150",
     "visibility": "public"
+  },
+  "user-board": {
+    "name": "User Board",
+    "version": "0.0.41",
+    "visibility": "unlisted"
   }
 }

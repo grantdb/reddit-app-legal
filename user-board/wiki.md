@@ -1,7 +1,7 @@
 # User Board
 
 Category: Utility  
-Version: v0.0.41  
+Version: v0.0.42  
 Visibility: Unlisted  
 Summary: Interactive subreddit contributor leaderboard and gamification dashboard.
 
@@ -34,7 +34,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - Submits Automated Comments: No — Does not submit automated comments.
 - Attaches Removal Notes: No — Does not attach removal notes.
 - Approves Content: No — Does not approve content.
-- Removes or Filters Content: No — Does not remove or filter content.
+- Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
 - Dispatches Modmail Alerts: No — Does not send modmail notifications.
 - Updates User or Post Flair: No — Does not update flair.
 
@@ -56,19 +56,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.41 — 2026-09-29
+0.0.42 — 2026-09-29
 - Standard fleet synchronization and maintenance.
 
-0.0.41 — 2026-09-28
-- Fix: Resolved HTTP 403 on settings save and manual recompute by using `getAuthUser` to resolve user session from `context.username`, `reddit.getUserById(context.userId)`, and `reddit.getCurrentUser()`.
-- Fix: Resolved missing user detection by ensuring `resolveSubredditName` converts raw `t5_` subreddit IDs to actual subreddit names before querying Reddit post listings.
-- Fix: Resolved HTTP 400 Zod validation errors on inline modal settings save by making `enabledTypes` optional with default values in `BoardSettingsSchema` and passing `enabledTypes` from `index.html`.
-- Fix: Passed `subredditId` and `subredditName` in `scheduler.runJob` data payload so background recurring jobs target the correct subreddit instead of defaulting to `global`.
-- Fix: Supported dynamic `timeframeDays` (7, 30, 90 days) in `GET /api/board/snapshot` with dedicated Redis caching.
-- Reliability: Added removed/spam submission filters and structured lifecycle logging.
-- Docs: Updated README to accurately reflect inline webview settings access.
+0.0.42 — 2026-09-28
+- Fix: Fixed moderator verification check by querying `reddit.getModerators({ subredditName })` without unsupported username filtering parameter, eliminating empty moderator listing and false-negative rejection.
+- Fix: Replaced single-user negative cache locking with verified moderator list caching (`ub:mod_list_v2:${cleanSub}`).
+- Fix: Normalized username and subreddit string matching by stripping leading `u/` and `r/` prefixes.
+- Fix: Persisted settings under both `subredditId` and `subredditName` keys for unified lookup.
 
-0.0.40 — 2026-09-16
+0.0.41 — 2026-09-29
 - Standard fleet synchronization and maintenance.
 
 ## Links
