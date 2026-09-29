@@ -1,7 +1,7 @@
 <h1>User Board</h1>
 
 <p>Category: Utility<br>
-Version: v0.0.42<br>
+Version: v0.0.43<br>
 Visibility: Unlisted<br>
 Summary: Interactive subreddit contributor leaderboard and gamification dashboard.</p>
 
@@ -58,12 +58,12 @@ Summary: Interactive subreddit contributor leaderboard and gamification dashboar
 </ul>
 
 <h2>Version History</h2>
-<p>0.0.42 — 2026-09-29<br>
+<p>0.0.43 — 2026-09-29<br>
 Standard fleet synchronization and maintenance.</p>
+<p>0.0.43 — 2026-09-28<br>
+Fix: Immediately recomputed active snapshot and cleared stale timeframe slice caches upon settings save so feed card reflects new timeframe window without delay.; Fix: Dynamically synchronized client active timeframe state and filter tab buttons with configured `timeframeDays`.; Fix: Resolved base snapshot fallback in `GET /api/board/snapshot` to serve matching timeframe dynamically instead of hardcoded 30-day assumption.</p>
 <p>0.0.42 — 2026-09-28<br>
 Fix: Fixed moderator verification check by querying `reddit.getModerators({ subredditName })` without unsupported username filtering parameter, eliminating empty moderator listing and false-negative rejection.; Fix: Replaced single-user negative cache locking with verified moderator list caching (`ub:mod_list_v2:${cleanSub}`).; Fix: Normalized username and subreddit string matching by stripping leading `u/` and `r/` prefixes.; Fix: Persisted settings under both `subredditId` and `subredditName` keys for unified lookup.</p>
-<p>0.0.41 — 2026-09-29<br>
-Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
 <ul>

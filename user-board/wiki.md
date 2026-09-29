@@ -1,7 +1,7 @@
 # User Board
 
 Category: Utility  
-Version: v0.0.42  
+Version: v0.0.43  
 Visibility: Unlisted  
 Summary: Interactive subreddit contributor leaderboard and gamification dashboard.
 
@@ -56,17 +56,19 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.42 — 2026-09-29
+0.0.43 — 2026-09-29
 - Standard fleet synchronization and maintenance.
+
+0.0.43 — 2026-09-28
+- Fix: Immediately recomputed active snapshot and cleared stale timeframe slice caches upon settings save so feed card reflects new timeframe window without delay.
+- Fix: Dynamically synchronized client active timeframe state and filter tab buttons with configured `timeframeDays`.
+- Fix: Resolved base snapshot fallback in `GET /api/board/snapshot` to serve matching timeframe dynamically instead of hardcoded 30-day assumption.
 
 0.0.42 — 2026-09-28
 - Fix: Fixed moderator verification check by querying `reddit.getModerators({ subredditName })` without unsupported username filtering parameter, eliminating empty moderator listing and false-negative rejection.
 - Fix: Replaced single-user negative cache locking with verified moderator list caching (`ub:mod_list_v2:${cleanSub}`).
 - Fix: Normalized username and subreddit string matching by stripping leading `u/` and `r/` prefixes.
 - Fix: Persisted settings under both `subredditId` and `subredditName` keys for unified lookup.
-
-0.0.41 — 2026-09-29
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/user-board/TERMS.md)
