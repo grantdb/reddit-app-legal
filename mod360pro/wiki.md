@@ -63,7 +63,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 This app utilizes Reddit Redis storage for state management, caching, and rate limiting.
 
 - Key-Value Strings (deduplication & cooldown markers)
-- Key patterns: node:http, mod360:dashboard_post_id, mod360:rules:config, mod360:dashboard_creation_lock
+- Key patterns: node:http, mod360:dashboard_post_id, mod360:rules:config, mod360:stats:scanned, mod360:stats:actions, mod360:stats:latency_sum
 
 ## Setup and Usage
 - Install: Add Mod360 Pro to your subreddit from the Reddit App Directory.
