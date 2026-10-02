@@ -1,7 +1,7 @@
 # User Board
 
 Category: Utility  
-Version: v0.0.43  
+Version: v0.0.44  
 Visibility: Unlisted  
 Summary: Interactive subreddit contributor leaderboard and gamification dashboard.
 
@@ -56,19 +56,20 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.43 — 2026-09-29
+0.0.44 — 2026-10-02
 - Standard fleet synchronization and maintenance.
 
-0.0.43 — 2026-09-28
-- Fix: Immediately recomputed active snapshot and cleared stale timeframe slice caches upon settings save so feed card reflects new timeframe window without delay.
-- Fix: Dynamically synchronized client active timeframe state and filter tab buttons with configured `timeframeDays`.
-- Fix: Resolved base snapshot fallback in `GET /api/board/snapshot` to serve matching timeframe dynamically instead of hardcoded 30-day assumption.
+0.0.44 — 2026-10-02
+- Feature: Completely overhauled scoring engine to reward positive community engagement and quality over raw post spam.
+- Feature: Added comment tree ingestion (`reddit.getComments`) to index commenters, comment upvote scores, and discussion thread depth (`repliesReceived`).
+- Feature: Rewrote scoring formula to reward post upvotes (3x), comment upvotes (2x), discussion spark (2x), and thread replies (1x) over baseline volume.
+- Feature: Added contributor classification badges: Top Poster, Commenter, Engager, Consistent, and Rising Star.
+- Feature: Expanded Moderator Console settings with granular Quality & Reception weights and quick "Defaults" restore.
+- UI: Added post count, comment count, and total upvotes received columns to the interactive leaderboard table.
+- Compatibility: Maintained full backward compatibility with legacy snapshots, fallback aliases, and default settings merging.
 
-0.0.42 — 2026-09-28
-- Fix: Fixed moderator verification check by querying `reddit.getModerators({ subredditName })` without unsupported username filtering parameter, eliminating empty moderator listing and false-negative rejection.
-- Fix: Replaced single-user negative cache locking with verified moderator list caching (`ub:mod_list_v2:${cleanSub}`).
-- Fix: Normalized username and subreddit string matching by stripping leading `u/` and `r/` prefixes.
-- Fix: Persisted settings under both `subredditId` and `subredditName` keys for unified lookup.
+0.0.43 — 2026-09-29
+- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/user-board/TERMS.md)

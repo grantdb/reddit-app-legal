@@ -2,18 +2,20 @@
 
 # User Board
 
-> **Gamify community engagement and showcase your top contributors in a live leaderboard.**
+> **Gamify community engagement and showcase your top contributors in a live, quality-driven leaderboard.**
 
-User Board recognizes and rewards your most valuable community members. Calculating participation scores based on custom post and comment weights, it renders a visual, interactive leaderboard post directly inside your subreddit to drive constructive discussion.
+User Board recognizes and rewards your most valuable community members. Calculating participation scores based on community reception (post upvotes, comment upvotes, and discussion threads) rather than raw post volume, it renders a visual, interactive leaderboard post directly inside your subreddit to encourage constructive participation.
 
 ---
 
 ## At a Glance
 
 - **Interactive visual leaderboard**: Display top community contributors in a rich, responsive custom post.
-- **Customizable scoring weights**: Balance points awarded for posts, comments, upvotes, and discussion engagement.
+- **Engagement-first scoring**: Rewards positive community reception (upvotes on posts & comments) and discussion depth rather than spammy post volume.
+- **Full comment ingestion**: Evaluates top commenters, comment upvote scores, and reply threads alongside post authors.
+- **Customizable scoring weights**: Fine-tune independent multipliers for post upvotes, comment upvotes, discussion sparked, and baseline counts.
 - **Automated rank calculations**: Scheduled background jobs keep rankings fresh without manual tallying.
-- **Moderator customization console**: Tune score formulas, tier cutoffs, and layout styles from the inline **⚙ Settings** console.
+- **Moderator customization console**: Tune score formulas, tier cutoffs, and timeframes from the inline **⚙ Settings** console.
 - **Mobile-friendly custom post**: Fast, client-side rendered experience that loads smoothly on all platforms.
 
 ---
@@ -22,17 +24,19 @@ User Board recognizes and rewards your most valuable community members. Calculat
 
 | Traditional Workflow | With User Board |
 | :--- | :--- |
+| Reward-for-volume systems that encourage spammers to flood subreddits with bad posts | **Quality & reception weighting** rewarding contributors whose content community members actually like |
+| Ignoring community members who contribute primarily through thoughtful comments | **Unified contributor tracking** analyzing post authors and commenters equally |
 | Manually tracking and tallying top monthly posters in spreadsheets | **Automated background ranking** refreshing contributor scores on schedule |
-| Generic karma counts that don't reflect true community helpfulness | **Custom weighted formula** valuing comments and discussion quality |
-| Static text posts listing usernames that quickly go out of date | **Live interactive custom post** displaying dynamic ranks and badges |
-| Forgetting to run monthly contributor reward posts | **Always-on leaderboard hub** pinned directly to your subreddit feed |
-| No way for community members to track their standing | **Engaging visual scoreboard** motivating constructive participation |
+| Generic karma counts that don't reflect true community helpfulness | **Custom weighted formula** valuing discussion spark, comments, and consistency |
+| Static text posts listing usernames that quickly go out of date | **Live interactive custom post** displaying dynamic ranks, types, and tier badges |
 
 ---
 
 ## Built for Vibrant Community Growth
 
-- **Nuanced Contribution Scoring**: Configure independent point multipliers for submission upvotes, comment volume, and discussion activity.
+- **Nuanced Engagement Scoring**: Configure independent point multipliers for post upvotes (3x default), comment upvotes (2x default), comments on posts (2x default), and thread replies (1x default).
+- **Quality-First Anti-Spam Design**: Downvoted submissions receive zero upvote points, preventing spammers from gaming the board through volume alone.
+- **Rich Contributor Badges**: Classifies contributors into recognizable community roles (*Top Poster*, *Commenter*, *Engager*, *Consistent*, and *Rising Star*).
 - **Interactive React Custom Post**: Features rich leaderboard views with user rank badges, avatars, and historical score milestones.
 - **Automated Rank Refreshes**: Scheduled background workers re-calculate scores and update cached rankings automatically.
 - **Zero-Friction Board Generation**: Deploy your leaderboard post with one click using **Create Subreddit User Board** in Subreddit Mod Tools.
@@ -48,9 +52,9 @@ User Board recognizes and rewards your most valuable community members. Calculat
 ### Your Four-Step Workflow
 
 1. **Deploy**: A moderator selects **Create Subreddit User Board** from Subreddit Mod Tools to spawn the interactive hub.
-2. **Collect**: Background tasks scan recent subreddit activity, aggregating post scores and comment counts.
-3. **Calculate**: The engine evaluates activity stats against your custom point weights to generate contributor ranks.
-4. **Render**: The pinned leaderboard post updates its interactive UI to display the latest top community members.
+2. **Collect**: Background tasks scan recent subreddit submissions and comment threads, indexing upvotes and reply depth.
+3. **Calculate**: The engine evaluates activity stats against your custom point weights to generate contributor ranks based on positive reception.
+4. **Render**: The pinned leaderboard post updates its interactive UI to display the latest top community contributors.
 
 ---
 

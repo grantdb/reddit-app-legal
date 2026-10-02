@@ -1,14 +1,16 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/user-board">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>User Board</h1>
-<blockquote><p><strong>Gamify community engagement and showcase your top contributors in a live leaderboard.</strong></p></blockquote>
-<p>User Board recognizes and rewards your most valuable community members. Calculating participation scores based on custom post and comment weights, it renders a visual, interactive leaderboard post directly inside your subreddit to drive constructive discussion.</p>
+<blockquote><p><strong>Gamify community engagement and showcase your top contributors in a live, quality-driven leaderboard.</strong></p></blockquote>
+<p>User Board recognizes and rewards your most valuable community members. Calculating participation scores based on community reception (post upvotes, comment upvotes, and discussion threads) rather than raw post volume, it renders a visual, interactive leaderboard post directly inside your subreddit to encourage constructive participation.</p>
 <p>---</p>
 <h2>At a Glance</h2>
 <ul>
 <li><strong>Interactive visual leaderboard</strong>: Display top community contributors in a rich, responsive custom post.</li>
-<li><strong>Customizable scoring weights</strong>: Balance points awarded for posts, comments, upvotes, and discussion engagement.</li>
+<li><strong>Engagement-first scoring</strong>: Rewards positive community reception (upvotes on posts & comments) and discussion depth rather than spammy post volume.</li>
+<li><strong>Full comment ingestion</strong>: Evaluates top commenters, comment upvote scores, and reply threads alongside post authors.</li>
+<li><strong>Customizable scoring weights</strong>: Fine-tune independent multipliers for post upvotes, comment upvotes, discussion sparked, and baseline counts.</li>
 <li><strong>Automated rank calculations</strong>: Scheduled background jobs keep rankings fresh without manual tallying.</li>
-<li><strong>Moderator customization console</strong>: Tune score formulas, tier cutoffs, and layout styles from the inline <strong>⚙ Settings</strong> console.</li>
+<li><strong>Moderator customization console</strong>: Tune score formulas, tier cutoffs, and timeframes from the inline <strong>⚙ Settings</strong> console.</li>
 <li><strong>Mobile-friendly custom post</strong>: Fast, client-side rendered experience that loads smoothly on all platforms.</li>
 </ul>
 <p>---</p>
@@ -16,7 +18,9 @@
 <p>---</p>
 <h2>Built for Vibrant Community Growth</h2>
 <ul>
-<li><strong>Nuanced Contribution Scoring</strong>: Configure independent point multipliers for submission upvotes, comment volume, and discussion activity.</li>
+<li><strong>Nuanced Engagement Scoring</strong>: Configure independent point multipliers for post upvotes (3x default), comment upvotes (2x default), comments on posts (2x default), and thread replies (1x default).</li>
+<li><strong>Quality-First Anti-Spam Design</strong>: Downvoted submissions receive zero upvote points, preventing spammers from gaming the board through volume alone.</li>
+<li><strong>Rich Contributor Badges</strong>: Classifies contributors into recognizable community roles (*Top Poster*, *Commenter*, *Engager*, *Consistent*, and *Rising Star*).</li>
 <li><strong>Interactive React Custom Post</strong>: Features rich leaderboard views with user rank badges, avatars, and historical score milestones.</li>
 <li><strong>Automated Rank Refreshes</strong>: Scheduled background workers re-calculate scores and update cached rankings automatically.</li>
 <li><strong>Zero-Friction Board Generation</strong>: Deploy your leaderboard post with one click using <strong>Create Subreddit User Board</strong> in Subreddit Mod Tools.</li>
@@ -28,9 +32,9 @@
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/user-board-flowchart.png">Logic Flowchart</a></p>
 <h3>Your Four-Step Workflow</h3>
 <p>1. <strong>Deploy</strong>: A moderator selects <strong>Create Subreddit User Board</strong> from Subreddit Mod Tools to spawn the interactive hub.</p>
-<p>2. <strong>Collect</strong>: Background tasks scan recent subreddit activity, aggregating post scores and comment counts.</p>
-<p>3. <strong>Calculate</strong>: The engine evaluates activity stats against your custom point weights to generate contributor ranks.</p>
-<p>4. <strong>Render</strong>: The pinned leaderboard post updates its interactive UI to display the latest top community members.</p>
+<p>2. <strong>Collect</strong>: Background tasks scan recent subreddit submissions and comment threads, indexing upvotes and reply depth.</p>
+<p>3. <strong>Calculate</strong>: The engine evaluates activity stats against your custom point weights to generate contributor ranks based on positive reception.</p>
+<p>4. <strong>Render</strong>: The pinned leaderboard post updates its interactive UI to display the latest top community contributors.</p>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>User Board</strong> to your subreddit through the Reddit App Directory.</p>
