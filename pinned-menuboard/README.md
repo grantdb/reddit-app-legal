@@ -11,7 +11,7 @@ Pinned Menuboard gives your subreddit a stylish navigation hub and game launcher
 ## At a Glance
 
 - **Bypass the 2-pin limit**: Feature from two to twelve community threads, wikis, or games simultaneously in a clean card grid.
-- **Rich thumbnail previews**: Automatically extracts high-resolution artwork from Reddit posts, rich previews, and gallery items.
+- **Rich thumbnails & fallback graphics**: Automatically extracts high-resolution artwork from Reddit posts, rich previews, gallery items, and markdown body links, with dynamic glassmorphic vector presets and custom URL overrides.
 - **Dark and Light themes**: Toggle between Dark Mode (light on dark) and Light Mode (dark on light) with a single click.
 - **Community Highlights auto-unpin**: Automatically unpins posts from Reddit's native Community Highlights when featured, eliminating duplicate feed cards.
 - **In-webview moderator controls**: Customize board headers, adjust capacity, and reorder or remove cards directly inside the post.

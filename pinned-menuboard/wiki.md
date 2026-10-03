@@ -1,12 +1,12 @@
 # Pinned Menuboard
 
 Category: Moderation  
-Version: v0.0.79  
-Visibility: Public  
-Summary: A centralized menu board for pinned posts
+Version: v0.0.80  
+Visibility: Unlisted  
+Summary: Centralized interactive showcase for featured community posts, threads, and resources with custom thumbnails and themes.
 
 ## Overview
-A centralized menu board for pinned posts
+Centralized interactive showcase for featured community posts, threads, and resources with custom thumbnails and themes.
 
 ## Flowchart
 [View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/pinned-menuboard-flowchart.png)
@@ -55,6 +55,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.80 — 2026-10-03
+- Standard fleet synchronization and maintenance.
+
 0.0.79 — 2026-09-18
 - Standard fleet synchronization and maintenance.
 
@@ -62,9 +65,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - UX & Compliance: Add button-based pagination (4 cards per page with Prev/Next buttons) to eliminate inline scroll traps and fully adhere to Reddit's inline app review guidelines.
 - UX & Compliance: Implement fleet-standard floating 48px page scroll controls with fine-tuned 48px step-scroll and continuous long-press.
 - UX: Add swipe-drag detection on cards to prevent accidental post navigation while swiping in Reddit mobile feeds.
-
-0.0.78 — 2026-09-16
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/pinned-menuboard/TERMS.md)
