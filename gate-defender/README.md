@@ -1,26 +1,26 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/gate-defender)
 
-# Gate Defender
+# Gate Defender 🌀
 
-**Gate Defender** is an intensive, arcade-style survival game engineered directly within the Reddit client. Designed to foster community spirit through friendly competition, it challenges players to defend their perimeter against escalating waves of obstacles and secure their name on the subreddit's global leaderboard.
+**Gate Defender** is an arcade survival shooter engineered directly within the Reddit client for Stargate SG-1 fans. Step into the boots of SGC defense personnel stationed at an off-world Stargate outpost. Defend the active wormhole against relentless waves of Goa'uld horned shock invaders, protect Ancient ruins, unleash heavy railgun fire, and claim your place among the top SGC Operatives on the global leaderboard.
 
 ## Key Features
 
-- **High-Velocity Survival Mechanics**: Fast-paced, responsive arcade gameplay with adaptive turret aiming, recoil physics, and bullet collision detection.
-- **Iris Barrier Defense Dome**: An energy shield dome covering the gate that absorbs up to 12 incoming plasma blasts and vaporizes invaders that ram the gate perimeter.
-- **Mobile Defensive Flank Formation**: On mobile viewports, the perimeter automatically structures into a symmetric 6-ruin defensive arc flanking the turret.
-- **Kill-Streak Overcharge & Bonus Shields**: In desktop/fullscreen mode, maintaining a 10-kill streak without taking damage rewards bonus Iris Barrier integrity (+5 hits), reserve ammo (+60), and personal turret shield repair.
-- **Persistent Global Leaderboards**: Real-time "Top 10" ranking system embedded directly in the post to encourage community rivalry and tournament events.
-- **Adaptive Cross-Device Controls**: Seamless responsive viewport re-anchoring across desktop, tablet, and mobile layouts with unified Pointer Events and touch controls.
-- **Interactive Onboarding**: Pre-game splash screen providing rapid tutorial instructions and one-click launch directly into expanded mode.
-- **Moderator-Initiated Launch**: Simple one-click deployment via the Subreddit Moderator Menu to schedule gaming events or community threads.
+- **High-Velocity SGC Railgun Mechanics**: Fast-paced, responsive arcade combat featuring heavy kinetic 50-Cal and Tau'ri railgun emplacements with explosive AOE cluster damage, high projectile velocity, and seamless 360-degree horizon aiming.
+- **Ancient Outpost Defensive Ruins**: Structured, screen-adaptive perimeter rings protecting the Stargate. The larger your display, the more fortified the outpost (6 flank ruins on Mobile, 10 bastions on Desktop, 14 fortress pillars on Fullscreen).
+- **Iris Barrier Energy Dome**: Multi-layer planetary energy barrier absorbing up to 12 incoming plasma blasts and vaporizing invading shock troops that collide with the gate perimeter.
+- **Generous SGC Supply Lines**: 500-round high-capacity ammo magazine, 45% ammo drop rate yielding +100 rounds per pack, and passive telemetry supply trickles (+1 ammo/sec) so your turret never runs dry.
+- **Overcharge Weapon Progression**: Unbroken kill streaks unlock devastating Dual Heavy AP Cannons (400 pts) and Triple Railgun Spread Bursts (1,000 pts) to tear through enemy swarms.
+- **Universal SGC Leaderboard**: Persistent `🏆 Leaderboard` access on every screen—Start Menu, In-Game Pause Drawer, and Game Over Screen—featuring real-time live ranking synchronization.
+- **Adaptive Cross-Device Controls**: Seamless responsive viewport re-anchoring across mobile touchpads, tablet screens, desktop mice, and fullscreen displays with zero dead-zones.
+- **Moderator-Initiated Launch**: Simple one-click deployment via the Subreddit Moderator Menu to host community gaming challenges, tournament threads, or weekend events.
 
 ## How It Works
 
-1. A moderator triggers a new Gate Defender event using the native Mod Menu.
-2. A new interactive post is generated in the subreddit.
-3. Users tap into the post and are greeted with the onboarding screen. They play the arcade survival loop to rack up points.
-4. When a player's game ends, their score is checked against the global server. If it's a high score, the live leaderboard on the post is instantly updated for all users to see.
+1. A moderator triggers a new Gate Defender mission from the Subreddit Mod Menu.
+2. An interactive custom post is created in the subreddit with an immersive SGC briefing launchpad.
+3. Operatives launch into expanded mode, aim their turret, manage ammunition drops, and defend the Stargate through escalating assault waves.
+4. When a mission concludes, scores are plausibility-verified and instantly recorded to the persistent SGC Operatives leaderboard.
 
 ## Setup & Configuration
 
