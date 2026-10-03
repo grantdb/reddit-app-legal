@@ -1,8 +1,6 @@
-# Chevron Lock
+> **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/chevron-lock)
 
-![Reddit](https://img.shields.io/badge/Platform-Reddit%20Devvit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Category](https://img.shields.io/badge/Category-Interactive-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Game-8A2BE2?style=for-the-badge)
+# Chevron Lock
 
 > **Operate an unstable SGC dialing console and lock destination chevrons before gate collapse.**
 

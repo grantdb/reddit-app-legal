@@ -1,35 +1,44 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/chevron-lock">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>Chevron Lock</h1>
-<p>Operating an unstable SGC dialing console, players must identify, repair, and reorder gate address sequences under strict time pressure before gate system collapse. <strong>Chevron Lock</strong> brings an authentic Stargate dialing puzzle experience directly into Reddit feeds.</p>
-<h2>Interactive Features</h2>
+<blockquote><p><strong>Operate an unstable SGC dialing console and lock destination chevrons before gate collapse.</strong></p></blockquote>
+<p>Players identify, repair, and reorder authentic Stargate gate address sequences under strict time pressure directly within Reddit custom posts. Compete on subreddit all-time and daily seed leaderboards with server-authoritative state security.</p>
+<h3>Key Highlights</h3>
 <ul>
-<li><strong>Dynamic Dialing Engine</strong>: Encode destination glyphs plus the Point of Origin (Alpha Origin) under strict time pressure across gate sequences scaling from 3 to 7 chevrons.</li>
-<li><strong>3 Dynamic Round Types</strong>:</li>
-<li><strong>Recall</strong>: Memorize a valid gate address during a brief preview window, then reconstruct it from memory.</li>
-<li><strong>Repair</strong>: Detect corrupted DHD chevron slots (`?`) and substitute them with correct glyphs from the DHD pool.</li>
-<li><strong>Reorder</strong>: Observe a memory preview, then swap scrambled chevron slots back into canonical sequence before time expires.</li>
-<li><strong>7-Round Escalating Run</strong>: Smooth 3-round onboarding ramp (3 to 4 chevrons, 0 decoys) that scales up to a full 7-chevron Master Gate Lock in Round 7.</li>
-<li><strong>Daily Seeded Challenge</strong>: A canonical daily address sequence shared deterministically across all players on the same UTC day.</li>
-<li><strong>Server-Authoritative Engine</strong>: All scoring, sequence validation, timing checks, stability penalties, and leaderboard writes are computed strictly on the server.</li>
-<li><strong>Redis Leaderboards & Tie-Handling</strong>: Subreddit all-time and daily sorted sets with score preservation (no lower-score overwrites) and high-precision timestamp tie-breaking.</li>
-<li><strong>SGC Dialing Console UI</strong>: Dark graphite aesthetics, glowing teal chevrons, telemetry readouts, stability bars, and amber/red alert pulses.</li>
+<li><strong>7-Round Escalating Difficulty</strong>: Onboarding starts at 3 chevrons and ramps smoothly to the full 7-chevron Master Gate Lock.</li>
+<li><strong>3 Dynamic Puzzle Modes</strong>: Test memory and reflexes across Recall, Repair (corrupted DHD slots), and Reorder (scrambled glyph sequences).</li>
+<li><strong>Subreddit Leaderboards</strong>: Server-authoritative scoring with zero client trust, monotonic personal best tracking, and deterministic daily seeds.</li>
+<li><strong>Zero Scroll Traps</strong>: Native inline preview with 8px gesture drag guard and seamless high-contrast SGC tactical console.</li>
 </ul>
-<h2>Gameplay Mechanics & Controls</h2>
+<h2>How It Works</h2>
+<h3>The 5-Step Dialing Lifecycle</h3>
+<p>1. <strong>Mission Briefing</strong>: Players inspect the dialing computer in an inline Reddit post and select Procedural Dial or Daily Challenge.</p>
+<p>2. <strong>Telemetry Calibration</strong>: The console presents round parameters (sequence length, time limit, and puzzle archetype).</p>
+<p>3. <strong>Memory & Analysis</strong>: In Recall rounds, players memorize the active sequence; in Repair rounds, they locate corrupted slots; in Reorder rounds, they analyze scrambled glyphs.</p>
+<p>4. <strong>Encoding & Transmission</strong>: Operators select glyphs from the DHD pool, use optional hints (-15 pts), and transmit the sequence to the Stargate.</p>
+<p>5. <strong>Debrief & Leaderboards</strong>: Upon completing all 7 rounds or suffering a stability collapse, the server calculates score breakdowns and records personal best rankings.</p>
+<h2>Quick Setup (60-Second Onboarding)</h2>
+<p>1. <strong>Install</strong>: Add <strong>Chevron Lock</strong> to your subreddit via the Devvit developer platform.</p>
+<p>2. <strong>Launch Post</strong>: Open the subreddit Moderator Menu and select <strong>"Create Chevron Lock Post"</strong>.</p>
+<p>3. <strong>Configure Options</strong>: The post embeds an interactive dialing console directly in your community feed.</p>
+<p>4. <strong>Deploy & Compete</strong>: Community members dial gate addresses, maintain stability, and compete for top operator rankings.</p>
+<h2>Core Capabilities</h2>
+<h3>3 Dynamic Dialing Modes</h3>
 <ul>
-<li><strong>Console Controls</strong>:</li>
+<li><strong>Recall</strong>: Memorize an active gate address during a brief preview window, then reconstruct it from memory before the timer expires.</li>
+<li><strong>Repair</strong>: Identify corrupted DHD chevron slots (`?`) and substitute them with the correct glyph from the offworld symbol pool.</li>
+<li><strong>Reorder</strong>: Analyze scrambled chevron positions and swap slots into their canonical dialing sequence under time pressure.</li>
+</ul>
+<h3>SGC Dialing Console Controls</h3>
+<ul>
 <li><strong>CLEAR</strong>: Reset all slot selections or revert scrambled arrangements for the current round.</li>
-<li><strong>HINT (-15 Pts)</strong>: Reveal the correct glyph for a corrupted slot or position with a score penalty.</li>
-<li><strong>LOCK CHEVRONS</strong>: Transmit the encoded sequence to the gate for verification.</li>
-<li><strong>HUD Telemetry Readouts</strong>:</li>
-<li><strong>Round Counter</strong>: Displays current round progress (e.g. `1/7`).</li>
-<li><strong>Stability Indicator</strong>: Represents remaining DHD stability charges (starts at 3 units; losing all stability collapses the gate).</li>
-<li><strong>Timer</strong>: Active countdown per round with visual warning pulses when under 3 seconds.</li>
-<li><strong>Streak & Score</strong>: Live tracking of consecutive successful locks and running score.</li>
+<li><strong>HINT (-15 Pts)</strong>: Reveal the correct glyph for a corrupted slot or position with a modest score penalty.</li>
+<li><strong>LOCK CHEVRONS</strong>: Transmit the encoded sequence to the gate for server verification.</li>
 </ul>
-<h2>Install / Use</h2>
-<p>1. Deploy and install the <strong>Chevron Lock</strong> app on your subreddit.</p>
-<p>2. Open the subreddit post creation menu or moderator actions.</p>
-<p>3. Select <strong>Create Chevron Lock Post</strong> to spawn an interactive dialing console post for your community.</p>
+<h3>Server-Authoritative State Engine</h3>
+<p>Every sequence validation, timing grace period, stability reduction, and score calculation is resolved inside Devvit server endpoints. Player choices cannot be spoofed, and high-precision composite scores are stored in Redis sorted sets.</p>
+<h2>The Old Way vs. The Chevron Lock Way</h2>
+<h2>Privacy & Fair Play</h2>
+<p>Chevron Lock stores only standard Reddit usernames, anonymized user IDs, and mission scores in subreddit-scoped Redis storage. No personal data, tracking cookies, or external server calls are utilized. All gameplay is purely server-verified for community fair play.</p>
 <h2>Support</h2>
 <p>For help, bug reports, or feature requests, post in r/grantdb.</p>
 <p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>

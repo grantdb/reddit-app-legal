@@ -1,7 +1,7 @@
 # Chevron Lock
 
 Category: Interactive  
-Version: v0.0.13  
+Version: v0.0.14  
 Visibility: Unlisted  
 Summary: Stargate-inspired 7-chevron dialing console puzzle game.
 
@@ -9,16 +9,7 @@ Summary: Stargate-inspired 7-chevron dialing console puzzle game.
 Stargate-inspired 7-chevron dialing console puzzle game.
 
 ## Key Features
-- Dynamic Dialing Engine: Encode destination glyphs plus the Point of Origin (Alpha Origin) under strict time pressure across gate sequences scaling from 3 to 7 chevrons.
-- Dynamic Round Types:
-- Recall: Memorize a valid gate address during a brief preview window, then reconstruct it from memory.
-- Repair: Detect corrupted DHD chevron slots (`?`) and substitute them with correct glyphs from the DHD pool.
-- Reorder: Observe a memory preview, then swap scrambled chevron slots back into canonical sequence before time expires.
-- Round Escalating Run: Smooth 3-round onboarding ramp (3 to 4 chevrons, 0 decoys) that scales up to a full 7-chevron Master Gate Lock in Round 7.
-- Daily Seeded Challenge: A canonical daily address sequence shared deterministically across all players on the same UTC day.
-- Server-Authoritative Engine: All scoring, sequence validation, timing checks, stability penalties, and leaderboard writes are computed strictly on the server.
-- Redis Leaderboards & Tie-Handling: Subreddit all-time and daily sorted sets with score preservation (no lower-score overwrites) and high-precision timestamp tie-breaking.
-- SGC Dialing Console UI: Dark graphite aesthetics, glowing teal chevrons, telemetry readouts, stability bars, and amber/red alert pulses.
+- Not documented yet.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
@@ -53,22 +44,23 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key patterns: node:http, chevlock:daily
 
 ## Setup and Usage
-- Install: Add app via Reddit App Directory.
-- Configure: Open Mod Tools -> App Settings in your subreddit to configure options.
-- Launch: Use mod menu or triggers as configured.
+- Install: Add Chevron Lock to your subreddit via the Devvit developer platform.
+- Launch Post: Open the subreddit Moderator Menu and select "Create Chevron Lock Post"**.
+- Configure Options: The post embeds an interactive dialing console directly in your community feed.
+- Deploy & Compete: Community members dial gate addresses, maintain stability, and compete for top operator rankings.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.14 — 2026-10-03
+- Standard fleet synchronization and maintenance.
+
 0.0.13 — 2026-09-20
 - Standard fleet synchronization and maintenance.
 
 0.0.12 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-0.0.11 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 ## Links

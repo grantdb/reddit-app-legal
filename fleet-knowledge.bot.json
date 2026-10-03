@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-03T11:10:30.785Z",
+  "generatedAt": "2026-10-03T11:20:54.583Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2364,7 +2364,12 @@
         "interactive",
         "chevronlock"
       ],
-      "setupSteps": [],
+      "setupSteps": [
+        "Install: Add Chevron Lock to your subreddit via the Devvit developer platform.",
+        "Launch Post: Open the subreddit Moderator Menu and select \"Create Chevron Lock Post\"**.",
+        "Configure Options: The post embeds an interactive dialing console directly in your community feed.",
+        "Deploy & Compete: Community members dial gate addresses, maintain stability, and compete for top operator rankings."
+      ],
       "commonIssues": [],
       "troubleshooting": {
         "install_setup": [],
@@ -2400,7 +2405,7 @@
         "troubleshooting": "Check the Chevron Lock troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-10-03"
     },
     {
       "appId": "testrank",
