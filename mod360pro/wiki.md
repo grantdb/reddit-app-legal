@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.32  
+Version: v0.0.33  
 Visibility: Unlisted  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -76,17 +76,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.33 — 2026-10-03
+- Standard fleet synchronization and maintenance.
+
 0.0.32 — 2026-09-29
 - Standard fleet synchronization and maintenance.
 
 0.0.31 — 2026-09-29
 - Standard fleet synchronization and maintenance.
-
-0.0.31 — 2026-09-29
-- UX & Architecture: Consolidated 11 horizontal tabs into 5 clean primary functional domains (Overview & Triage, Content Policies, Author & Cadence, Enforcement & Actions, Wiki & Backups) with secondary segmented sub-navigation pills.
-- Brand Purification: Removed all vestigial sub-app code names and references (GuardHub, Verify-Guard, Queue-Guard, Quarantine-Guard, Rescue-Guard, Wiki-Guard, Mod-Snapshot, Archive-Guard) in favor of clean, native Mod360 Pro modules.
-- Settings Overhaul: Upgraded raw form inputs into descriptive cards with clear labels, contextual explanations, and recommended community defaults.
-- Devvit SDK 0.14.6: Aligned platform dependencies to Devvit 0.14.6 with persistent dynamic cron job support and streamlined lifecycle logging.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/TERMS.md)
