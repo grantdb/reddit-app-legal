@@ -6,18 +6,21 @@
 
 Ultimate WWE Hub powers a synchronized multi-post ecosystem for r/UltimateWWE and wrestling communities, featuring dedicated standalone custom posts for:
 1. **Live Event & Prediction Mega-Threads**: Real-time match cards, official winners, and fan prediction Pick 'Em ballots.
-2. **Community Championship Belts & All-Time Leaderboards**: Pinned trophy case displaying gold championship titles (World, Intercontinental, PLE Cup, 24/7 Hardcore, Women's World), active champions, title defense histories, and season rankings.
-3. **Upcoming Matches & PLE Schedule Hub**: Pinned countdown clock to the next major PLE (e.g. WrestleMania, SummerSlam, Royal Rumble), weekly show lineups (Raw on Netflix, SmackDown on USA, NXT on CW), and fan sentiment voting.
+2. **Superstar Stats, Records & Analytics Hub**: 2026 season win/loss records, win percentages, active streaks, title defenses, and Tale of the Tape comparisons across Raw, SmackDown, and NXT.
+3. **Community Championship Belts & All-Time Leaderboards**: Pinned trophy case displaying gold championship titles (World, Intercontinental, PLE Cup, 24/7 Hardcore, Women's World), active champions, title defense histories, and season rankings.
+4. **Upcoming Matches & PLE Schedule Hub**: Pinned countdown clock to the next major PLE (e.g. WrestleMania, SummerSlam, Royal Rumble), weekly show lineups (Raw on Netflix, SmackDown on USA, NXT on CW), and fan sentiment voting.
 
-All three post types share synchronized Redis state across the subreddit so points scored in any live event immediately update championship belt holders, reign counters, and leaderboards.
+All four post types share synchronized Redis state across the subreddit and feature a dedicated Companion Mega-Thread Hub bar so fans can instantly jump between active topic threads.
 
 ### Key Highlights
-- **Multi-Post Architecture**: 3 dedicated custom post types provisioned directly from the subreddit moderator menu (`...`).
+- **Multi-Post Architecture**: 4 dedicated custom post types provisioned directly from the subreddit moderator menu (`...`).
+- **Topic-Specific Mega-Threads**: Each post features tailored navigation and focused views (Matches, Stats, Belts, or Schedule) rather than an overloaded all-in-one menu.
+- **Companion Hub Cross-Navigation**: Direct quick-jump navigation connecting all active WWE mega-threads across the subreddit.
+- **Superstar Analytics & Tale of the Tape**: Complete roster win/loss tracking, brand filters, active streak rankings, and head-to-head matchup comparisons.
 - **Interactive Match Scoreboard**: Live card tracking match stipulations, championship indicators, match progress, and official winner banners.
 - **Fan Pick 'Em Game**: Intuitive prediction ballots enabling community members to predict match outcomes before showtime with one-click locks.
-- **Championship Belts Trophy Case**: Automated belt defense and transfers (World Heavyweight Title to all-time #1, PLE Cup to top event scorer) with complete title reign histories.
+- **Championship Belts Trophy Case**: Automated belt defense and transfers with complete title reign histories.
 - **PLE Countdown & Broadcast Guide**: Real-time live countdown timer to the next major event alongside weekly TV show schedules and community hype voting.
-- **Unified Section Navigation**: Smooth tab navigation allowing fans to instantly explore the live match card, pick 'em game, championship trophy case, and PLE schedule within any hub post.
 - **Universal Mobile Scrolling**: Engineered with zero-scroll-trap mobile navigation (`overscroll-behavior-y: auto`) and 48px fine-tuned horizontal tab scrolling.
 
 ---
@@ -25,8 +28,8 @@ All three post types share synchronized Redis state across the subreddit so poin
 ## How It Works
 
 ### The 4-Step Lifecycle
-1. **Thread Deployment**: A moderator selects one of the 3 custom post creation menu actions (**Create WWE Live Event Thread**, **Create Championship Belts & Leaderboard Post**, or **Create Upcoming Matches & Schedule Post**).
-2. **Community Engagement & Pre-Show Predictions**: Before the opening bell, community members make their picks, review the championship trophy case, and vote on upcoming show excitement.
+1. **Thread Deployment**: A moderator selects one of the 4 custom post creation menu actions (**Create WWE Live Event Thread**, **Create Superstar Stats & Records Post**, **Create Championship Belts & Leaderboard Post**, or **Create Upcoming Matches & Schedule Post**).
+2. **Community Engagement & Pre-Show Predictions**: Before the opening bell, community members make their picks, explore superstar analytics, review the championship trophy case, and vote on upcoming show excitement.
 3. **Showtime Lock**: When the event start time is reached (or when a moderator toggles the lock), predictions lock immediately across all clients.
 4. **Live Scoring & Title Defenses**: As matches conclude, moderators declare official winners. The scoring engine evaluates submitted ballots, updates leaderboards, and automatically awards or defends championship belts in real time!
 
@@ -35,7 +38,7 @@ All three post types share synchronized Redis state across the subreddit so poin
 ## Quick Setup (60-Second Onboarding)
 
 1. **Install**: Add **Ultimate WWE Hub** to your subreddit via the Reddit Developer portal or App Directory.
-2. **Launch Pinned Hub Posts**: From your subreddit menu (`...`), deploy the **Championship Belts & Leaderboard Post** and **Upcoming Matches & Schedule Post** as pinned community anchors.
+2. **Launch Pinned Hub Posts**: From your subreddit menu (`...`), deploy the **Superstar Stats & Records Post**, **Championship Belts & Leaderboard Post**, and **Upcoming Matches & Schedule Post** as pinned community anchors.
 3. **Deploy Live Event Thread**: On event night, select **Create WWE Live Event Thread** to launch the show mega-thread.
 4. **Score & Crown Champions**: Declare winners as the broadcast unfolds and click **Score Event & Defend Belts** to crown champions and update community rankings!
 

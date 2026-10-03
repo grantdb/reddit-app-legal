@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-29T22:30:43.953Z",
+  "generatedAt": "2026-10-03T05:27:54.103Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2853,7 +2853,7 @@
       ],
       "setupSteps": [
         "Install: Add Ultimate WWE Hub to your subreddit via the Reddit Developer portal or App Directory.",
-        "Launch Pinned Hub Posts: From your subreddit menu (`...`), deploy the Championship Belts & Leaderboard Post and Upcoming Matches & Schedule Post as pinned community anchors.",
+        "Launch Pinned Hub Posts: From your subreddit menu (`...`), deploy the Superstar Stats & Records Post, Championship Belts & Leaderboard Post, and Upcoming Matches & Schedule Post as pinned community anchors.",
         "Deploy Live Event Thread: On event night, select Create WWE Live Event Thread to launch the show mega-thread.",
         "Score & Crown Champions: Declare winners as the broadcast unfolds and click Score Event & Defend Belts to crown champions and update community rankings!"
       ],
@@ -2894,7 +2894,7 @@
         "troubleshooting": "Check the Ultimate WWE Hub troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-20"
+      "lastUpdated": "2026-10-03"
     },
     {
       "appId": "wiki-guard",

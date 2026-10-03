@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.9  
+Version: v0.0.10  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -45,7 +45,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install: Add Ultimate WWE Hub to your subreddit via the Reddit Developer portal or App Directory.
-- Launch Pinned Hub Posts: From your subreddit menu (`...`), deploy the Championship Belts & Leaderboard Post and Upcoming Matches & Schedule Post as pinned community anchors.
+- Launch Pinned Hub Posts: From your subreddit menu (`...`), deploy the Superstar Stats & Records Post, Championship Belts & Leaderboard Post, and Upcoming Matches & Schedule Post as pinned community anchors.
 - Deploy Live Event Thread: On event night, select Create WWE Live Event Thread to launch the show mega-thread.
 - Score & Crown Champions: Declare winners as the broadcast unfolds and click Score Event & Defend Belts to crown champions and update community rankings!
 
@@ -54,6 +54,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.10 — 2026-10-03
+- Standard fleet synchronization and maintenance.
+
 0.0.9 — 2026-09-26
 - Standard fleet synchronization and maintenance.
 
@@ -62,9 +65,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Streamlined post layout to start directly with the event brand header and canonical fleet navigation tab bar.
 - Removed footer Terms and Privacy external links for clean, private subreddit in-webview operation.
 - Eliminated redundant hub banner styles, click listeners, and active state synchronizers.
-
-0.0.8 — 2026-09-26
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
