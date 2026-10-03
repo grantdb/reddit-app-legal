@@ -1,31 +1,60 @@
-> **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/sgteam-dispatch)
-
 # SG Team Dispatch
 
-**SG Team Dispatch** is a replayable Stargate SG-1 inspired tactical mission command game engineered directly for Reddit custom posts. Commanders assemble specialized SG team rosters, manage offworld resources, and navigate multi-stage tactical encounters against Goa'uld, Replicator, and environmental threats.
+![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
+![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
+![Gaming](https://img.shields.io/badge/Category-Interactive-blue?style=for-the-badge)
+![Type](https://img.shields.io/badge/Type-Game-8A2BE2?style=for-the-badge)
 
-## Key Features
+> **Lead elite SG-1 tactical squads through offworld Stargate operations directly inside Reddit.**
 
-- **Tactical SG Team Roster Selection**: Assemble specialized 4-member SG teams (Commander, Archaeologist, Engineer, Heavy Specialist, Tactical Specialist) with unique stat bonuses and role synergies.
-- **Dynamic Offworld Encounters**: Multi-phase tactical missions (Opener, Mid-Game, Extraction) with branching risk choices influenced by biome, threat levels, and team role perks.
-- **Resource & Threat Status Management**: Balance team Health, Time, Intel, Morale, and Goa'uld Alert meters to ensure mission success and safe gate extraction.
-- **Daily Seeded Operations & Random Runs**: Play canonical daily offworld missions shared deterministically across the subreddit or command procedurally generated random operations.
-- **Server-Authoritative State Engine**: All encounter options, decision tracking, resource state mutations, score evaluations, and ending tier determinations are computed strictly on the server.
-- **Redis Leaderboards & Tie-Handling**: Subreddit all-time and daily command leaderboards with score preservation (no lower-score overwrites) and high-precision timestamp tie-breaking.
+Commanders assemble specialist rosters, balance vital offworld squad resources, and navigate multi-phase branching tactical encounters against Goa'uld and offworld hazards. Compete on subreddit all-time and daily seed leaderboards with server-authoritative state security.
+
+### Key Highlights
+- **Specialist Squad Synergy**: Assemble 4-member rosters across Commander, Archaeologist, Engineer, Heavy Specialist, and Tactical Specialist roles.
+- **Dynamic Branching Missions**: 5 multi-tier encounter stages with risk-reward tactical decisions shaped by specialist perks.
+- **Subreddit Leaderboards**: True server-authoritative scoring with zero client trust, monotonic personal best tracking, and daily seeded challenges.
+- **Zero Scroll Traps**: Native inline preview with 8px gesture drag guard and seamless high-contrast tactical webview console.
 
 ## How It Works
 
-1. A moderator launches a new **SG Team Dispatch** post directly from the subreddit Mod Menu.
-2. Players open the post to choose between a **Random Mission** or **Daily Operation**.
-3. Commanders configure their 4-member SG team roster based on mission biome and threat analysis.
-4. Commanders evaluate tactical choices across 3 encounter phases, balancing risk levels against team perks and resource constraints.
-5. On mission completion or team evacuation, the server tallies final score breakdowns, assigns ending mission tiers, and updates subreddit leaderboards.
+### The 5-Step Mission Lifecycle
+1. **Mission Briefing**: Commanders review offworld sector data in an inline Reddit post and select Procedural Dispatch or Daily SGC Operation.
+2. **Squad Loadout**: Select 4 specialists whose unique stat bonuses and role perks provide tactical advantages in offworld scenarios.
+3. **Offworld Exploration**: Progress through 5 encounter phases, balancing Health, Time, Intel, Morale, and Goa'uld Alert meters.
+4. **Tactical Decisions**: Choose between aggressive, diplomatic, or technical solutions based on active squad composition.
+5. **Debrief & Extraction**: Extract through the Stargate to receive a comprehensive scoring breakdown and lock in subreddit rankings.
 
-## Setup & Configuration
+## Quick Setup (60-Second Onboarding)
 
-1. **Install**: Add **SG Team Dispatch** to your subreddit via the Devvit platform.
-2. **Post Creation**: Open the Mod Menu on your subreddit and select "Create SG Team Dispatch Post".
-3. **Play & Compete**: Commanders interact with the mission control canvas directly inside Reddit on mobile or desktop.
+1. **Install**: Add **SG Team Dispatch** to your subreddit from the Reddit Developer portal or app directory.
+2. **Launch Post**: Open the subreddit Moderator Menu and select **"Create SG Team Dispatch Post"**.
+3. **Configure Options**: The post embeds an interactive tactical mission command console directly in your community feed.
+4. **Deploy & Compete**: Subreddit members assemble squads, deploy offworld, and compete for top commander rankings.
+
+## Core Capabilities
+
+### Squad Composition & Role Perks
+Assemble your dream team from 5 distinct SGC specializations. Archaeologists excel at Goa'uld artifact diplomacy, Engineers bypass Ancient defense grids, Heavy Specialists neutralize enemy patrols, Tactical Specialists minimize alarm escalation, and Commanders maintain squad morale in crisis situations.
+
+### Dual Mission Modes
+- **Procedural Dispatch**: Endless randomized offworld missions with dynamic biomes (Ancient Ruins, Goa'uld Stronghold, Alien Outpost).
+- **Daily SGC Operation**: A synchronized, deterministic daily mission seed shared across all subreddit members for fair daily competition.
+
+### Server-Authoritative State Engine
+Every tactical choice, resource mutation, and score calculation is validated and resolved inside Devvit server endpoints. Player choices cannot be spoofed, and scores are verified server-side with atomic Redis sorted-set storage.
+
+## The Old Way vs. The SG Team Dispatch Way
+
+| Feature | Old Text Scenarios | The SG Team Dispatch Way |
+| :--- | :--- | :--- |
+| **Experience** | Passive static reading | Interactive SGC tactical command console |
+| **Mechanics** | No resource constraints | 5 balancing meters (Health, Time, Intel, Morale, Alert) |
+| **Competition** | Manual comment tallying | Real-time Redis leaderboards & daily seeded runs |
+| **Security** | Easily spoofed claims | Server-authoritative state resolution & zero client trust |
+
+## Privacy & Fair Play
+
+SG Team Dispatch stores only standard Reddit usernames, anonymized user IDs, and mission scores in subreddit-scoped Redis storage. No personal data, tracking cookies, or external server calls are utilized. All gameplay is purely server-verified for community fair play.
 
 ## Support
 
@@ -35,8 +64,8 @@ Please include the app name, what you expected, what happened, and any error tex
 ## Legal
 
 This application is subject to standard legal agreements:
-- [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/stargate-trivia/TERMS.md)
-- [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/stargate-trivia/PRIVACY.md)
+- [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/sgteam-dispatch/TERMS.md)
+- [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/sgteam-dispatch/PRIVACY.md)
 
 ---
 *Built for fun on Reddit*
