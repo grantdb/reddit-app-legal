@@ -1,7 +1,7 @@
 # Gate Defender
 
 Category: Interactive  
-Version: v0.0.102  
+Version: v0.0.103  
 Visibility: Public  
 Summary: Arcade survival shooter for Stargate SG-1 fans. Defend the SGC wormhole from waves of Goa'uld invaders, fortify Ancient ruins, and compete on the global SGC Operatives leaderboard.
 

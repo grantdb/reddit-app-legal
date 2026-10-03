@@ -1,7 +1,7 @@
 # Ring Escape: Serpent Flagship
 
 Category: Interactive  
-Version: v0.0.68  
+Version: v0.0.69  
 Visibility: Unlisted  
 Summary: Stealth infiltration game. Sabotage four systems aboard a Serpent Empire warship and escape through the rings.
 
@@ -9,11 +9,7 @@ Summary: Stealth infiltration game. Sabotage four systems aboard a Serpent Empir
 Stealth infiltration game. Sabotage four systems aboard a Serpent Empire warship and escape through the rings.
 
 ## Key Features
-- Stealth & Sabotage Mechanics: Deep gameplay loop requiring players to navigate a multi-level ship, stun guards tactically, and sabotage critical systems to unlock the extraction point.
-- Multi-Level Progression: Escalating challenges across multiple distinct levels, ensuring players remain engaged over long play sessions.
-- Persistent Global Leaderboards: Automatically tracks high scores on the main post to encourage long-term community competition and rivalry.
-- Cross-Platform Support: Enjoy precise keyboard controls on desktop web browsers and highly responsive on-screen touch controls for Reddit mobile apps.
-- Autonomous Game Logic: Fully automated score submission and level management. Once the event is launched, it runs entirely on its own without requiring any moderator oversight.
+- Not documented yet.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
@@ -35,7 +31,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - Submits Automated Comments: No — Does not submit automated comments.
 - Attaches Removal Notes: No — Does not attach removal notes.
 - Approves Content: No — Does not approve content.
-- Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
+- Removes or Filters Content: No — Does not remove or filter content.
 - Dispatches Modmail Alerts: No — Does not send modmail notifications.
 - Updates User or Post Flair: No — Does not update flair.
 
@@ -47,22 +43,23 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key patterns: node:http
 
 ## Setup and Usage
-- Install: Add Ring Escape to your subreddit via the App Directory.
-- App Settings: Open your subreddit's App Settings to configure optional parameters or custom messaging for the leaderboard.
-- Usage: To start a community event, simply open the Mod Menu anywhere in your subreddit and select the "Create Ring Escape Post" action to spawn a new game post.
+- Install: Add Ring Escape to your subreddit via the Reddit App Directory.
+- Launch Post: Open the Mod Menu anywhere in your subreddit and select "Create Ring Escape Post"**.
+- Engage Community: Members click "Play Mission"** inline to launch the expanded gameplay canvas.
+- Track Rivalries: High scores and ranks update automatically on the post's live leaderboard.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.69 — 2026-10-03
+- Standard fleet synchronization and maintenance.
+
 0.0.68 — 2026-09-21
 - Standard fleet synchronization and maintenance.
 
 0.0.67 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-0.0.66 — 2026-09-08
 - Standard fleet synchronization and maintenance.
 
 ## Links

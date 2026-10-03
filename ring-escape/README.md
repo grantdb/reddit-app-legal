@@ -1,9 +1,6 @@
-# Ring Escape
+> **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/ring-escape)
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Interactive%20Game-blue?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Operational-brightgreen?style=for-the-badge)
+# Ring Escape
 
 > **Infiltrate a Goa'uld Serpent Flagship, sabotage critical subsystems, and escape through the Ring Transporter before the clock runs out.**
 
@@ -70,3 +67,6 @@ When reporting an issue, please include the deck number, device (desktop browser
 ---
 
 *Built with ♥ for the Stargate SG-1 community on Reddit*
+
+---
+*Built for fun on Reddit*

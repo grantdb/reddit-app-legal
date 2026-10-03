@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-03T10:29:41.414Z",
+  "generatedAt": "2026-10-03T10:56:50.648Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -723,9 +723,10 @@
         "ring escape"
       ],
       "setupSteps": [
-        "Install: Add Ring Escape to your subreddit via the App Directory.",
-        "App Settings: Open your subreddit's App Settings to configure optional parameters or custom messaging for the leaderboard.",
-        "Usage: To start a community event, simply open the Mod Menu anywhere in your subreddit and select the \"Create Ring Escape Post\" action to spawn a new game post."
+        "Install: Add Ring Escape to your subreddit via the Reddit App Directory.",
+        "Launch Post: Open the Mod Menu anywhere in your subreddit and select \"Create Ring Escape Post\"**.",
+        "Engage Community: Members click \"Play Mission\"** inline to launch the expanded gameplay canvas.",
+        "Track Rivalries: High scores and ranks update automatically on the post's live leaderboard."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -764,7 +765,7 @@
         "troubleshooting": "Check the Ring Escape: Serpent Flagship troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-06"
+      "lastUpdated": "2026-10-03"
     },
     {
       "appId": "app-update-checker",
