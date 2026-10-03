@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-03T10:56:50.648Z",
+  "generatedAt": "2026-10-03T11:10:30.785Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2306,9 +2306,10 @@
         "sgteam dispatch"
       ],
       "setupSteps": [
-        "Install: Add SG Team Dispatch to your subreddit via the Devvit platform.",
-        "Post Creation: Open the Mod Menu on your subreddit and select \"Create SG Team Dispatch Post\".",
-        "Play & Compete: Commanders interact with the mission control canvas directly inside Reddit on mobile or desktop."
+        "Install: Add SG Team Dispatch to your subreddit from the Reddit Developer portal or app directory.",
+        "Launch Post: Open the subreddit Moderator Menu and select \"Create SG Team Dispatch Post\"**.",
+        "Configure Options: The post embeds an interactive tactical mission command console directly in your community feed.",
+        "Deploy & Compete: Subreddit members assemble squads, deploy offworld, and compete for top commander rankings."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -2345,7 +2346,7 @@
         "troubleshooting": "Check the SG Team Dispatch troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-10-03"
     },
     {
       "appId": "chevron-lock",

@@ -1,7 +1,7 @@
 # SG Team Dispatch
 
 Category: Interactive  
-Version: v0.0.6  
+Version: v0.0.7  
 Visibility: Unlisted  
 Summary: Replayable Stargate SG-1 inspired tactical mission command game.
 
@@ -9,12 +9,7 @@ Summary: Replayable Stargate SG-1 inspired tactical mission command game.
 Replayable Stargate SG-1 inspired tactical mission command game.
 
 ## Key Features
-- Tactical SG Team Roster Selection: Assemble specialized 4-member SG teams (Commander, Archaeologist, Engineer, Heavy Specialist, Tactical Specialist) with unique stat bonuses and role synergies.
-- Dynamic Offworld Encounters: Multi-phase tactical missions (Opener, Mid-Game, Extraction) with branching risk choices influenced by biome, threat levels, and team role perks.
-- Resource & Threat Status Management: Balance team Health, Time, Intel, Morale, and Goa'uld Alert meters to ensure mission success and safe gate extraction.
-- Daily Seeded Operations & Random Runs: Play canonical daily offworld missions shared deterministically across the subreddit or command procedurally generated random operations.
-- Server-Authoritative State Engine: All encounter options, decision tracking, resource state mutations, score evaluations, and ending tier determinations are computed strictly on the server.
-- Redis Leaderboards & Tie-Handling: Subreddit all-time and daily command leaderboards with score preservation (no lower-score overwrites) and high-precision timestamp tie-breaking.
+- Not documented yet.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
@@ -49,22 +44,23 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key patterns: node:http, sgtd:daily
 
 ## Setup and Usage
-- Install: Add SG Team Dispatch to your subreddit via the Devvit platform.
-- Post Creation: Open the Mod Menu on your subreddit and select "Create SG Team Dispatch Post".
-- Play & Compete: Commanders interact with the mission control canvas directly inside Reddit on mobile or desktop.
+- Install: Add SG Team Dispatch to your subreddit from the Reddit Developer portal or app directory.
+- Launch Post: Open the subreddit Moderator Menu and select "Create SG Team Dispatch Post"**.
+- Configure Options: The post embeds an interactive tactical mission command console directly in your community feed.
+- Deploy & Compete: Subreddit members assemble squads, deploy offworld, and compete for top commander rankings.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.7 — 2026-10-03
+- Standard fleet synchronization and maintenance.
+
 0.0.6 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 0.0.5 — 2026-09-02
-- Standard fleet synchronization and maintenance.
-
-0.0.4 — 2026-08-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
