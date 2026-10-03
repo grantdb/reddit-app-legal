@@ -114,11 +114,6 @@
     "version": "0.0.55",
     "visibility": "unlisted"
   },
-  "pinned-menuboard": {
-    "name": "Pinned Menuboard",
-    "version": "0.0.79",
-    "visibility": "public"
-  },
   "queue-guard": {
     "name": "QueueGuard",
     "version": "0.0.46",
@@ -233,6 +228,11 @@
     "name": "AutoMod Easy",
     "version": "0.0.150",
     "visibility": "public"
+  },
+  "pinned-menuboard": {
+    "name": "Pinned Menuboard",
+    "version": "0.0.80",
+    "visibility": "unlisted"
   },
   "user-board": {
     "name": "User Board",

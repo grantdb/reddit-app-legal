@@ -1,7 +1,7 @@
 # Gate Defender
 
 Category: Interactive  
-Version: v0.0.101  
+Version: v0.0.102  
 Visibility: Public  
 Summary: Community security gatekeeper. React Webview-based entry validation.
 
@@ -9,11 +9,14 @@ Summary: Community security gatekeeper. React Webview-based entry validation.
 Community security gatekeeper. React Webview-based entry validation.
 
 ## Key Features
-- High-Velocity Survival Mechanics: Fast-paced, responsive arcade gameplay that relies on quick reflexes and pattern recognition.
-- Persistent Global Leaderboards: Features a real-time "Top 10" ranking system embedded directly in the post to encourage recurring community engagement and rivalry.
-- Mobile-Optimized Interface: Custom-built and rigorously tested to ensure smooth performance and touch controls across all Reddit mobile platforms and desktop web.
-- Interactive Onboarding: Features a pre-game splash screen providing swift, easy-to-understand tutorial instructions so players can jump right in.
-- Moderator-Initiated Launch: Simple, one-click deployment via the Subreddit Moderator Menu makes it incredibly easy for mod teams to schedule gaming events or weekend community threads.
+- High-Velocity Survival Mechanics: Fast-paced, responsive arcade gameplay with adaptive turret aiming, recoil physics, and bullet collision detection.
+- Iris Barrier Defense Dome: An energy shield dome covering the gate that absorbs up to 12 incoming plasma blasts and vaporizes invaders that ram the gate perimeter.
+- Mobile Defensive Flank Formation: On mobile viewports, the perimeter automatically structures into a symmetric 6-ruin defensive arc flanking the turret.
+- Kill-Streak Overcharge & Bonus Shields: In desktop/fullscreen mode, maintaining a 10-kill streak without taking damage rewards bonus Iris Barrier integrity (+5 hits), reserve ammo (+60), and personal turret shield repair.
+- Persistent Global Leaderboards: Real-time "Top 10" ranking system embedded directly in the post to encourage community rivalry and tournament events.
+- Adaptive Cross-Device Controls: Seamless responsive viewport re-anchoring across desktop, tablet, and mobile layouts with unified Pointer Events and touch controls.
+- Interactive Onboarding: Pre-game splash screen providing rapid tutorial instructions and one-click launch directly into expanded mode.
+- Moderator-Initiated Launch: Simple one-click deployment via the Subreddit Moderator Menu to schedule gaming events or community threads.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
@@ -56,13 +59,19 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.102 — 2026-10-03
+- Viewport Resize & Firing Fix: Resolved bug where switching from desktop to mobile viewport in the UI Simulator or rotating devices caused the turret and world coordinates to stay outside the canvas boundaries, immediately culling all fired projectiles.
+- Unified Pointer Engine: Migrated touch and mouse handlers to unified Pointer Events with `setPointerCapture`, `touch-action: none` on game canvas, and proper release cleanup on `blur` and `visibilitychange`.
+- Iris Barrier Defense Dome: Introduced planetary shield absorbing up to 12 plasma blasts and vaporizing invading attackers on collision.
+- Mobile Flank Formation: Standardized mobile layout to max 6 ancient ruins placed in a balanced defensive arc flanking the gate turret.
+- Desktop Kill-Streak Bonus: Enabled 10-kill streak rewards on desktop/fullscreen granting bonus Iris Barrier integrity (+5 hits), extra ammo (+60), and personal turret shield repair, with 30% ammo drop probability.
+- Plausibility Score Check: Raised server-side score plausibility limit from 250 to 2500 pts/sec after runtime audit revealed genuine high-score runs were being falsely rejected.
+- HUD & Status Feedback: Stacked mobile HUD downward beneath score display to prevent touch-control overlap, and added real-time score transmission status feedback on game-over screen.
+
 0.0.101 — 2026-09-21
 - Standard fleet synchronization and maintenance.
 
 0.0.100 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-0.0.99 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 ## Links
