@@ -5,8 +5,8 @@
 <p>---</p>
 <h2>At a Glance</h2>
 <ul>
-<li><strong>Sub-10ms Pre-AutoMod Gate</strong>: Intercepts spam floods, suspended accounts, and duplicate posts on `onPostSubmit` before content enters the community.</li>
-<li><strong>Deep Multi-Rule Content Engine</strong>: Evaluates domain policies, keyword regexes, author verification, and topic guides on `onPostCreate`.</li>
+<li><strong>Sub-10ms Pre-AutoMod Gate</strong>: Intercepts rapid-fire submission floods and duplicate content hashes on `onPostSubmit` via atomic Redis before content enters the community.</li>
+<li><strong>Deep Multi-Rule Content Engine</strong>: Evaluates author status (suspended/shadowbanned accounts), domain policies, keyword regexes, title format rules, and topic guides on `onPostCreate`.</li>
 <li><strong>Timed Quarantine State Machine</strong>: Holds marginal posts in a temporary quarantine (15m–48h) with automated expiration timers and 1-click mod release.</li>
 <li><strong>Single Consolidated Sticky Notice</strong>: Groups all rule violations into exactly one clean markdown notice. Zero bot comment clutter.</li>
 <li><strong>0–100 Reputation Safety Score</strong>: Instant algorithmic trust score computed from account age, karma ratio, verified email, and domain history.</li>
@@ -21,8 +21,8 @@
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod360pro-flowchart.png">Logic Flowchart</a></p>
 <h3>The 5-Step Operational Flow</h3>
-<p>1. <strong>Fast-Gate Interception (`onPostSubmit`)</strong>: Incoming submissions pass through an atomic Redis gate in single-digit milliseconds, blocking known spam rings, banned authors, and rapid-fire flood bursts.</p>
-<p>2. <strong>Deep Content Inspection (`onPostCreate`)</strong>: Surviving posts undergo modular inspection across keyword lists, domain rules, title compliance, and author verification tiers.</p>
+<p>1. <strong>Fast-Gate Interception (`onPostSubmit`)</strong>: Incoming submissions pass through an atomic Redis gate in single-digit milliseconds, blocking duplicate cross-posts and rapid-fire flood bursts without external API round-trips.</p>
+<p>2. <strong>Deep Content Inspection (`onPostCreate`)</strong>: Surviving posts undergo modular inspection across author status (suspended / shadowbanned accounts), keyword regex lists, domain rules, title compliance, and verification tiers.</p>
 <p>3. <strong>Quarantine or Verdict</strong>: Clear violations trigger immediate removal with concurrency locks (`SET NX`); borderline posts enter the timed quarantine state machine awaiting manual review or auto-expiry.</p>
 <p>4. <strong>Single-Notice Dispatch</strong>: Violations are assembled into a single formatted sticky comment detailing exact community guidelines violated and appeal steps.</p>
 <p>5. <strong>Rescue Hub Logging</strong>: Removed items are archived into the in-dashboard Rescue Hub, allowing any moderator to reverse false positives with one click.</p>

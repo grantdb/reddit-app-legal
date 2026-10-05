@@ -10,8 +10,8 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
 
 ## At a Glance
 
-- **Sub-10ms Pre-AutoMod Gate**: Intercepts spam floods, suspended accounts, and duplicate posts on `onPostSubmit` before content enters the community.
-- **Deep Multi-Rule Content Engine**: Evaluates domain policies, keyword regexes, author verification, and topic guides on `onPostCreate`.
+- **Sub-10ms Pre-AutoMod Gate**: Intercepts rapid-fire submission floods and duplicate content hashes on `onPostSubmit` via atomic Redis before content enters the community.
+- **Deep Multi-Rule Content Engine**: Evaluates author status (suspended/shadowbanned accounts), domain policies, keyword regexes, title format rules, and topic guides on `onPostCreate`.
 - **Timed Quarantine State Machine**: Holds marginal posts in a temporary quarantine (15m–48h) with automated expiration timers and 1-click mod release.
 - **Single Consolidated Sticky Notice**: Groups all rule violations into exactly one clean markdown notice. Zero bot comment clutter.
 - **0–100 Reputation Safety Score**: Instant algorithmic trust score computed from account age, karma ratio, verified email, and domain history.
@@ -26,8 +26,8 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
 
 | Pipeline Stage | Event Trigger | Evaluation Scope | Standard Latency | Default Action |
 | :--- | :--- | :--- | :--- | :--- |
-| **Stage 1: Pre-Filter** | `onPostSubmit` | Suspended / shadowbanned users, duplicate hashes, sliding-window rate limits | `< 8ms` (Redis-only) | Immediate Reject & Filter |
-| **Stage 2: Deep Evaluation** | `onPostCreate` | Domain allow/blocklists, regex keywords, title format rules, email verification | `< 35ms` | Atomic Removal & Lock |
+| **Stage 1: Pre-Filter** | `onPostSubmit` | Duplicate content hashes, sliding-window frequency & burst limits | `< 8ms` (Redis-only) | Immediate Reject & Filter |
+| **Stage 2: Deep Evaluation** | `onPostCreate` | Suspended / shadowbanned users, domain policies, regex keywords, title format | `< 35ms` | Atomic Removal & Lock |
 | **Stage 3: Timed Quarantine** | Post Evaluation | Marginal domains, new user threshold edge-cases, flagged link shorteners | Instant State Transition | Hold with Countdown Timer |
 | **Stage 4: Topic Guide Match** | Clean Submissions | Community FAQ keywords, guide tags, resource suggestions | Non-blocking | Suggest Resource Wiki |
 | **Stage 5: Notice & Audit** | Violations Detected | Markdown notification consolidation, rescue log capture, atomic lock | Synchronous | Single Sticky Notice |
@@ -40,8 +40,8 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
 
 ### The 5-Step Operational Flow
 
-1. **Fast-Gate Interception (`onPostSubmit`)**: Incoming submissions pass through an atomic Redis gate in single-digit milliseconds, blocking known spam rings, banned authors, and rapid-fire flood bursts.
-2. **Deep Content Inspection (`onPostCreate`)**: Surviving posts undergo modular inspection across keyword lists, domain rules, title compliance, and author verification tiers.
+1. **Fast-Gate Interception (`onPostSubmit`)**: Incoming submissions pass through an atomic Redis gate in single-digit milliseconds, blocking duplicate cross-posts and rapid-fire flood bursts without external API round-trips.
+2. **Deep Content Inspection (`onPostCreate`)**: Surviving posts undergo modular inspection across author status (suspended / shadowbanned accounts), keyword regex lists, domain rules, title compliance, and verification tiers.
 3. **Quarantine or Verdict**: Clear violations trigger immediate removal with concurrency locks (`SET NX`); borderline posts enter the timed quarantine state machine awaiting manual review or auto-expiry.
 4. **Single-Notice Dispatch**: Violations are assembled into a single formatted sticky comment detailing exact community guidelines violated and appeal steps.
 5. **Rescue Hub Logging**: Removed items are archived into the in-dashboard Rescue Hub, allowing any moderator to reverse false positives with one click.

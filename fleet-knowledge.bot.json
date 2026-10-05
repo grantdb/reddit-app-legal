@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-03T11:20:54.583Z",
+  "generatedAt": "2026-10-05T05:45:01.708Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -3009,7 +3009,7 @@
         "CommentCreate"
       ],
       "menuItems": [],
-      "settingsCount": 0,
+      "settingsCount": 1,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/mod360pro",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod360pro",
@@ -3022,7 +3022,7 @@
         "troubleshooting": "Check the Mod360 Pro troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-29"
+      "lastUpdated": "2026-10-05"
     }
   ]
 }

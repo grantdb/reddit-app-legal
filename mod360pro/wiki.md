@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.33  
+Version: v0.0.34  
 Visibility: Unlisted  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -49,7 +49,7 @@ Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ mo
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- No custom app settings.
+- Basic Settings: Status & Health (application/json, default: -). Status & Health
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
@@ -63,7 +63,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 This app utilizes Reddit Redis storage for state management, caching, and rate limiting.
 
 - Key-Value Strings (deduplication & cooldown markers)
-- Key patterns: node:http, mod360:dashboard_post_id, mod360:rules:config, mod360:stats:scanned, mod360:stats:actions, mod360:stats:latency_sum
+- Key patterns: mod360:dashboard_post_id, mod360:rules:config, node:http, mod360:dashboard_creation_lock, mod360:qg:reports, mod360:stats:scanned
 
 ## Setup and Usage
 - Install: Add Mod360 Pro to your subreddit from the Reddit App Directory.
@@ -76,13 +76,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.34 — 2026-10-05
+- Standard fleet synchronization and maintenance.
+
 0.0.33 — 2026-10-03
 - Standard fleet synchronization and maintenance.
 
 0.0.32 — 2026-09-29
-- Standard fleet synchronization and maintenance.
-
-0.0.31 — 2026-09-29
 - Standard fleet synchronization and maintenance.
 
 ## Links

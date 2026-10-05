@@ -1,7 +1,7 @@
 <h1>Mod360 Pro</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.33<br>
+Version: v0.0.34<br>
 Visibility: Unlisted<br>
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.</p>
 
@@ -51,6 +51,12 @@ Summary: Unified 360-degree moderation engine and waterfall pipeline consolidati
 <h3>Custom Post Types and Entrypoints</h3>
 <p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
 
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>Basic Settings: Status & Health (application/json, default: -). Status & Health</li>
+</ul>
+
 <h2>Automation Capabilities</h2>
 <ul>
 <li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
@@ -65,7 +71,7 @@ Summary: Unified 360-degree moderation engine and waterfall pipeline consolidati
 <p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
 <ul>
 <li>Key-Value Strings (deduplication & cooldown markers)</li>
-<li>Key patterns: node:http, mod360:dashboard_post_id, mod360:rules:config, mod360:stats:scanned, mod360:stats:actions, mod360:stats:latency_sum</li>
+<li>Key patterns: mod360:dashboard_post_id, mod360:rules:config, node:http, mod360:dashboard_creation_lock, mod360:qg:reports, mod360:stats:scanned</li>
 </ul>
 
 <h2>Setup and Usage</h2>
@@ -83,11 +89,11 @@ Summary: Unified 360-degree moderation engine and waterfall pipeline consolidati
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.34 — 2026-10-05<br>
+Standard fleet synchronization and maintenance.</p>
 <p>0.0.33 — 2026-10-03<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.32 — 2026-09-29<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.31 — 2026-09-29<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
