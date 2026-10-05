@@ -1,7 +1,7 @@
 # Reference Reply Bot
 
 Category: Support  
-Version: v0.0.28  
+Version: v0.0.29  
 Visibility: Unlisted  
 Summary: Post-only support intake and reference bot for r/grantdb.
 
@@ -42,7 +42,8 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - replyCooldownMinutes: User Cooldown Window (Minutes) (number, default: 15). Minimum time to wait before automated replies fire again for the same user. Set 0 to disable.
 - supportFlairs: Monitored Support Post Flairs (string, default: Support, Bug, Bug Report, Help, Question). Comma-separated post flair names (e.g., "Support, Bug, Help, Question"). Blank = all posts.
 - maxLinksPerReply: Maximum Links Per Reply (number, default: 2). Cap on documentation and reference links per reply.
-- debugLogging: Enable Debug Logging (boolean, default: false). Log scoring details and lock statuses to the console.
+- welcomeIntroTemplate: Greeting and Intro Template (string, default: Thanks for posting! While waiting for a reply, check out these helpful tips and resources for {app}:). Opening line for support replies. Use {app} for the app name.
+- resolutionFooterText: Resolution Prompt Footer (string, default: *If this solved your problem, reply `fixed` to let us know!*). Footer prompt asking for confirmation. Leave blank to disable.
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
@@ -69,13 +70,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.29 — 2026-10-05
+- Standard fleet synchronization and maintenance.
+
 0.0.28 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 0.0.27 — 2026-09-05
-- Standard fleet synchronization and maintenance.
-
-0.0.26 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 ## Links
