@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-05T05:45:01.708Z",
+  "generatedAt": "2026-10-05T08:54:34.818Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2514,7 +2514,7 @@
         "GrantDB Support: Moderator Hub",
         "GrantDB Support: Analyze & Reply to Post"
       ],
-      "settingsCount": 8,
+      "settingsCount": 9,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/reference-reply-bot",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/reference-reply-bot",
@@ -2527,7 +2527,7 @@
         "troubleshooting": "Check the Reference Reply Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-10-05"
     },
     {
       "appId": "malp-scout",

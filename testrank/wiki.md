@@ -1,7 +1,7 @@
 # TestRank
 
 Category: Utility  
-Version: v0.0.28  
+Version: v0.0.29  
 Visibility: Unlisted  
 Summary: Tester recognition and ranking app for r/droidapptesters.
 
@@ -67,6 +67,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.29 — 2026-10-05
+- Standard fleet synchronization and maintenance.
+
 0.0.29 — 2026-09-26
 - Fix: Eliminated automatic Modmail creation on OP onboarding guidance when post authors have direct messages blocked (`NOT_WHITELISTED_BY_USER_MESSAGE`), preventing Modmail inbox pollution in target subreddits.
 - Feature: Added pinned/distinguished post comment delivery channel (`sendOpOnboardingComment`) that directly reaches post authors with zero Modmail interaction and informs community beta testers of reward criteria.
@@ -75,10 +78,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 0.0.28 — 2026-09-17
 - Standard fleet synchronization and maintenance.
-
-0.0.27 — 2026-09-17
-- Tuning: Bumped "Fix Verified" reward to 30 points across all action constants, settings, comment menus, dashboard, and documentation to position it as the highest-value tester recognition tier.
-- Fix: Resolved issue where floating scroll buttons (FABs) stopped scrolling after only a few lines by locking pointer capture (`setPointerCapture`), removing button scale transforms during active state, applying `touch-action: none`, and switching to continuous deterministic scrolling.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/testrank/TERMS.md)
