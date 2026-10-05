@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.12  
+Version: v0.0.13  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -54,13 +54,18 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.13 — 2026-10-05
+- Standard fleet synchronization and maintenance.
+
+0.0.13 — 2026-10-05
+- Fix infinite Redis schedule overwrite loop by replacing expired countdown auto-heal logic with clean one-time legacy migration.
+- Roll forward authoritative WWE calendar defaults to Crown Jewel 2026 (Nov 7), Survivor Series: WarGames 2026 (Nov 28), Saturday Night's Main Event (Dec 12), and Royal Rumble 2027 (Jan 30).
+- Implement full Live Event Match Card Manager: edit match title, stipulation, participants, championship stakes, points value, add surprise matches, and delete matches.
+- Implement full Upcoming Shows & Fight Card Manager: select and edit show metadata (event name, show type, date text, venue, network, countdown target datetime picker), add new shows, delete shows, add announced matches, edit match details, delete matches, and reset to WWE defaults.
+- Add `/api/schedule/update` server endpoint guarded with moderator verification.
+- Add modal dialogs for live event and scheduled match editing with zero scroll trap interference.
+
 0.0.12 — 2026-10-03
-- Standard fleet synchronization and maintenance.
-
-0.0.11 — 2026-10-03
-- Standard fleet synchronization and maintenance.
-
-0.0.10 — 2026-10-03
 - Standard fleet synchronization and maintenance.
 
 ## Links

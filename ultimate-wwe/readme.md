@@ -79,8 +79,9 @@ All four post types share synchronized Redis state across the subreddit and feat
 
 ## Designed for Subreddit Moderators
 
-- **Moderator Authority**: Moderators retain full control over match cards, lock timing, and official winner determinations.
-- **Zero PII & Sandbox Storage**: All predictions, match outcomes, and scores are processed exclusively inside Reddit's isolated, sandboxed Redis infrastructure without external third-party data collection.
+- **Full Match Card Authority**: Moderators can create, edit (participants, stipulations, titles, championship status, points), and delete matches across both live event threads and future upcoming shows.
+- **Dynamic Upcoming Schedule Management**: Add upcoming PLEs and TV specials, update broadcast dates and networks, adjust countdown target timestamps, manage fight card lineups, or restore official WWE calendar defaults with one click.
+- **Zero PII & Sandbox Storage**: All predictions, match outcomes, custom schedule edits, and scores are processed exclusively inside Reddit's isolated, sandboxed Redis infrastructure without external third-party data collection.
 
 ---
 
