@@ -2,7 +2,7 @@
 
 Category: Moderation  
 Version: v0.0.193  
-Visibility: Public  
+Visibility: Unlisted  
 Summary: Premium keyword moderation engine with singleton control center and hardened security architecture.
 
 ## Overview

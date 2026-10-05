@@ -82,7 +82,7 @@
   "word-guard": {
     "name": "WordGuard",
     "version": "0.0.193",
-    "visibility": "public"
+    "visibility": "unlisted"
   },
   "sg1-responder": {
     "name": "SG-1 Responder",
@@ -92,12 +92,12 @@
   "domain-guard": {
     "name": "DomainGuard",
     "version": "0.0.164",
-    "visibility": "public"
+    "visibility": "unlisted"
   },
   "user-guard": {
     "name": "UserGuard",
     "version": "0.0.77",
-    "visibility": "public"
+    "visibility": "unlisted"
   },
   "filter-guard": {
     "name": "FilterGuard",
@@ -152,7 +152,7 @@
   "rate-guard": {
     "name": "RateGuard",
     "version": "0.0.15",
-    "visibility": "public"
+    "visibility": "unlisted"
   },
   "sgteam-dispatch": {
     "name": "SG Team Dispatch",
@@ -221,7 +221,7 @@
   },
   "mod360pro": {
     "name": "Mod360 Pro",
-    "version": "0.0.33",
+    "version": "0.0.34",
     "visibility": "unlisted"
   },
   "automod-easy": {

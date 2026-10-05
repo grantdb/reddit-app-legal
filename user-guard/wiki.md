@@ -2,7 +2,7 @@
 
 Category: Moderation  
 Version: v0.0.77  
-Visibility: Public  
+Visibility: Unlisted  
 Summary: Native author-based moderation engine with exact username and threshold resolution.
 
 ## Overview

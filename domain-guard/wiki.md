@@ -2,7 +2,7 @@
 
 Category: Security  
 Version: v0.0.164  
-Visibility: Public  
+Visibility: Unlisted  
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
 ## Overview

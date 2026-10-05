@@ -2,7 +2,7 @@
 
 Category: Moderation  
 Version: v0.0.15  
-Visibility: Public  
+Visibility: Unlisted  
 Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 
 ## Overview
