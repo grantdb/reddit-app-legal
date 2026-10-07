@@ -49,18 +49,6 @@ Domain Guard protects your subreddit from malicious links, URL shorteners, and r
 
 ---
 
-## The Old Way vs. The Domain Guard Way
-
-| Traditional Workflow | With Domain Guard |
-| :--- | :--- |
-| Writing and debugging fragile AutoMod regex patterns | **Visual domain rule builder** with instant syntax validation |
-| Deploying unverified rules directly on live users | **Safe Audit Mode** that logs simulated matches without removing content |
-| Manually tracking repeat domain offenders | **Automated strike escalation** and modmail alert delivery |
-| Applying blunt subreddit-wide domain blocks | **Context-aware scopes** isolated to link posts, text bodies, or comments |
-| Mod team guessing why a specific link was removed | **Structured incident logs** detailing exact rule matches and actions |
-
----
-
 ## Designed to Assist Moderators & Privacy
 
 Domain Guard is built strictly to assist human moderation teams. Domain policies are enforced only according to rules explicitly configured by moderators. Human moderators retain full authority to override actions and approve content at any time. Domain Guard does not store user private messages or personally identifiable information (zero PII).

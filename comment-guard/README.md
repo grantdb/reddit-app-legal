@@ -18,18 +18,6 @@ Comment Guard protects your comment sections from repetitive spam, low-effort de
 
 ---
 
-## The Old Way vs. The Comment Guard Way
-
-| Traditional Workflow | With Comment Guard |
-| :--- | :--- |
-| Writing blunt AutoMod keyword bans that trigger false positives | **Weighted score calculation** balancing spam markers and constructive text |
-| Treating brand-new throwaways and 5-year contributors identically | **Account trust adjustments** based on karma and participation history |
-| Scrolling through long comment sections to find repetitive spam | **Automated background analysis** on every submitted comment |
-| Manually tracking users who spam the same low-effort lines | **Repeat offender tracking** with progressive penalty escalation |
-| Wondering why a comment was removed by an automated filter | **Detailed action reports** showing exact scores and matched patterns |
-
----
-
 ## Built for High-Quality Discussions
 
 - **Weighted Scoring Engine**: Assign positive scores to low-effort spam patterns and negative scores to constructive markers for balanced decisions.

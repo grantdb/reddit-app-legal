@@ -66,17 +66,6 @@ All four post types share synchronized Redis state across the subreddit and feat
 
 ---
 
-## The Old Way vs. The Ultimate WWE Hub Way
-
-| Workflow Feature | Traditional Live Mega-Threads | With Ultimate WWE Hub |
-| :--- | :--- | :--- |
-| **Match Scores** | Static text edits in post body | Real-time interactive status & championship badges |
-| **Prediction Ballots** | Messy comments lost in 10,000+ replies | One-click structured ballot stored in Redis |
-| **Scoring & Points** | Manual spreadsheets or forgotten tallies | Automated 1-click scoring engine & leaderboards |
-| **Mobile Feed Navigation** | Unresponsive embeds or clunky popups | Universal inline scrolling with native feed gestures |
-
----
-
 ## Designed for Subreddit Moderators
 
 - **Full Match Card Authority**: Moderators can create, edit (participants, stipulations, titles, championship status, points), and delete matches across both live event threads and future upcoming shows.

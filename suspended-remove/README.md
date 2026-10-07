@@ -18,18 +18,6 @@ Suspended Remove safely clears content left behind by suspended, deleted, or sha
 
 ---
 
-## The Old Way vs. The Suspended Remove Way
-
-| Traditional Workflow | With Suspended Remove |
-| :--- | :--- |
-| Clicking on inaccessible user profiles and guessing why they failed | **Automated API status verification** identifying shadowbans and suspensions |
-| Mod queue permanently cluttered with orphaned posts | **Scheduled background cleanup** clearing unresolvable content |
-| Accidental removal of users experiencing temporary API outages | **Multi-stage confirmation checks** re-verifying accounts across multiple days |
-| Manually restoring posts when a user successfully appeals a ban | **Auto-recovery engine** automatically re-approving restored accounts |
-| Wondering why a post was removed weeks later | **Structured Mod Notes** recording check timestamps and status reasons |
-
----
-
 ## Built for Queue Hygiene & Safe Verification
 
 - **Two-Stage Enforcement**: Protects innocent users with a configurable waiting period before executing permanent removals.

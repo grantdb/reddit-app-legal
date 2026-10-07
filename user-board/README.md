@@ -20,18 +20,6 @@ User Board recognizes and rewards your most valuable community members. Calculat
 
 ---
 
-## The Old Way vs. The User Board Way
-
-| Traditional Workflow | With User Board |
-| :--- | :--- |
-| Reward-for-volume systems that encourage spammers to flood subreddits with bad posts | **Quality & reception weighting** rewarding contributors whose content community members actually like |
-| Ignoring community members who contribute primarily through thoughtful comments | **Unified contributor tracking** analyzing post authors and commenters equally |
-| Manually tracking and tallying top monthly posters in spreadsheets | **Automated background ranking** refreshing contributor scores on schedule |
-| Generic karma counts that don't reflect true community helpfulness | **Custom weighted formula** valuing discussion spark, comments, and consistency |
-| Static text posts listing usernames that quickly go out of date | **Live interactive custom post** displaying dynamic ranks, types, and tier badges |
-
----
-
 ## Built for Vibrant Community Growth
 
 - **Nuanced Engagement Scoring**: Configure independent point multipliers for post upvotes (3x default), comment upvotes (2x default), comments on posts (2x default), and thread replies (1x default).

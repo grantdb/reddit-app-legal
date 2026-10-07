@@ -43,15 +43,6 @@ Players identify, repair, and reorder authentic Stargate gate address sequences 
 ### Server-Authoritative State Engine
 Every sequence validation, timing grace period, stability reduction, and score calculation is resolved inside Devvit server endpoints. Player choices cannot be spoofed, and high-precision composite scores are stored in Redis sorted sets.
 
-## The Old Way vs. The Chevron Lock Way
-
-| Feature | Old Text Puzzles | The Chevron Lock Way |
-| :--- | :--- | :--- |
-| **Experience** | Static comment-based trivia | Interactive SGC dialing computer console |
-| **Mechanics** | Passive multiple choice | 3 dynamic puzzle types with real-time countdowns |
-| **Competition** | Manual comment tallying | Real-time Redis leaderboards & daily seeded runs |
-| **Security** | Easily spoofed answers | Server-authoritative state resolution & zero client trust |
-
 ## Privacy & Fair Play
 
 Chevron Lock stores only standard Reddit usernames, anonymized user IDs, and mission scores in subreddit-scoped Redis storage. No personal data, tracking cookies, or external server calls are utilized. All gameplay is purely server-verified for community fair play.

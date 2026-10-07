@@ -18,18 +18,6 @@ Mod Snapshot provides full disaster-recovery and configuration backups for your 
 
 ---
 
-## The Old Way vs. The Mod Snapshot Way
-
-| Traditional Workflow | With Mod Snapshot |
-| :--- | :--- |
-| Copy-pasting rules and wiki YAML into external docs manually | **One-click complete backup** compiling every setting into clean markdown |
-| Losing complex AutoMod configurations after accidental deletion | **Immutable modmail archive** providing an exact historical record |
-| Searching scattered settings screens to audit subreddit rules | **Consolidated single document** capturing all community parameters |
-| Truncated backups caused by Reddit modmail character limits | **Rule-aware chunking engine** splitting parts cleanly across messages |
-| Forgetting when settings were last backed up | **Timestamped backup summaries** with version and metadata logging |
-
----
-
 ## Built for Disaster Recovery & Auditing
 
 - **Comprehensive Configuration Capture**: Backs up community sidebar rules, removal reasons, user flairs, post flairs, appearance options, and discovered apps.

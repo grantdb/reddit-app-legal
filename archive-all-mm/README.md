@@ -18,18 +18,6 @@ Archive All Modmail effortlessly clears overgrown subreddit inboxes without brow
 
 ---
 
-## The Old Way vs. The Archive All Modmail Way
-
-| Traditional Workflow | With Archive All Modmail |
-| :--- | :--- |
-| Clicking "Archive" manually hundreds of times per week | **One-click bulk archiving** processing thousands of threads in the background |
-| Browser tab freezing and crashing on massive inboxes | **Asynchronous worker tasks** running independently of your browser session |
-| Accidental archiving of internal mod discussions | **Smart API safety filters** automatically preserving mod-only discussions |
-| Running into Reddit API rate limit locks during cleanup | **Batched, throttled chunking** keeping operations well within API boundaries |
-| Wondering how many conversations were cleared | **Real-time status inspector** reporting exact processed thread counts |
-
----
-
 ## Built for Effortless Inbox Zero
 
 - **Asynchronous Background Workers**: Offloads high-volume archiving operations to reliable server-side tasks so you can close your browser and move on.

@@ -18,18 +18,6 @@ Action Guard is the workflow automation and response orchestrator for your subre
 
 ---
 
-## The Old Way vs. The Action Guard Way
-
-| Traditional Workflow | With Action Guard |
-| :--- | :--- |
-| Manually performing 4 separate steps (remove, lock, flair, note) | **Automated multi-action playbooks** executing the entire sequence at once |
-| Mod team members using inconsistent enforcement steps | **Standardized action recipes** ensuring 100% consistent team handling |
-| Juggling external bot scripts to chain moderation events | **Native Devvit trigger engine** running securely inside Reddit |
-| Testing automated playbooks directly on active community members | **Dry-Run Mode** verifying actions in simulated logs first |
-| Losing track of which rule triggered a multi-step moderation event | **Structured execution audit logs** detailing every step taken |
-
----
-
 ## Built for Coordinated Moderation
 
 - **Orchestration Playbooks**: Chain together removals, locks, flairs, mutes, and internal notes into automated response recipes.

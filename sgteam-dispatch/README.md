@@ -40,15 +40,6 @@ Assemble your dream team from 5 distinct SGC specializations. Archaeologists exc
 ### Server-Authoritative State Engine
 Every tactical choice, resource mutation, and score calculation is validated and resolved inside Devvit server endpoints. Player choices cannot be spoofed, and scores are verified server-side with atomic Redis sorted-set storage.
 
-## The Old Way vs. The SG Team Dispatch Way
-
-| Feature | Old Text Scenarios | The SG Team Dispatch Way |
-| :--- | :--- | :--- |
-| **Experience** | Passive static reading | Interactive SGC tactical command console |
-| **Mechanics** | No resource constraints | 5 balancing meters (Health, Time, Intel, Morale, Alert) |
-| **Competition** | Manual comment tallying | Real-time Redis leaderboards & daily seeded runs |
-| **Security** | Easily spoofed claims | Server-authoritative state resolution & zero client trust |
-
 ## Privacy & Fair Play
 
 SG Team Dispatch stores only standard Reddit usernames, anonymized user IDs, and mission scores in subreddit-scoped Redis storage. No personal data, tracking cookies, or external server calls are utilized. All gameplay is purely server-verified for community fair play.

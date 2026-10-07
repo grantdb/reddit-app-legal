@@ -49,17 +49,6 @@ Filter Guard equips moderation teams with layered threshold logic without crypti
 
 ---
 
-## The Old Way vs. The Filter Guard Way
-
-| Traditional Workflow | With Filter Guard |
-| :--- | :--- |
-| Writing complex, nested AutoMod rules that conflict with each other | **Visual rule groups** with clear, predictable AND/OR logic |
-| Testing multi-factor rules blindly on live subreddit users | **Interactive Test tab** to simulate rules against real usernames |
-| Manually tracking repeat offenders triggering filters | **Automated strike tracking** across a 7-day rolling window |
-| Mod team confused by why a multi-condition rule failed | **Structured decision logs** showing which exact condition triggered |
-
----
-
 ## Designed to Assist Moderators
 
 Filter Guard automates the evaluation of multi-factor participation gates based on the criteria configured by your moderation team. Threshold results serve as assistive moderation tools—human moderators retain full authority to review filtered content in mod queue, approve exceptions, and adjust policy sensitivity at any time.

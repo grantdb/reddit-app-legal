@@ -18,18 +18,6 @@ Word Guard gives your moderation team total control over keyword filtering witho
 
 ---
 
-## The Old Way vs. The Word Guard Way
-
-| Traditional Workflow | With Word Guard |
-| :--- | :--- |
-| Editing massive, unwieldy AutoMod keyword lists | **Modular rule groups** categorized by topic and severity |
-| Deploying untested keyword regex directly on live users | **Safe Audit Mode** logging simulated keyword hits quietly |
-| Accidental removals caused by sub-string matching errors | **Whole-word boundary matching** preventing word-inside-word false flags |
-| Manually tracking repeat keyword offenders | **Automated 7-day strike tracking** with modmail escalations |
-| Mod team unsure which specific keyword triggered an action | **Detailed match records** highlighting the exact keyword and rule group |
-
----
-
 ## Built for Modular Content Filtering
 
 - **Categorized Rule Groups**: Maintain independent keyword lists for hate speech, self-promotion, t-shirt scams, and spoilers.

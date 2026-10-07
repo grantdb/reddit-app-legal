@@ -18,18 +18,6 @@ User Guard gives moderation teams precise control over who can participate in yo
 
 ---
 
-## The Old Way vs. The User Guard Way
-
-| Traditional Workflow | With User Guard |
-| :--- | :--- |
-| Writing and maintaining brittle AutoMod karma rules | **Visual threshold builder** with simple sliders and inputs |
-| Guessing how many legitimate users a new rule might catch | **Safe Audit Mode** logging simulated rejections in real time |
-| Manually checking account age during active spam floods | **Automated account maturity gates** evaluated on submission |
-| Losing track of special user exemptions across multiple rules | **Priority identity allowlists** that reliably override all filters |
-| Hunting through mod log to verify why an account was blocked | **Clear rejection logs** detailing exact threshold failures |
-
----
-
 ## Built for Confident Community Protection
 
 - **Maturity Thresholds**: Set minimum account age requirements to stop brand-new spam accounts before they can post.

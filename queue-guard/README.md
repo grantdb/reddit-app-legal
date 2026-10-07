@@ -18,18 +18,6 @@ Queue-Guard gives moderators fast reputation checks, duplicate detection, and on
 
 ---
 
-## The Old Way vs. The Queue-Guard Way
-
-| Traditional Workflow | With Queue-Guard |
-| :--- | :--- |
-| Open user profiles in separate tabs to check history | **Fast 0 to 100 Safety Score** in a single click |
-| Manually search subreddit archives to find reposts | **Automatic duplicate detection** linking straight to original submissions |
-| Leave your feed to open complex external tools | **1-click in-feed actions** with instant confirmation toasts |
-| Guess if an account is shadowbanned or suspended | **Account status checks** surfaced directly in your triage toast |
-| Mod team actions lost in separate chat logs | **Shared team mod notes** attached right at the point of action |
-
----
-
 ## Built for Fast Queue Processing
 
 - **One-Click Native Power**: Approve clean content or remove spam with optional mod notes directly from Reddit's action menu.

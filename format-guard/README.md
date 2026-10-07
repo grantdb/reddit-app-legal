@@ -18,18 +18,6 @@ Format Guard keeps your subreddit feed clean, consistent, and readable. Enforce 
 
 ---
 
-## The Old Way vs. The Format Guard Way
-
-| Traditional Workflow | With Format Guard |
-| :--- | :--- |
-| Writing complex, fragile AutoMod regex for title tags | **Visual formatting rule builder** with clear regex options |
-| Manually removing posts with all-caps screaming titles | **Automated case detection** catching uppercase abuse on submit |
-| Typing repetitive mod notes explaining title rules | **Structured removal reasons** explaining exactly what rule was missed |
-| Manually tracking users who repeatedly ignore formats | **Rolling 7-day violation counter** with automated modmail escalation |
-| Guessing if a new regex pattern will accidentally break posts | **Interactive Test simulator** validating title strings instantly |
-
----
-
 ## Built for Clean Community Standards
 
 - **Structural Constraints**: Set minimum and maximum length bounds on titles and bodies to stop one-word spam or unreadable text blocks.

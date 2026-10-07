@@ -18,18 +18,6 @@ Post Title Check ensures your subreddit feed stays readable, informative, and cl
 
 ---
 
-## The Old Way vs. The Post Title Check Way
-
-| Traditional Workflow | With Post Title Check |
-| :--- | :--- |
-| Writing complex AutoMod regex for title formatting | **Clean settings toggles** for word counts, tags, and banned words |
-| Manually removing vague one-word post titles | **Instant automated validation** on every new submission |
-| Typing repetitive mod comments explaining title rules | **Dynamic template messages** with `{phrase}` and `{minWordCount}` |
-| Frustrated users asking modmail why their post was removed | **Private author message** with a ready-to-use "Copy & Resubmit" snippet |
-| Accidental removal of daily moderator announcements | **Built-in moderator exemption toggle** bypassing checks automatically |
-
----
-
 ## Built for Clean Community Feeds
 
 - **Comprehensive Rule Engine**: Validate minimum word counts, required bracket prefixes, banned phrases, and ASCII-only character sets.

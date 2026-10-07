@@ -19,18 +19,6 @@ Verify Guard provides a privacy-first verification and access engine for your su
 
 ---
 
-## The Old Way vs. The Verify Guard Way
-
-| Traditional Workflow | With Verify Guard |
-| :--- | :--- |
-| Sifting through flooded modmail threads for verification requests | **Dedicated interactive verification post** and intake review queue |
-| Manually checking account age and karma for every applicant | **Automated Tier 1 health gates** verifying eligible users instantly |
-| Storing sensitive verification photos in unsecure modmail archives | **Privacy-safe short-lived forms** automatically deleted upon review |
-| Manually tracking and revoking expired verification badges | **Automated background cleanup** revoking flairs when verifications expire |
-| Mod team losing track of who reviewed an applicant | **Structured audit logs** recording reviewer decisions and timestamps |
-
----
-
 ## Built for Trust and Privacy
 
 - **Tier 1: Automated Trust Gates**: Automatically verify accounts that meet minimum account age, karma thresholds, and safety criteria.

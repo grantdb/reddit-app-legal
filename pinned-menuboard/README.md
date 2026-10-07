@@ -19,18 +19,6 @@ Pinned Menuboard gives your subreddit a stylish navigation hub and game launcher
 
 ---
 
-## The Old Way vs. The Pinned Menuboard Way
-
-| Traditional Workflow | With Pinned Menuboard |
-| :--- | :--- |
-| Sacrificing one of your two pinned slots whenever a new announcement drops | **Permanent multi-slot showcase** featuring up to 12 threads concurrently |
-| Text-only link megathreads that go unread | **Rich visual gallery** with high-resolution image thumbnails and author credits |
-| Duplicate posts cluttering native Community Highlights | **Automated unpinning** keeping native highlights clean and focused |
-| Manually editing markdown link tables when featured threads change | **In-webview management** with direct URL addition, reordering, and removal |
-| Fixed dark or light styling clashing with community preferences | **Configurable theme modes** with Dark and Light palette choices |
-
----
-
 ## Built for Rich Community Navigation
 
 - **Dynamic Showcase Grid**: Displays 2 to 12 responsive cards featuring high-impact image previews, submission titles, and author attribution.

@@ -18,18 +18,6 @@ Link Guard protects your subreddit from disguised link shorteners, phishing atte
 
 ---
 
-## The Old Way vs. The Link Guard Way
-
-| Traditional Workflow | With Link Guard |
-| :--- | :--- |
-| Clicking suspicious shortened URLs to see where they lead | **Automated shortener identification** flagging risky redirect domains |
-| Spammers bypassing filters with `example[dot]com` syntax | **Obfuscation decoding** normalizing masked links automatically |
-| Phishing bots hiding behind Punycode homographs (`xn--`) | **Homograph & IP Shield** detecting spoofed character sets and raw IPs |
-| Testing complex link rules directly on live community posts | **Dry-Run Audit Mode** logging simulated rule matches quietly |
-| Mod team unsure which link triggered a post removal | **Detailed match logs** displaying the detected URL and matched rule |
-
----
-
 ## Built for Comprehensive Link Security
 
 - **Shortener Shield**: Instantly detects links originating from link shorteners and redirection relays without leaking community URLs to external servers.

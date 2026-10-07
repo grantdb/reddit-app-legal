@@ -19,18 +19,6 @@ WikiSync Bot provides subreddit moderators with a high-reliability engine to pub
 
 ---
 
-## The Old Way vs. The WikiSync Bot Way
-
-| Traditional Workflow | With WikiSync Bot |
-| :--- | :--- |
-| Manually copying and pasting documentation across multiple subreddit wiki pages | **Automated background synchronization** comparing SHA-256 hashes and updating changed pages |
-| Rich-text editors corrupting JSON quotes into curly quotes | **Direct API dual-writes (v2 + v1)** preserving raw formatting perfectly |
-| Forgetting to post release announcements on r/grantdb | **Automated release broadcast engine** publishing changelogs directly to r/grantdb |
-| Complex custom OAuth2 wiki scripts on external VPS servers | **Native Devvit architecture** operating securely inside Reddit infrastructure |
-| Missing audit trails for wiki revisions | **Structured revision reasons** logged with every page creation and update |
-
----
-
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/wiki-sync-bot-flowchart.png)

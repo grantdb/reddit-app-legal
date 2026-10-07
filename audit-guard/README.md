@@ -18,18 +18,6 @@ Audit Guard provides your moderation team with a central, chronological security
 
 ---
 
-## The Old Way vs. The Audit Guard Way
-
-| Traditional Workflow | With Audit Guard |
-| :--- | :--- |
-| Sifting through raw, cluttered Reddit mod log exports | **Searchable, filterable audit ledger** in a clean native dashboard |
-| Losing track of who modified bot and filter settings | **Chronological change tracking** recording exact configuration adjustments |
-| Disconnected logs scattered across separate external bots | **Unified event stream** consolidating automated and manual mod actions |
-| Manually compiling compliance reports for senior mods | **Exportable event summaries** with full timestamp and author context |
-| Mod team debating the timeline of a past moderation incident | **Deterministic timestamped records** preserving an immutable history |
-
----
-
 ## Built for Team Accountability & Oversight
 
 - **Dashboard Event Recording**: Record moderation events, enforcement actions, and configuration updates directly from the interactive dashboard.

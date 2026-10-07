@@ -21,18 +21,6 @@ RescueGuard gives moderation teams an assistive, privacy-first discovery engine 
 
 ---
 
-## The Old Way vs. The RescueGuard Way
-
-| Traditional Workflow | With RescueGuard |
-| :--- | :--- |
-| Good posts getting lost in fast-moving subreddit feeds | **On-demand low-attention discovery** surfacing overlooked content |
-| Manually scrolling weeks of back-catalog looking for uncredited gems | **Ranked candidate review queue** delivered directly in Mod Tools |
-| Accidental repeat reviews of previously dismissed posts | **Direct Redis audit memory** pruning reviewed posts automatically |
-| Complicated external analytics scrapers and cron jobs | **Native Devvit architecture** operating securely inside Reddit |
-| Unpredictable bot promotions of low-quality posts | **Human-moderator approval gate** ensuring only quality content is featured |
-
----
-
 ## Built for Community Post Discovery
 
 - **Weighted Attention Scoring**: Ranks candidate submissions using `(score * 0.65) + (commentCount * 0.35)` with logarithmic age dampening.

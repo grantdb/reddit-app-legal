@@ -20,18 +20,6 @@ Rate Guard protects your subreddit feed from rapid-fire spam floods, karma farmi
 
 ---
 
-## The Old Way vs. The Rate Guard Way
-
-| Traditional Workflow | With Rate Guard |
-| :--- | :--- |
-| Manually tracking how many times a user posted today | **Automated sliding window counters** tracking exact 24-hour totals |
-| Scrambling during coordinated multi-post spam attacks | **Burst rate throttling** intercepting rapid floods within seconds |
-| Manually calculating when a user is allowed to post again | **Exact time calculation** generated automatically in sticky notices |
-| Burying settings in desktop Mod Tools | **Interactive Webview Control Center** with live audit logs and simulators |
-| Accidental removals of daily mod announcements | **Built-in author and flair exemptions** protecting important content |
-
----
-
 ## Built for Balanced Posting Cadence
 
 - **Interactive Control Center**: Launch the dashboard from your subreddit menu to tune policy, preview sticky templates, view live audit logs, and test author cooldowns.

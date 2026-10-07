@@ -18,18 +18,6 @@ Duplicate Guard stops repetitive topics, reworded reposts, and content floods be
 
 ---
 
-## The Old Way vs. The Duplicate Guard Way
-
-| Traditional Workflow | With Duplicate Guard |
-| :--- | :--- |
-| Manually searching subreddit archives to find original posts | **Automated similarity matching** against recent community submissions |
-| Mod queue flooded with identical breaking-news submissions | **Instant duplicate filtering** as soon as posts are submitted |
-| Manually commenting on reposts to explain why they were removed | **Automated removal notices** linking users to the active discussion |
-| Accidental double-actions caused by duplicate platform events | **Effectively-once execution locks** guaranteeing single mod actions |
-| Manually exempting recurring daily megathreads | **Built-in flair and title exemptions** bypassing checks automatically |
-
----
-
 ## Built for High-Quality Feeds
 
 - **Multiple Match Modes**: Select from Strict (exact normalized match), Balanced, or Aggressive similarity matching.

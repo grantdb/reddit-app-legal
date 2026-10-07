@@ -18,18 +18,6 @@ Flair Guard ensures your subreddit stays visually structured and searchable by a
 
 ---
 
-## The Old Way vs. The Flair Guard Way
-
-| Traditional Workflow | With Flair Guard |
-| :--- | :--- |
-| Manually flairing dozens of untagged posts every day | **Automated rule-based flairing** applied accurately after submission |
-| Writing complex AutoMod regex for flair template IDs | **Clean settings configuration** linking keywords to flair template UUIDs |
-| Sending repetitive modmail reminders for missing flairs | **Instant automated categorization** without user friction |
-| Flairs applied to posts immediately deleted by spam filters | **Eligibility gate** checks post status after safety pipeline before flairing |
-| Inconsistent flair styling across different moderators | **Uniform community organization** enforced with 100% consistency |
-
----
-
 ## Built for Effortless Content Organization
 
 - **Keyword Matching**: Automatically assign a designated post flair when submission titles contain configured trigger keywords.

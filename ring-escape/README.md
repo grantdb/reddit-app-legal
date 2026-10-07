@@ -41,17 +41,6 @@
 
 ---
 
-## The Old Way vs. The Ring Escape Way
-
-| Traditional Text Game / Quiz | The Ring Escape Way |
-| :--- | :--- |
-| Static images with comment-based commands | Real-time interactive 60fps canvas gameplay inside Reddit |
-| Manual score calculation by moderators | Automatic server-validated score calculation in Redis |
-| Clunky turn-based delays | Real-time guard AI patrols, alarm states, and stealth timing |
-| Single-screen trivia | 7 progressive ship decks with speedrun ranking |
-
----
-
 ## Support
 
 For questions, feedback, or bug reports, visit [r/grantdb](https://www.reddit.com/r/grantdb).

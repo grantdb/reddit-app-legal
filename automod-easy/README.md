@@ -18,18 +18,6 @@ AutoMod Easy replaces error-prone YAML editing with an interactive rule builder 
 
 ---
 
-## The Old Way vs. The AutoMod Easy Way
-
-| Traditional Workflow | With AutoMod Easy |
-| :--- | :--- |
-| Editing live YAML in the Reddit wiki and breaking the queue | **Isolated sandbox environment** validating rules before saving |
-| Guessing how to write complex regex for tricky spam patterns | **Visual rule builder** generating clean YAML with word-boundary safeguards |
-| Spending hours troubleshooting misplaced indentations | **Real-time syntax and schema linter** highlighting errors visually |
-| Losing working configurations when someone makes an edit | **Automated revision snapshots** with instant one-click restores |
-| Guessing whether a new rule will conflict with existing syntax | **Rule Health Scorecard** auditing configurations for risks |
-
----
-
 ## Built for Safe AutoMod Management
 
 - **Interactive Rule Sandbox**: Experiment with rules against custom sample posts and comments without exposing your subreddit to live testing.

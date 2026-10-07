@@ -18,18 +18,6 @@ Guard Hub is the unified control center and observability dashboard for the Guar
 
 ---
 
-## The Old Way vs. The Guard Hub Way
-
-| Traditional Workflow | With Guard Hub |
-| :--- | :--- |
-| Opening 10 separate app settings pages to check module statuses | **Single-pane-of-glass overview** showing all active defense layers |
-| Wondering if an important filter bot was accidentally turned off | **Automated health checks** alerting you to disabled guardrails |
-| Piecing together audit trails across disconnected tools | **Unified telemetry gateway** aggregating cross-app activity |
-| Manually tracking which version of each mod tool is installed | **Centralized suite inventory** displaying module versions and status |
-| Uncoordinated moderation rules causing conflicting actions | **Cohesive system monitoring** ensuring defense layers align cleanly |
-
----
-
 ## Built for Unified Moderation Control
 
 - **Unified Defense Observability**: Monitor real-time status across Domain Guard, Filter Guard, User Guard, Queue Guard, and sibling modules.

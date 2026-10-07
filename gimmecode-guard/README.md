@@ -46,18 +46,6 @@ GimmeCode Guard safeguards programming, Android/iOS, and creator subreddits from
 
 ---
 
-## The Old Way vs. The GimmeCode Guard Way
-
-| Traditional Workflow | With GimmeCode Guard |
-| :--- | :--- |
-| Comment sections flooded with repetitive "send code" begging | **Automated phrase scoring** filtering low-effort requests instantly |
-| Manual, repetitive warning comments explaining rule requirements | **Automated educational replies** politely guiding users to ask better questions |
-| Accidental filter flags on legitimate code explanations | **Markdown code-block awareness** exempting genuine code snippets |
-| Static Modmail dumps flooding moderator inboxes with raw text | **Interactive Webview Dashboard** with searchable audit logs and live stats |
-| Guessing how a new rule or keyword phrase will perform | **Live Comment Playground** simulating score verdicts before activation |
-
----
-
 ## Designed to Assist Moderators
 
 GimmeCode Guard detects and scores low-effort code requests to assist in maintaining technical discussion standards. Scoring serves as an assistive filter—human moderators maintain full authority to review flagged comments, approve exceptions, and adjust detection sensitivity at any time.

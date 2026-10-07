@@ -19,18 +19,6 @@ App Update Checker ensures your subreddit's Devvit tools and moderation bots rem
 
 ---
 
-## The Old Way vs. The App Update Checker Way
-
-| Traditional Workflow | With App Update Checker |
-| :--- | :--- |
-| Checking the Reddit App Directory manually for updates | **Automated scheduled daily audits** checking every installed app |
-| Missing critical bug fixes or security patches in mod tools | **Consolidated modmail release alerts** sent directly to your team inbox |
-| Wondering which version of an app is currently running | **Clear version comparison table** comparing installed vs. latest versions |
-| Manually tracking third-party tools and bot usernames | **Automatic app discovery** detecting active moderator bots |
-| Dealing with broken bots due to outdated platform APIs | **Proactive release alerts** letting you upgrade on your own schedule |
-
----
-
 ## Built for Seamless Community Maintenance
 
 - **Automated App Discovery**: Identifies installed Devvit applications by matching moderator accounts against known app manifests.

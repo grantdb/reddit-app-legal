@@ -60,17 +60,6 @@ Subreddit wiki pages are essential for community guidelines, FAQs, wikis, and re
 
 ---
 
-## The Old Way vs. The Wiki-Guard Way
-
-| Feature | The Old Way | The Wiki-Guard Way |
-| :--- | :--- | :--- |
-| **Mobile Wiki Access** | Desktop mode zoom gymnastics in mobile browsers | Responsive, finger-friendly mobile webview |
-| **Markdown Editing** | Unforgiving text inputs prone to accidental back-nav | Dirty-state tracking and unsaved change confirmation |
-| **Live Preview** | Save and refresh live page on Reddit to check formatting | Instant sanitized tabbed preview before saving |
-| **Wiki System Support** | Manual guesswork between V1 and V2 wikis | Built-in detection and version-targeted requests |
-
----
-
 ## Designed to Assist Moderators / Privacy & Ethics
 
 * **Moderator Authority**: Wiki-Guard empowers human moderators. All edits, saves, and settings changes are performed explicitly by authenticated moderators.

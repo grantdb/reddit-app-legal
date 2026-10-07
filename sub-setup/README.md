@@ -21,19 +21,6 @@ Sub Setup guides new and experienced moderators through a comprehensive 19-secti
 
 ---
 
-## The Old Way vs. The Sub Setup Way
-
-| Traditional Workflow | With Sub Setup |
-| :--- | :--- |
-| Hunting through dozens of desktop Mod Tools menus | **9 guided wizard steps** with direct 1-click deep links to each setting |
-| Guessing which settings AutoMod or Safety Filters need | **Automated API inspection** scoring live rules, flairs, and configuration |
-| Losing track of which mod finished which setting | **Persistent Redis checklists** tracking team setup progress across sessions |
-| Confusing manual settings with automated checks | **Clear visual badges and tooltips** distinguishing API vs. manual reviews |
-| Forgetting pre-submission post checks or removal reasons | **Structured checklists** ensuring 1:1 rule-to-removal-reason parity |
-| Static, overwhelming wall-of-text audit dumps | **Interactive wizard with progress gauges**, remaining items modal, and Modmail export |
-
----
-
 ## Built for Seamless Subreddit Onboarding
 
 - **Dual-Score Integrity**: Separates automated API inspections (which contribute to your numeric configuration score) from guided manual checklists and optional programs.
