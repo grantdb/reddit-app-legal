@@ -1,8 +1,8 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.35  
-Visibility: Unlisted  
+Version: v0.0.36  
+Visibility: Public  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
 ## Overview
@@ -76,6 +76,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.36 — 2026-10-07
+- Standard fleet synchronization and maintenance.
+
 0.0.35 — 2026-10-07
 - Standard fleet synchronization and maintenance.
 
@@ -86,9 +89,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Implemented 8px swipe-drag threshold guard on sub-navigation pills to prevent accidental subview switching and scroll reset during swipe gestures.
 - Added button-based pagination (4 items per page with compact ◀ Prev / Next ▶ controls) for Timed Quarantine and False-Positive Rescue lists to prevent unbounded vertical feed scrolling.
 - Added feed swipe-drag suppression guard (`>8px drag`) on card action buttons to prevent accidental link/action triggers during mobile feed scrolling.
-
-0.0.34 — 2026-10-05
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/TERMS.md)

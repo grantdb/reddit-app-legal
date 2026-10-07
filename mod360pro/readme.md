@@ -51,21 +51,25 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
 ## Core Features
 
 ### High-Speed Spam & Flood Defense
+
 - **Sliding-Window Frequency Limiter**: Configurable post-per-minute counters that clamp burst submissions and coordinated spam floods.
 - **Duplicate Content Fingerprinting**: Per-subreddit hash caching that catches identical link and text spam across multiple accounts.
 - **Suspended & Shadowban Filter**: Real-time user API check identifying deleted or suspended accounts before they clutter the moderation queue.
 
 ### Deep Content Policies
+
 - **Domain & URL Shortener Engine**: Native detection for link shorteners, tracking parameters, chat links, and blacklisted domains.
 - **Multi-Group Keyword & Regex Engine**: Case-insensitive matching, word boundaries, and customizable match thresholds with built-in test simulators.
 - **Author Verification Tiers**: Restrict posting privileges based on verified email requirements, subreddit flair templates, or minimum karma milestones.
 
 ### Timed Quarantine State Machine
+
 - **Configurable Countdown Windows**: Hold flagged items for 15m, 30m, 1h, 2h, 4h, 8h, 24h, or 48h.
 - **Auto-Expiration Handling**: Unreviewed items in quarantine automatically expire to permanent removal once the timer concludes.
 - **1-Click Mod Release**: Release and approve quarantined items directly from the mod dashboard or feed action menu.
 
 ### In-Feed Moderator Tools & Reputation Score
+
 - **0–100 Community Safety Score**: Calculated from author age, karma ratios, email verification, and community post history.
 - **Native Post & Comment Menu Actions**:
   - `Check Reputation`: Displays comprehensive trust breakdown and violation count.
@@ -74,6 +78,7 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
   - `Export Backup to Modmail`: Dispatches full encrypted config snapshot to modmail.
 
 ### Wiki Sync & Disaster Recovery
+
 - **Two-Way Wiki Synchronization**: Edit your rules in `r/subreddit/wiki/mod360_rules` or in the visual dashboard; changes sync bi-directionally.
 - **Encrypted Modmail Snapshots**: Export complete configuration snapshots directly to Subreddit Modmail for permanent, tamper-proof archival.
 - **Zero-Risk Shadow Mode**: Run new rules in passive shadow mode with audit logging before switching them to active live enforcement.
@@ -107,6 +112,7 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
 ## Designed to Assist Moderators
 
 Mod360 Pro is built strictly on human-in-the-loop principles. All automated actions are transparent, auditable, and fully reversible:
+
 - **No Black Box AI**: Clear rule matches and explicit logic paths.
 - **Zero PII Storage**: Only standard Reddit IDs and metadata are processed; no personal identifiable data is ever collected or stored.
 - **Moderator Authority**: Human moderators retain full authority to override, release, approve, or reconfigure any rule at any time.
@@ -117,6 +123,7 @@ Mod360 Pro is built strictly on human-in-the-loop principles. All automated acti
 
 For help, bug reports, or feature requests, post in r/grantdb.
 Please include:
+
 - The app name (`mod360pro`).
 - What you expected to happen.
 - What happened instead.
@@ -128,6 +135,7 @@ Please include:
 ## Legal
 
 This application is subject to the following legal agreements:
+
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/TERMS.md)
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/PRIVACY.md)
 

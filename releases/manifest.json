@@ -170,5 +170,9 @@
   "link-guard": {
     "version": "0.0.19",
     "updatedAt": "2026-09-17T10:27:06.090Z"
+  },
+  "mod360pro": {
+    "version": "0.0.36",
+    "updatedAt": "2026-10-07T18:24:41.587Z"
   }
 }
