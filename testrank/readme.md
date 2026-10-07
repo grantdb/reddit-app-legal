@@ -1,12 +1,13 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/testrank)
 
-# TestRank 🧪
+# TestRank
 
 > **Empower developers to reward quality feedback, recognize dedicated beta testers, and gamify community app testing across your subreddit.**
 
 **TestRank** is an automated tester recognition, reputation, and leaderboard engine built specifically for Android testing communities like **r/droidapptesters**. It enables app developers (OPs) to confirm helpful feedback directly from comment context menus, awards structured XP points, maintains real-time weekly and monthly leaderboards, syncs Reddit user flairs across a prestige ladder, and equips moderators with complete audit and override capabilities.
 
-### ⚡ Key Highlights
+## Key Highlights
+
 - **Direct Developer Awards**: App creators reward testers straight from Reddit comment overflow menus with one click.
 - **Automated Flair Progression**: Automatically promotes users through tiered prestige flairs (`App Explorer` → `Grandmaster Tester`) as XP climbs.
 - **Live Community Leaderboards**: Spawns dedicated, interactive custom post leaderboards backed by real-time Redis Sorted Sets.
@@ -40,13 +41,16 @@
 ## Core Capabilities
 
 ### 1. Action Types & Point Matrix
+
 Reward different contributions according to testing depth:
+
 - **Registered Tester (`+5 pts`)**: Low-friction confirmation that a tester joined the Google Group, opted into the closed test, or installed the app build.
 - **Helpful Feedback (`+10 pts`)**: Clear, actionable UX notes, device compatibility reports, or initial impressions.
 - **Bug Found (`+25 pts`)**: Confirmed, reproducible bug reports with error logs, device specs, or screenshots.
 - **Fix Verified (`+30 pts`)**: Verification confirming that a reported bug has been resolved in an updated build or patch.
 
 ### 2. Prestige Ladder & Automated Flair Sync
+
 As testers accumulate testing points, TestRank updates their standing and automatically assigns their Reddit user flair:
 
 | Tier | Prestige Title | Min Points | Subreddit User Flair |
@@ -59,11 +63,13 @@ As testers accumulate testing points, TestRank updates their standing and automa
 | **6** | **Grandmaster Tester** | `1,500 pts` | `Grandmaster Tester` |
 
 ### 3. Comment-Driven & Dashboard Workflows
+
 - **Context Menu Actions**: Developers award points right inside the comment thread (`Mark Registered Tester`, `Mark Helpful Feedback`, `Mark Bug Found`, `Mark Fix Verified`).
 - **Per-Post TestRank Dashboard**: OPs and mods can open **Open This Post’s TestRank Dashboard** to view all commenters on a submission and issue summary awards.
 - **Opt-Out Controls**: Developers can opt out individual posts at any time by commenting `!testrank-optout`.
 
 ### 4. Moderator Governance & Audit Trail
+
 - **Live Audit Logging**: Every award creation, reversal, and mod correction is permanently recorded in Redis with timestamps and reason strings.
 - **Recreation Cooldown**: Force-recreating the leaderboard post is protected by a 5-minute spam prevention cooldown.
 - **Global Toggles**: Moderators can disable awards for specific abusive users or posts while preserving historical data.
@@ -73,6 +79,7 @@ As testers accumulate testing points, TestRank updates their standing and automa
 ## Designed to Assist Moderators & Protect Privacy
 
 TestRank operates as an automated community utility designed to empower human moderators and developers:
+
 - **Moderator Authority**: Moderators retain absolute authority to reverse any award, edit points, or exclude users from leaderboards.
 - **Privacy & Zero PII**: TestRank never collects, stores, or transmits private personal data. All state is strictly indexed by public Reddit usernames and item IDs in isolated Redis storage.
 
@@ -86,6 +93,7 @@ Please include the app name, what you expected, what happened, and any error tex
 ## Legal
 
 This application is subject to the following legal agreements:
+
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/testrank/TERMS.md)
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/testrank/PRIVACY.md)
 

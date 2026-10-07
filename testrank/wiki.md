@@ -1,7 +1,7 @@
 # TestRank
 
 Category: Utility  
-Version: v0.0.29  
+Version: v0.0.30  
 Visibility: Unlisted  
 Summary: Tester recognition and ranking app for r/droidapptesters.
 
@@ -67,6 +67,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.30 — 2026-10-07
+- Standard fleet synchronization and maintenance.
+
 0.0.29 — 2026-10-05
 - Standard fleet synchronization and maintenance.
 
@@ -75,9 +78,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Feature: Added pinned/distinguished post comment delivery channel (`sendOpOnboardingComment`) that directly reaches post authors with zero Modmail interaction and informs community beta testers of reward criteria.
 - Feature: Added `onboardingDeliveryMethod` configuration setting (`comment` [default], `pm_only`, `pm_with_comment_fallback`, `disabled`) and wired up live `settings` resolution in onboarding trigger routes.
 - Docs: Updated README and templates to reflect non-modmail guidance delivery.
-
-0.0.28 — 2026-09-17
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/testrank/TERMS.md)
