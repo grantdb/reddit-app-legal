@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-05T08:54:34.818Z",
+  "generatedAt": "2026-10-07T12:04:38.267Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2795,11 +2795,11 @@
         "subsetup"
       ],
       "setupSteps": [
-        "| Traditional Workflow | With Sub Setup |",
-        "| :--- | :--- |",
-        "| Hunting through dozens of desktop Mod Tools menus | 9 guided wizard steps with direct 1-click deep links to each setting |",
-        "| Guessing which settings AutoMod or Safety Filters need | Automated API inspection scoring live rules, flairs, and configuration |",
-        "| Losing track of which mod finished which setting | Persistent Redis checklists tracking team setup progress across sessions |"
+        "![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)",
+        "![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)",
+        "![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)",
+        "![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)",
+        "![Type](https://img.shields.io/badge/Type-Setup_Wizard-8A2BE2?style=for-the-badge)"
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -2838,7 +2838,7 @@
         "troubleshooting": "Check the Sub Setup troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-15"
+      "lastUpdated": "2026-10-07"
     },
     {
       "appId": "ultimate-wwe",
