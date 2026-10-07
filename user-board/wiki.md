@@ -1,8 +1,8 @@
 # User Board
 
 Category: Utility  
-Version: v0.0.44  
-Visibility: Unlisted  
+Version: v0.0.45  
+Visibility: Public  
 Summary: Interactive subreddit contributor leaderboard and gamification dashboard.
 
 ## Overview
@@ -56,6 +56,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.45 — 2026-10-07
+- Standard fleet synchronization and maintenance.
+
 0.0.44 — 2026-10-02
 - Standard fleet synchronization and maintenance.
 
@@ -67,9 +70,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Feature: Expanded Moderator Console settings with granular Quality & Reception weights and quick "Defaults" restore.
 - UI: Added post count, comment count, and total upvotes received columns to the interactive leaderboard table.
 - Compatibility: Maintained full backward compatibility with legacy snapshots, fallback aliases, and default settings merging.
-
-0.0.43 — 2026-09-29
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/user-board/TERMS.md)

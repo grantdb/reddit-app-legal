@@ -77,16 +77,12 @@ User Board provides participation analytics and dynamic leaderboards to assist i
 ## Support
 
 For help, bug reports, or feature requests, post in r/grantdb.
-Please include:
-- The app name.
-- What you expected to happen.
-- What happened instead.
-- Any error message.
-- Screenshots or relevant details.
+Please include the app name, what you expected, what happened, and any error text or screenshots.
 
 ## Legal
 
 This application is subject to the following legal agreements:
+
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/user-board/TERMS.md)
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/user-board/PRIVACY.md)
 
