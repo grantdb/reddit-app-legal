@@ -232,11 +232,11 @@
   "pinned-menuboard": {
     "name": "Pinned Menuboard",
     "version": "0.0.80",
-    "visibility": "unlisted"
+    "visibility": "public"
   },
   "user-board": {
     "name": "User Board",
-    "version": "0.0.44",
-    "visibility": "unlisted"
+    "version": "0.0.45",
+    "visibility": "public"
   }
 }
