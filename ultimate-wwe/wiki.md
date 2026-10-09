@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.17  
+Version: v0.0.18  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -54,15 +54,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.18 — 2026-10-09
+- Standard fleet synchronization and maintenance.
+
+0.0.18 — 2026-10-09
+- UX Optimization: Removed redundant and static `.event-meta-bar` pills ("Schedule: Tonight", "Location: Live on Reddit", "0 Fan Picks Submitted") across all post views, reclaiming ~44px of vertical viewport space.
+- Header Polish: Conditioned `#lock-status-badge` to display strictly on live event threads (`postType === 'live_event'`), hiding it cleanly on static database posts (Superstar Stats, Championship Belts, and Schedule Guide).
+- Header Density: Tightened `.app-header` padding and subtitle spacing for a more compact and readable inline mobile presentation.
+
 0.0.17 — 2026-10-09
 - Standard fleet synchronization and maintenance.
-
-0.0.16 — 2026-10-09
-- Standard fleet synchronization and maintenance.
-
-0.0.15 — 2026-10-07
-- Standard fleet synchronization and maintenance.
-- All notable changes to the Ultimate WWE Hub application will be documented in this file.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
