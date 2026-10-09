@@ -13,6 +13,7 @@ Suspended Remove safely clears content left behind by suspended, deleted, or sha
 - **Two-stage verification**: Hold suspected items during a confirmation window before applying permanent removal.
 - **Three waiting-stage modes**: Choose between Filter & Hide, Filter & Keep Public, or Temporary Remove.
 - **Automated account recovery**: Automatically restore and approve content if an account becomes accessible again.
+- **Historical Post Cleanup**: Optionally search the subreddit and go back in time to remove past posts from confirmed suspended users.
 - **Detailed Mod Notes**: Attach custom internal mod notes and user profile notes at every stage of the check.
 - **Background queue scanning**: Continuously scans posts and comments across modqueue and spam folders.
 
@@ -26,9 +27,10 @@ Suspended Remove safely clears content left behind by suspended, deleted, or sha
   - *Filter & Keep Public*: Keeps items visible on the subreddit while tracking them in Needs Review.
   - *Temporary Remove*: Moves items to the removed queue during multi-day checks.
 - **Automatic Account Recovery**: If an account is unsuspended or verified accessible on a subsequent check, Suspended Remove can automatically approve the item.
+- **Optional Historical Content Cleanup**: When enabled in Mod Settings, the app searches subreddit archives to remove past posts submitted by confirmed suspended authors.
 - **Granular Mod Notes**: Independently toggle and customize internal mod notes attached during the waiting stage and final removal.
 - **Automated Retention Capping**: Items in the verification pipeline are automatically expired and pruned after 14 days.
-- **Native Settings Control**: Configure confirmation check counts, waiting modes, and removal actions directly in Subreddit Mod Tools.
+- **Native Settings Control**: Configure confirmation check counts, waiting modes, removal actions, and historical cleanup directly in Subreddit Mod Tools.
 
 ---
 
@@ -41,7 +43,7 @@ Suspended Remove safely clears content left behind by suspended, deleted, or sha
 1. **Scan**: Suspended Remove scans posts and comments across your subreddit's modqueue and spam queue.
 2. **Verify**: The engine tests author profile accessibility against the Reddit User API.
 3. **Hold**: On the first confirmed inaccessibility, your chosen waiting-period action (*Filter & Hide*, *Filter & Keep Public*, or *Temp Remove*) is applied.
-4. **Action or Recover**: If the account remains inaccessible after all scheduled checks, the final action executes; if the account recovers, the post is automatically approved.
+4. **Action, Purge or Recover**: If the account remains inaccessible after all scheduled checks, the final action executes; if Historical Cleanup is enabled, previous submissions by the suspended author are cleared; if the account recovers, the post is automatically approved.
 
 ---
 
@@ -50,7 +52,8 @@ Suspended Remove safely clears content left behind by suspended, deleted, or sha
 1. **Install**: Add **Suspended Remove** to your subreddit through the Reddit App Directory.
 2. **Configure Pipeline**: Open **Mod Tools > App Settings > Suspended Remove**.
 3. **Choose Waiting Mode**: Select your preferred waiting-stage action (*Filter & Hide* recommended).
-4. **Save**: Background queue scanning activates immediately with zero manual maintenance.
+4. **Historical Cleanup (Optional)**: Enable "Remove historical posts from suspended accounts" if you wish to purge older submissions from suspended users.
+5. **Save**: Background queue scanning activates immediately with zero manual maintenance.
 
 *No more orphaned mod queue items. Clean, safe queue automation directly inside Reddit.*
 
@@ -61,6 +64,7 @@ Suspended Remove safely clears content left behind by suspended, deleted, or sha
 Suspended Remove is engineered for resilient API status resolution and stateful multi-day queue tracking.
 
 - **Account Accessibility Verifier**: Distinguishes between deleted accounts, shadowbanned users, and network timeouts.
+- **Historical Post Purge Engine**: Searches subreddit archives via author indexing to identify and safely remove older submissions from confirmed suspended accounts.
 - **Stateful Redis Queue**: Tracks pending items across configurable multi-day recheck schedules with atomic updates.
 - **Auto-Recovery Restorer**: Re-evaluates queued items on subsequent crons and executes automated approvals upon profile restoration.
 - **Mod Note Synchronizer**: Directly appends internal Reddit Mod Notes with customizable format templates.

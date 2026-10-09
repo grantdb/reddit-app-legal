@@ -8,6 +8,7 @@
 <li><strong>Two-stage verification</strong>: Hold suspected items during a confirmation window before applying permanent removal.</li>
 <li><strong>Three waiting-stage modes</strong>: Choose between Filter & Hide, Filter & Keep Public, or Temporary Remove.</li>
 <li><strong>Automated account recovery</strong>: Automatically restore and approve content if an account becomes accessible again.</li>
+<li><strong>Historical Post Cleanup</strong>: Optionally search the subreddit and go back in time to remove past posts from confirmed suspended users.</li>
 <li><strong>Detailed Mod Notes</strong>: Attach custom internal mod notes and user profile notes at every stage of the check.</li>
 <li><strong>Background queue scanning</strong>: Continuously scans posts and comments across modqueue and spam folders.</li>
 </ul>
@@ -20,9 +21,10 @@
 <li>*Filter & Keep Public*: Keeps items visible on the subreddit while tracking them in Needs Review.</li>
 <li>*Temporary Remove*: Moves items to the removed queue during multi-day checks.</li>
 <li><strong>Automatic Account Recovery</strong>: If an account is unsuspended or verified accessible on a subsequent check, Suspended Remove can automatically approve the item.</li>
+<li><strong>Optional Historical Content Cleanup</strong>: When enabled in Mod Settings, the app searches subreddit archives to remove past posts submitted by confirmed suspended authors.</li>
 <li><strong>Granular Mod Notes</strong>: Independently toggle and customize internal mod notes attached during the waiting stage and final removal.</li>
 <li><strong>Automated Retention Capping</strong>: Items in the verification pipeline are automatically expired and pruned after 14 days.</li>
-<li><strong>Native Settings Control</strong>: Configure confirmation check counts, waiting modes, and removal actions directly in Subreddit Mod Tools.</li>
+<li><strong>Native Settings Control</strong>: Configure confirmation check counts, waiting modes, removal actions, and historical cleanup directly in Subreddit Mod Tools.</li>
 </ul>
 <p>---</p>
 <h2>How It Works</h2>
@@ -31,19 +33,21 @@
 <p>1. <strong>Scan</strong>: Suspended Remove scans posts and comments across your subreddit's modqueue and spam queue.</p>
 <p>2. <strong>Verify</strong>: The engine tests author profile accessibility against the Reddit User API.</p>
 <p>3. <strong>Hold</strong>: On the first confirmed inaccessibility, your chosen waiting-period action (*Filter & Hide*, *Filter & Keep Public*, or *Temp Remove*) is applied.</p>
-<p>4. <strong>Action or Recover</strong>: If the account remains inaccessible after all scheduled checks, the final action executes; if the account recovers, the post is automatically approved.</p>
+<p>4. <strong>Action, Purge or Recover</strong>: If the account remains inaccessible after all scheduled checks, the final action executes; if Historical Cleanup is enabled, previous submissions by the suspended author are cleared; if the account recovers, the post is automatically approved.</p>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>Suspended Remove</strong> to your subreddit through the Reddit App Directory.</p>
 <p>2. <strong>Configure Pipeline</strong>: Open <strong>Mod Tools > App Settings > Suspended Remove</strong>.</p>
 <p>3. <strong>Choose Waiting Mode</strong>: Select your preferred waiting-stage action (*Filter & Hide* recommended).</p>
-<p>4. <strong>Save</strong>: Background queue scanning activates immediately with zero manual maintenance.</p>
+<p>4. <strong>Historical Cleanup (Optional)</strong>: Enable "Remove historical posts from suspended accounts" if you wish to purge older submissions from suspended users.</p>
+<p>5. <strong>Save</strong>: Background queue scanning activates immediately with zero manual maintenance.</p>
 <p>*No more orphaned mod queue items. Clean, safe queue automation directly inside Reddit.*</p>
 <p>---</p>
 <h2>Advanced Capabilities</h2>
 <p>Suspended Remove is engineered for resilient API status resolution and stateful multi-day queue tracking.</p>
 <ul>
 <li><strong>Account Accessibility Verifier</strong>: Distinguishes between deleted accounts, shadowbanned users, and network timeouts.</li>
+<li><strong>Historical Post Purge Engine</strong>: Searches subreddit archives via author indexing to identify and safely remove older submissions from confirmed suspended accounts.</li>
 <li><strong>Stateful Redis Queue</strong>: Tracks pending items across configurable multi-day recheck schedules with atomic updates.</li>
 <li><strong>Auto-Recovery Restorer</strong>: Re-evaluates queued items on subsequent crons and executes automated approvals upon profile restoration.</li>
 <li><strong>Mod Note Synchronizer</strong>: Directly appends internal Reddit Mod Notes with customizable format templates.</li>

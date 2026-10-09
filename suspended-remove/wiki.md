@@ -1,7 +1,7 @@
 # Suspended Remove
 
 Category: Security  
-Version: v1.0.87  
+Version: v1.0.88  
 Visibility: Public  
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.
 
@@ -42,6 +42,8 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - addUserNote: Add mod note to user on final action (boolean, default: true). Adds a note to the user's mod history when the final action fires. Only runs once, at final action time. Does not run during the waiting period.
 - userNoteLabel: User note label (select, default: SPAM_WARNING). Badge shown on the mod note in the user's profile. None has the lowest impact on the account.
 - userNoteText: User note text (string, default: Account is suspended or shadowbanned. Item automatically removed.). User note text
+- removeHistoricalPosts: Remove historical posts from suspended accounts (boolean, default: false). When enabled, when an account reaches final action and is confirmed suspended, the app searches the subreddit to go back in time and remove previous posts submitted by that user. Default: Disabled.
+- historicalPostLimit: Maximum historical posts to remove per user (number, default: 10). Maximum number of past posts by this suspended author to search and remove in one pass (1–25). Default: 10.
 - legalDocs: Terms & Privacy (string, default: See help text for official documentation links.). legal.legal_docs_url
 
 ## Automation Capabilities
@@ -62,6 +64,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Install: Add Suspended Remove to your subreddit through the Reddit App Directory.
 - Configure Pipeline: Open Mod Tools > App Settings > Suspended Remove.
 - Choose Waiting Mode: Select your preferred waiting-stage action (*Filter & Hide* recommended).
+- Historical Cleanup (Optional)**: Enable "Remove historical posts from suspended accounts" if you wish to purge older submissions from suspended users.
 - Save: Background queue scanning activates immediately with zero manual maintenance.
 - No more orphaned mod queue items. Clean, safe queue automation directly inside Reddit.*
 
@@ -70,13 +73,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.88 — 2026-10-09
+- Standard fleet synchronization and maintenance.
+
+1.0.88 — 2026-10-09
+- Feature: Added `removeHistoricalPosts` (default: false) and `historicalPostLimit` (default: 10, range: 1–25) settings allowing the app to go back in time and search/remove previous posts submitted by confirmed suspended users across the subreddit.
+- Safety: Enforced Redis idempotency caching and strict case-insensitive author equality verification to prevent search false-positives and avoid duplicate mod actions.
+- Observability: Added historical removals tracking to `processPendingQueue` and per-run summary logs.
+
 1.0.87 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-1.0.86 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-1.0.85 — 2026-09-05
 - Standard fleet synchronization and maintenance.
 
 ## Links

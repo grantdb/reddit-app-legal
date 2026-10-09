@@ -1,7 +1,7 @@
 <h1>Suspended Remove</h1>
 
 <p>Category: Security<br>
-Version: v1.0.87<br>
+Version: v1.0.88<br>
 Visibility: Public<br>
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.</p>
 
@@ -47,6 +47,8 @@ Summary: High-precision account purification engine. Fleet-wide security infrast
 <li>addUserNote: Add mod note to user on final action (boolean, default: true). Adds a note to the user's mod history when the final action fires. Only runs once, at final action time. Does not run during the waiting period.</li>
 <li>userNoteLabel: User note label (select, default: SPAM_WARNING). Badge shown on the mod note in the user's profile. None has the lowest impact on the account.</li>
 <li>userNoteText: User note text (string, default: Account is suspended or shadowbanned. Item automatically removed.). User note text</li>
+<li>removeHistoricalPosts: Remove historical posts from suspended accounts (boolean, default: false). When enabled, when an account reaches final action and is confirmed suspended, the app searches the subreddit to go back in time and remove previous posts submitted by that user. Default: Disabled.</li>
+<li>historicalPostLimit: Maximum historical posts to remove per user (number, default: 10). Maximum number of past posts by this suspended author to search and remove in one pass (1–25). Default: 10.</li>
 <li>legalDocs: Terms & Privacy (string, default: See help text for official documentation links.). legal.legal_docs_url</li>
 </ul>
 
@@ -72,6 +74,7 @@ Summary: High-precision account purification engine. Fleet-wide security infrast
 <li>Install: Add Suspended Remove to your subreddit through the Reddit App Directory.</li>
 <li>Configure Pipeline: Open Mod Tools > App Settings > Suspended Remove.</li>
 <li>Choose Waiting Mode: Select your preferred waiting-stage action (*Filter & Hide* recommended).</li>
+<li>Historical Cleanup (Optional)**: Enable "Remove historical posts from suspended accounts" if you wish to purge older submissions from suspended users.</li>
 <li>Save: Background queue scanning activates immediately with zero manual maintenance.</li>
 <li>No more orphaned mod queue items. Clean, safe queue automation directly inside Reddit.*</li>
 </ul>
@@ -83,11 +86,11 @@ Summary: High-precision account purification engine. Fleet-wide security infrast
 </ul>
 
 <h2>Version History</h2>
+<p>1.0.88 — 2026-10-09<br>
+Standard fleet synchronization and maintenance.</p>
+<p>1.0.88 — 2026-10-09<br>
+Feature: Added `removeHistoricalPosts` (default: false) and `historicalPostLimit` (default: 10, range: 1–25) settings allowing the app to go back in time and search/remove previous posts submitted by confirmed suspended users across the subreddit.; Safety: Enforced Redis idempotency caching and strict case-insensitive author equality verification to prevent search false-positives and avoid duplicate mod actions.; Observability: Added historical removals tracking to `processPendingQueue` and per-run summary logs.</p>
 <p>1.0.87 — 2026-09-15<br>
-Standard fleet synchronization and maintenance.</p>
-<p>1.0.86 — 2026-09-15<br>
-Standard fleet synchronization and maintenance.</p>
-<p>1.0.85 — 2026-09-05<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-07T12:04:38.267Z",
+  "generatedAt": "2026-10-09T18:42:31.430Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -23,8 +23,8 @@
         "Install: Add Suspended Remove to your subreddit through the Reddit App Directory.",
         "Configure Pipeline: Open Mod Tools > App Settings > Suspended Remove.",
         "Choose Waiting Mode: Select your preferred waiting-stage action (*Filter & Hide* recommended).",
-        "Save: Background queue scanning activates immediately with zero manual maintenance.",
-        "No more orphaned mod queue items. Clean, safe queue automation directly inside Reddit.*"
+        "Historical Cleanup (Optional)**: Enable \"Remove historical posts from suspended accounts\" if you wish to purge older submissions from suspended users.",
+        "Save: Background queue scanning activates immediately with zero manual maintenance."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -53,7 +53,7 @@
       "menuItems": [
         "GuardHub: Scan Modqueue for Suspended Users"
       ],
-      "settingsCount": 15,
+      "settingsCount": 17,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/suspended-remove",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove",
@@ -66,7 +66,7 @@
         "troubleshooting": "Check the Suspended Remove troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-10-09"
     },
     {
       "appId": "sticky-pro",
