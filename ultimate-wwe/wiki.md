@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.18  
+Version: v0.0.19  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -45,15 +45,18 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install: Add Ultimate WWE Hub to your subreddit via the Reddit Developer portal or App Directory.
-- Launch Pinned Hub Posts: From your subreddit menu (`...`), deploy the Superstar Stats & Records Post, Championship Belts & Leaderboard Post, and Upcoming Matches & Schedule Post as pinned community anchors.
-- Deploy Live Event Thread: On event night, select Create WWE Live Event Thread to launch the show mega-thread.
-- Score & Crown Champions: Declare winners as the broadcast unfolds and click Score Event & Defend Belts to crown champions and update community rankings!
+- Launch Pinned Hub Posts: From your subreddit menu (`...`), deploy the Superstar Stats, Records & Belts Post and Community Prediction & Picking Board as pinned community anchors.
+- Deploy Live Event Thread: On event night, select Create WWE Live Event Thread to launch the show mega-thread with live match cards, community pick consensus, and live chat.
+- Score & Crown Champions: Declare winners as the broadcast unfolds and click Score Event Results to update community rankings!
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.19 — 2026-10-09
+- Standard fleet synchronization and maintenance.
+
 0.0.18 — 2026-10-09
 - Standard fleet synchronization and maintenance.
 
@@ -61,9 +64,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - UX Optimization: Removed redundant and static `.event-meta-bar` pills ("Schedule: Tonight", "Location: Live on Reddit", "0 Fan Picks Submitted") across all post views, reclaiming ~44px of vertical viewport space.
 - Header Polish: Conditioned `#lock-status-badge` to display strictly on live event threads (`postType === 'live_event'`), hiding it cleanly on static database posts (Superstar Stats, Championship Belts, and Schedule Guide).
 - Header Density: Tightened `.app-header` padding and subtitle spacing for a more compact and readable inline mobile presentation.
-
-0.0.17 — 2026-10-09
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
