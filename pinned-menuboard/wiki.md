@@ -1,7 +1,7 @@
 # Pinned Menuboard
 
 Category: Moderation  
-Version: v0.0.81  
+Version: v0.0.82  
 Visibility: Public  
 Summary: Centralized interactive showcase for featured community posts, threads, and resources with custom thumbnails and themes.
 
@@ -55,13 +55,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.82 — 2026-10-09
+- Standard fleet synchronization and maintenance.
+
 0.0.81 — 2026-10-07
 - Standard fleet synchronization and maintenance.
 
 0.0.80 — 2026-10-03
-- Standard fleet synchronization and maintenance.
-
-0.0.79 — 2026-09-18
 - Standard fleet synchronization and maintenance.
 
 ## Links
