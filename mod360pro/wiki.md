@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.36  
+Version: v0.0.37  
 Visibility: Public  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -76,19 +76,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.37 — 2026-10-10
+- Standard fleet synchronization and maintenance.
+
 0.0.36 — 2026-10-07
 - Standard fleet synchronization and maintenance.
 
 0.0.35 — 2026-10-07
 - Standard fleet synchronization and maintenance.
-
-0.0.34 — 2026-10-06
-- Eliminate inline scroll traps & align with fleet webview standards:
-- Removed nested `maxHeight` and `overscrollBehaviorY: contain` from simulation test verdict box to prevent touch scroll trapping in inline custom posts.
-- Added CSS touch-action (`touch-action: pan-x pan-y`) and horizontal overscroll (`overscroll-behavior-x: auto`) to secondary sub-navigation pills.
-- Implemented 8px swipe-drag threshold guard on sub-navigation pills to prevent accidental subview switching and scroll reset during swipe gestures.
-- Added button-based pagination (4 items per page with compact ◀ Prev / Next ▶ controls) for Timed Quarantine and False-Positive Rescue lists to prevent unbounded vertical feed scrolling.
-- Added feed swipe-drag suppression guard (`>8px drag`) on card action buttons to prevent accidental link/action triggers during mobile feed scrolling.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/TERMS.md)
