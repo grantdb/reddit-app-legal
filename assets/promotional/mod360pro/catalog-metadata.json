@@ -1,0 +1,25 @@
+{
+  "appName": "Mod360 Pro",
+  "slug": "mod360pro",
+  "version": "0.0.36",
+  "visibility": "public",
+  "directoryListing": {
+    "displayName": "Mod360 Pro",
+    "description": "Unified moderation control center and automated compliance suite for Reddit communities.",
+    "termsUrl": "https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/TERMS.md",
+    "privacyUrl": "https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/PRIVACY.md",
+    "isNsfw": false
+  },
+  "inAppCatalog": {
+    "featuringDescription": "Unified moderation control center",
+    "tileTagline": "Mod360 Control Center"
+  },
+  "assets": {
+    "promotionalIcon": "promotional-icon.png",
+    "featuringAssetJpg": "featuring-asset.jpg",
+    "featuringAssetPng": "featuring-asset.png",
+    "fallbackAssetJpg": "fallback-asset.jpg",
+    "fallbackAssetPng": "fallback-asset.png",
+    "tileImage": "tile-image.png"
+  }
+}
