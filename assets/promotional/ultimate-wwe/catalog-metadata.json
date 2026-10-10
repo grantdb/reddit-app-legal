@@ -1,0 +1,41 @@
+{
+  "app": "ultimate-wwe",
+  "displayName": "Ultimate WWE Hub",
+  "description": "Transform WWE live threads into interactive match scoreboards, official championship lineages, real-time bell countdowns, and community pick 'em hubs.",
+  "featuringDescription": "Live match cards & fan predictions",
+  "tileTagline": "Live WWE Event Hub",
+  "category": "Community",
+  "subcategories": ["Sports", "Events", "Entertainment"],
+  "isNsfw": false,
+  "termsUrl": "https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md",
+  "privacyUrl": "https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/PRIVACY.md",
+  "assets": {
+    "promotionalIcon": {
+      "path": "promotional-icon.png",
+      "dimensions": "512x512",
+      "format": "PNG",
+      "size": "324 KB"
+    },
+    "featuringAsset": {
+      "pathPng": "featuring-asset.png",
+      "pathJpg": "featuring-asset.jpg",
+      "dimensions": "1500x1000",
+      "format": "PNG / JPEG",
+      "sizeJpg": "307 KB"
+    },
+    "fallbackAsset": {
+      "pathPng": "fallback-asset.png",
+      "pathJpg": "fallback-asset.jpg",
+      "dimensions": "1500x1000",
+      "format": "PNG / JPEG",
+      "sizeJpg": "269 KB"
+    },
+    "tileImage": {
+      "path": "tile-image.png",
+      "dimensions": "560x256",
+      "format": "PNG",
+      "size": "262 KB"
+    }
+  },
+  "updatedAt": "2026-10-10T02:32:00.000Z"
+}
