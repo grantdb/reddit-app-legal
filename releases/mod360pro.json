@@ -1,16 +1,16 @@
 {
   "slug": "mod360pro",
   "title": "Mod360 Pro",
-  "version": "0.0.37",
+  "version": "0.0.38",
   "date": "2026-10-10",
   "category": "Moderation",
   "description": "Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.",
   "visibility": "Public",
   "notes": "- Standard fleet synchronization and maintenance.",
-  "postTitle": "[App Update] Mod360 Pro v0.0.37 Released",
-  "postBody": "# Mod360 Pro v0.0.37 is Now Available\n\n> **Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.**\n\n---\n\n### What's New in v0.0.37\n- Standard fleet synchronization and maintenance.\n\n---\n\n### Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod360pro)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod360pro-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/mod360pro)\n\n---\n\n### How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Mod360 Pro** and click **Update** (or verify it displays `v0.0.37`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "postTitle": "[App Update] Mod360 Pro v0.0.38 Released",
+  "postBody": "# Mod360 Pro v0.0.38 is Now Available\n\n> **Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.**\n\n---\n\n### What's New in v0.0.38\n- Standard fleet synchronization and maintenance.\n\n---\n\n### Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod360pro)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod360pro-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/mod360pro)\n\n---\n\n### How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Mod360 Pro** and click **Update** (or verify it displays `v0.0.38`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod360pro",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod360pro-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/mod360pro",
-  "generatedAt": "2026-10-10T03:16:00.105Z"
+  "generatedAt": "2026-10-10T03:50:48.853Z"
 }

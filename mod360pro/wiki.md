@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.37  
+Version: v0.0.38  
 Visibility: Public  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -76,13 +76,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.38 — 2026-10-10
+- Standard fleet synchronization and maintenance.
+
 0.0.37 — 2026-10-10
 - Standard fleet synchronization and maintenance.
 
 0.0.36 — 2026-10-07
-- Standard fleet synchronization and maintenance.
-
-0.0.35 — 2026-10-07
 - Standard fleet synchronization and maintenance.
 
 ## Links
