@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.38  
+Version: v0.0.39  
 Visibility: Public  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -49,7 +49,7 @@ Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ mo
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- Basic Settings: Status & Health (application/json, default: -). Status & Health
+- Basic Settings: Status & Health (keyword, default: -). Status & Health
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
@@ -76,13 +76,18 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.39 — 2026-10-12
+- Standard fleet synchronization and maintenance.
+
+0.0.39 — 2026-10-12
+- AutoModerator Backup Vault: Demoted AutoModerator to a passive safety net with up to 30 rolling Redis configuration snapshots, point-in-time rollback modal, and protected YAML editor behind safety warnings.
+- AutoMod to Automations Migration Engine: Built a full converter for migrating AutoMod rules into Reddit Mod Tools Automations recipes (with 1-click token copy cards) and high-speed Mod360 Pro native rules (with dry-run preview diffs and shadow mode protection).
+- Granular Rule Tri-Action Controls: Per-rule actions for AutoMod rules: Import to Mod360 Pro, Step-by-Step to Automations, Skip/Disable/Remove, plus reversible line-by-line AutoMod retirement.
+- New Migrate & Integrations Domain: Added a dedicated 6th top-level domain featuring Automations Migration, Standalone App Conflict Checklist, and the AutoMod Backup Vault.
+- Overview Status & Health Expansion: Upgraded the health overview with Community Health Score breakdown, Active Module Defense Matrix, Real-time Activity Pulse, and an automated Hybrid Conflict & Redundancy Scanner with one-click safe deconfliction.
+- Zero Emoji Compliance: Fully aligned all new views, badges, labels, and modals with fleet-wide typography and aesthetic standards.
+
 0.0.38 — 2026-10-10
-- Standard fleet synchronization and maintenance.
-
-0.0.37 — 2026-10-10
-- Standard fleet synchronization and maintenance.
-
-0.0.36 — 2026-10-07
 - Standard fleet synchronization and maintenance.
 
 ## Links

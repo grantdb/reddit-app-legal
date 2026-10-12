@@ -10,6 +10,8 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
 
 ## At a Glance
 
+- **AutoMod Backup Vault & Automations Migration**: Converts legacy AutoModerator rules into modern Reddit Mod Tools Automations recipes (with 1-click token copy) or high-speed Mod360 Pro native rules, demoting AutoMod into a passive 30-snapshot backup vault.
+- **Hybrid Conflict & Redundancy Scanner**: Scans for redundant AutoMod rules and overlapping standalone fleet apps with 1-click safe deconfliction to shadow mode.
 - **Sub-10ms Pre-AutoMod Gate**: Intercepts rapid-fire submission floods and duplicate content hashes on `onPostSubmit` via atomic Redis before content enters the community.
 - **Deep Multi-Rule Content Engine**: Evaluates author status (suspended/shadowbanned accounts), domain policies, keyword regexes, title format rules, and topic guides on `onPostCreate`.
 - **Timed Quarantine State Machine**: Holds marginal posts in a temporary quarantine (15m–48h) with automated expiration timers and 1-click mod release.
@@ -96,16 +98,14 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
 
 ## Dashboard Specifications
 
-| Control Tab | Core Functions | Direct Moderator Action |
+| Control Domain | Core Functions | Direct Moderator Action |
 | :--- | :--- | :--- |
-| **Overview** | System health, operational mode toggle, recent event counters | Switch between Shadow and Live modes |
-| **Rules Engine** | Keyword patterns, regex groups, title syntax validation | Add, edit, or test keyword rules |
-| **Domains** | URL allowlists, domain blocks, shortener detection | Manage link and domain policies |
-| **Quarantine** | Active quarantine queue, countdown timers, pending releases | Approve or expire quarantined posts |
-| **Verification** | Karma minimums, account age gates, flair requirements | Adjust community onboarding tiers |
-| **Rescue Hub** | False-positive triage, 1-click restore, whitelist author | Restore wrongly flagged content |
-| **Wiki Sync** | Bi-directional wiki editor, version comparison, sync status | Push or pull rules to subreddit wiki |
-| **Backups** | Snapshot creation, modmail export, configuration restore | Generate permanent modmail backup |
+| **Overview & Triage** | Community health audit score, module defense matrix, activity pulse, and hybrid conflict scanner | Toggle operational mode, test pipeline, run deconfliction |
+| **Content Policies** | Keywords & regex engine, domain & link shortener blockers, title & format syntax | Add, test, and tune content rules |
+| **Author & Cadence** | Karma minimums, account age milestones, verification tiers, sliding burst rate limiters | Adjust contributor trust tiers and post quotas |
+| **Enforcement & Actions** | Timed quarantine state machine, AI content scanning, duplicate hashing, sticky templates | Review quarantine, inspect reports, release posts |
+| **Storage & Backups** | Two-way wiki policy sync, manual Redis backups, and modmail disaster recovery | Export or import configs, sync with subreddit wiki |
+| **Migrate & Integrations** | AutoMod to Automations migration, AutoMod backup vault (30 snapshots), standalone app conflict checklist | Convert AutoMod rules, restore vault snapshots, resolve bot overlaps |
 
 ---
 
