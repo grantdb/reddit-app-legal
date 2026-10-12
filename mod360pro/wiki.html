@@ -1,7 +1,7 @@
 <h1>Mod360 Pro</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.39<br>
+Version: v0.0.40<br>
 Visibility: Public<br>
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.</p>
 
@@ -89,12 +89,12 @@ Summary: Unified 360-degree moderation engine and waterfall pipeline consolidati
 </ul>
 
 <h2>Version History</h2>
-<p>0.0.39 — 2026-10-12<br>
+<p>0.0.40 — 2026-10-12<br>
 Standard fleet synchronization and maintenance.</p>
+<p>0.0.40 — 2026-10-12<br>
+Tab Terminology Update: Renamed 'Author & Cadence' to 'Users & Rate Limits' across all navigation tabs, section headers, and documentation for clear, standard Reddit moderation terminology.; Graceful AutoMod 404 Error Handling: Catch gRPC status 5 / 404 NOT_FOUND errors when `config/automoderator` is not configured on a subreddit, eliminating false alert banners and providing clean empty-state onboarding in the Automations Migration and Backup Vault views.</p>
 <p>0.0.39 — 2026-10-12<br>
 AutoModerator Backup Vault: Demoted AutoModerator to a passive safety net with up to 30 rolling Redis configuration snapshots, point-in-time rollback modal, and protected YAML editor behind safety warnings.; AutoMod to Automations Migration Engine: Built a full converter for migrating AutoMod rules into Reddit Mod Tools Automations recipes (with 1-click token copy cards) and high-speed Mod360 Pro native rules (with dry-run preview diffs and shadow mode protection).; Granular Rule Tri-Action Controls: Per-rule actions for AutoMod rules: Import to Mod360 Pro, Step-by-Step to Automations, Skip/Disable/Remove, plus reversible line-by-line AutoMod retirement.; New Migrate & Integrations Domain: Added a dedicated 6th top-level domain featuring Automations Migration, Standalone App Conflict Checklist, and the AutoMod Backup Vault.; Overview Status & Health Expansion: Upgraded the health overview with Community Health Score breakdown, Active Module Defense Matrix, Real-time Activity Pulse, and an automated Hybrid Conflict & Redundancy Scanner with one-click safe deconfliction.; Zero Emoji Compliance: Fully aligned all new views, badges, labels, and modals with fleet-wide typography and aesthetic standards.</p>
-<p>0.0.38 — 2026-10-10<br>
-Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
 <ul>

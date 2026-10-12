@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.39  
+Version: v0.0.40  
 Visibility: Public  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -76,8 +76,12 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.39 — 2026-10-12
+0.0.40 — 2026-10-12
 - Standard fleet synchronization and maintenance.
+
+0.0.40 — 2026-10-12
+- Tab Terminology Update: Renamed 'Author & Cadence' to 'Users & Rate Limits' across all navigation tabs, section headers, and documentation for clear, standard Reddit moderation terminology.
+- Graceful AutoMod 404 Error Handling: Catch gRPC status 5 / 404 NOT_FOUND errors when `config/automoderator` is not configured on a subreddit, eliminating false alert banners and providing clean empty-state onboarding in the Automations Migration and Backup Vault views.
 
 0.0.39 — 2026-10-12
 - AutoModerator Backup Vault: Demoted AutoModerator to a passive safety net with up to 30 rolling Redis configuration snapshots, point-in-time rollback modal, and protected YAML editor behind safety warnings.
@@ -86,9 +90,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - New Migrate & Integrations Domain: Added a dedicated 6th top-level domain featuring Automations Migration, Standalone App Conflict Checklist, and the AutoMod Backup Vault.
 - Overview Status & Health Expansion: Upgraded the health overview with Community Health Score breakdown, Active Module Defense Matrix, Real-time Activity Pulse, and an automated Hybrid Conflict & Redundancy Scanner with one-click safe deconfliction.
 - Zero Emoji Compliance: Fully aligned all new views, badges, labels, and modals with fleet-wide typography and aesthetic standards.
-
-0.0.38 — 2026-10-10
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/TERMS.md)
