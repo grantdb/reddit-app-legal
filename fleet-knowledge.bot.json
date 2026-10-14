@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-09T22:48:46.996Z",
+  "generatedAt": "2026-10-14T21:57:00.338Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2961,68 +2961,6 @@
       },
       "status": "active",
       "lastUpdated": "2026-09-20"
-    },
-    {
-      "appId": "mod360pro",
-      "slug": "mod360pro",
-      "appName": "Mod360 Pro",
-      "aliases": [
-        "mod360pro",
-        "mod360 pro"
-      ],
-      "summary": "Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.",
-      "keywords": [
-        "mod360pro",
-        "mod360 pro",
-        "moderation"
-      ],
-      "setupSteps": [
-        "Install: Add Mod360 Pro to your subreddit from the Reddit App Directory.",
-        "Open Control Center: Navigate to Mod Tools > Mod360 Pro: Control Center.",
-        "Verify Settings in Shadow Mode: Test rules and run simulations using the in-dashboard test benches.",
-        "Switch to Live Enforcement: Toggle operational status to Live in the Overview tab."
-      ],
-      "commonIssues": [],
-      "troubleshooting": {
-        "install_setup": [],
-        "permissions_access": [],
-        "configuration": [],
-        "syntax_formatting": [],
-        "expected_behavior": [],
-        "bug_report": [],
-        "feature_request": [],
-        "docs_help": [
-          "Check app console logs via devvit logs <subreddit> for diagnostic output."
-        ]
-      },
-      "capabilities": {
-        "reddit": true,
-        "redis": true,
-        "http": true,
-        "scheduler": true,
-        "customPost": true
-      },
-      "triggers": [
-        "PostSubmit",
-        "PostCreate",
-        "CommentSubmit",
-        "CommentCreate"
-      ],
-      "menuItems": [],
-      "settingsCount": 1,
-      "links": {
-        "readme": "https://www.reddit.com/r/grantdb/wiki/mod360pro",
-        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod360pro",
-        "github": "https://github.com/grantdb/mod360pro",
-        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/TERMS.md",
-        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/PRIVACY.md"
-      },
-      "replyTemplates": {
-        "welcome": "Welcome to r/grantdb support! Here is reference information for Mod360 Pro.",
-        "troubleshooting": "Check the Mod360 Pro troubleshooting guide or view logs via devvit logs."
-      },
-      "status": "active",
-      "lastUpdated": "2026-10-05"
     }
   ]
 }
