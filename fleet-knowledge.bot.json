@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T21:57:00.338Z",
+  "generatedAt": "2026-10-16T03:28:30.921Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2760,10 +2760,8 @@
         "customPost": true
       },
       "triggers": [],
-      "menuItems": [
-        "GuardHub: RescueGuard Review"
-      ],
-      "settingsCount": 9,
+      "menuItems": [],
+      "settingsCount": 0,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/rescue-guard",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/rescue-guard",
@@ -2776,7 +2774,7 @@
         "troubleshooting": "Check the RescueGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-31"
+      "lastUpdated": "2026-10-16"
     },
     {
       "appId": "sub-setup",
