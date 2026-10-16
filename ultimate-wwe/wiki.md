@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.20  
+Version: v0.0.21  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -54,13 +54,17 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.21 — 2026-10-16
+- Standard fleet synchronization and maintenance.
+
+0.0.21 — 2026-10-15
+- Feed Mode Standard: Implemented compact 512px tall `#inline-launchpad` with featured main event preview, consensus bar, countdown timer, and primary "ENTER WWE ARENA (EXPANDED MODE)" launch CTA button conforming to mod360pro canonical standard.
+- Main Nights Auto-Setup Engine: Added 1-click presets for Monday Night Raw, WWE NXT Tuesday, Friday Night SmackDown, and upcoming PLEs with dynamic next-broadcast countdown targets.
+- Quick Match Builder: Added 1-tap roster chip picker covering authoritative 2026 WWE superstars with quick template pills (Singles, Title Match, Tag Team, Triple Threat) eliminating manual text typing friction.
+- Automated Win/Loss Tracking & 2026 Baseline Recalibration: Built-in match completion and scoring engine automatically updates superstar season records, streaks, and title defense milestones directly in Redis without external API dependencies.
+- Zero-Fetch Architecture: Operates entirely self-contained within Devvit, Redis, and Reddit native permissions, omitting HTTP fetch domains to ensure instantaneous updates and zero admin review queue delays.
+
 0.0.20 — 2026-10-10
-- Standard fleet synchronization and maintenance.
-
-0.0.19 — 2026-10-09
-- Standard fleet synchronization and maintenance.
-
-0.0.18 — 2026-10-09
 - Standard fleet synchronization and maintenance.
 
 ## Links
