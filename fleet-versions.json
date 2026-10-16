@@ -191,7 +191,7 @@
   },
   "rescue-guard": {
     "name": "RescueGuard",
-    "version": "0.0.23",
+    "version": "0.0.24",
     "visibility": "public"
   },
   "flair-guard": {
