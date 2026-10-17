@@ -1,7 +1,7 @@
 # TestRank
 
 Category: Utility  
-Version: v0.0.31  
+Version: v0.0.32  
 Visibility: Unlisted  
 Summary: Tester recognition and ranking app for r/droidapptesters.
 
@@ -67,13 +67,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.32 — 2026-10-17
+- Standard fleet synchronization and maintenance.
+
+0.0.32 — 2026-10-16
+- UI/UX: Adopt canonical feed leaderboard standards on `leaderboard.html`: implement 5-item button-based pagination with boundary disabling, accessible `aria-label` controls, and dynamic page indicator.
+- UI/UX: Replace unicode arrow glyphs with crisp inline SVGs across navigation steppers and scroll FABs.
+- Safety: Implement hardened 8px swipe-drag threshold guard on tabs, pagination controls, and refresh actions.
+- Containment: Scope feed scroller within `.app-inline-root` and add `[data-theme="light"]` token overrides.
+
 0.0.31 — 2026-10-10
-- Standard fleet synchronization and maintenance.
-
-0.0.30 — 2026-10-07
-- Standard fleet synchronization and maintenance.
-
-0.0.29 — 2026-10-05
 - Standard fleet synchronization and maintenance.
 
 ## Links
