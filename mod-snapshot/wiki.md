@@ -2,7 +2,7 @@
 
 Category: Archival  
 Version: v0.0.82  
-Visibility: Public  
+Visibility: Unlisted  
 Summary: Professional-grade subreddit configuration backup. Delivers comprehensive archival snapshots and best-effort app discovery to Modmail.
 
 ## Overview

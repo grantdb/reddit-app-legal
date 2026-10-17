@@ -67,6 +67,11 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.33 — 2026-10-17
+- Scroll Model Restoration: Restored proven v0.0.31 natural scrolling model on `leaderboard.html` allowing full vertical feed scrolling (`overflow-y: auto`, `touch-action: pan-y`) and continuous floating FAB controls (`▲` and `▼`).
+- Tap Fallback Engine: Added single-step tap fallback to navigation stepper (`◀` and `▶`) and scroll FAB buttons on `onClick` alongside pointer hold engine.
+- Zero-Emoji & SVGs: Retained pure SVG icons and `[data-theme="light"]` token architecture.
+
 0.0.32 — 2026-10-17
 - Standard fleet synchronization and maintenance.
 
@@ -75,9 +80,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - UI/UX: Replace unicode arrow glyphs with crisp inline SVGs across navigation steppers and scroll FABs.
 - Safety: Implement hardened 8px swipe-drag threshold guard on tabs, pagination controls, and refresh actions.
 - Containment: Scope feed scroller within `.app-inline-root` and add `[data-theme="light"]` token overrides.
-
-0.0.31 — 2026-10-10
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/testrank/TERMS.md)

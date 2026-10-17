@@ -2,7 +2,7 @@
 
 Category: Automation  
 Version: v0.1.109  
-Visibility: Public  
+Visibility: Unlisted  
 Summary: Linux aggregator. Upgraded to Gemini 2.5 metadata extraction. Fixed network permissions.
 
 ## Overview

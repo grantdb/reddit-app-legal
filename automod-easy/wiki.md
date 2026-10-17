@@ -57,13 +57,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.151 — 2026-10-16
+- Standards & Gesture Safety: Align `.app-nav` with universal webview scrolling rules by setting `overscroll-behavior-x: auto` and `touch-action: pan-x pan-y`, ensuring natural gesture chaining to parent mobile feed.
+- Zero Emoji Compliance: Purge unicode emojis from inline feature cards and footer tip; replace with clean inline SVG icons.
+
 0.0.150 — 2026-09-24
 - Standard fleet synchronization and maintenance.
 
 0.0.149 — 2026-09-23
-- Standard fleet synchronization and maintenance.
-
-0.0.148 — 2026-09-23
 - Standard fleet synchronization and maintenance.
 
 ## Links

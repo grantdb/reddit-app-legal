@@ -1,8 +1,8 @@
 # RescueGuard
 
 Category: Moderation  
-Version: v0.0.24  
-Visibility: Public  
+Version: v0.0.25  
+Visibility: Unlisted  
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.
 
 ## Overview
@@ -55,26 +55,18 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.24 — 2026-10-16
+0.0.25 — 2026-10-17
 - Standard fleet synchronization and maintenance.
 
-0.0.24 — 2026-10-15
-- Adopt mod360pro canonical expanded UI architecture to eliminate mobile feed scrolling defects:
-- Added dedicated zero-scroll Inline Launch Card for feed view (`#inline-launch-view`):
-- Strictly bounded height (max 512px) with `overflow: hidden; touch-action: pan-y;` ensuring natural, untrapped feed gesture chaining.
-- Status card with discovery metrics (candidates awaiting review, lookback window, deduplication guard, spotlight action).
-- Prominent `Launch Review Hub` primary action button calling `requestExpandedMode(e, 'expanded')`.
-- Registered `"expanded": { "entry": "index.html" }` entrypoint in `devvit.json`.
-- Upgraded Expanded Mode Review Hub (`#expanded-console-view`):
-- Full cockpit with two-tier GuardHub header, theme toggle button, and inline return button calling `exitExpandedMode(e)`.
-- tab console (Overview, Review Queue with 3-per-page button pagination, Spotlight History, Settings).
-- Floating 48px page scroll FABs (▲ and ▼) with 48px fine-tuned steps and continuous hold.
-- Dual-theme support (Dark and Light) with persisted settings.
-- Purged obsolete Blocks legacy files (`src/main.ts`, `src/scanner.ts`).
-- Added client compilation with esbuild in `tools/build.ts` bundling `@devvit/client`.
-- Enforced fleet-wide Zero-Emoji Policy: replaced unicode emojis across HTML, CSS, JS, and Markdown with SVGs and styled badges.
+0.0.25 — 2026-10-17
+- Mobile Feed Viewport Containment & Button Anchoring: Fixed inline card layout clipping on narrow mobile viewports:
+- Removed hardcoded `min-height: 440px;` from `.inline-launch-container`.
+- Added `@media (max-width: 480px)` rules to hide `.inline-launch-footnote` (saving ~45px), `.inline-brand-sub`, and `.inline-card-sub`.
+- Compacted container padding from `16px` to `10px 12px`, reduced card margins, and tuned metric tile padding to `6px 8px`.
+- Enforced `flex-shrink: 0 !important;` on `#btn-launch-expanded` to ensure the primary 'Launch Review Hub' button remains 100% visible and tappable above the mobile feed fold.
+- Added flex containment and single-line text truncation to header title and subreddit badge.
 
-0.0.23 — 2026-09-20
+0.0.24 — 2026-10-16
 - Standard fleet synchronization and maintenance.
 
 ## Links

@@ -59,6 +59,10 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.103 — 2026-10-16
+- Architecture & Expanded Mode: Add canonical expanded entrypoint alias to devvit.json, add `body.app-expanded-mode` fixed canvas CSS rules, and verify synchronous trusted gesture transition via `requestExpandedMode(e, 'game')`.
+- Standards & Zero Emoji: Purge unicode emojis from splash tutorial and in-game topbar; replace with inline SVG icons.
+
 0.0.102 — 2026-10-03
 - Viewport Resize & Firing Fix: Resolved bug where switching from desktop to mobile viewport in the UI Simulator or rotating devices caused the turret and world coordinates to stay outside the canvas boundaries, immediately culling all fired projectiles.
 - Unified Pointer Engine: Migrated touch and mouse handlers to unified Pointer Events with `setPointerCapture`, `touch-action: none` on game canvas, and proper release cleanup on `blur` and `visibilitychange`.
@@ -69,9 +73,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - HUD & Status Feedback: Stacked mobile HUD downward beneath score display to prevent touch-control overlap, and added real-time score transmission status feedback on game-over screen.
 
 0.0.101 — 2026-09-21
-- Standard fleet synchronization and maintenance.
-
-0.0.100 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links

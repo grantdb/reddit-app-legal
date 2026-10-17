@@ -2,7 +2,7 @@
 
 Category: Security  
 Version: v0.0.10  
-Visibility: Public  
+Visibility: Unlisted  
 Summary: Configurable multi-tier verification engine for user trust, age, and role verification.
 
 ## Overview

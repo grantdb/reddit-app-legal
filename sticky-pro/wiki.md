@@ -82,13 +82,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.116 — 2026-10-16
+- Canonical UI alignment: added light theme token overrides in webview index.html.
+- Lifecycle logging: added structured lifecycle logging to menu item and trigger handlers.
+
 1.0.115 — 2026-09-21
 - Standard fleet synchronization and maintenance.
 
 1.0.114 — 2026-09-17
-- Standard fleet synchronization and maintenance.
-
-1.0.113 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links

@@ -2,7 +2,7 @@
 
 Category: Stargate  
 Version: v0.0.64  
-Visibility: Public  
+Visibility: Unlisted  
 Summary: New Stargate-themed responder application. Under development.
 
 ## Overview

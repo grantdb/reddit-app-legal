@@ -56,20 +56,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.46 — 2026-10-16
+- UX & Standards: Add canonical expanded entrypoint in devvit.json, height tall, and body.app-expanded-mode root scroller CSS.
+- Theme & Standards: Add [data-theme="light"] color token overrides for fleet light/dark theme switching.
+- Standards & Iconography: Enforce Zero-Emoji policy across index, settings, and leaderboard webviews; replace unicode arrows and crosses with inline SVGs.
+
 0.0.45 — 2026-10-07
 - Standard fleet synchronization and maintenance.
 
 0.0.44 — 2026-10-02
 - Standard fleet synchronization and maintenance.
-
-0.0.44 — 2026-10-02
-- Feature: Completely overhauled scoring engine to reward positive community engagement and quality over raw post spam.
-- Feature: Added comment tree ingestion (`reddit.getComments`) to index commenters, comment upvote scores, and discussion thread depth (`repliesReceived`).
-- Feature: Rewrote scoring formula to reward post upvotes (3x), comment upvotes (2x), discussion spark (2x), and thread replies (1x) over baseline volume.
-- Feature: Added contributor classification badges: Top Poster, Commenter, Engager, Consistent, and Rising Star.
-- Feature: Expanded Moderator Console settings with granular Quality & Reception weights and quick "Defaults" restore.
-- UI: Added post count, comment count, and total upvotes received columns to the interactive leaderboard table.
-- Compatibility: Maintained full backward compatibility with legacy snapshots, fallback aliases, and default settings merging.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/user-board/TERMS.md)
