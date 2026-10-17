@@ -1,7 +1,7 @@
 # GimmeCode Guard
 
 Category: Moderation  
-Version: v0.0.46  
+Version: v0.0.47  
 Visibility: Unlisted  
 Summary: Detects low-effort give me code requests
 
@@ -57,13 +57,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.47 — 2026-10-17
+- Standard fleet synchronization and maintenance.
+
+0.0.47 — 2026-10-16
+- Align webview with canonical UI standards: add expanded post entrypoint alias, complete light theme design tokens, body.app-expanded-mode viewport styles, and touch-action gesture chaining.
+- Purge unicode/HTML arrow entities with pure inline SVGs across webview controls.
+- Add structured console.warn logging across server exception handlers and catch blocks.
+
 0.0.46 — 2026-09-26
-- Standard fleet synchronization and maintenance.
-
-0.0.45 — 2026-09-26
-- Standard fleet synchronization and maintenance.
-
-0.0.44 — 2026-09-24
 - Standard fleet synchronization and maintenance.
 
 ## Links

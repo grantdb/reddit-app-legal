@@ -6,7 +6,8 @@
 
 GimmeCode Guard safeguards programming, Android/iOS, and creator subreddits from repetitive "give me code" demands, homework begging, and low-effort copy-paste requests. Powered by a real-time Webview Control Center, pattern scoring matrix, and Markdown code-block awareness, it nudges users toward constructive inquiry while preserving meaningful technical discussions.
 
-### Key Highlights
+## Key Highlights
+
 - **Interactive Webview Control Center**: Real-time moderation dashboard embedded in a dedicated custom post for live audit feeds, metric counters, and instant configuration.
 - **Three-Tier Escalation Lifecycle**: Progressive enforcement from polite educational warning replies to modqueue review reports and automated removals with archivable Modmail alerts.
 - **Context-Aware Code Immunity**: Automatically exempts comments containing genuine Markdown code fences or indented blocks, creator fulfillment replies ("code sent", "dm sent"), and post authors (OP).
@@ -62,6 +63,7 @@ Please include the app name, what you expected, what happened, and any error tex
 ## Legal
 
 This application is subject to the following legal agreements:
+
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/TERMS.md)
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/PRIVACY.md)
 
