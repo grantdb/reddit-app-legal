@@ -91,7 +91,7 @@
   },
   "domain-guard": {
     "name": "DomainGuard",
-    "version": "0.0.164",
+    "version": "0.0.165",
     "visibility": "unlisted"
   },
   "user-guard": {
