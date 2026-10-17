@@ -1,7 +1,7 @@
 # RateGuard
 
 Category: Moderation  
-Version: v0.0.15  
+Version: v0.0.16  
 Visibility: Unlisted  
 Summary: Dedicated submission-frequency & posting-cadence gatekeeper for Reddit.
 
@@ -59,13 +59,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.16 — 2026-10-17
+- Standard fleet synchronization and maintenance.
+
+0.0.16 — 2026-10-16
+- Align webview with canonical UI standards: add expanded post entrypoint alias, complete light theme design tokens, body.app-expanded-mode viewport styles, and touch-action gesture chaining on .app-nav.
+- Purge unicode arrow glyphs with pure inline SVGs across navigation tab scroller.
+- Add structured lifecycle logging across trigger and menu handlers, and eliminate empty catch blocks in stealth lockdown and storage locks.
+
 0.0.15 — 2026-09-21
-- Standard fleet synchronization and maintenance.
-
-0.0.14 — 2026-09-20
-- Standard fleet synchronization and maintenance.
-
-0.0.13 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
