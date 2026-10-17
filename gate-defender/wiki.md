@@ -1,8 +1,8 @@
 # Gate Defender
 
 Category: Interactive  
-Version: v0.0.103  
-Visibility: Public  
+Version: v0.0.104  
+Visibility: Unlisted  
 Summary: Arcade survival shooter for Stargate SG-1 fans. Defend the SGC wormhole from waves of Goa'uld invaders, fortify Ancient ruins, and compete on the global SGC Operatives leaderboard.
 
 ## Overview
@@ -59,6 +59,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.104 — 2026-10-17
+- Standard fleet synchronization and maintenance.
+
 0.0.103 — 2026-10-16
 - Architecture & Expanded Mode: Add canonical expanded entrypoint alias to devvit.json, add `body.app-expanded-mode` fixed canvas CSS rules, and verify synchronous trusted gesture transition via `requestExpandedMode(e, 'game')`.
 - Standards & Zero Emoji: Purge unicode emojis from splash tutorial and in-game topbar; replace with inline SVG icons.
@@ -71,9 +74,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Desktop Kill-Streak Bonus: Enabled 10-kill streak rewards on desktop/fullscreen granting bonus Iris Barrier integrity (+5 hits), extra ammo (+60), and personal turret shield repair, with 30% ammo drop probability.
 - Plausibility Score Check: Raised server-side score plausibility limit from 250 to 2500 pts/sec after runtime audit revealed genuine high-score runs were being falsely rejected.
 - HUD & Status Feedback: Stacked mobile HUD downward beneath score display to prevent touch-control overlap, and added real-time score transmission status feedback on game-over screen.
-
-0.0.101 — 2026-09-21
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/gate-defender/TERMS.md)
