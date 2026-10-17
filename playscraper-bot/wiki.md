@@ -73,6 +73,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.145 — 2026-10-17
+- Standard fleet synchronization and maintenance.
+
 1.0.144 — 2026-09-20
 - Standard fleet synchronization and maintenance.
 
@@ -80,9 +83,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Fix manual scan menu trigger rejecting verified moderators with "Unauthorized: Moderator only" by resolving the active subreddit via context.reddit.getCurrentSubreddit().
 - Scope moderator status caching to subreddit ID with a 15-minute TTL.
 - Add structured entry and exit lifecycle logging to manual trigger menu action.
-
-1.0.143 — 2026-09-15
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/playscraper-bot/TERMS.md)
