@@ -1,7 +1,7 @@
 # Ring Escape: Serpent Flagship
 
 Category: Interactive  
-Version: v0.0.69  
+Version: v0.0.70  
 Visibility: Unlisted  
 Summary: Stealth infiltration game. Sabotage four systems aboard a Serpent Empire warship and escape through the rings.
 
@@ -53,13 +53,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.70 — 2026-10-17
+- Standard fleet synchronization and maintenance.
+
+0.0.70 — 2026-10-16
+- Canonical UI alignment: register canonical expanded entrypoint alias in devvit.json, add body.app-expanded-mode fixed canvas CSS rules, and strictly enforce Zero-Emoji Policy across onboarding steps, session badges, gameplay controls, HUD overlays, and leaderboards.
+
 0.0.69 — 2026-10-03
-- Standard fleet synchronization and maintenance.
-
-0.0.68 — 2026-09-21
-- Standard fleet synchronization and maintenance.
-
-0.0.67 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
