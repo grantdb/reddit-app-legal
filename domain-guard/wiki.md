@@ -1,7 +1,7 @@
 # DomainGuard
 
 Category: Security  
-Version: v0.0.164  
+Version: v0.0.165  
 Visibility: Unlisted  
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
@@ -65,15 +65,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.164 — 2026-09-17
+0.0.165 — 2026-10-17
 - Standard fleet synchronization and maintenance.
 
-0.0.163 — 2026-09-17
-- Fix: Resolved Rule Editor modal scroll buttons being inactive by restructuring the modal body wrapper with `min-h-0 flex-1 overflow-hidden flex flex-col` and `.modal-body flex-1 min-h-0 overflow-y-auto`, ensuring genuine flexbox scroll containment across mobile and desktop WebViews.
-- Fix: Added dual click and pointer-down event handlers (`e.stopPropagation()` & `e.preventDefault()`) with direct `scrollTop` fallback to ensure step scrolling works reliably on all mouse clicks, taps, and continuous long-presses.
-- Fix: Added active/disabled state tracking for modal scroll arrows (`disabled={!canScrollUp}` / `disabled={!canScrollDown}`) and conditional rendering when content exceeds viewport (`hasModalOverflow`).
+0.0.165 — 2026-10-16
+- UI/UX: Standardized webview viewport architecture with `expanded` mode manifest entrypoint, zero-emoji policy compliance across all dashboard views, SVG icon replacements, and natural scroll chaining (`overscroll-behavior-x: auto`).
+- Resilience: Added non-empty catch warning logs to Redis risk cache helpers.
+- Dependencies: Aligned Devvit package baseline to 0.14.7.
 
-0.0.162 — 2026-09-17
+0.0.164 — 2026-09-17
 - Standard fleet synchronization and maintenance.
 
 ## Links
