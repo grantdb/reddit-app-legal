@@ -27,7 +27,7 @@
   "post-title-check": {
     "name": "Post Title Check",
     "version": "0.0.87",
-    "visibility": "unlisted"
+    "visibility": "public"
   },
   "stargate-trivia": {
     "name": "Stargate Trivia",
@@ -41,7 +41,7 @@
   },
   "distrofeed-bot": {
     "name": "DistroFeed Bot",
-    "version": "0.1.109",
+    "version": "0.1.110",
     "visibility": "unlisted"
   },
   "linux-quest": {
