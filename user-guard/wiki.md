@@ -1,7 +1,7 @@
 # UserGuard
 
 Category: Moderation  
-Version: v0.0.77  
+Version: v0.0.78  
 Visibility: Unlisted  
 Summary: Native author-based moderation engine with exact username and threshold resolution.
 
@@ -61,13 +61,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.78 — 2026-10-17
+- Standard fleet synchronization and maintenance.
+
+0.0.78 — 2026-10-16
+- UI/UX: Standardized webview viewport architecture with `expanded` mode manifest entrypoint, zero-emoji policy compliance across all dashboard views, SVG icon replacements, and natural scroll chaining (`overscroll-behavior-x: auto`).
+- Resilience: Added non-empty catch warning logs to mod notes and user posts lookup helpers.
+- Clean Title: Stripped shield emoji from custom post creation title.
+- Dependencies: Aligned Devvit package baseline to 0.14.7.
+
 0.0.77 — 2026-09-20
-- Standard fleet synchronization and maintenance.
-
-0.0.76 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-0.0.75 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links

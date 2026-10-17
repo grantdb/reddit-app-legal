@@ -101,7 +101,7 @@
   },
   "filter-guard": {
     "name": "FilterGuard",
-    "version": "0.0.84",
+    "version": "0.0.85",
     "visibility": "unlisted"
   },
   "format-guard": {
