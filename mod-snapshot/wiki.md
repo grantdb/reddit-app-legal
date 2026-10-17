@@ -1,7 +1,7 @@
 # Mod Snapshot
 
 Category: Archival  
-Version: v0.0.82  
+Version: v0.0.83  
 Visibility: Unlisted  
 Summary: Professional-grade subreddit configuration backup. Delivers comprehensive archival snapshots and best-effort app discovery to Modmail.
 

@@ -2,7 +2,7 @@
 
 Category: Validation  
 Version: v0.0.87  
-Visibility: Unlisted  
+Visibility: Public  
 Summary: Real-time title validation against community guidelines. Now with support for customizable removal reasons per rule.
 
 ## Overview

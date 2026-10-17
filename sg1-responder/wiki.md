@@ -1,7 +1,7 @@
 # SG-1 Responder
 
 Category: Stargate  
-Version: v0.0.64  
+Version: v0.0.65  
 Visibility: Unlisted  
 Summary: New Stargate-themed responder application. Under development.
 

@@ -1,7 +1,7 @@
 # VerifyGuard
 
 Category: Security  
-Version: v0.0.10  
+Version: v0.0.11  
 Visibility: Unlisted  
 Summary: Configurable multi-tier verification engine for user trust, age, and role verification.
 
