@@ -17,7 +17,7 @@
   "playscraper-bot": {
     "name": "Playscraper Bot",
     "version": "1.0.144",
-    "visibility": "public"
+    "visibility": "unlisted"
   },
   "screen-shot-bot": {
     "name": "Screen-Shot Bot",
@@ -27,7 +27,7 @@
   "post-title-check": {
     "name": "Post Title Check",
     "version": "0.0.87",
-    "visibility": "public"
+    "visibility": "unlisted"
   },
   "stargate-trivia": {
     "name": "Stargate Trivia",
@@ -42,7 +42,7 @@
   "distrofeed-bot": {
     "name": "DistroFeed Bot",
     "version": "0.1.109",
-    "visibility": "public"
+    "visibility": "unlisted"
   },
   "linux-quest": {
     "name": "Linux Quest",
@@ -77,7 +77,7 @@
   "mod-snapshot": {
     "name": "Mod Snapshot",
     "version": "0.0.82",
-    "visibility": "public"
+    "visibility": "unlisted"
   },
   "word-guard": {
     "name": "WordGuard",
@@ -87,7 +87,7 @@
   "sg1-responder": {
     "name": "SG-1 Responder",
     "version": "0.0.64",
-    "visibility": "public"
+    "visibility": "unlisted"
   },
   "domain-guard": {
     "name": "DomainGuard",
@@ -147,7 +147,7 @@
   "verify-guard": {
     "name": "VerifyGuard",
     "version": "0.0.10",
-    "visibility": "public"
+    "visibility": "unlisted"
   },
   "rate-guard": {
     "name": "RateGuard",
@@ -191,8 +191,8 @@
   },
   "rescue-guard": {
     "name": "RescueGuard",
-    "version": "0.0.24",
-    "visibility": "public"
+    "version": "0.0.25",
+    "visibility": "unlisted"
   },
   "flair-guard": {
     "name": "Flair Guard",
