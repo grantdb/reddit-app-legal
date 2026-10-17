@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.22  
+Version: v0.0.23  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -54,8 +54,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.22 — 2026-10-17
+0.0.23 — 2026-10-17
 - Standard fleet synchronization and maintenance.
+
+0.0.23 — 2026-10-17
+- Mobile Header Text Containment & Viewport Protection: Fixed vertical layout blowouts on mobile devices:
+- Added `.inline-title-container` with strict `min-width: 0; flex: 1; overflow: hidden;` containment and `white-space: nowrap; text-overflow: ellipsis;` on `.inline-brand-title`.
+- Hidden redundant `.inline-brand-sub` on narrow mobile screens (`@media (max-width: 480px)`), capping header height strictly at 36px and eliminating 10-line text wrapping.
+- Added `flex-shrink: 0;` to `.btn-primary-expand` and tightened launchpad vertical gap spacing so the primary "ENTER WWE ARENA (EXPANDED MODE)" CTA button remains 100% visible and clickable within the 512px feed viewport.
+- Added title tooltip attributes on title and subtitle elements in `src/client/main.ts` for full text accessibility.
 
 0.0.21 — 2026-10-17
 - Webview Scrolling & FAB Engine Alignment: Aligned `public/index.css` and `src/client/main.ts` with canonical `mod360pro` architecture:
@@ -63,13 +70,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Resolved container metric false-positives in `getScrollMetrics()` to ensure window/document root scroller is prioritized when `.app-root` expands with content.
 - Replaced unicode glyphs (`◀`, `▶`, `▲`, `▼`) with crisp inline SVGs across navigation tab steppers and floating page scroll FABs conforming to fleet Zero-Emoji Policy.
 - Fixed pointer hold engine in `bindNavBtn` and `bindBtn` to support single-step tap execution on `onClick` without getting suppressed by gesture cancelation.
-
-0.0.21 — 2026-10-15
-- Feed Mode Standard: Implemented compact 512px tall `#inline-launchpad` with featured main event preview, consensus bar, countdown timer, and primary "ENTER WWE ARENA (EXPANDED MODE)" launch CTA button conforming to mod360pro canonical standard.
-- Main Nights Auto-Setup Engine: Added 1-click presets for Monday Night Raw, WWE NXT Tuesday, Friday Night SmackDown, and upcoming PLEs with dynamic next-broadcast countdown targets.
-- Quick Match Builder: Added 1-tap roster chip picker covering authoritative 2026 WWE superstars with quick template pills (Singles, Title Match, Tag Team, Triple Threat) eliminating manual text typing friction.
-- Automated Win/Loss Tracking & 2026 Baseline Recalibration: Built-in match completion and scoring engine automatically updates superstar season records, streaks, and title defense milestones directly in Redis without external API dependencies.
-- Zero-Fetch Architecture: Operates entirely self-contained within Devvit, Redis, and Reddit native permissions, omitting HTTP fetch domains to ensure instantaneous updates and zero admin review queue delays.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
