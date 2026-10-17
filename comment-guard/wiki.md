@@ -1,7 +1,7 @@
 # CommentGuard
 
 Category: Moderation  
-Version: v0.0.55  
+Version: v0.0.56  
 Visibility: Unlisted  
 Summary: Hardened code-request moderation engine with weighted scoring and Shadow DOM stability.
 
@@ -58,16 +58,17 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.56 — 2026-10-17
+- Standard fleet synchronization and maintenance.
+
+0.0.56 — 2026-10-16
+- UI: Added `"expanded"` entrypoint alias in `devvit.json` for expanded webview mode.
+- UI: Added light theme token overrides (`[data-theme="light"]`) and `body.app-expanded-mode` support in `index.css`.
+- UI: Upgraded navigation gesture chaining with `overscroll-behavior-x: auto; touch-action: pan-x pan-y;`.
+- UI: Strict Zero-Emoji compliance: replaced all unicode emojis and arrows with clean SVGs across dashboard and post titles.
+
 0.0.55 — 2026-09-20
 - Standard fleet synchronization and maintenance.
-
-0.0.54 — 2026-09-18
-- Standard fleet synchronization and maintenance.
-
-0.0.54 — 2026-09-17
-- Feat: Applied fleet scrolling standard with canonical two-tier top bar header scrolling (◀ and ▶), 48px fine-tuned steps, continuous long-press, visible scrollbars, and active-tab auto-alignment.
-- UI: Added mobile floating scroll controls (▲ and ▼ 48px FABs) via `ScrollSidebar`.
-- Fix: Replaced nested scroll trap with `overscroll-y-auto` and full desktop/mobile high-contrast scrollbars.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/comment-guard/TERMS.md)
