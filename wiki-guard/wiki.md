@@ -1,7 +1,7 @@
 # Wiki-Guard
 
 Category: Moderation  
-Version: v0.0.5  
+Version: v0.0.6  
 Visibility: Unlisted  
 Summary: Mobile-friendly Reddit wiki editor for subreddit moderators.
 
@@ -58,13 +58,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.6 — 2026-10-17
+- Standard fleet synchronization and maintenance.
+
+0.0.6 — 2026-10-16
+- Canonical UI alignment: register canonical expanded entrypoint alias in devvit.json, add body.app-expanded-mode scroller rules and [data-theme="light"] token overrides, set overscroll-behavior-x: auto and touch-action: pan-x pan-y on .app-nav for natural gesture chaining, replace unicode arrow glyphs with inline SVGs, and strictly enforce Zero-Emoji Policy across headers, tabs, toolbars, settings, and unauthorized screens.
+
 0.0.5 — 2026-09-21
-- Standard fleet synchronization and maintenance.
-
-0.0.4 — 2026-09-21
-- Standard fleet synchronization and maintenance.
-
-0.0.3 — 2026-09-21
 - Standard fleet synchronization and maintenance.
 
 ## Links
