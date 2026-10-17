@@ -136,7 +136,7 @@
   },
   "audit-guard": {
     "name": "AuditGuard",
-    "version": "0.0.20",
+    "version": "0.0.21",
     "visibility": "unlisted"
   },
   "guard-hub": {

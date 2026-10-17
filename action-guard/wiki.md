@@ -1,7 +1,7 @@
 # ActionGuard
 
 Category: Moderation  
-Version: v0.0.30  
+Version: v0.0.31  
 Visibility: Unlisted  
 Summary: Professional action moderation engine.
 
@@ -60,17 +60,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.31 — 2026-10-17
+- Standard fleet synchronization and maintenance.
+
+0.0.31 — 2026-10-16
+- Align webview with canonical UI standards: add expanded post entrypoint alias, complete light theme design tokens, body.app-expanded-mode viewport styles, and touch-action gesture chaining.
+- Purge unicode emojis and arrow glyphs with pure inline SVGs across dashboard, simulator, and header controls.
+- Strip lightning emoji from custom post title and add structured logging across trigger, menu, and eligibility catch blocks.
+
 0.0.30 — 2026-09-20
 - Standard fleet synchronization and maintenance.
-
-0.0.29 — 2026-09-18
-- Standard fleet synchronization and maintenance.
-
-0.0.29 — 2026-09-17
-- Feat: Applied fleet scrolling standard with canonical two-tier top bar header scrolling (◀ and ▶), 48px fine-tuned steps, continuous long-press, visible scrollbars, and active-tab auto-alignment.
-- UI: Added mobile floating scroll controls (▲ and ▼ 48px FABs) via `ScrollSidebar`.
-- UI: Added gutter-docked modal scroll controls in `RuleEditor` with `body.modal-open` viewport scroll locking.
-- Fix: Replaced nested scroll trap with `overscroll-y-auto` and full desktop/mobile high-contrast scrollbars.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/action-guard/TERMS.md)
