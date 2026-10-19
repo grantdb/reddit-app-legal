@@ -46,7 +46,7 @@
   },
   "linux-quest": {
     "name": "Linux Quest",
-    "version": "0.0.127",
+    "version": "0.0.128",
     "visibility": "public"
   },
   "archive-all-mm": {

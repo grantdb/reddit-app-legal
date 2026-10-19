@@ -1,7 +1,7 @@
 # User Board
 
 Category: Utility  
-Version: v0.0.45  
+Version: v0.0.46  
 Visibility: Public  
 Summary: Interactive subreddit contributor leaderboard and gamification dashboard.
 
@@ -56,15 +56,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.46 — 2026-10-19
+- Standard fleet synchronization and maintenance.
+
 0.0.46 — 2026-10-16
 - UX & Standards: Add canonical expanded entrypoint in devvit.json, height tall, and body.app-expanded-mode root scroller CSS.
 - Theme & Standards: Add [data-theme="light"] color token overrides for fleet light/dark theme switching.
 - Standards & Iconography: Enforce Zero-Emoji policy across index, settings, and leaderboard webviews; replace unicode arrows and crosses with inline SVGs.
 
 0.0.45 — 2026-10-07
-- Standard fleet synchronization and maintenance.
-
-0.0.44 — 2026-10-02
 - Standard fleet synchronization and maintenance.
 
 ## Links
