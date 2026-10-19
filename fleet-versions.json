@@ -66,8 +66,8 @@
   },
   "gate-defender": {
     "name": "Gate Defender",
-    "version": "0.0.102",
-    "visibility": "public"
+    "version": "0.0.104",
+    "visibility": "unlisted"
   },
   "ai-checker": {
     "name": "AI Checker",
