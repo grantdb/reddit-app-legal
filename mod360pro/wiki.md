@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.41  
+Version: v0.0.42  
 Visibility: Public  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -76,6 +76,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.42 — 2026-10-19
+- Standard fleet synchronization and maintenance.
+
 0.0.42 — 2026-10-17
 - Mobile Feed Viewport Containment & Button Anchoring: Fixed inline card layout clipping on narrow mobile viewports:
 - Added `@media (max-width: 480px)` rules to hide `.inline-launch-footnote` (saving ~45px) and `.inline-brand-sub`.
@@ -85,15 +88,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 0.0.41 — 2026-10-14
 - Standard fleet synchronization and maintenance.
-
-0.0.41 — 2026-10-13
-- Rate Guard Recording & Safety Opt-In: Integrated submission timestamp recording into `SlidingWindowRateLimiter` with sliding 7-day TTL and placeholder author guards; set `ratePolicy.enabled` default to false for safe subreddit opt-in.
-- Secret Gemini API Key & Modmail Redaction: Added subreddit secret setting `geminiApiKey` via `x-goog-api-key` header (omitting key from URLs); automatically redact API keys from disaster recovery Modmail backups and mask from webview payloads.
-- AI Action & Scheduler Fixes: Added support for `report`, `spam`, `filter`, and `remove` AI actions; registered `/internal/scheduler/ai-eval` task endpoint in manifest and server router with safe status response.
-- Simulation & DryRun Protection: Enabled `dryRun` on test pipeline evaluations to prevent test simulations from modifying live rate-limit history, duplicate hashes, or audit logs.
-- Payload Limit & Redis Bounds: Increased JSON request payload limit to 512KB for large AutoMod configs and rules; enforced rank limits and time pruning on audit logs and shadow divergences.
-- Stats Deduplication: Eliminated double-counting of posts and locked comments across submit and create trigger phases.
-- Zero-Scroll Inline Feed Mode: Eliminated inline scroll traps per Reddit Developer Platform guidelines by introducing a compact, zero-scroll `InlineLaunchCard` fitting completely within 512px height (`overflow: hidden !important; touch-action: pan-y;`); relegated the complete 6-domain Control Center, test bench, AutoMod vault, and deep vertical scrolling exclusively to Expanded Mode (`requestExpandedMode`); and replaced `touch-action: none` with `touch-action: manipulation` on floating scroll controls.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/TERMS.md)
