@@ -1,7 +1,7 @@
 # Sticky-Pro
 
 Category: Moderation  
-Version: v1.0.117  
+Version: v1.0.118  
 Visibility: Public  
 Summary: Automated moderator sticky suite with dynamic form population.
 
@@ -82,15 +82,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.118 — 2026-10-20
+- Standard fleet synchronization and maintenance.
+
 1.0.117 — 2026-10-20
 - Standard fleet synchronization and maintenance.
 
 1.0.116 — 2026-10-19
 - Standard fleet synchronization and maintenance.
-
-1.0.116 — 2026-10-16
-- Canonical UI alignment: added light theme token overrides in webview index.html.
-- Lifecycle logging: added structured lifecycle logging to menu item and trigger handlers.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/sticky-pro/TERMS.md)
