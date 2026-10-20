@@ -1,7 +1,7 @@
 # Chevron Lock
 
 Category: Interactive  
-Version: v0.0.15  
+Version: v0.0.16  
 Visibility: Unlisted  
 Summary: Stargate-inspired 7-chevron dialing console puzzle game.
 
@@ -54,14 +54,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.16 — 2026-10-20
+- Standard fleet synchronization and maintenance.
+
 0.0.15 — 2026-10-17
 - Standard fleet synchronization and maintenance.
 
 0.0.15 — 2026-10-16
 - Canonical UI alignment: replace inline navigation with synchronous requestExpandedMode gesture handoff, add canonical expanded entrypoint alias in devvit.json, add body.app-expanded-mode fixed canvas CSS rules, and add [data-theme="light"] token overrides.
-
-0.0.14 — 2026-10-03
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/chevron-lock/TERMS.md)
