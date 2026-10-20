@@ -166,7 +166,7 @@
   },
   "testrank": {
     "name": "TestRank",
-    "version": "0.0.33",
+    "version": "0.0.34",
     "visibility": "unlisted"
   },
   "reference-reply-bot": {

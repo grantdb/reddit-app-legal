@@ -1,7 +1,7 @@
 # Playscraper Bot
 
 Category: Metadata  
-Version: v1.0.151  
+Version: v1.0.152  
 Visibility: Unlisted  
 Summary: AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with configurable delay. Security-hardened moderator gates.
 
@@ -26,6 +26,7 @@ AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with
 
 ## Triggers and Activation
 ### Menu Actions
+- Playscraper Bot: Enter App Link: Manually enter an app or repository URL to scan for this post (Location: post)
 - Playscraper Bot: Scan Post: Manually run the scraper bot on this post (Location: post)
 
 ### Custom Post Types and Entrypoints
@@ -73,13 +74,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.152 — 2026-10-20
+- Standard fleet synchronization and maintenance.
+
 1.0.151 — 2026-10-20
 - Standard fleet synchronization and maintenance.
 
 1.0.150 — 2026-10-20
-- Standard fleet synchronization and maintenance.
-
-1.0.149 — 2026-10-20
 - Standard fleet synchronization and maintenance.
 
 ## Links
