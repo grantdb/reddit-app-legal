@@ -1,7 +1,7 @@
 # LinkGuard
 
 Category: Security  
-Version: v0.0.23  
+Version: v0.0.24  
 Visibility: Unlisted  
 Summary: Strict URL policy enforcement, shortener filter, and link moderation engine for Reddit.
 
@@ -63,6 +63,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.24 — 2026-10-20
+- Standard fleet synchronization and maintenance.
+
 0.0.23 — 2026-10-17
 - Standard fleet synchronization and maintenance.
 
@@ -70,9 +73,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Align webview with canonical UI standards: add expanded post entrypoint alias, complete light theme design tokens, body.app-expanded-mode viewport styles, and touch-action gesture chaining on .app-nav.
 - Purge unicode emojis and arrow glyphs with pure inline SVGs across dashboard header, rule editor, scanner options, and controls.
 - Strip shield emoji from custom post title and add structured lifecycle logging across trigger, menu, eligibility, and storage handlers.
-
-0.0.22 — 2026-09-21
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/link-guard/TERMS.md)
