@@ -1,6 +1,6 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/playscraper-bot)
 
-# Playscraper Bot 📱
+# Playscraper Bot
 
 > **Instantly extract, summarize, and display app store metadata, cost, and developer details for community submissions.**
 
