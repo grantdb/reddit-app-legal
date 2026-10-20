@@ -34,7 +34,6 @@ Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ mo
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
 - redis: Redis key-value storage (state tracking, caching, strike memory)
-- http: External HTTP Fetch access [Domains: generativelanguage.googleapis.com]
 
 ## Triggers and Activation
 ### Menu Actions
@@ -49,7 +48,7 @@ Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ mo
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- geminiApiKey: Gemini API Key (string, default: -). API key for Gemini AI content moderation. Never exposed to webview clients.
+- Basic Settings: Status & Health (keyword, default: -). Status & Health
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
@@ -76,6 +75,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.43 — 2026-10-20
+- Decoupled External AI Scanner & Hardened Zero-Dependency YAML Parser:
+- Removed external LLM / Google Gemini dependency: stripped `permissions.http` domain `generativelanguage.googleapis.com`, `scheduler.tasks['ai-eval']`, and subreddit secret `geminiApiKey`.
+- Replaced external `yaml` dependency in `src/server/automod/parser.ts` with zero-dependency `parseSimpleYaml`.
+- Added support for multiline block scalars (`|`, `>`, `|-`, `>-`) and quote-aware `#` comment stripping in `parseSimpleYaml` to prevent AutoMod syntax errors on multi-line removal notices and quoted hex colors.
+- Aligned Webview UI, status health view, menu modmail backups, and server routers with clean zero-external-network moderation pipeline.
+
 0.0.42 — 2026-10-19
 - Standard fleet synchronization and maintenance.
 
@@ -85,9 +91,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Compacted container padding from `16px 20px` to `10px 12px`, reduced card margins from 10px to 4px, and tuned metric tile padding to `6px 8px`.
 - Enforced `flex-shrink: 0 !important;` on `.inline-launch-btn` to ensure the primary 'Launch Control Center' button remains 100% visible and tappable above the mobile feed fold.
 - Added flex containment and single-line text truncation to header title and subreddit badge.
-
-0.0.41 — 2026-10-14
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/TERMS.md)

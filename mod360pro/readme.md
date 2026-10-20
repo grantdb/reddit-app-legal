@@ -103,7 +103,7 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
 | **Overview & Triage** | Community health audit score, module defense matrix, activity pulse, and hybrid conflict scanner | Toggle operational mode, test pipeline, run deconfliction |
 | **Content Policies** | Keywords & regex engine, domain & link shortener blockers, title & format syntax | Add, test, and tune content rules |
 | **Users & Rate Limits** | Karma minimums, account age milestones, verification tiers, sliding burst rate limiters | Adjust contributor trust tiers and post quotas |
-| **Enforcement & Actions** | Timed quarantine state machine, AI content scanning, duplicate hashing, sticky templates | Review quarantine, inspect reports, release posts |
+| **Enforcement & Actions** | Timed quarantine state machine, duplicate hashing, sticky templates | Review quarantine, inspect reports, release posts |
 | **Storage & Backups** | Two-way wiki policy sync, manual Redis backups, and modmail disaster recovery | Export or import configs, sync with subreddit wiki |
 | **Migrate & Integrations** | AutoMod to Automations migration, AutoMod backup vault (30 snapshots), standalone app conflict checklist | Convert AutoMod rules, restore vault snapshots, resolve bot overlaps |
 

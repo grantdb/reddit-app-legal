@@ -1,6 +1,6 @@
 # Privacy Policy for Mod360 Pro
 
-Last updated: September 22, 2026
+Last updated: October 20, 2026
 
 This Privacy Policy describes how Mod360 Pro handles information.
 
@@ -13,7 +13,7 @@ Mod360 Pro operates entirely within Reddit's Devvit platform ecosystem and only 
 3. **Audit Records**: Zero-PII action logs are maintained in Reddit Redis solely for subreddit moderator inspection.
 
 ## Third-Party Services
-When AI inspection is enabled, post text is evaluated via Google Cloud Generative Language API strictly for spam detection according to Reddit developer policies.
+Mod360 Pro does not transmit data to external third-party services or off-platform servers. All operations execute strictly on Reddit's native developer infrastructure.
 
 ## Contact
 For support or questions regarding Mod360 Pro, contact u/grantdb or visit r/grantdb.
