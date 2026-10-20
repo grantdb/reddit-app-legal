@@ -121,7 +121,7 @@
   },
   "duplicate-guard": {
     "name": "Duplicate Guard",
-    "version": "0.0.39",
+    "version": "0.0.40",
     "visibility": "unlisted"
   },
   "gimmecode-guard": {
