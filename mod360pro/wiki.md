@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.43  
+Version: v0.0.44  
 Visibility: Public  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -75,6 +75,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.44 — 2026-10-20
+- Standard fleet synchronization and maintenance.
+
 0.0.43 — 2026-10-20
 - Standard fleet synchronization and maintenance.
 
@@ -84,9 +87,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Replaced external `yaml` dependency in `src/server/automod/parser.ts` with zero-dependency `parseSimpleYaml`.
 - Added support for multiline block scalars (`|`, `>`, `|-`, `>-`) and quote-aware `#` comment stripping in `parseSimpleYaml` to prevent AutoMod syntax errors on multi-line removal notices and quoted hex colors.
 - Aligned Webview UI, status health view, menu modmail backups, and server routers with clean zero-external-network moderation pipeline.
-
-0.0.42 — 2026-10-19
-- Standard fleet synchronization and maintenance.
+- Added rule-aware multi-part chunking (`chunkMarkdown`) for Modmail disaster recovery backups exceeding Reddit's 10,000-character platform limit, cleanly preserving code block boundaries across sequential numbered parts.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/TERMS.md)

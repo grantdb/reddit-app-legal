@@ -1,7 +1,7 @@
 <h1>Mod360 Pro</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.43<br>
+Version: v0.0.44<br>
 Visibility: Public<br>
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.</p>
 
@@ -88,12 +88,12 @@ Summary: Unified 360-degree moderation engine and waterfall pipeline consolidati
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.44 — 2026-10-20<br>
+Standard fleet synchronization and maintenance.</p>
 <p>0.0.43 — 2026-10-20<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.43 — 2026-10-20<br>
-Decoupled External AI Scanner & Hardened Zero-Dependency YAML Parser:; Removed external LLM / Google Gemini dependency: stripped `permissions.http` domain `generativelanguage.googleapis.com`, `scheduler.tasks['ai-eval']`, and subreddit secret `geminiApiKey`.; Replaced external `yaml` dependency in `src/server/automod/parser.ts` with zero-dependency `parseSimpleYaml`.; Added support for multiline block scalars (`|`, `>`, `|-`, `>-`) and quote-aware `#` comment stripping in `parseSimpleYaml` to prevent AutoMod syntax errors on multi-line removal notices and quoted hex colors.; Aligned Webview UI, status health view, menu modmail backups, and server routers with clean zero-external-network moderation pipeline.</p>
-<p>0.0.42 — 2026-10-19<br>
-Standard fleet synchronization and maintenance.</p>
+Decoupled External AI Scanner & Hardened Zero-Dependency YAML Parser:; Removed external LLM / Google Gemini dependency: stripped `permissions.http` domain `generativelanguage.googleapis.com`, `scheduler.tasks['ai-eval']`, and subreddit secret `geminiApiKey`.; Replaced external `yaml` dependency in `src/server/automod/parser.ts` with zero-dependency `parseSimpleYaml`.; Added support for multiline block scalars (`|`, `>`, `|-`, `>-`) and quote-aware `#` comment stripping in `parseSimpleYaml` to prevent AutoMod syntax errors on multi-line removal notices and quoted hex colors.; Aligned Webview UI, status health view, menu modmail backups, and server routers with clean zero-external-network moderation pipeline.; Added rule-aware multi-part chunking (`chunkMarkdown`) for Modmail disaster recovery backups exceeding Reddit's 10,000-character platform limit, cleanly preserving code block boundaries across sequential numbered parts.</p>
 
 <h2>Links</h2>
 <ul>
