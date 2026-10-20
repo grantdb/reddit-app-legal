@@ -1,7 +1,7 @@
 # Sub Setup
 
 Category: Moderation  
-Version: v0.0.14  
+Version: v0.0.15  
 Visibility: Unlisted  
 Summary: Comprehensive subreddit setup guide and configuration auditor.
 
@@ -99,14 +99,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.15 — 2026-10-20
+- Standard fleet synchronization and maintenance.
+
 0.0.14 — 2026-10-17
 - Standard fleet synchronization and maintenance.
 
 0.0.14 — 2026-10-16
 - Canonical UI alignment: register canonical expanded entrypoint alias in devvit.json, add body.app-expanded-mode scroller rules and [data-theme="light"] token overrides, set overscroll-behavior-x: auto and touch-action: pan-x pan-y on .step-nav-container for natural gesture chaining, and strictly enforce Zero-Emoji Policy in ModmailModal by replacing unicode checkmark with inline SVG.
-
-0.0.13 — 2026-09-16
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/TERMS.md)
