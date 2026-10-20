@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.42  
+Version: v0.0.43  
 Visibility: Public  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -76,6 +76,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Version History
 0.0.43 — 2026-10-20
+- Standard fleet synchronization and maintenance.
+
+0.0.43 — 2026-10-20
 - Decoupled External AI Scanner & Hardened Zero-Dependency YAML Parser:
 - Removed external LLM / Google Gemini dependency: stripped `permissions.http` domain `generativelanguage.googleapis.com`, `scheduler.tasks['ai-eval']`, and subreddit secret `geminiApiKey`.
 - Replaced external `yaml` dependency in `src/server/automod/parser.ts` with zero-dependency `parseSimpleYaml`.
@@ -84,13 +87,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 0.0.42 — 2026-10-19
 - Standard fleet synchronization and maintenance.
-
-0.0.42 — 2026-10-17
-- Mobile Feed Viewport Containment & Button Anchoring: Fixed inline card layout clipping on narrow mobile viewports:
-- Added `@media (max-width: 480px)` rules to hide `.inline-launch-footnote` (saving ~45px) and `.inline-brand-sub`.
-- Compacted container padding from `16px 20px` to `10px 12px`, reduced card margins from 10px to 4px, and tuned metric tile padding to `6px 8px`.
-- Enforced `flex-shrink: 0 !important;` on `.inline-launch-btn` to ensure the primary 'Launch Control Center' button remains 100% visible and tappable above the mobile feed fold.
-- Added flex containment and single-line text truncation to header title and subreddit badge.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/TERMS.md)

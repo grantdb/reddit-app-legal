@@ -1,7 +1,7 @@
 <h1>Mod360 Pro</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.42<br>
+Version: v0.0.43<br>
 Visibility: Public<br>
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.</p>
 
@@ -89,11 +89,11 @@ Summary: Unified 360-degree moderation engine and waterfall pipeline consolidati
 
 <h2>Version History</h2>
 <p>0.0.43 — 2026-10-20<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.43 — 2026-10-20<br>
 Decoupled External AI Scanner & Hardened Zero-Dependency YAML Parser:; Removed external LLM / Google Gemini dependency: stripped `permissions.http` domain `generativelanguage.googleapis.com`, `scheduler.tasks['ai-eval']`, and subreddit secret `geminiApiKey`.; Replaced external `yaml` dependency in `src/server/automod/parser.ts` with zero-dependency `parseSimpleYaml`.; Added support for multiline block scalars (`|`, `>`, `|-`, `>-`) and quote-aware `#` comment stripping in `parseSimpleYaml` to prevent AutoMod syntax errors on multi-line removal notices and quoted hex colors.; Aligned Webview UI, status health view, menu modmail backups, and server routers with clean zero-external-network moderation pipeline.</p>
 <p>0.0.42 — 2026-10-19<br>
 Standard fleet synchronization and maintenance.</p>
-<p>0.0.42 — 2026-10-17<br>
-Mobile Feed Viewport Containment & Button Anchoring: Fixed inline card layout clipping on narrow mobile viewports:; Added `@media (max-width: 480px)` rules to hide `.inline-launch-footnote` (saving ~45px) and `.inline-brand-sub`.; Compacted container padding from `16px 20px` to `10px 12px`, reduced card margins from 10px to 4px, and tuned metric tile padding to `6px 8px`.; Enforced `flex-shrink: 0 !important;` on `.inline-launch-btn` to ensure the primary 'Launch Control Center' button remains 100% visible and tappable above the mobile feed fold.; Added flex containment and single-line text truncation to header title and subreddit badge.</p>
 
 <h2>Links</h2>
 <ul>
