@@ -1,7 +1,7 @@
 # WikiSync Bot
 
 Category: Utility  
-Version: v0.0.29  
+Version: v0.0.30  
 Visibility: Unlisted  
 Summary: Subreddit wiki synchronization engine for Reddit communities.
 
@@ -64,14 +64,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.30 — 2026-10-20
+- Standard fleet synchronization and maintenance.
+
 0.0.29 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 0.0.28 — 2026-09-14
 - Standard fleet synchronization and maintenance.
-
-0.0.27 — 2026-09-13
-- Feature: Added `stripShieldsBadges` filter to sanitize wiki documentation payloads before writing to Reddit wiki stores, eliminating external shields.io badge image links and text clutter on subreddit wikis while preserving official repository and directory READMEs.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/wiki-sync-bot/TERMS.md)
