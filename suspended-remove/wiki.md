@@ -1,7 +1,7 @@
 # Suspended Remove
 
 Category: Security  
-Version: v1.0.89  
+Version: v1.0.90  
 Visibility: Public  
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.
 
@@ -73,16 +73,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.90 — 2026-10-20
+- Standard fleet synchronization and maintenance.
+
 1.0.89 — 2026-10-20
 - Standard fleet synchronization and maintenance.
 
 1.0.88 — 2026-10-09
 - Standard fleet synchronization and maintenance.
-
-1.0.88 — 2026-10-09
-- Feature: Added `removeHistoricalPosts` (default: false) and `historicalPostLimit` (default: 10, range: 1–25) settings allowing the app to go back in time and search/remove previous posts submitted by confirmed suspended users across the subreddit.
-- Safety: Enforced Redis idempotency caching and strict case-insensitive author equality verification to prevent search false-positives and avoid duplicate mod actions.
-- Observability: Added historical removals tracking to `processPendingQueue` and per-run summary logs.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/TERMS.md)

@@ -1,7 +1,7 @@
 <h1>Suspended Remove</h1>
 
 <p>Category: Security<br>
-Version: v1.0.89<br>
+Version: v1.0.90<br>
 Visibility: Public<br>
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.</p>
 
@@ -86,12 +86,12 @@ Summary: High-precision account purification engine. Fleet-wide security infrast
 </ul>
 
 <h2>Version History</h2>
+<p>1.0.90 — 2026-10-20<br>
+Standard fleet synchronization and maintenance.</p>
 <p>1.0.89 — 2026-10-20<br>
 Standard fleet synchronization and maintenance.</p>
 <p>1.0.88 — 2026-10-09<br>
 Standard fleet synchronization and maintenance.</p>
-<p>1.0.88 — 2026-10-09<br>
-Feature: Added `removeHistoricalPosts` (default: false) and `historicalPostLimit` (default: 10, range: 1–25) settings allowing the app to go back in time and search/remove previous posts submitted by confirmed suspended users across the subreddit.; Safety: Enforced Redis idempotency caching and strict case-insensitive author equality verification to prevent search false-positives and avoid duplicate mod actions.; Observability: Added historical removals tracking to `processPendingQueue` and per-run summary logs.</p>
 
 <h2>Links</h2>
 <ul>
