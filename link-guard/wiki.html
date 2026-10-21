@@ -1,7 +1,7 @@
 <h1>LinkGuard</h1>
 
 <p>Category: Security<br>
-Version: v0.0.24<br>
+Version: v0.0.25<br>
 Visibility: Unlisted<br>
 Summary: Strict URL policy enforcement, shortener filter, and link moderation engine for Reddit.</p>
 
@@ -65,12 +65,12 @@ Summary: Strict URL policy enforcement, shortener filter, and link moderation en
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.25 — 2026-10-21<br>
+Standard fleet synchronization and maintenance.</p>
+<p>0.0.25 — 2026-10-21<br>
+Webview UI: Fixed inline scroll trap by rendering zero-scroll Placeholder Card (`InlineLaunchCard`) immediately without blocking on moderator authorization checks.; Architecture: Scope access-denied lockdown views strictly to `#expanded-console-view`.; Build: Configured `base: './'` in `vite.config.ts` to output relative asset paths (`./assets/...`).; Viewport: Enforced strict zero-scroll bounds in inline mode (≤360px mobile budget) with `flex-shrink: 0 !important;` on launch CTA.</p>
 <p>0.0.24 — 2026-10-20<br>
 Standard fleet synchronization and maintenance.</p>
-<p>0.0.23 — 2026-10-17<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.23 — 2026-10-16<br>
-Align webview with canonical UI standards: add expanded post entrypoint alias, complete light theme design tokens, body.app-expanded-mode viewport styles, and touch-action gesture chaining on .app-nav.; Purge unicode emojis and arrow glyphs with pure inline SVGs across dashboard header, rule editor, scanner options, and controls.; Strip shield emoji from custom post title and add structured lifecycle logging across trigger, menu, eligibility, and storage handlers.</p>
 
 <h2>Links</h2>
 <ul>
