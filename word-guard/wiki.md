@@ -1,7 +1,7 @@
 # WordGuard
 
 Category: Moderation  
-Version: v0.0.195  
+Version: v0.0.196  
 Visibility: Unlisted  
 Summary: Premium keyword moderation engine with singleton control center and hardened security architecture.
 
@@ -61,17 +61,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.196 — 2026-10-21
+- Standard fleet synchronization and maintenance.
+
+0.0.196 — 2026-10-21
+- Resolved Devvit admin in-line scroll trap review: rendered InlineLaunchCard immediately in inline feed view before loading and access-denied states, eliminating full-height scroll traps in inline post feeds.
+
 0.0.195 — 2026-10-20
 - Standard fleet synchronization and maintenance.
-
-0.0.194 — 2026-10-17
-- Standard fleet synchronization and maintenance.
-
-0.0.194 — 2026-10-16
-- UI/UX: Standardized webview viewport architecture with `expanded` mode manifest entrypoint, zero-emoji policy compliance across all dashboard views, SVG icon replacements, and natural scroll chaining (`overscroll-behavior-x: auto`).
-- Resilience: Added non-empty catch warning logs to mod notes and subreddit lookup helpers.
-- Clean Title: Stripped shield emoji from custom post creation title.
-- Dependencies: Aligned Devvit package baseline to 0.14.7.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/word-guard/TERMS.md)
