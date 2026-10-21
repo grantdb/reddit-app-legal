@@ -1,7 +1,7 @@
 # TestRank
 
 Category: Utility  
-Version: v0.0.34  
+Version: v0.0.35  
 Visibility: Unlisted  
 Summary: Tester recognition and ranking app for r/droidapptesters.
 
@@ -67,16 +67,17 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.35 — 2026-10-21
+- Standard fleet synchronization and maintenance.
+
+0.0.35 — 2026-10-21
+- Webview UI: Overhauled custom post surfaces to enforce zero scroll traps in accordance with Reddit App Review feedback.
+- Dashboard (`index.html`): Implemented strict Placeholder Card then Expanded Mode (`requestExpandedMode`) architecture with zero inline scrolling.
+- Leaderboard (`leaderboard.html`): Implemented pinned-menuboard standard with button-based pagination (4 ranks per page with `◀ Prev / Next ▶` controls, dynamic indicator, and boundary disabling).
+- Viewports: Added strict `overflow: hidden !important; touch-action: pan-y !important;` in inline mode, mobile feed ≤360px height budgeting, and user-triggered Expand Mode.
+
 0.0.34 — 2026-10-20
 - Standard fleet synchronization and maintenance.
-
-0.0.33 — 2026-10-17
-- Standard fleet synchronization and maintenance.
-
-0.0.33 — 2026-10-17
-- Scroll Model Restoration: Restored proven v0.0.31 natural scrolling model on `leaderboard.html` allowing full vertical feed scrolling (`overflow-y: auto`, `touch-action: pan-y`) and continuous floating FAB controls (`▲` and `▼`).
-- Tap Fallback Engine: Added single-step tap fallback to navigation stepper (`◀` and `▶`) and scroll FAB buttons on `onClick` alongside pointer hold engine.
-- Zero-Emoji & SVGs: Retained pure SVG icons and `[data-theme="light"]` token architecture.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/testrank/TERMS.md)
