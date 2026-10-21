@@ -1,7 +1,7 @@
 # GimmeCode Guard
 
 Category: Moderation  
-Version: v0.0.48  
+Version: v0.0.49  
 Visibility: Unlisted  
 Summary: Detects low-effort give me code requests
 
@@ -57,16 +57,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.49 — 2026-10-21
+- Standard fleet synchronization and maintenance.
+
+0.0.49 — 2026-10-21
+- Webview UI: Overhauled custom post viewport to enforce zero-scroll Placeholder Card (`InlineLaunchCard`) in inline mode.
+- Mobile Feed Standard: Clamped placeholder height to ≤360px on mobile (`@media (max-width: 480px)`) with hidden secondary subtitles/hints and `flex-shrink: 0 !important;` on launch button.
+- Architecture: Scoped full moderation dashboard, log table, and comment playground strictly to `#expanded-console-view` via `requestExpandedMode`.
+
 0.0.48 — 2026-10-20
 - Standard fleet synchronization and maintenance.
-
-0.0.47 — 2026-10-17
-- Standard fleet synchronization and maintenance.
-
-0.0.47 — 2026-10-16
-- Align webview with canonical UI standards: add expanded post entrypoint alias, complete light theme design tokens, body.app-expanded-mode viewport styles, and touch-action gesture chaining.
-- Purge unicode/HTML arrow entities with pure inline SVGs across webview controls.
-- Add structured console.warn logging across server exception handlers and catch blocks.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/TERMS.md)
