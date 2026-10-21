@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T12:41:50.637Z",
+  "generatedAt": "2026-10-21T20:14:16.690Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -1612,8 +1612,8 @@
       ],
       "setupSteps": [
         "Install: Add User Board to your subreddit through the Reddit App Directory.",
-        "Generate Post: Select Create Subreddit User Board from Subreddit Mod Tools.",
-        "Configure Weights: Click  Settings in the top-right corner of the generated post to adjust point multipliers and timeframes.",
+        "Generate Post: In your subreddit mod tools, click Create Subreddit User Board to publish the interactive post.",
+        "Configure Weights: Click Settings in the top-right corner of the generated post to open the Expanded Mode console and adjust multipliers or timeframes.",
         "Pin: Sticky the generated post to your subreddit to start showcasing top contributors.",
         "No manual score tallying required. Automated community gamification directly inside Reddit.*"
       ],
@@ -1654,7 +1654,7 @@
         "troubleshooting": "Check the User Board troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-29"
+      "lastUpdated": "2026-10-21"
     },
     {
       "appId": "queue-guard",

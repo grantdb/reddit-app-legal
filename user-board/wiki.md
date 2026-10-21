@@ -1,7 +1,7 @@
 # User Board
 
 Category: Utility  
-Version: v0.0.47  
+Version: v0.0.48  
 Visibility: Public  
 Summary: Interactive subreddit contributor leaderboard and gamification dashboard.
 
@@ -46,8 +46,8 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install: Add User Board to your subreddit through the Reddit App Directory.
-- Generate Post: Select Create Subreddit User Board from Subreddit Mod Tools.
-- Configure Weights: Click  Settings in the top-right corner of the generated post to adjust point multipliers and timeframes.
+- Generate Post: In your subreddit mod tools, click Create Subreddit User Board to publish the interactive post.
+- Configure Weights: Click Settings in the top-right corner of the generated post to open the Expanded Mode console and adjust multipliers or timeframes.
 - Pin: Sticky the generated post to your subreddit to start showcasing top contributors.
 - No manual score tallying required. Automated community gamification directly inside Reddit.*
 
@@ -56,16 +56,19 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.48 — 2026-10-21
+- Standard fleet synchronization and maintenance.
+
+0.0.48 — 2026-10-21
+- Fix: Added NSFW subreddit detection via `reddit.getSubredditByName` and applied `nsfw: isNsfw` plus `textFallback` in `submitCustomPost` to prevent HTTP 400 rejection when creating board posts in 18+ communities.
+- Fix: Updated `/internal/on-app-install` to safely parse incoming request body buffer for `subredditId` and `subredditName` rather than falling back to global context.
+- Hardening: Wrapped aggregation post batch fetching in error boundary logging to diagnose Reddit API query failures gracefully.
+- Architecture: Overhauled inline feed view (`webviews/index.html`) to implement the `pinned-menuboard` 4-item button pagination standard (`◀ Prev` / `Next ▶`, zero scroll trap, bounded 512px max-height, mobile <=360px budget).
+- Architecture: Migrated deep 30-rank leaderboard and moderator settings console into Expanded Mode (`requestExpandedMode`), eliminating modal scroll traps from feed view.
+- UX: Implemented 8px swipe-drag threshold guard on interactive elements to prevent accidental button activation during feed scrolling.
+
 0.0.47 — 2026-10-20
 - Standard fleet synchronization and maintenance.
-
-0.0.46 — 2026-10-19
-- Standard fleet synchronization and maintenance.
-
-0.0.46 — 2026-10-16
-- UX & Standards: Add canonical expanded entrypoint in devvit.json, height tall, and body.app-expanded-mode root scroller CSS.
-- Theme & Standards: Add [data-theme="light"] color token overrides for fleet light/dark theme switching.
-- Standards & Iconography: Enforce Zero-Emoji policy across index, settings, and leaderboard webviews; replace unicode arrows and crosses with inline SVGs.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/user-board/TERMS.md)

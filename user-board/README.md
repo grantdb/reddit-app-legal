@@ -15,7 +15,7 @@ User Board recognizes and rewards your most valuable community members. Calculat
 - **Full comment ingestion**: Evaluates top commenters, comment upvote scores, and reply threads alongside post authors.
 - **Customizable scoring weights**: Fine-tune independent multipliers for post upvotes, comment upvotes, discussion sparked, and baseline counts.
 - **Automated rank calculations**: Scheduled background jobs keep rankings fresh without manual tallying.
-- **Moderator customization console**: Tune score formulas, tier cutoffs, and timeframes from the inline **⚙ Settings** console.
+- **Moderator customization console**: Tune score formulas, tier cutoffs, and timeframes from the Expanded Mode **Settings** cockpit.
 - **Mobile-friendly custom post**: Fast, client-side rendered experience that loads smoothly on all platforms.
 
 ---
@@ -25,10 +25,10 @@ User Board recognizes and rewards your most valuable community members. Calculat
 - **Nuanced Engagement Scoring**: Configure independent point multipliers for post upvotes (3x default), comment upvotes (2x default), comments on posts (2x default), and thread replies (1x default).
 - **Quality-First Anti-Spam Design**: Downvoted submissions receive zero upvote points, preventing spammers from gaming the board through volume alone.
 - **Rich Contributor Badges**: Classifies contributors into recognizable community roles (*Top Poster*, *Commenter*, *Engager*, *Consistent*, and *Rising Star*).
-- **Interactive React Custom Post**: Features rich leaderboard views with user rank badges, avatars, and historical score milestones.
+- **Lightweight Custom Post**: Features rich leaderboard views with user rank badges, avatars, and historical score milestones.
 - **Automated Rank Refreshes**: Scheduled background workers re-calculate scores and update cached rankings automatically.
-- **Zero-Friction Board Generation**: Deploy your leaderboard post with one click using **Create Subreddit User Board** in Subreddit Mod Tools.
-- **Moderator Tuning Console**: Adjust point weights, calculation time horizons, and exclusion rules easily from the inline **⚙ Settings** button.
+- **Zero-Friction Board Generation**: Deploy your leaderboard post with one click using **Create Subreddit User Board** in Subreddit Mod Tools (fully supported in SFW and 18+/NSFW communities).
+- **Moderator Tuning Console**: Adjust point weights, calculation time horizons, and exclusion rules easily from the **Settings** cockpit.
 - **Privacy-Safe Data Hygiene**: Aggregates public subreddit statistics into anonymous Redis score counters without collecting personal data.
 
 ---
@@ -49,8 +49,8 @@ User Board recognizes and rewards your most valuable community members. Calculat
 ## Quick Setup
 
 1. **Install**: Add **User Board** to your subreddit through the Reddit App Directory.
-2. **Generate Post**: Select **Create Subreddit User Board** from Subreddit Mod Tools.
-3. **Configure Weights**: Click **⚙ Settings** in the top-right corner of the generated post to adjust point multipliers and timeframes.
+2. **Generate Post**: In your subreddit mod tools, click **Create Subreddit User Board** to publish the interactive post.
+3. **Configure Weights**: Click **Settings** in the top-right corner of the generated post to open the Expanded Mode console and adjust multipliers or timeframes.
 4. **Pin**: Sticky the generated post to your subreddit to start showcasing top contributors.
 
 *No manual score tallying required. Automated community gamification directly inside Reddit.*
@@ -63,7 +63,7 @@ User Board is engineered for fast score computation and lightweight Custom Post 
 
 - **Weighted Score Pipeline**: Computes author scores using linear combination formulas (`points = w1*posts + w2*comments + w3*karma`).
 - **Redis High-Performance Snapshot Caching**: Stores subreddit contributor rankings and active timeframe slices in Redis for sub-millisecond retrieval.
-- **Inline Modal Architecture**: Renders full leaderboards and moderator consoles inline without intrusive full-page redirects.
+- **Zero-Scroll Inline & Expanded Architecture**: Renders a clean 4-item paginated contributor summary in the feed with zero scroll trap, launching deep standings and moderator controls into Expanded Mode.
 - **Automated Ingestion Crons**: Runs scheduled background aggregation cycles to minimize client-side API overhead.
 
 ---

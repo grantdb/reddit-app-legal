@@ -10,7 +10,7 @@
 <li><strong>Full comment ingestion</strong>: Evaluates top commenters, comment upvote scores, and reply threads alongside post authors.</li>
 <li><strong>Customizable scoring weights</strong>: Fine-tune independent multipliers for post upvotes, comment upvotes, discussion sparked, and baseline counts.</li>
 <li><strong>Automated rank calculations</strong>: Scheduled background jobs keep rankings fresh without manual tallying.</li>
-<li><strong>Moderator customization console</strong>: Tune score formulas, tier cutoffs, and timeframes from the inline <strong>⚙ Settings</strong> console.</li>
+<li><strong>Moderator customization console</strong>: Tune score formulas, tier cutoffs, and timeframes from the Expanded Mode <strong>Settings</strong> cockpit.</li>
 <li><strong>Mobile-friendly custom post</strong>: Fast, client-side rendered experience that loads smoothly on all platforms.</li>
 </ul>
 <p>---</p>
@@ -19,10 +19,10 @@
 <li><strong>Nuanced Engagement Scoring</strong>: Configure independent point multipliers for post upvotes (3x default), comment upvotes (2x default), comments on posts (2x default), and thread replies (1x default).</li>
 <li><strong>Quality-First Anti-Spam Design</strong>: Downvoted submissions receive zero upvote points, preventing spammers from gaming the board through volume alone.</li>
 <li><strong>Rich Contributor Badges</strong>: Classifies contributors into recognizable community roles (*Top Poster*, *Commenter*, *Engager*, *Consistent*, and *Rising Star*).</li>
-<li><strong>Interactive React Custom Post</strong>: Features rich leaderboard views with user rank badges, avatars, and historical score milestones.</li>
+<li><strong>Lightweight Custom Post</strong>: Features rich leaderboard views with user rank badges, avatars, and historical score milestones.</li>
 <li><strong>Automated Rank Refreshes</strong>: Scheduled background workers re-calculate scores and update cached rankings automatically.</li>
-<li><strong>Zero-Friction Board Generation</strong>: Deploy your leaderboard post with one click using <strong>Create Subreddit User Board</strong> in Subreddit Mod Tools.</li>
-<li><strong>Moderator Tuning Console</strong>: Adjust point weights, calculation time horizons, and exclusion rules easily from the inline <strong>⚙ Settings</strong> button.</li>
+<li><strong>Zero-Friction Board Generation</strong>: Deploy your leaderboard post with one click using <strong>Create Subreddit User Board</strong> in Subreddit Mod Tools (fully supported in SFW and 18+/NSFW communities).</li>
+<li><strong>Moderator Tuning Console</strong>: Adjust point weights, calculation time horizons, and exclusion rules easily from the <strong>Settings</strong> cockpit.</li>
 <li><strong>Privacy-Safe Data Hygiene</strong>: Aggregates public subreddit statistics into anonymous Redis score counters without collecting personal data.</li>
 </ul>
 <p>---</p>
@@ -36,8 +36,8 @@
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>User Board</strong> to your subreddit through the Reddit App Directory.</p>
-<p>2. <strong>Generate Post</strong>: Select <strong>Create Subreddit User Board</strong> from Subreddit Mod Tools.</p>
-<p>3. <strong>Configure Weights</strong>: Click <strong>⚙ Settings</strong> in the top-right corner of the generated post to adjust point multipliers and timeframes.</p>
+<p>2. <strong>Generate Post</strong>: In your subreddit mod tools, click <strong>Create Subreddit User Board</strong> to publish the interactive post.</p>
+<p>3. <strong>Configure Weights</strong>: Click <strong>Settings</strong> in the top-right corner of the generated post to open the Expanded Mode console and adjust multipliers or timeframes.</p>
 <p>4. <strong>Pin</strong>: Sticky the generated post to your subreddit to start showcasing top contributors.</p>
 <p>*No manual score tallying required. Automated community gamification directly inside Reddit.*</p>
 <p>---</p>
@@ -46,7 +46,7 @@
 <ul>
 <li><strong>Weighted Score Pipeline</strong>: Computes author scores using linear combination formulas (`points = w1*posts + w2*comments + w3*karma`).</li>
 <li><strong>Redis High-Performance Snapshot Caching</strong>: Stores subreddit contributor rankings and active timeframe slices in Redis for sub-millisecond retrieval.</li>
-<li><strong>Inline Modal Architecture</strong>: Renders full leaderboards and moderator consoles inline without intrusive full-page redirects.</li>
+<li><strong>Zero-Scroll Inline & Expanded Architecture</strong>: Renders a clean 4-item paginated contributor summary in the feed with zero scroll trap, launching deep standings and moderator controls into Expanded Mode.</li>
 <li><strong>Automated Ingestion Crons</strong>: Runs scheduled background aggregation cycles to minimize client-side API overhead.</li>
 </ul>
 <p>---</p>
