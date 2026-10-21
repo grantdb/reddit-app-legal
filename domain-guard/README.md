@@ -6,7 +6,7 @@
 
 Domain Guard protects your subreddit from malicious links, URL shorteners, and repeat spam domains. Define custom allowlists and blocklists, run rules in safe audit mode, and manage everything through a clean native dashboard without editing complex AutoModerator YAML.
 
-### ⚡ Key Highlights
+### Key Highlights
 - **Automated Mod Approval Recognition**: Recognizes when moderators approve submissions directly on Reddit, safeguarding approved content from subsequent false removals.
 - **Granular Domain Control**: Set strict allowlists or blocklists with automated subdomain and wildcard handling across link posts, body text, and comments.
 - **Intelligent Auto-Recheck & Expiration**: Automatically re-checks filtered queue submissions when authors edit out restricted links, auto-approves clean revisions, and deletes warning comments.

@@ -1,7 +1,7 @@
 # DomainGuard
 
 Category: Security  
-Version: v0.0.166  
+Version: v0.0.167  
 Visibility: Unlisted  
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
@@ -65,16 +65,19 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.167 — 2026-10-21
+- Standard fleet synchronization and maintenance.
+
+0.0.167 — 2026-10-21
+- Resolved Devvit admin in-line scroll trap review: rendered `InlineLaunchCard` immediately in inline feed view before loading and access-denied states, eliminating full-height scroll traps in inline post feeds.
+- Enforced canonical dual-container scroller architecture in `index.css`: strictly constrained inline mode (`body:not(.app-expanded-mode) { height: 100% !important; max-height: 512px !important; overflow: hidden !important; touch-action: pan-y !important; }`) and scoped deep dashboard scrolling exclusively to Expanded Mode (`body.app-expanded-mode`).
+- Enforced mobile feed budget under `@media (max-width: 480px)` (compact padding, hidden secondary text, <=360px budget).
+- Implemented 8px swipe-drag threshold guard on interactive controls to prevent accidental activation during feed browsing.
+- Added Redis deduplication lock in `onTrigger` to prevent concurrent `onPostCreate` and `onPostSubmit` executions, eliminating Reddit API 5-second `RESOURCE_EXHAUSTED` rate-limit errors on notification comments.
+- Removed unicode emojis from `README.md` to adhere strictly to fleet Zero-Emoji policy.
+
 0.0.166 — 2026-10-20
 - Standard fleet synchronization and maintenance.
-
-0.0.165 — 2026-10-17
-- Standard fleet synchronization and maintenance.
-
-0.0.165 — 2026-10-16
-- UI/UX: Standardized webview viewport architecture with `expanded` mode manifest entrypoint, zero-emoji policy compliance across all dashboard views, SVG icon replacements, and natural scroll chaining (`overscroll-behavior-x: auto`).
-- Resilience: Added non-empty catch warning logs to Redis risk cache helpers.
-- Dependencies: Aligned Devvit package baseline to 0.14.7.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/TERMS.md)
