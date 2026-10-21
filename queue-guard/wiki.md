@@ -1,7 +1,7 @@
 # QueueGuard
 
 Category: Moderation  
-Version: v0.0.48  
+Version: v0.0.49  
 Visibility: Unlisted  
 Summary: Queue triage and decision-support tool. Surfaces duplicate context, account signals, and prior handling history before moderators approve or remove queued posts.
 
@@ -58,18 +58,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.49 — 2026-10-21
+- Standard fleet synchronization and maintenance.
+
+0.0.49 — 2026-10-21
+- Webview UI: Fixed inline scroll trap by resolving `.inline-launch-footnote` CSS selector mismatch under `@media (max-width: 480px)`.
+- Mobile Feed Standard: Clamped inline placeholder container height to ≤360px on mobile viewports with `flex-shrink: 0 !important;` on primary launch button.
+- Architecture: Enforced zero scrolling on `#inline-launch-view` (`overflow: hidden !important; touch-action: pan-y !important;`) chaining gestures cleanly to Reddit feed.
+
 0.0.48 — 2026-10-20
 - Standard fleet synchronization and maintenance.
-
-0.0.47 — 2026-10-17
-- Standard fleet synchronization and maintenance.
-
-0.0.47 — 2026-10-16
-- UI: Added `"expanded"` entrypoint alias in `devvit.json` for expanded webview mode.
-- UI: Added light theme token overrides (`[data-theme="light"]`) and `body.app-expanded-mode` support in `index.css`.
-- UI: Upgraded navigation gesture chaining with `overscroll-behavior-x: auto; touch-action: pan-x pan-y;`.
-- UI: Strict Zero-Emoji compliance: replaced all unicode emojis and arrows with clean SVGs across dashboard and cleaned menu labels.
-- Fix: Replaced empty catch blocks in core engine with structured warning logs.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/queue-guard/TERMS.md)
