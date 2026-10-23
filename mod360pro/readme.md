@@ -106,6 +106,7 @@ mod360pro replaces fragmented moderation bots and competing sticky comments with
 | **Enforcement & Actions** | Timed quarantine state machine, duplicate hashing, sticky templates | Review quarantine, inspect reports, release posts |
 | **Storage & Backups** | Two-way wiki policy sync, manual Redis backups, and modmail disaster recovery | Export or import configs, sync with subreddit wiki |
 | **Migrate & Integrations** | AutoMod to Automations migration, AutoMod backup vault (30 snapshots), standalone app conflict checklist | Convert AutoMod rules, restore vault snapshots, resolve bot overlaps |
+| **Help & Manual** | 30-article operational manual, interactive search engine, and offline documentation export | Browse articles, search help topics, download manual |
 
 ---
 
