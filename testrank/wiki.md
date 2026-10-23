@@ -1,12 +1,12 @@
 # TestRank
 
 Category: Utility  
-Version: v0.0.35  
+Version: v0.0.36  
 Visibility: Unlisted  
-Summary: Tester recognition and ranking app for r/droidapptesters.
+Summary: Automated community tester recognition, reputation, and leaderboard engine for beta testing subreddits.
 
 ## Overview
-Tester recognition and ranking app for r/droidapptesters.
+Automated community tester recognition, reputation, and leaderboard engine for beta testing subreddits.
 
 ## Flowchart
 [View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/testrank-flowchart.png)
@@ -33,9 +33,9 @@ Tester recognition and ranking app for r/droidapptesters.
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- onboardingDeliveryMethod: OP Guidance Delivery Method (select, default: comment). Select how testing instructions are delivered to the post author (OP)
-- enableOpOnboardingModmail: Enable OP Onboarding Guidance (Master Toggle) (boolean, default: true). Toggle whether TestRank delivers onboarding instructions to post authors
-- requirePostFlair: Require Post Flair for Testing Eligibility (boolean, default: true). Only onboard posts that have a post flair
+- onboardingDeliveryMethod: OP Onboarding Delivery Method (select, default: comment). OP Onboarding Delivery Method
+- requirePostFlair: Require Testing Post Flair for Onboarding (boolean, default: true). Require Testing Post Flair for Onboarding
+- enableOpOnboardingModmail: Enable Onboarding Guidance (boolean, default: true). Enable Onboarding Guidance
 - pointsHelpfulFeedback: Points: Helpful Feedback (number, default: 10). XP awarded for general helpful feedback comments
 - pointsRegisteredTester: Points: Registered Tester (number, default: 5). XP awarded when a user signs up or registers as a tester
 - pointsBugFound: Points: Bug Found (number, default: 25). XP awarded for verified bug reports
@@ -67,8 +67,11 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.35 — 2026-10-21
-- Standard fleet synchronization and maintenance.
+0.0.36 — 2026-10-23
+- Fix All-Time Leaderboard Rendering: Resolved casing mismatch between client sub-tab lookup (`alltime` / `allTime`) and server API payload by normalizing key access in `client/leaderboard.ts` and `client/index.ts` and aliasing both `allTime` and `alltime` in `server/routes/leaderboardRoutes.ts`.
+- Dashboard Console Pagination: Implemented pinned-menuboard 4-item button pagination (`#pagination-bar` with Prev/Next buttons, dynamic page indicator, and boundary disabling) inside the primary TestRank Console (`index.html` and `client/index.ts`).
+- Mobile Touch Reliability: Fixed `attachSwipeDragGuard` in `client/leaderboard.ts` to prevent synthetic tap cancellations on Android WebViews and preserve pagination controls across viewport modes.
+- Platform Manifest Alignment: Added official schema-compliant `"settings"` declaration in `devvit.json` (`onboardingDeliveryMethod`, `requirePostFlair`, `enableOpOnboardingModmail`) to satisfy runtime settings queries.
 
 0.0.35 — 2026-10-21
 - Webview UI: Overhauled custom post surfaces to enforce zero scroll traps in accordance with Reddit App Review feedback.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T20:14:16.690Z",
+  "generatedAt": "2026-10-23T00:15:04.417Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2415,7 +2415,7 @@
       "aliases": [
         "testrank"
       ],
-      "summary": "Tester recognition and ranking app for r/droidapptesters.",
+      "summary": "Automated community tester recognition, reputation, and leaderboard engine for beta testing subreddits.",
       "keywords": [
         "testrank",
         "utility"
@@ -2468,7 +2468,7 @@
         "troubleshooting": "Check the TestRank troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-29"
+      "lastUpdated": "2026-10-23"
     },
     {
       "appId": "reference-reply-bot",
