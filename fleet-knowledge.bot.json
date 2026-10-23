@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T00:15:04.417Z",
+  "generatedAt": "2026-10-23T08:59:57.271Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2976,8 +2976,8 @@
         "moderation"
       ],
       "setupSteps": [
-        "Install: Add Mod360 Pro to your subreddit from the Reddit App Directory.",
-        "Open Control Center: Navigate to Mod Tools > Mod360 Pro: Control Center.",
+        "Install: Add mod360pro to your subreddit from the Reddit App Directory.",
+        "Open Control Center: Navigate to Mod Tools > mod360pro: Control Center.",
         "Verify Settings in Shadow Mode: Test rules and run simulations using the in-dashboard test benches.",
         "Switch to Live Enforcement: Toggle operational status to Live in the Overview tab."
       ],
@@ -3021,7 +3021,7 @@
         "troubleshooting": "Check the Mod360 Pro troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-10-20"
+      "lastUpdated": "2026-10-23"
     }
   ]
 }
