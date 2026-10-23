@@ -65,8 +65,8 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key patterns: mod360:dashboard_post_id, mod360:rules:config, node:http, mod360:dashboard_creation_lock, mod360:qg:reports, mod360:stats:scanned
 
 ## Setup and Usage
-- Install: Add Mod360 Pro to your subreddit from the Reddit App Directory.
-- Open Control Center: Navigate to Mod Tools > Mod360 Pro: Control Center.
+- Install: Add mod360pro to your subreddit from the Reddit App Directory.
+- Open Control Center: Navigate to Mod Tools > mod360pro: Control Center.
 - Verify Settings in Shadow Mode: Test rules and run simulations using the in-dashboard test benches.
 - Switch to Live Enforcement: Toggle operational status to Live in the Overview tab.
 

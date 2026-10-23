@@ -1,16 +1,16 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod360pro)
 
-# Mod360 Pro
+# mod360pro
 
 > **The all-in-one Reddit moderation control center. Sub-10ms spam gates, deep multi-rule content evaluation, timed quarantine, and two-way wiki sync in a single unified engine.**
 
-Mod360 Pro replaces fragmented moderation bots and competing sticky comments with one coherent, high-speed moderation pipeline. Manage keyword filters, domain policies, sliding-window rate limits, user verification tiers, reputation scoring, and disaster backups from a single native dashboard.
+mod360pro replaces fragmented moderation bots and competing sticky comments with one coherent, high-speed moderation pipeline. Manage keyword filters, domain policies, sliding-window rate limits, user verification tiers, reputation scoring, and disaster backups from a single native dashboard.
 
 ---
 
 ## At a Glance
 
-- **AutoMod Backup Vault & Automations Migration**: Converts legacy AutoModerator rules into modern Reddit Mod Tools Automations recipes (with 1-click token copy) or high-speed Mod360 Pro native rules, demoting AutoMod into a passive 30-snapshot backup vault.
+- **AutoMod Backup Vault & Automations Migration**: Converts legacy AutoModerator rules into modern Reddit Mod Tools Automations recipes (with 1-click token copy) or high-speed mod360pro native rules, demoting AutoMod into a passive 30-snapshot backup vault.
 - **Hybrid Conflict & Redundancy Scanner**: Scans for redundant AutoMod rules and overlapping standalone fleet apps with 1-click safe deconfliction to shadow mode.
 - **Sub-10ms Pre-AutoMod Gate**: Intercepts rapid-fire submission floods and duplicate content hashes on `onPostSubmit` via atomic Redis before content enters the community.
 - **Deep Multi-Rule Content Engine**: Evaluates author status (suspended/shadowbanned accounts), domain policies, keyword regexes, title format rules, and topic guides on `onPostCreate`.
@@ -89,8 +89,8 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
 
 ## Quick Setup (60 Seconds)
 
-1. **Install**: Add **Mod360 Pro** to your subreddit from the Reddit App Directory.
-2. **Open Control Center**: Navigate to **Mod Tools > Mod360 Pro: Control Center**.
+1. **Install**: Add **mod360pro** to your subreddit from the Reddit App Directory.
+2. **Open Control Center**: Navigate to **Mod Tools > mod360pro: Control Center**.
 3. **Verify Settings in Shadow Mode**: Test rules and run simulations using the in-dashboard test benches.
 4. **Switch to Live Enforcement**: Toggle operational status to **Live** in the Overview tab.
 
@@ -111,7 +111,7 @@ Mod360 Pro replaces fragmented moderation bots and competing sticky comments wit
 
 ## Designed to Assist Moderators
 
-Mod360 Pro is built strictly on human-in-the-loop principles. All automated actions are transparent, auditable, and fully reversible:
+mod360pro is built strictly on human-in-the-loop principles. All automated actions are transparent, auditable, and fully reversible:
 
 - **No Black Box AI**: Clear rule matches and explicit logic paths.
 - **Zero PII Storage**: Only standard Reddit IDs and metadata are processed; no personal identifiable data is ever collected or stored.
