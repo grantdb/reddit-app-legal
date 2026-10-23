@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.45  
+Version: v0.0.46  
 Visibility: Public  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -75,6 +75,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.46 — 2026-10-23
+- Standard fleet synchronization and maintenance.
+
 0.0.45 — 2026-10-21
 - Standard fleet synchronization and maintenance.
 
@@ -82,9 +85,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Resolved Devvit admin in-line scroll trap review: rendered `InlineLaunchCard` immediately in inline feed view before loading and access-denied states, eliminating transient dashboard container mounting in inline feeds.
 - Enforced canonical dual-container scroller architecture: added `id="inline-launch-view"` to inline placard container and `id="expanded-console-view"` to deep dashboard container.
 - Implemented 8px swipe-drag threshold guard on `InlineLaunchCard`'s primary launch button to prevent accidental expansion while flick-scrolling the Reddit feed.
-
-0.0.44 — 2026-10-20
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/TERMS.md)
