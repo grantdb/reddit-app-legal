@@ -164,11 +164,6 @@
     "version": "0.0.16",
     "visibility": "unlisted"
   },
-  "testrank": {
-    "name": "TestRank",
-    "version": "0.0.35",
-    "visibility": "unlisted"
-  },
   "reference-reply-bot": {
     "name": "Reference Reply Bot",
     "version": "0.0.30",
@@ -238,5 +233,10 @@
     "name": "User Board",
     "version": "0.0.48",
     "visibility": "public"
+  },
+  "testrank": {
+    "name": "TestRank",
+    "version": "0.0.36",
+    "visibility": "unlisted"
   }
 }
