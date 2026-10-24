@@ -75,8 +75,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.47 — 2026-10-23
-- Standard fleet synchronization and maintenance.
+0.0.47 — 2026-10-24
+- Resilient Export Engine & Manual Download Fallback:
+- Created reusable `src/webview/lib/exportFile.ts` implementing DOM-attached anchor tag clicking, 10s deferred `URL.revokeObjectURL(url)` cleanup to prevent premature blob destruction, and dual-layer clipboard write (modern `navigator.clipboard.writeText` with legacy `document.execCommand('copy')` hidden readonly `` fallback if Permissions-Policy blocks clipboard access).
+- Implemented honest toast feedback (" copied to clipboard. Download was also requested, but Reddit’s iframe may block file saves.") recognizing that browsers silently suppress downloads in sandboxed iframes without `allow-downloads`.
+- Added explicit 1-click `[ Copy Full Manual ]` button next to `[ Download Manual (.md) ]` in `HelpView.tsx` for immediate, zero-failure clipboard export.
+- Added `[ View Raw Manual ]` escape hatch modal rendering the entire 30-article markdown in a scrollable, auto-selecting `` with 1-click `[ Copy All ]`.
+- Patched Disaster Recovery JSON backup download in `App.tsx` using `exportTextFile`.
 
 0.0.46 — 2026-10-23
 - Standard fleet synchronization and maintenance.

@@ -1,59 +1,35 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/ultimate-wwe">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>Ultimate WWE Hub</h1>
-<blockquote><p><strong>Transform standard WWE live discussion threads into high-engagement interactive match scoreboards, championship battlegrounds, and PLE schedule hubs.</strong></p></blockquote>
-<p>Ultimate WWE Hub powers a synchronized multi-post ecosystem for r/UltimateWWE and wrestling communities, featuring three dedicated custom post triggers:</p>
-<p>1. <strong>WWE Live Event Mega-Thread</strong>: Created for that day's live show (PLE or weekly TV) featuring official match cards, wrestlers scheduled, live community pick consensus meters, direct jump links to the Superstar Stats & Belts Hub, and integrated live discussion callouts for Reddit comments.</p>
-<p>2. <strong>Superstar Stats, Records & Championship Belts Hub</strong>: Complete wrestler center displaying 2026 season win/loss records, win percentages, streaks, Tale of the Tape comparisons, and official WWE championship belts (Undisputed WWE, World Heavyweight, Women's World, WWE Women's, Intercontinental, US Championship, Tag Team, and NXT) with real titleholders and reign histories. Zero community leaderboards or fan points inside this wrestler showcase!</p>
-<p>3. <strong>Community Prediction & Picking Board</strong>: Dedicated hub for community guessing, Pick 'Em ballots, live event rankings, and all-time subreddit prediction leaderboards.</p>
-<p>All posts share synchronized Redis state across the subreddit and feature direct cross-post navigation so fans can seamlessly jump between stats, picks, and live event threads.</p>
+<blockquote><p><strong>Transform Monday Night Raw and Friday Night SmackDown into high-voltage, stadium-lit live event megathreads with interactive match cards, crowd momentum, and native Reddit Live comments.</strong></p></blockquote>
+<p>Ultimate WWE Hub powers a streamlined 3-post ecosystem for wrestling communities on Reddit:</p>
+<p>1. <strong>WWE Belts, Stats & Upcoming Matches Hub</strong>: Pinned community anchor showcasing official WWE championship belts, superstar win/loss analytics, and an editable upcoming show schedule.</p>
+<p>2. <strong>WWE Monday Night Raw Live Megathread</strong>: Crimson-neon live event megathread deployed on Monday nights with `suggestedCommentSort: 'LIVE'`, live match cards, momentum tug-of-war, and crowd chants.</p>
+<p>3. <strong>WWE Friday Night SmackDown Live Megathread</strong>: Electric-blue live event megathread deployed on Friday nights with `suggestedCommentSort: 'LIVE'`, live match cards, momentum tug-of-war, and crowd chants.</p>
+<p>---</p>
 <h2>Key Highlights</h2>
 <ul>
-<li><strong>Streamlined 3-Trigger Architecture</strong>: 3 dedicated custom post types provisioned directly from the subreddit moderator menu (`...`).</li>
-<li><strong>Unified Wrestler Hub</strong>: Superstar stats, win/loss records, tale of the tape, streaks, and official WWE championship belts combined into one comprehensive showcase.</li>
-<li><strong>Official WWE Championship Lineage</strong>: Authentic WWE titleholders (Cody Rhodes, Gunther, Liv Morgan, Nia Jax, Bron Breakker, LA Knight, The Judgment Day, Motor City Machine Guns, Trick Williams) with real reign days, brand badges, and defense counts.</li>
-<li><strong>Live Community Pick Consensus</strong>: Event match cards calculate and display real-time community pick percentage breakdowns so fans see who the subreddit favors before bell time.</li>
-<li><strong>Live Chat Integration</strong>: Direct prompt and jump controls directing discussion to Reddit comments sorted by "Live" or "New".</li>
-<li><strong>Dedicated Community Picking Board</strong>: Fan guessing, ballots, and leaderboards housed cleanly in their own dedicated thread.</li>
-<li><strong>Universal Mobile Scrolling</strong>: Engineered with zero-scroll-trap mobile navigation (`overscroll-behavior-y: auto`) and 48px fine-tuned horizontal tab scrolling.</li>
+<li><strong>Streamlined 3-Post Architecture</strong>: 3 dedicated custom post types provisioned directly from the subreddit moderator menu (`...`).</li>
+<li><strong>Native Live Comments</strong>: Created with `suggestedCommentSort: 'LIVE'`, keeping newest fan comments at the top throughout the broadcast while the webview manages live match state.</li>
+<li><strong>Arena Lighting & Titan-Tron Visuals</strong>: Crimson Raw Red neon, Electric SmackDown Blue spotlights, Championship Gold plating, and victory pyro celebrations.</li>
+<li><strong>Before vs. During Match Lifecycle</strong>:</li>
+<li>*Before Match*: Contender Tale of the Tape, 1-tap pre-match winner predictions, and crowd consensus bars.</li>
+<li>*During Match*: "MATCH STARTED — THE BELL HAS RUNG" alert, live momentum tug-of-war cheering, crowd chant soundboard, and 1–5 star match ratings.</li>
+<li>*Match Finish*: Moderator winner declaration with golden pyro celebration and "AND NEW CHAMPION!" alert.</li>
+<li><strong>Realtime Transport</strong>: Powered by Devvit realtime broadcast channels paired with authoritative Redis state.</li>
+<li><strong>Moderator Console</strong>: Secure server-validated controls to start matches, declare winners, and curate championship titleholders.</li>
 </ul>
 <p>---</p>
 <h2>How It Works</h2>
 <h3>The 3-Step Lifecycle</h3>
-<p>1. <strong>Thread Deployment</strong>: A moderator selects one of the 3 custom post creation menu actions (<strong>Create WWE Live Event Thread</strong>, <strong>Create Superstar Stats, Records & Belts Post</strong>, or <strong>Create Community Prediction & Picking Board</strong>).</p>
-<p>2. <strong>Community Engagement & Pre-Show Predictions</strong>: Before the opening bell, community members make their picks on the Picking Board, explore wrestler analytics and championship belts on the Superstar Hub, and view live pick consensus on the match card.</p>
-<p>3. <strong>Showtime & Live Chat</strong>: When the event begins, fans follow match statuses, participate in live chat via Reddit comments, and moderators score official results to update community leaderboards!</p>
+<p>1. <strong>Deployment</strong>: On Monday or Friday afternoon, a moderator selects <strong>Create Monday Night Raw Live Megathread</strong> or <strong>Create Friday Night SmackDown Live Megathread</strong> from the subreddit menu.</p>
+<p>2. <strong>Pre-Show Build-Up</strong>: Before the opening bell, community members make their picks on the match card and view live consensus meters.</p>
+<p>3. <strong>Showtime</strong>: When the show begins, moderators click `[ START MATCH ]`. Fans cheer to move live momentum bars, trigger crowd chant reactions, rate match quality, and discuss the show in Reddit's native Live comment stream!</p>
 <p>---</p>
 <h2>Quick Setup (60-Second Onboarding)</h2>
-<p>1. <strong>Install</strong>: Add <strong>Ultimate WWE Hub</strong> to your subreddit via the Reddit Developer portal or App Directory.</p>
-<p>2. <strong>Launch Pinned Hub Posts</strong>: From your subreddit menu (`...`), deploy the <strong>Superstar Stats, Records & Belts Post</strong> and <strong>Community Prediction & Picking Board</strong> as pinned community anchors.</p>
-<p>3. <strong>Deploy Live Event Thread</strong>: On event night, select <strong>Create WWE Live Event Thread</strong> to launch the show mega-thread with live match cards, community pick consensus, and live chat.</p>
-<p>4. <strong>Score & Crown Champions</strong>: Declare winners as the broadcast unfolds and click <strong>Score Event Results</strong> to update community rankings!</p>
-<p>---</p>
-<h2>Core Capabilities</h2>
-<ul>
-<li><strong>Event Live Scoreboard</strong>: Full match cards with championship badges, match stipulations, participant details, real-time match statuses, and official winner declarations.</li>
-<li><strong>Community Pick Consensus</strong>: Dynamic percentage meters displaying the subreddit's predictions across each match.</li>
-<li><strong>Official Championship Belts Trophy Case</strong>:</li>
-<li><strong>Undisputed WWE Championship</strong>: Held by Cody Rhodes (SmackDown).</li>
-<li><strong>World Heavyweight Championship</strong>: Held by Gunther (Raw).</li>
-<li><strong>Women's World Championship</strong>: Held by Liv Morgan (Raw).</li>
-<li><strong>WWE Women's Championship</strong>: Held by Nia Jax (SmackDown).</li>
-<li><strong>WWE Intercontinental Championship</strong>: Held by Bron Breakker (Raw).</li>
-<li><strong>WWE United States Championship</strong>: Held by LA Knight (SmackDown).</li>
-<li><strong>Tag Team & NXT Championships</strong>: World Tag Team, WWE Tag Team, and NXT Championship with complete reign lineage.</li>
-<li><strong>Dedicated Community Picking Board</strong>:</li>
-<li>Intuitive ballots for guessing match winners.</li>
-<li>Current event leaderboard and cumulative all-time subreddit points table.</li>
-<li><strong>Cross-Post Hub Navigation</strong>: Pinned shortcuts linking fans directly to the Superstar Stats & Belts Hub.</li>
-<li><strong>Live Comment Discussion</strong>: Quick action jumping fans to Reddit comments for real-time live chat.</li>
-</ul>
-<p>---</p>
-<h2>Designed for Subreddit Moderators</h2>
-<ul>
-<li><strong>Full Match Card Authority</strong>: Moderators can create, edit (participants, stipulations, titles, championship status, points), and delete matches across both live event threads and future upcoming shows.</li>
-<li><strong>Dynamic Upcoming Schedule Management</strong>: Add upcoming PLEs and TV specials, update broadcast dates and networks, adjust countdown target timestamps, manage fight card lineups, or restore official WWE calendar defaults with one click.</li>
-<li><strong>Zero PII & Sandbox Storage</strong>: All predictions, match outcomes, custom schedule edits, and scores are processed exclusively inside Reddit's isolated, sandboxed Redis infrastructure without external third-party data collection.</li>
-</ul>
+<p>1. <strong>Install</strong>: Add <strong>Ultimate WWE Hub</strong> to your subreddit via the Reddit Developer portal.</p>
+<p>2. <strong>Launch Anchor Hub</strong>: From your subreddit menu (`...`), select <strong>Create WWE Belts & Stats Hub Post</strong> and pin it as a community anchor.</p>
+<p>3. <strong>Deploy Live Megathread</strong>: On broadcast night, select <strong>Create Monday Night Raw Live Megathread</strong> or <strong>Create Friday Night SmackDown Live Megathread</strong>.</p>
+<p>4. <strong>Run the Show</strong>: Use the moderator console to start matches and declare winners as the action unfolds!</p>
 <p>---</p>
 <h2>Support</h2>
 <p>For help, bug reports, or feature requests, post in r/grantdb.</p>
