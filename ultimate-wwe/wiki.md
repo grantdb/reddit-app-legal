@@ -56,6 +56,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Version History
 0.0.24 — 2026-10-24
+- Standard fleet synchronization and maintenance.
+
+0.0.24 — 2026-10-24
 - Canonical Webview & Scrolling Standard v2.1 & Viewport Refinement:
 - Replaced arbitrary inline max-height constraints (`max-height: 512px` and `@media (max-width: 480px) { max-height: 360px }`) with mode-aware `html.app-inline-mode .inline-summary-view { height: 100%; max-height: 100%; overflow: hidden; display: flex; flex-direction: column; gap: 8px; }`.
 - Replaced negative `:not(.app-expanded-mode)` selectors with canonical `html.app-inline-mode` and `html.app-expanded-mode` selectors across markup and styles.
@@ -96,13 +99,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 0.0.23 — 2026-10-17
 - Standard fleet synchronization and maintenance.
-
-0.0.23 — 2026-10-17
-- Mobile Header Text Containment & Viewport Protection: Fixed vertical layout blowouts on mobile devices:
-- Added `.inline-title-container` with strict `min-width: 0; flex: 1; overflow: hidden;` containment and `white-space: nowrap; text-overflow: ellipsis;` on `.inline-brand-title`.
-- Hidden redundant `.inline-brand-sub` on narrow mobile screens (`@media (max-width: 480px)`), capping header height strictly at 36px and eliminating 10-line text wrapping.
-- Added `flex-shrink: 0;` to `.btn-primary-expand` and tightened launchpad vertical gap spacing so the primary "ENTER WWE ARENA (EXPANDED MODE)" CTA button remains 100% visible and clickable within the 512px feed viewport.
-- Added title tooltip attributes on title and subtitle elements in `src/client/main.ts` for full text accessibility.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
