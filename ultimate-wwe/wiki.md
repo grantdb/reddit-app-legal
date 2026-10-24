@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.24  
+Version: v0.0.25  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -55,6 +55,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.25 — 2026-10-24
+- Standard fleet synchronization and maintenance.
+
 0.0.24 — 2026-10-24
 - Standard fleet synchronization and maintenance.
 
@@ -96,9 +99,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Established canonical moderator action `[ START MATCH ]` and `[ DECLARE WINNER ]` with golden victory celebration.
 - Server-side cached moderator validation and rate limits for momentum cheers and crowd reactions.
 - High-impact arena visual system: Titan-Tron scanlines, Crimson Red Raw neon, Electric Blue SmackDown spotlights, and Championship Gold shimmer.
-
-0.0.23 — 2026-10-17
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
