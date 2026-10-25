@@ -22,20 +22,6 @@ mod360pro replaces fragmented moderation bots and competing sticky comments with
 - **Two-Way Wiki Policy Sync**: Bi-directional rule synchronization with `r/subreddit/wiki/mod360_rules` for effortless team collaboration.
 - **Disaster Recovery Modmail Backups**: 1-click snapshot exporting the entire active configuration directly to mod team Modmail.
 
----
-
-## Execution Pipeline & Action Matrix
-
-| Pipeline Stage | Event Trigger | Evaluation Scope | Standard Latency | Default Action |
-| :--- | :--- | :--- | :--- | :--- |
-| **Stage 1: Pre-Filter** | `onPostSubmit` | Duplicate content hashes, sliding-window frequency & burst limits | `< 8ms` (Redis-only) | Immediate Reject & Filter |
-| **Stage 2: Deep Evaluation** | `onPostCreate` | Suspended / shadowbanned users, domain policies, regex keywords, title format | `< 35ms` | Atomic Removal & Lock |
-| **Stage 3: Timed Quarantine** | Post Evaluation | Marginal domains, new user threshold edge-cases, flagged link shorteners | Instant State Transition | Hold with Countdown Timer |
-| **Stage 4: Topic Guide Match** | Clean Submissions | Community FAQ keywords, guide tags, resource suggestions | Non-blocking | Suggest Resource Wiki |
-| **Stage 5: Notice & Audit** | Violations Detected | Markdown notification consolidation, rescue log capture, atomic lock | Synchronous | Single Sticky Notice |
-
----
-
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod360pro-flowchart.png)
@@ -47,6 +33,18 @@ mod360pro replaces fragmented moderation bots and competing sticky comments with
 3. **Quarantine or Verdict**: Clear violations trigger immediate removal with concurrency locks (`SET NX`); borderline posts enter the timed quarantine state machine awaiting manual review or auto-expiry.
 4. **Single-Notice Dispatch**: Violations are assembled into a single formatted sticky comment detailing exact community guidelines violated and appeal steps.
 5. **Rescue Hub Logging**: Removed items are archived into the in-dashboard Rescue Hub, allowing any moderator to reverse false positives with one click.
+
+---
+
+## Execution Pipeline & Action Matrix
+
+| Pipeline Stage | Event Trigger | Evaluation Scope | Standard Latency | Default Action |
+| :--- | :--- | :--- | :--- | :--- |
+| **Stage 1: Pre-Filter** | `onPostSubmit` | Duplicate content hashes, sliding-window frequency & burst limits | `< 8ms` (Redis-only) | Immediate Reject & Filter |
+| **Stage 2: Deep Evaluation** | `onPostCreate` | Suspended / shadowbanned users, domain policies, regex keywords, title format | `< 35ms` | Atomic Removal & Lock |
+| **Stage 3: Timed Quarantine** | Post Evaluation | Marginal domains, new user threshold edge-cases, flagged link shorteners | Instant State Transition | Hold with Countdown Timer |
+| **Stage 4: Topic Guide Match** | Clean Submissions | Community FAQ keywords, guide tags, resource suggestions | Non-blocking | Suggest Resource Wiki |
+| **Stage 5: Notice & Audit** | Violations Detected | Markdown notification consolidation, rescue log capture, atomic lock | Synchronous | Single Sticky Notice |
 
 ---
 
