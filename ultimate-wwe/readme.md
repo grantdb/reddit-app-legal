@@ -20,9 +20,12 @@ Ultimate WWE Hub powers a streamlined 3-post ecosystem for wrestling communities
 - **Before vs. During Match Lifecycle**:
   - *Before Match*: Contender Tale of the Tape, 1-tap pre-match winner predictions, and crowd consensus bars.
   - *During Match*: "MATCH STARTED — THE BELL HAS RUNG" alert, live momentum tug-of-war cheering, crowd chant soundboard, and 1–5 star match ratings.
-  - *Match Finish*: Moderator winner declaration with golden pyro celebration and "AND NEW CHAMPION!" alert.
+  - *Match Finish*: Moderator winner declaration with golden pyro celebration, Crowd Consensus Accuracy Ribbon (prediction win % / upset alert), and "AND NEW CHAMPION!" alert.
+- **Titan-Tron Live Arena Ticker**: Rolling real-time headlines broadcasting momentum surges, fan chant waves, and winner declarations.
+- **Match-of-the-Night (MOTN) Honors**: Real-time crowd star ratings crown standout matches with high-contrast MOTN badges.
+- **Post-Show Box Score & Trophy Case**: Inline feed card transforms into an official post-show recap upon event completion, and features a metallic Championship Trophy Case on Hub posts.
+- **Moderator Live Suite**: In-arena match card customizer, 1-click impromptu match creation, reset controls, and automatic championship title belt lineage synchronization into the Hub.
 - **Realtime Transport**: Powered by Devvit realtime broadcast channels paired with authoritative Redis state.
-- **Moderator Console**: Secure server-validated controls to start matches, declare winners, and curate championship titleholders.
 
 ---
 
