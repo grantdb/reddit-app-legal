@@ -1,7 +1,7 @@
 # App Update Checker
 
 Category: Utility  
-Version: v0.0.84  
+Version: v0.0.85  
 Visibility: Public  
 Summary: Automated version tracking and release notification engine for Reddit Devvit apps. Daily silent audits and modmail alerts.
 
@@ -61,16 +61,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.85 — 2026-10-26
+- Standard fleet synchronization and maintenance.
+
 0.0.84 — 2026-10-20
 - Standard fleet synchronization and maintenance.
 
 0.0.81 — 2026-09-13
 - Standard fleet synchronization and maintenance.
-
-0.0.80 — 2026-09-13
-- Feature: Added archivable Modmail delivery to standard Modmail Inbox (`createModInboxConversation`) with multi-tier API fallbacks (`createConversation`, `createModNotification`).
-- Feature: Added configurable `modmail_destination` setting allowing moderator teams to choose between Modmail Inbox (Archivable), Mod Discussions (Internal), and Mod Notifications (Read-Only).
-- Maintenance: Enhanced structured lifecycle logging to record destination channel and conversation IDs.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/app-update-checker/TERMS.md)
