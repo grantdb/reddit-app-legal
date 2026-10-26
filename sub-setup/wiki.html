@@ -1,7 +1,7 @@
 <h1>Sub Setup</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.15<br>
+Version: v0.0.16<br>
 Visibility: Unlisted<br>
 Summary: Comprehensive subreddit setup guide and configuration auditor.</p>
 
@@ -47,7 +47,7 @@ Summary: Comprehensive subreddit setup guide and configuration auditor.</p>
 <p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
 <ul>
 <li>Key-Value Strings (deduplication & cooldown markers)</li>
-<li>Key patterns: node:http, sub-setup:toast</li>
+<li>Key patterns: node:http, sub-setup:theme, sub-setup:toast</li>
 </ul>
 
 <h2>Setup and Usage</h2>
@@ -66,7 +66,7 @@ Summary: Comprehensive subreddit setup guide and configuration auditor.</p>
 <li>Batch step completion: Mark all manual checklist items in a step complete with one click.</li>
 <li>Remaining items filter: Dedicated modal listing all incomplete items across all 9 steps with instant jump navigation.</li>
 <li>Rate-limited audit engine: 60-second cooldown protects platform resources and displays live retry countdowns.</li>
-<li>On-demand Modmail dispatch: Export structured, zero-emoji Markdown reports directly to Subreddit Mod Discussions.</li>
+<li>On-demand Modmail dispatch: Export structured, zero-emoji Markdown reports directly to your archivable Modmail Inbox.</li>
 <li>Dual-Score Integrity: Separates automated API inspections (which contribute to your numeric configuration score) from guided manual checklists and optional programs.</li>
 <li>Official Documentation: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.</li>
 <li>Zero-PII & Privacy-First: Inspects only public community configuration flags and rules; never inspects private user profiles, post bodies, or modmail conversations.</li>
@@ -77,7 +77,7 @@ Summary: Comprehensive subreddit setup guide and configuration auditor.</p>
 <li>Moderator Launch: A moderator clicks Run Subreddit Setup Audit in the subreddit menu. The server retrieves or generates a private, stealth custom post accessible only to moderators.</li>
 <li>Dual Audit & Interactive Wizard: The app loads an interactive 9-step React webview. Automated checks inspect 8 API-accessible areas, while guided checklists track manual settings with Redis persistence.</li>
 <li>Step-by-Step Configuration: Moderators work through settings, check off manual tasks with optimistic UI updates, launch 1-click Mod Tools deep links, or batch-complete steps.</li>
-<li>Export & Sharing: On demand, moderators can dispatch a structured Markdown summary directly to Modmail (Mod Discussions) or copy progress snippets to clipboard for team coordination.</li>
+<li>Export & Sharing: On demand, moderators can dispatch a structured Markdown summary directly to Modmail (Modmail Inbox) or copy progress snippets to clipboard for team coordination.</li>
 <li>Step 1 — Community Identity & Settings: Title, description, sidebar length, community avatar, banner image, discoverability, and NSFW status.</li>
 <li>Step 2 — AutoModerator Protection: Wiki configuration existence, rule blocks, YAML syntax validation (tab detection), new account filtering, and action reasons.</li>
 <li>Step 3 — Rules Hub & Enforcement: Rule definitions, depth, rule fatigue checks, removal reasons, and pre-submission Post Check triggers.</li>
@@ -91,7 +91,7 @@ Summary: Comprehensive subreddit setup guide and configuration auditor.</p>
 <li>Open your subreddit's menu and select Run Subreddit Setup Audit.</li>
 <li>You will be routed directly to the interactive setup guide.</li>
 <li>Complete the 9 steps at your own pace — your progress is saved automatically.</li>
-<li>When ready, click Send to Modmail in Step 9 to archive your setup report in Mod Discussions.</li>
+<li>When ready, click Send to Modmail in Step 9 to archive your setup report in Modmail.</li>
 <li>For help, bug reports, or feature requests, post in r/grantdb.</li>
 <li>Please include the app name, what you expected, what happened, and any error text or screenshots.</li>
 <li>This application is subject to the following legal agreements:</li>
@@ -107,12 +107,12 @@ Summary: Comprehensive subreddit setup guide and configuration auditor.</p>
 </ul>
 
 <h2>Version History</h2>
-<p>0.0.15 — 2026-10-20<br>
+<p>0.0.16 — 2026-10-26<br>
 Standard fleet synchronization and maintenance.</p>
+<p>0.0.15 — 2026-10-26<br>
+Canonical Webview & Scrolling Standard v2.1 alignment:; Eliminated competing scroller deadlock on html/body by establishing single canonical root scroller in expanded mode and zero-scroll bounding in inline mode.; Implemented client mode observer (`initModeObserver`) with mode-aware classes on ``.; Fixed `ScrollSidebar` multi-displacement jumping by consolidating window scrolling, and replaced Unicode arrows with inline SVGs.; Enhanced floating scroll controls with `pointer-events: none` on container, `env(safe-area-inset)` padding, and suppression when modals are open.; Implemented Canonical Modal Scroll Lock engine in `App.tsx` preserving scroll position on modal open/close.; Added 8px swipe-drag threshold guards to `StepNav` and `CheckItemRow` to eliminate accidental clicks while dragging.; Added Cybernetic Theme Sun/Moon SVG toggle in `Header.tsx` with `localStorage` persistence.; Switched automated Modmail delivery to archivable Modmail Inbox via `createModInboxConversation` with `createConversation` fallback.; Removed raw Unicode emoji from `README.md` and updated footer documentation.</p>
 <p>0.0.14 — 2026-10-17<br>
 Standard fleet synchronization and maintenance.</p>
-<p>0.0.14 — 2026-10-16<br>
-Canonical UI alignment: register canonical expanded entrypoint alias in devvit.json, add body.app-expanded-mode scroller rules and [data-theme="light"] token overrides, set overscroll-behavior-x: auto and touch-action: pan-x pan-y on .step-nav-container for natural gesture chaining, and strictly enforce Zero-Emoji Policy in ModmailModal by replacing unicode checkmark with inline SVG.</p>
 
 <h2>Links</h2>
 <ul>

@@ -1,7 +1,7 @@
 # Sub Setup
 
 Category: Moderation  
-Version: v0.0.15  
+Version: v0.0.16  
 Visibility: Unlisted  
 Summary: Comprehensive subreddit setup guide and configuration auditor.
 
@@ -44,7 +44,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 This app utilizes Reddit Redis storage for state management, caching, and rate limiting.
 
 - Key-Value Strings (deduplication & cooldown markers)
-- Key patterns: node:http, sub-setup:toast
+- Key patterns: node:http, sub-setup:theme, sub-setup:toast
 
 ## Setup and Usage
 - ![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
@@ -61,7 +61,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Batch step completion: Mark all manual checklist items in a step complete with one click.
 - Remaining items filter: Dedicated modal listing all incomplete items across all 9 steps with instant jump navigation.
 - Rate-limited audit engine: 60-second cooldown protects platform resources and displays live retry countdowns.
-- On-demand Modmail dispatch: Export structured, zero-emoji Markdown reports directly to Subreddit Mod Discussions.
+- On-demand Modmail dispatch: Export structured, zero-emoji Markdown reports directly to your archivable Modmail Inbox.
 - Dual-Score Integrity: Separates automated API inspections (which contribute to your numeric configuration score) from guided manual checklists and optional programs.
 - Official Documentation: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.
 - Zero-PII & Privacy-First: Inspects only public community configuration flags and rules; never inspects private user profiles, post bodies, or modmail conversations.
@@ -72,7 +72,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Moderator Launch: A moderator clicks Run Subreddit Setup Audit in the subreddit menu. The server retrieves or generates a private, stealth custom post accessible only to moderators.
 - Dual Audit & Interactive Wizard: The app loads an interactive 9-step React webview. Automated checks inspect 8 API-accessible areas, while guided checklists track manual settings with Redis persistence.
 - Step-by-Step Configuration: Moderators work through settings, check off manual tasks with optimistic UI updates, launch 1-click Mod Tools deep links, or batch-complete steps.
-- Export & Sharing: On demand, moderators can dispatch a structured Markdown summary directly to Modmail (Mod Discussions) or copy progress snippets to clipboard for team coordination.
+- Export & Sharing: On demand, moderators can dispatch a structured Markdown summary directly to Modmail (Modmail Inbox) or copy progress snippets to clipboard for team coordination.
 - Step 1 — Community Identity & Settings: Title, description, sidebar length, community avatar, banner image, discoverability, and NSFW status.
 - Step 2 — AutoModerator Protection: Wiki configuration existence, rule blocks, YAML syntax validation (tab detection), new account filtering, and action reasons.
 - Step 3 — Rules Hub & Enforcement: Rule definitions, depth, rule fatigue checks, removal reasons, and pre-submission Post Check triggers.
@@ -86,7 +86,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Open your subreddit's menu and select Run Subreddit Setup Audit.
 - You will be routed directly to the interactive setup guide.
 - Complete the 9 steps at your own pace — your progress is saved automatically.
-- When ready, click Send to Modmail in Step 9 to archive your setup report in Mod Discussions.
+- When ready, click Send to Modmail in Step 9 to archive your setup report in Modmail.
 - For help, bug reports, or feature requests, post in r/grantdb.
 - Please include the app name, what you expected, what happened, and any error text or screenshots.
 - This application is subject to the following legal agreements:
@@ -99,14 +99,23 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.15 — 2026-10-20
+0.0.16 — 2026-10-26
 - Standard fleet synchronization and maintenance.
+
+0.0.15 — 2026-10-26
+- Canonical Webview & Scrolling Standard v2.1 alignment:
+- Eliminated competing scroller deadlock on html/body by establishing single canonical root scroller in expanded mode and zero-scroll bounding in inline mode.
+- Implemented client mode observer (`initModeObserver`) with mode-aware classes on ``.
+- Fixed `ScrollSidebar` multi-displacement jumping by consolidating window scrolling, and replaced Unicode arrows with inline SVGs.
+- Enhanced floating scroll controls with `pointer-events: none` on container, `env(safe-area-inset)` padding, and suppression when modals are open.
+- Implemented Canonical Modal Scroll Lock engine in `App.tsx` preserving scroll position on modal open/close.
+- Added 8px swipe-drag threshold guards to `StepNav` and `CheckItemRow` to eliminate accidental clicks while dragging.
+- Added Cybernetic Theme Sun/Moon SVG toggle in `Header.tsx` with `localStorage` persistence.
+- Switched automated Modmail delivery to archivable Modmail Inbox via `createModInboxConversation` with `createConversation` fallback.
+- Removed raw Unicode emoji from `README.md` and updated footer documentation.
 
 0.0.14 — 2026-10-17
 - Standard fleet synchronization and maintenance.
-
-0.0.14 — 2026-10-16
-- Canonical UI alignment: register canonical expanded entrypoint alias in devvit.json, add body.app-expanded-mode scroller rules and [data-theme="light"] token overrides, set overscroll-behavior-x: auto and touch-action: pan-x pan-y on .step-nav-container for natural gesture chaining, and strictly enforce Zero-Emoji Policy in ModmailModal by replacing unicode checkmark with inline SVG.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/TERMS.md)
