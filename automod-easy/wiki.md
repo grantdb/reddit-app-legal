@@ -1,7 +1,7 @@
 # AutoMod Easy
 
 Category: Moderation  
-Version: v0.0.152  
+Version: v0.0.153  
 Visibility: Public  
 Summary: No-code visual rule builder and testing studio for AutoModerator.
 
@@ -57,15 +57,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.153 — 2026-10-26
+- Standard fleet synchronization and maintenance.
+
 0.0.152 — 2026-10-26
 - Standard fleet synchronization and maintenance.
 
 0.0.151 — 2026-10-19
 - Standard fleet synchronization and maintenance.
-
-0.0.151 — 2026-10-16
-- Standards & Gesture Safety: Align `.app-nav` with universal webview scrolling rules by setting `overscroll-behavior-x: auto` and `touch-action: pan-x pan-y`, ensuring natural gesture chaining to parent mobile feed.
-- Zero Emoji Compliance: Purge unicode emojis from inline feature cards and footer tip; replace with clean inline SVG icons.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/automod-easy/TERMS.md)
