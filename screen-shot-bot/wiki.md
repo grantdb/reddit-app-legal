@@ -1,7 +1,7 @@
 # Screen-Shot Bot
 
 Category: Rendering  
-Version: v1.0.83  
+Version: v1.0.84  
 Visibility: Public  
 Summary: Automated screen-capture and visual logging utility.
 
@@ -66,13 +66,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.84 — 2026-10-26
+- Standard fleet synchronization and maintenance.
+
 1.0.83 — 2026-10-20
 - Standard fleet synchronization and maintenance.
 
 1.0.82 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-1.0.81 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
