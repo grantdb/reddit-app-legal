@@ -1,7 +1,7 @@
 # DomainGuard
 
 Category: Security  
-Version: v0.0.167  
+Version: v0.0.168  
 Visibility: Unlisted  
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
@@ -65,6 +65,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.168 — 2026-10-26
+- Standard fleet synchronization and maintenance.
+
 0.0.167 — 2026-10-21
 - Standard fleet synchronization and maintenance.
 
@@ -75,9 +78,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Implemented 8px swipe-drag threshold guard on interactive controls to prevent accidental activation during feed browsing.
 - Added Redis deduplication lock in `onTrigger` to prevent concurrent `onPostCreate` and `onPostSubmit` executions, eliminating Reddit API 5-second `RESOURCE_EXHAUSTED` rate-limit errors on notification comments.
 - Removed unicode emojis from `README.md` to adhere strictly to fleet Zero-Emoji policy.
-
-0.0.166 — 2026-10-20
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/TERMS.md)
