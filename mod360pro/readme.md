@@ -22,6 +22,8 @@ mod360pro replaces fragmented moderation bots and competing sticky comments with
 - **Two-Way Wiki Policy Sync**: Bi-directional rule synchronization with `r/subreddit/wiki/mod360_rules` for effortless team collaboration.
 - **Disaster Recovery Modmail Backups**: 1-click snapshot exporting the entire active configuration directly to mod team Modmail.
 
+---
+
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod360pro-flowchart.png)
