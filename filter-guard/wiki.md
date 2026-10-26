@@ -1,7 +1,7 @@
 # FilterGuard
 
 Category: Moderation  
-Version: v0.0.85  
+Version: v0.0.86  
 Visibility: Unlisted  
 Summary: Grouped threshold-based and gate-style filtering engine for complex community safety gates.
 
@@ -61,6 +61,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.86 — 2026-10-26
+- Standard fleet synchronization and maintenance.
+
 0.0.85 — 2026-10-17
 - Standard fleet synchronization and maintenance.
 
@@ -69,9 +72,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Resilience: Added non-empty catch warning logs to live item verification and profile lookup helpers.
 - Clean Title: Stripped shield emoji from custom post creation title.
 - Dependencies: Aligned Devvit package baseline to 0.14.7.
-
-0.0.84 — 2026-09-18
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/filter-guard/TERMS.md)
