@@ -1,11 +1,6 @@
-# mod360pro
+> **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod360pro)
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-0.14.7-orange?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-0079D3?style=for-the-badge)
-![Security](https://img.shields.io/badge/Security-Hardened-D93900?style=for-the-badge)
-![Architecture](https://img.shields.io/badge/Architecture-Two--Phase_Waterfall-8A2BE2?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Production_Ready-008A10?style=for-the-badge)
+# mod360pro
 
 > **The all-in-one Reddit moderation control center. Sub-10ms spam gates, deep multi-rule content evaluation, timed quarantine, and two-way wiki sync in a single unified engine.**
 

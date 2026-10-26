@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.49  
+Version: v0.0.50  
 Visibility: Public  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -75,23 +75,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.50 — 2026-10-26
+- Standard fleet synchronization and maintenance.
+
 0.0.49 — 2026-10-26
 - Standard fleet synchronization and maintenance.
 
 0.0.48 — 2026-10-24
 - Standard fleet synchronization and maintenance.
-
-0.0.47 — 2026-10-24
-- Resilient Export Engine & Manual Download Fallback:
-- Created reusable `src/webview/lib/exportFile.ts` implementing DOM-attached anchor tag clicking, 10s deferred `URL.revokeObjectURL(url)` cleanup to prevent premature blob destruction, and dual-layer clipboard write (modern `navigator.clipboard.writeText` with legacy `document.execCommand('copy')` hidden readonly `` fallback if Permissions-Policy blocks clipboard access).
-- Implemented honest toast feedback (" copied to clipboard. Download was also requested, but Reddit’s iframe may block file saves.") recognizing that browsers silently suppress downloads in sandboxed iframes without `allow-downloads`.
-- Added explicit 1-click `[ Copy Full Manual ]` button next to `[ Download Manual (.md) ]` in `HelpView.tsx` for immediate, zero-failure clipboard export.
-- Added `[ View Raw Manual ]` escape hatch modal rendering the entire 30-article markdown in a scrollable, auto-selecting `` with 1-click `[ Copy All ]`.
-- Patched Disaster Recovery JSON backup download in `App.tsx` using `exportTextFile`.
-- Mobile Mode Persistence & Static Status Page Fallback:
-- Implemented `isExpandedModeActive()` evaluating URL query parameters (`mode=expanded`, `entrypoint=expanded`), `sessionStorage.getItem('mod360_view_mode')`, and platform `getWebViewMode()`.
-- Integrated `addWebViewModeListener` from `@devvit/client` and guarded `window.focus` handlers against accidentally reverting mobile expanded cockpit back to inline status view.
-- Verified static, zero-scroll inline dashboard card (`InlineLaunchCard`) keeping complex settings and form inputs strictly in expanded mode.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/TERMS.md)
