@@ -1,7 +1,7 @@
 # Pinned Menuboard
 
 Category: Moderation  
-Version: v0.0.84  
+Version: v0.0.85  
 Visibility: Public  
 Summary: Centralized interactive showcase for featured community posts, threads, and resources with custom thumbnails and themes.
 
@@ -55,15 +55,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.85 — 2026-10-26
+- Standard fleet synchronization and maintenance.
+
 0.0.84 — 2026-10-19
 - Standard fleet synchronization and maintenance.
 
 0.0.84 — 2026-10-16
 - UX & Standards: Add canonical expanded entrypoint in devvit.json and body.app-expanded-mode root scroller CSS.
 - Standards & Iconography: Enforce Zero-Emoji policy across modal navigation tabs and replace unicode arrows with inline SVGs.
-
-0.0.83 — 2026-10-09
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/pinned-menuboard/TERMS.md)
