@@ -1,17 +1,17 @@
 {
   "suspended-remove": {
     "name": "Suspended Remove",
-    "version": "1.0.90",
+    "version": "1.0.91",
     "visibility": "public"
   },
   "sticky-pro": {
     "name": "Sticky-Pro",
-    "version": "1.0.121",
+    "version": "1.0.122",
     "visibility": "public"
   },
   "canucknews-bot": {
     "name": "CanuckNews Bot",
-    "version": "1.1.43",
+    "version": "1.1.44",
     "visibility": "public"
   },
   "playscraper-bot": {
@@ -21,22 +21,22 @@
   },
   "screen-shot-bot": {
     "name": "Screen-Shot Bot",
-    "version": "1.0.83",
+    "version": "1.0.84",
     "visibility": "public"
   },
   "post-title-check": {
     "name": "Post Title Check",
-    "version": "0.0.89",
+    "version": "0.0.90",
     "visibility": "public"
   },
   "stargate-trivia": {
     "name": "Stargate Trivia",
-    "version": "0.0.128",
+    "version": "0.0.129",
     "visibility": "public"
   },
   "canadian-news": {
     "name": "Canadian News",
-    "version": "0.0.59",
+    "version": "0.0.60",
     "visibility": "public"
   },
   "distrofeed-bot": {
@@ -46,12 +46,12 @@
   },
   "linux-quest": {
     "name": "Linux Quest",
-    "version": "0.0.128",
+    "version": "0.0.129",
     "visibility": "public"
   },
   "archive-all-mm": {
     "name": "Archive All MM",
-    "version": "0.0.71",
+    "version": "0.0.72",
     "visibility": "public"
   },
   "ring-escape": {
@@ -61,7 +61,7 @@
   },
   "app-update-checker": {
     "name": "App Update Checker",
-    "version": "0.0.84",
+    "version": "0.0.85",
     "visibility": "public"
   },
   "gate-defender": {
@@ -71,7 +71,7 @@
   },
   "ai-checker": {
     "name": "AI Checker",
-    "version": "0.0.88",
+    "version": "0.0.89",
     "visibility": "public"
   },
   "mod-snapshot": {
@@ -81,7 +81,7 @@
   },
   "word-guard": {
     "name": "WordGuard",
-    "version": "0.0.196",
+    "version": "0.0.197",
     "visibility": "unlisted"
   },
   "sg1-responder": {
@@ -91,7 +91,7 @@
   },
   "domain-guard": {
     "name": "DomainGuard",
-    "version": "0.0.167",
+    "version": "0.0.168",
     "visibility": "unlisted"
   },
   "user-guard": {
@@ -101,7 +101,7 @@
   },
   "filter-guard": {
     "name": "FilterGuard",
-    "version": "0.0.85",
+    "version": "0.0.86",
     "visibility": "unlisted"
   },
   "format-guard": {
@@ -201,7 +201,7 @@
   },
   "ultimate-wwe": {
     "name": "Ultimate WWE Hub",
-    "version": "0.0.26",
+    "version": "0.0.27",
     "visibility": "unlisted"
   },
   "link-guard": {
@@ -216,22 +216,22 @@
   },
   "mod360pro": {
     "name": "Mod360 Pro",
-    "version": "0.0.48",
+    "version": "0.0.49",
     "visibility": "public"
   },
   "automod-easy": {
     "name": "AutoMod Easy",
-    "version": "0.0.151",
+    "version": "0.0.152",
     "visibility": "public"
   },
   "pinned-menuboard": {
     "name": "Pinned Menuboard",
-    "version": "0.0.84",
+    "version": "0.0.85",
     "visibility": "public"
   },
   "user-board": {
     "name": "User Board",
-    "version": "0.0.48",
+    "version": "0.0.49",
     "visibility": "public"
   },
   "testrank": {
