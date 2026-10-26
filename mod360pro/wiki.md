@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.48  
+Version: v0.0.49  
 Visibility: Public  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -75,6 +75,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.49 — 2026-10-26
+- Standard fleet synchronization and maintenance.
+
 0.0.48 — 2026-10-24
 - Standard fleet synchronization and maintenance.
 
@@ -89,9 +92,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Implemented `isExpandedModeActive()` evaluating URL query parameters (`mode=expanded`, `entrypoint=expanded`), `sessionStorage.getItem('mod360_view_mode')`, and platform `getWebViewMode()`.
 - Integrated `addWebViewModeListener` from `@devvit/client` and guarded `window.focus` handlers against accidentally reverting mobile expanded cockpit back to inline status view.
 - Verified static, zero-scroll inline dashboard card (`InlineLaunchCard`) keeping complex settings and form inputs strictly in expanded mode.
-
-0.0.46 — 2026-10-23
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/mod360pro/TERMS.md)
