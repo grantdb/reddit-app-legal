@@ -1,6 +1,11 @@
-> **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod360pro)
-
 # mod360pro
+
+![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
+![Devvit](https://img.shields.io/badge/Devvit-0.14.7-orange?style=for-the-badge)
+![Category](https://img.shields.io/badge/Category-Moderation-0079D3?style=for-the-badge)
+![Security](https://img.shields.io/badge/Security-Hardened-D93900?style=for-the-badge)
+![Architecture](https://img.shields.io/badge/Architecture-Two--Phase_Waterfall-8A2BE2?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Production_Ready-008A10?style=for-the-badge)
 
 > **The all-in-one Reddit moderation control center. Sub-10ms spam gates, deep multi-rule content evaluation, timed quarantine, and two-way wiki sync in a single unified engine.**
 
@@ -10,8 +15,10 @@ mod360pro replaces fragmented moderation bots and competing sticky comments with
 
 ## At a Glance
 
+- **Subreddit Setup & Readiness Audit**: Automated 8-section inspection of community settings, rules, AutoMod baseline, flairs, mod team redundancy, and wiki permissions with 0–100 foundation scoring, persistent Redis checklists, and direct 1-click Mod Tool launchers.
+- **Intelligent Standalone Deconfliction**: Automatically isolates and displays only active bot conflicts (from 20+ recognized standalone fleet apps) and duplicate AutoMod rules with 1-click safe deconfliction to shadow mode.
+- **Contextual In-App Help & Deep Linking**: Contextual help buttons on every setting and tab deep-linking directly into relevant articles with a dedicated back button returning moderators to their exact setting and scroll position.
 - **AutoMod Backup Vault & Automations Migration**: Converts legacy AutoModerator rules into modern Reddit Mod Tools Automations recipes (with 1-click token copy) or high-speed mod360pro native rules, demoting AutoMod into a passive 30-snapshot backup vault.
-- **Hybrid Conflict & Redundancy Scanner**: Scans for redundant AutoMod rules and overlapping standalone fleet apps with 1-click safe deconfliction to shadow mode.
 - **Sub-10ms Pre-AutoMod Gate**: Intercepts rapid-fire submission floods and duplicate content hashes on `onPostSubmit` via atomic Redis before content enters the community.
 - **Deep Multi-Rule Content Engine**: Evaluates author status (suspended/shadowbanned accounts), domain policies, keyword regexes, title format rules, and topic guides on `onPostCreate`.
 - **Timed Quarantine State Machine**: Holds marginal posts in a temporary quarantine (15m–48h) with automated expiration timers and 1-click mod release.
@@ -100,13 +107,13 @@ mod360pro replaces fragmented moderation bots and competing sticky comments with
 
 | Control Domain | Core Functions | Direct Moderator Action |
 | :--- | :--- | :--- |
-| **Overview & Triage** | Community health audit score, module defense matrix, activity pulse, and hybrid conflict scanner | Toggle operational mode, test pipeline, run deconfliction |
+| **Overview & Triage** | Community health audit score, 8-section Sub Setup foundation auditor, quarantine queue, activity pulse | Run setup audit, toggle mode, test pipeline, release posts |
 | **Content Policies** | Keywords & regex engine, domain & link shortener blockers, title & format syntax | Add, test, and tune content rules |
 | **Users & Rate Limits** | Karma minimums, account age milestones, verification tiers, sliding burst rate limiters | Adjust contributor trust tiers and post quotas |
 | **Enforcement & Actions** | Timed quarantine state machine, duplicate hashing, sticky templates | Review quarantine, inspect reports, release posts |
 | **Storage & Backups** | Two-way wiki policy sync, manual Redis backups, and modmail disaster recovery | Export or import configs, sync with subreddit wiki |
-| **Migrate & Integrations** | AutoMod to Automations migration, AutoMod backup vault (30 snapshots), standalone app conflict checklist | Convert AutoMod rules, restore vault snapshots, resolve bot overlaps |
-| **Help & Manual** | 30-article operational manual, interactive search engine, and offline documentation export | Browse articles, search help topics, download manual |
+| **Migrate & Integrations** | AutoMod to Automations migration, AutoMod backup vault (30 snapshots), intelligent conflict-only scanner | Convert AutoMod rules, restore vault snapshots, safe deconfliction |
+| **Help & Manual** | 32-article operational manual with in-app deep linking, interactive search, and return navigation | Browse articles, search topics, context-link from settings |
 
 ---
 
