@@ -1,6 +1,10 @@
-> **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/sub-setup)
+# Sub Setup
 
-# Sub Setup 🛠️
+![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
+![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
+![Security](https://img.shields.io/badge/Security-Hardened-red?style=for-the-badge)
+![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
+![Type](https://img.shields.io/badge/Type-Setup_Wizard-8A2BE2?style=for-the-badge)
 
 > **Step-by-step interactive setup wizard, live configuration audits, and Mod Tools guidance for Reddit communities.**
 
@@ -17,7 +21,7 @@ Sub Setup guides new and experienced moderators through a comprehensive 19-secti
 - **Batch step completion**: Mark all manual checklist items in a step complete with one click.
 - **Remaining items filter**: Dedicated modal listing all incomplete items across all 9 steps with instant jump navigation.
 - **Rate-limited audit engine**: 60-second cooldown protects platform resources and displays live retry countdowns.
-- **On-demand Modmail dispatch**: Export structured, zero-emoji Markdown reports directly to Subreddit Mod Discussions.
+- **On-demand Modmail dispatch**: Export structured, zero-emoji Markdown reports directly to your archivable Modmail Inbox.
 
 ---
 
@@ -41,7 +45,7 @@ Sub Setup guides new and experienced moderators through a comprehensive 19-secti
 1. **Moderator Launch**: A moderator clicks **Run Subreddit Setup Audit** in the subreddit menu. The server retrieves or generates a private, stealth custom post accessible only to moderators.
 2. **Dual Audit & Interactive Wizard**: The app loads an interactive 9-step React webview. Automated checks inspect 8 API-accessible areas, while guided checklists track manual settings with Redis persistence.
 3. **Step-by-Step Configuration**: Moderators work through settings, check off manual tasks with optimistic UI updates, launch 1-click Mod Tools deep links, or batch-complete steps.
-4. **Export & Sharing**: On demand, moderators can dispatch a structured Markdown summary directly to Modmail (Mod Discussions) or copy progress snippets to clipboard for team coordination.
+4. **Export & Sharing**: On demand, moderators can dispatch a structured Markdown summary directly to Modmail (Modmail Inbox) or copy progress snippets to clipboard for team coordination.
 
 ---
 
@@ -65,7 +69,7 @@ Sub Setup guides new and experienced moderators through a comprehensive 19-secti
 2. Open your subreddit's menu and select **Run Subreddit Setup Audit**.
 3. You will be routed directly to the interactive setup guide.
 4. Complete the 9 steps at your own pace — your progress is saved automatically.
-5. When ready, click **Send to Modmail** in Step 9 to archive your setup report in Mod Discussions.
+5. When ready, click **Send to Modmail** in Step 9 to archive your setup report in Modmail.
 
 ---
 
