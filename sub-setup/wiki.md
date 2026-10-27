@@ -1,7 +1,7 @@
 # Sub Setup
 
 Category: Moderation  
-Version: v0.0.16  
+Version: v0.0.17  
 Visibility: Unlisted  
 Summary: Comprehensive subreddit setup guide and configuration auditor.
 
@@ -99,6 +99,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.17 — 2026-10-27
+- Standard fleet synchronization and maintenance.
+
 0.0.16 — 2026-10-26
 - Standard fleet synchronization and maintenance.
 
@@ -113,9 +116,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Added Cybernetic Theme Sun/Moon SVG toggle in `Header.tsx` with `localStorage` persistence.
 - Switched automated Modmail delivery to archivable Modmail Inbox via `createModInboxConversation` with `createConversation` fallback.
 - Removed raw Unicode emoji from `README.md` and updated footer documentation.
-
-0.0.14 — 2026-10-17
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/TERMS.md)
