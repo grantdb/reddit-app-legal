@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T05:53:09.155Z",
+  "generatedAt": "2026-10-27T06:05:36.720Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -1145,8 +1145,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for SG-1 Responder.",
         "troubleshooting": "Check the SG-1 Responder troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-08-23"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "domain-guard",
@@ -1344,8 +1344,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for FilterGuard.",
         "troubleshooting": "Check the FilterGuard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-09-17"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "format-guard",
@@ -1472,8 +1472,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for CommentGuard.",
         "troubleshooting": "Check the CommentGuard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-08-23"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "automod-easy",
@@ -1713,8 +1713,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for QueueGuard.",
         "troubleshooting": "Check the QueueGuard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-08-23"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "duplicate-guard",
@@ -2089,8 +2089,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for Guard Hub.",
         "troubleshooting": "Check the Guard Hub troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-08-23"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "link-guard",
@@ -2222,8 +2222,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for VerifyGuard.",
         "troubleshooting": "Check the VerifyGuard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-09-01"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "rate-guard",
@@ -2648,8 +2648,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for Archive-Guard.",
         "troubleshooting": "Check the Archive-Guard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-08-30"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "wiki-sync-bot",
@@ -2960,8 +2960,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for Wiki-Guard.",
         "troubleshooting": "Check the Wiki-Guard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-09-20"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "mod360pro",

@@ -1,12 +1,16 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/filter-guard)
 
-# GuardHub: Filter Guard 🛡️
+# GuardHub: Filter Guard
+
+> [!NOTE]
+> **Lifecycle Status: Sunset / Archived**
+> This standalone micro-app has been superseded by [mod360pro](https://developers.reddit.com/apps/mod360pro). Active development and standalone releases have concluded.
 
 > **Combine complex participation rules into simple, reliable community gates.**
 
 Filter Guard equips moderation teams with layered threshold logic without cryptic syntax. Combine account age, karma requirements, and risk scores using visual AND/OR gates, test everything safely in an interactive simulator, and manage all your filter policies through a private dashboard.
 
-### ⚡ Key Highlights
+###  Key Highlights
 - **Layered Multi-Factor Gates**: Combine account age, combined karma, post karma, comment karma, and safety scores into unified rules.
 - **Visual AND/OR Logic**: Require all conditions to match (AND) or trigger on any single failed threshold (OR).
 - **Interactive Test Sandbox**: Safely dry-run rules against any Reddit username inside the dashboard before turning them live.

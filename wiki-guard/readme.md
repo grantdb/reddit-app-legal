@@ -1,12 +1,16 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-guard)
 
-# Wiki-Guard 🛡️
+# Wiki-Guard
+
+> [!NOTE]
+> **Lifecycle Status: Sunset / Archived**
+> This standalone micro-app has been superseded by [mod360pro](https://developers.reddit.com/apps/mod360pro). Active development and standalone releases have concluded.
 
 > **Mobile-first, full-fidelity subreddit wiki management and editing for Reddit moderators.**
 
 Subreddit wiki pages are essential for community guidelines, FAQs, wikis, and resource indexes, but managing them on mobile devices or inside Reddit mobile apps has historically been difficult or impossible. **Wiki-Guard** provides a dedicated, mobile-optimized moderator portal for browsing, creating, editing, previewing, and configuring subreddit wiki pages directly from inline custom posts and mobile browsers.
 
-### ⚡ Key Highlights
+###  Key Highlights
 - **Mobile-First Markdown Editor**: Clean, distraction-free editing with full support for line breaks, indentation, and standard Reddit Markdown syntax.
 - **Instant Client-Side Preview**: Real-time sanitized Markdown preview with XSS protection and safe link validation.
 - **Dual V1/V2 Wiki Compatibility**: Intelligently resolves between modern Wiki V2 and legacy V1 systems with fallback and manual mode overrides.

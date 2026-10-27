@@ -1,6 +1,10 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/comment-guard)
 
-# GuardHub: Comment Guard 🛡️
+# GuardHub: Comment Guard
+
+> [!NOTE]
+> **Lifecycle Status: Sunset / Archived**
+> This standalone micro-app has been superseded by [mod360pro](https://developers.reddit.com/apps/mod360pro). Active development and standalone releases have concluded.
 
 > **Filter low-effort spam and keep comment threads focused and constructive.**
 

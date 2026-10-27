@@ -1,10 +1,14 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/archive-guard)
 
-# Archive-Guard 🛡️
+# Archive-Guard
 
 > *Subreddit memory without the repetition.*
 
 Stop answering the exact same recurring questions every week. **Archive-Guard** is a lightweight, zero-bloat Devvit moderation tool that indexes discussion topics, clusters repeat questions, and points community members directly to your subreddit's definitive canonical threads.
+
+> [!NOTE]
+> **Lifecycle Status: Sunset / Archived**
+> This standalone micro-app has been superseded by [mod360pro](https://developers.reddit.com/apps/mod360pro). Active development and standalone releases have concluded.
 
 ---
 

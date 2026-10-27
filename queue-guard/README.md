@@ -1,6 +1,10 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/queue-guard)
 
-# GuardHub: Queue-Guard 🛡️
+# GuardHub: Queue-Guard
+
+> [!NOTE]
+> **Lifecycle Status: Sunset / Archived**
+> This standalone micro-app has been superseded by [mod360pro](https://developers.reddit.com/apps/mod360pro). Active development and standalone releases have concluded.
 
 > **Moderate faster, catch more, and stay in your flow.**
 
@@ -36,7 +40,7 @@ Queue-Guard gives moderators fast reputation checks, duplicate detection, and on
 ### Your Three-Step Workflow
 
 1. **Check**: Open the menu on any post or comment and select **[?] QueueGuard: Check Reputation** for background context.
-2. **Decide**: Click **[✓] QueueGuard: Approve** to approve immediately, or **[x] QueueGuard: Remove...** to remove quietly or flag as spam.
+2. **Decide**: Click **[] QueueGuard: Approve** to approve immediately, or **[x] QueueGuard: Remove...** to remove quietly or flag as spam.
 3. **Record**: Add an optional quick note so the rest of your moderation team knows why action was taken.
 
 ---

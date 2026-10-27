@@ -1,6 +1,10 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/guard-hub)
 
-# GuardHub: Guard Hub 🛡️
+# GuardHub: Guard Hub
+
+> [!NOTE]
+> **Lifecycle Status: Sunset / Archived**
+> This standalone platform has been superseded by [mod360pro](https://developers.reddit.com/apps/mod360pro). Active development and standalone releases have concluded.
 
 > **Monitor, coordinate, and inspect your entire GuardHub moderation defense system from one central hub.**
 

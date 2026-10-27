@@ -1,6 +1,10 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/verify-guard)
 
-# GuardHub: Verify Guard 🛡️
+# GuardHub: Verify Guard
+
+> [!NOTE]
+> **Lifecycle Status: Sunset / Archived**
+> This standalone micro-app has been superseded by [mod360pro](https://developers.reddit.com/apps/mod360pro). Active development and standalone releases have concluded.
 
 > **Streamline community verification, grant trust badges, and protect member privacy.**
 

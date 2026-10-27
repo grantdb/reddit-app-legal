@@ -37,5 +37,9 @@ This application is subject to the following legal agreements:
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/sg1-responder/TERMS.md)
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/sg1-responder/PRIVACY.md)
 
+> [!NOTE]
+> **Lifecycle Status: Sunset / Archived**
+> This standalone application has been retired from active fleet maintenance. Standalone development and releases have concluded.
+
 ---
 *Built for Reddit's moderator community.*
