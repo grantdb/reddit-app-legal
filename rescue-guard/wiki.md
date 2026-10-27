@@ -1,7 +1,7 @@
 # RescueGuard
 
 Category: Moderation  
-Version: v0.0.25  
+Version: v0.0.26  
 Visibility: Unlisted  
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.
 
@@ -55,6 +55,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.26 — 2026-10-27
+- Standard fleet synchronization and maintenance.
+
 0.0.25 — 2026-10-17
 - Standard fleet synchronization and maintenance.
 
@@ -65,9 +68,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Compacted container padding from `16px` to `10px 12px`, reduced card margins, and tuned metric tile padding to `6px 8px`.
 - Enforced `flex-shrink: 0 !important;` on `#btn-launch-expanded` to ensure the primary 'Launch Review Hub' button remains 100% visible and tappable above the mobile feed fold.
 - Added flex containment and single-line text truncation to header title and subreddit badge.
-
-0.0.24 — 2026-10-16
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/rescue-guard/TERMS.md)
