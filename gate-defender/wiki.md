@@ -1,7 +1,7 @@
 # Gate Defender
 
 Category: Interactive  
-Version: v0.0.104  
+Version: v0.0.105  
 Visibility: Unlisted  
 Summary: Arcade survival shooter for Stargate SG-1 fans. Defend the SGC wormhole from waves of Goa'uld invaders, fortify Ancient ruins, and compete on the global SGC Operatives leaderboard.
 
@@ -59,21 +59,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.105 — 2026-10-27
+- Standard fleet synchronization and maintenance.
+
 0.0.104 — 2026-10-17
 - Standard fleet synchronization and maintenance.
 
 0.0.103 — 2026-10-16
 - Architecture & Expanded Mode: Add canonical expanded entrypoint alias to devvit.json, add `body.app-expanded-mode` fixed canvas CSS rules, and verify synchronous trusted gesture transition via `requestExpandedMode(e, 'game')`.
 - Standards & Zero Emoji: Purge unicode emojis from splash tutorial and in-game topbar; replace with inline SVG icons.
-
-0.0.102 — 2026-10-03
-- Viewport Resize & Firing Fix: Resolved bug where switching from desktop to mobile viewport in the UI Simulator or rotating devices caused the turret and world coordinates to stay outside the canvas boundaries, immediately culling all fired projectiles.
-- Unified Pointer Engine: Migrated touch and mouse handlers to unified Pointer Events with `setPointerCapture`, `touch-action: none` on game canvas, and proper release cleanup on `blur` and `visibilitychange`.
-- Iris Barrier Defense Dome: Introduced planetary shield absorbing up to 12 plasma blasts and vaporizing invading attackers on collision.
-- Mobile Flank Formation: Standardized mobile layout to max 6 ancient ruins placed in a balanced defensive arc flanking the gate turret.
-- Desktop Kill-Streak Bonus: Enabled 10-kill streak rewards on desktop/fullscreen granting bonus Iris Barrier integrity (+5 hits), extra ammo (+60), and personal turret shield repair, with 30% ammo drop probability.
-- Plausibility Score Check: Raised server-side score plausibility limit from 250 to 2500 pts/sec after runtime audit revealed genuine high-score runs were being falsely rejected.
-- HUD & Status Feedback: Stacked mobile HUD downward beneath score display to prevent touch-control overlap, and added real-time score transmission status feedback on game-over screen.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/gate-defender/TERMS.md)
