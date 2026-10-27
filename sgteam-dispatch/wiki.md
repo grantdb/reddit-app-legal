@@ -1,7 +1,7 @@
 # SG Team Dispatch
 
 Category: Interactive  
-Version: v0.0.8  
+Version: v0.0.9  
 Visibility: Unlisted  
 Summary: Replayable Stargate SG-1 inspired tactical mission command game.
 
@@ -54,14 +54,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.9 — 2026-10-27
+- Standard fleet synchronization and maintenance.
+
 0.0.8 — 2026-10-17
 - Standard fleet synchronization and maintenance.
 
 0.0.8 — 2026-10-16
 - Canonical UI alignment: register canonical expanded entrypoint alias in devvit.json, set default preview height to tall, add body.app-expanded-mode fixed canvas CSS rules, define [data-theme="light"] token overrides, and strictly enforce Zero-Emoji Policy across loadout screens, debrief reports, leaderboards, and specialist roles using inline SVGs.
-
-0.0.7 — 2026-10-03
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/sgteam-dispatch/TERMS.md)
