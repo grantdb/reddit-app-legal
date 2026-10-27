@@ -1,7 +1,7 @@
 # ActionGuard
 
 Category: Moderation  
-Version: v0.0.31  
+Version: v0.0.32  
 Visibility: Unlisted  
 Summary: Professional action moderation engine.
 
@@ -60,6 +60,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.32 — 2026-10-27
+- Standard fleet synchronization and maintenance.
+
 0.0.31 — 2026-10-17
 - Standard fleet synchronization and maintenance.
 
@@ -67,9 +70,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Align webview with canonical UI standards: add expanded post entrypoint alias, complete light theme design tokens, body.app-expanded-mode viewport styles, and touch-action gesture chaining.
 - Purge unicode emojis and arrow glyphs with pure inline SVGs across dashboard, simulator, and header controls.
 - Strip lightning emoji from custom post title and add structured logging across trigger, menu, and eligibility catch blocks.
-
-0.0.30 — 2026-09-20
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/action-guard/TERMS.md)
