@@ -1,7 +1,7 @@
 # LinkGuard
 
 Category: Security  
-Version: v0.0.25  
+Version: v0.0.26  
 Visibility: Unlisted  
 Summary: Strict URL policy enforcement, shortener filter, and link moderation engine for Reddit.
 
@@ -63,6 +63,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.26 — 2026-10-27
+- Standard fleet synchronization and maintenance.
+
 0.0.25 — 2026-10-21
 - Standard fleet synchronization and maintenance.
 
@@ -71,9 +74,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Architecture: Scope access-denied lockdown views strictly to `#expanded-console-view`.
 - Build: Configured `base: './'` in `vite.config.ts` to output relative asset paths (`./assets/...`).
 - Viewport: Enforced strict zero-scroll bounds in inline mode (≤360px mobile budget) with `flex-shrink: 0 !important;` on launch CTA.
-
-0.0.24 — 2026-10-20
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/link-guard/TERMS.md)
