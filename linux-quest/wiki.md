@@ -1,7 +1,7 @@
 # Linux Quest
 
 Category: Community  
-Version: v0.0.129  
+Version: v0.0.130  
 Visibility: Public  
 Summary: Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.
 
@@ -55,14 +55,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.130 — 2026-10-27
+- Standard fleet synchronization and maintenance.
+
 0.0.129 — 2026-10-26
 - Standard fleet synchronization and maintenance.
 
 0.0.128 — 2026-10-19
 - Standard fleet synchronization and maintenance.
-
-0.0.128 — 2026-10-16
-- Architecture & Expanded Mode: Add canonical expanded entrypoint alias to devvit.json, add `body.app-expanded-mode` fixed canvas CSS rules, and verify synchronous gesture transition via `requestExpandedMode(e.nativeEvent, 'game')`.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/linux-quest/TERMS.md)
