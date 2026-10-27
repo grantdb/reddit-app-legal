@@ -12,7 +12,7 @@ Archive All Modmail effortlessly clears overgrown subreddit inboxes without brow
 
 - **One-click background archiving**: Trigger bulk modmail cleanup from Subreddit Mod Tools.
 - **Zero browser timeouts**: Delegated background execution runs smoothly without freezing your page.
-- **Smart queue selection**: Choose whether to archive New, In Progress, Appeals, or custom queues.
+- **Smart queue selection**: Choose whether to archive New, In Progress, or Appeals.
 - **Unified moderator controls**: Access start commands and real-time progress checks from a single **Archive All Modmail** menu popout.
 - **Rate-limited chunking**: Throttles API requests safely to prevent Reddit rate limit penalties.
 
