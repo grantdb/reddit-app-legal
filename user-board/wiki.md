@@ -1,7 +1,7 @@
 # User Board
 
 Category: Utility  
-Version: v0.0.49  
+Version: v0.0.50  
 Visibility: Public  
 Summary: Interactive subreddit contributor leaderboard and gamification dashboard.
 
@@ -56,19 +56,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.50 — 2026-10-27
+- Standard fleet synchronization and maintenance.
+
 0.0.49 — 2026-10-26
 - Standard fleet synchronization and maintenance.
 
 0.0.48 — 2026-10-21
 - Standard fleet synchronization and maintenance.
-
-0.0.48 — 2026-10-21
-- Fix: Added NSFW subreddit detection via `reddit.getSubredditByName` and applied `nsfw: isNsfw` plus `textFallback` in `submitCustomPost` to prevent HTTP 400 rejection when creating board posts in 18+ communities.
-- Fix: Updated `/internal/on-app-install` to safely parse incoming request body buffer for `subredditId` and `subredditName` rather than falling back to global context.
-- Hardening: Wrapped aggregation post batch fetching in error boundary logging to diagnose Reddit API query failures gracefully.
-- Architecture: Overhauled inline feed view (`webviews/index.html`) to implement the `pinned-menuboard` 4-item button pagination standard (`◀ Prev` / `Next ▶`, zero scroll trap, bounded 512px max-height, mobile <=360px budget).
-- Architecture: Migrated deep 30-rank leaderboard and moderator settings console into Expanded Mode (`requestExpandedMode`), eliminating modal scroll traps from feed view.
-- UX: Implemented 8px swipe-drag threshold guard on interactive elements to prevent accidental button activation during feed scrolling.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/user-board/TERMS.md)
