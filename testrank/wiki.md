@@ -1,7 +1,7 @@
 # TestRank
 
 Category: Utility  
-Version: v0.0.38  
+Version: v0.0.39  
 Visibility: Unlisted  
 Summary: Automated community tester recognition, reputation, and leaderboard engine for beta testing subreddits.
 
@@ -67,6 +67,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.39 — 2026-10-27
+- Standard fleet synchronization and maintenance.
+
 0.0.38 — 2026-10-23
 - Standard fleet synchronization and maintenance.
 
@@ -74,12 +77,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Leaderboard Pagination Display Fix: Only display `#pagination-bar` when `totalPages > 1` (aligning with `pinned-menuboard` standard) so single-page periods like Weekly do not display a redundant disabled `1 / 1` pagination bar.
 - Desktop Viewport Height Optimization: Eliminated vertical overflow clipping by removing redundant `.info-banner` (reclaiming 50px), reducing desktop card/item padding, and tuning margins to guarantee `#pagination-bar` is 100% visible and unclipped on 4-item leaderboards (Monthly & All-Time).
 - Top Page Badge: Added dynamic `#meta-page-badge` in the meta bar to display active page progression alongside refresh status when `totalPages > 1`.
-
-0.0.37 — 2026-10-23
-- Leaderboard Pagination & Scroll Fix: Completely removed obsolete floating page scroll buttons (`.mobile-scroll-fab-container` with `#scroll-fab-top` and `#scroll-fab-bottom`) from `leaderboard.html` and `src/client/leaderboard.ts` to eliminate non-functional arrow controls and resolve user confusion.
-- Mobile Viewport Budgeting: Budgeted mobile feed height under ≤360px in `leaderboard.html` with compact padding, fine-tuned card typography, and `flex-shrink: 0 !important;` on `#pagination-bar` to guarantee that Prev/Next pagination buttons and page indicators are always fully visible on all mobile viewports.
-- Enhanced Touch Safety: Added `pointercancel` and `lostpointercapture` guards to `attachSwipeDragGuard` in `src/client/leaderboard.ts` to ensure consistent tap response without gesture locking on mobile WebViews.
-- Console Scroll FAB Visibility Guard: Updated `checkScrollState` in `src/client/index.ts` to dynamically hide floating scroll FABs whenever page content does not overflow (`maxScroll <= 15`).
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/testrank/TERMS.md)
