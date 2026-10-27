@@ -1,7 +1,7 @@
 # FormatGuard
 
 Category: Moderation  
-Version: v0.0.71  
+Version: v0.0.72  
 Visibility: Unlisted  
 Summary: Focused structure-first moderation engine for formatting, title-shape, and stylistic rules.
 
@@ -61,6 +61,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.72 — 2026-10-27
+- Standard fleet synchronization and maintenance.
+
 0.0.71 — 2026-10-21
 - Standard fleet synchronization and maintenance.
 
@@ -68,9 +71,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Webview UI: Fixed inline scroll trap by rendering zero-scroll Placeholder Card (`InlineLaunchCard`) immediately without blocking on network loading states.
 - Architecture: Scope full-screen loading spinners and security lockdown screens strictly to `#expanded-console-view`.
 - Mobile Feed Standard: Clamped inline placeholder height budget (≤360px on `@media (max-width: 480px)`) with `overflow: hidden !important; touch-action: pan-y !important;` and `flex-shrink: 0 !important;` on launch CTA.
-
-0.0.70 — 2026-10-20
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/format-guard/TERMS.md)
