@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T15:54:35.312Z",
+  "generatedAt": "2026-10-27T05:53:09.155Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -1015,8 +1015,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for Mod Snapshot.",
         "troubleshooting": "Check the Mod Snapshot troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-08-23"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "word-guard",
@@ -1080,8 +1080,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for WordGuard.",
         "troubleshooting": "Check the WordGuard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-09-06"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "sg1-responder",
@@ -1279,8 +1279,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for UserGuard.",
         "troubleshooting": "Check the UserGuard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-08-23"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "filter-guard",
@@ -1409,8 +1409,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for FormatGuard.",
         "troubleshooting": "Check the FormatGuard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-08-23"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "comment-guard",
@@ -1778,8 +1778,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for Duplicate Guard.",
         "troubleshooting": "Check the Duplicate Guard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-09-05"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "gimmecode-guard",
@@ -1904,8 +1904,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for ActionGuard.",
         "troubleshooting": "Check the ActionGuard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-09-18"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "audit-guard",
@@ -1964,8 +1964,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for AuditGuard.",
         "troubleshooting": "Check the AuditGuard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-08-31"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "flair-guard",
@@ -2027,8 +2027,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for Flair Guard.",
         "troubleshooting": "Check the Flair Guard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-09-14"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "guard-hub",
@@ -2156,8 +2156,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for LinkGuard.",
         "troubleshooting": "Check the LinkGuard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-09-17"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "verify-guard",
@@ -2285,8 +2285,8 @@
         "welcome": "Welcome to r/grantdb support! Here is reference information for RateGuard.",
         "troubleshooting": "Check the RateGuard troubleshooting guide or view logs via devvit logs."
       },
-      "status": "active",
-      "lastUpdated": "2026-09-09"
+      "status": "archived",
+      "lastUpdated": "2026-10-27"
     },
     {
       "appId": "sgteam-dispatch",
