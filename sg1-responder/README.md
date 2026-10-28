@@ -2,6 +2,10 @@
 
 # SG-1 Responder
 
+> [!NOTE]
+> **Lifecycle Status: Sunset / Archived**
+> This standalone application has been retired from active fleet maintenance. Standalone development and releases have concluded.
+
 **SG-1 Responder** is an automated community engagement utility designed specifically for themed Stargate subreddits. It actively monitors community activity and delivers contextually relevant, flavor-accurate responses to maintain a fun, immersive thematic consistency for fans of the franchise.
 
 ## Key Features
@@ -36,10 +40,6 @@ Please include the app name, what you expected, what happened, and any error tex
 This application is subject to the following legal agreements:
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/sg1-responder/TERMS.md)
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/sg1-responder/PRIVACY.md)
-
-> [!NOTE]
-> **Lifecycle Status: Sunset / Archived**
-> This standalone application has been retired from active fleet maintenance. Standalone development and releases have concluded.
 
 ---
 *Built for Reddit's moderator community.*

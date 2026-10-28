@@ -1,7 +1,7 @@
 # SG-1 Responder
 
 Category: Stargate  
-Version: v0.0.66  
+Version: v0.0.67  
 Visibility: Unlisted  
 Summary: New Stargate-themed responder application. Under development.
 
@@ -59,13 +59,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.67 — 2026-10-28
+- Standard fleet synchronization and maintenance.
+
 0.0.66 — 2026-10-20
 - Standard fleet synchronization and maintenance.
 
 0.0.65 — 2026-10-17
-- Standard fleet synchronization and maintenance.
-
-0.0.64 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
