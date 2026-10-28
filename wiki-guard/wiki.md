@@ -1,7 +1,7 @@
 # Wiki-Guard
 
 Category: Moderation  
-Version: v0.0.9  
+Version: v0.0.10  
 Visibility: Unlisted  
 Summary: Mobile-friendly Reddit wiki editor for subreddit moderators.
 
@@ -58,14 +58,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.10 — 2026-10-28
+- Standard fleet synchronization and maintenance.
+
 0.0.9 — 2026-10-27
 - Standard fleet synchronization and maintenance.
 
 0.0.8 — 2026-10-21
 - Standard fleet synchronization and maintenance.
-
-0.0.8 — 2026-10-21
-- Resolved Devvit admin in-line scroll trap review by enforcing zero-scroll placeholder card with modal launch CTA in inline feed view and scoped full wiki cockpit to expanded mode.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/wiki-guard/TERMS.md)
