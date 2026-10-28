@@ -16,6 +16,19 @@ AutoMod Easy replaces error-prone YAML editing with an interactive rule builder 
 - **One-click wiki deployment**: Deploy verified rules directly to `config/automoderator` with automated pre-mutation rollback snapshots.
 - **Automatic rollback snapshots**: Compare side-by-side diffs and restore previous configurations safely from Redis-backed revision history (capped at 20 unique snapshots).
 
+## How It Works
+
+![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/automod-easy-flowchart.png)
+
+### Your Four-Step Workflow
+
+1. **Launch**: Open **AutoMod Easy** from Subreddit Mod Tools.
+2. **Build**: Draft rules in the visual Sandbox or customize Starter Templates.
+3. **Validate**: AutoMod Easy inspects multi-document YAML syntax, validates schema keys, and tests logic against sample payloads.
+4. **Deploy**: Deploy verified rules directly to your subreddit's `config/automoderator` wiki with automated snapshot backup.
+
+---
+
 ---
 
 ## Built for Safe AutoMod Management
@@ -27,19 +40,6 @@ AutoMod Easy replaces error-prone YAML editing with an interactive rule builder 
 - **Automated Pre-Mutation Snapshots**: Every rule append, full configuration save, or restore action automatically captures a timestamped pre-mutation snapshot before touching the Reddit wiki.
 - **Granular Permission Enforcement**: Modification endpoints strictly require moderators to hold `all` or `wiki` permissions before altering AutoModerator configurations.
 - **Deduplicated Snapshot Storage**: Chronological snapshots are stored directly in subreddit Redis storage (capped at 20 unique snapshots, skipping identical content).
-
----
-
-## How It Works
-
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/automod-easy-flowchart.png)
-
-### Your Four-Step Workflow
-
-1. **Launch**: Open **AutoMod Easy** from Subreddit Mod Tools.
-2. **Build**: Draft rules in the visual Sandbox or customize Starter Templates.
-3. **Validate**: AutoMod Easy inspects multi-document YAML syntax, validates schema keys, and tests logic against sample payloads.
-4. **Deploy**: Deploy verified rules directly to your subreddit's `config/automoderator` wiki with automated snapshot backup.
 
 ---
 
@@ -62,6 +62,19 @@ AutoMod Easy is engineered for deep YAML parsing, AST validation, and safe wiki 
 - **Regex Safety Linter**: Detects unquoted regex characters, catastrophic backtracking risks, and syntax bugs.
 - **Wiki Snapshot Engine**: Stores chronological revisions in Redis with unified diff generation and restoration endpoints.
 - **Interactive React Webview**: Renders a rich desktop and mobile testing laboratory with live syntax highlighting.
+
+## Rules Hub & Automations Compatibility Detection
+
+Reddit is rolling out **Rules Hub and Automations**. For newly created communities or communities that have not previously used AutoMod, legacy AutoMod enforcement actions (Filter, Remove, Spam, Approve) may be disabled, making Rules Hub and Automations the primary enforcement method. Non-enforcement AutoMod functionality remains available and unchanged.
+
+AutoMod Easy automatically detects your subreddit's active configuration and adapts its workflow:
+
+- **Experience Detection**: Detects whether the community uses legacy AutoMod or the newer Rules Hub / Automations experience using reliable Reddit API signals with Redis caching (15-minute TTL).
+- **Enforcement Gating**: For communities detected as `rules_hub`, AutoMod Easy prevents generating, appending, saving, or restoring rules whose primary purpose is an unsupported enforcement action (`action: filter`, `action: remove`, `action: spam`, `action: approve`).
+- **Non-Enforcement Continuity**: Non-enforcement AutoMod features—including post and comment notifications, author messaging, moderator reporting, formatting validation, YAML parsing, sandbox simulation, and revision backups—remain fully functional.
+- **Rules Hub Migration Advisor**: The dedicated **Migration** tab maps common AutoMod patterns (prohibited content removals, queue filters, link shorteners, account age gates, and keyword blockers) to suggested natural-language Rules Hub policies and Automations workflows with copyable descriptions.
+- **Conservative Fallback**: If Reddit does not expose a definitive signal, AutoMod Easy conservatively treats the subreddit as `unknown` rather than assuming Rules Hub. In `unknown` mode, drafting and validation remain available, with non-blocking advisory warnings displayed prior to deploying any enforcement rule.
+- **Advisor Limitations**: Migration suggestions are labeled as **recommended starting points**, not guaranteed identical equivalents. Rules Hub evaluates rule intent using natural language and semantic understanding rather than exact keyword or regex pattern matching.
 
 ---
 
