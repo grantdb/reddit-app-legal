@@ -76,17 +76,17 @@
   },
   "mod-snapshot": {
     "name": "Mod Snapshot",
-    "version": "0.0.84",
+    "version": "0.0.85",
     "visibility": "unlisted"
   },
   "word-guard": {
     "name": "WordGuard",
-    "version": "0.0.198",
+    "version": "0.0.199",
     "visibility": "unlisted"
   },
   "sg1-responder": {
     "name": "SG-1 Responder",
-    "version": "0.0.66",
+    "version": "0.0.67",
     "visibility": "unlisted"
   },
   "domain-guard": {
@@ -101,27 +101,27 @@
   },
   "filter-guard": {
     "name": "FilterGuard",
-    "version": "0.0.87",
+    "version": "0.0.88",
     "visibility": "unlisted"
   },
   "format-guard": {
     "name": "FormatGuard",
-    "version": "0.0.72",
+    "version": "0.0.73",
     "visibility": "unlisted"
   },
   "comment-guard": {
     "name": "CommentGuard",
-    "version": "0.0.57",
+    "version": "0.0.58",
     "visibility": "unlisted"
   },
   "queue-guard": {
     "name": "QueueGuard",
-    "version": "0.0.50",
+    "version": "0.0.51",
     "visibility": "unlisted"
   },
   "duplicate-guard": {
     "name": "Duplicate Guard",
-    "version": "0.0.40",
+    "version": "0.0.41",
     "visibility": "unlisted"
   },
   "gimmecode-guard": {
@@ -131,27 +131,27 @@
   },
   "action-guard": {
     "name": "ActionGuard",
-    "version": "0.0.32",
+    "version": "0.0.33",
     "visibility": "unlisted"
   },
   "audit-guard": {
     "name": "AuditGuard",
-    "version": "0.0.21",
+    "version": "0.0.22",
     "visibility": "unlisted"
   },
   "guard-hub": {
     "name": "Guard Hub",
-    "version": "0.0.15",
+    "version": "0.0.16",
     "visibility": "unlisted"
   },
   "verify-guard": {
     "name": "VerifyGuard",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "visibility": "unlisted"
   },
   "rate-guard": {
     "name": "RateGuard",
-    "version": "0.0.18",
+    "version": "0.0.19",
     "visibility": "unlisted"
   },
   "sgteam-dispatch": {
@@ -176,7 +176,7 @@
   },
   "archive-guard": {
     "name": "Archive-Guard",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "visibility": "unlisted"
   },
   "wiki-sync-bot": {
@@ -191,7 +191,7 @@
   },
   "flair-guard": {
     "name": "Flair Guard",
-    "version": "0.0.17",
+    "version": "0.0.18",
     "visibility": "unlisted"
   },
   "sub-setup": {
@@ -206,27 +206,27 @@
   },
   "link-guard": {
     "name": "LinkGuard",
-    "version": "0.0.26",
+    "version": "0.0.27",
     "visibility": "unlisted"
   },
   "wiki-guard": {
     "name": "Wiki-Guard",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "visibility": "unlisted"
   },
   "mod360pro": {
     "name": "Mod360 Pro",
-    "version": "0.0.53",
+    "version": "0.0.54",
     "visibility": "public"
   },
   "automod-easy": {
     "name": "AutoMod Easy",
-    "version": "0.0.154",
+    "version": "0.0.155",
     "visibility": "public"
   },
   "pinned-menuboard": {
     "name": "Pinned Menuboard",
-    "version": "0.0.86",
+    "version": "0.0.87",
     "visibility": "public"
   },
   "user-board": {
