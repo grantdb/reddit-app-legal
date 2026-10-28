@@ -1,7 +1,7 @@
 # Guard Hub
 
 Category: Moderation  
-Version: v0.0.15  
+Version: v0.0.16  
 Visibility: Unlisted  
 Summary: Central GuardHub integration platform.
 
@@ -52,13 +52,13 @@ This app does not store persistent state in Redis.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.16 — 2026-10-28
+- Standard fleet synchronization and maintenance.
+
 0.0.15 — 2026-10-20
 - Standard fleet synchronization and maintenance.
 
 0.0.14 — 2026-09-15
-- Standard fleet synchronization and maintenance.
-
-0.0.13 — 2026-09-02
 - Standard fleet synchronization and maintenance.
 
 ## Links
