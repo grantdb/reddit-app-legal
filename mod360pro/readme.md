@@ -19,12 +19,10 @@ mod360pro replaces fragmented moderation bots and competing sticky comments with
 - **Timed Quarantine State Machine**: Holds marginal posts in a temporary quarantine (15m–48h) with automated expiration timers and 1-click mod release.
 - **Single Consolidated Sticky Notice**: Groups all rule violations into exactly one clean markdown notice. Zero bot comment clutter.
 - **0–100 Reputation Safety Score**: Instant algorithmic trust score computed from account age, karma ratio, verified email, and domain history.
-- **In-Feed Mod Quick Actions**: Instant context menu tools (`Check Reputation`, `Quick Approve`, `Quick Remove`, `Export Backup to Modmail`) on every post.
+- **In-Feed Mod Quick Actions**: Instant context menu tools (`Check Reputation` and `Post Sticky Template`) on posts and comments without cluttering native moderator menus.
 - **False-Positive Rescue Hub**: Dedicated triage interface in the dashboard for instant 1-click restoration and rule tuning.
 - **Two-Way Wiki Policy Sync**: Bi-directional rule synchronization with `r/subreddit/wiki/mod360_rules` for effortless team collaboration.
 - **Disaster Recovery Modmail Backups**: 1-click snapshot exporting the entire active configuration directly to mod team Modmail.
-
----
 
 ## How It Works
 
@@ -37,6 +35,8 @@ mod360pro replaces fragmented moderation bots and competing sticky comments with
 3. **Quarantine or Verdict**: Clear violations trigger immediate removal with concurrency locks (`SET NX`); borderline posts enter the timed quarantine state machine awaiting manual review or auto-expiry.
 4. **Single-Notice Dispatch**: Violations are assembled into a single formatted sticky comment detailing exact community guidelines violated and appeal steps.
 5. **Rescue Hub Logging**: Removed items are archived into the in-dashboard Rescue Hub, allowing any moderator to reverse false positives with one click.
+
+---
 
 ---
 
@@ -76,10 +76,8 @@ mod360pro replaces fragmented moderation bots and competing sticky comments with
 
 - **0–100 Community Safety Score**: Calculated from author age, karma ratios, email verification, and community post history.
 - **Native Post & Comment Menu Actions**:
-  - `Check Reputation`: Displays comprehensive trust breakdown and violation count.
-  - `Quick Approve`: Approves content and clears pending quarantine timers.
-  - `Quick Remove`: Removes post with optional preset removal reason.
-  - `Export Backup to Modmail`: Dispatches full encrypted config snapshot to modmail.
+  - `Check Reputation`: Displays comprehensive trust breakdown and violation count on posts and comments.
+  - `Post Sticky Template`: Posts and pins a pre-configured sticky notice on a submission.
 
 ### Wiki Sync & Disaster Recovery
 

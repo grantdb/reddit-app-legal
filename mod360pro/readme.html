@@ -14,12 +14,11 @@
 <li><strong>Timed Quarantine State Machine</strong>: Holds marginal posts in a temporary quarantine (15m–48h) with automated expiration timers and 1-click mod release.</li>
 <li><strong>Single Consolidated Sticky Notice</strong>: Groups all rule violations into exactly one clean markdown notice. Zero bot comment clutter.</li>
 <li><strong>0–100 Reputation Safety Score</strong>: Instant algorithmic trust score computed from account age, karma ratio, verified email, and domain history.</li>
-<li><strong>In-Feed Mod Quick Actions</strong>: Instant context menu tools (`Check Reputation`, `Quick Approve`, `Quick Remove`, `Export Backup to Modmail`) on every post.</li>
+<li><strong>In-Feed Mod Quick Actions</strong>: Instant context menu tools (`Check Reputation` and `Post Sticky Template`) on posts and comments without cluttering native moderator menus.</li>
 <li><strong>False-Positive Rescue Hub</strong>: Dedicated triage interface in the dashboard for instant 1-click restoration and rule tuning.</li>
 <li><strong>Two-Way Wiki Policy Sync</strong>: Bi-directional rule synchronization with `r/subreddit/wiki/mod360_rules` for effortless team collaboration.</li>
 <li><strong>Disaster Recovery Modmail Backups</strong>: 1-click snapshot exporting the entire active configuration directly to mod team Modmail.</li>
 </ul>
-<p>---</p>
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod360pro-flowchart.png">Logic Flowchart</a></p>
 <h3>The 5-Step Operational Flow</h3>
@@ -28,6 +27,7 @@
 <p>3. <strong>Quarantine or Verdict</strong>: Clear violations trigger immediate removal with concurrency locks (`SET NX`); borderline posts enter the timed quarantine state machine awaiting manual review or auto-expiry.</p>
 <p>4. <strong>Single-Notice Dispatch</strong>: Violations are assembled into a single formatted sticky comment detailing exact community guidelines violated and appeal steps.</p>
 <p>5. <strong>Rescue Hub Logging</strong>: Removed items are archived into the in-dashboard Rescue Hub, allowing any moderator to reverse false positives with one click.</p>
+<p>---</p>
 <p>---</p>
 <h2>Execution Pipeline & Action Matrix</h2>
 <p>---</p>
@@ -54,10 +54,8 @@
 <ul>
 <li><strong>0–100 Community Safety Score</strong>: Calculated from author age, karma ratios, email verification, and community post history.</li>
 <li><strong>Native Post & Comment Menu Actions</strong>:</li>
-<li>`Check Reputation`: Displays comprehensive trust breakdown and violation count.</li>
-<li>`Quick Approve`: Approves content and clears pending quarantine timers.</li>
-<li>`Quick Remove`: Removes post with optional preset removal reason.</li>
-<li>`Export Backup to Modmail`: Dispatches full encrypted config snapshot to modmail.</li>
+<li>`Check Reputation`: Displays comprehensive trust breakdown and violation count on posts and comments.</li>
+<li>`Post Sticky Template`: Posts and pins a pre-configured sticky notice on a submission.</li>
 </ul>
 <h3>Wiki Sync & Disaster Recovery</h3>
 <ul>

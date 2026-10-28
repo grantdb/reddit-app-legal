@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.53  
+Version: v0.0.54  
 Visibility: Public  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -23,10 +23,8 @@ Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ mo
 - Click Mod Release: Release and approve quarantined items directly from the mod dashboard or feed action menu.
 - –100 Community Safety Score: Calculated from author age, karma ratios, email verification, and community post history.
 - Native Post & Comment Menu Actions:
-- `Check Reputation`: Displays comprehensive trust breakdown and violation count.
-- `Quick Approve`: Approves content and clears pending quarantine timers.
-- `Quick Remove`: Removes post with optional preset removal reason.
-- `Export Backup to Modmail`: Dispatches full encrypted config snapshot to modmail.
+- `Check Reputation`: Displays comprehensive trust breakdown and violation count on posts and comments.
+- `Post Sticky Template`: Posts and pins a pre-configured sticky notice on a submission.
 - Two-Way Wiki Synchronization: Edit your rules in `r/subreddit/wiki/mod360_rules` or in the visual dashboard; changes sync bi-directionally.
 - Encrypted Modmail Snapshots: Export complete configuration snapshots directly to Subreddit Modmail for permanent, tamper-proof archival.
 - Zero-Risk Shadow Mode: Run new rules in passive shadow mode with audit logging before switching them to active live enforcement.
@@ -75,13 +73,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.54 — 2026-10-28
+- Standard fleet synchronization and maintenance.
+
 0.0.53 — 2026-10-27
 - Standard fleet synchronization and maintenance.
 
 0.0.52 — 2026-10-27
-- Standard fleet synchronization and maintenance.
-
-0.0.51 — 2026-10-26
 - Standard fleet synchronization and maintenance.
 
 ## Links
