@@ -1,7 +1,7 @@
 # AutoMod Easy
 
 Category: Moderation  
-Version: v0.0.153  
+Version: v0.0.154  
 Visibility: Public  
 Summary: No-code visual rule builder and testing studio for AutoModerator.
 
@@ -57,13 +57,18 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.154 — 2026-10-28
+- Standard fleet synchronization and maintenance.
+
+0.0.154 — 2026-10-27
+- Browser History & Backtrack Coordinator: Implemented depth-aware history coordination (`pushState`/`popstate`) for in-place tab backtracking; clicking browser back now navigates backward between tabs and returns to the inline card without ejecting the user to the subreddit feed.
+- Automated Pre-Mutation Snapshots: Implemented server-side automated rollback snapshots before any wiki mutation (`onAppendRule`, `onSaveFullConfig`, `onRestoreBackup`), guaranteeing an immediate recovery point before touching `config/automoderator`.
+- Granular Wiki Permission Enforcement: Restricted all AutoModerator mutation and snapshot endpoints to moderators holding `all` or `wiki` permissions via `user.getModPermissionsForSubreddit`.
+- Backup Deduplication & Storage Optimization: Deduplicated identical consecutive snapshots and capped retention at 20 unique snapshots to prevent Redis payload bloat and timeouts.
+- Stealth Dashboard Lockdown: Automatically locked stealth dashboard custom posts upon creation and retroactively locked on access to prevent unauthorized commenting.
+- Standards & Emoji Compliance: Removed literal unicode emoji from inline CTA button and aligned inline feed card label to `Wiki snapshots`.
+
 0.0.153 — 2026-10-26
-- Standard fleet synchronization and maintenance.
-
-0.0.152 — 2026-10-26
-- Standard fleet synchronization and maintenance.
-
-0.0.151 — 2026-10-19
 - Standard fleet synchronization and maintenance.
 
 ## Links

@@ -8,8 +8,8 @@
 <li><strong>Visual sandbox simulator</strong>: Test AutoMod YAML against sample submissions with accurate word-boundary matching without touching live posts.</li>
 <li><strong>Rule health audit</strong>: Inspect your active `config/automoderator` page for syntax errors, missing colons, and risk patterns.</li>
 <li><strong>Curated starter pack templates</strong>: Rapidly customize and deploy common filter patterns for profanity, spam links, title tags, and account age gates.</li>
-<li><strong>One-click wiki deployment</strong>: Deploy verified rules directly to `config/automoderator` with automated rollback backups.</li>
-<li><strong>Automatic rollback snapshots</strong>: Compare side-by-side diffs and restore previous configurations safely.</li>
+<li><strong>One-click wiki deployment</strong>: Deploy verified rules directly to `config/automoderator` with automated pre-mutation rollback snapshots.</li>
+<li><strong>Automatic rollback snapshots</strong>: Compare side-by-side diffs and restore previous configurations safely from Redis-backed revision history (capped at 20 unique snapshots).</li>
 </ul>
 <p>---</p>
 <h2>Built for Safe AutoMod Management</h2>
@@ -18,7 +18,9 @@
 <li><strong>Automated Health Scorecard</strong>: Evaluates active configuration health, flagging missing quotes, unescaped regex characters, and risky wildcards.</li>
 <li><strong>Enforceability Advisor</strong>: Loads your community sidebar rules via Reddit API to provide code blueprints and native safety filter tips.</li>
 <li><strong>Starter Pack Templates</strong>: Pre-configured, customizable rules for common moderation tasks including banned words, shorteners, title brackets, and age gates.</li>
-<li><strong>Configuration Diff & Restore</strong>: Compare current YAML against previous versions with side-by-side visual diffs and one-click rollback.</li>
+<li><strong>Automated Pre-Mutation Snapshots</strong>: Every rule append, full configuration save, or restore action automatically captures a timestamped pre-mutation snapshot before touching the Reddit wiki.</li>
+<li><strong>Granular Permission Enforcement</strong>: Modification endpoints strictly require moderators to hold `all` or `wiki` permissions before altering AutoModerator configurations.</li>
+<li><strong>Deduplicated Snapshot Storage</strong>: Chronological snapshots are stored directly in subreddit Redis storage (capped at 20 unique snapshots, skipping identical content).</li>
 </ul>
 <p>---</p>
 <h2>How It Works</h2>
