@@ -1,7 +1,7 @@
 # Mod Snapshot
 
 Category: Archival  
-Version: v0.0.84  
+Version: v0.0.85  
 Visibility: Unlisted  
 Summary: Professional-grade subreddit configuration backup. Delivers comprehensive archival snapshots and best-effort app discovery to Modmail.
 
@@ -55,13 +55,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.85 — 2026-10-28
+- Standard fleet synchronization and maintenance.
+
 0.0.84 — 2026-10-20
 - Standard fleet synchronization and maintenance.
 
 0.0.83 — 2026-10-17
-- Standard fleet synchronization and maintenance.
-
-0.0.82 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links

@@ -68,5 +68,6 @@ Please include:
 This application is subject to the following legal agreements:
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/mod-snapshot/TERMS.md)
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/mod-snapshot/PRIVACY.md)
+
 ---
 *Built for Reddit's moderator community.*
