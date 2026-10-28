@@ -17,19 +17,6 @@ Pinned Menuboard gives your subreddit a stylish navigation hub and game launcher
 - **In-webview moderator controls**: Customize board headers, adjust capacity, and reorder or remove cards directly inside the post.
 - **One-tap menu toggling**: Feature or remove posts instantly from the native Reddit post overflow menu.
 
----
-
-## Built for Rich Community Navigation
-
-- **Dynamic Showcase Grid**: Displays 2 to 12 responsive cards featuring high-impact image previews, submission titles, and author attribution.
-- **Multi-Tier Thumbnail Resolution**: Resolves high-resolution thumbnails via Devvit enriched image APIs, standard post thumbnails, direct image links, and preview payloads.
-- **Dedicated Moderator Controls**: Subreddit moderators receive an in-post Customize button granting access to live configuration without leaving the thread.
-- **Theme Selection**: Switch between Dark Mode (light on dark slate `#0b1426`) and Light Mode (dark on clean light `#f8fafc`).
-- **Capacity Controls**: Configure slot limits (2, 4, 6, 8, 10, or 12 cards) with automatic capacity validation.
-- **Community Highlights Integration**: Automatically unpins stickied posts when featured so they do not duplicate inside Reddit's native top highlights bar.
-
----
-
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/pinned-menuboard-flowchart.png)
@@ -40,6 +27,19 @@ Pinned Menuboard gives your subreddit a stylish navigation hub and game launcher
 2. **Sticky**: The custom post is stickied to the top of your subreddit feed.
 3. **Feature & Unpin**: Open any post and click **Toggle on Menuboard** (or paste the post URL into the Customize panel). The post is added to the board and automatically unpinned from Community Highlights.
 4. **Customize**: Click **Customize** in the board header to adjust themes, change the board title, adjust slot capacity, or reorder active cards.
+
+---
+
+---
+
+## Built for Rich Community Navigation
+
+- **Dynamic Showcase Grid**: Displays 2 to 12 responsive cards featuring high-impact image previews, submission titles, and author attribution.
+- **Multi-Tier Thumbnail Resolution**: Resolves high-resolution thumbnails via Devvit enriched image APIs, standard post thumbnails, direct image links, and preview payloads.
+- **Dedicated Moderator Controls**: Subreddit moderators receive an in-post Customize button granting access to live configuration without leaving the thread.
+- **Theme Selection**: Switch between Dark Mode (light on dark slate `#0b1426`) and Light Mode (dark on clean light `#f8fafc`).
+- **Capacity Controls**: Configure slot limits (2, 4, 6, 8, 10, or 12 cards) with automatic capacity validation.
+- **Community Highlights Integration**: Automatically unpins stickied posts when featured so they do not duplicate inside Reddit's native top highlights bar.
 
 ---
 
