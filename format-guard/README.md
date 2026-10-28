@@ -55,5 +55,6 @@ Please include the app name, what you expected, what happened, and any error tex
 This application is subject to the following legal agreements:
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/format-guard/TERMS.md)
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/format-guard/PRIVACY.md)
+
 ---
 *Built for Reddit's moderator community. Part of the GuardHub family.*
