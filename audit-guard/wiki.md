@@ -1,7 +1,7 @@
 # AuditGuard
 
 Category: Moderation  
-Version: v0.0.21  
+Version: v0.0.22  
 Visibility: Unlisted  
 Summary: Professional audit log moderation engine.
 
@@ -57,6 +57,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.22 — 2026-10-28
+- Standard fleet synchronization and maintenance.
+
 0.0.21 — 2026-10-17
 - Standard fleet synchronization and maintenance.
 
@@ -64,9 +67,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Align webview with canonical UI standards: add expanded post entrypoint alias, complete light theme design tokens, and body.app-expanded-mode viewport styles.
 - Purge unicode shield emoji with pure inline SVG across dashboard header and strip shield emoji from custom post title.
 - Add structured logging across menu and trigger handlers and eliminate empty catch blocks in telemetry ingestion.
-
-0.0.20 — 2026-09-20
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/audit-guard/TERMS.md)
