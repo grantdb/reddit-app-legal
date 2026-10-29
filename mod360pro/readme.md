@@ -38,8 +38,6 @@ mod360pro replaces fragmented moderation bots and competing sticky comments with
 
 ---
 
----
-
 ## Execution Pipeline & Action Matrix
 
 | Pipeline Stage | Event Trigger | Evaluation Scope | Standard Latency | Default Action |

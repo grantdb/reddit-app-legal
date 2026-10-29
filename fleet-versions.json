@@ -96,7 +96,7 @@
   },
   "user-guard": {
     "name": "UserGuard",
-    "version": "0.0.78",
+    "version": "0.0.79",
     "visibility": "unlisted"
   },
   "filter-guard": {
