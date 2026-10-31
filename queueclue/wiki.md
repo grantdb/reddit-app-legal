@@ -1,7 +1,7 @@
 # QueueClue
 
 Category: Utility  
-Version: v0.0.8  
+Version: v0.0.9  
 Visibility: Unlisted  
 Summary: Find the available source and reason behind a queue item.
 
@@ -55,13 +55,13 @@ This app does not store persistent state in Redis.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.9 — 2026-10-31
+- Standard fleet synchronization and maintenance.
+
 0.0.8 — 2026-10-31
 - Standard fleet synchronization and maintenance.
 
 0.0.7 — 2026-10-31
-- Standard fleet synchronization and maintenance.
-
-0.0.6 — 2026-10-31
 - Standard fleet synchronization and maintenance.
 
 ## Links
