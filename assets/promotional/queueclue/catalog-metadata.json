@@ -1,0 +1,26 @@
+{
+  "appName": "QueueClue",
+  "slug": "queueclue",
+  "version": "0.0.13",
+  "visibility": "public",
+  "directoryListing": {
+    "displayName": "QueueClue",
+    "description": "Find the available source and reason behind a queue item.",
+    "termsUrl": "https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/TERMS.md",
+    "privacyUrl": "https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/PRIVACY.md",
+    "isNsfw": false
+  },
+  "inAppCatalog": {
+    "featuringDescription": "Instant, non-destructive review queue diagnostics",
+    "tileTagline": "Queue Diagnostic Inspector"
+  },
+  "assets": {
+    "promotionalIcon": "promotional-icon.png",
+    "featuringAssetJpg": "featuring-asset.jpg",
+    "featuringAssetPng": "featuring-asset.png",
+    "fallbackAssetJpg": "fallback-asset.jpg",
+    "fallbackAssetPng": "fallback-asset.png",
+    "tileImage": "tile-image.png"
+  }
+}
+
