@@ -1,7 +1,7 @@
 # QueueClue
 
 Category: Utility  
-Version: v0.0.3  
+Version: v0.0.4  
 Visibility: Unlisted  
 Summary: Find the available source and reason behind a queue item.
 
@@ -45,7 +45,7 @@ This app does not store persistent state in Redis.
 ## Setup and Usage
 - Install: Add QueueClue to your subreddit through the Reddit App Directory.
 - Open Queue: Navigate to your subreddit's Needs Review queue in desktop Reddit Mod Tools.
-- Inspect Item: Click the overflow menu (`...`) on any queued post or comment and select QueueClue: Why filtered?**.
+- Inspect Item: Click the moderator menu (shield icon on queue cards, or overflow menu `...`) on any queued post or comment and select QueueClue: Why filtered?**.
 - Review Explanation: View the available filtering source and reason in the popover modal without modifying item state.
 - Zero configuration required. Post and comment explanations are enabled out-of-the-box with sensible defaults.*
 
@@ -54,6 +54,9 @@ This app does not store persistent state in Redis.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.4 — 2026-10-31
+- Standard fleet synchronization and maintenance.
+
 0.0.3 — 2026-10-31
 - Standard fleet synchronization and maintenance.
 

@@ -20,7 +20,7 @@ QueueClue gives moderators a small, clear explanation of why a post or comment w
 
 ### The 4-Step Lifecycle
 
-1. **Trigger**: A moderator opens the overflow menu (`...`) on a post or comment in the Needs Review queue and clicks **QueueClue: Why filtered?**.
+1. **Trigger**: A moderator opens the moderator action menu (shield icon on queue cards, or overflow menu `...`) on a post or comment in the Needs Review queue and clicks **QueueClue: Why filtered?**.
 2. **Authorize & Verify**: QueueClue checks the invoking user's active moderator permissions and verifies that the item belongs to the current subreddit before extracting metadata.
 3. **Inspect & Classify**: On-demand metadata is evaluated against ground-truth evidence rules (identifying AutoModerator reports, confirmed removal categories, and filtering timestamps without overstating uncertain signals).
 4. **Present**: A clean native explanation popover opens displaying the available source, reason, and notes, returning the moderator to their exact queue position upon closing.
@@ -31,7 +31,7 @@ QueueClue gives moderators a small, clear explanation of why a post or comment w
 
 1. **Install**: Add **QueueClue** to your subreddit through the Reddit App Directory.
 2. **Open Queue**: Navigate to your subreddit's **Needs Review** queue in desktop Reddit Mod Tools.
-3. **Inspect Item**: Click the overflow menu (`...`) on any queued post or comment and select **QueueClue: Why filtered?**.
+3. **Inspect Item**: Click the moderator menu (shield icon on queue cards, or overflow menu `...`) on any queued post or comment and select **QueueClue: Why filtered?**.
 4. **Review Explanation**: View the available filtering source and reason in the popover modal without modifying item state.
 
 *Zero configuration required. Post and comment explanations are enabled out-of-the-box with sensible defaults.*
