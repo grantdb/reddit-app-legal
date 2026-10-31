@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T00:27:15.023Z",
+  "generatedAt": "2026-10-31T14:53:26.054Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -3021,6 +3021,59 @@
       "replyTemplates": {
         "welcome": "Welcome to r/grantdb support! Here is reference information for Mod360 Pro.",
         "troubleshooting": "Check the Mod360 Pro troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-10-31"
+    },
+    {
+      "appId": "queueclue",
+      "slug": "queueclue",
+      "appName": "QueueClue",
+      "aliases": [
+        "queueclue"
+      ],
+      "summary": "Find the available source and reason behind a queue item.",
+      "keywords": [
+        "queueclue",
+        "utility"
+      ],
+      "setupSteps": [],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": false,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [],
+      "menuItems": [
+        "QueueClue: Why filtered?",
+        "QueueClue: Why filtered?"
+      ],
+      "settingsCount": 2,
+      "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/queueclue",
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/queueclue",
+        "github": "https://github.com/grantdb/queueclue",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for QueueClue.",
+        "troubleshooting": "Check the QueueClue troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
       "lastUpdated": "2026-10-31"
