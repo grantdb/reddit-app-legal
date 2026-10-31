@@ -1,7 +1,7 @@
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.56  
+Version: v0.0.57  
 Visibility: Public  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
@@ -46,7 +46,14 @@ Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ mo
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- Basic Settings: Status & Health (keyword, default: -). Status & Health
+- Basic Settings: Remove Active Sticky Comment (Unpin & Delete) (keyword, default: -). Remove Active Sticky Comment (Unpin & Delete)
+- postStickyForm: Post ID (string, default: -). Post ID
+- templateChoice: Choose Action or Template (select, default: [defaultChoice]). Choose Action or Template
+- customText: Custom Markdown Message (Optional) (paragraph, default: -). Used if
+- pinToTop: Pin Comment to Top (Distinguish & Sticky) (boolean, default: true). Pin Comment to Top (Distinguish & Sticky)
+- lockComment: Lock Comment (Prevent Replies) (boolean, default: true). Lock Comment (Prevent Replies)
+- duration: Auto-Unsticky Expiration Timer (select, default: -). Automatically unpins and removes this sticky comment when duration expires.
+- mod360_unsticky_timer: All (${totalRules}) (devvit-internal, default: -). All (${totalRules})
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
@@ -73,13 +80,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.57 — 2026-10-31
+- Standard fleet synchronization and maintenance.
+
 0.0.56 — 2026-10-29
 - Standard fleet synchronization and maintenance.
 
 0.0.55 — 2026-10-29
-- Standard fleet synchronization and maintenance.
-
-0.0.54 — 2026-10-28
 - Standard fleet synchronization and maintenance.
 
 ## Links

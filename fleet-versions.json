@@ -236,7 +236,7 @@
   },
   "testrank": {
     "name": "TestRank",
-    "version": "0.0.39",
+    "version": "0.0.40",
     "visibility": "unlisted"
   }
 }

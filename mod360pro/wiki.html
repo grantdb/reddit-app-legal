@@ -1,7 +1,7 @@
 <h1>Mod360 Pro</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.56<br>
+Version: v0.0.57<br>
 Visibility: Public<br>
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.</p>
 
@@ -51,7 +51,14 @@ Summary: Unified 360-degree moderation engine and waterfall pipeline consolidati
 <h2>Settings Reference</h2>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
 <ul>
-<li>Basic Settings: Status & Health (keyword, default: -). Status & Health</li>
+<li>Basic Settings: Remove Active Sticky Comment (Unpin & Delete) (keyword, default: -). Remove Active Sticky Comment (Unpin & Delete)</li>
+<li>postStickyForm: Post ID (string, default: -). Post ID</li>
+<li>templateChoice: Choose Action or Template (select, default: [defaultChoice]). Choose Action or Template</li>
+<li>customText: Custom Markdown Message (Optional) (paragraph, default: -). Used if</li>
+<li>pinToTop: Pin Comment to Top (Distinguish & Sticky) (boolean, default: true). Pin Comment to Top (Distinguish & Sticky)</li>
+<li>lockComment: Lock Comment (Prevent Replies) (boolean, default: true). Lock Comment (Prevent Replies)</li>
+<li>duration: Auto-Unsticky Expiration Timer (select, default: -). Automatically unpins and removes this sticky comment when duration expires.</li>
+<li>mod360_unsticky_timer: All (${totalRules}) (devvit-internal, default: -). All (${totalRules})</li>
 </ul>
 
 <h2>Automation Capabilities</h2>
@@ -86,11 +93,11 @@ Summary: Unified 360-degree moderation engine and waterfall pipeline consolidati
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.57 — 2026-10-31<br>
+Standard fleet synchronization and maintenance.</p>
 <p>0.0.56 — 2026-10-29<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.55 — 2026-10-29<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.54 — 2026-10-28<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
