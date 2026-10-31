@@ -1,0 +1,26 @@
+{
+  "appName": "AutoMod Easy",
+  "slug": "automod-easy",
+  "version": "0.0.155",
+  "visibility": "public",
+  "directoryListing": {
+    "displayName": "AutoMod Easy",
+    "description": "Write, test, and optimize AutoModerator rules in a visual, safe sandbox.",
+    "termsUrl": "https://github.com/grantdb/reddit-app-legal/blob/main/automod-easy/TERMS.md",
+    "privacyUrl": "https://github.com/grantdb/reddit-app-legal/blob/main/automod-easy/PRIVACY.md",
+    "isNsfw": false
+  },
+  "inAppCatalog": {
+    "featuringDescription": "Visual AutoModerator rule builder, YAML syntax linter & testing sandbox",
+    "tileTagline": "AutoMod Studio & Sandbox"
+  },
+  "assets": {
+    "promotionalIcon": "promotional-icon.png",
+    "featuringAssetJpg": "featuring-asset.jpg",
+    "featuringAssetPng": "featuring-asset.png",
+    "fallbackAssetJpg": "fallback-asset.jpg",
+    "fallbackAssetPng": "fallback-asset.png",
+    "tileImage": "tile-image.png"
+  }
+}
+
