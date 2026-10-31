@@ -1,18 +1,57 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/queueclue">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>QueueClue</h1>
-<p>Find the available source and reason behind a queue item.</p>
+<blockquote><p><strong>Find the available source and reason behind a queue item.</strong></p></blockquote>
+<p>QueueClue gives moderators a small, clear explanation of why a post or comment was filtered into Reddit's Needs Review queue. Inspect confirmed removal categories, AutoModerator report reasons, and available metadata directly on demand without leaving your queue or changing moderation states.</p>
+<h3>Key Highlights</h3>
+<ul>
+<li><strong>Zero-Mutation Safety</strong>: Operates strictly in read-only inspection mode with zero automated approvals, removals, or state mutations.</li>
+<li><strong>On-Demand Menu Invocation</strong>: Launches instantly from the native item overflow menu on any queued post or comment.</li>
+<li><strong>Accurate Ground-Truth Attribution</strong>: Distinguishes confirmed filtering sources (such as AutoModerator action reasons) from unconfirmed generic categories and report text.</li>
+<li><strong>Preserved Queue Context</strong>: Opens a native explanation popover modal so moderators review context and close it without losing their queue position.</li>
+</ul>
+<p>---</p>
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/queueclue-flowchart.png">Logic Flowchart</a></p>
-<h2>Core Features</h2>
+<h3>The 4-Step Lifecycle</h3>
+<p>1. <strong>Trigger</strong>: A moderator opens the overflow menu (`...`) on a post or comment in the Needs Review queue and clicks <strong>QueueClue: Why filtered?</strong>.</p>
+<p>2. <strong>Authorize & Verify</strong>: QueueClue checks the invoking user's active moderator permissions and verifies that the item belongs to the current subreddit before extracting metadata.</p>
+<p>3. <strong>Inspect & Classify</strong>: On-demand metadata is evaluated against ground-truth evidence rules (identifying AutoModerator reports, confirmed removal categories, and filtering timestamps without overstating uncertain signals).</p>
+<p>4. <strong>Present</strong>: A clean native explanation popover opens displaying the available source, reason, and notes, returning the moderator to their exact queue position upon closing.</p>
+<p>---</p>
+<h2>Quick Setup (60-Second Onboarding)</h2>
+<p>1. <strong>Install</strong>: Add <strong>QueueClue</strong> to your subreddit through the Reddit App Directory.</p>
+<p>2. <strong>Open Queue</strong>: Navigate to your subreddit's <strong>Needs Review</strong> queue in desktop Reddit Mod Tools.</p>
+<p>3. <strong>Inspect Item</strong>: Click the overflow menu (`...`) on any queued post or comment and select <strong>QueueClue: Why filtered?</strong>.</p>
+<p>4. <strong>Review Explanation</strong>: View the available filtering source and reason in the popover modal without modifying item state.</p>
+<p>*Zero configuration required. Post and comment explanations are enabled out-of-the-box with sensible defaults.*</p>
+<p>---</p>
+<h2>Core Capabilities</h2>
 <ul>
-<li><strong>Reliable Task Execution</strong>: Standardized job scheduling and run loops.</li>
-<li><strong>Robust Local Storage</strong>: High-speed key-value and hash storage powered by Redis.</li>
+<li><strong>Strict Evidence Standards</strong>: Separates verified filtering sources from generic removal categories (`reddit`) and user reports, ensuring moderators never see misleading explanations.</li>
+<li><strong>Private Moderator-Only Access</strong>: Enforces server-side permission checks so queue explanation metadata is strictly visible to authorized moderators.</li>
+<li><strong>Cross-Subreddit Boundary Enforcement</strong>: Prevents cross-context leakage by verifying that targets match the current subreddit before formatting details.</li>
+<li><strong>Zero Background Overhead</strong>: Runs strictly on demand when invoked from the menu, with zero background scheduled jobs, zero event watchers, and zero Redis overhead.</li>
 </ul>
-<h2>Install / Use</h2>
-<p>1. Install the app on your target subreddit.</p>
-<p>2. The background workers will automatically register and monitor events.</p>
+<p>---</p>
+<h2>Designed to Assist Moderators & Privacy</h2>
+<p>QueueClue is built strictly as a read-only decision aid for human moderation teams. It never modifies post/comment states, never executes automated actions, and never stores personally identifiable information (zero PII) or moderation records. Human moderators retain full authority over all queue decisions.</p>
+<p>---</p>
 <h2>Support</h2>
 <p>For help, bug reports, or feature requests, post in r/grantdb.</p>
-<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name (`queueclue`).</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message.</li>
+<li>Screenshots or relevant details.</li>
+</ul>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/PRIVACY.md">Privacy Policy</a></li>
+</ul>
 <p>---</p>
 <p>*Built for Reddit's moderator community.*</p>

@@ -1,9 +1,6 @@
-# QueueClue
+> **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/queueclue)
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Utility-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Moderation_Utility-8A2BE2?style=for-the-badge)
+# QueueClue
 
 > **Find the available source and reason behind a queue item.**
 

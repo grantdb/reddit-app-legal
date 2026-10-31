@@ -1,7 +1,7 @@
 # QueueClue
 
 Category: Utility  
-Version: v0.0.2  
+Version: v0.0.3  
 Visibility: Unlisted  
 Summary: Find the available source and reason behind a queue item.
 
@@ -12,8 +12,7 @@ Find the available source and reason behind a queue item.
 [View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/queueclue-flowchart.png)
 
 ## Key Features
-- Reliable Task Execution: Standardized job scheduling and run loops.
-- Robust Local Storage: High-speed key-value and hash storage powered by Redis.
+- Not documented yet.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
@@ -44,15 +43,20 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 This app does not store persistent state in Redis.
 
 ## Setup and Usage
-- Install: Add app via Reddit App Directory.
-- Configure: Open Mod Tools -> App Settings in your subreddit to configure options.
-- Launch: Use mod menu or triggers as configured.
+- Install: Add QueueClue to your subreddit through the Reddit App Directory.
+- Open Queue: Navigate to your subreddit's Needs Review queue in desktop Reddit Mod Tools.
+- Inspect Item: Click the overflow menu (`...`) on any queued post or comment and select QueueClue: Why filtered?**.
+- Review Explanation: View the available filtering source and reason in the popover modal without modifying item state.
+- Zero configuration required. Post and comment explanations are enabled out-of-the-box with sensible defaults.*
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.3 — 2026-10-31
+- Standard fleet synchronization and maintenance.
+
 0.0.2 — 2026-10-31
 - Standard fleet synchronization and maintenance.
 

@@ -238,5 +238,10 @@
     "name": "TestRank",
     "version": "0.0.40",
     "visibility": "unlisted"
+  },
+  "queueclue": {
+    "name": "QueueClue",
+    "version": "0.0.2",
+    "visibility": "unlisted"
   }
 }
