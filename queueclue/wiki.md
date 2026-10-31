@@ -1,7 +1,7 @@
 # QueueClue
 
 Category: Utility  
-Version: v0.0.6  
+Version: v0.0.7  
 Visibility: Unlisted  
 Summary: Find the available source and reason behind a queue item.
 
@@ -30,6 +30,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 
 - SETTING_ENABLE_POSTS: Enable for posts (boolean, default: true). Allow moderators to open QueueClue on posts.
 - SETTING_ENABLE_COMMENTS: Enable for comments (boolean, default: true). Allow moderators to open QueueClue on comments.
+- SETTING_TIMEZONE: Community Time Zone (string, default: UTC). IANA time zone (e.g., America/New_York, America/Los_Angeles, Europe/London, UTC). Defaults to UTC if unset.
 
 ## Automation Capabilities
 - Submits Automated Comments: No — Does not submit automated comments.
@@ -54,13 +55,13 @@ This app does not store persistent state in Redis.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.7 — 2026-10-31
+- Standard fleet synchronization and maintenance.
+
 0.0.6 — 2026-10-31
 - Standard fleet synchronization and maintenance.
 
 0.0.5 — 2026-10-31
-- Standard fleet synchronization and maintenance.
-
-0.0.4 — 2026-10-31
 - Standard fleet synchronization and maintenance.
 
 ## Links
