@@ -13,8 +13,6 @@
 - **Live Community Leaderboards**: Spawns dedicated, interactive custom post leaderboards backed by real-time Redis Sorted Sets.
 - **Cryptographic Anti-Abuse**: Prevents duplicate awards and strictly blocks self-crediting with cryptographic deduplication keys.
 
----
-
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/testrank-flowchart.png)
@@ -26,6 +24,8 @@
 3. **Developer Confirmation**: The developer selects **Mark Registered Tester (+5 pts)**, **Mark Helpful Feedback (+10 pts)**, **Mark Bug Found (+25 pts)**, or **Mark Fix Verified (+30 pts)** directly from the comment menu (`...`).
 4. **Prestige Ladder & Flair Sync**: Redis Sorted Set leaderboards update instantly; user point totals advance toward higher prestige ranks with automatic Reddit user flair upgrades.
 5. **Moderator Audit & Override Hub**: Moderators access the mod dashboard to inspect live audit logs, toggle post/user eligibility, or issue score corrections with mandatory reason logging.
+
+---
 
 ---
 
