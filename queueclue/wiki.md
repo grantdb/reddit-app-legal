@@ -1,8 +1,8 @@
 # QueueClue
 
 Category: Utility  
-Version: v0.0.12  
-Visibility: Unlisted  
+Version: v0.0.13  
+Visibility: Public  
 Summary: Find the available source and reason behind a queue item.
 
 ## Overview
@@ -55,14 +55,14 @@ This app does not store persistent state in Redis.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.13 — 2026-10-31
+- Promote to public
+
 0.0.12 — 2026-10-31
 - Restore high-contrast dark text styling and allow easy copy
 
 0.0.12 — 2026-10-31
 - Restore standard high-contrast dark text styling and enable seamless clipboard copying of diagnostic details.
-
-0.0.11 — 2026-10-31
-- Consolidate inspection report into a single auto-height read-only report card preserving line breaks and section hierarchy.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/TERMS.md)

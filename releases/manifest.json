@@ -174,5 +174,9 @@
   "mod360pro": {
     "version": "0.0.57",
     "updatedAt": "2026-10-31T00:29:17.685Z"
+  },
+  "queueclue": {
+    "version": "0.0.13",
+    "updatedAt": "2026-10-31T20:17:53.311Z"
   }
 }
