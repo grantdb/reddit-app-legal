@@ -241,7 +241,7 @@
   },
   "queueclue": {
     "name": "QueueClue",
-    "version": "0.0.12",
-    "visibility": "unlisted"
+    "version": "0.0.13",
+    "visibility": "public"
   }
 }
