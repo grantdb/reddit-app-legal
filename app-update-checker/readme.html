@@ -12,6 +12,13 @@
 <li><strong>Universal directory support</strong>: Cross-references against 150+ public apps in the Reddit App Directory and official developer manifests.</li>
 <li><strong>Consolidated moderator controls</strong>: Access on-demand scans, baseline syncing, and cache resets from a single <strong>App Update Checker</strong> menu popout.</li>
 </ul>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Lifecycle</h3>
+<p>1. <strong>Discover</strong>: App Update Checker discovers installed Devvit applications from subreddit bot signatures and configured custom slugs.</p>
+<p>2. <strong>Setup & Sync</strong>: Make sure to update all your apps via Reddit's <strong>Mod Tools > Installed Apps</strong>, then run <strong>Sync All Apps as Updated</strong> in the menu popout.</p>
+<p>3. <strong>Silent Audit</strong>: Runs automated daily checks at 12:00 UTC, comparing active community tools against version feeds compiled by our backend directory scraper.</p>
+<p>4. <strong>Notify</strong>: Delivers an actionable Modmail alert only when an app author publishes a new release.</p>
 <p>---</p>
 <h2>Built for Seamless Community Maintenance</h2>
 <ul>
@@ -24,13 +31,6 @@
 <li><strong>Native Settings Control</strong>: Specify custom app slugs to monitor, toggle unlisted bot reporting, select your preferred Modmail delivery destination (Inbox, Discussions, or Notifications), and configure check schedules in App Settings.</li>
 </ul>
 <p>---</p>
-<h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png">Logic Flowchart</a></p>
-<h3>Your Four-Step Lifecycle</h3>
-<p>1. <strong>Discover</strong>: App Update Checker discovers installed Devvit applications from subreddit bot signatures and configured custom slugs.</p>
-<p>2. <strong>Setup & Sync</strong>: Make sure to update all your apps via Reddit's <strong>Mod Tools > Installed Apps</strong>, then run <strong>Sync All Apps as Updated</strong> in the menu popout.</p>
-<p>3. <strong>Silent Audit</strong>: Runs automated daily checks at 12:00 UTC, comparing active community tools against version feeds compiled by our backend directory scraper.</p>
-<p>4. <strong>Notify</strong>: Delivers an actionable Modmail alert only when an app author publishes a new release.</p>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>App Update Checker</strong> to your subreddit through the Reddit App Directory.</p>

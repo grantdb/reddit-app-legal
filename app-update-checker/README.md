@@ -17,6 +17,17 @@ App Update Checker ensures your subreddit's Devvit tools and moderation bots rem
 - **Universal directory support**: Cross-references against 150+ public apps in the Reddit App Directory and official developer manifests.
 - **Consolidated moderator controls**: Access on-demand scans, baseline syncing, and cache resets from a single **App Update Checker** menu popout.
 
+## How It Works
+
+![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png)
+
+### Your Four-Step Lifecycle
+
+1. **Discover**: App Update Checker discovers installed Devvit applications from subreddit bot signatures and configured custom slugs.
+2. **Setup & Sync**: Make sure to update all your apps via Reddit's **Mod Tools > Installed Apps**, then run **Sync All Apps as Updated** in the menu popout.
+3. **Silent Audit**: Runs automated daily checks at 12:00 UTC, comparing active community tools against version feeds compiled by our backend directory scraper.
+4. **Notify**: Delivers an actionable Modmail alert only when an app author publishes a new release.
+
 ---
 
 ## Built for Seamless Community Maintenance
@@ -30,17 +41,6 @@ App Update Checker ensures your subreddit's Devvit tools and moderation bots rem
 - **Native Settings Control**: Specify custom app slugs to monitor, toggle unlisted bot reporting, select your preferred Modmail delivery destination (Inbox, Discussions, or Notifications), and configure check schedules in App Settings.
 
 ---
-
-## How It Works
-
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png)
-
-### Your Four-Step Lifecycle
-
-1. **Discover**: App Update Checker discovers installed Devvit applications from subreddit bot signatures and configured custom slugs.
-2. **Setup & Sync**: Make sure to update all your apps via Reddit's **Mod Tools > Installed Apps**, then run **Sync All Apps as Updated** in the menu popout.
-3. **Silent Audit**: Runs automated daily checks at 12:00 UTC, comparing active community tools against version feeds compiled by our backend directory scraper.
-4. **Notify**: Delivers an actionable Modmail alert only when an app author publishes a new release.
 
 ---
 
