@@ -1,7 +1,7 @@
 <h1>QueueClue</h1>
 
 <p>Category: Utility<br>
-Version: v0.0.13<br>
+Version: v0.0.14<br>
 Visibility: Public<br>
 Summary: Find the available source and reason behind a queue item.</p>
 
@@ -14,9 +14,15 @@ Summary: Find the available source and reason behind a queue item.</p>
 <h2>Permissions Used</h2>
 <ul>
 <li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
 </ul>
 
 <h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>AutomoderatorFilterPost: Delivered by Reddit event router to endpoint /internal/on-automoderator-filter-post.</li>
+<li>AutomoderatorFilterComment: Delivered by Reddit event router to endpoint /internal/on-automoderator-filter-comment.</li>
+</ul>
 <h3>Menu Actions</h3>
 <ul>
 <li>QueueClue: Why filtered?: Find the available source and reason behind a queue item (Location: post)</li>
@@ -44,7 +50,10 @@ Summary: Find the available source and reason behind a queue item.</p>
 </ul>
 
 <h2>Data Storage</h2>
-<p>This app does not store persistent state in Redis.</p>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+</ul>
 
 <h2>Setup and Usage</h2>
 <ul>
@@ -62,12 +71,12 @@ Summary: Find the available source and reason behind a queue item.</p>
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.14 — 2026-11-02<br>
+Standard fleet synchronization and maintenance.</p>
 <p>0.0.13 — 2026-10-31<br>
 Promote to public</p>
 <p>0.0.12 — 2026-10-31<br>
 Restore high-contrast dark text styling and allow easy copy</p>
-<p>0.0.12 — 2026-10-31<br>
-Restore standard high-contrast dark text styling and enable seamless clipboard copying of diagnostic details.</p>
 
 <h2>Links</h2>
 <ul>

@@ -1,7 +1,7 @@
 # QueueClue
 
 Category: Utility  
-Version: v0.0.13  
+Version: v0.0.14  
 Visibility: Public  
 Summary: Find the available source and reason behind a queue item.
 
@@ -16,6 +16,7 @@ Find the available source and reason behind a queue item.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
+- redis: Redis key-value storage (state tracking, caching, strike memory)
 
 ## Triggers and Activation
 ### Menu Actions
@@ -41,7 +42,9 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - Updates User or Post Flair: No — Does not update flair.
 
 ## Data Storage
-This app does not store persistent state in Redis.
+This app utilizes Reddit Redis storage for state management, caching, and rate limiting.
+
+- Key-Value Strings (deduplication & cooldown markers)
 
 ## Setup and Usage
 - Install: Add QueueClue to your subreddit through the Reddit App Directory.
@@ -55,14 +58,14 @@ This app does not store persistent state in Redis.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.14 — 2026-11-02
+- Standard fleet synchronization and maintenance.
+
 0.0.13 — 2026-10-31
 - Promote to public
 
 0.0.12 — 2026-10-31
 - Restore high-contrast dark text styling and allow easy copy
-
-0.0.12 — 2026-10-31
-- Restore standard high-contrast dark text styling and enable seamless clipboard copying of diagnostic details.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/TERMS.md)
