@@ -1,7 +1,7 @@
 # Sub Setup
 
 Category: Moderation  
-Version: v0.0.17  
+Version: v0.0.18  
 Visibility: Unlisted  
 Summary: Comprehensive subreddit setup guide and configuration auditor.
 
@@ -53,31 +53,31 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - ![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
 - ![Type](https://img.shields.io/badge/Type-Setup_Wizard-8A2BE2?style=for-the-badge)
 - Step-by-step interactive setup wizard, live configuration audits, and Mod Tools guidance for Reddit communities.**
-- Sub Setup guides new and experienced moderators through a comprehensive 19-section setup across 9 progressive wizard steps. It combines automated API inspections with persistent manual checklists, direct 1-click Mod Tools launchers, official Reddit documentation references, prioritized quick wins, and on-demand Modmail export.
+- Sub Setup guides new and experienced moderators through a comprehensive 21-section setup across 9 progressive wizard steps. It combines automated API inspections with persistent manual checklists, direct 1-click Mod Tools launchers, official Reddit documentation references, prioritized quick wins, and on-demand Modmail export.
 - In-webview Setup Wizard: Interactive React webview embedded directly within Reddit, opened via your subreddit menu.
 - Mod-only stealth post: Automatically removed from the public feed so it remains 100% private to your moderator team.
 - Persistent Redis checklists: Check off manual tasks with instant optimistic UI updates, safely decoupled from API audit re-runs.
-- Click Mod Tools launchers: Direct deep links to modern Mod Tools (`/mod/...`), including General Settings, Content Controls, Rules Hub, Safety Filters, and Modmail.
+- Click Mod Tools launchers: Direct deep links to modern Mod Tools (`/mod/...`), including General Settings, Content Controls, Rules Hub, Automations, Safety Filters, and Modmail.
 - Batch step completion: Mark all manual checklist items in a step complete with one click.
 - Remaining items filter: Dedicated modal listing all incomplete items across all 9 steps with instant jump navigation.
 - Rate-limited audit engine: 60-second cooldown protects platform resources and displays live retry countdowns.
 - On-demand Modmail dispatch: Export structured, zero-emoji Markdown reports directly to your archivable Modmail Inbox.
+- ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sub-setup-flowchart.png)
+- Moderator Launch: A moderator clicks Run Subreddit Setup Audit in the subreddit menu. The server retrieves or generates a private, stealth custom post accessible only to moderators.
+- Dual Audit & Interactive Wizard: The app loads an interactive 9-step React webview. Automated checks inspect 8 API-accessible areas, while guided checklists track manual settings with Redis persistence.
+- Step-by-Step Configuration: Moderators work through settings, check off manual tasks with optimistic UI updates, launch 1-click Mod Tools deep links, or batch-complete steps.
+- Export & Sharing: On demand, moderators can dispatch a structured Markdown summary directly to Modmail (Modmail Inbox) or copy progress snippets to clipboard for team coordination.
 - Dual-Score Integrity: Separates automated API inspections (which contribute to your numeric configuration score) from guided manual checklists and optional programs.
 - Official Documentation: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.
 - Zero-PII & Privacy-First: Inspects only public community configuration flags and rules; never inspects private user profiles, post bodies, or modmail conversations.
 - Clean Plain-Text Formatting: Formatted with high-contrast, professional labels without emojis for clear readability across all Reddit clients.
 - Continue Where You Left Off: Restores your active step and checklist state upon returning to the guide.
 - Demo Mode: Allows previewing sample community data and guided steps even without moderator privileges.
-- ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sub-setup-flowchart.png)
-- Moderator Launch: A moderator clicks Run Subreddit Setup Audit in the subreddit menu. The server retrieves or generates a private, stealth custom post accessible only to moderators.
-- Dual Audit & Interactive Wizard: The app loads an interactive 9-step React webview. Automated checks inspect 8 API-accessible areas, while guided checklists track manual settings with Redis persistence.
-- Step-by-Step Configuration: Moderators work through settings, check off manual tasks with optimistic UI updates, launch 1-click Mod Tools deep links, or batch-complete steps.
-- Export & Sharing: On demand, moderators can dispatch a structured Markdown summary directly to Modmail (Modmail Inbox) or copy progress snippets to clipboard for team coordination.
 - Step 1 — Community Identity & Settings: Title, description, sidebar length, community avatar, banner image, discoverability, and NSFW status.
 - Step 2 — AutoModerator Protection: Wiki configuration existence, rule blocks, YAML syntax validation (tab detection), new account filtering, and action reasons.
-- Step 3 — Rules Hub & Enforcement: Rule definitions, depth, rule fatigue checks, removal reasons, and pre-submission Post Check triggers.
+- Step 3 — Rules Hub & Enforcement: Rule definitions, depth, rule fatigue checks, removal reasons, pre-submission Post Check triggers, and Rules Hub AI auto-enforcement.
 - Step 4 — Flairs & Taxonomy: Post flair enablement, template counts, user flair enablement, media uploads, and wiki pages.
-- Step 5 — Safety Filters & Auto-Triage: Native Crowd Control, Reputation Filter, Ban Evasion Filter, and Poster Eligibility.
+- Step 5 — Safety Filters & Auto-Triage: Native Crowd Control, Reputation Filter, Ban Evasion Filter, Poster Eligibility, and native Automations (Post & Comment Guidance).
 - Step 6 — Onboarding & Community Guide: New member welcome messages, resource links, flair prompts, saved responses, and temporary event overrides.
 - Step 7 — Moderator Team & Notifications: Team coverage, single-point-of-failure redundancy analysis, scoped permissions, and activity alert thresholds.
 - Step 8 — Operations & Insights: Queue daily triage routines, Mod Log audit trails, Modmail workflow, and Mod Insights traffic growth.
@@ -99,23 +99,18 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.18 — 2026-11-03
+- Standard fleet synchronization and maintenance.
+
+0.0.18 — 2026-11-03
+- Added guided checklist coverage for Reddit Rules Hub AI Enforcement in Step 3 (Rules & Enforcement) with direct 1-click Mod Tools launcher.
+- Added guided checklist coverage for native Automations (Post and Comment Guidance) in Step 5 (Safety Filters) with direct 1-click Mod Tools launcher.
+- Expanded wizard configuration sections from 19 to 21 sections.
+- Updated Devvit SDK platform references to v0.15.0 across manual inspection checks.
+- Added comprehensive unit test coverage for sections, check item uniqueness, deep links, and wizard step wiring.
+
 0.0.17 — 2026-10-27
 - Standard fleet synchronization and maintenance.
-
-0.0.16 — 2026-10-26
-- Standard fleet synchronization and maintenance.
-
-0.0.15 — 2026-10-26
-- Canonical Webview & Scrolling Standard v2.1 alignment:
-- Eliminated competing scroller deadlock on html/body by establishing single canonical root scroller in expanded mode and zero-scroll bounding in inline mode.
-- Implemented client mode observer (`initModeObserver`) with mode-aware classes on ``.
-- Fixed `ScrollSidebar` multi-displacement jumping by consolidating window scrolling, and replaced Unicode arrows with inline SVGs.
-- Enhanced floating scroll controls with `pointer-events: none` on container, `env(safe-area-inset)` padding, and suppression when modals are open.
-- Implemented Canonical Modal Scroll Lock engine in `App.tsx` preserving scroll position on modal open/close.
-- Added 8px swipe-drag threshold guards to `StepNav` and `CheckItemRow` to eliminate accidental clicks while dragging.
-- Added Cybernetic Theme Sun/Moon SVG toggle in `Header.tsx` with `localStorage` persistence.
-- Switched automated Modmail delivery to archivable Modmail Inbox via `createModInboxConversation` with `createConversation` fallback.
-- Removed raw Unicode emoji from `README.md` and updated footer documentation.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/TERMS.md)

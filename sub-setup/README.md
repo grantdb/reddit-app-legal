@@ -4,7 +4,7 @@
 
 > **Step-by-step interactive setup wizard, live configuration audits, and Mod Tools guidance for Reddit communities.**
 
-Sub Setup guides new and experienced moderators through a comprehensive 19-section setup across 9 progressive wizard steps. It combines automated API inspections with persistent manual checklists, direct 1-click Mod Tools launchers, official Reddit documentation references, prioritized quick wins, and on-demand Modmail export.
+Sub Setup guides new and experienced moderators through a comprehensive 21-section setup across 9 progressive wizard steps. It combines automated API inspections with persistent manual checklists, direct 1-click Mod Tools launchers, official Reddit documentation references, prioritized quick wins, and on-demand Modmail export.
 
 ---
 
@@ -13,24 +13,11 @@ Sub Setup guides new and experienced moderators through a comprehensive 19-secti
 - **In-webview Setup Wizard**: Interactive React webview embedded directly within Reddit, opened via your subreddit menu.
 - **Mod-only stealth post**: Automatically removed from the public feed so it remains 100% private to your moderator team.
 - **Persistent Redis checklists**: Check off manual tasks with instant optimistic UI updates, safely decoupled from API audit re-runs.
-- **1-Click Mod Tools launchers**: Direct deep links to modern Mod Tools (`/mod/...`), including General Settings, Content Controls, Rules Hub, Safety Filters, and Modmail.
+- **1-Click Mod Tools launchers**: Direct deep links to modern Mod Tools (`/mod/...`), including General Settings, Content Controls, Rules Hub, Automations, Safety Filters, and Modmail.
 - **Batch step completion**: Mark all manual checklist items in a step complete with one click.
 - **Remaining items filter**: Dedicated modal listing all incomplete items across all 9 steps with instant jump navigation.
 - **Rate-limited audit engine**: 60-second cooldown protects platform resources and displays live retry countdowns.
 - **On-demand Modmail dispatch**: Export structured, zero-emoji Markdown reports directly to your archivable Modmail Inbox.
-
----
-
-## Built for Seamless Subreddit Onboarding
-
-- **Dual-Score Integrity**: Separates automated API inspections (which contribute to your numeric configuration score) from guided manual checklists and optional programs.
-- **Official Documentation**: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.
-- **Zero-PII & Privacy-First**: Inspects only public community configuration flags and rules; never inspects private user profiles, post bodies, or modmail conversations.
-- **Clean Plain-Text Formatting**: Formatted with high-contrast, professional labels without emojis for clear readability across all Reddit clients.
-- **Continue Where You Left Off**: Restores your active step and checklist state upon returning to the guide.
-- **Demo Mode**: Allows previewing sample community data and guided steps even without moderator privileges.
-
----
 
 ## How It Works
 
@@ -45,13 +32,26 @@ Sub Setup guides new and experienced moderators through a comprehensive 19-secti
 
 ---
 
-## 9 Wizard Steps (19 Configuration Sections)
+## Built for Seamless Subreddit Onboarding
+
+- **Dual-Score Integrity**: Separates automated API inspections (which contribute to your numeric configuration score) from guided manual checklists and optional programs.
+- **Official Documentation**: 30+ official Reddit Help Center and AutoModerator documentation links categorized by relevance.
+- **Zero-PII & Privacy-First**: Inspects only public community configuration flags and rules; never inspects private user profiles, post bodies, or modmail conversations.
+- **Clean Plain-Text Formatting**: Formatted with high-contrast, professional labels without emojis for clear readability across all Reddit clients.
+- **Continue Where You Left Off**: Restores your active step and checklist state upon returning to the guide.
+- **Demo Mode**: Allows previewing sample community data and guided steps even without moderator privileges.
+
+---
+
+---
+
+## 9 Wizard Steps (21 Configuration Sections)
 
 1. **Step 1 — Community Identity & Settings**: Title, description, sidebar length, community avatar, banner image, discoverability, and NSFW status.
 2. **Step 2 — AutoModerator Protection**: Wiki configuration existence, rule blocks, YAML syntax validation (tab detection), new account filtering, and action reasons.
-3. **Step 3 — Rules Hub & Enforcement**: Rule definitions, depth, rule fatigue checks, removal reasons, and pre-submission Post Check triggers.
+3. **Step 3 — Rules Hub & Enforcement**: Rule definitions, depth, rule fatigue checks, removal reasons, pre-submission Post Check triggers, and Rules Hub AI auto-enforcement.
 4. **Step 4 — Flairs & Taxonomy**: Post flair enablement, template counts, user flair enablement, media uploads, and wiki pages.
-5. **Step 5 — Safety Filters & Auto-Triage**: Native Crowd Control, Reputation Filter, Ban Evasion Filter, and Poster Eligibility.
+5. **Step 5 — Safety Filters & Auto-Triage**: Native Crowd Control, Reputation Filter, Ban Evasion Filter, Poster Eligibility, and native Automations (Post & Comment Guidance).
 6. **Step 6 — Onboarding & Community Guide**: New member welcome messages, resource links, flair prompts, saved responses, and temporary event overrides.
 7. **Step 7 — Moderator Team & Notifications**: Team coverage, single-point-of-failure redundancy analysis, scoped permissions, and activity alert thresholds.
 8. **Step 8 — Operations & Insights**: Queue daily triage routines, Mod Log audit trails, Modmail workflow, and Mod Insights traffic growth.
