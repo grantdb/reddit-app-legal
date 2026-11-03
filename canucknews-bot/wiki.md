@@ -1,8 +1,8 @@
 # CanuckNews Bot
 
 Category: News  
-Version: v1.1.44  
-Visibility: Public  
+Version: v1.1.45  
+Visibility: Unlisted  
 Summary: Regional Canadian news aggregation with moderator triggers.
 
 ## Overview
@@ -67,13 +67,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.1.45 — 2026-11-03
+- Standard fleet synchronization and maintenance.
+
 1.1.44 — 2026-10-26
 - Standard fleet synchronization and maintenance.
 
 1.1.43 — 2026-10-20
-- Standard fleet synchronization and maintenance.
-
-1.1.42 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links

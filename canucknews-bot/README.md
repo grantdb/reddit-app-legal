@@ -2,6 +2,10 @@
 
 # Canuck News Bot
 
+> [!NOTE]
+> **Lifecycle Status: Sunset / Archived**
+> This application has been sunset and archived. Standalone maintenance and releases have concluded.
+
 **Canuck News Bot** is a manual-only, candidate-scouting and pre-editing tool designed to deliver curated, balanced, and non-political news from across Canada directly to your subreddit. It operates with zero automated posting—moderators scout, review, edit, and confirm every candidate story before publishing.
 
 ## Key Features

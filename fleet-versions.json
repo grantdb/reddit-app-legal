@@ -171,7 +171,7 @@
   },
   "malp-scout": {
     "name": "MALP-Scout",
-    "version": "0.0.21",
+    "version": "0.0.22",
     "visibility": "unlisted"
   },
   "archive-guard": {
@@ -236,7 +236,7 @@
   },
   "testrank": {
     "name": "TestRank",
-    "version": "0.0.40",
+    "version": "0.0.41",
     "visibility": "unlisted"
   },
   "queueclue": {
