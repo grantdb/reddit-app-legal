@@ -30,11 +30,11 @@
 <li><strong>Strict Evidence Standards</strong>: Separates verified filtering sources from generic removal categories (`reddit`) and user reports, ensuring moderators never see misleading explanations.</li>
 <li><strong>Private Moderator-Only Access</strong>: Enforces server-side permission checks so queue explanation metadata is strictly visible to authorized moderators.</li>
 <li><strong>Cross-Subreddit Boundary Enforcement</strong>: Prevents cross-context leakage by verifying that targets match the current subreddit before formatting details.</li>
-<li><strong>Zero Background Overhead</strong>: Runs strictly on demand when invoked from the menu, with zero background scheduled jobs, zero event watchers, and zero Redis overhead.</li>
+<li><strong>Lightweight Event Capture</strong>: Subscribes to real-time AutoModerator filter events to capture exact rule reasons, with zero background cron jobs and volatile 30-day bounded Redis caching.</li>
 </ul>
 <p>---</p>
 <h2>Designed to Assist Moderators & Privacy</h2>
-<p>QueueClue is built strictly as a read-only decision aid for human moderation teams. It never modifies post/comment states, never executes automated actions, and never stores personally identifiable information (zero PII) or moderation records. Human moderators retain full authority over all queue decisions.</p>
+<p>QueueClue is built strictly as a read-only decision aid for human moderation teams. It does not store post or comment content, author usernames, or moderator identities; it temporarily caches limited moderation-event metadata for up to 30 days. Human moderators retain full authority over all queue decisions.</p>
 <p>---</p>
 <h2>Support</h2>
 <p>For help, bug reports, or feature requests, post in r/grantdb.</p>

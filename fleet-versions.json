@@ -11,8 +11,8 @@
   },
   "canucknews-bot": {
     "name": "CanuckNews Bot",
-    "version": "1.1.44",
-    "visibility": "public"
+    "version": "1.1.45",
+    "visibility": "unlisted"
   },
   "playscraper-bot": {
     "name": "Playscraper Bot",
@@ -36,8 +36,8 @@
   },
   "canadian-news": {
     "name": "Canadian News",
-    "version": "0.0.60",
-    "visibility": "public"
+    "version": "0.0.61",
+    "visibility": "unlisted"
   },
   "distrofeed-bot": {
     "name": "DistroFeed Bot",

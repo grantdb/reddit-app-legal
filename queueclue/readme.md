@@ -43,13 +43,13 @@ QueueClue gives moderators a small, clear explanation of why a post or comment w
 - **Strict Evidence Standards**: Separates verified filtering sources from generic removal categories (`reddit`) and user reports, ensuring moderators never see misleading explanations.
 - **Private Moderator-Only Access**: Enforces server-side permission checks so queue explanation metadata is strictly visible to authorized moderators.
 - **Cross-Subreddit Boundary Enforcement**: Prevents cross-context leakage by verifying that targets match the current subreddit before formatting details.
-- **Zero Background Overhead**: Runs strictly on demand when invoked from the menu, with zero background scheduled jobs, zero event watchers, and zero Redis overhead.
+- **Lightweight Event Capture**: Subscribes to real-time AutoModerator filter events to capture exact rule reasons, with zero background cron jobs and volatile 30-day bounded Redis caching.
 
 ---
 
 ## Designed to Assist Moderators & Privacy
 
-QueueClue is built strictly as a read-only decision aid for human moderation teams. It never modifies post/comment states, never executes automated actions, and never stores personally identifiable information (zero PII) or moderation records. Human moderators retain full authority over all queue decisions.
+QueueClue is built strictly as a read-only decision aid for human moderation teams. It does not store post or comment content, author usernames, or moderator identities; it temporarily caches limited moderation-event metadata for up to 30 days. Human moderators retain full authority over all queue decisions.
 
 ---
 
