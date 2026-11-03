@@ -2,6 +2,10 @@
 
 # Canadian News App
 
+> [!NOTE]
+> **Lifecycle Status: Sunset / Archived**
+> This application has been sunset and archived. Standalone maintenance and releases have concluded.
+
 **Canadian News App** is a manual-only, candidate-scouting and pre-editing tool designed to deliver highly curated news from across Canada directly to your subreddit. It operates with zero background automation—moderators scout, review, edit, and approve every post before it hits the live feed.
 
 ## Key Features
