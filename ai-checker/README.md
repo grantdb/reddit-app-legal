@@ -4,13 +4,13 @@
 
 > **Detect AI-generated text and synthetic images with multi-model confidence scores.**
 
-AI Checker helps moderation teams identify and evaluate synthetic text and AI-generated imagery across subreddit submissions. Combining multi-provider vision and language models (including native Google Gemini 2.5 Flash / Pro) with unified scoring, it supports both manual post menu audits and automated background queues.
+AI Checker helps moderation teams identify and evaluate synthetic text and AI-generated imagery across subreddit submissions. Combining multi-provider vision and language models (including native Google Gemini 3.5 Flash-Lite) with unified scoring, it supports both manual post menu audits and automated background queues.
 
 ---
 
 ## At a Glance
 
-- **Multi-model detection**: Connect to Google Gemini (2.5 Flash for text, 2.5 Pro for vision), GPTZero, Sightengine, or Hive Moderation.
+- **Multi-model detection**: Connect to Google Gemini (3.5 Flash-Lite for text & vision), GPTZero, Sightengine, or Hive Moderation.
 - **Text & image analysis**: Scan written submissions as well as synthetic image attachments.
 - **Unified 1–10 scoring scale**: Normalize complex provider metrics into clear, standardized ratings.
 - **On-demand & auto-scan**: Audit specific posts via menu actions or scan new submissions automatically.
@@ -37,7 +37,7 @@ AI Checker helps moderation teams identify and evaluate synthetic text and AI-ge
 
 1. **Ingress Gate**: A moderator clicks **AI Checker: Scan Post** from a post menu, or the background trigger schedules an automatic audit on new submissions.
 2. **Delayed Eligibility Check**: Verifies the post remains active and unremoved by AutoMod, checks moderator exemptions, and enforces hourly quota limits.
-3. **Multi-Model AI Analysis**: Securely transmits submission text or image media to the configured model (Google Gemini 2.5 Flash/Pro, GPTZero, Sightengine, or Hive).
+3. **Multi-Model AI Analysis**: Securely transmits submission text or image media to the configured model (Google Gemini 3.5 Flash-Lite, GPTZero, Sightengine, or Hive).
 4. **Score Normalization**: Maps raw provider confidence metrics to a standardized 1–10 risk rating.
 5. **Moderator Action & Dispatch**: Posts a formatted sticky comment breakdown and delivers private modmail alerts if configured.
 
