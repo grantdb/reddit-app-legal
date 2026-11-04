@@ -1,7 +1,7 @@
 # TestRank
 
 Category: Utility  
-Version: v0.0.43  
+Version: v0.0.44  
 Visibility: Unlisted  
 Summary: Automated community tester recognition, reputation, and leaderboard engine for beta testing subreddits.
 
@@ -67,13 +67,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.44 — 2026-11-04
+- Standard fleet synchronization and maintenance.
+
 0.0.43 — 2026-11-04
 - Standard fleet synchronization and maintenance.
 
 0.0.42 — 2026-11-04
-- Standard fleet synchronization and maintenance.
-
-0.0.41 — 2026-11-03
 - Standard fleet synchronization and maintenance.
 
 ## Links
