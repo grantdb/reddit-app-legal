@@ -43,7 +43,7 @@ QueueClue gives moderators a small, clear explanation of why a post or comment w
 - **Strict Evidence Standards**: Separates verified filtering sources from generic removal categories (`reddit`) and user reports, ensuring moderators never see misleading explanations.
 - **Private Moderator-Only Access**: Enforces server-side permission checks so queue explanation metadata is strictly visible to authorized moderators.
 - **Cross-Subreddit Boundary Enforcement**: Prevents cross-context leakage by verifying that targets match the current subreddit before formatting details.
-- **Lightweight Event Capture**: Subscribes to real-time AutoModerator filter events to capture exact rule reasons, with zero background cron jobs and volatile 30-day bounded Redis caching.
+- **Lightweight Event Capture**: Subscribes to real-time AutoModerator filter events and item-level ModAction triggers (removals, approvals, spam markings) to capture exact rule reasons and action chronology, with zero background cron jobs and volatile bounded Redis caching.
 
 ---
 

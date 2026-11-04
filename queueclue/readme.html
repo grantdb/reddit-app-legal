@@ -30,7 +30,7 @@
 <li><strong>Strict Evidence Standards</strong>: Separates verified filtering sources from generic removal categories (`reddit`) and user reports, ensuring moderators never see misleading explanations.</li>
 <li><strong>Private Moderator-Only Access</strong>: Enforces server-side permission checks so queue explanation metadata is strictly visible to authorized moderators.</li>
 <li><strong>Cross-Subreddit Boundary Enforcement</strong>: Prevents cross-context leakage by verifying that targets match the current subreddit before formatting details.</li>
-<li><strong>Lightweight Event Capture</strong>: Subscribes to real-time AutoModerator filter events to capture exact rule reasons, with zero background cron jobs and volatile 30-day bounded Redis caching.</li>
+<li><strong>Lightweight Event Capture</strong>: Subscribes to real-time AutoModerator filter events and item-level ModAction triggers (removals, approvals, spam markings) to capture exact rule reasons and action chronology, with zero background cron jobs and volatile bounded Redis caching.</li>
 </ul>
 <p>---</p>
 <h2>Designed to Assist Moderators & Privacy</h2>

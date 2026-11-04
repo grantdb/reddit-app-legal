@@ -1,7 +1,7 @@
 <h1>QueueClue</h1>
 
 <p>Category: Utility<br>
-Version: v0.0.14<br>
+Version: v0.0.15<br>
 Visibility: Public<br>
 Summary: Find the available source and reason behind a queue item.</p>
 
@@ -22,6 +22,7 @@ Summary: Find the available source and reason behind a queue item.</p>
 <ul>
 <li>AutomoderatorFilterPost: Subscribed in main.ts via Devvit.addTrigger({ event: 'AutomoderatorFilterPost' }).</li>
 <li>AutomoderatorFilterComment: Subscribed in main.ts via Devvit.addTrigger({ event: 'AutomoderatorFilterComment' }).</li>
+<li>ModAction: Subscribed in main.ts via Devvit.addTrigger({ event: 'ModAction' }).</li>
 </ul>
 <h3>Menu Actions</h3>
 <ul>
@@ -71,12 +72,12 @@ Summary: Find the available source and reason behind a queue item.</p>
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.15 — 2026-11-04<br>
+Minor update and stability fixes.</p>
+<p>0.0.15 — 2026-11-03<br>
+Bounded ModAction event capture: capture verified item-level removals, spam markings, and approvals via Reddit broker triggers.; Optimistic locking and bounded Redis storage: subreddit-scoped 7-day retention capped at 5 records per item with conflict retry loops.; Exact approval chronology: distinguishes verified subsequent approvals from unsequenced approvals, preserving intervening action history.; Unsuppressed bounded moderation-log lookup: queries mod-log on every inspection so newer manual actions are never hidden by cached records.</p>
 <p>0.0.14 — 2026-11-02<br>
 Standard fleet synchronization and maintenance.</p>
-<p>0.0.13 — 2026-10-31<br>
-Promote to public</p>
-<p>0.0.12 — 2026-10-31<br>
-Restore high-contrast dark text styling and allow easy copy</p>
 
 <h2>Links</h2>
 <ul>

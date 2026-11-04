@@ -1,7 +1,7 @@
 # QueueClue
 
 Category: Utility  
-Version: v0.0.14  
+Version: v0.0.15  
 Visibility: Public  
 Summary: Find the available source and reason behind a queue item.
 
@@ -58,14 +58,17 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.15 — 2026-11-04
+- Minor update and stability fixes.
+
+0.0.15 — 2026-11-03
+- Bounded ModAction event capture: capture verified item-level removals, spam markings, and approvals via Reddit broker triggers.
+- Optimistic locking and bounded Redis storage: subreddit-scoped 7-day retention capped at 5 records per item with conflict retry loops.
+- Exact approval chronology: distinguishes verified subsequent approvals from unsequenced approvals, preserving intervening action history.
+- Unsuppressed bounded moderation-log lookup: queries mod-log on every inspection so newer manual actions are never hidden by cached records.
+
 0.0.14 — 2026-11-02
 - Standard fleet synchronization and maintenance.
-
-0.0.13 — 2026-10-31
-- Promote to public
-
-0.0.12 — 2026-10-31
-- Restore high-contrast dark text styling and allow easy copy
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/TERMS.md)
