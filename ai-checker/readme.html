@@ -1,16 +1,24 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/ai-checker">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>AI Checker</h1>
 <blockquote><p><strong>Detect AI-generated text and synthetic images with multi-model confidence scores.</strong></p></blockquote>
-<p>AI Checker helps moderation teams identify and evaluate synthetic text and AI-generated imagery across subreddit submissions. Combining multi-provider vision and language models (including native Google Gemini 2.5 Flash / Pro) with unified scoring, it supports both manual post menu audits and automated background queues.</p>
+<p>AI Checker helps moderation teams identify and evaluate synthetic text and AI-generated imagery across subreddit submissions. Combining multi-provider vision and language models (including native Google Gemini 3.5 Flash-Lite) with unified scoring, it supports both manual post menu audits and automated background queues.</p>
 <p>---</p>
 <h2>At a Glance</h2>
 <ul>
-<li><strong>Multi-model detection</strong>: Connect to Google Gemini (2.5 Flash for text, 2.5 Pro for vision), GPTZero, Sightengine, or Hive Moderation.</li>
+<li><strong>Multi-model detection</strong>: Connect to Google Gemini (3.5 Flash-Lite for text & vision), GPTZero, Sightengine, or Hive Moderation.</li>
 <li><strong>Text & image analysis</strong>: Scan written submissions as well as synthetic image attachments.</li>
 <li><strong>Unified 1–10 scoring scale</strong>: Normalize complex provider metrics into clear, standardized ratings.</li>
 <li><strong>On-demand & auto-scan</strong>: Audit specific posts via menu actions or scan new submissions automatically.</li>
 <li><strong>Customizable mod feedback</strong>: Publish distinguished sticky replies with score breakdowns and modmail alerts.</li>
 </ul>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ai-checker-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Five-Step Workflow</h3>
+<p>1. <strong>Ingress Gate</strong>: A moderator clicks <strong>AI Checker: Scan Post</strong> from a post menu, or the background trigger schedules an automatic audit on new submissions.</p>
+<p>2. <strong>Delayed Eligibility Check</strong>: Verifies the post remains active and unremoved by AutoMod, checks moderator exemptions, and enforces hourly quota limits.</p>
+<p>3. <strong>Multi-Model AI Analysis</strong>: Securely transmits submission text or image media to the configured model (Google Gemini 3.5 Flash-Lite, GPTZero, Sightengine, or Hive).</p>
+<p>4. <strong>Score Normalization</strong>: Maps raw provider confidence metrics to a standardized 1–10 risk rating.</p>
+<p>5. <strong>Moderator Action & Dispatch</strong>: Posts a formatted sticky comment breakdown and delivers private modmail alerts if configured.</p>
 <p>---</p>
 <h2>Built for Accurate Content Analysis</h2>
 <ul>
@@ -22,14 +30,6 @@
 <li><strong>Native Settings Control</strong>: Configure API credentials, scan delays, and comment templates directly from Subreddit Mod Tools.</li>
 </ul>
 <p>---</p>
-<h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ai-checker-flowchart.png">Logic Flowchart</a></p>
-<h3>Your Five-Step Workflow</h3>
-<p>1. <strong>Ingress Gate</strong>: A moderator clicks <strong>AI Checker: Scan Post</strong> from a post menu, or the background trigger schedules an automatic audit on new submissions.</p>
-<p>2. <strong>Delayed Eligibility Check</strong>: Verifies the post remains active and unremoved by AutoMod, checks moderator exemptions, and enforces hourly quota limits.</p>
-<p>3. <strong>Multi-Model AI Analysis</strong>: Securely transmits submission text or image media to the configured model (Google Gemini 2.5 Flash/Pro, GPTZero, Sightengine, or Hive).</p>
-<p>4. <strong>Score Normalization</strong>: Maps raw provider confidence metrics to a standardized 1–10 risk rating.</p>
-<p>5. <strong>Moderator Action & Dispatch</strong>: Posts a formatted sticky comment breakdown and delivers private modmail alerts if configured.</p>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>AI Checker</strong> to your subreddit through the Reddit App Directory.</p>

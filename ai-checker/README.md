@@ -16,6 +16,18 @@ AI Checker helps moderation teams identify and evaluate synthetic text and AI-ge
 - **On-demand & auto-scan**: Audit specific posts via menu actions or scan new submissions automatically.
 - **Customizable mod feedback**: Publish distinguished sticky replies with score breakdowns and modmail alerts.
 
+## How It Works
+
+![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ai-checker-flowchart.png)
+
+### Your Five-Step Workflow
+
+1. **Ingress Gate**: A moderator clicks **AI Checker: Scan Post** from a post menu, or the background trigger schedules an automatic audit on new submissions.
+2. **Delayed Eligibility Check**: Verifies the post remains active and unremoved by AutoMod, checks moderator exemptions, and enforces hourly quota limits.
+3. **Multi-Model AI Analysis**: Securely transmits submission text or image media to the configured model (Google Gemini 3.5 Flash-Lite, GPTZero, Sightengine, or Hive).
+4. **Score Normalization**: Maps raw provider confidence metrics to a standardized 1–10 risk rating.
+5. **Moderator Action & Dispatch**: Posts a formatted sticky comment breakdown and delivers private modmail alerts if configured.
+
 ---
 
 ## Built for Accurate Content Analysis
@@ -28,18 +40,6 @@ AI Checker helps moderation teams identify and evaluate synthetic text and AI-ge
 - **Native Settings Control**: Configure API credentials, scan delays, and comment templates directly from Subreddit Mod Tools.
 
 ---
-
-## How It Works
-
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/ai-checker-flowchart.png)
-
-### Your Five-Step Workflow
-
-1. **Ingress Gate**: A moderator clicks **AI Checker: Scan Post** from a post menu, or the background trigger schedules an automatic audit on new submissions.
-2. **Delayed Eligibility Check**: Verifies the post remains active and unremoved by AutoMod, checks moderator exemptions, and enforces hourly quota limits.
-3. **Multi-Model AI Analysis**: Securely transmits submission text or image media to the configured model (Google Gemini 3.5 Flash-Lite, GPTZero, Sightengine, or Hive).
-4. **Score Normalization**: Maps raw provider confidence metrics to a standardized 1–10 risk rating.
-5. **Moderator Action & Dispatch**: Posts a formatted sticky comment breakdown and delivers private modmail alerts if configured.
 
 ---
 

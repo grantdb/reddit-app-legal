@@ -1,7 +1,7 @@
 # AI Checker
 
 Category: Security  
-Version: v0.0.89  
+Version: v0.0.90  
 Visibility: Public  
 Summary: Moderator-triggered AI detection engine. Upgraded to native Gemini 1.5 Flash for high-speed analysis.
 
@@ -29,12 +29,11 @@ Moderator-triggered AI detection engine. Upgraded to native Gemini 1.5 Flash for
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- detectionProvider: Detection Provider (select, default: DetectionProvider.Gemini). Detection Provider
+- detectionProvider: Detection Mode / Provider (select, default: DetectionProvider.Consensus). IMPORTANT: Using a single AI provider can lead to false positives or false negatives, especially on stylized art or edge cases. For best accuracy, configure 2 or more API keys below and use Multi-AI Consensus mode so engines cross-validate each other.
 - resultCommentTemplate: Result Comment Template (paragraph, default: This post has been reviewed with the community AI detection tool.
 
 **Verdict:** {verdict}
 **Score:** {score}/10
-**Provider:** {provider}
 **Confidence:** {confidence}
 **Content Type:** {content_type}
 
@@ -46,18 +45,18 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - autoScanPosts: Enable Auto-Scan on New Posts (boolean, default: false). Enable Auto-Scan on New Posts
 - delayedProcessingSeconds: Processing Delay (seconds) (number, default: 20). Delay before scanning to verify post eligibility (min 5s, max 100s).
 - minConfidenceThreshold: Minimum Confidence Threshold (0.0 - 1.0) (number, default: 0.5). Ignore detections below this confidence level.
-- gemini_api_key: Gemini API Key (string, default: -). Required if using Gemini provider. Get a key at aistudio.google.com
-- gptzero_api_key: GPTZero API Key (string, default: -). Required if using GPTZero provider.
-- sightengine_api_user: Sightengine API User (string, default: -). Required if using Sightengine provider.
-- sightengine_api_secret: Sightengine API Secret (string, default: -). Required if using Sightengine provider.
-- hive_api_key: Hive API Key (string, default: -). Required if using Hive provider.
+- gemini_api_key: Gemini API Key (Text & Image) (string, default: -). Native multimodal engine. Get a free API key at aistudio.google.com. Combining this with Sightengine or Hive provides optimal accuracy.
+- sightengine_api_user: Sightengine API User (Image) (string, default: -). Dedicated visual forensics engine for image and art detection. Recommended alongside Gemini.
+- sightengine_api_secret: Sightengine API Secret (Image) (string, default: -). Secret key from sightengine.com dashboard.
+- gptzero_api_key: GPTZero API Key (Text) (string, default: -). Dedicated text perplexity and burstiness detection engine for written submissions.
+- hive_api_key: Hive Moderation API Key (Text & Image) (string, default: -). Enterprise AI generation detection engine from thehive.ai.
 - hive_project_id: Hive Project ID (string, default: text_ai_generated). Hive Project ID
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
 - Attaches Removal Notes: No — Does not attach removal notes.
 - Approves Content: No — Does not approve content.
-- Removes or Filters Content: No — Does not remove or filter content.
+- Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
 - Dispatches Modmail Alerts: Yes — Sends modmail notifications.
 - Updates User or Post Flair: No — Does not update flair.
 
@@ -78,13 +77,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.90 — 2026-11-04
+- Standard fleet synchronization and maintenance.
+
+0.0.90 — 2026-11-03
+- Upgraded Gemini model provider from deprecated gemini-2.5-flash / gemini-2.5-pro to gemini-3.5-flash-lite for both text and multimodal image analysis, resolving free-tier 429 quota exhaustion.
+- Aligned devvit.json manifest trigger declaration with Blocks runtime container standards by migrating trigger to blocks.triggers, resolving repeated /internal/on-post-create fetch failure errors.
+- Enhanced Gemini API error handling to extract clear, concise error messages from API responses.
+- Added comprehensive Vitest unit test suite covering GeminiAdapter text and image payload structures, 1-10 scoring normalization, and error handling.
+
 0.0.89 — 2026-10-26
-- Standard fleet synchronization and maintenance.
-
-0.0.88 — 2026-10-20
-- Standard fleet synchronization and maintenance.
-
-0.0.87 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
