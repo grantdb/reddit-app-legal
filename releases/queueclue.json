@@ -1,16 +1,16 @@
 {
   "slug": "queueclue",
   "title": "QueueClue",
-  "version": "0.0.15",
-  "date": "2026-11-04",
+  "version": "0.0.16",
+  "date": "2026-11-05",
   "category": "Utility",
   "description": "Find the available source and reason behind a queue item.",
   "visibility": "Public",
-  "notes": "- 0.0.15",
-  "postTitle": "[App Update] QueueClue v0.0.15 Released",
-  "postBody": "# QueueClue v0.0.15 is Now Available\n\n> **Find the available source and reason behind a queue item.**\n\n---\n\n### What's New in v0.0.15\n- 0.0.15\n\n---\n\n### Key Capabilities & Highlights\n- **Category**: Utility\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/queueclue)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/queueclue-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/queueclue)\n\n---\n\n### How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **QueueClue** and click **Update** (or verify it displays `v0.0.15`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "notes": "- Standard fleet synchronization and maintenance.",
+  "postTitle": "[App Update] QueueClue v0.0.16 Released",
+  "postBody": "# QueueClue v0.0.16 is Now Available\n\n> **Find the available source and reason behind a queue item.**\n\n---\n\n### What's New in v0.0.16\n- Standard fleet synchronization and maintenance.\n\n---\n\n### Key Capabilities & Highlights\n- **Category**: Utility\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/queueclue)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/queueclue-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/queueclue)\n\n---\n\n### How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **QueueClue** and click **Update** (or verify it displays `v0.0.16`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/queueclue",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/queueclue-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/queueclue",
-  "generatedAt": "2026-11-04T02:46:05.386Z"
+  "generatedAt": "2026-11-05T14:54:04.868Z"
 }
