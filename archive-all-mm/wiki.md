@@ -1,7 +1,7 @@
 # Archive All MM
 
 Category: Modmail  
-Version: v0.0.74  
+Version: v0.0.75  
 Visibility: Public  
 Summary: Modmail archival utility. High-volume message indexing and backup.
 
@@ -28,7 +28,7 @@ Modmail archival utility. High-volume message indexing and backup.
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- targetQueues: Queues to Archive (select, default: ModmailQueue.New,ModmailQueue.InProgress). Select which modmail queues should be processed by the Archive All button.
+- targetQueues: Queues to Archive (select, default: ModmailQueue.New,ModmailQueue.InProgress,ModmailQueue.JoinRequests,ModmailQueue.Notifications,ModmailQueue.Appeals). Select which modmail queues should be processed by the Archive All button. Note: Reddit API does not support archiving internal Mod Discussions.
 
 ## Automation Capabilities
 - Submits Automated Comments: No — Does not submit automated comments.
@@ -55,13 +55,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.75 — 2026-11-06
+- Standard fleet synchronization and maintenance.
+
+0.0.75 — 2026-11-06
+- Feature: Added support for `join_requests`, `notifications`, and `filtered` modmail queues in target queue settings and background processing.
+- UX: Updated status reporting to clarify that internal mod-to-mod discussions cannot be archived due to Reddit API restrictions.
+- Settings: Expanded default target queues to include join requests, notifications, and appeals alongside new and inprogress.
+
 0.0.74 — 2026-10-27
-- Standard fleet synchronization and maintenance.
-
-0.0.73 — 2026-10-27
-- Standard fleet synchronization and maintenance.
-
-0.0.72 — 2026-10-26
 - Standard fleet synchronization and maintenance.
 
 ## Links

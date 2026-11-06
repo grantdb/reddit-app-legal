@@ -16,6 +16,17 @@ Archive All Modmail effortlessly clears overgrown subreddit inboxes without brow
 - **Unified moderator controls**: Access start commands and real-time progress checks from a single **Archive All Modmail** menu popout.
 - **Rate-limited chunking**: Throttles API requests safely to prevent Reddit rate limit penalties.
 
+## How It Works
+
+![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-all-mm-flowchart.png)
+
+### Your Four-Step Workflow
+
+1. **Trigger**: A moderator opens **Archive All Modmail** and selects **Start Background Archive**.
+2. **Lock**: Redis concurrency locks initialize a dedicated run session and verify target queues.
+3. **Process**: Background workers pull conversations in 100-item batches and archive them in throttled 10-item chunks.
+4. **Complete**: Workers loop automatically until selected queues reach Inbox Zero and report final counts.
+
 ---
 
 ## Built for Effortless Inbox Zero
@@ -30,17 +41,6 @@ Archive All Modmail effortlessly clears overgrown subreddit inboxes without brow
 - **Native Settings Control**: Fine-tune target queues and batch sizes directly from Subreddit Mod Tools.
 
 ---
-
-## How It Works
-
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-all-mm-flowchart.png)
-
-### Your Four-Step Workflow
-
-1. **Trigger**: A moderator opens **Archive All Modmail** and selects **Start Background Archive**.
-2. **Lock**: Redis concurrency locks initialize a dedicated run session and verify target queues.
-3. **Process**: Background workers pull conversations in 100-item batches and archive them in throttled 10-item chunks.
-4. **Complete**: Workers loop automatically until selected queues reach Inbox Zero and report final counts.
 
 ---
 

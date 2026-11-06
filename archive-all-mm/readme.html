@@ -11,6 +11,13 @@
 <li><strong>Unified moderator controls</strong>: Access start commands and real-time progress checks from a single <strong>Archive All Modmail</strong> menu popout.</li>
 <li><strong>Rate-limited chunking</strong>: Throttles API requests safely to prevent Reddit rate limit penalties.</li>
 </ul>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-all-mm-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Trigger</strong>: A moderator opens <strong>Archive All Modmail</strong> and selects <strong>Start Background Archive</strong>.</p>
+<p>2. <strong>Lock</strong>: Redis concurrency locks initialize a dedicated run session and verify target queues.</p>
+<p>3. <strong>Process</strong>: Background workers pull conversations in 100-item batches and archive them in throttled 10-item chunks.</p>
+<p>4. <strong>Complete</strong>: Workers loop automatically until selected queues reach Inbox Zero and report final counts.</p>
 <p>---</p>
 <h2>Built for Effortless Inbox Zero</h2>
 <ul>
@@ -24,13 +31,6 @@
 <li><strong>Native Settings Control</strong>: Fine-tune target queues and batch sizes directly from Subreddit Mod Tools.</li>
 </ul>
 <p>---</p>
-<h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-all-mm-flowchart.png">Logic Flowchart</a></p>
-<h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Trigger</strong>: A moderator opens <strong>Archive All Modmail</strong> and selects <strong>Start Background Archive</strong>.</p>
-<p>2. <strong>Lock</strong>: Redis concurrency locks initialize a dedicated run session and verify target queues.</p>
-<p>3. <strong>Process</strong>: Background workers pull conversations in 100-item batches and archive them in throttled 10-item chunks.</p>
-<p>4. <strong>Complete</strong>: Workers loop automatically until selected queues reach Inbox Zero and report final counts.</p>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>Archive All Modmail</strong> to your subreddit through the Reddit App Directory.</p>
