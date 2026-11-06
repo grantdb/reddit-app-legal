@@ -51,7 +51,7 @@
   },
   "archive-all-mm": {
     "name": "Archive All MM",
-    "version": "0.0.74",
+    "version": "0.0.75",
     "visibility": "public"
   },
   "ring-escape": {
@@ -241,7 +241,7 @@
   },
   "queueclue": {
     "name": "QueueClue",
-    "version": "0.0.15",
+    "version": "0.0.16",
     "visibility": "public"
   }
 }
