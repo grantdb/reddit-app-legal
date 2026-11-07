@@ -17,8 +17,6 @@ WikiSync Bot provides subreddit moderators with a high-reliability engine to pub
 - **Unified Moderator Menu Popout**: Open **WikiSync Bot** from the subreddit overflow menu (`...`) to run incremental syncs, single-app updates, full re-syncs, schema deployments, or broadcast immediate app release announcements.
 - **Moderator-Restricted Controls**: Built-in permissions ensuring only authorized community moderators can trigger wiki sync operations.
 
----
-
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/wiki-sync-bot-flowchart.png)
@@ -29,6 +27,8 @@ WikiSync Bot provides subreddit moderators with a high-reliability engine to pub
 2. **Sync Manifest**: WikiSync Bot checks the remote fleet manifest (`wiki-manifest.json`) and release manifest (`releases/manifest.json`).
 3. **Dual-Write & Broadcast Engine**: Fetches clean HTML/JSON payloads from GitHub, writes directly to Reddit wiki endpoints, and posts release announcements for newly shipped versions.
 4. **Live Verification & Deduplication**: Reads back and verifies the updated wiki page revisions and caches announcement IDs in Redis to guarantee zero duplicate posts.
+
+---
 
 ---
 
