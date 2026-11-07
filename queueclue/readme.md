@@ -40,6 +40,9 @@ QueueClue gives moderators a small, clear explanation of why a post or comment w
 
 ## Core Capabilities
 
+- **Expanded Queue Identification**: Accurately diagnoses why items are in moderation queues, distinguishing between clean incoming posts in the unmoderated queue, AutoModerator rules, native moderator removal reasons, Reddit Safety Filters (Reputation Filter / CQS, Spam), and Crowd Control collapsed comments.
+- **Subreddit Time & Relative Elapsed Time**: Replaces confusing standalone UTC timestamps with human-readable relative elapsed time (e.g. `14 minutes ago`) paired with your subreddit’s local time zone and standard UTC.
+- **Author Signals for Unstated Rules**: Safely fetches account age at post time and karma on-demand to help moderators understand AutoModerator rules that filter new or low-karma accounts without an action reason.
 - **Strict Evidence Standards**: Separates verified filtering sources from generic removal categories (`reddit`) and user reports, ensuring moderators never see misleading explanations.
 - **Private Moderator-Only Access**: Enforces server-side permission checks so queue explanation metadata is strictly visible to authorized moderators.
 - **Cross-Subreddit Boundary Enforcement**: Prevents cross-context leakage by verifying that targets match the current subreddit before formatting details.

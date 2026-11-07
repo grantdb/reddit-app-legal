@@ -1,7 +1,7 @@
 # QueueClue
 
 Category: Utility  
-Version: v0.0.16  
+Version: v0.0.17  
 Visibility: Public  
 Summary: Find the available source and reason behind a queue item.
 
@@ -31,7 +31,9 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 
 - SETTING_ENABLE_POSTS: Enable for posts (boolean, default: true). Allow moderators to open QueueClue on posts.
 - SETTING_ENABLE_COMMENTS: Enable for comments (boolean, default: true). Allow moderators to open QueueClue on comments.
-- SETTING_TIMEZONE: Community Time Zone (string, default: UTC). IANA time zone (e.g., America/New_York, America/Los_Angeles, Europe/London, UTC). Defaults to UTC if unset.
+- SETTING_SHOW_AUTHOR_CONTEXT: Show author signals for unstated rules (boolean, default: true). Display author account age and karma when AutoModerator filters without providing an explicit action reason.
+- SETTING_TIMEZONE: Community Time Zone (select, default: UTC). Select your community’s primary time zone to display local dates and times alongside UTC.
+- SETTING_CUSTOM_TIMEZONE: Custom IANA Time Zone Identifier (string, default: ). Only used if Community Time Zone is set to "Custom". Enter any valid IANA identifier (e.g. America/Sao_Paulo).
 
 ## Automation Capabilities
 - Submits Automated Comments: No — Does not submit automated comments.
@@ -58,17 +60,21 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
-0.0.16 — 2026-11-05
+0.0.17 — 2026-11-07
 - Standard fleet synchronization and maintenance.
 
-0.0.15 — 2026-11-04
-- Minor update and stability fixes.
+0.0.17 — 2026-11-07
+- Subreddit Time & Relative Elapsed Time: replaced plain UTC timestamps with human-readable relative elapsed time (e.g. `12 minutes ago`) paired with local Subreddit Time and UTC reference.
+- Community Time Zone Dropdown: upgraded settings to a curated selector covering major regional community time zones with custom IANA fallback.
+- Unmoderated queue clean submission detection: identifies incoming posts in the unmoderated queue awaiting initial review with zero flags, reports, or removals.
+- Reddit native removal reason display: presents recorded moderator removal reasons, rule titles, and notes (`modReasonTitle`, `removalReason`, `modReasonBy`).
+- Reddit automated safety filter detection: identifies posts filtered by Reddit's automated safety systems (managed under Mod Tools > Safety Filters / Reputation Filter, and spam filters).
+- Author account signals for unstated AutoMod rules: safely fetches account age at post time and karma on-demand to explain AutoMod rules with "No reason supplied", backed by configurable settings toggle (`showAuthorContext`).
+- Comment crowd control & collapsed reasons: surfaces exact `collapsedReason` and crowd control flags on comments.
+- Link post domain and grouped reports: highlights submitted domains and groups community reports.
 
-0.0.15 — 2026-11-03
-- Bounded ModAction event capture: capture verified item-level removals, spam markings, and approvals via Reddit broker triggers.
-- Optimistic locking and bounded Redis storage: subreddit-scoped 7-day retention capped at 5 records per item with conflict retry loops.
-- Exact approval chronology: distinguishes verified subsequent approvals from unsequenced approvals, preserving intervening action history.
-- Unsuppressed bounded moderation-log lookup: queries mod-log on every inspection so newer manual actions are never hidden by cached records.
+0.0.16 — 2026-11-05
+- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/TERMS.md)

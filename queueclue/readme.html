@@ -27,6 +27,9 @@
 <p>---</p>
 <h2>Core Capabilities</h2>
 <ul>
+<li><strong>Expanded Queue Identification</strong>: Accurately diagnoses why items are in moderation queues, distinguishing between clean incoming posts in the unmoderated queue, AutoModerator rules, native moderator removal reasons, Reddit Safety Filters (Reputation Filter / CQS, Spam), and Crowd Control collapsed comments.</li>
+<li><strong>Subreddit Time & Relative Elapsed Time</strong>: Replaces confusing standalone UTC timestamps with human-readable relative elapsed time (e.g. `14 minutes ago`) paired with your subreddit’s local time zone and standard UTC.</li>
+<li><strong>Author Signals for Unstated Rules</strong>: Safely fetches account age at post time and karma on-demand to help moderators understand AutoModerator rules that filter new or low-karma accounts without an action reason.</li>
 <li><strong>Strict Evidence Standards</strong>: Separates verified filtering sources from generic removal categories (`reddit`) and user reports, ensuring moderators never see misleading explanations.</li>
 <li><strong>Private Moderator-Only Access</strong>: Enforces server-side permission checks so queue explanation metadata is strictly visible to authorized moderators.</li>
 <li><strong>Cross-Subreddit Boundary Enforcement</strong>: Prevents cross-context leakage by verifying that targets match the current subreddit before formatting details.</li>
