@@ -1,7 +1,7 @@
 # Archive All MM
 
 Category: Modmail  
-Version: v0.0.75  
+Version: v0.0.76  
 Visibility: Public  
 Summary: Modmail archival utility. High-volume message indexing and backup.
 
@@ -55,6 +55,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.76 — 2026-11-09
+- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
+
 0.0.75 — 2026-11-06
 - Standard fleet synchronization and maintenance.
 
@@ -62,9 +65,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Feature: Added support for `join_requests`, `notifications`, and `filtered` modmail queues in target queue settings and background processing.
 - UX: Updated status reporting to clarify that internal mod-to-mod discussions cannot be archived due to Reddit API restrictions.
 - Settings: Expanded default target queues to include join requests, notifications, and appeals alongside new and inprogress.
-
-0.0.74 — 2026-10-27
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/archive-all-mm/TERMS.md)
