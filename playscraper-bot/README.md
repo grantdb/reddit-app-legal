@@ -17,8 +17,6 @@
 - **Automated or Manual Automation**: Can run automatically on all new posts, or be set to manual mode where it only scans when a moderator clicks "Playscraper Bot: Scan Post" in the post menu.
 - **Configurable Detail Levels**: Tailor the output comment's length by choosing between "Confirmed Only", "General Details", or "Full Details".
 
----
-
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/playscraper-bot-flowchart.png)
@@ -28,6 +26,8 @@
 3. If the post is still valid, the bot scrapes the external URL.
 4. The raw HTML is fed to Gemini to extract structured metadata.
 5. A highly readable, stickied comment is posted summarizing the app for the community.
+
+---
 
 ---
 
