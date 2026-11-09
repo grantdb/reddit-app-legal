@@ -1,7 +1,7 @@
 # Piracy Guard
 
 Category: Moderation  
-Version: v0.0.2  
+Version: v0.0.3  
 Visibility: Unlisted  
 Summary: Configurable piracy-content moderation filters for Reddit communities.
 
@@ -71,23 +71,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.3 — 2026-11-09
+- Standard fleet synchronization and maintenance.
+
 0.0.2 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 0.0.1 — 2026-11-09
 - Phase 4 production hardening: Circuit breaker (5-failure / 60s cooldown), Safe Mode (dry run clamping), Panic Disable emergency bypass, optimistic concurrency conflict detection (409 on baseVersion mismatch), FNV-1a configuration checksums, 30-day telemetry retention, token redaction in snippets, clear telemetry/history maintenance endpoints, and first-run onboarding checklist.
 - All notable changes to the Piracy Guard application will be documented in this file.
-
-0.1.0 — 2026-11-09
-- Complete Devvit Web 5-tab moderator control center (Overview, Preset Rules, Custom Rules, Test Console, Configuration).
-- deterministic preset filters across Software, Games, Streaming, Shadow Libraries, Credential Dumps, and Sourcing Requests.
-- Self-healing circuit breaker pausing enforcement during platform outages (5 failures / 60-second cooldown).
-- Safe Mode (dry run clamping to `log`) and Panic Disable emergency disengage.
-- Optimistic Concurrency Control with HTTP 409 conflict detection for concurrent moderator edits.
-- Deterministic 8-character FNV-1a configuration checksum generator.
-- Duplicate-suppressed false-positive reporting and read-only rule violation details inspection.
-- day retention on daily telemetry buckets with sensitive token and URL redaction.
-- First-run interactive onboarding checklist.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/piracy-guard/TERMS.md)
