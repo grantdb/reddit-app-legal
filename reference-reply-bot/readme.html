@@ -12,7 +12,6 @@
 <li><strong>Post-Execution Replied Marker</strong>: The permanent deduplication marker (`rrb:replied:<postId>`) is written <strong>only after</strong> `submitComment` succeeds. If commenting fails, the lock is released in a `finally` block so the post can be retried safely.</li>
 <li><strong>Structured Redis App Knowledge</strong>: App documentation records are stored in `rrb:apps` and `rrb:aliases` Redis hashes for easy bulk ingestion of fleet README files.</li>
 </ul>
-<p>---</p>
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/reference-reply-bot-flowchart.png">Logic Flowchart</a></p>
 <p>```</p>
@@ -38,6 +37,7 @@
 <p>│</p>
 <p>└───────(Always)──► [ Release Lock via finally Block ]</p>
 <p>```</p>
+<p>---</p>
 <p>---</p>
 <h2>App Settings</h2>
 <p>Configure via <strong>Mod Tools -> App Settings</strong> in `r/grantdb`:</p>

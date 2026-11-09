@@ -16,8 +16,6 @@
 - **Post-Execution Replied Marker**: The permanent deduplication marker (`rrb:replied:<postId>`) is written **only after** `submitComment` succeeds. If commenting fails, the lock is released in a `finally` block so the post can be retried safely.
 - **Structured Redis App Knowledge**: App documentation records are stored in `rrb:apps` and `rrb:aliases` Redis hashes for easy bulk ingestion of fleet README files.
 
----
-
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/reference-reply-bot-flowchart.png)
@@ -45,6 +43,8 @@
                │
                └───────(Always)──► [ Release Lock via finally Block ]
 ```
+
+---
 
 ---
 
