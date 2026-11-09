@@ -1,6 +1,6 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/domain-guard)
 
-# GuardHub: Domain Guard 🛡️
+# GuardHub: Domain Guard
 
 > **Block harmful links, stop spam farms, and take full control of community URLs.**
 
