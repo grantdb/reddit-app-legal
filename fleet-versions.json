@@ -16,7 +16,7 @@
   },
   "playscraper-bot": {
     "name": "Playscraper Bot",
-    "version": "1.0.153",
+    "version": "1.0.154",
     "visibility": "unlisted"
   },
   "screen-shot-bot": {
@@ -41,7 +41,7 @@
   },
   "distrofeed-bot": {
     "name": "DistroFeed Bot",
-    "version": "0.1.111",
+    "version": "0.1.112",
     "visibility": "unlisted"
   },
   "linux-quest": {
@@ -56,7 +56,7 @@
   },
   "ring-escape": {
     "name": "Ring Escape: Serpent Flagship",
-    "version": "0.0.72",
+    "version": "0.0.73",
     "visibility": "unlisted"
   },
   "app-update-checker": {
@@ -66,7 +66,7 @@
   },
   "gate-defender": {
     "name": "Gate Defender",
-    "version": "0.0.105",
+    "version": "0.0.106",
     "visibility": "unlisted"
   },
   "ai-checker": {
@@ -91,7 +91,7 @@
   },
   "domain-guard": {
     "name": "DomainGuard",
-    "version": "0.0.169",
+    "version": "0.0.170",
     "visibility": "unlisted"
   },
   "user-guard": {
@@ -126,7 +126,7 @@
   },
   "gimmecode-guard": {
     "name": "GimmeCode Guard",
-    "version": "0.0.50",
+    "version": "0.0.51",
     "visibility": "unlisted"
   },
   "action-guard": {
@@ -156,22 +156,22 @@
   },
   "sgteam-dispatch": {
     "name": "SG Team Dispatch",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "visibility": "unlisted"
   },
   "chevron-lock": {
     "name": "Chevron Lock",
-    "version": "0.0.17",
+    "version": "0.0.18",
     "visibility": "unlisted"
   },
   "reference-reply-bot": {
     "name": "Reference Reply Bot",
-    "version": "0.0.30",
+    "version": "0.0.31",
     "visibility": "unlisted"
   },
   "malp-scout": {
     "name": "MALP-Scout",
-    "version": "0.0.22",
+    "version": "0.0.23",
     "visibility": "unlisted"
   },
   "archive-guard": {
@@ -181,12 +181,12 @@
   },
   "wiki-sync-bot": {
     "name": "WikiSync Bot",
-    "version": "0.0.31",
+    "version": "0.0.32",
     "visibility": "unlisted"
   },
   "rescue-guard": {
     "name": "RescueGuard",
-    "version": "0.0.26",
+    "version": "0.0.27",
     "visibility": "unlisted"
   },
   "flair-guard": {
@@ -196,12 +196,12 @@
   },
   "sub-setup": {
     "name": "Sub Setup",
-    "version": "0.0.18",
+    "version": "0.0.19",
     "visibility": "unlisted"
   },
   "ultimate-wwe": {
     "name": "Ultimate WWE Hub",
-    "version": "0.0.30",
+    "version": "0.0.31",
     "visibility": "unlisted"
   },
   "link-guard": {
@@ -236,7 +236,7 @@
   },
   "testrank": {
     "name": "TestRank",
-    "version": "0.0.44",
+    "version": "0.0.45",
     "visibility": "unlisted"
   },
   "queueclue": {
