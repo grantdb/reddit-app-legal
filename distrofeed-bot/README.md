@@ -16,8 +16,6 @@
 - **Unified Menu Popout**: Access both scouting and candidate review flows from a single **DistroFeed Bot** menu item.
 - **Deduplication Engine**: Enforces Redis URL and topic slug tracking to prevent duplicate coverage.
 
----
-
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/DistroFeed-bot-flowchart.png)
@@ -28,6 +26,8 @@
 2. **Review Candidates**: After ~90 seconds, open **DistroFeed Bot** and choose **2. Review & Publish**.
 3. **Pick Update**: Select an update candidate from the interactive Candidate Picker Form.
 4. **Customize & Publish**: Review and customize post title, link URL, TL;DR summary, post flair, and sticky comment settings, then click **Publish Post Now**.
+
+---
 
 ---
 
