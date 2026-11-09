@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.30  
+Version: v0.0.31  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -55,6 +55,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.31 — 2026-11-09
+- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
+
 0.0.30 — 2026-11-08
 - Live Megathread Status Page Scoreboard:
 - Added horizontal scrolling match card strip (`#inline-card-strip`) rendering all scheduled matches, real-time status pills (`[LIVE]`, `[FINAL]`, `[UPCOMING]`), and 1-tap match switching directly on the status card.
@@ -74,9 +77,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Added champion defense counter auto-increment upon successful title defense finishes.
 
 0.0.29 — 2026-11-01
-- Standard fleet synchronization and maintenance.
-
-0.0.28 — 2026-10-26
 - Standard fleet synchronization and maintenance.
 
 ## Links
