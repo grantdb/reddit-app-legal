@@ -133,28 +133,6 @@ Piracy Guard comes equipped with 18 deterministic rule presets categorized into 
 
 ---
 
-## Devvit SDK Limitations Encountered
-
-During the design and implementation of Piracy Guard Phases 1 through 4, the following Devvit platform characteristics were addressed:
-
-1. **Experimental Filter API (`post.filter` / `comment.filter`)**:
-   - The Devvit `.filter()` method is experimental and unsupported in certain client runtime containers.
-   - *Solution*: Piracy Guard calls `.filter({ keep: true })` inside a defensive `try/catch` block and automatically falls back to native `reddit.report()` whenever an error occurs.
-2. **Reddit Form Definition Data Binding**:
-   - In Devvit UI forms (`Devvit.createForm`), form submission handlers (`event.values`) only receive data from fields explicitly registered in the form's `fields` array.
-   - *Solution*: Hidden or read-only identification fields (e.g. `thingId`) are defined with `disabled: true` in `fields` so values persist correctly to the submission handler.
-3. **Redis Method Name Divergence**:
-   - The Redis client in `@devvit/public-api` implements `.hincrby()`, whereas the Redis client in `@devvit/web/server` implements `.hIncrBy()`.
-   - *Solution*: Helpers use defensive feature detection (`(redis.hIncrBy || redis.hincrby).call(redis, ...)`) ensuring 100% interoperability across both runtime contexts.
-4. **Devvit Web Server Payload Limits**:
-   - Incoming request streams on Devvit Web servers must be bounded to protect against memory exhaustion.
-   - *Solution*: Request bodies are stream-read with a strict 512KB payload ceiling (`MAX_PAYLOAD_BYTES`), rejecting oversized payloads with `PAYLOAD_TOO_LARGE`.
-5. **Windows Socket Conflicts with devvit_logs**:
-   - Running live log streaming via MCP or raw CLI can trigger TCP port 5678 socket collisions on Windows machines.
-   - *Solution*: Fleet invariant strictly enforced: log inspection utilizes the canonical fleet log runner (`npm run logs -- piracy-guard <subreddit>`).
-
----
-
 ## Support
 
 For help, bug reports, or feature requests, post in r/grantdb.
