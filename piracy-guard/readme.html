@@ -129,34 +129,6 @@
 <li>`requests_obfuscation` (Medium Confidence): Detects deliberate obfuscation techniques including `d0wnl0ad`, `cr4ck`, `s3rial`, `k3ygen`, and single-letter spacing.</li>
 </ul>
 <p>---</p>
-<h2>Devvit SDK Limitations Encountered</h2>
-<p>During the design and implementation of Piracy Guard Phases 1 through 4, the following Devvit platform characteristics were addressed:</p>
-<p>1. <strong>Experimental Filter API (`post.filter` / `comment.filter`)</strong>:</p>
-<ul>
-<li>The Devvit `.filter()` method is experimental and unsupported in certain client runtime containers.</li>
-<li>*Solution*: Piracy Guard calls `.filter({ keep: true })` inside a defensive `try/catch` block and automatically falls back to native `reddit.report()` whenever an error occurs.</li>
-</ul>
-<p>2. <strong>Reddit Form Definition Data Binding</strong>:</p>
-<ul>
-<li>In Devvit UI forms (`Devvit.createForm`), form submission handlers (`event.values`) only receive data from fields explicitly registered in the form's `fields` array.</li>
-<li>*Solution*: Hidden or read-only identification fields (e.g. `thingId`) are defined with `disabled: true` in `fields` so values persist correctly to the submission handler.</li>
-</ul>
-<p>3. <strong>Redis Method Name Divergence</strong>:</p>
-<ul>
-<li>The Redis client in `@devvit/public-api` implements `.hincrby()`, whereas the Redis client in `@devvit/web/server` implements `.hIncrBy()`.</li>
-<li>*Solution*: Helpers use defensive feature detection (`(redis.hIncrBy || redis.hincrby).call(redis, ...)`) ensuring 100% interoperability across both runtime contexts.</li>
-</ul>
-<p>4. <strong>Devvit Web Server Payload Limits</strong>:</p>
-<ul>
-<li>Incoming request streams on Devvit Web servers must be bounded to protect against memory exhaustion.</li>
-<li>*Solution*: Request bodies are stream-read with a strict 512KB payload ceiling (`MAX_PAYLOAD_BYTES`), rejecting oversized payloads with `PAYLOAD_TOO_LARGE`.</li>
-</ul>
-<p>5. <strong>Windows Socket Conflicts with devvit_logs</strong>:</p>
-<ul>
-<li>Running live log streaming via MCP or raw CLI can trigger TCP port 5678 socket collisions on Windows machines.</li>
-<li>*Solution*: Fleet invariant strictly enforced: log inspection utilizes the canonical fleet log runner (`npm run logs -- piracy-guard <subreddit>`).</li>
-</ul>
-<p>---</p>
 <h2>Support</h2>
 <p>For help, bug reports, or feature requests, post in r/grantdb.</p>
 <p>Please include:</p>

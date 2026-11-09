@@ -1,7 +1,7 @@
 # Piracy Guard
 
 Category: Moderation  
-Version: v0.0.4  
+Version: v0.0.5  
 Visibility: Unlisted  
 Summary: Configurable piracy-content moderation filters for Reddit communities.
 
@@ -71,14 +71,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.5 — 2026-11-09
+- Fix TypeError: Invalid URL in UIClient.navigateTo on relative permalink and remove Devvit SDK Limitations Encountered from README.
+
 0.0.4 — 2026-11-09
 - Fix @devvit/web/server Redis camelCase hash methods, remove Phase 5 Roadmap from README, and implement zero-scroll inline status page with Expanded Mode routing for all settings and interactions.
 
 0.0.3 — 2026-11-09
 - Standard fleet synchronization and maintenance.
-
-0.0.2 — 2026-11-09
-- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/piracy-guard/TERMS.md)
