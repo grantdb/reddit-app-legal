@@ -1,7 +1,7 @@
 # MALP-Scout
 
 Category: Moderation  
-Version: v0.0.22  
+Version: v0.0.23  
 Visibility: Unlisted  
 Summary: Manual-only Stargate SG-1 content scout for subreddit moderators.
 
@@ -60,13 +60,13 @@ This app does not store persistent state in Redis.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.23 — 2026-11-09
+- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
+
 0.0.22 — 2026-11-03
 - Standard fleet synchronization and maintenance.
 
 0.0.21 — 2026-10-20
-- Standard fleet synchronization and maintenance.
-
-0.0.20 — 2026-09-15
 - Standard fleet synchronization and maintenance.
 
 ## Links
