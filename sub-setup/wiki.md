@@ -1,7 +1,7 @@
 # Sub Setup
 
 Category: Moderation  
-Version: v0.0.18  
+Version: v0.0.19  
 Visibility: Unlisted  
 Summary: Comprehensive subreddit setup guide and configuration auditor.
 
@@ -99,6 +99,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.19 — 2026-11-09
+- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
+
 0.0.18 — 2026-11-03
 - Standard fleet synchronization and maintenance.
 
@@ -108,9 +111,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Expanded wizard configuration sections from 19 to 21 sections.
 - Updated Devvit SDK platform references to v0.15.0 across manual inspection checks.
 - Added comprehensive unit test coverage for sections, check item uniqueness, deep links, and wizard step wiring.
-
-0.0.17 — 2026-10-27
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/sub-setup/TERMS.md)
