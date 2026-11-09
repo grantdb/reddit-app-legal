@@ -1,9 +1,6 @@
-# Mod Dispatch
+> **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/moddispatch)
 
-![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
-![Devvit](https://img.shields.io/badge/Devvit-FF4500?style=for-the-badge)
-![Category](https://img.shields.io/badge/Category-Moderation-blue?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Coordination_Layer-8A2BE2?style=for-the-badge)
+# Mod Dispatch
 
 > **One case. One owner.**
 
@@ -107,4 +104,4 @@ This application is subject to the following legal agreements:
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/moddispatch/PRIVACY.md)
 
 ---
-*Built for Reddit's moderator community. Part of the GuardHub family.*
+*Built for Reddit's moderator community.*

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-09T11:19:26.341Z",
+  "generatedAt": "2026-11-09T16:49:40.507Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -3148,6 +3148,77 @@
       "replyTemplates": {
         "welcome": "Welcome to r/grantdb support! Here is reference information for Piracy Guard.",
         "troubleshooting": "Check the Piracy Guard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-11-09"
+    },
+    {
+      "appId": "moddispatch",
+      "slug": "moddispatch",
+      "appName": "Mod Dispatch",
+      "aliases": [
+        "moddispatch",
+        "mod dispatch"
+      ],
+      "summary": "Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs to the Reddit mod queue.",
+      "keywords": [
+        "moddispatch",
+        "mod dispatch",
+        "moderation"
+      ],
+      "setupSteps": [
+        "Install App: Install Mod Dispatch on your subreddit via the Reddit Developer Portal.",
+        "Open Dashboard: From your subreddit menu, select Mod Dispatch: Dashboard to initialize the pinned control center.",
+        "Configure Team Rules: In the dashboard Settings tab, set your team claim timeout (default: 15 minutes) and designate senior moderators.",
+        "Coordinate from the Queue: Open any post or comment menu in your native Reddit queue to claim, suggest, or add shared notes."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": true,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "ModAction",
+        "AppInstall",
+        "AppUpgrade"
+      ],
+      "menuItems": [
+        "Mod Dispatch: Claim for review",
+        "Mod Dispatch: Release claim",
+        "Mod Dispatch: Suggest to another mod",
+        "Mod Dispatch: Hand off to another mod",
+        "Mod Dispatch: Add shared note",
+        "Mod Dispatch: Escalate",
+        "Mod Dispatch: Mark resolved",
+        "Mod Dispatch: View case status",
+        "Mod Dispatch: Dashboard"
+      ],
+      "settingsCount": 1,
+      "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/moddispatch",
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/moddispatch",
+        "github": "https://github.com/grantdb/moddispatch",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/moddispatch/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/moddispatch/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Mod Dispatch.",
+        "troubleshooting": "Check the Mod Dispatch troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
       "lastUpdated": "2026-11-09"

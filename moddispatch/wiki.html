@@ -1,0 +1,114 @@
+<h1>Mod Dispatch</h1>
+
+<p>Category: Moderation<br>
+Version: v0.0.2<br>
+Visibility: Unlisted<br>
+Summary: Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs to the Reddit mod queue.</p>
+
+<h2>Overview</h2>
+<p>Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs to the Reddit mod queue.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/moddispatch-flowchart.png">View flowchart image</a></p>
+
+<h2>Key Features</h2>
+<ul>
+<li>Claim for Review: Marks item as actively claimed. Automatically prevents simultaneous claims with informative collision notices ("This item is already claimed by u/example").</li>
+<li>Release Claim: Allows the claimant to return an item to the unclaimed queue with optional context (e.g., "Need more context", "Not my area").</li>
+<li>Inactivity Timeout: Claims automatically release back to the team after a configurable duration (10, 15, 30, or 60 minutes) if no action is taken.</li>
+<li>Senior Moderator Overrides: Senior moderators can safely override stale or stalled claims, with every override recorded in the immutable audit trail.</li>
+<li>Suggest to Another Mod: Routes cases to specific teammates with urgency flags (Normal, Needs review soon, Urgent) and contextual notes.</li>
+<li>Hand Off Ownership: Transfers active ownership during shift changes, preserving all prior notes, claim history, and audit events.</li>
+<li>Shared Moderator Notes: Attach private notes with quick presets ("Needs second opinion", "Waiting on user", "Repeat offender", "Escalate", "Needs rule clarification") or free text. Notes persist permanently.</li>
+<li>Team Escalation: Flag complex cases for senior review with standardized escalation categories (safety/legal, rule changes, repeated abuse, appeals).</li>
+<li>Standard Non-Scrollable Status Page: Strict Canonical Scroller Standard v2.1 compliance. Fits within the visible feed viewport without internal vertical scrolling.</li>
+<li>Live 6-Tile Queue Summary: Instant scannability across Unclaimed, Mine, Teammates, Suggested, Escalated, and Resolved items.</li>
+<li>Team Presence Tracking: Real-time detection of active moderators and high-level workload indicators (e.g. "u/modA — reviewing 2 items").</li>
+<li>Expanded Dashboard: Full tabbed interface featuring queue filtering, search, multi-item batch operations, workload balance, and audit activity streams.</li>
+<li>Select multiple queue items for bulk claim, release, suggest, handoff, note, or escalation.</li>
+<li>Automated pre-flight check detects items already claimed by teammates and skips them with clear conflict reporting, guaranteeing safety across concurrent operations.</li>
+<li>Native Action Detection (`onModAction`)**: Automatically detects approve, remove, spam, and ban actions taken in Reddit's native interface, closes the corresponding coordination case, releases the lock, and logs the outcome.</li>
+<li>Discord & Slack Webhooks: Optional real-time alerts for urgent escalations, queue thresholds, or handoffs.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+<li>http: External HTTP Fetch access [Domains: discord.com, hooks.slack.com]</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>ModAction: Delivered by Reddit event router to endpoint /internal/on-mod-action.</li>
+<li>AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
+<li>AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
+</ul>
+<h3>Menu Actions</h3>
+<ul>
+<li>Mod Dispatch: Claim for review: Moderator menu action (Location: subreddit)</li>
+<li>Mod Dispatch: Release claim: Moderator menu action (Location: subreddit)</li>
+<li>Mod Dispatch: Suggest to another mod: Moderator menu action (Location: subreddit)</li>
+<li>Mod Dispatch: Hand off to another mod: Moderator menu action (Location: subreddit)</li>
+<li>Mod Dispatch: Add shared note: Moderator menu action (Location: subreddit)</li>
+<li>Mod Dispatch: Escalate: Moderator menu action (Location: subreddit)</li>
+<li>Mod Dispatch: Mark resolved: Moderator menu action (Location: subreddit)</li>
+<li>Mod Dispatch: View case status: Moderator menu action (Location: subreddit)</li>
+<li>Mod Dispatch: Dashboard: Moderator menu action (Location: subreddit)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>Subreddit: Release Reason (select, default: -). Release Reason</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: Yes — Automatically approves eligible content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Key patterns: ModDispatch:AlertSystem, ModDispatch:Sweeper, node:http</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install App: Install Mod Dispatch on your subreddit via the Reddit Developer Portal.</li>
+<li>Open Dashboard: From your subreddit menu, select Mod Dispatch: Dashboard to initialize the pinned control center.</li>
+<li>Configure Team Rules: In the dashboard Settings tab, set your team claim timeout (default: 15 minutes) and designate senior moderators.</li>
+<li>Coordinate from the Queue: Open any post or comment menu in your native Reddit queue to claim, suggest, or add shared notes.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.2 — 2026-11-09<br>
+Initial release of Mod Dispatch: shared ownership, atomic claims, suggestions, handoffs, and canonical scroller status dashboard.</p>
+<p>0.1.2 — 2026-11-09<br>
+Initial release of Mod Dispatch: shared ownership, atomic claims, suggestions, handoffs, and canonical scroller status dashboard.</p>
+<p>0.1.1 — 2026-11-09<br>
+Initial release of Mod Dispatch: shared ownership, atomic claims, suggestions, handoffs, and canonical scroller status dashboard.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/moddispatch/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/moddispatch/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/moddispatch">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

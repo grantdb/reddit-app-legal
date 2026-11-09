@@ -1,0 +1,96 @@
+<blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/moddispatch">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Mod Dispatch</h1>
+<blockquote><p><strong>One case. One owner.</strong></p></blockquote>
+<p>Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs to the Reddit mod queue—without forcing moderators to leave their normal workflow.</p>
+<h3>Key Highlights</h3>
+<ul>
+<li><strong>Atomic Collision Prevention Engine</strong>: Employs distributed Redis locks with configurable timeouts to guarantee that only one moderator reviews or claims an item at any moment, eliminating duplicate reviews.</li>
+<li><strong>Native Mod Queue Submenu Actions</strong>: Perform claims, suggestions, handoffs, notes, escalations, and resolutions directly from post and comment menus using native Reddit forms.</li>
+<li><strong>Canonical Scroller v2.1 Status Page</strong>: Default inline webview displays a scannable, non-scrollable queue summary and team presence card that strictly conforms to Reddit launch guidelines.</li>
+<li><strong>Shift-Resilient Shared Notes & Full Audit Trail</strong>: Context survives moderator shift changes with permanent shared notes, preset flags, and chronological audit histories.</li>
+</ul>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>In-Queue Coordination</strong>: Moderators claim, suggest, hand off, note, and escalate items right from the native Reddit moderation interface.</li>
+<li><strong>Race Condition Immunity</strong>: Atomic claim system rejects simultaneous claims with clear messages indicating the active owner and claim time.</li>
+<li><strong>Dual-Mode Webview Dashboard</strong>: Zero-scroll scannable status page on feed with full expanded view for batch actions, filters, case inspection, and settings.</li>
+<li><strong>Automatic Mod Action Detection</strong>: Listens for native Reddit actions (approve, remove, spam, ban) via `onModAction`, auto-resolves cases, releases locks, and records outcomes in the audit log.</li>
+<li><strong>Multi-Item Batch Support</strong>: Select multiple queue items for batch claims, suggestions, handoffs, notes, and escalations with pre-flight collision checks.</li>
+<li><strong>Zero Unicode Emojis</strong>: Conforms strictly to fleet zero-emoji standard with pure SVG icons and high-contrast badges.</li>
+<li><strong>Human-in-the-Loop Authority</strong>: The app coordinates and documents decisions; it never removes posts, bans users, or takes unprompted moderation actions.</li>
+</ul>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/moddispatch-flowchart.png">Logic Flowchart</a></p>
+<h3>The 5-Step Lifecycle</h3>
+<p>1. <strong>Queue Item Inspection</strong>: A moderator views reported posts or comments in Reddit's standard mod queue.</p>
+<p>2. <strong>Atomic Claim Acquisition</strong>: The moderator triggers "Mod Dispatch: Claim for review". Redis evaluates the distributed lock; if free, ownership is assigned with a configurable inactivity timer.</p>
+<p>3. <strong>Collaborative Routing & Context</strong>: Moderators attach shared notes, suggest cases to teammates with urgency ratings, or hand off active cases during shift changes.</p>
+<p>4. <strong>Resolution or Native Action Detection</strong>: The moderator resolves the case or executes a native Reddit action (approve, remove, spam). Mod Dispatch detects the event, releases the claim, and logs the outcome.</p>
+<p>5. <strong>Real-Time Team Oversight</strong>: The non-scrollable status page and expanded dashboard provide live workload visibility, team presence tracking, and a comprehensive audit trail.</p>
+<p>---</p>
+<h2>Quick Setup (60-Second Onboarding)</h2>
+<p>1. <strong>Install App</strong>: Install Mod Dispatch on your subreddit via the Reddit Developer Portal.</p>
+<p>2. <strong>Open Dashboard</strong>: From your subreddit menu, select <strong>Mod Dispatch: Dashboard</strong> to initialize the pinned control center.</p>
+<p>3. <strong>Configure Team Rules</strong>: In the dashboard Settings tab, set your team claim timeout (default: 15 minutes) and designate senior moderators.</p>
+<p>4. <strong>Coordinate from the Queue</strong>: Open any post or comment menu in your native Reddit queue to claim, suggest, or add shared notes.</p>
+<p>---</p>
+<h2>Core Features</h2>
+<h3>1. Native Queue Actions & Collision Prevention</h3>
+<ul>
+<li><strong>Claim for Review</strong>: Marks item as actively claimed. Automatically prevents simultaneous claims with informative collision notices ("This item is already claimed by u/example").</li>
+<li><strong>Release Claim</strong>: Allows the claimant to return an item to the unclaimed queue with optional context (e.g., "Need more context", "Not my area").</li>
+<li><strong>Inactivity Timeout</strong>: Claims automatically release back to the team after a configurable duration (10, 15, 30, or 60 minutes) if no action is taken.</li>
+<li><strong>Senior Moderator Overrides</strong>: Senior moderators can safely override stale or stalled claims, with every override recorded in the immutable audit trail.</li>
+</ul>
+<h3>2. Team Routing & Shift Coordination</h3>
+<ul>
+<li><strong>Suggest to Another Mod</strong>: Routes cases to specific teammates with urgency flags (Normal, Needs review soon, Urgent) and contextual notes.</li>
+<li><strong>Hand Off Ownership</strong>: Transfers active ownership during shift changes, preserving all prior notes, claim history, and audit events.</li>
+<li><strong>Shared Moderator Notes</strong>: Attach private notes with quick presets ("Needs second opinion", "Waiting on user", "Repeat offender", "Escalate", "Needs rule clarification") or free text. Notes persist permanently.</li>
+<li><strong>Team Escalation</strong>: Flag complex cases for senior review with standardized escalation categories (safety/legal, rule changes, repeated abuse, appeals).</li>
+</ul>
+<h3>3. Canonical Webview Status Page & Expanded Dashboard</h3>
+<ul>
+<li><strong>Standard Non-Scrollable Status Page</strong>: Strict Canonical Scroller Standard v2.1 compliance. Fits within the visible feed viewport without internal vertical scrolling.</li>
+<li><strong>Live 6-Tile Queue Summary</strong>: Instant scannability across Unclaimed, Mine, Teammates, Suggested, Escalated, and Resolved items.</li>
+<li><strong>Team Presence Tracking</strong>: Real-time detection of active moderators and high-level workload indicators (e.g. "u/modA — reviewing 2 items").</li>
+<li><strong>Expanded Dashboard</strong>: Full tabbed interface featuring queue filtering, search, multi-item batch operations, workload balance, and audit activity streams.</li>
+</ul>
+<h3>4. Multi-Item Batch Operations with Collision Pre-flight</h3>
+<ul>
+<li>Select multiple queue items for bulk claim, release, suggest, handoff, note, or escalation.</li>
+<li>Automated pre-flight check detects items already claimed by teammates and skips them with clear conflict reporting, guaranteeing safety across concurrent operations.</li>
+</ul>
+<h3>5. Automated Moderation Detection & External Alerts</h3>
+<ul>
+<li><strong>Native Action Detection (`onModAction`)</strong>: Automatically detects approve, remove, spam, and ban actions taken in Reddit's native interface, closes the corresponding coordination case, releases the lock, and logs the outcome.</li>
+<li><strong>Discord & Slack Webhooks</strong>: Optional real-time alerts for urgent escalations, queue thresholds, or handoffs.</li>
+</ul>
+<p>---</p>
+<h2>Designed to Assist Moderators</h2>
+<p>Mod Dispatch is built as an assistive coordination layer for human moderation teams:</p>
+<ul>
+<li><strong>Human Authority</strong>: The application never automatically deletes posts, removes comments, or bans users. Final decisions always rest with human moderators.</li>
+<li><strong>Zero Public Exposure</strong>: Moderator notes, claim states, suggestions, and audit logs are strictly restricted to authenticated subreddit moderators and are never exposed to community members.</li>
+<li><strong>Zero PII Collection</strong>: Does not collect, sell, or track personal user data. All coordination states are housed within Reddit's native platform Redis infrastructure.</li>
+</ul>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name (`moddispatch`).</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message or relevant logs.</li>
+</ul>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/moddispatch/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/moddispatch/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community.*</p>
