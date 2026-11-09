@@ -39,8 +39,6 @@ Piracy Guard helps moderators review potentially piracy-related posts and commen
 
 ---
 
----
-
 ## Enforcement Behavior
 
 Piracy Guard is engineered for moderator oversight and false-positive prevention:
@@ -154,15 +152,6 @@ During the design and implementation of Piracy Guard Phases 1 through 4, the fol
 5. **Windows Socket Conflicts with devvit_logs**:
    - Running live log streaming via MCP or raw CLI can trigger TCP port 5678 socket collisions on Windows machines.
    - *Solution*: Fleet invariant strictly enforced: log inspection utilizes the canonical fleet log runner (`npm run logs -- piracy-guard <subreddit>`).
-
----
-
-## Phase 5 Roadmap
-
-- **Interactive Moderator Post-Queue Webview Widget**: Inline moderation card inside the mod queue for 1-click approvals and dismissals.
-- **Regex Performance Profiler**: Micro-benchmark custom regex rules against large text corpuses to measure execution latency before saving.
-- **OCR Screenshot Inspection**: On-platform image inspection to detect piracy links embedded in memes and screenshots.
-- **Automated Escalation Tiers**: Optional modmail alerts for repeat offenders with configurable threshold alerts.
 
 ---
 

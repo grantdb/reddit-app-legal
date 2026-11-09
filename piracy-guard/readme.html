@@ -29,7 +29,6 @@
 <p>3. <strong>Operational Safeguards Enforcement</strong>: If the circuit breaker is tripped or Safe Mode is engaged, actions are clamped to log-only; otherwise, high-confidence matches are reported or queued with `keep: true`.</p>
 <p>4. <strong>Moderator Review & Feedback</strong>: Submissions appear in the subreddit moderation queue for human determination. False-positive feedback logs deduplicated telemetry to guide ongoing rule tuning.</p>
 <p>---</p>
-<p>---</p>
 <h2>Enforcement Behavior</h2>
 <p>Piracy Guard is engineered for moderator oversight and false-positive prevention:</p>
 <p>1. <strong>Default Enforcement Mode (`report_only`)</strong>:</p>
@@ -156,14 +155,6 @@
 <ul>
 <li>Running live log streaming via MCP or raw CLI can trigger TCP port 5678 socket collisions on Windows machines.</li>
 <li>*Solution*: Fleet invariant strictly enforced: log inspection utilizes the canonical fleet log runner (`npm run logs -- piracy-guard <subreddit>`).</li>
-</ul>
-<p>---</p>
-<h2>Phase 5 Roadmap</h2>
-<ul>
-<li><strong>Interactive Moderator Post-Queue Webview Widget</strong>: Inline moderation card inside the mod queue for 1-click approvals and dismissals.</li>
-<li><strong>Regex Performance Profiler</strong>: Micro-benchmark custom regex rules against large text corpuses to measure execution latency before saving.</li>
-<li><strong>OCR Screenshot Inspection</strong>: On-platform image inspection to detect piracy links embedded in memes and screenshots.</li>
-<li><strong>Automated Escalation Tiers</strong>: Optional modmail alerts for repeat offenders with configurable threshold alerts.</li>
 </ul>
 <p>---</p>
 <h2>Support</h2>
