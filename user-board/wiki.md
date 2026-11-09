@@ -1,7 +1,7 @@
 # User Board
 
 Category: Utility  
-Version: v0.0.50  
+Version: v0.0.51  
 Visibility: Public  
 Summary: Interactive subreddit contributor leaderboard and gamification dashboard.
 
@@ -56,13 +56,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.51 — 2026-11-09
+- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
+
 0.0.50 — 2026-10-27
 - Standard fleet synchronization and maintenance.
 
 0.0.49 — 2026-10-26
-- Standard fleet synchronization and maintenance.
-
-0.0.48 — 2026-10-21
 - Standard fleet synchronization and maintenance.
 
 ## Links

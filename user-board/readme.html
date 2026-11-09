@@ -13,6 +13,13 @@
 <li><strong>Moderator customization console</strong>: Tune score formulas, tier cutoffs, and timeframes from the Expanded Mode <strong>Settings</strong> cockpit.</li>
 <li><strong>Mobile-friendly custom post</strong>: Fast, client-side rendered experience that loads smoothly on all platforms.</li>
 </ul>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/user-board-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Deploy</strong>: A moderator selects <strong>Create Subreddit User Board</strong> from Subreddit Mod Tools to spawn the interactive hub.</p>
+<p>2. <strong>Collect</strong>: Background tasks scan recent subreddit submissions and comment threads, indexing upvotes and reply depth.</p>
+<p>3. <strong>Calculate</strong>: The engine evaluates activity stats against your custom point weights to generate contributor ranks based on positive reception.</p>
+<p>4. <strong>Render</strong>: The pinned leaderboard post updates its interactive UI to display the latest top community contributors.</p>
 <p>---</p>
 <h2>Built for Vibrant Community Growth</h2>
 <ul>
@@ -26,13 +33,6 @@
 <li><strong>Privacy-Safe Data Hygiene</strong>: Aggregates public subreddit statistics into anonymous Redis score counters without collecting personal data.</li>
 </ul>
 <p>---</p>
-<h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/user-board-flowchart.png">Logic Flowchart</a></p>
-<h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Deploy</strong>: A moderator selects <strong>Create Subreddit User Board</strong> from Subreddit Mod Tools to spawn the interactive hub.</p>
-<p>2. <strong>Collect</strong>: Background tasks scan recent subreddit submissions and comment threads, indexing upvotes and reply depth.</p>
-<p>3. <strong>Calculate</strong>: The engine evaluates activity stats against your custom point weights to generate contributor ranks based on positive reception.</p>
-<p>4. <strong>Render</strong>: The pinned leaderboard post updates its interactive UI to display the latest top community contributors.</p>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>User Board</strong> to your subreddit through the Reddit App Directory.</p>

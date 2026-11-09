@@ -18,6 +18,17 @@ User Board recognizes and rewards your most valuable community members. Calculat
 - **Moderator customization console**: Tune score formulas, tier cutoffs, and timeframes from the Expanded Mode **Settings** cockpit.
 - **Mobile-friendly custom post**: Fast, client-side rendered experience that loads smoothly on all platforms.
 
+## How It Works
+
+![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/user-board-flowchart.png)
+
+### Your Four-Step Workflow
+
+1. **Deploy**: A moderator selects **Create Subreddit User Board** from Subreddit Mod Tools to spawn the interactive hub.
+2. **Collect**: Background tasks scan recent subreddit submissions and comment threads, indexing upvotes and reply depth.
+3. **Calculate**: The engine evaluates activity stats against your custom point weights to generate contributor ranks based on positive reception.
+4. **Render**: The pinned leaderboard post updates its interactive UI to display the latest top community contributors.
+
 ---
 
 ## Built for Vibrant Community Growth
@@ -32,17 +43,6 @@ User Board recognizes and rewards your most valuable community members. Calculat
 - **Privacy-Safe Data Hygiene**: Aggregates public subreddit statistics into anonymous Redis score counters without collecting personal data.
 
 ---
-
-## How It Works
-
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/user-board-flowchart.png)
-
-### Your Four-Step Workflow
-
-1. **Deploy**: A moderator selects **Create Subreddit User Board** from Subreddit Mod Tools to spawn the interactive hub.
-2. **Collect**: Background tasks scan recent subreddit submissions and comment threads, indexing upvotes and reply depth.
-3. **Calculate**: The engine evaluates activity stats against your custom point weights to generate contributor ranks based on positive reception.
-4. **Render**: The pinned leaderboard post updates its interactive UI to display the latest top community contributors.
 
 ---
 
