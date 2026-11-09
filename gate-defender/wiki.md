@@ -1,7 +1,7 @@
 # Gate Defender
 
 Category: Interactive  
-Version: v0.0.105  
+Version: v0.0.106  
 Visibility: Unlisted  
 Summary: Arcade survival shooter for Stargate SG-1 fans. Defend the SGC wormhole from waves of Goa'uld invaders, fortify Ancient ruins, and compete on the global SGC Operatives leaderboard.
 
@@ -59,15 +59,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.106 — 2026-11-09
+- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
+
 0.0.105 — 2026-10-27
 - Standard fleet synchronization and maintenance.
 
 0.0.104 — 2026-10-17
 - Standard fleet synchronization and maintenance.
-
-0.0.103 — 2026-10-16
-- Architecture & Expanded Mode: Add canonical expanded entrypoint alias to devvit.json, add `body.app-expanded-mode` fixed canvas CSS rules, and verify synchronous trusted gesture transition via `requestExpandedMode(e, 'game')`.
-- Standards & Zero Emoji: Purge unicode emojis from splash tutorial and in-game topbar; replace with inline SVG icons.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/gate-defender/TERMS.md)
