@@ -1,5 +1,5 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/rescue-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
-<h1>GuardHub: RescueGuard 🛡️</h1>
+<h1>GuardHub: RescueGuard</h1>
 <blockquote><p><strong>Surface overlooked submissions, empower manual moderator curation, and spotlight hidden gems across your subreddit.</strong></p></blockquote>
 <p>RescueGuard gives moderation teams an assistive, privacy-first discovery engine to find quality community submissions from the lookback window that slipped through the cracks with low engagement. Review a ranked queue of overlooked posts and manually spotlight worthy contributions with automated post flairs and distinguished sticky notices.</p>
 <p>---</p>
@@ -14,6 +14,13 @@
 <li><strong>Multi-Action Spotlight</strong>: Apply community spotlight post flairs, distinguished sticky comments, or feed pinning upon approval.</li>
 <li><strong>Direct-Key Redis Memory</strong>: Retains audit and spotlight records to ensure reviewed items are never duplicated.</li>
 </ul>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/rescue-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Trigger</strong>: A moderator clicks <strong>GuardHub: RescueGuard Review Hub</strong> in the subreddit menu.</p>
+<p>2. <strong>Scan & Rank</strong>: RescueGuard scans submissions from the lookback window, excludes multi-submission or moderated items, and ranks low-attention candidates.</p>
+<p>3. <strong>Review</strong>: The moderator inspects candidate posts and URLs and selects <strong>Approve and Spotlight</strong>, <strong>Skip</strong>, or <strong>Dismiss</strong>.</p>
+<p>4. <strong>Spotlight & Log</strong>: If approved, RescueGuard applies the configured flair and sticky comment, then logs the decision in Redis.</p>
 <p>---</p>
 <h2>Built for Community Post Discovery</h2>
 <ul>
@@ -24,13 +31,6 @@
 <li><strong>Privacy-First Architecture</strong>: Stores only post IDs and decision timestamps in Redis—zero post text or user PII is ever retained.</li>
 </ul>
 <p>---</p>
-<h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/rescue-guard-flowchart.png">Logic Flowchart</a></p>
-<h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Trigger</strong>: A moderator clicks <strong>GuardHub: RescueGuard Review Hub</strong> in the subreddit menu.</p>
-<p>2. <strong>Scan & Rank</strong>: RescueGuard scans submissions from the lookback window, excludes multi-submission or moderated items, and ranks low-attention candidates.</p>
-<p>3. <strong>Review</strong>: The moderator inspects candidate posts and URLs and selects <strong>Approve and Spotlight</strong>, <strong>Skip</strong>, or <strong>Dismiss</strong>.</p>
-<p>4. <strong>Spotlight & Log</strong>: If approved, RescueGuard applies the configured flair and sticky comment, then logs the decision in Redis.</p>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>RescueGuard</strong> to your subreddit through the Reddit App Directory.</p>

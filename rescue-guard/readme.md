@@ -1,6 +1,6 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/rescue-guard)
 
-# GuardHub: RescueGuard 🛡️
+# GuardHub: RescueGuard
 
 > **Surface overlooked submissions, empower manual moderator curation, and spotlight hidden gems across your subreddit.**
 
@@ -19,6 +19,17 @@ RescueGuard gives moderation teams an assistive, privacy-first discovery engine 
 - **Multi-Action Spotlight**: Apply community spotlight post flairs, distinguished sticky comments, or feed pinning upon approval.
 - **Direct-Key Redis Memory**: Retains audit and spotlight records to ensure reviewed items are never duplicated.
 
+## How It Works
+
+![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/rescue-guard-flowchart.png)
+
+### Your Four-Step Workflow
+
+1. **Trigger**: A moderator clicks **GuardHub: RescueGuard Review Hub** in the subreddit menu.
+2. **Scan & Rank**: RescueGuard scans submissions from the lookback window, excludes multi-submission or moderated items, and ranks low-attention candidates.
+3. **Review**: The moderator inspects candidate posts and URLs and selects **Approve and Spotlight**, **Skip**, or **Dismiss**.
+4. **Spotlight & Log**: If approved, RescueGuard applies the configured flair and sticky comment, then logs the decision in Redis.
+
 ---
 
 ## Built for Community Post Discovery
@@ -30,17 +41,6 @@ RescueGuard gives moderation teams an assistive, privacy-first discovery engine 
 - **Privacy-First Architecture**: Stores only post IDs and decision timestamps in Redis—zero post text or user PII is ever retained.
 
 ---
-
-## How It Works
-
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/rescue-guard-flowchart.png)
-
-### Your Four-Step Workflow
-
-1. **Trigger**: A moderator clicks **GuardHub: RescueGuard Review Hub** in the subreddit menu.
-2. **Scan & Rank**: RescueGuard scans submissions from the lookback window, excludes multi-submission or moderated items, and ranks low-attention candidates.
-3. **Review**: The moderator inspects candidate posts and URLs and selects **Approve and Spotlight**, **Skip**, or **Dismiss**.
-4. **Spotlight & Log**: If approved, RescueGuard applies the configured flair and sticky comment, then logs the decision in Redis.
 
 ---
 
