@@ -243,5 +243,10 @@
     "name": "QueueClue",
     "version": "0.0.17",
     "visibility": "public"
+  },
+  "piracy-guard": {
+    "name": "Piracy Guard",
+    "version": "0.0.1",
+    "visibility": "unlisted"
   }
 }
