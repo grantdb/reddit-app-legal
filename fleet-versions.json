@@ -51,7 +51,7 @@
   },
   "archive-all-mm": {
     "name": "Archive All MM",
-    "version": "0.0.75",
+    "version": "0.0.76",
     "visibility": "public"
   },
   "ring-escape": {
