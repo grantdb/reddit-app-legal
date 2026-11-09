@@ -1,7 +1,7 @@
 # Mod Dispatch
 
 Category: Moderation  
-Version: v0.0.2  
+Version: v0.0.3  
 Visibility: Unlisted  
 Summary: Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs to the Reddit mod queue.
 
@@ -79,13 +79,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.3 — 2026-11-09
+- Standard fleet synchronization and maintenance.
+
 0.0.2 — 2026-11-09
 - Initial release of Mod Dispatch: shared ownership, atomic claims, suggestions, handoffs, and canonical scroller status dashboard.
 
 0.1.2 — 2026-11-09
-- Initial release of Mod Dispatch: shared ownership, atomic claims, suggestions, handoffs, and canonical scroller status dashboard.
-
-0.1.1 — 2026-11-09
 - Initial release of Mod Dispatch: shared ownership, atomic claims, suggestions, handoffs, and canonical scroller status dashboard.
 
 ## Links
