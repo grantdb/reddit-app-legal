@@ -1,6 +1,6 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/gimmecode-guard)
 
-# GimmeCode Guard 🛡️
+# GimmeCode Guard
 
 > **Filter low-effort code requests and protect constructive technical discussions across developer subreddits.**
 
@@ -13,8 +13,6 @@ GimmeCode Guard safeguards programming, Android/iOS, and creator subreddits from
 - **Context-Aware Code Immunity**: Automatically exempts comments containing genuine Markdown code fences or indented blocks, creator fulfillment replies ("code sent", "dm sent"), and post authors (OP).
 - **Interactive Comment Simulator**: Test phrase dictionaries, word-count heuristics, and score verdicts directly inside the Webview playground before saving changes.
 
----
-
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/gimmecode-guard-flowchart.png)
@@ -25,6 +23,8 @@ GimmeCode Guard safeguards programming, Android/iOS, and creator subreddits from
 2. **Context & Immunity Evaluation**: GimmeCode Guard verifies exemptions—skipping post authors in their own submissions (OP), community moderators, creator fulfillment replies ("code sent", "dm sent"), and comments containing valid Markdown code blocks.
 3. **Multi-Token Phrase Scoring**: Brief low-effort comments (4 words or fewer) matching request patterns ("code please", "send source", "apk please") accumulate violation points in Redis with 90-day strike persistence.
 4. **Graduated Escalation & Dashboard Sync**: The configured action (Tier 1 polite warning reply, Tier 2 modqueue report, or Tier 3 removal) executes immediately, and the violation record streams to the Webview audit feed.
+
+---
 
 ---
 
