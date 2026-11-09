@@ -1,0 +1,102 @@
+<h1>Piracy Guard</h1>
+
+<p>Category: Moderation<br>
+Version: v0.0.1<br>
+Visibility: Unlisted<br>
+Summary: Configurable piracy-content moderation filters for Reddit communities.</p>
+
+<h2>Overview</h2>
+<p>Configurable piracy-content moderation filters for Reddit communities.</p>
+
+<h2>Flowchart</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/piracy-guard-flowchart.png">View flowchart image</a></p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.</li>
+<li>CommentSubmit: Delivered by Reddit event router to endpoint /internal/on-comment-submit.</li>
+<li>AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
+<li>AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
+</ul>
+<h3>Menu Actions</h3>
+<ul>
+<li>Piracy Guard: Mark false positive: Moderator menu action (Location: subreddit)</li>
+<li>Piracy Guard: Rule details: Moderator menu action (Location: subreddit)</li>
+<li>Piracy Guard: Test Console: Moderator menu action (Location: subreddit)</li>
+<li>Piracy Guard: Dashboard: Moderator menu action (Location: subreddit)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>piracy_guard_enabled: Enable Piracy Guard (boolean, default: true). Enable Piracy Guard scanning for the subreddit.</li>
+<li>enforcement_mode: Enforcement Mode (select, default: report_only). What action Piracy Guard should take when a match meets the threshold.</li>
+<li>minimum_confidence: Minimum Confidence Threshold (select, default: medium). Minimum confidence required before reporting or filtering content.</li>
+<li>scan_posts: Scan Posts (boolean, default: true). Evaluate newly submitted posts.</li>
+<li>scan_comments: Scan Comments (boolean, default: true). Evaluate newly submitted comments.</li>
+<li>scan_titles: Scan Titles (boolean, default: true). Evaluate post titles against piracy rules.</li>
+<li>scan_bodies: Scan Bodies (boolean, default: true). Evaluate post and comment body markdown.</li>
+<li>scan_urls: Scan URLs (boolean, default: true). Extract and scan links against piracy domain patterns.</li>
+<li>allowlisted_domains: Allowlisted Domains (comma-separated) (string, default: ). Comma-separated domains (e.g. reddit.com, github.com) that should never trigger URL rules.</li>
+<li>allowlisted_subreddits: Allowlisted Subreddits (comma-separated) (string, default: ). Comma-separated subreddit names where Piracy Guard should remain inactive.</li>
+<li>allowlisted_users: Allowlisted Users (comma-separated) (string, default: ). Comma-separated usernames exempt from scanning.</li>
+<li>safe_mode: Safe Mode (Diagnostic & Telemetry Only) (boolean, default: false). Evaluates content and logs telemetry without taking filter or report actions.</li>
+<li>panic_disable: Panic Disable (Emergency Stop) (boolean, default: false). Immediately disables all scanning while preserving configuration and history.</li>
+<li>enable_evidence_snippets: Enable Evidence Snippets (boolean, default: false). Opt-in to storing sanitized 60-character evidence snippets in local telemetry.</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: Yes — Automatically approves eligible content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Hashes (structured records & alias indices)</li>
+<li>Key patterns: piracy-guard:circuit-breaker, piracy-guard:telemetry:totals, node:http, piracy-guard:config:current, piracy-guard:config:history, piracy-guard:config:lock</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add app via Reddit App Directory or Mod Tools.</li>
+<li>Open: Open Mod Tools -&gt; App Settings in your subreddit to configure options.</li>
+<li>Configure: Set active options and API keys as needed.</li>
+<li>Use: App runs automatically in background according to event triggers and settings.</li>
+<li>Review: Verify bot activity and comments directly on subreddit posts or in mod logs.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.1 — 2026-11-09<br>
+Phase 4 production hardening: Circuit breaker (5-failure / 60s cooldown), Safe Mode (dry run clamping), Panic Disable emergency bypass, optimistic concurrency conflict detection (409 on baseVersion mismatch), FNV-1a configuration checksums, 30-day telemetry retention, token redaction in snippets, clear telemetry/history maintenance endpoints, and first-run onboarding checklist.; All notable changes to the Piracy Guard application will be documented in this file.</p>
+<p>0.1.0 — 2026-11-09<br>
+Complete Devvit Web 5-tab moderator control center (Overview, Preset Rules, Custom Rules, Test Console, Configuration).; deterministic preset filters across Software, Games, Streaming, Shadow Libraries, Credential Dumps, and Sourcing Requests.; Self-healing circuit breaker pausing enforcement during platform outages (5 failures / 60-second cooldown).; Safe Mode (dry run clamping to `log`) and Panic Disable emergency disengage.; Optimistic Concurrency Control with HTTP 409 conflict detection for concurrent moderator edits.; Deterministic 8-character FNV-1a configuration checksum generator.; Duplicate-suppressed false-positive reporting and read-only rule violation details inspection.; day retention on daily telemetry buckets with sensitive token and URL redaction.; First-run interactive onboarding checklist.</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/piracy-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/piracy-guard/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/piracy-guard">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

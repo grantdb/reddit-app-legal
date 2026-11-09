@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-08T18:00:54.521Z",
+  "generatedAt": "2026-11-09T11:19:26.341Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -3087,6 +3087,70 @@
       },
       "status": "active",
       "lastUpdated": "2026-11-07"
+    },
+    {
+      "appId": "piracy-guard",
+      "slug": "piracy-guard",
+      "appName": "Piracy Guard",
+      "aliases": [
+        "piracy-guard",
+        "piracy guard",
+        "piracyguard"
+      ],
+      "summary": "Configurable piracy-content moderation filters for Reddit communities.",
+      "keywords": [
+        "piracy-guard",
+        "piracy guard",
+        "moderation",
+        "piracyguard"
+      ],
+      "setupSteps": [],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": false,
+        "customPost": true
+      },
+      "triggers": [
+        "PostSubmit",
+        "CommentSubmit",
+        "AppInstall",
+        "AppUpgrade"
+      ],
+      "menuItems": [
+        "Piracy Guard: Mark false positive",
+        "Piracy Guard: Rule details",
+        "Piracy Guard: Test Console",
+        "Piracy Guard: Dashboard"
+      ],
+      "settingsCount": 14,
+      "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/piracy-guard",
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/piracy-guard",
+        "github": "https://github.com/grantdb/piracy-guard",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/piracy-guard/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/piracy-guard/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Piracy Guard.",
+        "troubleshooting": "Check the Piracy Guard troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-11-09"
     }
   ]
 }

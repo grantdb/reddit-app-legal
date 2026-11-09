@@ -1,0 +1,186 @@
+<blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/piracy-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Piracy Guard</h1>
+<blockquote><p><strong>Configurable piracy-content moderation filters for Reddit communities.</strong></p></blockquote>
+<p>Piracy Guard helps moderators review potentially piracy-related posts and comments using configurable keyword, phrase, regex, and URL-based filters. It is designed to flag likely violations for moderator review rather than automatically remove content.</p>
+<p>---</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Report-First Default</strong>: Defaults to `report_only` mode, reporting flagged items for moderator review without taking down content or hiding posts.</li>
+<li><strong>Review-First Architecture</strong>: Does not delete content automatically, ban users, send unprompted public comments, send DMs, or send modmail.</li>
+<li><strong>Full Devvit Web Dashboard</strong>: Complete 5-tab moderator control center conforming to Canonical Scroller Standard v2.1 with Overview, Preset Rules, Custom Rules, Test Console, and Configuration.</li>
+<li><strong>Deterministic Rules Engine</strong>: Analyzes submissions across 18 specialized presets spanning Software, Games, Streaming, Shadow Libraries, Credential Dumps, and Sourcing Requests.</li>
+<li><strong>Operational Safety Suite</strong>: Includes Safe Mode (dry run testing), Panic Disable (emergency disengage), and an automatic Circuit Breaker that pauses enforcement during platform outages.</li>
+<li><strong>Optimistic Concurrency Control</strong>: Tracks configuration versions (`baseVersion`) and returns HTTP 409 conflicts to prevent concurrent moderator overwrites.</li>
+<li><strong>Configuration Integrity Checksum</strong>: Generates deterministic 8-character FNV-1a hashes to detect configuration drift and tampering.</li>
+<li><strong>Rule Health & Tuning Assistance</strong>: Non-destructive rule health metrics (`Healthy`, `Review`, `Noisy`, `Unused`) with false-positive rates to guide filter tuning.</li>
+<li><strong>Custom Moderator Rules</strong>: Create, edit, duplicate, and delete subreddit-specific filters supporting keyword, literal phrase, regular expression, and domain matching with word-boundary and case-sensitivity controls.</li>
+<li><strong>Rule Test Console</strong>: Dry-run candidate text against active presets and custom rules directly in Reddit to verify match outcomes before publishing rules, with post and comment simulation modes.</li>
+<li><strong>Duplicate-Suppressed False-Positive Logging</strong>: Moderators can mark false positives on posts and comments with confirmation and optional 200-character notes without double-counting.</li>
+<li><strong>Rule Details Inspection</strong>: Dedicated post and comment menu action allows moderators to inspect matched rules, category, confidence, and safe snippets without mutating content.</li>
+<li><strong>Safe Versioned Configuration</strong>: Full export/import with pre-commit diff summaries and 20-version rollback history. Restoring prior revisions creates new incremented versions rather than destroying history.</li>
+<li><strong>ReDoS Protected</strong>: Strict heuristic validation rejects dangerous nested regular expression quantifiers (e.g. `(a+)+`) and bounds pattern lengths.</li>
+<li><strong>Zero PII Telemetry</strong>: Never collects or stores post bodies, usernames, URLs, tokens, or personal identifiers. Daily telemetry is bounded by a strict 30-day retention window.</li>
+</ul>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/piracy-guard-flowchart.png">Logic Flowchart</a></p>
+<h3>The 4-Step Lifecycle</h3>
+<p>1. <strong>Submission Event Ingestion</strong>: Newly submitted posts and comments trigger non-blocking event handlers (`onPostSubmit`, `onCommentSubmit`) with 24-hour distributed idempotency locking.</p>
+<p>2. <strong>Deterministic Rules Evaluation</strong>: The engine normalizes content and evaluates text against 18 deterministic preset filters, custom rules, and domain allowlists.</p>
+<p>3. <strong>Operational Safeguards Enforcement</strong>: If the circuit breaker is tripped or Safe Mode is engaged, actions are clamped to log-only; otherwise, high-confidence matches are reported or queued with `keep: true`.</p>
+<p>4. <strong>Moderator Review & Feedback</strong>: Submissions appear in the subreddit moderation queue for human determination. False-positive feedback logs deduplicated telemetry to guide ongoing rule tuning.</p>
+<p>---</p>
+<p>---</p>
+<h2>Enforcement Behavior</h2>
+<p>Piracy Guard is engineered for moderator oversight and false-positive prevention:</p>
+<p>1. <strong>Default Enforcement Mode (`report_only`)</strong>:</p>
+<ul>
+<li>Newly submitted posts and comments that match enabled rules with confidence meeting or exceeding `minimum_confidence` are flagged via Reddit's native `reddit.report()` API.</li>
+<li>The reported item appears in the subreddit moderation queue with a clear explanation and the specific matched pattern (e.g. `Piracy Guard: matched rule 'Software — Keygen' (high confidence). Pattern: 'keygen'. Please review.`).</li>
+<li>The item <strong>remains visible</strong> to the community while awaiting human moderator determination.</li>
+</ul>
+<p>2. <strong>Optional Queue Filter Mode (`filter_to_queue`)</strong>:</p>
+<ul>
+<li>If moderators select `filter_to_queue`, Piracy Guard calls the item's `.filter()` method with `keep: true` to ensure the submission remains accessible in the mod queue.</li>
+<li>If the runtime environment rejects or does not support the experimental filter call, Piracy Guard automatically falls back to `reddit.report()`.</li>
+</ul>
+<p>3. <strong>Diagnostic Logging Mode (`log_only`)</strong>:</p>
+<ul>
+<li>Submissions matching rules are logged internally with non-sensitive identifiers (rule ID, matched category, confidence level). No action is submitted to Reddit.</li>
+</ul>
+<p>4. <strong>Low Confidence Matches</strong>:</p>
+<ul>
+<li>Low-confidence matches are strictly logged only and never trigger reports or queue filters.</li>
+</ul>
+<p>5. <strong>No Automated User Messaging</strong>:</p>
+<ul>
+<li>Piracy Guard will never send removal comments, modmails, or user DMs.</li>
+</ul>
+<p>---</p>
+<h2>Production Reliability & Operational Safeguards</h2>
+<p>Phase 4 hardens Piracy Guard for real subreddit installation with multi-layer defensive mechanisms:</p>
+<h3>1. Circuit Breaker</h3>
+<ul>
+<li><strong>Failure Threshold</strong>: Automatically triggers after 5 consecutive infrastructure failures (e.g. Reddit API timeouts, Redis downtime) within a 60-second sliding window.</li>
+<li><strong>Cooldown</strong>: Enforcement actions (filter and report) are temporarily paused for 60 seconds, downgrading all evaluation to non-mutating logging.</li>
+<li><strong>Automatic Recovery</strong>: Decays failure counters and clears cooldown upon successful infrastructure calls.</li>
+</ul>
+<h3>2. Operational Modes</h3>
+<ul>
+<li><strong>Safe Mode (Dry Run Only)</strong>: Evaluates content against active rules and updates dashboard telemetry metrics, but clamps all action recommendations to `log`. Subreddit submissions will never be reported or filtered to the queue while Safe Mode is active.</li>
+<li><strong>Panic Disable</strong>: Completely disengages content scanning across all post and comment submission events. Returns immediate `none` recommendations with zero Redis writes.</li>
+<li><strong>Evidence Snippets Opt-In</strong>: Controls whether sanitized 60-character matched text snippets are retained in telemetry logs. When disabled, all snippets are permanently stripped.</li>
+</ul>
+<h3>3. Concurrency Protection & Checksums</h3>
+<ul>
+<li><strong>Optimistic Concurrency</strong>: Every configuration document maintains an incrementing `schemaVersion`. Mutations check the client's `baseVersion` and reject conflicting concurrent updates with HTTP 409 `CONFIG_VERSION_CONFLICT`.</li>
+<li><strong>FNV-1a Integrity Checksum</strong>: An 8-character hexadecimal checksum is calculated over all active rules, category overrides, and operational flags, enabling immediate visual verification of configuration consistency.</li>
+</ul>
+<h3>4. Telemetry Retention & Data Maintenance</h3>
+<ul>
+<li><strong>Strict 30-Day TTL</strong>: Daily telemetry buckets (`piracy-guard:telemetry:daily:YYYY-MM-DD`) expire automatically after 30 days.</li>
+<li><strong>Secret Redaction</strong>: Evidence snippets strip URLs (`[url]`), emails (`[email]`), usernames (`[user]`), and API tokens (`[token]`).</li>
+<li><strong>Data Maintenance Operations</strong>: Moderators can reset aggregate match counters (`/api/clear-telemetry`) or prune historical revision documents (`/api/clear-history`) on demand.</li>
+</ul>
+<p>---</p>
+<h2>First-Run Onboarding Checklist</h2>
+<p>When Piracy Guard is installed in a subreddit, the dashboard displays an interactive onboarding checklist:</p>
+<p>1. <strong>Enable Piracy Guard</strong>: Verify that scanning is active and Panic Disable is not engaged.</p>
+<p>2. <strong>Confirm Enforcement Mode</strong>: Confirm that enforcement is set to `Report Only` (recommended) or `Filter to Mod Queue`.</p>
+<p>3. <strong>Set Confidence Threshold</strong>: Ensure the minimum confidence threshold is set to `Medium` (recommended) to minimize false positives.</p>
+<p>4. <strong>Review Active Categories</strong>: Review the 6 piracy filter categories and disable any irrelevant to your community.</p>
+<p>5. <strong>Test Sample Content</strong>: Use the built-in Test Console to run dry-run evaluations on sample posts and comments.</p>
+<p>6. <strong>Review False-Positive Workflow</strong>: Familiarize moderators with the "Mark false positive" menu action to tune local rule health.</p>
+<p>---</p>
+<h2>Built-In Filter Definitions</h2>
+<p>Piracy Guard comes equipped with 18 deterministic rule presets categorized into six operational domains:</p>
+<h3>1. Software</h3>
+<ul>
+<li>`software_cracked` (Medium Confidence): Matches software described as cracked, nulled, pre-activated, or pirated repacks while avoiding colloquial phrases like "cracked my screen".</li>
+<li>`software_serial_keys` (Medium Confidence): Detects unlicensed product keys, activation keys, and key code sharing. Requires piracy context (e.g. "generator", "crack", "leak", "free", "working", "pastebin") and never matches standalone "serial number".</li>
+<li>`software_keygen` (High Confidence): Identifies software key generators and activation tools.</li>
+<li>`software_license_bypass` (High Confidence): Flags tools and tutorials designed to bypass software activation or reset trial periods.</li>
+<li>`software_grey_market_keys` (Low Confidence, Log Only): Identifies volume license resellers and grey market key marketplaces with low confidence.</li>
+</ul>
+<h3>2. Games</h3>
+<ul>
+<li>`games_cracks` (High Confidence): Detects cracked game releases and recognized warez release groups (FitGirl, DODI, Codex, Empress).</li>
+<li>`games_piracy_sites` (High Confidence): Targets prominent warez and cracked game distribution sites (SteamUnlocked, IGG-Games, OceanOfGames, Skidrow).</li>
+<li>`games_drm_bypass` (High Confidence): Identifies Denuvo and DRM bypass utilities.</li>
+<li>`games_console_piracy` (Low Confidence, Log Only, Disabled by Default): Flags console custom firmware (CFW) and emulator ROM sourcing. Disabled by default to prevent false positives on benign emulation discussions.</li>
+</ul>
+<h3>3. Streaming and Media</h3>
+<ul>
+<li>`streaming_account_access` (Medium Confidence): Detects shared streaming accounts, unauthorized family plan slots, and account generators.</li>
+<li>`streaming_iptv` (Medium Confidence): Identifies unauthorized IPTV playlists, provider lists, and stalker portals. Requires explicit piracy context and never matches standalone "iptv".</li>
+<li>`media_piracy_terms` (High Confidence): Matches warez media release tags (YIFY, 1337x, RARBG, CAM-Rip), magnet links (`magnet:?xt=urn:btih:`), and torrent downloads. Requires download or link context for "web-dl".</li>
+</ul>
+<h3>4. Ebooks and Courses</h3>
+<ul>
+<li>`ebooks_shadow_libraries` (High Confidence): Detects unauthorized links and mentions of shadow libraries (Z-Library, Library Genesis / LibGen, Anna's Archive, Sci-Hub).</li>
+<li>`courses_leaks` (Medium Confidence): Identifies unauthorized distribution and downloads of paid educational courses.</li>
+</ul>
+<h3>5. Accounts and Credentials</h3>
+<ul>
+<li>`accounts_credentials` (Medium Confidence): Detects credential combo lists, account dumps, and stolen session token trading. Requires credential context (e.g. "session cookies", "premium cookies", "stealer cookies") and never matches standalone "cookies".</li>
+<li>`accounts_marketplace` (Low Confidence, Log Only): Flags illicit account sales, subscription arbitrage, and lifetime access schemes.</li>
+</ul>
+<h3>6. Requests and Sourcing</h3>
+<ul>
+<li>`requests_direct` (Medium Confidence): Flags direct community inquiries asking where to download cracked software, keygens, or links.</li>
+<li>`requests_obfuscation` (Medium Confidence): Detects deliberate obfuscation techniques including `d0wnl0ad`, `cr4ck`, `s3rial`, `k3ygen`, and single-letter spacing.</li>
+</ul>
+<p>---</p>
+<h2>Devvit SDK Limitations Encountered</h2>
+<p>During the design and implementation of Piracy Guard Phases 1 through 4, the following Devvit platform characteristics were addressed:</p>
+<p>1. <strong>Experimental Filter API (`post.filter` / `comment.filter`)</strong>:</p>
+<ul>
+<li>The Devvit `.filter()` method is experimental and unsupported in certain client runtime containers.</li>
+<li>*Solution*: Piracy Guard calls `.filter({ keep: true })` inside a defensive `try/catch` block and automatically falls back to native `reddit.report()` whenever an error occurs.</li>
+</ul>
+<p>2. <strong>Reddit Form Definition Data Binding</strong>:</p>
+<ul>
+<li>In Devvit UI forms (`Devvit.createForm`), form submission handlers (`event.values`) only receive data from fields explicitly registered in the form's `fields` array.</li>
+<li>*Solution*: Hidden or read-only identification fields (e.g. `thingId`) are defined with `disabled: true` in `fields` so values persist correctly to the submission handler.</li>
+</ul>
+<p>3. <strong>Redis Method Name Divergence</strong>:</p>
+<ul>
+<li>The Redis client in `@devvit/public-api` implements `.hincrby()`, whereas the Redis client in `@devvit/web/server` implements `.hIncrBy()`.</li>
+<li>*Solution*: Helpers use defensive feature detection (`(redis.hIncrBy || redis.hincrby).call(redis, ...)`) ensuring 100% interoperability across both runtime contexts.</li>
+</ul>
+<p>4. <strong>Devvit Web Server Payload Limits</strong>:</p>
+<ul>
+<li>Incoming request streams on Devvit Web servers must be bounded to protect against memory exhaustion.</li>
+<li>*Solution*: Request bodies are stream-read with a strict 512KB payload ceiling (`MAX_PAYLOAD_BYTES`), rejecting oversized payloads with `PAYLOAD_TOO_LARGE`.</li>
+</ul>
+<p>5. <strong>Windows Socket Conflicts with devvit_logs</strong>:</p>
+<ul>
+<li>Running live log streaming via MCP or raw CLI can trigger TCP port 5678 socket collisions on Windows machines.</li>
+<li>*Solution*: Fleet invariant strictly enforced: log inspection utilizes the canonical fleet log runner (`npm run logs -- piracy-guard <subreddit>`).</li>
+</ul>
+<p>---</p>
+<h2>Phase 5 Roadmap</h2>
+<ul>
+<li><strong>Interactive Moderator Post-Queue Webview Widget</strong>: Inline moderation card inside the mod queue for 1-click approvals and dismissals.</li>
+<li><strong>Regex Performance Profiler</strong>: Micro-benchmark custom regex rules against large text corpuses to measure execution latency before saving.</li>
+<li><strong>OCR Screenshot Inspection</strong>: On-platform image inspection to detect piracy links embedded in memes and screenshots.</li>
+<li><strong>Automated Escalation Tiers</strong>: Optional modmail alerts for repeat offenders with configurable threshold alerts.</li>
+</ul>
+<p>---</p>
+<h2>Support</h2>
+<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
+<p>Please include:</p>
+<ul>
+<li>The app name (`piracy-guard`).</li>
+<li>What you expected to happen.</li>
+<li>What happened instead.</li>
+<li>Any error message or relevant logs.</li>
+</ul>
+<p>---</p>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/piracy-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/piracy-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<p>---</p>
+<p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>
