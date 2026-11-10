@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.31  
+Version: v0.0.32  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -55,6 +55,22 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.32 — 2026-11-09
+- Zero-Scroll Click-Tab Navigation & Interactive Megathread Status Page:
+- Added top-level zero-scroll click tabs: `[ MATCHES ]`, `[ CHAMPIONSHIPS ]`, and `[ ROSTER STATS ]` directly within the inline status unit.
+- Eliminated internal horizontal scrolling; converted match strip into discrete clickable match chip buttons (`.inline-chip-btn`).
+- Added dedicated click-paginated Championships spotlight with champion details, reign days, and historical lineage.
+- Added dedicated click-paginated Roster Records card stack (3 per view) with W/L records and win/loss streak tags.
+- Tap Toggle Predictions & Interactive Contender Cards:
+- Transformed Contender cards into direct 1-tap interactive targets with active glowing highlights and `[ YOUR PICK ]` badges.
+- Upgraded `/api/live/predict` server endpoint to support instant pick toggling and switching between contenders.
+- Added animated neon pulsing rings (`@keyframes pulse-live-contender`) and gold shimmers to active contenders during live matches.
+- Added graphic golden laurel victory stamp (`.winner-card-gold`, `.winner-graphic-badge`) and pick outcome indicators (`[YOUR PICK WON]` / `[YOUR PICK LOST]`) on finished matches.
+- Moderator Role Isolation & Realtime Hub Synchronization:
+- Restricted full expanded arena mode exclusively to moderators via `[ MOD LIVE CONSOLE ]`, keeping regular fans focused on the live Reddit comment stream.
+- Added `updatedHub` payload to realtime `result` broadcasts and implemented `hub_updated` realtime event dispatch so championship belt changes, defense increments, and superstar stats update live on user status cards without requiring a page refresh.
+- Resolved duplicate HTML markup in the moderator impromptu add-match tray.
+
 0.0.31 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
@@ -75,9 +91,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Canonical Devvit realtime subscription using `@devvit/web/client` connection semantics and fixed redis channel naming `wwe-show-${showId}`.
 - Replaced native `alert()` modal dialogs with non-blocking inline transient toasts to prevent webview thread freezes.
 - Added champion defense counter auto-increment upon successful title defense finishes.
-
-0.0.29 — 2026-11-01
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
