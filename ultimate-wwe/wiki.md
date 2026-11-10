@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.36  
+Version: v0.0.37  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -55,6 +55,17 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.37 — 2026-11-09
+- Active Crowd Chants During Winner Celebration & Match Reset:
+- Allowed chant reactions to be processed on both server and client during the post-match 2-minute celebration window.
+- Fixed client click guard and re-enabled chant buttons throughout celebration countdown.
+- In `reset_match` and `start_match`, broadcast full `show_updated` payload so connected clients immediately clear stale winner IDs, finish states, and re-arm crowd chants cleanly.
+- Top Subtabs Navigation Bar Hidden:
+- Set `#inline-subtabs-row` to `display: none !important;` to reclaim 44px of vertical screen real estate for match action, while preserving all subtab HTML markup and TypeScript controllers intact for future app feature upgrades.
+- Single Unified Match Victory Takeover Card:
+- Replaced disjointed multiple bottom winner blocks with a single unified Match Victory Takeover Card (`#inline-victory-takeover`).
+- Seamlessly integrates floating sparks, champion winner headline, celebration chant soundboard with real-time countdown clock (`RECAP IN 01:51`), and prediction consensus ribbon into a single cohesive bottom takeover.
+
 0.0.36 — 2026-11-09
 - High-Intensity Flashing Winner Celebration (`WINNER!!`):
 - Upgraded winner badge to bold `WINNER!!` with high-frequency golden strobe aura (`@keyframes winner-badge-flash`).
@@ -78,19 +89,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Added glowing gold championship title line (`[TITLE] `) beneath the central VS circle.
 - Mod View Performance Streamlining:
 - Stripped decorative pyro particles and strobe animations from the Expanded Mod View for a fast, high-contrast operational cockpit.
-
-0.0.34 — 2026-11-09
-- Live Crowd Chants Soundboard on Status Page:
-- Added 4 interactive crowd chant buttons (`AWESOME!`, `LET'S GO!`, `KICKOUT!`, `HOLY S*!`) with real-time counter updates directly on the inline live status page.
-- Added dedicated floating burst stage (`#inline-chant-burst-stage`) rendering real-time animated crowd chant badges on fan interactions.
-- Contender Name Multi-Line Wrapping & Ellipsis Removal:
-- Removed restrictive `max-width: 44%; white-space: nowrap; text-overflow: ellipsis;` capping wrestler names. Names now wrap cleanly without truncation.
-- Dynamic In-Ring Visual Lighting & Victory Auras:
-- Added Corner Surge neon ring pulse animations: Neon Crimson pulse for Red Corner (`contender-card-a.is-live-pulse`) and Electric Sapphire pulse for Blue Corner (`contender-card-b.is-live-pulse`).
-- Added radiant Champion Victory Gold Aura (`@keyframes victory-gold-glow`) and `WINNER` tag badge on victor cards with dimmed loser state.
-- Layout Height Optimization & Box Collision Elimination:
-- Replaced bulky overlapping `.winner-card-gold` box with a sleek `.inline-finished-strip` that prevents border collisions with contender cards.
-- Compacted the championship belt spotlight card in inline mode to guarantee zero vertical squashing or sliced elements.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
