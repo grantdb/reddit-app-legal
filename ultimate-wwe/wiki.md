@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.33  
+Version: v0.0.34  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -55,6 +55,19 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.34 — 2026-11-09
+- Live Crowd Chants Soundboard on Status Page:
+- Added 4 interactive crowd chant buttons (`AWESOME!`, `LET'S GO!`, `KICKOUT!`, `HOLY S*!`) with real-time counter updates directly on the inline live status page.
+- Added dedicated floating burst stage (`#inline-chant-burst-stage`) rendering real-time animated crowd chant badges on fan interactions.
+- Contender Name Multi-Line Wrapping & Ellipsis Removal:
+- Removed restrictive `max-width: 44%; white-space: nowrap; text-overflow: ellipsis;` capping wrestler names. Names now wrap cleanly without truncation.
+- Dynamic In-Ring Visual Lighting & Victory Auras:
+- Added Corner Surge neon ring pulse animations: Neon Crimson pulse for Red Corner (`contender-card-a.is-live-pulse`) and Electric Sapphire pulse for Blue Corner (`contender-card-b.is-live-pulse`).
+- Added radiant Champion Victory Gold Aura (`@keyframes victory-gold-glow`) and `WINNER` tag badge on victor cards with dimmed loser state.
+- Layout Height Optimization & Box Collision Elimination:
+- Replaced bulky overlapping `.winner-card-gold` box with a sleek `.inline-finished-strip` that prevents border collisions with contender cards.
+- Compacted the championship belt spotlight card in inline mode to guarantee zero vertical squashing or sliced elements.
+
 0.0.33 — 2026-11-09
 - Resilient Realtime Status Page Synchronization & Channel Standardization:
 - Upgraded live status page synchronization to use Devvit's native postMessage realtime bridge protocol (`EFFECT_REALTIME_SUB`).
@@ -77,9 +90,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Restricted full expanded arena mode exclusively to moderators via `[ MOD LIVE CONSOLE ]`, keeping regular fans focused on the live Reddit comment stream.
 - Added `updatedHub` payload to realtime `result` broadcasts and implemented `hub_updated` realtime event dispatch so championship belt changes, defense increments, and superstar stats update live on user status cards without requiring a page refresh.
 - Resolved duplicate HTML markup in the moderator impromptu add-match tray.
-
-0.0.31 — 2026-11-09
-- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
