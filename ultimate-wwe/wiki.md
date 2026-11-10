@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.35  
+Version: v0.0.36  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -55,6 +55,16 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.36 — 2026-11-09
+- High-Intensity Flashing Winner Celebration (`WINNER!!`):
+- Upgraded winner badge to bold `WINNER!!` with high-frequency golden strobe aura (`@keyframes winner-badge-flash`).
+- Added radiant Champion Celebration Strobe (`@keyframes winner-celebration-strobe`) on the victor's contender card with glowing gold name typography and dimmed loser card state.
+- Energetic Flashing Live Match Header:
+- Added dynamic high-intensity broadcast strobe animation (`@keyframes live-header-raw-flash` and `@keyframes live-header-sd-flash`) to the live brand header badge (`RAW LIVE` / `SMACKDOWN LIVE`) whenever a match is actively in progress.
+- Added vibrant neon strobe pulse (`@keyframes live-chip-strobe`) to the active match chip (`M1 [LIVE]`).
+- Zero-Scroll Box Score Cleanup:
+- Removed the internal scrollable match result container (`#inline-boxscore-results-list`) from the post-show box score card, eliminating vertical scrollbars and arrows from the feed view in accordance with the Fleet Webview Zero-Scroll standard.
+
 0.0.35 — 2026-11-09
 - Minute In-Ring Celebration Window & Auto-Transition:
 - When a match concludes, the status page enters an active 2-minute live celebration mode (`[MATCH DECIDED]`) keeping crowd chant buttons active and live countdown clock running (`RECAP IN 01:59`).
@@ -81,13 +91,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Layout Height Optimization & Box Collision Elimination:
 - Replaced bulky overlapping `.winner-card-gold` box with a sleek `.inline-finished-strip` that prevents border collisions with contender cards.
 - Compacted the championship belt spotlight card in inline mode to guarantee zero vertical squashing or sliced elements.
-
-0.0.33 — 2026-11-09
-- Resilient Realtime Status Page Synchronization & Channel Standardization:
-- Upgraded live status page synchronization to use Devvit's native postMessage realtime bridge protocol (`EFFECT_REALTIME_SUB`).
-- Standardized realtime channel naming format to strictly alphanumeric and underscore (`wwe_show_`) preventing Devvit channel naming validation rejections.
-- Added resilient mode-aware 4-second polling sync with immediate visibility/focus refresh to guarantee status cards stay 100% in sync with in-ring actions.
-- Updated `finish_match` mod endpoint to include synchronized Hub state in the direct HTTP response.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
