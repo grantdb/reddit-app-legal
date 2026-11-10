@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.34  
+Version: v0.0.35  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -55,6 +55,20 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.35 — 2026-11-09
+- Minute In-Ring Celebration Window & Auto-Transition:
+- When a match concludes, the status page enters an active 2-minute live celebration mode (`[MATCH DECIDED]`) keeping crowd chant buttons active and live countdown clock running (`RECAP IN 01:59`).
+- At the end of the 2-minute celebration window, the card automatically transitions into the full celebratory Pyro Victory Banner.
+- Spectacle Pyro Victory Banner on User Status Page:
+- Added full celebratory Pyro Victory Banner with 6 floating golden spark embers (`.pyro-spark spark-1...6`), golden strobe aura, match duration badge (`OFFICIAL DURATION`), and fan consensus accuracy ribbon (`100% of fans predicted this win`).
+- Streamlined User View & Star Rating Removal:
+- Removed 5-star rating rows from the status page, maximizing vertical headroom for contender cards and celebratory graphics.
+- Superstars Tale of the Tape & Center Title Belt:
+- Added finisher pills (`Finisher: Spear`, `Finisher: Uso Splash`) on contender cards.
+- Added glowing gold championship title line (`[TITLE] `) beneath the central VS circle.
+- Mod View Performance Streamlining:
+- Stripped decorative pyro particles and strobe animations from the Expanded Mod View for a fast, high-contrast operational cockpit.
+
 0.0.34 — 2026-11-09
 - Live Crowd Chants Soundboard on Status Page:
 - Added 4 interactive crowd chant buttons (`AWESOME!`, `LET'S GO!`, `KICKOUT!`, `HOLY S*!`) with real-time counter updates directly on the inline live status page.
@@ -74,22 +88,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Standardized realtime channel naming format to strictly alphanumeric and underscore (`wwe_show_`) preventing Devvit channel naming validation rejections.
 - Added resilient mode-aware 4-second polling sync with immediate visibility/focus refresh to guarantee status cards stay 100% in sync with in-ring actions.
 - Updated `finish_match` mod endpoint to include synchronized Hub state in the direct HTTP response.
-
-0.0.32 — 2026-11-09
-- Zero-Scroll Click-Tab Navigation & Interactive Megathread Status Page:
-- Added top-level zero-scroll click tabs: `[ MATCHES ]`, `[ CHAMPIONSHIPS ]`, and `[ ROSTER STATS ]` directly within the inline status unit.
-- Eliminated internal horizontal scrolling; converted match strip into discrete clickable match chip buttons (`.inline-chip-btn`).
-- Added dedicated click-paginated Championships spotlight with champion details, reign days, and historical lineage.
-- Added dedicated click-paginated Roster Records card stack (3 per view) with W/L records and win/loss streak tags.
-- Tap Toggle Predictions & Interactive Contender Cards:
-- Transformed Contender cards into direct 1-tap interactive targets with active glowing highlights and `[ YOUR PICK ]` badges.
-- Upgraded `/api/live/predict` server endpoint to support instant pick toggling and switching between contenders.
-- Added animated neon pulsing rings (`@keyframes pulse-live-contender`) and gold shimmers to active contenders during live matches.
-- Added graphic golden laurel victory stamp (`.winner-card-gold`, `.winner-graphic-badge`) and pick outcome indicators (`[YOUR PICK WON]` / `[YOUR PICK LOST]`) on finished matches.
-- Moderator Role Isolation & Realtime Hub Synchronization:
-- Restricted full expanded arena mode exclusively to moderators via `[ MOD LIVE CONSOLE ]`, keeping regular fans focused on the live Reddit comment stream.
-- Added `updatedHub` payload to realtime `result` broadcasts and implemented `hub_updated` realtime event dispatch so championship belt changes, defense increments, and superstar stats update live on user status cards without requiring a page refresh.
-- Resolved duplicate HTML markup in the moderator impromptu add-match tray.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
