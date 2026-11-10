@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.38  
+Version: v0.0.39  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -55,6 +55,20 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.39 — 2026-11-09
+- Chants Active Lifecycle & Next Match Scoping:
+- Scoped chants dynamically to each match: chant soundboard remains active on a finished match until the next match on the card begins (becomes live or finished).
+- Main Event / final match retains its victory takeover card and chant soundboard.
+- End-of-Show Official Recap & Box Score Tab:
+- Removed per-match recap countdown badge and automatic boxscore replacement on individual matches.
+- Added dedicated `[SHOW RECAP]` tab to the match strip when the show is completed (`currentShow.status === "completed"`), allowing fans to view the official boxscore and show grade at the end of the show while preserving full match result history.
+- Prediction Voting Lock on Match Start:
+- Enforced strict closure of prediction picks and voting once a match transitions out of `upcoming` (to `live` or `finished`), hiding action CTAs and disabling contender voting buttons across client and server.
+- High-Impact Visual Upgrades:
+- Winner contender card features a clean, crisp 2px gold highlight without blinding strobes.
+- Big winner victory takeover box pulses gently (`victory-box-pulse`).
+- Winner name shimmers with high-contrast metallic gold text gradient (`winner-name-shimmer-fast`).
+
 0.0.38 — 2026-11-09
 - Reliable Crowd Chants During In-Ring Celebration:
 - Broadcast `endedAt` in the server's `result` delta so clients receive the completion timestamp instantly.
@@ -80,16 +94,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Single Unified Match Victory Takeover Card:
 - Replaced disjointed multiple bottom winner blocks with a single unified Match Victory Takeover Card (`#inline-victory-takeover`).
 - Seamlessly integrates floating sparks, champion winner headline, celebration chant soundboard with real-time countdown clock (`RECAP IN 01:51`), and prediction consensus ribbon into a single cohesive bottom takeover.
-
-0.0.36 — 2026-11-09
-- High-Intensity Flashing Winner Celebration (`WINNER!!`):
-- Upgraded winner badge to bold `WINNER!!` with high-frequency golden strobe aura (`@keyframes winner-badge-flash`).
-- Added radiant Champion Celebration Strobe (`@keyframes winner-celebration-strobe`) on the victor's contender card with glowing gold name typography and dimmed loser card state.
-- Energetic Flashing Live Match Header:
-- Added dynamic high-intensity broadcast strobe animation (`@keyframes live-header-raw-flash` and `@keyframes live-header-sd-flash`) to the live brand header badge (`RAW LIVE` / `SMACKDOWN LIVE`) whenever a match is actively in progress.
-- Added vibrant neon strobe pulse (`@keyframes live-chip-strobe`) to the active match chip (`M1 [LIVE]`).
-- Zero-Scroll Box Score Cleanup:
-- Removed the internal scrollable match result container (`#inline-boxscore-results-list`) from the post-show box score card, eliminating vertical scrollbars and arrows from the feed view in accordance with the Fleet Webview Zero-Scroll standard.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
