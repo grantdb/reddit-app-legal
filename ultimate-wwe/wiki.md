@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.37  
+Version: v0.0.38  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -55,6 +55,21 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.38 — 2026-11-09
+- Reliable Crowd Chants During In-Ring Celebration:
+- Broadcast `endedAt` in the server's `result` delta so clients receive the completion timestamp instantly.
+- Resolved matches by `matchId` first in `initChantDelegation` to avoid index desynchronization.
+- Kept chant soundboard buttons active and reliably armed through the celebration window.
+- Minute Recap Countdown:
+- Reduced the post-match in-ring celebration window from 2 minutes (120s) down to 1 minute (60s) across client countdown timer and server `/api/live/reaction` validation gate.
+- Set default placeholder badge to `RECAP IN 01:00`.
+- Persistent Match ID Tracking on Reorders (`move_match`):
+- Added `activeMatchId` state tracking across all show updates, tab switches, and mod reorders.
+- When matches are moved up or down, the view follows the active match persistently instead of shifting to a different match.
+- Clean Match Reset / Restart & Automatic Recap Trigger:
+- When the celebration countdown hits `00:00`, explicitly invoked `renderInlineFinishedMatch(match)` to seamlessly transition from celebration soundboard to official recap summary.
+- Added clean timer cancellation (`stopCelebrationTimer()`) and UI wiping in `match.status === "upcoming"` and `match.status === "live"`, preventing stale winner boxes or intervals on match restarts.
+
 0.0.37 — 2026-11-09
 - Active Crowd Chants During Winner Celebration & Match Reset:
 - Allowed chant reactions to be processed on both server and client during the post-match 2-minute celebration window.
@@ -75,20 +90,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Added vibrant neon strobe pulse (`@keyframes live-chip-strobe`) to the active match chip (`M1 [LIVE]`).
 - Zero-Scroll Box Score Cleanup:
 - Removed the internal scrollable match result container (`#inline-boxscore-results-list`) from the post-show box score card, eliminating vertical scrollbars and arrows from the feed view in accordance with the Fleet Webview Zero-Scroll standard.
-
-0.0.35 — 2026-11-09
-- Minute In-Ring Celebration Window & Auto-Transition:
-- When a match concludes, the status page enters an active 2-minute live celebration mode (`[MATCH DECIDED]`) keeping crowd chant buttons active and live countdown clock running (`RECAP IN 01:59`).
-- At the end of the 2-minute celebration window, the card automatically transitions into the full celebratory Pyro Victory Banner.
-- Spectacle Pyro Victory Banner on User Status Page:
-- Added full celebratory Pyro Victory Banner with 6 floating golden spark embers (`.pyro-spark spark-1...6`), golden strobe aura, match duration badge (`OFFICIAL DURATION`), and fan consensus accuracy ribbon (`100% of fans predicted this win`).
-- Streamlined User View & Star Rating Removal:
-- Removed 5-star rating rows from the status page, maximizing vertical headroom for contender cards and celebratory graphics.
-- Superstars Tale of the Tape & Center Title Belt:
-- Added finisher pills (`Finisher: Spear`, `Finisher: Uso Splash`) on contender cards.
-- Added glowing gold championship title line (`[TITLE] `) beneath the central VS circle.
-- Mod View Performance Streamlining:
-- Stripped decorative pyro particles and strobe animations from the Expanded Mod View for a fast, high-contrast operational cockpit.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
