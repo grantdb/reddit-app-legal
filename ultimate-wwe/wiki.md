@@ -1,7 +1,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.32  
+Version: v0.0.33  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -55,6 +55,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.33 — 2026-11-09
+- Resilient Realtime Status Page Synchronization & Channel Standardization:
+- Upgraded live status page synchronization to use Devvit's native postMessage realtime bridge protocol (`EFFECT_REALTIME_SUB`).
+- Standardized realtime channel naming format to strictly alphanumeric and underscore (`wwe_show_`) preventing Devvit channel naming validation rejections.
+- Added resilient mode-aware 4-second polling sync with immediate visibility/focus refresh to guarantee status cards stay 100% in sync with in-ring actions.
+- Updated `finish_match` mod endpoint to include synchronized Hub state in the direct HTTP response.
+
 0.0.32 — 2026-11-09
 - Zero-Scroll Click-Tab Navigation & Interactive Megathread Status Page:
 - Added top-level zero-scroll click tabs: `[ MATCHES ]`, `[ CHAMPIONSHIPS ]`, and `[ ROSTER STATS ]` directly within the inline status unit.
@@ -73,24 +80,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 0.0.31 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
-
-0.0.30 — 2026-11-08
-- Live Megathread Status Page Scoreboard:
-- Added horizontal scrolling match card strip (`#inline-card-strip`) rendering all scheduled matches, real-time status pills (`[LIVE]`, `[FINAL]`, `[UPCOMING]`), and 1-tap match switching directly on the status card.
-- Added personal picks tracking badge (`#inline-user-picks-badge`, e.g. `MY PICKS: 3-1`).
-- Added dynamic superstar sub-stats (`#inline-substat-a/b`) showing season win/loss records, current streaks, and champion designations directly on contender cards.
-- Enhanced finished match state with full consensus breakdown (percentage and total vote counts), user pick result tag (`[YOUR PICK WON]` / `[YOUR PICK LOST]`), and post-match 1-5 star ratings directly in feed mode.
-- Moderator Match & Wrestler Studio Enhancements:
-- Added match card reordering (`[ MOVE UP ]` / `[ MOVE DOWN ]`), match deletion (`[ DELETE MATCH ]`), and event reopening (`[ REOPEN SHOW ]`).
-- Added Championship Belt selector dropdown and stipulation quick-chips (`Singles`, `Tag Team`, `Triple Threat`, `Fatal 4-Way`, `Street Fight`, `Steel Cage`, `Ladder`) in match customizer and impromptu match trays.
-- Added global superstar autocomplete datalist across all match editor and curator inputs.
-- Added Hub Schedule Bulk Import (`[ LOAD FROM HUB SCHEDULE ]`) to instantly populate the live match card from upcoming confirmed PLE/show cards.
-- Added in-feed moderator shortcut button (`[ EDIT CARD ]`) visible only to moderators in inline status view.
-- Built full Hub Curator Studio (`#hub-mod-bar`) with dedicated editing panels to update championship belt lineages, superstar rosters (W/L, streaks, finishers), and upcoming event fight cards.
-- Platform & Realtime Reliability:
-- Canonical Devvit realtime subscription using `@devvit/web/client` connection semantics and fixed redis channel naming `wwe-show-${showId}`.
-- Replaced native `alert()` modal dialogs with non-blocking inline transient toasts to prevent webview thread freezes.
-- Added champion defense counter auto-increment upon successful title defense finishes.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
