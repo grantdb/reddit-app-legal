@@ -19,8 +19,6 @@
 - **Enhanced Comment Commands**: Quick moderator commands (`!sticky 1 24h`, `!sticky 2 3d`, `!sticky 3`, `!unsticky`) available as fast mobile and desktop shortcuts.
 - **Reliable Deliveries**: Automatically retries and bypasses platform rate limits when posting, ensuring your moderation actions never fail silently.
 
----
-
 ## How It Works
 
 ![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sticky-pro-flowchart.png)
@@ -32,6 +30,8 @@
 3. **Publish**: Sticky Pro retrieves the template markdown or custom input, distinguishes the comment as an official moderator action, pins it to top if requested, and locks it against user replies.
 4. **Timer / Expiry**: If a duration timer is specified, a scheduled background job (`unsticky_timer`) automatically unpins/removes the sticky when time expires.
 5. **Removal**: Selecting **Remove Active Sticky** in the popout or commenting `!unsticky` immediately cleans up the active sticky comment.
+
+---
 
 ---
 

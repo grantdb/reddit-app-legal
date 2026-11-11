@@ -14,7 +14,6 @@
 <li><strong>Enhanced Comment Commands</strong>: Quick moderator commands (`!sticky 1 24h`, `!sticky 2 3d`, `!sticky 3`, `!unsticky`) available as fast mobile and desktop shortcuts.</li>
 <li><strong>Reliable Deliveries</strong>: Automatically retries and bypasses platform rate limits when posting, ensuring your moderation actions never fail silently.</li>
 </ul>
-<p>---</p>
 <h2>How It Works</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sticky-pro-flowchart.png">Logic Flowchart</a></p>
 <h3>Workflow Steps</h3>
@@ -23,6 +22,7 @@
 <p>3. <strong>Publish</strong>: Sticky Pro retrieves the template markdown or custom input, distinguishes the comment as an official moderator action, pins it to top if requested, and locks it against user replies.</p>
 <p>4. <strong>Timer / Expiry</strong>: If a duration timer is specified, a scheduled background job (`unsticky_timer`) automatically unpins/removes the sticky when time expires.</p>
 <p>5. <strong>Removal</strong>: Selecting <strong>Remove Active Sticky</strong> in the popout or commenting `!unsticky` immediately cleans up the active sticky comment.</p>
+<p>---</p>
 <p>---</p>
 <h2>Setup & Configuration</h2>
 <p>1. <strong>Install</strong>: Add <strong>Sticky Pro</strong> to your subreddit via the Reddit App Directory.</p>

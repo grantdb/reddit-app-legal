@@ -1,7 +1,7 @@
 <h1>Sticky-Pro</h1>
 
 <p>Category: Moderation<br>
-Version: v1.0.122<br>
+Version: v1.0.123<br>
 Visibility: Public<br>
 Summary: Automated moderator sticky suite with dynamic form population.</p>
 
@@ -32,9 +32,9 @@ Summary: Automated moderator sticky suite with dynamic form population.</p>
 <h2>Triggers and Activation</h2>
 <h3>Event Triggers</h3>
 <ul>
-<li>PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.</li>
-<li>PostCreate: Delivered by Reddit event router to endpoint /internal/on-post-create.</li>
-<li>CommentSubmit: Delivered by Reddit event router to endpoint /internal/on-comment-submit.</li>
+<li>CommentSubmit: Subscribed in main.ts via Devvit.addTrigger({ event: 'CommentSubmit' }).</li>
+<li>PostSubmit: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostSubmit' }).</li>
+<li>PostCreate: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostCreate' }).</li>
 </ul>
 <h3>Menu Actions</h3>
 <ul>
@@ -101,11 +101,11 @@ Summary: Automated moderator sticky suite with dynamic form population.</p>
 </ul>
 
 <h2>Version History</h2>
+<p>1.0.123 — 2026-11-11<br>
+Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.</p>
 <p>1.0.122 — 2026-10-26<br>
 Standard fleet synchronization and maintenance.</p>
 <p>1.0.121 — 2026-10-20<br>
-Standard fleet synchronization and maintenance.</p>
-<p>1.0.120 — 2026-10-20<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
