@@ -1,7 +1,7 @@
 # AutoMod Easy
 
 Category: Moderation  
-Version: v0.0.155  
+Version: v0.0.156  
 Visibility: Public  
 Summary: No-code visual rule builder and testing studio for AutoModerator.
 
@@ -57,6 +57,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.156 — 2026-11-11
+- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
+
 0.0.155 — 2026-10-28
 - Standard fleet synchronization and maintenance.
 
@@ -65,14 +68,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Enforcement-Action Gating: Disabled and server-gated unsupported enforcement actions (`action: filter`, `action: remove`, `action: spam`, `action: approve`) when Rules Hub is detected, protecting moderators with clear guidance toward Rules Hub alternatives while preserving non-enforcement features (notifications, reports, syntax checking, sandbox testing, and snapshots).
 - Rules Hub & Automations Migration Advisor: Added dedicated Migration Advisor client workspace (`MigrationTab`) and server endpoint (`/api/automod/migration-suggestion`) to map common AutoMod patterns to natural-language intent policies with copyable modern equivalent descriptions and starting-point guidance.
 - Conservative Fallback: Undetermined communities without definitive platform signals are treated conservatively as `unknown`, allowing full drafting and validation with non-blocking pre-deployment advisory warnings.
-
-0.0.154 — 2026-10-27
-- Browser History & Backtrack Coordinator: Implemented depth-aware history coordination (`pushState`/`popstate`) for in-place tab backtracking; clicking browser back now navigates backward between tabs and returns to the inline card without ejecting the user to the subreddit feed.
-- Automated Pre-Mutation Snapshots: Implemented server-side automated rollback snapshots before any wiki mutation (`onAppendRule`, `onSaveFullConfig`, `onRestoreBackup`), guaranteeing an immediate recovery point before touching `config/automoderator`.
-- Granular Wiki Permission Enforcement: Restricted all AutoModerator mutation and snapshot endpoints to moderators holding `all` or `wiki` permissions via `user.getModPermissionsForSubreddit`.
-- Backup Deduplication & Storage Optimization: Deduplicated identical consecutive snapshots and capped retention at 20 unique snapshots to prevent Redis payload bloat and timeouts.
-- Stealth Dashboard Lockdown: Automatically locked stealth dashboard custom posts upon creation and retroactively locked on access to prevent unauthorized commenting.
-- Standards & Emoji Compliance: Removed literal unicode emoji from inline CTA button and aligned inline feed card label to `Wiki snapshots`.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/automod-easy/TERMS.md)
