@@ -1,7 +1,7 @@
 # AI Checker
 
 Category: Security  
-Version: v0.0.90  
+Version: v0.0.91  
 Visibility: Public  
 Summary: Moderator-triggered AI detection engine. Upgraded to native Gemini 1.5 Flash for high-speed analysis.
 
@@ -77,6 +77,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.91 — 2026-11-11
+- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
+
 0.0.90 — 2026-11-04
 - Standard fleet synchronization and maintenance.
 
@@ -85,9 +88,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Aligned devvit.json manifest trigger declaration with Blocks runtime container standards by migrating trigger to blocks.triggers, resolving repeated /internal/on-post-create fetch failure errors.
 - Enhanced Gemini API error handling to extract clear, concise error messages from API responses.
 - Added comprehensive Vitest unit test suite covering GeminiAdapter text and image payload structures, 1-10 scoring normalization, and error handling.
-
-0.0.89 — 2026-10-26
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ai-checker/TERMS.md)
