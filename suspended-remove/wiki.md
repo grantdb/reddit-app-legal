@@ -1,7 +1,7 @@
 # Suspended Remove
 
 Category: Security  
-Version: v1.0.91  
+Version: v1.0.92  
 Visibility: Public  
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.
 
@@ -73,13 +73,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.92 — 2026-11-11
+- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
+
 1.0.91 — 2026-10-26
 - Standard fleet synchronization and maintenance.
 
 1.0.90 — 2026-10-20
-- Standard fleet synchronization and maintenance.
-
-1.0.89 — 2026-10-20
 - Standard fleet synchronization and maintenance.
 
 ## Links

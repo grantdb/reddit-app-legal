@@ -12,6 +12,13 @@
 <li><strong>Detailed Mod Notes</strong>: Attach custom internal mod notes and user profile notes at every stage of the check.</li>
 <li><strong>Background queue scanning</strong>: Continuously scans posts and comments across modqueue and spam folders.</li>
 </ul>
+<h2>How It Works</h2>
+<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/suspended-remove-flowchart.png">Logic Flowchart</a></p>
+<h3>Your Four-Step Workflow</h3>
+<p>1. <strong>Scan</strong>: Suspended Remove scans posts and comments across your subreddit's modqueue and spam queue.</p>
+<p>2. <strong>Verify</strong>: The engine tests author profile accessibility against the Reddit User API.</p>
+<p>3. <strong>Hold</strong>: On the first confirmed inaccessibility, your chosen waiting-period action (*Filter & Hide*, *Filter & Keep Public*, or *Temp Remove*) is applied.</p>
+<p>4. <strong>Action, Purge or Recover</strong>: If the account remains inaccessible after all scheduled checks, the final action executes; if Historical Cleanup is enabled, previous submissions by the suspended author are cleared; if the account recovers, the post is automatically approved.</p>
 <p>---</p>
 <h2>Built for Queue Hygiene & Safe Verification</h2>
 <ul>
@@ -27,13 +34,6 @@
 <li><strong>Native Settings Control</strong>: Configure confirmation check counts, waiting modes, removal actions, and historical cleanup directly in Subreddit Mod Tools.</li>
 </ul>
 <p>---</p>
-<h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/suspended-remove-flowchart.png">Logic Flowchart</a></p>
-<h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Scan</strong>: Suspended Remove scans posts and comments across your subreddit's modqueue and spam queue.</p>
-<p>2. <strong>Verify</strong>: The engine tests author profile accessibility against the Reddit User API.</p>
-<p>3. <strong>Hold</strong>: On the first confirmed inaccessibility, your chosen waiting-period action (*Filter & Hide*, *Filter & Keep Public*, or *Temp Remove*) is applied.</p>
-<p>4. <strong>Action, Purge or Recover</strong>: If the account remains inaccessible after all scheduled checks, the final action executes; if Historical Cleanup is enabled, previous submissions by the suspended author are cleared; if the account recovers, the post is automatically approved.</p>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>Suspended Remove</strong> to your subreddit through the Reddit App Directory.</p>

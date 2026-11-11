@@ -17,6 +17,17 @@ Suspended Remove safely clears content left behind by suspended, deleted, or sha
 - **Detailed Mod Notes**: Attach custom internal mod notes and user profile notes at every stage of the check.
 - **Background queue scanning**: Continuously scans posts and comments across modqueue and spam folders.
 
+## How It Works
+
+![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/suspended-remove-flowchart.png)
+
+### Your Four-Step Workflow
+
+1. **Scan**: Suspended Remove scans posts and comments across your subreddit's modqueue and spam queue.
+2. **Verify**: The engine tests author profile accessibility against the Reddit User API.
+3. **Hold**: On the first confirmed inaccessibility, your chosen waiting-period action (*Filter & Hide*, *Filter & Keep Public*, or *Temp Remove*) is applied.
+4. **Action, Purge or Recover**: If the account remains inaccessible after all scheduled checks, the final action executes; if Historical Cleanup is enabled, previous submissions by the suspended author are cleared; if the account recovers, the post is automatically approved.
+
 ---
 
 ## Built for Queue Hygiene & Safe Verification
@@ -33,17 +44,6 @@ Suspended Remove safely clears content left behind by suspended, deleted, or sha
 - **Native Settings Control**: Configure confirmation check counts, waiting modes, removal actions, and historical cleanup directly in Subreddit Mod Tools.
 
 ---
-
-## How It Works
-
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/suspended-remove-flowchart.png)
-
-### Your Four-Step Workflow
-
-1. **Scan**: Suspended Remove scans posts and comments across your subreddit's modqueue and spam queue.
-2. **Verify**: The engine tests author profile accessibility against the Reddit User API.
-3. **Hold**: On the first confirmed inaccessibility, your chosen waiting-period action (*Filter & Hide*, *Filter & Keep Public*, or *Temp Remove*) is applied.
-4. **Action, Purge or Recover**: If the account remains inaccessible after all scheduled checks, the final action executes; if Historical Cleanup is enabled, previous submissions by the suspended author are cleared; if the account recovers, the post is automatically approved.
 
 ---
 
