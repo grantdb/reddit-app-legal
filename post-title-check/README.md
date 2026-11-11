@@ -16,17 +16,18 @@ Post Title Check ensures your subreddit feed stays readable, informative, and cl
 - **Copy & Resubmit guidance**: Provide authors with their original text and clear instructions to fix formatting.
 - **Distinguished sticky notices**: Leave clear, public removal comments explaining community guidelines.
 
+## How It Works
+
+![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/post-title-check-flowchart.png)
+
+### Your Four-Step Workflow
+
+1. **Submit**: A user submits a new post to the subreddit.
+2. **Evaluate**: Post Title Check evaluates the title against active formatting, word count, and banned phrase rules.
+3. **Action**: If a violation is detected, the post is removed and a distinguished sticky comment is published.
+4. **Guide**: The author receives a private message with their original text and instructions to correct and resubmit.
+
 ---
-
-## The Old Way vs. The Post Title Check Way
-
-| Traditional Workflow | With Post Title Check |
-| :--- | :--- |
-| Writing complex AutoMod regex for title formatting | **Clean settings toggles** for word counts, tags, and banned words |
-| Manually removing vague one-word post titles | **Instant automated validation** on every new submission |
-| Typing repetitive mod comments explaining title rules | **Dynamic template messages** with `{phrase}` and `{minWordCount}` |
-| Frustrated users asking modmail why their post was removed | **Private author message** with a ready-to-use "Copy & Resubmit" snippet |
-| Accidental removal of daily moderator announcements | **Built-in moderator exemption toggle** bypassing checks automatically |
 
 ---
 
@@ -40,17 +41,6 @@ Post Title Check ensures your subreddit feed stays readable, informative, and cl
 - **Native Settings Control**: Configure all rules and custom messages directly within Subreddit Mod Tools.
 
 ---
-
-## How It Works
-
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/post-title-check-flowchart.png)
-
-### Your Four-Step Workflow
-
-1. **Submit**: A user submits a new post to the subreddit.
-2. **Evaluate**: Post Title Check evaluates the title against active formatting, word count, and banned phrase rules.
-3. **Action**: If a violation is detected, the post is removed and a distinguished sticky comment is published.
-4. **Guide**: The author receives a private message with their original text and instructions to correct and resubmit.
 
 ---
 

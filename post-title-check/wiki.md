@@ -1,7 +1,7 @@
 # Post Title Check
 
 Category: Validation  
-Version: v0.0.90  
+Version: v0.0.91  
 Visibility: Public  
 Summary: Real-time title validation against community guidelines. Now with support for customizable removal reasons per rule.
 
@@ -20,8 +20,8 @@ Real-time title validation against community guidelines. Now with support for cu
 
 ## Triggers and Activation
 ### Menu Actions
-- PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.
-- PostCreate: Delivered by Reddit event router to endpoint /internal/on-post-create.
+- PostSubmit: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostSubmit' }).
+- PostCreate: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostCreate' }).
 - AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).
 - AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).
 
@@ -71,13 +71,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.91 — 2026-11-11
+- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
+
 0.0.90 — 2026-10-26
 - Standard fleet synchronization and maintenance.
 
 0.0.89 — 2026-10-20
-- Standard fleet synchronization and maintenance.
-
-0.0.88 — 2026-10-19
 - Standard fleet synchronization and maintenance.
 
 ## Links

@@ -1,7 +1,7 @@
 <h1>Post Title Check</h1>
 
 <p>Category: Validation<br>
-Version: v0.0.90<br>
+Version: v0.0.91<br>
 Visibility: Public<br>
 Summary: Real-time title validation against community guidelines. Now with support for customizable removal reasons per rule.</p>
 
@@ -20,8 +20,8 @@ Summary: Real-time title validation against community guidelines. Now with suppo
 <h2>Triggers and Activation</h2>
 <h3>Event Triggers</h3>
 <ul>
-<li>PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.</li>
-<li>PostCreate: Delivered by Reddit event router to endpoint /internal/on-post-create.</li>
+<li>PostSubmit: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostSubmit' }).</li>
+<li>PostCreate: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostCreate' }).</li>
 <li>AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).</li>
 <li>AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).</li>
 </ul>
@@ -79,11 +79,11 @@ Summary: Real-time title validation against community guidelines. Now with suppo
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.91 — 2026-11-11<br>
+Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.</p>
 <p>0.0.90 — 2026-10-26<br>
 Standard fleet synchronization and maintenance.</p>
 <p>0.0.89 — 2026-10-20<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.88 — 2026-10-19<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
