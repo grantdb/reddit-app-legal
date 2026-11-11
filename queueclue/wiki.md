@@ -1,7 +1,7 @@
 # QueueClue
 
 Category: Utility  
-Version: v0.0.18  
+Version: v0.0.19  
 Visibility: Public  
 Summary: Find the available source and reason behind a queue item.
 
@@ -60,6 +60,15 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.19 — 2026-11-11
+- Unified timeline evidence presentation: unhides mod log details, removal reasons, and mod notes when ModAction removal history is present instead of returning early on actor/timestamp.
+- Stickied & distinguished removal comment detection: extracts public removal notices left by moderators or AutoModerator directly quoting rules or instructions.
+- Plain-English platform removal categories: translates raw `removedByCategory` values (`automod_filtered`, `reddit`, `anti_evil_ops`, `copyright_takedown`, etc.) into actionable descriptions with administrative context.
+- Author community records summary: parses author mod notes to surface prior community history (removals, warnings, bans, spam flags) at a glance.
+- Extended author signals: surfaces community-specific karma breakdown, email verification state, and approved contributor / ban flags alongside global age and karma.
+- Structured non-PII operational diagnostics: emits `event=inspection_diagnostics` recording branch, evidence sources consulted, and new information yield without logging usernames.
+- Capture AutoModerator filter event author in persistent storage.
+
 0.0.18 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
@@ -72,9 +81,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Author account signals for unstated AutoMod rules: safely fetches account age at post time and karma on-demand to explain AutoMod rules with "No reason supplied", backed by configurable settings toggle (`showAuthorContext`).
 - Comment crowd control & collapsed reasons: surfaces exact `collapsedReason` and crowd control flags on comments.
 - Link post domain and grouped reports: highlights submitted domains and groups community reports.
-
-0.0.16 — 2026-11-05
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/TERMS.md)
