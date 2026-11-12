@@ -1,7 +1,7 @@
 # Sticky-Pro
 
 Category: Moderation  
-Version: v1.0.123  
+Version: v1.0.124  
 Visibility: Public  
 Summary: Automated moderator sticky suite with dynamic form population.
 
@@ -82,13 +82,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.124 — 2026-11-12
+- Adoption of 3-tier documentation architecture, button-sized badges, and zero-squish responsive markdown pipeline cards.
+
 1.0.123 — 2026-11-11
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 1.0.122 — 2026-10-26
-- Standard fleet synchronization and maintenance.
-
-1.0.121 — 2026-10-20
 - Standard fleet synchronization and maintenance.
 
 ## Links

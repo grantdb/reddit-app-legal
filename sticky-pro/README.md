@@ -2,6 +2,8 @@
 
 # Sticky Pro
 
+`Platform: Reddit Devvit` · `Category: Moderation`
+
 > **Deploy pre-configured templates, write ad-hoc markdown notes, schedule expiration timers, and manage sticky comments.**
 
 **Sticky Pro** is a high-performance moderation tool designed to streamline the process of posting, customizing, and managing recurring sticky comments on community threads. Instead of keeping a notepad of common moderator responses, Sticky Pro allows your team to deploy pre-configured templates, write ad-hoc markdown notes, schedule auto-unsticky expiration timers, or remove active stickies natively from the Reddit interface.
@@ -19,19 +21,15 @@
 - **Enhanced Comment Commands**: Quick moderator commands (`!sticky 1 24h`, `!sticky 2 3d`, `!sticky 3`, `!unsticky`) available as fast mobile and desktop shortcuts.
 - **Reliable Deliveries**: Automatically retries and bypasses platform rate limits when posting, ensuring your moderation actions never fail silently.
 
-## How It Works
+---
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sticky-pro-flowchart.png)
-
-### Workflow Steps
+## Workflow Steps
 
 1. **Trigger**: A moderator selects **Sticky Pro** from a post menu, triggers a comment command (`!sticky 1 24h`), OR a new post triggers the auto-sticky feature.
 2. **Eligibility & Exemptions**: For auto-sticky, Sticky Pro evaluates moderator and app/bot author exemptions, followed by the Delayed Eligibility-First Gate. For manual posts, it automatically cleans up any previous sticky comment and timer on that post.
 3. **Publish**: Sticky Pro retrieves the template markdown or custom input, distinguishes the comment as an official moderator action, pins it to top if requested, and locks it against user replies.
 4. **Timer / Expiry**: If a duration timer is specified, a scheduled background job (`unsticky_timer`) automatically unpins/removes the sticky when time expires.
 5. **Removal**: Selecting **Remove Active Sticky** in the popout or commenting `!unsticky` immediately cleans up the active sticky comment.
-
----
 
 ---
 

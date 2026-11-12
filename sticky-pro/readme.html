@@ -1,5 +1,6 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/sticky-pro">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>Sticky Pro</h1>
+<p>`Platform: Reddit Devvit` · `Category: Moderation`</p>
 <blockquote><p><strong>Deploy pre-configured templates, write ad-hoc markdown notes, schedule expiration timers, and manage sticky comments.</strong></p></blockquote>
 <p><strong>Sticky Pro</strong> is a high-performance moderation tool designed to streamline the process of posting, customizing, and managing recurring sticky comments on community threads. Instead of keeping a notepad of common moderator responses, Sticky Pro allows your team to deploy pre-configured templates, write ad-hoc markdown notes, schedule auto-unsticky expiration timers, or remove active stickies natively from the Reddit interface.</p>
 <p>---</p>
@@ -14,15 +15,13 @@
 <li><strong>Enhanced Comment Commands</strong>: Quick moderator commands (`!sticky 1 24h`, `!sticky 2 3d`, `!sticky 3`, `!unsticky`) available as fast mobile and desktop shortcuts.</li>
 <li><strong>Reliable Deliveries</strong>: Automatically retries and bypasses platform rate limits when posting, ensuring your moderation actions never fail silently.</li>
 </ul>
-<h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sticky-pro-flowchart.png">Logic Flowchart</a></p>
-<h3>Workflow Steps</h3>
+<p>---</p>
+<h2>Workflow Steps</h2>
 <p>1. <strong>Trigger</strong>: A moderator selects <strong>Sticky Pro</strong> from a post menu, triggers a comment command (`!sticky 1 24h`), OR a new post triggers the auto-sticky feature.</p>
 <p>2. <strong>Eligibility & Exemptions</strong>: For auto-sticky, Sticky Pro evaluates moderator and app/bot author exemptions, followed by the Delayed Eligibility-First Gate. For manual posts, it automatically cleans up any previous sticky comment and timer on that post.</p>
 <p>3. <strong>Publish</strong>: Sticky Pro retrieves the template markdown or custom input, distinguishes the comment as an official moderator action, pins it to top if requested, and locks it against user replies.</p>
 <p>4. <strong>Timer / Expiry</strong>: If a duration timer is specified, a scheduled background job (`unsticky_timer`) automatically unpins/removes the sticky when time expires.</p>
 <p>5. <strong>Removal</strong>: Selecting <strong>Remove Active Sticky</strong> in the popout or commenting `!unsticky` immediately cleans up the active sticky comment.</p>
-<p>---</p>
 <p>---</p>
 <h2>Setup & Configuration</h2>
 <p>1. <strong>Install</strong>: Add <strong>Sticky Pro</strong> to your subreddit via the Reddit App Directory.</p>
