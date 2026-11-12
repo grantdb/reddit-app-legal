@@ -1,16 +1,16 @@
 {
   "slug": "sticky-pro",
   "title": "Sticky-Pro",
-  "version": "1.0.124",
+  "version": "1.0.125",
   "date": "2026-11-12",
   "category": "Moderation",
   "description": "Automated moderator sticky suite with dynamic form population.",
   "visibility": "Public",
-  "notes": "- Adoption of 3-tier documentation architecture, button-sized badges, and zero-squish responsive markdown pipeline cards.",
-  "postTitle": "[App Update] Sticky-Pro v1.0.124 Released",
-  "postBody": "# Sticky-Pro v1.0.124 is Now Available\n\n> **Automated moderator sticky suite with dynamic form population.**\n\n---\n\n### What's New in v1.0.124\n- Adoption of 3-tier documentation architecture, button-sized badges, and zero-squish responsive markdown pipeline cards.\n\n---\n\n### Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/sticky-pro)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sticky-pro-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/sticky-pro)\n\n---\n\n### How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Sticky-Pro** and click **Update** (or verify it displays `v1.0.124`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
+  "notes": "- Adoption of 3-tier documentation architecture, native markdown pill badges, and sanitization-proof markdown pipeline cards with zero raw HTML.",
+  "postTitle": "[App Update] Sticky-Pro v1.0.125 Released",
+  "postBody": "# Sticky-Pro v1.0.125 is Now Available\n\n> **Automated moderator sticky suite with dynamic form population.**\n\n---\n\n### What's New in v1.0.125\n- Adoption of 3-tier documentation architecture, native markdown pill badges, and sanitization-proof markdown pipeline cards with zero raw HTML.\n\n---\n\n### Key Capabilities & Highlights\n- **Category**: Moderation\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/sticky-pro)\n- **Architecture Flowchart**: [View Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sticky-pro-flowchart.png)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/sticky-pro)\n\n---\n\n### How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Sticky-Pro** and click **Update** (or verify it displays `v1.0.125`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Reply directly to this thread or submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/sticky-pro",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sticky-pro-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/sticky-pro",
-  "generatedAt": "2026-11-12T14:46:57.388Z"
+  "generatedAt": "2026-11-12T15:41:21.305Z"
 }
