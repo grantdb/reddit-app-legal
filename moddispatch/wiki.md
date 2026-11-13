@@ -1,7 +1,7 @@
 # Mod Dispatch
 
 Category: Moderation  
-Version: v0.0.4  
+Version: v0.0.5  
 Visibility: Unlisted  
 Summary: Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs to the Reddit mod queue.
 
@@ -36,15 +36,9 @@ Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs
 
 ## Triggers and Activation
 ### Menu Actions
-- Mod Dispatch: Claim for review: Moderator menu action (Location: subreddit)
-- Mod Dispatch: Release claim: Moderator menu action (Location: subreddit)
-- Mod Dispatch: Suggest to another mod: Moderator menu action (Location: subreddit)
-- Mod Dispatch: Hand off to another mod: Moderator menu action (Location: subreddit)
-- Mod Dispatch: Add shared note: Moderator menu action (Location: subreddit)
-- Mod Dispatch: Escalate: Moderator menu action (Location: subreddit)
-- Mod Dispatch: Mark resolved: Moderator menu action (Location: subreddit)
-- Mod Dispatch: View case status: Moderator menu action (Location: subreddit)
-- Mod Dispatch: Dashboard: Moderator menu action (Location: subreddit)
+- ModAction: Delivered by Reddit event router to endpoint /internal/on-mod-action.
+- AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.
+- AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-install.
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
@@ -52,7 +46,7 @@ Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- Subreddit: Release Reason (select, default: -). Release Reason
+- Subreddit: Choose Action (select, default: -). Choose Action
 
 ## Automation Capabilities
 - Submits Automated Comments: No — Does not submit automated comments.
@@ -72,21 +66,21 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Install App: Install Mod Dispatch on your subreddit via the Reddit Developer Portal.
 - Open Dashboard: From your subreddit menu, select Mod Dispatch: Dashboard to initialize the pinned control center.
 - Configure Team Rules: In the dashboard Settings tab, set your team claim timeout (default: 15 minutes) and designate senior moderators.
-- Coordinate from the Queue: Open any post or comment menu in your native Reddit queue to claim, suggest, or add shared notes.
+- Coordinate from the Queue: Open the unified Mod Dispatch menu item on any post or comment in your native Reddit queue to claim, release, add shared notes, suggest, hand off, escalate, resolve, or inspect case status.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.5 — 2026-11-13
+- Merge 16 post/comment menu triggers into unified Mod Dispatch menu, implement all /internal/form/* handlers with Form specs, and add live getModQueue() sync
+
 0.0.4 — 2026-11-13
 - Security & efficiency hardening: fail-closed moderator auth, webhook SSRF/masking/senior-mod guard, redis.mGet batching, atomic forceSetLock override, realtime broadcasts, and README standardization.
 
 0.0.3 — 2026-11-09
 - Standard fleet synchronization and maintenance.
-
-0.0.2 — 2026-11-09
-- Initial release of Mod Dispatch: shared ownership, atomic claims, suggestions, handoffs, and canonical scroller status dashboard.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/moddispatch/TERMS.md)

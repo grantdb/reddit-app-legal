@@ -63,7 +63,7 @@ Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs
 1. **Install App**: Install Mod Dispatch on your subreddit via the Reddit Developer Portal.
 2. **Open Dashboard**: From your subreddit menu, select **Mod Dispatch: Dashboard** to initialize the pinned control center.
 3. **Configure Team Rules**: In the dashboard Settings tab, set your team claim timeout (default: 15 minutes) and designate senior moderators.
-4. **Coordinate from the Queue**: Open any post or comment menu in your native Reddit queue to claim, suggest, or add shared notes.
+4. **Coordinate from the Queue**: Open the unified **Mod Dispatch** menu item on any post or comment in your native Reddit queue to claim, release, add shared notes, suggest, hand off, escalate, resolve, or inspect case status.
 
 ---
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T01:17:31.336Z",
+  "generatedAt": "2026-11-13T10:26:53.867Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -3173,7 +3173,7 @@
         "Install App: Install Mod Dispatch on your subreddit via the Reddit Developer Portal.",
         "Open Dashboard: From your subreddit menu, select Mod Dispatch: Dashboard to initialize the pinned control center.",
         "Configure Team Rules: In the dashboard Settings tab, set your team claim timeout (default: 15 minutes) and designate senior moderators.",
-        "Coordinate from the Queue: Open any post or comment menu in your native Reddit queue to claim, suggest, or add shared notes."
+        "Coordinate from the Queue: Open the unified Mod Dispatch menu item on any post or comment in your native Reddit queue to claim, release, add shared notes, suggest, hand off, escalate, resolve, or inspect case status."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -3200,17 +3200,7 @@
         "AppInstall",
         "AppUpgrade"
       ],
-      "menuItems": [
-        "Mod Dispatch: Claim for review",
-        "Mod Dispatch: Release claim",
-        "Mod Dispatch: Suggest to another mod",
-        "Mod Dispatch: Hand off to another mod",
-        "Mod Dispatch: Add shared note",
-        "Mod Dispatch: Escalate",
-        "Mod Dispatch: Mark resolved",
-        "Mod Dispatch: View case status",
-        "Mod Dispatch: Dashboard"
-      ],
+      "menuItems": [],
       "settingsCount": 1,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/moddispatch",
@@ -3224,7 +3214,7 @@
         "troubleshooting": "Check the Mod Dispatch troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-11-09"
+      "lastUpdated": "2026-11-13"
     }
   ]
 }
