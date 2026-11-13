@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T00:19:33.468Z",
+  "generatedAt": "2026-11-13T00:59:04.465Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2486,7 +2486,11 @@
         "support",
         "referencereplybot"
       ],
-      "setupSteps": [],
+      "setupSteps": [
+        "Install: Add Reference Reply Bot to your subreddit and ensure a `Fixed` post flair template exists.",
+        "Configure: Open Mod Tools > App Settings > Reference Reply Bot to adjust `supportFlairs`, `completenessThreshold`, `fixedFlairName`, and `fixedFollowUpText`.",
+        "Seed Knowledge: Open the subreddit `...` menu and run GrantDB Support: Moderator Hub > Seed / Sync Knowledge Database (auto-seeds on first post if empty)."
+      ],
       "commonIssues": [],
       "troubleshooting": {
         "install_setup": [],

@@ -1,7 +1,7 @@
 <h1>Reference Reply Bot</h1>
 
 <p>Category: Support<br>
-Version: v0.0.32<br>
+Version: v0.0.33<br>
 Visibility: Unlisted<br>
 Summary: Post-only support intake and reference bot for r/grantdb.</p>
 
@@ -10,17 +10,6 @@ Summary: Post-only support intake and reference bot for r/grantdb.</p>
 
 <h2>Flowchart</h2>
 <p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/reference-reply-bot-flowchart.png">View flowchart image</a></p>
-
-<h2>Key Features</h2>
-<ul>
-<li>Post-Only Support Focus: Listens strictly to `onPostSubmit` events to provide immediate triage and reference replies on new support submissions in `r/grantdb`.</li>
-<li>Confidence-Based Reply Shaping: Categorizes matched results into confidence bands (`high`, `medium`, `low`) to dynamically tailor response length, section visibility, and diagnostic blocks.</li>
-<li>Likely Cause & Safe-First Actions: Surfaces diagnostic `Likely cause` blocks for high/medium confidence matches and ranks safe, non-disruptive troubleshooting actions first (settings check → Mod Menu test → console logs).</li>
-<li>Semantic Intent Deduplication: Prunes near-duplicate troubleshooting bullets by intent signature (`dedupeBulletsByIntent`) to keep replies compact and focused.</li>
-<li>Atomic Concurrency Lock: Uses Redis `watch` and multi-exec transactions (`rrb:processing:`) to acquire a 30-second processing lock, preventing race conditions when event triggers fire concurrently.</li>
-<li>Post-Execution Replied Marker: The permanent deduplication marker (`rrb:replied:`) is written only after `submitComment` succeeds. If commenting fails, the lock is released in a `finally` block so the post can be retried safely.</li>
-<li>Structured Redis App Knowledge: App documentation records are stored in `rrb:apps` and `rrb:aliases` Redis hashes for easy bulk ingestion of fleet README files.</li>
-</ul>
 
 <h2>Permissions Used</h2>
 <ul>
@@ -79,11 +68,9 @@ Summary: Post-only support intake and reference bot for r/grantdb.</p>
 
 <h2>Setup and Usage</h2>
 <ul>
-<li>Install: Add app via Reddit App Directory or Mod Tools.</li>
-<li>Open: Open Mod Tools -&gt; App Settings in your subreddit to configure options.</li>
-<li>Configure: Set active options and API keys as needed.</li>
-<li>Use: App runs automatically in background according to event triggers and settings.</li>
-<li>Review: Verify bot activity and comments directly on subreddit posts or in mod logs.</li>
+<li>Install: Add Reference Reply Bot to your subreddit and ensure a `Fixed` post flair template exists.</li>
+<li>Configure: Open Mod Tools > App Settings > Reference Reply Bot to adjust `supportFlairs`, `completenessThreshold`, `fixedFlairName`, and `fixedFollowUpText`.</li>
+<li>Seed Knowledge: Open the subreddit `...` menu and run GrantDB Support: Moderator Hub > Seed / Sync Knowledge Database (auto-seeds on first post if empty).</li>
 </ul>
 
 <h2>Troubleshooting</h2>
@@ -93,12 +80,12 @@ Summary: Post-only support intake and reference bot for r/grantdb.</p>
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.33 — 2026-11-13<br>
+No pending release queued</p>
 <p>0.0.32 — 2026-11-13<br>
 Added CommentSubmit fixed-reply handler: updates post flair to Fixed, posts follow-up comment asking for fix details, fixed blocks.triggers manifest, and added unit tests.</p>
 <p>0.0.31 — 2026-11-09<br>
 Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.</p>
-<p>0.0.30 — 2026-10-20<br>
-Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
 <ul>

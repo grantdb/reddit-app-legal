@@ -1,94 +1,74 @@
 > **User Guide & Overview** | [View Deep Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/reference-reply-bot)
 
-# Reference Reply Bot (`r/grantdb`)
+# Reference Reply Bot
 
 `Platform: Reddit Devvit` · `Category: Support`
 
-**Reference Reply Bot** is a post-only support intake and reference utility built for **r/grantdb**. It monitors new support posts, identifies support intent and app references using deterministic heuristic scoring, and posts concise, non-conversational troubleshooting guidance and documentation links.
+`Platform: Reddit Devvit` · `Category: Support` · `Type: Support Intake`
+
+> **Automated support intake, reference guidance, and `fixed` resolution tracking for `r/grantdb`.**
+
+Reference Reply Bot monitors new support posts in `r/grantdb`, scores app intent and intake completeness, posts tailored troubleshooting guidance with documentation links, and automatically updates post flair to `Fixed` when the author or a moderator replies `fixed`.
+
+> **Documentation**: [Full User Guide](https://www.reddit.com/r/grantdb/wiki/reference-reply-bot/) | [Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/reference-reply-bot/)
 
 ---
 
-## Key Features & Production Design
+## At a Glance
 
-- **Post-Only Support Focus**: Listens strictly to `onPostSubmit` events to provide immediate triage and reference replies on new support submissions in `r/grantdb`.
-- **Confidence-Based Reply Shaping**: Categorizes matched results into confidence bands (`high`, `medium`, `low`) to dynamically tailor response length, section visibility, and diagnostic blocks.
-- **Likely Cause & Safe-First Actions**: Surfaces diagnostic `Likely cause` blocks for high/medium confidence matches and ranks safe, non-disruptive troubleshooting actions first (settings check → Mod Menu test → console logs).
-- **Semantic Intent Deduplication**: Prunes near-duplicate troubleshooting bullets by intent signature (`dedupeBulletsByIntent`) to keep replies compact and focused.
-- **Atomic Concurrency Lock**: Uses Redis `watch` and multi-exec transactions (`rrb:processing:<postId>`) to acquire a 30-second processing lock, preventing race conditions when event triggers fire concurrently.
-- **Post-Execution Replied Marker**: The permanent deduplication marker (`rrb:replied:<postId>`) is written **only after** `submitComment` succeeds. If commenting fails, the lock is released in a `finally` block so the post can be retried safely.
-- **Structured Redis App Knowledge**: App documentation records are stored in `rrb:apps` and `rrb:aliases` Redis hashes for easy bulk ingestion of fleet README files.
-
-## How It Works
-
-```
-[ New Post Submission Received ]
-               │
-               ▼
-[ Check Permanent Replied Marker (rrb:replied:<postId>) ] ──(Replied)──► [ Skip ]
-               │
-               ▼
-[ Acquire Atomic Processing Lock (rrb:processing:<postId>) ] ──(Locked)──► [ Skip ]
-               │
-               ▼
-[ Support Intent & App Alias Scoring ]
-               │
-               ▼
-[ Intake Completeness Analysis ] ──(No App Match)──► [ Missing App Mode Reply ]
-               │
-               ▼ (App Matched)
-[ Completeness >= Threshold? ] ──(No)──► [ Hybrid Mode Reply ]
-               │
-               ▼ (Yes)
-[ Normal Reference Reply ] ──(On Success)──► [ Write Replied Marker & User Cooldown ]
-               │
-               └───────(Always)──► [ Release Lock via finally Block ]
-```
+- **Support Intake & App Matching**: Detects support posts (`PostSubmit` / `PostCreate`), matches fleet app aliases from Redis (`rrb:apps`, `rrb:aliases`), and scores intake completeness.
+- **Confidence-Shaped Replies**: Posts concise troubleshooting steps, likely causes, and wiki links while respecting per-user cooldowns and atomic Redis locks.
+- **Automated `fixed` Resolution**: Listens on `CommentSubmit` for `fixed` replies from the post author or a moderator, updates the post flair to `Fixed`, and asks the user to share what solved the issue.
+- **Moderator Hub Controls**: Includes a subreddit Moderator Hub (`Seed / Sync Knowledge Database`, `Clear My Testing Cooldown`, `Clear Knowledge Database`) and on-demand post analysis.
 
 ---
 
----
+## How It Works: The 4-Step Operational Pipeline
 
-## App Settings
-
-Configure via **Mod Tools -> App Settings** in `r/grantdb`:
-
-| Setting Name | Type | Default | Description |
-|---|---|---|---|
-| `enabled` | Boolean | `true` | Master toggle to enable or pause support bot monitoring. |
-| `welcomeRepliesEnabled` | Boolean | `true` | Auto-reply to new support posts with reference guidance. |
-| `minConfidence` | Number | `60` | Post score threshold (0-100) required to reply. |
-| `completenessThreshold` | Number | `0.60` | Threshold below which matched app replies append a missing details section (hybrid mode). |
-| `replyCooldownMinutes` | Number | `15` | Window before replying to the same user again. |
-| `supportFlairs` | String | `Support, Bug, Help, Question` | Comma-separated post flairs to monitor. Blank = all posts. |
-| `maxLinksPerReply` | Number | `2` | Maximum documentation links per automated reply. |
-| `debugLogging` | Boolean | `false` | Log scoring details and lock statuses to the console. |
+### 01 · Support Post Intake & Deduplication
+> **Filter, lock, and prevent duplicate replies on new posts**
+> - Evaluates `PostSubmit` and `PostCreate` events against `supportFlairs` and `enabled` settings.
+> - Acquires a 30-second Redis `watch` lock (`rrb:processing:<postId>`) and checks `rrb:replied:<postId>` and user cooldowns.
 
 ---
 
-## Seeding & Testing Data
-
-1. Install the app on `r/grantdb` or your dev subreddit.
-2. Go to **Mod Tools -> Subreddit Menu -> click "GrantDB Support: Seed App Knowledge Database"**.
-3. Redis is populated with live knowledge dynamically fetched from `r/grantdb/wiki/bot_knowledge` (or bundled fallback if missing).
-4. Content updates can be re-seeded instantly without needing an app rebuild or deployment.
-5. To reset data, click **"GrantDB Support: Clear Knowledge Database"**.
+### 02 · Intent Scoring & Completeness Analysis
+> **Identify the target app and missing diagnostic details**
+> - Scores post title and body against the seeded Redis knowledge base (`bot_knowledge`).
+> - Evaluates completeness against `completenessThreshold` to choose `normal`, `hybrid`, or `missing_app` reply mode.
 
 ---
 
-## Redis Data Taxonomy
+### 03 · Reference Reply & Prompt Footer
+> **Deliver actionable guidance and invite confirmation**
+> - Posts troubleshooting steps and up to `maxLinksPerReply` documentation links.
+> - Appends `resolutionFooterText` inviting the user to reply `fixed` once resolved.
 
-- `rrb:apps` *(Hash)*: Stores JSON stringified `AppKnowledge` objects keyed by `appId`.
-- `rrb:aliases` *(Hash)*: Maps lowercase app aliases to `appId`.
-- `rrb:processing:<postId>` *(String, 30s TTL)*: Atomic concurrency processing lock acquired via `watch`.
-- `rrb:replied:<postId>` *(String, 7-day TTL)*: Permanent deduplication marker written upon comment success.
-- `rrb:cooldown:<authorId>` *(String, N-min TTL)*: Per-user cooldown timer.
+---
+
+### 04 · `fixed` Reply Detection & Flair Update
+> **Close the loop when the issue is resolved**
+> - Listens on `CommentSubmit` for exact `fixed` replies from the post author (OP) or a subreddit moderator.
+> - Applies the `fixedFlairName` post flair template (`Fixed`) and replies asking the user to describe what fixed the issue.
+
+---
+
+## Quick Setup
+
+1. **Install**: Add **Reference Reply Bot** to your subreddit and ensure a `Fixed` post flair template exists.
+2. **Configure**: Open **Mod Tools > App Settings > Reference Reply Bot** to adjust `supportFlairs`, `completenessThreshold`, `fixedFlairName`, and `fixedFollowUpText`.
+3. **Seed Knowledge**: Open the subreddit `...` menu and run **GrantDB Support: Moderator Hub > Seed / Sync Knowledge Database** (auto-seeds on first post if empty).
 
 ---
 
 ## Support
 
-For help, bug reports, or feature requests, post in r/grantdb.
-Please include the app name, what you expected, what happened, and any error text or screenshots.
+> **Community Support & Feature Requests**
+> For questions, troubleshooting, or bug reports, join the official community:
+> **[https://www.reddit.com/r/grantdb](https://www.reddit.com/r/grantdb)**
+
+- **User Guide**: [https://www.reddit.com/r/grantdb/wiki/reference-reply-bot/](https://www.reddit.com/r/grantdb/wiki/reference-reply-bot/)
+- **Technical Reference**: [https://www.reddit.com/r/grantdb/wiki/index/all-apps/reference-reply-bot/](https://www.reddit.com/r/grantdb/wiki/index/all-apps/reference-reply-bot/)
 
 ---
 
