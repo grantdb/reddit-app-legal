@@ -1,44 +1,50 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-sync-bot">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>WikiSync Bot</h1>
-<blockquote><p><strong>Automated, reliable subreddit wiki synchronization and documentation management for Reddit.</strong></p></blockquote>
-<p>WikiSync Bot provides subreddit moderators with a high-reliability engine to publish, manage, and synchronize wiki documentation and support schemas directly within Reddit. Dual-writes across modern (v2) and legacy (v1) Reddit wiki stores to eliminate rich-text corruption and keep community knowledge up to date.</p>
+<blockquote><p><strong>Automated subreddit wiki synchronization, `bot_knowledge` schema deployment, and release announcements for `r/grantdb`.</strong></p></blockquote>
+<p>WikiSync Bot provides subreddit moderators with a high-reliability engine to publish, manage, and synchronize wiki documentation and support schemas directly within Reddit. It dual-writes across modern (`v2`) and legacy (`v1`) Reddit wiki stores and posts public app release announcements to `r/grantdb`.</p>
+<blockquote><p><strong>Documentation</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/wiki-sync-bot/">Full User Guide</a> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-sync-bot/">Technical Reference & Settings Spec</a></p></blockquote>
 <p>---</p>
 <h2>At a Glance</h2>
 <ul>
-<li><strong>Dual-Version Subreddit Wiki Writes</strong>: Direct programmatic synchronization to both modern (`v2`) and legacy (`v1`) Reddit wiki endpoints.</li>
-<li><strong>Support Schema Synchronization</strong>: Automatically deploys `bot_knowledge` JSON payloads to `r/grantdb/wiki/bot_knowledge` bypassing rich-text quote mangling.</li>
-<li><strong>Fleet Documentation Sync</strong>: Incremental background hash comparison and synchronization across all fleet application documentation pages.</li>
-<li><strong>Automated Release Announcements</strong>: Automatically detects new app releases and publishes structured update threads with changelog notes and wiki guides directly to <strong>r/grantdb</strong>.</li>
-<li><strong>Unified Moderator Menu Popout</strong>: Open <strong>WikiSync Bot</strong> from the subreddit overflow menu (`...`) to run incremental syncs, single-app updates, full re-syncs, schema deployments, or broadcast immediate app release announcements.</li>
-<li><strong>Moderator-Restricted Controls</strong>: Built-in permissions ensuring only authorized community moderators can trigger wiki sync operations.</li>
+<li><strong>Dual-Version Subreddit Wiki Writes</strong>: Synchronizes documentation to both modern (`v2`) and legacy (`v1`) Reddit wiki endpoints.</li>
+<li><strong>Support Schema Synchronization</strong>: Deploys `fleet-knowledge.bot.json` to `r/grantdb/wiki/bot_knowledge` for `reference-reply-bot`.</li>
+<li><strong>Incremental & Locked Fleet Sync</strong>: Compares `wiki-manifest.json` hashes in Redis, uses a Redis run mutex to prevent overlapping syncs, and batches updates safely.</li>
+<li><strong>Automated Release Announcements</strong>: Detects newly shipped public apps from `releases/manifest.json` and posts formatted update threads to `r/grantdb` with Redis deduplication.</li>
 </ul>
-<h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/wiki-sync-bot-flowchart.png">Logic Flowchart</a></p>
-<h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Install & Schedule</strong>: WikiSync Bot automatically schedules a recurring 15-minute background sync and configures test targets in Mod Tools > App Settings.</p>
-<p>2. <strong>Sync Manifest</strong>: WikiSync Bot checks the remote fleet manifest (`wiki-manifest.json`) and release manifest (`releases/manifest.json`).</p>
-<p>3. <strong>Dual-Write & Broadcast Engine</strong>: Fetches clean HTML/JSON payloads from GitHub, writes directly to Reddit wiki endpoints, and posts release announcements for newly shipped versions.</p>
-<p>4. <strong>Live Verification & Deduplication</strong>: Reads back and verifies the updated wiki page revisions and caches announcement IDs in Redis to guarantee zero duplicate posts.</p>
 <p>---</p>
+<h2>How It Works: The 4-Step Operational Pipeline</h2>
+<h3>01 · Install & Schedule</h3>
+<blockquote><p><strong>Initialize recurring background syncs</strong></p></blockquote>
+<blockquote><p>- On `AppInstall` and `AppUpgrade`, cancels stale `wiki_sync_poll` jobs and schedules a recurring 15-minute cron plus an initial 5-second sync.</p></blockquote>
+<p>---</p>
+<h3>02 · Fetch Remote Manifests</h3>
+<blockquote><p><strong>Check for documentation and release updates</strong></p></blockquote>
+<blockquote><p>- Fetches `wiki-manifest.json` and `releases/manifest.json` from `raw.githubusercontent.com` using bounded 10-second timeouts and strict slug validation.</p></blockquote>
+<p>---</p>
+<h3>03 · Dual-Write & Broadcast Engine</h3>
+<blockquote><p><strong>Publish wiki pages and public release threads</strong></p></blockquote>
+<blockquote><p>- Strips `shields.io` badges and writes `index/all-apps/<slug>` and `<slug>` to both `v2` and `v1` wiki stores in bounded batches.</p></blockquote>
+<blockquote><p>- Posts release announcements for newly shipped public apps when `enable_release_announcements` is enabled.</p></blockquote>
+<p>---</p>
+<h3>04 · Verification & Deduplication</h3>
+<blockquote><p><strong>Prevent stale caches and duplicate announcements</strong></p></blockquote>
+<blockquote><p>- Caches manifest hashes in Redis only after at least one wiki write succeeds, performs live `v2` read-back verification on single-app syncs, and tracks posted announcement versions in Redis.</p></blockquote>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>WikiSync Bot</strong> to your subreddit.</p>
-<p>2. <strong>Configure</strong>: Open <strong>Mod Tools > App Settings > WikiSync Bot</strong> to toggle wiki sync and release announcements.</p>
-<p>3. <strong>Trigger Operations</strong>: Open the subreddit menu (`...`), select <strong>WikiSync Bot</strong>, and choose your action:</p>
-<ul>
-<li><strong>Sync Changed Wiki Pages</strong>: Check manifest and update modified app pages incrementally.</li>
-<li><strong>Sync Single App Wiki</strong>: Fetch and update a specific app's documentation page.</li>
-<li><strong>Force Sync All Wiki Pages</strong>: Full re-synchronization of all fleet wiki pages in the background.</li>
-<li><strong>Sync Bot Knowledge Schema</strong>: Update `bot_knowledge` JSON schema directly.</li>
-<li><strong>Broadcast App Release Announcement</strong>: Immediately publish or re-publish an update announcement post for any fleet app.</li>
-</ul>
+<p>2. <strong>Configure</strong>: Open <strong>Mod Tools > App Settings > WikiSync Bot</strong> to toggle `enable_release_announcements`.</p>
+<p>3. <strong>Trigger Operations</strong>: Open the subreddit `...` menu, select <strong>WikiSync Bot</strong>, and run incremental sync, single-app sync, force sync, `bot_knowledge` sync, or manual release broadcast.</p>
 <p>---</p>
 <h2>Support</h2>
-<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
-<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<blockquote><p><strong>Community Support & Feature Requests</strong></p></blockquote>
+<blockquote><p>For questions, troubleshooting, or bug reports, join the official community:</p></blockquote>
+<blockquote><p><strong><a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a></strong></p></blockquote>
+<ul>
+<li><strong>User Guide</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/wiki-sync-bot/">https://www.reddit.com/r/grantdb/wiki/wiki-sync-bot/</a></li>
+<li><strong>Technical Reference</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-sync-bot/">https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-sync-bot/</a></li>
+</ul>
 <p>---</p>
 <h2>Legal</h2>
-<p>This application is subject to the following legal agreements:</p>
 <ul>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/wiki-sync-bot/TERMS.md">Terms of Service</a></li>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/wiki-sync-bot/PRIVACY.md">Privacy Policy</a></li>

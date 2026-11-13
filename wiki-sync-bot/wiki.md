@@ -1,7 +1,7 @@
 # WikiSync Bot
 
 Category: Utility  
-Version: v0.0.32  
+Version: v0.0.33  
 Visibility: Unlisted  
 Summary: Subreddit wiki synchronization engine for Reddit communities.
 
@@ -30,16 +30,12 @@ Subreddit wiki synchronization engine for Reddit communities.
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
 - enable_release_announcements: Enable App Release Announcements (boolean, default: true). Automatically post release notes and changelog announcements to r/grantdb when a public app is updated.
-- test_page_name: Test Wiki Page Path (paragraph, default: index/all-apps/wiki-sync-bot-test). The wiki page path to create or update (e.g. index/all-apps/wiki-sync-bot-test).
-- test_content: Test Wiki Content (paragraph, default: # WikiSync Bot Test Page
-
-This is a test wiki page created by WikiSync Bot manual verification.). Markdown content to write to the specified wiki page during manual testing.
 
 ## Automation Capabilities
 - Submits Automated Comments: No — Does not submit automated comments.
 - Attaches Removal Notes: No — Does not attach removal notes.
 - Approves Content: No — Does not approve content.
-- Removes or Filters Content: No — Does not remove or filter content.
+- Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
 - Dispatches Modmail Alerts: No — Does not send modmail notifications.
 - Updates User or Post Flair: No — Does not update flair.
 
@@ -47,31 +43,26 @@ This is a test wiki page created by WikiSync Bot manual verification.). Markdown
 This app utilizes Reddit Redis storage for state management, caching, and rate limiting.
 
 - Key-Value Strings (deduplication & cooldown markers)
-- Key patterns: announcement:posted:, announcement:lock:, wikisync:hash:
+- Key patterns: announcement:posted:, announcement:lock:, wikisync:hash:, wikisync:run:lock
 
 ## Setup and Usage
 - Install: Add WikiSync Bot to your subreddit.
-- Configure: Open Mod Tools > App Settings > WikiSync Bot to toggle wiki sync and release announcements.
-- Trigger Operations: Open the subreddit menu (`...`), select WikiSync Bot, and choose your action:
-- Sync Changed Wiki Pages: Check manifest and update modified app pages incrementally.
-- Sync Single App Wiki: Fetch and update a specific app's documentation page.
-- Force Sync All Wiki Pages: Full re-synchronization of all fleet wiki pages in the background.
-- Sync Bot Knowledge Schema: Update `bot_knowledge` JSON schema directly.
-- Broadcast App Release Announcement: Immediately publish or re-publish an update announcement post for any fleet app.
+- Configure: Open Mod Tools > App Settings > WikiSync Bot to toggle `enable_release_announcements`.
+- Trigger Operations: Open the subreddit `...` menu, select WikiSync Bot, and run incremental sync, single-app sync, force sync, `bot_knowledge` sync, or manual release broadcast.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.33 — 2026-11-13
+- Audit fixes and hardening: blocks.triggers manifest sync, writeWikiPage dual-failure propagation, slug validation, fetch timeouts, Redis run lock, batched sync, and unit tests.
+
 0.0.32 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 0.0.31 — 2026-11-07
 - Added release announcement enrichment guard and unit tests to prevent generic placeholder notes in r/grantdb update posts.
-
-0.0.30 — 2026-10-20
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/wiki-sync-bot/TERMS.md)
