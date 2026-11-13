@@ -6,8 +6,6 @@
 
 QueueClue gives moderators a clear, read-only explanation of why a post or comment was filtered into Reddit's Needs Review queue. Inspect confirmed removal categories, AutoModerator rule reasons, author context, and available moderation records directly on demand without leaving your queue or changing moderation states.
 
-> **Documentation**: [Full User Guide](https://www.reddit.com/r/grantdb/wiki/queueclue/) | [Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/queueclue/)
-
 ---
 
 ## At a Glance

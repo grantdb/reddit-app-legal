@@ -1,15 +1,13 @@
+<blockquote><p><a href="https://www.reddit.com/r/grantdb/wiki/queueclue/">Full User Guide</a> | <strong>Technical Reference &amp; Settings Spec</strong></p></blockquote>
 <h1>QueueClue</h1>
 
 <p>Category: Utility<br>
-Version: v0.0.21<br>
+Version: v0.0.22<br>
 Visibility: Public<br>
 Summary: Find the available source and reason behind a queue item.</p>
 
 <h2>Overview</h2>
 <p>Find the available source and reason behind a queue item.</p>
-
-<h2>Flowchart</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/queueclue-flowchart.png">View flowchart image</a></p>
 
 <h2>Permissions Used</h2>
 <ul>
@@ -72,12 +70,12 @@ Summary: Find the available source and reason behind a queue item.</p>
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.22 — 2026-11-13<br>
+Handle unlogged/Removed by Reddit items with explicit platform-removal context and Author context in fallback</p>
 <p>0.0.21 — 2026-11-13<br>
 Correlated removal comment filtering, author context across Reddit safety/AutoMod branches, explicit deleted/suspended/404 account status reporting, and 3-tier native Markdown README.</p>
 <p>0.0.20 — 2026-11-13<br>
 Filter out non-removal sticky bots (e.g. sticky-pro) and pre-removal comments from Moderator removal notice detection</p>
-<p>0.0.19 — 2026-11-11<br>
-Unified timeline evidence presentation: unhides mod log details, removal reasons, and mod notes when ModAction removal history is present instead of returning early on actor/timestamp.; Stickied & distinguished removal comment detection: extracts public removal notices left by moderators or AutoModerator directly quoting rules or instructions.; Plain-English platform removal categories: translates raw `removedByCategory` values (`automod_filtered`, `reddit`, `anti_evil_ops`, `copyright_takedown`, etc.) into actionable descriptions with administrative context.; Author community records summary: parses author mod notes to surface prior community history (removals, warnings, bans, spam flags) at a glance.; Extended author signals: surfaces community-specific karma breakdown, email verification state, and approved contributor / ban flags alongside global age and karma.; Structured non-PII operational diagnostics: emits `event=inspection_diagnostics` recording branch, evidence sources consulted, and new information yield without logging usernames.; Capture AutoModerator filter event author in persistent storage.</p>
 
 <h2>Links</h2>
 <ul>

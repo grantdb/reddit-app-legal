@@ -1,15 +1,14 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/queueclue/) | **Technical Reference & Settings Spec**
+
 # QueueClue
 
 Category: Utility  
-Version: v0.0.21  
+Version: v0.0.22  
 Visibility: Public  
 Summary: Find the available source and reason behind a queue item.
 
 ## Overview
 Find the available source and reason behind a queue item.
-
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/queueclue-flowchart.png)
 
 ## Key Features
 - Not documented yet.
@@ -58,20 +57,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.22 — 2026-11-13
+- Handle unlogged/Removed by Reddit items with explicit platform-removal context and Author context in fallback
+
 0.0.21 — 2026-11-13
 - Correlated removal comment filtering, author context across Reddit safety/AutoMod branches, explicit deleted/suspended/404 account status reporting, and 3-tier native Markdown README.
 
 0.0.20 — 2026-11-13
 - Filter out non-removal sticky bots (e.g. sticky-pro) and pre-removal comments from Moderator removal notice detection
-
-0.0.19 — 2026-11-11
-- Unified timeline evidence presentation: unhides mod log details, removal reasons, and mod notes when ModAction removal history is present instead of returning early on actor/timestamp.
-- Stickied & distinguished removal comment detection: extracts public removal notices left by moderators or AutoModerator directly quoting rules or instructions.
-- Plain-English platform removal categories: translates raw `removedByCategory` values (`automod_filtered`, `reddit`, `anti_evil_ops`, `copyright_takedown`, etc.) into actionable descriptions with administrative context.
-- Author community records summary: parses author mod notes to surface prior community history (removals, warnings, bans, spam flags) at a glance.
-- Extended author signals: surfaces community-specific karma breakdown, email verification state, and approved contributor / ban flags alongside global age and karma.
-- Structured non-PII operational diagnostics: emits `event=inspection_diagnostics` recording branch, evidence sources consulted, and new information yield without logging usernames.
-- Capture AutoModerator filter event author in persistent storage.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/TERMS.md)
