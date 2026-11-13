@@ -1,54 +1,48 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/queueclue">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>QueueClue</h1>
 <blockquote><p><strong>Find the available source and reason behind a queue item.</strong></p></blockquote>
-<p>QueueClue gives moderators a small, clear explanation of why a post or comment was filtered into Reddit's Needs Review queue. Inspect confirmed removal categories, AutoModerator report reasons, and available metadata directly on demand without leaving your queue or changing moderation states.</p>
-<h3>Key Highlights</h3>
+<p>QueueClue gives moderators a clear, read-only explanation of why a post or comment was filtered into Reddit's Needs Review queue. Inspect confirmed removal categories, AutoModerator rule reasons, author context, and available moderation records directly on demand without leaving your queue or changing moderation states.</p>
+<blockquote><p><strong>Documentation</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/queueclue/">Full User Guide</a> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/queueclue/">Technical Reference & Settings Spec</a></p></blockquote>
+<p>---</p>
+<h2>At a Glance</h2>
 <ul>
 <li><strong>Zero-Mutation Safety</strong>: Operates strictly in read-only inspection mode with zero automated approvals, removals, or state mutations.</li>
-<li><strong>On-Demand Menu Invocation</strong>: Launches instantly from the native item overflow menu on any queued post or comment.</li>
-<li><strong>Accurate Ground-Truth Attribution</strong>: Distinguishes confirmed filtering sources (such as AutoModerator action reasons) from unconfirmed generic categories and report text.</li>
+<li><strong>Unified Multi-Source Diagnosis</strong>: Combines AutoModerator filter events, broker ModAction history, on-demand moderation log scans, native removal reasons, removal notices, and author context into a single chronological view.</li>
+<li><strong>Explicit Author & Account Context</strong>: Surfaces account age, global and subreddit karma, email verification, prior community mod notes, and explicit status when an author account is deleted, suspended, or unavailable.</li>
 <li><strong>Preserved Queue Context</strong>: Opens a native explanation popover modal so moderators review context and close it without losing their queue position.</li>
 </ul>
 <p>---</p>
-<h2>How It Works</h2>
-<h3>The 4-Step Lifecycle</h3>
-<p>1. <strong>Trigger</strong>: A moderator opens the moderator action menu (shield icon on queue cards, or overflow menu `...`) on a post or comment in the Needs Review queue and clicks <strong>QueueClue: Why filtered?</strong>.</p>
-<p>2. <strong>Authorize & Verify</strong>: QueueClue checks the invoking user's active moderator permissions and verifies that the item belongs to the current subreddit before extracting metadata.</p>
-<p>3. <strong>Inspect & Classify</strong>: On-demand metadata is evaluated against ground-truth evidence rules (identifying AutoModerator reports, confirmed removal categories, and filtering timestamps without overstating uncertain signals).</p>
-<p>4. <strong>Present</strong>: A clean native explanation popover opens displaying the available source, reason, and notes, returning the moderator to their exact queue position upon closing.</p>
+<h2>How It Works: The 4-Step Operational Pipeline</h2>
+<h3>01 · Trigger</h3>
+<blockquote><p><strong>On-Demand Queue Menu Invocation</strong></p></blockquote>
+<blockquote><p>- A moderator opens the moderator action menu on a post or comment in the Needs Review queue and selects <strong>QueueClue: Why filtered?</strong>.</p></blockquote>
+<blockquote><p>- Real-time `onAutomoderatorFilterPost`, `onAutomoderatorFilterComment`, and `onModAction` triggers also capture exact rule reasons and action chronology in bounded Redis storage (30-day TTL).</p></blockquote>
 <p>---</p>
-<h2>Quick Setup (60-Second Onboarding)</h2>
-<p>1. <strong>Install</strong>: Add <strong>QueueClue</strong> to your subreddit through the Reddit App Directory.</p>
+<h3>02 · Authorize & Verify</h3>
+<blockquote><p><strong>Moderator & Subreddit Boundary Check</strong></p></blockquote>
+<blockquote><p>- QueueClue verifies the invoking user's active moderator permissions server-side before inspecting any record.</p></blockquote>
+<blockquote><p>- Confirms the target post or comment belongs to the current subreddit to prevent cross-subreddit leakage.</p></blockquote>
+<p>---</p>
+<h3>03 · Inspect & Classify</h3>
+<blockquote><p><strong>Ground-Truth Evidence Evaluation</strong></p></blockquote>
+<blockquote><p>- Evaluates captured AutoModerator events, moderation log entries, native removal reasons, and correlated removal notices without overstating uncertain signals.</p></blockquote>
+<blockquote><p>- Fetches author context and community mod note history on demand, explicitly reporting deleted, suspended, or 404/unavailable accounts.</p></blockquote>
+<p>---</p>
+<h3>04 · Present</h3>
+<blockquote><p><strong>Native Popover Summary</strong></p></blockquote>
+<blockquote><p>- Opens a read-only explanation modal showing the verified filtering source, plain-English platform category (`automod_filtered`, `reddit`, `anti_evil_ops`, `copyright_takedown`), relative and subreddit-local timestamps, and author context.</p></blockquote>
+<blockquote><p>- Closing the modal returns the moderator directly to their exact queue position.</p></blockquote>
+<p>---</p>
+<h2>Quick Setup</h2>
+<p>1. <strong>Install</strong>: Add <strong>QueueClue</strong> to your subreddit from the Reddit App Directory.</p>
 <p>2. <strong>Open Queue</strong>: Navigate to your subreddit's <strong>Needs Review</strong> queue in desktop Reddit Mod Tools.</p>
-<p>3. <strong>Inspect Item</strong>: Click the moderator menu (shield icon on queue cards, or overflow menu `...`) on any queued post or comment and select <strong>QueueClue: Why filtered?</strong>.</p>
-<p>4. <strong>Review Explanation</strong>: View the available filtering source and reason in the popover modal without modifying item state.</p>
-<p>*Zero configuration required. Post and comment explanations are enabled out-of-the-box with sensible defaults.*</p>
-<p>---</p>
-<h2>Core Capabilities</h2>
-<ul>
-<li><strong>Unified Multi-Source Timeline</strong>: Unifies AutoModerator event filters, Reddit broker ModAction history, on-demand moderation log scans, native removal reasons, and mod notes into a chronological diagnosis instead of stopping at the first match.</li>
-<li><strong>Stickied & Distinguished Removal Notices</strong>: Detects public moderator and AutoModerator removal notices left on the item, directly surfacing rule citations and custom feedback.</li>
-<li><strong>Plain-English Platform Removal Categories</strong>: Decodes internal platform flags (`automod_filtered`, `reddit`, `anti_evil_ops`, `copyright_takedown`) into clear explanations with administrative context and appeal paths.</li>
-<li><strong>Author Community Signals & Record</strong>: Safely fetches account age, global and subreddit-specific karma, email verification, and author mod notes history in the community (removals, warnings, bans, spam flags) on demand.</li>
-<li><strong>Subreddit Time & Relative Elapsed Time</strong>: Replaces confusing standalone UTC timestamps with human-readable relative elapsed time (e.g. `14 minutes ago`) paired with your subreddit’s local time zone and standard UTC.</li>
-<li><strong>Strict Evidence Standards</strong>: Separates verified filtering sources from generic removal categories (`reddit`) and user reports, ensuring moderators never see misleading explanations.</li>
-<li><strong>Private Moderator-Only Access</strong>: Enforces server-side permission checks so queue explanation metadata is strictly visible to authorized moderators.</li>
-<li><strong>Cross-Subreddit Boundary Enforcement</strong>: Prevents cross-context leakage by verifying that targets match the current subreddit before formatting details.</li>
-<li><strong>Lightweight Event Capture</strong>: Subscribes to real-time AutoModerator filter events and item-level ModAction triggers (removals, approvals, spam markings) to capture exact rule reasons and action chronology, with zero background cron jobs and volatile bounded Redis caching.</li>
-</ul>
-<p>---</p>
-<h2>Designed to Assist Moderators & Privacy</h2>
-<p>QueueClue is built strictly as a read-only decision aid for human moderation teams. It does not store post or comment content, author usernames, or moderator identities; it temporarily caches limited moderation-event metadata for up to 30 days. Human moderators retain full authority over all queue decisions.</p>
+<p>3. <strong>Inspect Item</strong>: Open the item's moderator action menu and click <strong>QueueClue: Why filtered?</strong> to view the diagnostic summary.</p>
 <p>---</p>
 <h2>Support</h2>
-<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
-<p>Please include:</p>
+<blockquote><p><strong>Community Support</strong>: Need help, want to report a bug, or have a feature request? Post in <a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a> with the app name (`queueclue`), expected behavior, actual behavior, and any error details.</p></blockquote>
 <ul>
-<li>The app name (`queueclue`).</li>
-<li>What you expected to happen.</li>
-<li>What happened instead.</li>
-<li>Any error message.</li>
-<li>Screenshots or relevant details.</li>
+<li><strong>Full User Guide</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/queueclue/">https://www.reddit.com/r/grantdb/wiki/queueclue/</a></li>
+<li><strong>Technical Reference & Settings Spec</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/queueclue/">https://www.reddit.com/r/grantdb/wiki/index/all-apps/queueclue/</a></li>
 </ul>
 <p>---</p>
 <h2>Legal</h2>

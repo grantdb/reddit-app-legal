@@ -1,7 +1,7 @@
 <h1>QueueClue</h1>
 
 <p>Category: Utility<br>
-Version: v0.0.20<br>
+Version: v0.0.21<br>
 Visibility: Public<br>
 Summary: Find the available source and reason behind a queue item.</p>
 
@@ -60,11 +60,9 @@ Summary: Find the available source and reason behind a queue item.</p>
 
 <h2>Setup and Usage</h2>
 <ul>
-<li>Install: Add QueueClue to your subreddit through the Reddit App Directory.</li>
+<li>Install: Add QueueClue to your subreddit from the Reddit App Directory.</li>
 <li>Open Queue: Navigate to your subreddit's Needs Review queue in desktop Reddit Mod Tools.</li>
-<li>Inspect Item: Click the moderator menu (shield icon on queue cards, or overflow menu `...`) on any queued post or comment and select QueueClue: Why filtered?**.</li>
-<li>Review Explanation: View the available filtering source and reason in the popover modal without modifying item state.</li>
-<li>Zero configuration required. Post and comment explanations are enabled out-of-the-box with sensible defaults.*</li>
+<li>Inspect Item: Open the item's moderator action menu and click QueueClue: Why filtered?** to view the diagnostic summary.</li>
 </ul>
 
 <h2>Troubleshooting</h2>
@@ -74,12 +72,12 @@ Summary: Find the available source and reason behind a queue item.</p>
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.21 — 2026-11-13<br>
+Correlated removal comment filtering, author context across Reddit safety/AutoMod branches, explicit deleted/suspended/404 account status reporting, and 3-tier native Markdown README.</p>
 <p>0.0.20 — 2026-11-13<br>
 Filter out non-removal sticky bots (e.g. sticky-pro) and pre-removal comments from Moderator removal notice detection</p>
 <p>0.0.19 — 2026-11-11<br>
 Unified timeline evidence presentation: unhides mod log details, removal reasons, and mod notes when ModAction removal history is present instead of returning early on actor/timestamp.; Stickied & distinguished removal comment detection: extracts public removal notices left by moderators or AutoModerator directly quoting rules or instructions.; Plain-English platform removal categories: translates raw `removedByCategory` values (`automod_filtered`, `reddit`, `anti_evil_ops`, `copyright_takedown`, etc.) into actionable descriptions with administrative context.; Author community records summary: parses author mod notes to surface prior community history (removals, warnings, bans, spam flags) at a glance.; Extended author signals: surfaces community-specific karma breakdown, email verification state, and approved contributor / ban flags alongside global age and karma.; Structured non-PII operational diagnostics: emits `event=inspection_diagnostics` recording branch, evidence sources consulted, and new information yield without logging usernames.; Capture AutoModerator filter event author in persistent storage.</p>
-<p>0.0.18 — 2026-11-09<br>
-Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.</p>
 
 <h2>Links</h2>
 <ul>

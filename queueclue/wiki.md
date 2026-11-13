@@ -1,7 +1,7 @@
 # QueueClue
 
 Category: Utility  
-Version: v0.0.20  
+Version: v0.0.21  
 Visibility: Public  
 Summary: Find the available source and reason behind a queue item.
 
@@ -49,17 +49,18 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key-Value Strings (deduplication & cooldown markers)
 
 ## Setup and Usage
-- Install: Add QueueClue to your subreddit through the Reddit App Directory.
+- Install: Add QueueClue to your subreddit from the Reddit App Directory.
 - Open Queue: Navigate to your subreddit's Needs Review queue in desktop Reddit Mod Tools.
-- Inspect Item: Click the moderator menu (shield icon on queue cards, or overflow menu `...`) on any queued post or comment and select QueueClue: Why filtered?**.
-- Review Explanation: View the available filtering source and reason in the popover modal without modifying item state.
-- Zero configuration required. Post and comment explanations are enabled out-of-the-box with sensible defaults.*
+- Inspect Item: Open the item's moderator action menu and click QueueClue: Why filtered?** to view the diagnostic summary.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.21 — 2026-11-13
+- Correlated removal comment filtering, author context across Reddit safety/AutoMod branches, explicit deleted/suspended/404 account status reporting, and 3-tier native Markdown README.
+
 0.0.20 — 2026-11-13
 - Filter out non-removal sticky bots (e.g. sticky-pro) and pre-removal comments from Moderator removal notice detection
 
@@ -71,9 +72,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Extended author signals: surfaces community-specific karma breakdown, email verification state, and approved contributor / ban flags alongside global age and karma.
 - Structured non-PII operational diagnostics: emits `event=inspection_diagnostics` recording branch, evidence sources consulted, and new information yield without logging usernames.
 - Capture AutoModerator filter event author in persistent storage.
-
-0.0.18 — 2026-11-09
-- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/TERMS.md)

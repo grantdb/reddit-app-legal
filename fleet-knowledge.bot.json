@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T10:26:53.867Z",
+  "generatedAt": "2026-11-13T11:57:01.375Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -3041,11 +3041,9 @@
         "utility"
       ],
       "setupSteps": [
-        "Install: Add QueueClue to your subreddit through the Reddit App Directory.",
+        "Install: Add QueueClue to your subreddit from the Reddit App Directory.",
         "Open Queue: Navigate to your subreddit's Needs Review queue in desktop Reddit Mod Tools.",
-        "Inspect Item: Click the moderator menu (shield icon on queue cards, or overflow menu `...`) on any queued post or comment and select QueueClue: Why filtered?**.",
-        "Review Explanation: View the available filtering source and reason in the popover modal without modifying item state.",
-        "Zero configuration required. Post and comment explanations are enabled out-of-the-box with sensible defaults.*"
+        "Inspect Item: Open the item's moderator action menu and click QueueClue: Why filtered?** to view the diagnostic summary."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -3089,7 +3087,7 @@
         "troubleshooting": "Check the QueueClue troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-11-07"
+      "lastUpdated": "2026-11-13"
     },
     {
       "appId": "piracy-guard",
