@@ -166,7 +166,7 @@
   },
   "reference-reply-bot": {
     "name": "Reference Reply Bot",
-    "version": "0.0.32",
+    "version": "0.0.33",
     "visibility": "unlisted"
   },
   "malp-scout": {

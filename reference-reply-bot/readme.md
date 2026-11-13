@@ -2,10 +2,6 @@
 
 # Reference Reply Bot
 
-`Platform: Reddit Devvit` · `Category: Support`
-
-`Platform: Reddit Devvit` · `Category: Support` · `Type: Support Intake`
-
 > **Automated support intake, reference guidance, and `fixed` resolution tracking for `r/grantdb`.**
 
 Reference Reply Bot monitors new support posts in `r/grantdb`, scores app intent and intake completeness, posts tailored troubleshooting guidance with documentation links, and automatically updates post flair to `Fixed` when the author or a moderator replies `fixed`.

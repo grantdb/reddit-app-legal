@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T00:59:04.465Z",
+  "generatedAt": "2026-11-13T01:17:31.336Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2676,10 +2676,8 @@
       ],
       "setupSteps": [
         "Install: Add WikiSync Bot to your subreddit.",
-        "Configure: Open Mod Tools > App Settings > WikiSync Bot to toggle wiki sync and release announcements.",
-        "Trigger Operations: Open the subreddit menu (`...`), select WikiSync Bot, and choose your action:",
-        "Sync Changed Wiki Pages: Check manifest and update modified app pages incrementally.",
-        "Sync Single App Wiki: Fetch and update a specific app's documentation page."
+        "Configure: Open Mod Tools > App Settings > WikiSync Bot to toggle `enable_release_announcements`.",
+        "Trigger Operations: Open the subreddit `...` menu, select WikiSync Bot, and run incremental sync, single-app sync, force sync, `bot_knowledge` sync, or manual release broadcast."
       ],
       "commonIssues": [],
       "troubleshooting": {

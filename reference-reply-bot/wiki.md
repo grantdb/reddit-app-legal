@@ -1,7 +1,7 @@
 # Reference Reply Bot
 
 Category: Support  
-Version: v0.0.33  
+Version: v0.0.34  
 Visibility: Unlisted  
 Summary: Post-only support intake and reference bot for r/grantdb.
 
@@ -66,14 +66,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.34 — 2026-11-13
+- No pending release queued
+
 0.0.33 — 2026-11-13
 - No pending release queued
 
 0.0.32 — 2026-11-13
 - Added CommentSubmit fixed-reply handler: updates post flair to Fixed, posts follow-up comment asking for fix details, fixed blocks.triggers manifest, and added unit tests.
-
-0.0.31 — 2026-11-09
-- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/reference-reply-bot/TERMS.md)
