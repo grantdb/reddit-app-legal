@@ -16,8 +16,6 @@ QueueClue gives moderators a small, clear explanation of why a post or comment w
 
 ## How It Works
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/queueclue-flowchart.png)
-
 ### The 4-Step Lifecycle
 
 1. **Trigger**: A moderator opens the moderator action menu (shield icon on queue cards, or overflow menu `...`) on a post or comment in the Needs Review queue and clicks **QueueClue: Why filtered?**.

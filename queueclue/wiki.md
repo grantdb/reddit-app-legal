@@ -1,7 +1,7 @@
 # QueueClue
 
 Category: Utility  
-Version: v0.0.19  
+Version: v0.0.20  
 Visibility: Public  
 Summary: Find the available source and reason behind a queue item.
 
@@ -60,6 +60,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.20 — 2026-11-13
+- Filter out non-removal sticky bots (e.g. sticky-pro) and pre-removal comments from Moderator removal notice detection
+
 0.0.19 — 2026-11-11
 - Unified timeline evidence presentation: unhides mod log details, removal reasons, and mod notes when ModAction removal history is present instead of returning early on actor/timestamp.
 - Stickied & distinguished removal comment detection: extracts public removal notices left by moderators or AutoModerator directly quoting rules or instructions.
@@ -71,16 +74,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 0.0.18 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
-
-0.0.17 — 2026-11-07
-- Subreddit Time & Relative Elapsed Time: replaced plain UTC timestamps with human-readable relative elapsed time (e.g. `12 minutes ago`) paired with local Subreddit Time and UTC reference.
-- Community Time Zone Dropdown: upgraded settings to a curated selector covering major regional community time zones with custom IANA fallback.
-- Unmoderated queue clean submission detection: identifies incoming posts in the unmoderated queue awaiting initial review with zero flags, reports, or removals.
-- Reddit native removal reason display: presents recorded moderator removal reasons, rule titles, and notes (`modReasonTitle`, `removalReason`, `modReasonBy`).
-- Reddit automated safety filter detection: identifies posts filtered by Reddit's automated safety systems (managed under Mod Tools > Safety Filters / Reputation Filter, and spam filters).
-- Author account signals for unstated AutoMod rules: safely fetches account age at post time and karma on-demand to explain AutoMod rules with "No reason supplied", backed by configurable settings toggle (`showAuthorContext`).
-- Comment crowd control & collapsed reasons: surfaces exact `collapsedReason` and crowd control flags on comments.
-- Link post domain and grouped reports: highlights submitted domains and groups community reports.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/TERMS.md)
