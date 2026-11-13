@@ -1,5 +1,6 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/reference-reply-bot">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>Reference Reply Bot (`r/grantdb`)</h1>
+<p>`Platform: Reddit Devvit` · `Category: Support`</p>
 <p><strong>Reference Reply Bot</strong> is a post-only support intake and reference utility built for <strong>r/grantdb</strong>. It monitors new support posts, identifies support intent and app references using deterministic heuristic scoring, and posts concise, non-conversational troubleshooting guidance and documentation links.</p>
 <p>---</p>
 <h2>Key Features & Production Design</h2>
@@ -13,7 +14,6 @@
 <li><strong>Structured Redis App Knowledge</strong>: App documentation records are stored in `rrb:apps` and `rrb:aliases` Redis hashes for easy bulk ingestion of fleet README files.</li>
 </ul>
 <h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/reference-reply-bot-flowchart.png">Logic Flowchart</a></p>
 <p>```</p>
 <p>[ New Post Submission Received ]</p>
 <p>│</p>

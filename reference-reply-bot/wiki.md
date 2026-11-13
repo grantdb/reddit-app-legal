@@ -1,7 +1,7 @@
 # Reference Reply Bot
 
 Category: Support  
-Version: v0.0.31  
+Version: v0.0.32  
 Visibility: Unlisted  
 Summary: Post-only support intake and reference bot for r/grantdb.
 
@@ -44,6 +44,8 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - maxLinksPerReply: Maximum Links Per Reply (number, default: 2). Cap on documentation and reference links per reply.
 - welcomeIntroTemplate: Greeting and Intro Template (string, default: Thanks for posting! While waiting for a reply, check out these helpful tips and resources for {app}:). Opening line for support replies. Use {app} for the app name.
 - resolutionFooterText: Resolution Prompt Footer (string, default: *If this solved your problem, reply `fixed` to let us know!*). Footer prompt asking for confirmation. Leave blank to disable.
+- fixedFlairName: Fixed Post Flair Name (string, default: Fixed). Post flair template name to apply when a user replies "fixed".
+- fixedFollowUpText: Fixed Follow-Up Reply (string, default: Thanks for confirming! If possible, please reply with a brief description of what fixed the issue so it can help others.). Reply posted when a user marks a post as fixed, asking them to describe the fix.
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
@@ -51,7 +53,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - Approves Content: No — Does not approve content.
 - Removes or Filters Content: Yes — Removes or filters non-compliant submissions.
 - Dispatches Modmail Alerts: No — Does not send modmail notifications.
-- Updates User or Post Flair: No — Does not update flair.
+- Updates User or Post Flair: Yes — Updates post or user flair based on rules.
 
 ## Data Storage
 This app utilizes Reddit Redis storage for state management, caching, and rate limiting.
@@ -70,13 +72,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.32 — 2026-11-13
+- Added CommentSubmit fixed-reply handler: updates post flair to Fixed, posts follow-up comment asking for fix details, fixed blocks.triggers manifest, and added unit tests.
+
 0.0.31 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 0.0.30 — 2026-10-20
-- Standard fleet synchronization and maintenance.
-
-0.0.29 — 2026-10-05
 - Standard fleet synchronization and maintenance.
 
 ## Links

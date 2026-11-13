@@ -1,7 +1,7 @@
 <h1>Reference Reply Bot</h1>
 
 <p>Category: Support<br>
-Version: v0.0.31<br>
+Version: v0.0.32<br>
 Visibility: Unlisted<br>
 Summary: Post-only support intake and reference bot for r/grantdb.</p>
 
@@ -31,8 +31,9 @@ Summary: Post-only support intake and reference bot for r/grantdb.</p>
 <h2>Triggers and Activation</h2>
 <h3>Event Triggers</h3>
 <ul>
-<li>PostSubmit: Delivered by Reddit event router to endpoint /internal/on-post-submit.</li>
-<li>PostCreate: Delivered by Reddit event router to endpoint /internal/on-post-create.</li>
+<li>PostSubmit: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostSubmit' }).</li>
+<li>PostCreate: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostCreate' }).</li>
+<li>CommentSubmit: Subscribed in main.ts via Devvit.addTrigger({ event: 'CommentSubmit' }).</li>
 </ul>
 <h3>Menu Actions</h3>
 <ul>
@@ -54,6 +55,8 @@ Summary: Post-only support intake and reference bot for r/grantdb.</p>
 <li>maxLinksPerReply: Maximum Links Per Reply (number, default: 2). Cap on documentation and reference links per reply.</li>
 <li>welcomeIntroTemplate: Greeting and Intro Template (string, default: Thanks for posting! While waiting for a reply, check out these helpful tips and resources for {app}:). Opening line for support replies. Use {app} for the app name.</li>
 <li>resolutionFooterText: Resolution Prompt Footer (string, default: *If this solved your problem, reply `fixed` to let us know!*). Footer prompt asking for confirmation. Leave blank to disable.</li>
+<li>fixedFlairName: Fixed Post Flair Name (string, default: Fixed). Post flair template name to apply when a user replies "fixed".</li>
+<li>fixedFollowUpText: Fixed Follow-Up Reply (string, default: Thanks for confirming! If possible, please reply with a brief description of what fixed the issue so it can help others.). Reply posted when a user marks a post as fixed, asking them to describe the fix.</li>
 </ul>
 
 <h2>Automation Capabilities</h2>
@@ -63,7 +66,7 @@ Summary: Post-only support intake and reference bot for r/grantdb.</p>
 <li>Approves Content: No — Does not approve content.</li>
 <li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
 <li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
-<li>Updates User or Post Flair: No — Does not update flair.</li>
+<li>Updates User or Post Flair: Yes — Updates post or user flair based on rules.</li>
 </ul>
 
 <h2>Data Storage</h2>
@@ -90,11 +93,11 @@ Summary: Post-only support intake and reference bot for r/grantdb.</p>
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.32 — 2026-11-13<br>
+Added CommentSubmit fixed-reply handler: updates post flair to Fixed, posts follow-up comment asking for fix details, fixed blocks.triggers manifest, and added unit tests.</p>
 <p>0.0.31 — 2026-11-09<br>
 Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.</p>
 <p>0.0.30 — 2026-10-20<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.29 — 2026-10-05<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>

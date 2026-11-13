@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-11T19:41:02.612Z",
+  "generatedAt": "2026-11-13T00:19:33.468Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2509,13 +2509,14 @@
       },
       "triggers": [
         "PostSubmit",
-        "PostCreate"
+        "PostCreate",
+        "CommentSubmit"
       ],
       "menuItems": [
         "GrantDB Support: Moderator Hub",
         "GrantDB Support: Analyze & Reply to Post"
       ],
-      "settingsCount": 9,
+      "settingsCount": 11,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/reference-reply-bot",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/reference-reply-bot",
@@ -2528,7 +2529,7 @@
         "troubleshooting": "Check the Reference Reply Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-10-05"
+      "lastUpdated": "2026-11-13"
     },
     {
       "appId": "malp-scout",
@@ -2703,7 +2704,7 @@
       "menuItems": [
         "WikiSync Bot"
       ],
-      "settingsCount": 3,
+      "settingsCount": 1,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/wiki-sync-bot",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-sync-bot",
@@ -2716,7 +2717,7 @@
         "troubleshooting": "Check the WikiSync Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-02"
+      "lastUpdated": "2026-11-13"
     },
     {
       "appId": "rescue-guard",
