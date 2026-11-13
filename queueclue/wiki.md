@@ -3,7 +3,7 @@
 # QueueClue
 
 Category: Utility  
-Version: v0.0.22  
+Version: v0.0.23  
 Visibility: Public  
 Summary: Find the available source and reason behind a queue item.
 
@@ -57,14 +57,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.23 — 2026-11-13
+- Unlogged / Removed by Reddit diagnostic branch, Author context in fallback, and 3-tier wiki/README sync.
+
 0.0.22 — 2026-11-13
 - Handle unlogged/Removed by Reddit items with explicit platform-removal context and Author context in fallback
 
 0.0.21 — 2026-11-13
 - Correlated removal comment filtering, author context across Reddit safety/AutoMod branches, explicit deleted/suspended/404 account status reporting, and 3-tier native Markdown README.
-
-0.0.20 — 2026-11-13
-- Filter out non-removal sticky bots (e.g. sticky-pro) and pre-removal comments from Moderator removal notice detection
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/TERMS.md)
