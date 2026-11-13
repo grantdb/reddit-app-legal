@@ -1,15 +1,14 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/reference-reply-bot/) | **Technical Reference & Settings Spec**
+
 # Reference Reply Bot
 
 Category: Support  
-Version: v0.0.34  
+Version: v0.0.35  
 Visibility: Unlisted  
 Summary: Post-only support intake and reference bot for r/grantdb.
 
 ## Overview
 Post-only support intake and reference bot for r/grantdb.
-
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/reference-reply-bot-flowchart.png)
 
 ## Key Features
 - Not documented yet.
@@ -66,14 +65,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.35 — 2026-11-13
+- Remove Flowchart from User Guide link, remove unicode emojis from modHubForm, add server-side moderator & duplicate-reply guards
+
 0.0.34 — 2026-11-13
 - No pending release queued
 
 0.0.33 — 2026-11-13
 - No pending release queued
-
-0.0.32 — 2026-11-13
-- Added CommentSubmit fixed-reply handler: updates post flair to Fixed, posts follow-up comment asking for fix details, fixed blocks.triggers manifest, and added unit tests.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/reference-reply-bot/TERMS.md)

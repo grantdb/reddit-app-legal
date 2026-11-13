@@ -6,8 +6,6 @@
 
 Reference Reply Bot monitors new support posts in `r/grantdb`, scores app intent and intake completeness, posts tailored troubleshooting guidance with documentation links, and automatically updates post flair to `Fixed` when the author or a moderator replies `fixed`.
 
-> **Documentation**: [Full User Guide](https://www.reddit.com/r/grantdb/wiki/reference-reply-bot/) | [Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/reference-reply-bot/)
-
 ---
 
 ## At a Glance
