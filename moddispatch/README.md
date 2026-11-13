@@ -6,6 +6,8 @@
 
 Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs to the Reddit mod queue—without forcing moderators to leave their normal workflow.
 
+> **Documentation**: [Full User Guide](https://www.reddit.com/r/grantdb/wiki/moddispatch/) | [Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/moddispatch/)
+
 ### Key Highlights
 - **Atomic Collision Prevention Engine**: Employs distributed Redis locks with configurable timeouts to guarantee that only one moderator reviews or claims an item at any moment, eliminating duplicate reviews.
 - **Native Mod Queue Submenu Actions**: Perform claims, suggestions, handoffs, notes, escalations, and resolutions directly from post and comment menus using native Reddit forms.
@@ -24,17 +26,35 @@ Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs
 - **Zero Unicode Emojis**: Conforms strictly to fleet zero-emoji standard with pure SVG icons and high-contrast badges.
 - **Human-in-the-Loop Authority**: The app coordinates and documents decisions; it never removes posts, bans users, or takes unprompted moderation actions.
 
-## How It Works
+## How It Works: The 5-Step Operational Pipeline
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/moddispatch-flowchart.png)
+### 01 · Queue Item Inspection
+> **Triage reported posts and comments in place**
+> - A moderator views reported posts or comments in Reddit's standard mod queue.
 
-### The 5-Step Lifecycle
+---
 
-1. **Queue Item Inspection**: A moderator views reported posts or comments in Reddit's standard mod queue.
-2. **Atomic Claim Acquisition**: The moderator triggers "Mod Dispatch: Claim for review". Redis evaluates the distributed lock; if free, ownership is assigned with a configurable inactivity timer.
-3. **Collaborative Routing & Context**: Moderators attach shared notes, suggest cases to teammates with urgency ratings, or hand off active cases during shift changes.
-4. **Resolution or Native Action Detection**: The moderator resolves the case or executes a native Reddit action (approve, remove, spam). Mod Dispatch detects the event, releases the claim, and logs the outcome.
-5. **Real-Time Team Oversight**: The non-scrollable status page and expanded dashboard provide live workload visibility, team presence tracking, and a comprehensive audit trail.
+### 02 · Atomic Claim Acquisition
+> **Prevent duplicate review with Redis SET NX locks**
+> - The moderator triggers "Mod Dispatch: Claim for review". Redis evaluates the distributed lock and assigns ownership with a configurable inactivity timer.
+
+---
+
+### 03 · Collaborative Routing & Context
+> **Keep context across shifts**
+> - Moderators attach shared notes, suggest cases to teammates with urgency ratings, or hand off active cases during shift changes.
+
+---
+
+### 04 · Resolution & Native Action Detection
+> **Auto-reconcile native Reddit moderation actions**
+> - When a moderator resolves a case or executes a native Reddit action (`approve`, `remove`, `spam`, `ban`), `onModAction` releases the claim and logs the outcome.
+
+---
+
+### 05 · Real-Time Team Oversight
+> **Live queue health and workload visibility**
+> - The status card and expanded dashboard batch-load case states via `redis.mGet`, broadcast `realtime` updates, and display team presence and audit trails.
 
 ---
 

@@ -2,6 +2,7 @@
 <h1>Mod Dispatch</h1>
 <blockquote><p><strong>One case. One owner.</strong></p></blockquote>
 <p>Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs to the Reddit mod queue—without forcing moderators to leave their normal workflow.</p>
+<blockquote><p><strong>Documentation</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/moddispatch/">Full User Guide</a> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/moddispatch/">Technical Reference & Settings Spec</a></p></blockquote>
 <h3>Key Highlights</h3>
 <ul>
 <li><strong>Atomic Collision Prevention Engine</strong>: Employs distributed Redis locks with configurable timeouts to guarantee that only one moderator reviews or claims an item at any moment, eliminating duplicate reviews.</li>
@@ -20,14 +21,26 @@
 <li><strong>Zero Unicode Emojis</strong>: Conforms strictly to fleet zero-emoji standard with pure SVG icons and high-contrast badges.</li>
 <li><strong>Human-in-the-Loop Authority</strong>: The app coordinates and documents decisions; it never removes posts, bans users, or takes unprompted moderation actions.</li>
 </ul>
-<h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/moddispatch-flowchart.png">Logic Flowchart</a></p>
-<h3>The 5-Step Lifecycle</h3>
-<p>1. <strong>Queue Item Inspection</strong>: A moderator views reported posts or comments in Reddit's standard mod queue.</p>
-<p>2. <strong>Atomic Claim Acquisition</strong>: The moderator triggers "Mod Dispatch: Claim for review". Redis evaluates the distributed lock; if free, ownership is assigned with a configurable inactivity timer.</p>
-<p>3. <strong>Collaborative Routing & Context</strong>: Moderators attach shared notes, suggest cases to teammates with urgency ratings, or hand off active cases during shift changes.</p>
-<p>4. <strong>Resolution or Native Action Detection</strong>: The moderator resolves the case or executes a native Reddit action (approve, remove, spam). Mod Dispatch detects the event, releases the claim, and logs the outcome.</p>
-<p>5. <strong>Real-Time Team Oversight</strong>: The non-scrollable status page and expanded dashboard provide live workload visibility, team presence tracking, and a comprehensive audit trail.</p>
+<h2>How It Works: The 5-Step Operational Pipeline</h2>
+<h3>01 · Queue Item Inspection</h3>
+<blockquote><p><strong>Triage reported posts and comments in place</strong></p></blockquote>
+<blockquote><p>- A moderator views reported posts or comments in Reddit's standard mod queue.</p></blockquote>
+<p>---</p>
+<h3>02 · Atomic Claim Acquisition</h3>
+<blockquote><p><strong>Prevent duplicate review with Redis SET NX locks</strong></p></blockquote>
+<blockquote><p>- The moderator triggers "Mod Dispatch: Claim for review". Redis evaluates the distributed lock and assigns ownership with a configurable inactivity timer.</p></blockquote>
+<p>---</p>
+<h3>03 · Collaborative Routing & Context</h3>
+<blockquote><p><strong>Keep context across shifts</strong></p></blockquote>
+<blockquote><p>- Moderators attach shared notes, suggest cases to teammates with urgency ratings, or hand off active cases during shift changes.</p></blockquote>
+<p>---</p>
+<h3>04 · Resolution & Native Action Detection</h3>
+<blockquote><p><strong>Auto-reconcile native Reddit moderation actions</strong></p></blockquote>
+<blockquote><p>- When a moderator resolves a case or executes a native Reddit action (`approve`, `remove`, `spam`, `ban`), `onModAction` releases the claim and logs the outcome.</p></blockquote>
+<p>---</p>
+<h3>05 · Real-Time Team Oversight</h3>
+<blockquote><p><strong>Live queue health and workload visibility</strong></p></blockquote>
+<blockquote><p>- The status card and expanded dashboard batch-load case states via `redis.mGet`, broadcast `realtime` updates, and display team presence and audit trails.</p></blockquote>
 <p>---</p>
 <h2>Quick Setup (60-Second Onboarding)</h2>
 <p>1. <strong>Install App</strong>: Install Mod Dispatch on your subreddit via the Reddit Developer Portal.</p>
