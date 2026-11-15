@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T11:57:01.375Z",
+  "generatedAt": "2026-11-15T10:35:34.171Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2863,8 +2863,7 @@
       "setupSteps": [
         "Install: Add Ultimate WWE Hub to your subreddit via the Reddit Developer portal.",
         "Launch Anchor Hub: From your subreddit menu (`...`), select Create WWE Belts & Stats Hub Post and pin it as a community anchor.",
-        "Deploy Live Megathread: On broadcast night, select Create Monday Night Raw Live Megathread or Create Friday Night SmackDown Live Megathread.",
-        "Run the Show: Use the moderator console to start matches, reorder the card, and declare winners as the action unfolds!"
+        "Deploy Live Megathread: On broadcast night, select Create Monday Night Raw Live Megathread or Create Friday Night SmackDown Live Megathread, then run the show from the Moderator Console."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -2905,7 +2904,7 @@
         "troubleshooting": "Check the Ultimate WWE Hub troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-11-08"
+      "lastUpdated": "2026-11-15"
     },
     {
       "appId": "wiki-guard",
