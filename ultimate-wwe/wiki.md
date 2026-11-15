@@ -3,7 +3,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.41  
+Version: v0.0.42  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -57,25 +57,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.42 — 2026-11-15
+- Adopted full-width sleek slider navigation for match lineup and hub tabs, eliminated flanking arrows and floating scroll controls, added mobile responsive guard, implemented in-place browser history coordinator (pushState/popstate), and decoupled visual state from popstate with direct platform modal exit.
+
 0.0.41 — 2026-11-15
 - Add permissions.reddit.asUser SUBMIT_COMMENT in devvit.json for runAs USER Reddit comment sync, with compensating rollback, idempotency, and atomic Redis hash storage
 
 0.0.40 — 2026-11-15
 - Wire bulk_import full-card replacement vs impromptu match mode, revamp [SHOW RECAP], and add reusable live-comments system (preview, 65% drawer, synced standard block)
-
-0.0.39 — 2026-11-09
-- Chants Active Lifecycle & Next Match Scoping:
-- Scoped chants dynamically to each match: chant soundboard remains active on a finished match until the next match on the card begins (becomes live or finished).
-- Main Event / final match retains its victory takeover card and chant soundboard.
-- End-of-Show Official Recap & Box Score Tab:
-- Removed per-match recap countdown badge and automatic boxscore replacement on individual matches.
-- Added dedicated `[SHOW RECAP]` tab to the match strip when the show is completed (`currentShow.status === "completed"`), allowing fans to view the official boxscore and show grade at the end of the show while preserving full match result history.
-- Prediction Voting Lock on Match Start:
-- Enforced strict closure of prediction picks and voting once a match transitions out of `upcoming` (to `live` or `finished`), hiding action CTAs and disabling contender voting buttons across client and server.
-- High-Impact Visual Upgrades:
-- Winner contender card features a clean, crisp 2px gold highlight without blinding strobes.
-- Big winner victory takeover box pulses gently (`victory-box-pulse`).
-- Winner name shimmers with high-contrast metallic gold text gradient (`winner-name-shimmer-fast`).
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
