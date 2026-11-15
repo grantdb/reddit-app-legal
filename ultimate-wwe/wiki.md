@@ -3,7 +3,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.44  
+Version: v0.0.45  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -59,14 +59,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.45 — 2026-11-15
+- Fix bulk_import/add_match 404 routing, upgrade parseBulkMatches, use upcoming Monday/Friday show dates, and add side slider rail to live chat drawer
+
 0.0.44 — 2026-11-15
 - Fix realtime channel subscription clobbering, add atomic nx ingestion lock, and replace chat drawer scrolling with zero-scroll arrow slider
 
 0.0.43 — 2026-11-15
 - Add onCommentCreate/onCommentSubmit/onCommentDelete triggers and redditCommentId deduplication for two-way Reddit comment sync into the app
-
-0.0.42 — 2026-11-15
-- Adopted full-width sleek slider navigation for match lineup and hub tabs, eliminated flanking arrows and floating scroll controls, added mobile responsive guard, implemented in-place browser history coordinator (pushState/popstate), and decoupled visual state from popstate with direct platform modal exit.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
