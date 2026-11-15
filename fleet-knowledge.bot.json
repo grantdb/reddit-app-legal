@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T16:37:32.434Z",
+  "generatedAt": "2026-11-15T17:31:46.263Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2890,7 +2890,6 @@
         "AppUpgrade",
         "PostDelete",
         "CommentCreate",
-        "CommentSubmit",
         "CommentDelete"
       ],
       "menuItems": [],
