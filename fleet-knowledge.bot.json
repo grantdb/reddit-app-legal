@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T10:35:34.171Z",
+  "generatedAt": "2026-11-15T16:37:32.434Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -2888,7 +2888,10 @@
       "triggers": [
         "AppInstall",
         "AppUpgrade",
-        "PostDelete"
+        "PostDelete",
+        "CommentCreate",
+        "CommentSubmit",
+        "CommentDelete"
       ],
       "menuItems": [],
       "settingsCount": 0,

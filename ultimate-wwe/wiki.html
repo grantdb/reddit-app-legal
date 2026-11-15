@@ -2,7 +2,7 @@
 <h1>Ultimate WWE Hub</h1>
 
 <p>Category: Interactive<br>
-Version: v0.0.42<br>
+Version: v0.0.43<br>
 Visibility: Unlisted<br>
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.</p>
 
@@ -21,6 +21,9 @@ Summary: Interactive WWE live event mega-thread engine with match cards, pick 'e
 <li>AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
 <li>AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-install.</li>
 <li>PostDelete: Delivered by Reddit event router to endpoint /internal/on-post-delete.</li>
+<li>CommentCreate: Delivered by Reddit event router to endpoint /internal/on-comment-create.</li>
+<li>CommentSubmit: Delivered by Reddit event router to endpoint /internal/on-comment-create.</li>
+<li>CommentDelete: Delivered by Reddit event router to endpoint /internal/on-comment-delete.</li>
 </ul>
 <h3>Custom Post Types and Entrypoints</h3>
 <p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
@@ -58,12 +61,12 @@ Summary: Interactive WWE live event mega-thread engine with match cards, pick 'e
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.43 — 2026-11-15<br>
+Add onCommentCreate/onCommentSubmit/onCommentDelete triggers and redditCommentId deduplication for two-way Reddit comment sync into the app</p>
 <p>0.0.42 — 2026-11-15<br>
 Adopted full-width sleek slider navigation for match lineup and hub tabs, eliminated flanking arrows and floating scroll controls, added mobile responsive guard, implemented in-place browser history coordinator (pushState/popstate), and decoupled visual state from popstate with direct platform modal exit.</p>
 <p>0.0.41 — 2026-11-15<br>
 Add permissions.reddit.asUser SUBMIT_COMMENT in devvit.json for runAs USER Reddit comment sync, with compensating rollback, idempotency, and atomic Redis hash storage</p>
-<p>0.0.40 — 2026-11-15<br>
-Wire bulk_import full-card replacement vs impromptu match mode, revamp [SHOW RECAP], and add reusable live-comments system (preview, 65% drawer, synced standard block)</p>
 
 <h2>Links</h2>
 <ul>

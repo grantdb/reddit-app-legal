@@ -3,7 +3,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.42  
+Version: v0.0.43  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -22,6 +22,9 @@ Interactive WWE live event mega-thread engine with match cards, pick 'em predict
 - AppInstall: Delivered by Reddit event router to endpoint /internal/on-app-install.
 - AppUpgrade: Delivered by Reddit event router to endpoint /internal/on-app-install.
 - PostDelete: Delivered by Reddit event router to endpoint /internal/on-post-delete.
+- CommentCreate: Delivered by Reddit event router to endpoint /internal/on-comment-create.
+- CommentSubmit: Delivered by Reddit event router to endpoint /internal/on-comment-create.
+- CommentDelete: Delivered by Reddit event router to endpoint /internal/on-comment-delete.
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
@@ -57,14 +60,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.43 — 2026-11-15
+- Add onCommentCreate/onCommentSubmit/onCommentDelete triggers and redditCommentId deduplication for two-way Reddit comment sync into the app
+
 0.0.42 — 2026-11-15
 - Adopted full-width sleek slider navigation for match lineup and hub tabs, eliminated flanking arrows and floating scroll controls, added mobile responsive guard, implemented in-place browser history coordinator (pushState/popstate), and decoupled visual state from popstate with direct platform modal exit.
 
 0.0.41 — 2026-11-15
 - Add permissions.reddit.asUser SUBMIT_COMMENT in devvit.json for runAs USER Reddit comment sync, with compensating rollback, idempotency, and atomic Redis hash storage
-
-0.0.40 — 2026-11-15
-- Wire bulk_import full-card replacement vs impromptu match mode, revamp [SHOW RECAP], and add reusable live-comments system (preview, 65% drawer, synced standard block)
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
