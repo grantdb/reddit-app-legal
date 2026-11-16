@@ -6,8 +6,6 @@
 
 WikiSync Bot provides subreddit moderators with a high-reliability engine to publish, manage, and synchronize wiki documentation and support schemas directly within Reddit. It dual-writes across modern (`v2`) and legacy (`v1`) Reddit wiki stores and posts public app release announcements to `r/grantdb`.
 
-> **Documentation**: [Full User Guide](https://www.reddit.com/r/grantdb/wiki/wiki-sync-bot/) | [Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/wiki-sync-bot/)
-
 ---
 
 ## At a Glance

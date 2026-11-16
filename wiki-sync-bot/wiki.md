@@ -1,15 +1,14 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/wiki-sync-bot/) | **Technical Reference & Settings Spec**
+
 # WikiSync Bot
 
 Category: Utility  
-Version: v0.0.33  
+Version: v0.0.34  
 Visibility: Unlisted  
 Summary: Subreddit wiki synchronization engine for Reddit communities.
 
 ## Overview
 Subreddit wiki synchronization engine for Reddit communities.
-
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/wiki-sync-bot-flowchart.png)
 
 ## Key Features
 - Not documented yet.
@@ -55,14 +54,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.34 — 2026-11-16
+- Enforce mods-only (permLevel: 2, listed: false) on bot_knowledge wiki and stop fetching from public reddit-app-legal repo
+
 0.0.33 — 2026-11-13
 - Audit fixes and hardening: blocks.triggers manifest sync, writeWikiPage dual-failure propagation, slug validation, fetch timeouts, Redis run lock, batched sync, and unit tests.
 
 0.0.32 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
-
-0.0.31 — 2026-11-07
-- Added release announcement enrichment guard and unit tests to prevent generic placeholder notes in r/grantdb update posts.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/wiki-sync-bot/TERMS.md)

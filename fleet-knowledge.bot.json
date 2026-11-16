@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T17:31:46.263Z",
+  "generatedAt": "2026-11-16T19:13:15.487Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -212,11 +212,9 @@
         "playscraperbot"
       ],
       "setupSteps": [
-        "Install: Add Playscraper Bot via the App Directory.",
-        "API Key Requirement: Obtain a free Google Gemini API Key from Google AI Studio.",
-        "App Settings:",
-        "Input your Gemini API Key into the app settings.",
-        "Choose which sources to detect (e.g., enable GitHub but disable Play Store)."
+        "Install: Add Playscraper Bot via the Reddit App Directory.",
+        "Configure API Key: Obtain a Google Gemini API Key from Google AI Studio and add it in Mod Tools > App Settings > Playscraper Bot.",
+        "Customize: Choose enabled sources, delay settings, and your preferred Comment Detail Level."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -241,9 +239,7 @@
       "triggers": [
         "PostSubmit",
         "PostCreate",
-        "ModAction",
-        "AppInstall",
-        "AppUpgrade"
+        "ModAction"
       ],
       "menuItems": [
         "Playscraper Bot: Enter App Link",
@@ -262,7 +258,7 @@
         "troubleshooting": "Check the Playscraper Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-10-20"
+      "lastUpdated": "2026-11-16"
     },
     {
       "appId": "screen-shot-bot",
@@ -354,8 +350,7 @@
         "Install: Add Post Title Check to your subreddit through the Reddit App Directory.",
         "Configure Rules: Open Mod Tools > App Settings > Post Title Check to set word counts and required tags.",
         "Add Banned Words: Enter prohibited clickbait phrases separated by commas.",
-        "Save: Automated title validation begins immediately on all incoming community submissions.",
-        "No complex AutoMod regex scripts required. Clean, professional titles across your entire feed.*"
+        "Save: Automated title validation begins immediately on all incoming community submissions."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -397,7 +392,7 @@
         "troubleshooting": "Check the Post Title Check troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-11-16"
     },
     {
       "appId": "stargate-trivia",
@@ -785,11 +780,8 @@
         "appupdatechecker"
       ],
       "setupSteps": [
-        "Install: Add App Update Checker to your subreddit through the Reddit App Directory.",
-        "Update Apps in Mod Tools: Open Mod Tools > Installed Apps in Reddit and update any outdated applications.",
-        "Sync Baseline: Open the subreddit menu (`...`), select App Update Checker, and choose Sync All Apps as Updated to establish your confirmed tracking baseline.",
-        "Relax: Scheduled daily audits will silently keep your team informed of any future releases.",
-        "No manual app directory checking. Automated update notifications delivered directly to modmail.*"
+        "Baseline version confirmation",
+        "Update your apps via Reddit's Mod Tools > Installed Apps, then run Sync All Apps as Updated in the menu popout to lock in baselines."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -832,7 +824,7 @@
         "troubleshooting": "Check the App Update Checker troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-13"
+      "lastUpdated": "2026-11-16"
     },
     {
       "appId": "gate-defender",
@@ -1554,8 +1546,7 @@
       "setupSteps": [
         "Install: Add Pinned Menuboard to your subreddit through the Reddit App Directory.",
         "Generate Board: Select Generate Pinned Menuboard from Subreddit Mod Tools.",
-        "Feature Threads: Open any post menu (`...`) and click Toggle on Menuboard, or use the in-webview Customize panel.",
-        "Tune Settings: Click Customize in the top-right corner of the board to set your preferred theme, title, and slot count."
+        "Feature Threads: Open any post menu (`...`) and click Toggle on Menuboard, or use the in-webview Customize panel."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -1592,7 +1583,7 @@
         "troubleshooting": "Check the Pinned Menuboard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-10-03"
+      "lastUpdated": "2026-11-16"
     },
     {
       "appId": "user-board",
@@ -2422,7 +2413,6 @@
       ],
       "setupSteps": [
         "Install App: Install TestRank to your subreddit from the Reddit App Directory.",
-        "Configure Settings: Adjust point weights and onboarding delivery channels via Mod Tools -> Apps -> testrank -> Settings.",
         "Generate Leaderboard Post: Open the subreddit overflow menu (`...`) and click Create TestRank Leaderboard Post to provision the pinned community board.",
         "Reward & Rank: Developers click comment menus on helpful replies to confirm points and immediately trigger leaderboard and flair updates."
       ],
@@ -2455,7 +2445,7 @@
         "CommentSubmit"
       ],
       "menuItems": [],
-      "settingsCount": 7,
+      "settingsCount": 3,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/testrank",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/testrank",
@@ -2468,7 +2458,7 @@
         "troubleshooting": "Check the TestRank troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-10-23"
+      "lastUpdated": "2026-11-16"
     },
     {
       "appId": "reference-reply-bot",
@@ -2739,9 +2729,8 @@
       ],
       "setupSteps": [
         "Install: Add RescueGuard to your subreddit through the Reddit App Directory.",
-        "Configure: Open Mod Tools > App Settings > RescueGuard.",
-        "Set Thresholds: Configure your batch size, minimum post age, lookback days, deduplication strategy, and spotlight flair/comment text.",
-        "Launch Review: Open the subreddit menu and select GuardHub: RescueGuard Review Hub."
+        "Launch Review: Open the subreddit menu and select GuardHub: RescueGuard Review Hub.",
+        "Configure: Open the Settings tab inside the Review Hub dashboard to set your batch size, minimum post age, lookback days, deduplication strategy, and spotlight flair/comment text."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -2778,7 +2767,7 @@
         "troubleshooting": "Check the RescueGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-10-16"
+      "lastUpdated": "2026-11-16"
     },
     {
       "appId": "sub-setup",
