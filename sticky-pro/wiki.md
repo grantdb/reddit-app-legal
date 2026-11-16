@@ -1,15 +1,14 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/sticky-pro/) | **Technical Reference & Settings Spec**
+
 # Sticky-Pro
 
 Category: Moderation  
-Version: v1.0.125  
+Version: v1.0.126  
 Visibility: Public  
 Summary: Automated moderator sticky suite with dynamic form population.
 
 ## Overview
 Automated moderator sticky suite with dynamic form population.
-
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/sticky-pro-flowchart.png)
 
 ## Key Features
 - Unified Post Menu Popout: Open Sticky Pro from any post menu (`...`) to pick from configured templates, write custom markdown, toggle pinning and comment locks, set auto-unsticky timers, or remove active stickies.
@@ -82,14 +81,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.126 — 2026-11-16
+- Fix PostSubmit/PostCreate race with atomic nx lock, commit commentId before distinguish/lock, fix isFiltered, fail closed in isModerator, and fix toast/auth
+
 1.0.125 — 2026-11-12
 - Adoption of 3-tier documentation architecture, native markdown pill badges, and sanitization-proof markdown pipeline cards with zero raw HTML.
 
 1.0.124 — 2026-11-12
 - Adoption of 3-tier documentation architecture, button-sized badges, and zero-squish responsive markdown pipeline cards.
-
-1.0.123 — 2026-11-11
-- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/sticky-pro/TERMS.md)

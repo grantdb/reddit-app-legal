@@ -2,8 +2,6 @@
 
 # Sticky Pro
 
-`Platform: Reddit Devvit` · `Category: Moderation`
-
 > **Deploy pre-configured templates, write ad-hoc markdown notes, schedule expiration timers, and manage sticky comments.**
 
 **Sticky Pro** is a high-performance moderation tool designed to streamline the process of posting, customizing, and managing recurring sticky comments on community threads. Instead of keeping a notepad of common moderator responses, Sticky Pro allows your team to deploy pre-configured templates, write ad-hoc markdown notes, schedule auto-unsticky expiration timers, or remove active stickies natively from the Reddit interface.
