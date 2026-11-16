@@ -1,15 +1,14 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/rescue-guard/) | **Technical Reference & Settings Spec**
+
 # RescueGuard
 
 Category: Moderation  
-Version: v0.0.27  
+Version: v0.0.28  
 Visibility: Unlisted  
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.
 
 ## Overview
 Subreddit post-discovery & manual spotlight moderation engine for Reddit.
-
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/rescue-guard-flowchart.png)
 
 ## Key Features
 - Not documented yet.
@@ -46,22 +45,21 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install: Add RescueGuard to your subreddit through the Reddit App Directory.
-- Configure: Open Mod Tools > App Settings > RescueGuard.
-- Set Thresholds: Configure your batch size, minimum post age, lookback days, deduplication strategy, and spotlight flair/comment text.
 - Launch Review: Open the subreddit menu and select GuardHub: RescueGuard Review Hub.
+- Configure: Open the Settings tab inside the Review Hub dashboard to set your batch size, minimum post age, lookback days, deduplication strategy, and spotlight flair/comment text.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.28 — 2026-11-16
+- Enforce moderator auth & cross-subreddit check on /api/*, add null-post guard, sanitize settings, batch scanner Redis lookups, and align README/version
+
 0.0.27 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 0.0.26 — 2026-10-27
-- Standard fleet synchronization and maintenance.
-
-0.0.25 — 2026-10-17
 - Standard fleet synchronization and maintenance.
 
 ## Links

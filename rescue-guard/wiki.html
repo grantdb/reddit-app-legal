@@ -1,15 +1,13 @@
+<blockquote><p><a href="https://www.reddit.com/r/grantdb/wiki/rescue-guard/">Full User Guide</a> | <strong>Technical Reference &amp; Settings Spec</strong></p></blockquote>
 <h1>RescueGuard</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.27<br>
+Version: v0.0.28<br>
 Visibility: Unlisted<br>
 Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddit.</p>
 
 <h2>Overview</h2>
 <p>Subreddit post-discovery & manual spotlight moderation engine for Reddit.</p>
-
-<h2>Flowchart</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/rescue-guard-flowchart.png">View flowchart image</a></p>
 
 <h2>Permissions Used</h2>
 <ul>
@@ -41,9 +39,8 @@ Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddi
 <h2>Setup and Usage</h2>
 <ul>
 <li>Install: Add RescueGuard to your subreddit through the Reddit App Directory.</li>
-<li>Configure: Open Mod Tools > App Settings > RescueGuard.</li>
-<li>Set Thresholds: Configure your batch size, minimum post age, lookback days, deduplication strategy, and spotlight flair/comment text.</li>
 <li>Launch Review: Open the subreddit menu and select GuardHub: RescueGuard Review Hub.</li>
+<li>Configure: Open the Settings tab inside the Review Hub dashboard to set your batch size, minimum post age, lookback days, deduplication strategy, and spotlight flair/comment text.</li>
 </ul>
 
 <h2>Troubleshooting</h2>
@@ -53,11 +50,11 @@ Summary: Subreddit post-discovery & manual spotlight moderation engine for Reddi
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.28 — 2026-11-16<br>
+Enforce moderator auth & cross-subreddit check on /api/*, add null-post guard, sanitize settings, batch scanner Redis lookups, and align README/version</p>
 <p>0.0.27 — 2026-11-09<br>
 Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.</p>
 <p>0.0.26 — 2026-10-27<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.25 — 2026-10-17<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
