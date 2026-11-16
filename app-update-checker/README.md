@@ -17,30 +17,31 @@ App Update Checker ensures your subreddit's Devvit tools and moderation bots rem
 - **Universal directory support**: Cross-references against 150+ public apps in the Reddit App Directory and official developer manifests.
 - **Consolidated moderator controls**: Access on-demand scans, baseline syncing, and cache resets from a single **App Update Checker** menu popout.
 
-## How It Works
+---
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png)
+## How It Works: The 4-Step Operational Pipeline
 
-### Your Four-Step Lifecycle
-
-1. **Discover**: App Update Checker discovers installed Devvit applications from subreddit bot signatures and configured custom slugs.
-2. **Setup & Sync**: Make sure to update all your apps via Reddit's **Mod Tools > Installed Apps**, then run **Sync All Apps as Updated** in the menu popout.
-3. **Silent Audit**: Runs automated daily checks at 12:00 UTC, comparing active community tools against version feeds compiled by our backend directory scraper.
-4. **Notify**: Delivers an actionable Modmail alert only when an app author publishes a new release.
+### 01 · Discover
+> **Moderator bot & custom slug detection**
+> - App Update Checker discovers installed Devvit applications from subreddit moderator bot signatures and configured custom slugs.
 
 ---
 
-## Built for Seamless Community Maintenance
-
-- **Automated App Discovery**: Identifies installed Devvit applications by matching moderator accounts against known app manifests.
-- **Silent Daily Audits**: Runs daily background checks without filling your modmail when everything is current.
-- **Unified Moderator Menu Popout**: Open **App Update Checker** from either the subreddit menu or any post overflow menu (`...`) across desktop, mobile, and tablet to access:
-  - **Check for App Updates**: Run an immediate scan and receive a full status report in Modmail.
-  - **Sync All Apps as Updated**: Lock in current versions as the baseline after updating apps in Mod Tools.
-  - **Reset App Cache**: Clear cached data and trigger a fresh discovery scan.
-- **Native Settings Control**: Specify custom app slugs to monitor, toggle unlisted bot reporting, select your preferred Modmail delivery destination (Inbox, Discussions, or Notifications), and configure check schedules in App Settings.
+### 02 · Setup & Sync
+> **Baseline version confirmation**
+> - Update your apps via Reddit's **Mod Tools > Installed Apps**, then run **Sync All Apps as Updated** in the menu popout to lock in baselines.
 
 ---
+
+### 03 · Silent Audit
+> **Scheduled daily version comparison**
+> - Runs automated daily checks at 12:00 UTC, comparing active community tools against version feeds compiled by our backend directory scraper.
+
+---
+
+### 04 · Notify
+> **Archivable Modmail Inbox alerts**
+> - Delivers an actionable Modmail alert only when an app author publishes a new release (or immediately on manual scan).
 
 ---
 
@@ -49,39 +50,17 @@ App Update Checker ensures your subreddit's Devvit tools and moderation bots rem
 1. **Install**: Add **App Update Checker** to your subreddit through the Reddit App Directory.
 2. **Update Apps in Mod Tools**: Open **Mod Tools > Installed Apps** in Reddit and update any outdated applications.
 3. **Sync Baseline**: Open the subreddit menu (`...`), select **App Update Checker**, and choose **Sync All Apps as Updated** to establish your confirmed tracking baseline.
-4. **Relax**: Scheduled daily audits will silently keep your team informed of any future releases.
-
-*No manual app directory checking. Automated update notifications delivered directly to modmail.*
-
----
-
-## Advanced Capabilities
-
-App Update Checker is engineered for resilient version resolution and lightweight background execution.
-
-- **Automated Backend Directory Scraper**: An automated backend pipeline crawls and scrapes public listings on `developers.reddit.com/apps/...` to maintain a continuously updated version dataset (`latest_versions.json`).
-- **Redis-Cached Feed Delivery**: The directory snapshot is fetched from `raw.githubusercontent.com` and cached in Redis for fast, lightweight checks within platform limits.
-- **Deterministic Semver Comparison**: Standard semver parsing reliably detects patch, minor, and major version increments without false positives.
-- **Scheduled Cron Runner**: Executes automated checks on a daily cron schedule at 12:00 UTC.
-- **Archivable Modmail Deliveries**: Formats clean markdown tables delivered directly to your Modmail Inbox with native archive support, preventing clutter.
-
----
-
-## Designed to Assist Moderators
-
-App Update Checker provides automated version monitoring and status reporting to assist in maintaining installed community tools. Update summaries serve as informational alerts—human moderators retain full authority over which apps are installed, updated, or removed.
 
 ---
 
 ## Support
 
-For help, bug reports, or feature requests, post in r/grantdb.
-Please include:
-- The app name.
-- What you expected to happen.
-- What happened instead.
-- Any error message.
-- Screenshots or relevant details.
+> **Need Help?** Post in [https://www.reddit.com/r/grantdb](https://www.reddit.com/r/grantdb) with the app name, what you expected, what happened, and any error text or screenshots.
+>
+> - **User Guide**: [https://www.reddit.com/r/grantdb/wiki/app-update-checker/](https://www.reddit.com/r/grantdb/wiki/app-update-checker/)
+> - **Technical Reference**: [https://www.reddit.com/r/grantdb/wiki/index/all-apps/app-update-checker/](https://www.reddit.com/r/grantdb/wiki/index/all-apps/app-update-checker/)
+
+---
 
 ## Legal
 

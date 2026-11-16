@@ -1,15 +1,14 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/app-update-checker/) | **Technical Reference & Settings Spec**
+
 # App Update Checker
 
 Category: Utility  
-Version: v0.0.87  
+Version: v0.0.88  
 Visibility: Public  
 Summary: Automated version tracking and release notification engine for Reddit Devvit apps. Daily silent audits and modmail alerts.
 
 ## Overview
 Automated version tracking and release notification engine for Reddit Devvit apps. Daily silent audits and modmail alerts.
-
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/app-update-checker-flowchart.png)
 
 ## Key Features
 - Not documented yet.
@@ -50,11 +49,8 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Hashes (structured records & alias indices)
 
 ## Setup and Usage
-- Install: Add App Update Checker to your subreddit through the Reddit App Directory.
-- Update Apps in Mod Tools: Open Mod Tools > Installed Apps in Reddit and update any outdated applications.
-- Sync Baseline: Open the subreddit menu (`...`), select App Update Checker, and choose Sync All Apps as Updated to establish your confirmed tracking baseline.
-- Relax: Scheduled daily audits will silently keep your team informed of any future releases.
-- No manual app directory checking. Automated update notifications delivered directly to modmail.*
+- Baseline version confirmation
+- Update your apps via Reddit's Mod Tools > Installed Apps, then run Sync All Apps as Updated in the menu popout to lock in baselines.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
