@@ -1,15 +1,13 @@
+<blockquote><p><a href="https://www.reddit.com/r/grantdb/wiki/testrank/">Full User Guide</a> | <strong>Technical Reference &amp; Settings Spec</strong></p></blockquote>
 <h1>TestRank</h1>
 
 <p>Category: Utility<br>
-Version: v0.0.45<br>
+Version: v0.0.46<br>
 Visibility: Unlisted<br>
 Summary: Automated community tester recognition, reputation, and leaderboard engine for beta testing subreddits.</p>
 
 <h2>Overview</h2>
 <p>Automated community tester recognition, reputation, and leaderboard engine for beta testing subreddits.</p>
-
-<h2>Flowchart</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/testrank-flowchart.png">View flowchart image</a></p>
 
 <h2>Permissions Used</h2>
 <ul>
@@ -36,10 +34,6 @@ Summary: Automated community tester recognition, reputation, and leaderboard eng
 <li>onboardingDeliveryMethod: OP Onboarding Delivery Method (select, default: comment). OP Onboarding Delivery Method</li>
 <li>requirePostFlair: Require Testing Post Flair for Onboarding (boolean, default: true). Require Testing Post Flair for Onboarding</li>
 <li>enableOpOnboardingModmail: Enable Onboarding Guidance (boolean, default: true). Enable Onboarding Guidance</li>
-<li>pointsHelpfulFeedback: Points: Helpful Feedback (number, default: 10). XP awarded for general helpful feedback comments</li>
-<li>pointsRegisteredTester: Points: Registered Tester (number, default: 5). XP awarded when a user signs up or registers as a tester</li>
-<li>pointsBugFound: Points: Bug Found (number, default: 25). XP awarded for verified bug reports</li>
-<li>pointsRetest: Points: Fix Verified (number, default: 30). XP awarded for verified bug fix confirmations</li>
 </ul>
 
 <h2>Automation Capabilities</h2>
@@ -63,7 +57,6 @@ Summary: Automated community tester recognition, reputation, and leaderboard eng
 <h2>Setup and Usage</h2>
 <ul>
 <li>Install App: Install TestRank to your subreddit from the Reddit App Directory.</li>
-<li>Configure Settings: Adjust point weights and onboarding delivery channels via Mod Tools -> Apps -> testrank -> Settings.</li>
 <li>Generate Leaderboard Post: Open the subreddit overflow menu (`...`) and click Create TestRank Leaderboard Post to provision the pinned community board.</li>
 <li>Reward & Rank: Developers click comment menus on helpful replies to confirm points and immediately trigger leaderboard and flair updates.</li>
 </ul>
@@ -75,11 +68,11 @@ Summary: Automated community tester recognition, reputation, and leaderboard eng
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.46 — 2026-11-16<br>
+Escape innerHTML XSS vectors, fail closed on mod checks, add nx dedupe lock, clamp leaderboard reversal & revoke badges, fix light-mode toast contrast, and align README</p>
 <p>0.0.45 — 2026-11-09<br>
 Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.</p>
 <p>0.0.44 — 2026-11-04<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.43 — 2026-11-04<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>

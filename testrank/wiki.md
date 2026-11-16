@@ -1,15 +1,14 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/testrank/) | **Technical Reference & Settings Spec**
+
 # TestRank
 
 Category: Utility  
-Version: v0.0.45  
+Version: v0.0.46  
 Visibility: Unlisted  
 Summary: Automated community tester recognition, reputation, and leaderboard engine for beta testing subreddits.
 
 ## Overview
 Automated community tester recognition, reputation, and leaderboard engine for beta testing subreddits.
-
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/testrank-flowchart.png)
 
 ## Key Features
 - Not documented yet.
@@ -36,10 +35,6 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - onboardingDeliveryMethod: OP Onboarding Delivery Method (select, default: comment). OP Onboarding Delivery Method
 - requirePostFlair: Require Testing Post Flair for Onboarding (boolean, default: true). Require Testing Post Flair for Onboarding
 - enableOpOnboardingModmail: Enable Onboarding Guidance (boolean, default: true). Enable Onboarding Guidance
-- pointsHelpfulFeedback: Points: Helpful Feedback (number, default: 10). XP awarded for general helpful feedback comments
-- pointsRegisteredTester: Points: Registered Tester (number, default: 5). XP awarded when a user signs up or registers as a tester
-- pointsBugFound: Points: Bug Found (number, default: 25). XP awarded for verified bug reports
-- pointsRetest: Points: Fix Verified (number, default: 30). XP awarded for verified bug fix confirmations
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
@@ -58,7 +53,6 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install App: Install TestRank to your subreddit from the Reddit App Directory.
-- Configure Settings: Adjust point weights and onboarding delivery channels via Mod Tools -> Apps -> testrank -> Settings.
 - Generate Leaderboard Post: Open the subreddit overflow menu (`...`) and click Create TestRank Leaderboard Post to provision the pinned community board.
 - Reward & Rank: Developers click comment menus on helpful replies to confirm points and immediately trigger leaderboard and flair updates.
 
@@ -67,13 +61,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.46 — 2026-11-16
+- Escape innerHTML XSS vectors, fail closed on mod checks, add nx dedupe lock, clamp leaderboard reversal & revoke badges, fix light-mode toast contrast, and align README
+
 0.0.45 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 0.0.44 — 2026-11-04
-- Standard fleet synchronization and maintenance.
-
-0.0.43 — 2026-11-04
 - Standard fleet synchronization and maintenance.
 
 ## Links
