@@ -1,15 +1,14 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/archive-all-mm/) | **Technical Reference & Settings Spec**
+
 # Archive All MM
 
 Category: Modmail  
-Version: v0.0.76  
+Version: v0.0.77  
 Visibility: Public  
 Summary: Modmail archival utility. High-volume message indexing and backup.
 
 ## Overview
 Modmail archival utility. High-volume message indexing and backup.
-
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-all-mm-flowchart.png)
 
 ## Key Features
 - Not documented yet.
@@ -55,16 +54,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.77 — 2026-11-16
+- Narrow circuit breaker to restricted threads, clean lock on runJob error, show live progress in check_status, and align README
+
 0.0.76 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 0.0.75 — 2026-11-06
 - Standard fleet synchronization and maintenance.
-
-0.0.75 — 2026-11-06
-- Feature: Added support for `join_requests`, `notifications`, and `filtered` modmail queues in target queue settings and background processing.
-- UX: Updated status reporting to clarify that internal mod-to-mod discussions cannot be archived due to Reddit API restrictions.
-- Settings: Expanded default target queues to include join requests, notifications, and appeals alongside new and inprogress.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/archive-all-mm/TERMS.md)

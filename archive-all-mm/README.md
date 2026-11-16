@@ -12,35 +12,48 @@ Archive All Modmail effortlessly clears overgrown subreddit inboxes without brow
 
 - **One-click background archiving**: Trigger bulk modmail cleanup from Subreddit Mod Tools.
 - **Zero browser timeouts**: Delegated background execution runs smoothly without freezing your page.
-- **Smart queue selection**: Choose whether to archive New, In Progress, or Appeals.
-- **Unified moderator controls**: Access start commands and real-time progress checks from a single **Archive All Modmail** menu popout.
+- **Smart queue selection**: Choose from 7 Modmail queues (defaults to New, In Progress, Join Requests, Notifications, and Appeals).
+- **Unified moderator controls**: Access start commands and progress checks from a single **Archive All Modmail** menu popout.
 - **Rate-limited chunking**: Throttles API requests safely to prevent Reddit rate limit penalties.
 
-## How It Works
+---
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-all-mm-flowchart.png)
+## How It Works: The 4-Step Operational Pipeline
 
-### Your Four-Step Workflow
+### 01 · Trigger
+> **Moderator-initiated archive**
+> - A moderator opens **Archive All Modmail** and selects **Start Background Archive**.
 
-1. **Trigger**: A moderator opens **Archive All Modmail** and selects **Start Background Archive**.
-2. **Lock**: Redis concurrency locks initialize a dedicated run session and verify target queues.
-3. **Process**: Background workers pull conversations in 100-item batches and archive them in throttled 10-item chunks.
-4. **Complete**: Workers loop automatically until selected queues reach Inbox Zero and report final counts.
+---
+
+### 02 · Lock
+> **Session concurrency protection**
+> - Redis concurrency locks initialize a dedicated run session and verify target queues.
+
+---
+
+### 03 · Process
+> **Throttled chunked archiving**
+> - Background workers pull conversations in 100-item batches and archive them in throttled 10-item chunks.
+
+---
+
+### 04 · Complete
+> **Inbox Zero & status summary**
+> - Workers loop automatically until selected queues reach Inbox Zero and record final counts for **Check Status**.
 
 ---
 
 ## Built for Effortless Inbox Zero
 
 - **Asynchronous Background Workers**: Offloads high-volume archiving operations to reliable server-side tasks so you can close your browser and move on.
-- **Configurable Target Queues**: Select specific folders to clear (e.g. New, In Progress, Appeals) directly from App Settings.
+- **Configurable Target Queues**: Select specific folders to clear (New, In Progress, Join Requests, Notifications, Appeals, Highlighted, Mod Discussions) directly from App Settings.
 - **Single-Session Concurrency Locks**: Uses Redis locking mechanisms to prevent duplicate concurrent runs or conflicting operations.
 - **Unified Moderator Menu Popout**: Select **Archive All Modmail** from the overflow menu (`...`) to access:
   - **Start Background Archive**: Launch a background job to archive pending modmail conversations across selected queues.
-  - **Check Status**: Inspect running session statistics, active worker state, and completed conversation counts.
+  - **Check Status**: Inspect live archived progress during a run and completed conversation counts afterward.
 - **Built-in Safety Protections**: Automatically identifies and protects restricted moderator discussions from bulk modifications.
 - **Native Settings Control**: Fine-tune target queues and batch sizes directly from Subreddit Mod Tools.
-
----
 
 ---
 

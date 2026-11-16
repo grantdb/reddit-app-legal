@@ -7,30 +7,39 @@
 <ul>
 <li><strong>One-click background archiving</strong>: Trigger bulk modmail cleanup from Subreddit Mod Tools.</li>
 <li><strong>Zero browser timeouts</strong>: Delegated background execution runs smoothly without freezing your page.</li>
-<li><strong>Smart queue selection</strong>: Choose whether to archive New, In Progress, or Appeals.</li>
-<li><strong>Unified moderator controls</strong>: Access start commands and real-time progress checks from a single <strong>Archive All Modmail</strong> menu popout.</li>
+<li><strong>Smart queue selection</strong>: Choose from 7 Modmail queues (defaults to New, In Progress, Join Requests, Notifications, and Appeals).</li>
+<li><strong>Unified moderator controls</strong>: Access start commands and progress checks from a single <strong>Archive All Modmail</strong> menu popout.</li>
 <li><strong>Rate-limited chunking</strong>: Throttles API requests safely to prevent Reddit rate limit penalties.</li>
 </ul>
-<h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/archive-all-mm-flowchart.png">Logic Flowchart</a></p>
-<h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Trigger</strong>: A moderator opens <strong>Archive All Modmail</strong> and selects <strong>Start Background Archive</strong>.</p>
-<p>2. <strong>Lock</strong>: Redis concurrency locks initialize a dedicated run session and verify target queues.</p>
-<p>3. <strong>Process</strong>: Background workers pull conversations in 100-item batches and archive them in throttled 10-item chunks.</p>
-<p>4. <strong>Complete</strong>: Workers loop automatically until selected queues reach Inbox Zero and report final counts.</p>
+<p>---</p>
+<h2>How It Works: The 4-Step Operational Pipeline</h2>
+<h3>01 · Trigger</h3>
+<blockquote><p><strong>Moderator-initiated archive</strong></p></blockquote>
+<blockquote><p>- A moderator opens <strong>Archive All Modmail</strong> and selects <strong>Start Background Archive</strong>.</p></blockquote>
+<p>---</p>
+<h3>02 · Lock</h3>
+<blockquote><p><strong>Session concurrency protection</strong></p></blockquote>
+<blockquote><p>- Redis concurrency locks initialize a dedicated run session and verify target queues.</p></blockquote>
+<p>---</p>
+<h3>03 · Process</h3>
+<blockquote><p><strong>Throttled chunked archiving</strong></p></blockquote>
+<blockquote><p>- Background workers pull conversations in 100-item batches and archive them in throttled 10-item chunks.</p></blockquote>
+<p>---</p>
+<h3>04 · Complete</h3>
+<blockquote><p><strong>Inbox Zero & status summary</strong></p></blockquote>
+<blockquote><p>- Workers loop automatically until selected queues reach Inbox Zero and record final counts for <strong>Check Status</strong>.</p></blockquote>
 <p>---</p>
 <h2>Built for Effortless Inbox Zero</h2>
 <ul>
 <li><strong>Asynchronous Background Workers</strong>: Offloads high-volume archiving operations to reliable server-side tasks so you can close your browser and move on.</li>
-<li><strong>Configurable Target Queues</strong>: Select specific folders to clear (e.g. New, In Progress, Appeals) directly from App Settings.</li>
+<li><strong>Configurable Target Queues</strong>: Select specific folders to clear (New, In Progress, Join Requests, Notifications, Appeals, Highlighted, Mod Discussions) directly from App Settings.</li>
 <li><strong>Single-Session Concurrency Locks</strong>: Uses Redis locking mechanisms to prevent duplicate concurrent runs or conflicting operations.</li>
 <li><strong>Unified Moderator Menu Popout</strong>: Select <strong>Archive All Modmail</strong> from the overflow menu (`...`) to access:</li>
 <li><strong>Start Background Archive</strong>: Launch a background job to archive pending modmail conversations across selected queues.</li>
-<li><strong>Check Status</strong>: Inspect running session statistics, active worker state, and completed conversation counts.</li>
+<li><strong>Check Status</strong>: Inspect live archived progress during a run and completed conversation counts afterward.</li>
 <li><strong>Built-in Safety Protections</strong>: Automatically identifies and protects restricted moderator discussions from bulk modifications.</li>
 <li><strong>Native Settings Control</strong>: Fine-tune target queues and batch sizes directly from Subreddit Mod Tools.</li>
 </ul>
-<p>---</p>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>Archive All Modmail</strong> to your subreddit through the Reddit App Directory.</p>
