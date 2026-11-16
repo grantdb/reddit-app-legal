@@ -4,29 +4,44 @@
 
 > **Clean mod queue backlogs from suspended and shadowbanned accounts automatically.**
 
-Suspended Remove safely clears content left behind by suspended, deleted, or shadowbanned accounts. Featuring a multi-stage verification pipeline with customizable waiting actions (Filter & Hide, Filter & Keep Public, or Temp Remove) and auto-recovery, it keeps your mod queue clean while protecting false flags.
+Suspended Remove safely clears content left behind by suspended, deleted, or shadowbanned accounts. Featuring a configurable multi-stage verification pipeline with customizable waiting actions (Filter & Hide, Filter & Keep Public, or Temp Remove) and auto-recovery, it keeps your mod queue clean while protecting false flags.
 
 ---
 
 ## At a Glance
 
-- **Two-stage verification**: Hold suspected items during a confirmation window before applying permanent removal.
+- **Two-stage verification**: Hold suspected items during a configurable confirmation window (`confirmChecks >= 2`) before applying permanent removal.
 - **Three waiting-stage modes**: Choose between Filter & Hide, Filter & Keep Public, or Temporary Remove.
 - **Automated account recovery**: Automatically restore and approve content if an account becomes accessible again.
 - **Historical Post Cleanup**: Optionally search the subreddit and go back in time to remove past posts from confirmed suspended users.
 - **Detailed Mod Notes**: Attach custom internal mod notes and user profile notes at every stage of the check.
 - **Background queue scanning**: Continuously scans posts and comments across modqueue and spam folders.
 
-## How It Works
+---
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/suspended-remove-flowchart.png)
+## How It Works: The 4-Step Operational Pipeline
 
-### Your Four-Step Workflow
+### 01 · Scan
+> **Modqueue and spam discovery**
+> - Suspended Remove scans posts and comments across your subreddit's modqueue and spam queue.
 
-1. **Scan**: Suspended Remove scans posts and comments across your subreddit's modqueue and spam queue.
-2. **Verify**: The engine tests author profile accessibility against the Reddit User API.
-3. **Hold**: On the first confirmed inaccessibility, your chosen waiting-period action (*Filter & Hide*, *Filter & Keep Public*, or *Temp Remove*) is applied.
-4. **Action, Purge or Recover**: If the account remains inaccessible after all scheduled checks, the final action executes; if Historical Cleanup is enabled, previous submissions by the suspended author are cleared; if the account recovers, the post is automatically approved.
+---
+
+### 02 · Verify
+> **Author accessibility check**
+> - The engine tests author profile accessibility against the Reddit User API.
+
+---
+
+### 03 · Hold
+> **Configurable waiting-period action**
+> - When `confirmChecks >= 2`, your chosen waiting-period action (*Filter & Hide*, *Filter & Keep Public*, or *Temp Remove*) is applied during the recheck window.
+
+---
+
+### 04 · Action, Purge or Recover
+> **Final enforcement or automatic recovery**
+> - If the account remains inaccessible after all scheduled checks, the final action executes (and Historical Cleanup runs if enabled); if the account recovers, the item is automatically approved.
 
 ---
 
@@ -42,8 +57,6 @@ Suspended Remove safely clears content left behind by suspended, deleted, or sha
 - **Granular Mod Notes**: Independently toggle and customize internal mod notes attached during the waiting stage and final removal.
 - **Automated Retention Capping**: Items in the verification pipeline are automatically expired and pruned after 14 days.
 - **Native Settings Control**: Configure confirmation check counts, waiting modes, removal actions, and historical cleanup directly in Subreddit Mod Tools.
-
----
 
 ---
 

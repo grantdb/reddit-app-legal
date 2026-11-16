@@ -1,24 +1,34 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>Suspended Remove</h1>
 <blockquote><p><strong>Clean mod queue backlogs from suspended and shadowbanned accounts automatically.</strong></p></blockquote>
-<p>Suspended Remove safely clears content left behind by suspended, deleted, or shadowbanned accounts. Featuring a multi-stage verification pipeline with customizable waiting actions (Filter & Hide, Filter & Keep Public, or Temp Remove) and auto-recovery, it keeps your mod queue clean while protecting false flags.</p>
+<p>Suspended Remove safely clears content left behind by suspended, deleted, or shadowbanned accounts. Featuring a configurable multi-stage verification pipeline with customizable waiting actions (Filter & Hide, Filter & Keep Public, or Temp Remove) and auto-recovery, it keeps your mod queue clean while protecting false flags.</p>
 <p>---</p>
 <h2>At a Glance</h2>
 <ul>
-<li><strong>Two-stage verification</strong>: Hold suspected items during a confirmation window before applying permanent removal.</li>
+<li><strong>Two-stage verification</strong>: Hold suspected items during a configurable confirmation window (`confirmChecks >= 2`) before applying permanent removal.</li>
 <li><strong>Three waiting-stage modes</strong>: Choose between Filter & Hide, Filter & Keep Public, or Temporary Remove.</li>
 <li><strong>Automated account recovery</strong>: Automatically restore and approve content if an account becomes accessible again.</li>
 <li><strong>Historical Post Cleanup</strong>: Optionally search the subreddit and go back in time to remove past posts from confirmed suspended users.</li>
 <li><strong>Detailed Mod Notes</strong>: Attach custom internal mod notes and user profile notes at every stage of the check.</li>
 <li><strong>Background queue scanning</strong>: Continuously scans posts and comments across modqueue and spam folders.</li>
 </ul>
-<h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/suspended-remove-flowchart.png">Logic Flowchart</a></p>
-<h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Scan</strong>: Suspended Remove scans posts and comments across your subreddit's modqueue and spam queue.</p>
-<p>2. <strong>Verify</strong>: The engine tests author profile accessibility against the Reddit User API.</p>
-<p>3. <strong>Hold</strong>: On the first confirmed inaccessibility, your chosen waiting-period action (*Filter & Hide*, *Filter & Keep Public*, or *Temp Remove*) is applied.</p>
-<p>4. <strong>Action, Purge or Recover</strong>: If the account remains inaccessible after all scheduled checks, the final action executes; if Historical Cleanup is enabled, previous submissions by the suspended author are cleared; if the account recovers, the post is automatically approved.</p>
+<p>---</p>
+<h2>How It Works: The 4-Step Operational Pipeline</h2>
+<h3>01 · Scan</h3>
+<blockquote><p><strong>Modqueue and spam discovery</strong></p></blockquote>
+<blockquote><p>- Suspended Remove scans posts and comments across your subreddit's modqueue and spam queue.</p></blockquote>
+<p>---</p>
+<h3>02 · Verify</h3>
+<blockquote><p><strong>Author accessibility check</strong></p></blockquote>
+<blockquote><p>- The engine tests author profile accessibility against the Reddit User API.</p></blockquote>
+<p>---</p>
+<h3>03 · Hold</h3>
+<blockquote><p><strong>Configurable waiting-period action</strong></p></blockquote>
+<blockquote><p>- When `confirmChecks >= 2`, your chosen waiting-period action (*Filter & Hide*, *Filter & Keep Public*, or *Temp Remove*) is applied during the recheck window.</p></blockquote>
+<p>---</p>
+<h3>04 · Action, Purge or Recover</h3>
+<blockquote><p><strong>Final enforcement or automatic recovery</strong></p></blockquote>
+<blockquote><p>- If the account remains inaccessible after all scheduled checks, the final action executes (and Historical Cleanup runs if enabled); if the account recovers, the item is automatically approved.</p></blockquote>
 <p>---</p>
 <h2>Built for Queue Hygiene & Safe Verification</h2>
 <ul>
@@ -33,7 +43,6 @@
 <li><strong>Automated Retention Capping</strong>: Items in the verification pipeline are automatically expired and pruned after 14 days.</li>
 <li><strong>Native Settings Control</strong>: Configure confirmation check counts, waiting modes, removal actions, and historical cleanup directly in Subreddit Mod Tools.</li>
 </ul>
-<p>---</p>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>Suspended Remove</strong> to your subreddit through the Reddit App Directory.</p>
