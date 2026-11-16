@@ -16,31 +16,31 @@ Post Title Check ensures your subreddit feed stays readable, informative, and cl
 - **Copy & Resubmit guidance**: Provide authors with their original text and clear instructions to fix formatting.
 - **Distinguished sticky notices**: Leave clear, public removal comments explaining community guidelines.
 
-## How It Works
+---
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/post-title-check-flowchart.png)
+## How It Works: The 4-Step Operational Pipeline
 
-### Your Four-Step Workflow
-
-1. **Submit**: A user submits a new post to the subreddit.
-2. **Evaluate**: Post Title Check evaluates the title against active formatting, word count, and banned phrase rules.
-3. **Action**: If a violation is detected, the post is removed and a distinguished sticky comment is published.
-4. **Guide**: The author receives a private message with their original text and instructions to correct and resubmit.
+### 01 · Submit
+> **New post detection**
+> - A user submits a new post to the subreddit.
 
 ---
 
----
-
-## Built for Clean Community Feeds
-
-- **Comprehensive Rule Engine**: Validate minimum word counts, required bracket prefixes, banned phrases, and ASCII-only character sets.
-- **Dynamic Removal Reasons**: Configure custom explanations with dynamic placeholders (`{phrase}`, `{minWordCount}`) for precise author feedback.
-- **Author Education & Guidance**: Delivers a structured private message to authors containing their original submission text and clear correction tips.
-- **Distinguished Mod Comments**: Posts a distinguished, locked sticky comment on removed submissions for public community transparency.
-- **Moderator Exemption Controls**: Allow mod posts and official announcements to bypass title formatting rules seamlessly.
-- **Native Settings Control**: Configure all rules and custom messages directly within Subreddit Mod Tools.
+### 02 · Evaluate
+> **Title rule validation**
+> - Post Title Check evaluates the title against active formatting, word count, bracket tag, and banned phrase rules.
 
 ---
+
+### 03 · Action
+> **Automated removal and sticky notice**
+> - If a violation is detected, the post is removed and a distinguished sticky comment is published.
+
+---
+
+### 04 · Guide
+> **Copy & Resubmit author PM**
+> - The author receives a private message with their original text and instructions to correct and resubmit.
 
 ---
 
@@ -51,36 +51,16 @@ Post Title Check ensures your subreddit feed stays readable, informative, and cl
 3. **Add Banned Words**: Enter prohibited clickbait phrases separated by commas.
 4. **Save**: Automated title validation begins immediately on all incoming community submissions.
 
-*No complex AutoMod regex scripts required. Clean, professional titles across your entire feed.*
-
----
-
-## Advanced Capabilities
-
-Post Title Check is engineered for low-latency title parsing and resilient event handling.
-
-- **Multi-Factor Title Parser**: Evaluates word counts, bracket delimiters, character sets, and phrase lists in a single pass.
-- **Dynamic String Template Engine**: Replaces variables in custom removal reasons with the exact phrase or limit violated.
-- **Effectively-Once Execution Mutex**: Uses Redis locks to prevent duplicate enforcement actions during Reddit platform retries.
-- **Eligibility-First Gate**: Verifies submission eligibility before firing notification messages to ensure clean operations.
-
----
-
-## Designed to Assist Moderators
-
-Post Title Check automates submission title validation according to the exact standards set by your moderation team. Validation rules serve as assistive quality controls—human moderators maintain complete authority to review removed posts, approve exceptions, and adjust title criteria at any time.
-
 ---
 
 ## Support
 
-For help, bug reports, or feature requests, post in r/grantdb.
-Please include:
-- The app name.
-- What you expected to happen.
-- What happened instead.
-- Any error message.
-- Screenshots or relevant details.
+> **Need Help?** Post in [https://www.reddit.com/r/grantdb](https://www.reddit.com/r/grantdb) with the app name, what you expected, what happened, and any error text or screenshots.
+>
+> - **User Guide**: [https://www.reddit.com/r/grantdb/wiki/post-title-check/](https://www.reddit.com/r/grantdb/wiki/post-title-check/)
+> - **Technical Reference**: [https://www.reddit.com/r/grantdb/wiki/index/all-apps/post-title-check/](https://www.reddit.com/r/grantdb/wiki/index/all-apps/post-title-check/)
+
+---
 
 ## Legal
 

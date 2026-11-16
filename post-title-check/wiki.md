@@ -1,15 +1,14 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/post-title-check/) | **Technical Reference & Settings Spec**
+
 # Post Title Check
 
 Category: Validation  
-Version: v0.0.91  
+Version: v0.0.92  
 Visibility: Public  
 Summary: Real-time title validation against community guidelines. Now with support for customizable removal reasons per rule.
 
 ## Overview
 Real-time title validation against community guidelines. Now with support for customizable removal reasons per rule.
-
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/post-title-check-flowchart.png)
 
 ## Key Features
 - Not documented yet.
@@ -64,20 +63,19 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Configure Rules: Open Mod Tools > App Settings > Post Title Check to set word counts and required tags.
 - Add Banned Words: Enter prohibited clickbait phrases separated by commas.
 - Save: Automated title validation begins immediately on all incoming community submissions.
-- No complex AutoMod regex scripts required. Clean, professional titles across your entire feed.*
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.92 — 2026-11-16
+- Remove clipboard emoji, release lock on early exits, fail open on Redis lock error, use replaceAll, validate empty titles, and align README
+
 0.0.91 — 2026-11-11
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 0.0.90 — 2026-10-26
-- Standard fleet synchronization and maintenance.
-
-0.0.89 — 2026-10-20
 - Standard fleet synchronization and maintenance.
 
 ## Links

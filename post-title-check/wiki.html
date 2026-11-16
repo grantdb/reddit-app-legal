@@ -1,15 +1,13 @@
+<blockquote><p><a href="https://www.reddit.com/r/grantdb/wiki/post-title-check/">Full User Guide</a> | <strong>Technical Reference &amp; Settings Spec</strong></p></blockquote>
 <h1>Post Title Check</h1>
 
 <p>Category: Validation<br>
-Version: v0.0.91<br>
+Version: v0.0.92<br>
 Visibility: Public<br>
 Summary: Real-time title validation against community guidelines. Now with support for customizable removal reasons per rule.</p>
 
 <h2>Overview</h2>
 <p>Real-time title validation against community guidelines. Now with support for customizable removal reasons per rule.</p>
-
-<h2>Flowchart</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/post-title-check-flowchart.png">View flowchart image</a></p>
 
 <h2>Permissions Used</h2>
 <ul>
@@ -69,7 +67,6 @@ Summary: Real-time title validation against community guidelines. Now with suppo
 <li>Configure Rules: Open Mod Tools > App Settings > Post Title Check to set word counts and required tags.</li>
 <li>Add Banned Words: Enter prohibited clickbait phrases separated by commas.</li>
 <li>Save: Automated title validation begins immediately on all incoming community submissions.</li>
-<li>No complex AutoMod regex scripts required. Clean, professional titles across your entire feed.*</li>
 </ul>
 
 <h2>Troubleshooting</h2>
@@ -79,11 +76,11 @@ Summary: Real-time title validation against community guidelines. Now with suppo
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.92 — 2026-11-16<br>
+Remove clipboard emoji, release lock on early exits, fail open on Redis lock error, use replaceAll, validate empty titles, and align README</p>
 <p>0.0.91 — 2026-11-11<br>
 Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.</p>
 <p>0.0.90 — 2026-10-26<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.89 — 2026-10-20<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
