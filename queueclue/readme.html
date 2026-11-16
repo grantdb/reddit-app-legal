@@ -15,7 +15,7 @@
 <h3>01 · Trigger</h3>
 <blockquote><p><strong>On-Demand Queue Menu Invocation</strong></p></blockquote>
 <blockquote><p>- A moderator opens the moderator action menu on a post or comment in the Needs Review queue and selects <strong>QueueClue: Why filtered?</strong>.</p></blockquote>
-<blockquote><p>- Real-time `onAutomoderatorFilterPost`, `onAutomoderatorFilterComment`, and `onModAction` triggers also capture exact rule reasons and action chronology in bounded Redis storage (30-day TTL).</p></blockquote>
+<blockquote><p>- Real-time `onAutomoderatorFilterPost`, `onAutomoderatorFilterComment`, and `onModAction` triggers also capture exact rule reasons (30-day TTL) and recent action chronology (7-day TTL, up to 5 records) in bounded Redis storage.</p></blockquote>
 <p>---</p>
 <h3>02 · Authorize & Verify</h3>
 <blockquote><p><strong>Moderator & Subreddit Boundary Check</strong></p></blockquote>

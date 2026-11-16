@@ -23,7 +23,7 @@ QueueClue gives moderators a clear, read-only explanation of why a post or comme
 
 > **On-Demand Queue Menu Invocation**
 > - A moderator opens the moderator action menu on a post or comment in the Needs Review queue and selects **QueueClue: Why filtered?**.
-> - Real-time `onAutomoderatorFilterPost`, `onAutomoderatorFilterComment`, and `onModAction` triggers also capture exact rule reasons and action chronology in bounded Redis storage (30-day TTL).
+> - Real-time `onAutomoderatorFilterPost`, `onAutomoderatorFilterComment`, and `onModAction` triggers also capture exact rule reasons (30-day TTL) and recent action chronology (7-day TTL, up to 5 records) in bounded Redis storage.
 
 ---
 
