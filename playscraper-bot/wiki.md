@@ -1,23 +1,20 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/playscraper-bot/) | **Technical Reference & Settings Spec**
+
 # Playscraper Bot
 
 Category: Metadata  
-Version: v1.0.154  
+Version: v1.0.155  
 Visibility: Unlisted  
 Summary: AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with configurable delay. Security-hardened moderator gates.
 
 ## Overview
-AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with configurable delay. Security-hardened moderator gates.
+> **Distinguished sticky comment**
+> - A formatted, stickied moderator comment summarizing the app is posted to the thread.
 
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/playscraper-bot-flowchart.png)
+---
 
 ## Key Features
-- Multi-Source Detection: Seamlessly identifies links from the Google Play Store, F-Droid, GitHub, GitLab, and Codeberg.
-- Cost & Pricing Transparency: Highlights app pricing (Free, Paid) and in-app purchase requirements directly in summary comments.
-- AI-Powered Summaries: Integrates with Gemini 2.5 Flash to rapidly extract key metrics like developer name, download counts, categories, user ratings, and content ratings.
-- Eligibility-First Processing: Employs a sophisticated delayed-processing pattern. It waits a configurable amount of time to confirm a new post is still live (not caught by Reddit's spam filters or AutoModerator) before making any expensive external API calls, saving your quota.
-- Automated or Manual Automation: Can run automatically on all new posts, or be set to manual mode where it only scans when a moderator clicks "Playscraper Bot: Scan Post" in the post menu.
-- Configurable Detail Levels: Tailor the output comment's length by choosing between "Confirmed Only", "General Details", or "Full Details".
+- Not documented yet.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
@@ -61,26 +58,22 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key patterns: og:title
 
 ## Setup and Usage
-- Install: Add Playscraper Bot via the App Directory.
-- API Key Requirement: Obtain a free Google Gemini API Key from Google AI Studio.
-- App Settings:
-- Input your Gemini API Key into the app settings.
-- Choose which sources to detect (e.g., enable GitHub but disable Play Store).
-- Set your preferred Comment Detail Level.
-- Monitoring: The bot operates silently in the background unless configured for Manual mode.
+- Install: Add Playscraper Bot via the Reddit App Directory.
+- Configure API Key: Obtain a Google Gemini API Key from Google AI Studio and add it in Mod Tools > App Settings > Playscraper Bot.
+- Customize: Choose enabled sources, delay settings, and your preferred Comment Detail Level.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.155 — 2026-11-16
+- Fix blocks.triggers manifest, move Gemini key to header, isolate untrusted HTML in prompt, add fetch timeouts and nx locks, and align README
+
 1.0.154 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 1.0.153 — 2026-10-26
-- Standard fleet synchronization and maintenance.
-
-1.0.152 — 2026-10-20
 - Standard fleet synchronization and maintenance.
 
 ## Links

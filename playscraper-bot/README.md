@@ -4,49 +4,67 @@
 
 > **Instantly extract, summarize, and display app store metadata, cost, and developer details for community submissions.**
 
-**Playscraper Bot** is a professional moderator utility that leverages AI to extract and summarize metadata from app stores and open-source repositories. By automatically posting standardized, highly informative comment headers on submissions containing links to these platforms, it helps moderators and users verify shared software content at a glance without having to click away from Reddit.
+**Playscraper Bot** is a moderator utility that leverages AI to extract and summarize metadata from app stores and open-source repositories. By automatically posting standardized, informative comment headers on submissions containing links to these platforms, it helps moderators and users verify shared software content at a glance.
 
 ---
 
-## Key Features
+## At a Glance
 
-- **Multi-Source Detection**: Seamlessly identifies links from the Google Play Store, F-Droid, GitHub, GitLab, and Codeberg.
+- **Multi-Source Detection**: Identifies links from the Google Play Store, F-Droid, GitHub, GitLab, and Codeberg.
 - **Cost & Pricing Transparency**: Highlights app pricing (Free, Paid) and in-app purchase requirements directly in summary comments.
-- **AI-Powered Summaries**: Integrates with Gemini 2.5 Flash to rapidly extract key metrics like developer name, download counts, categories, user ratings, and content ratings.
-- **Eligibility-First Processing**: Employs a sophisticated delayed-processing pattern. It waits a configurable amount of time to confirm a new post is still live (not caught by Reddit's spam filters or AutoModerator) before making any expensive external API calls, saving your quota.
-- **Automated or Manual Automation**: Can run automatically on all new posts, or be set to manual mode where it only scans when a moderator clicks "Playscraper Bot: Scan Post" in the post menu.
-- **Configurable Detail Levels**: Tailor the output comment's length by choosing between "Confirmed Only", "General Details", or "Full Details".
-
-## How It Works
-
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/playscraper-bot-flowchart.png)
-
-1. A user posts a link to a supported app store or repository.
-2. The bot schedules a short delay. Once the delay passes, it checks if the post was removed by Reddit's filters or AutoModerator.
-3. If the post is still valid, the bot scrapes the external URL.
-4. The raw HTML is fed to Gemini to extract structured metadata.
-5. A highly readable, stickied comment is posted summarizing the app for the community.
+- **AI-Powered Summaries**: Integrates with Gemini to extract key metrics like developer name, download counts, categories, user ratings, and content ratings.
+- **Eligibility-First Processing**: Waits a configurable delay to confirm a new post is still live (or auto-processes immediately when a moderator approves a queued post) before making external API calls.
+- **Manual Scan & Link Override**: Moderators can trigger **Playscraper Bot: Scan Post** or **Playscraper Bot: Enter App Link** directly from the post menu.
+- **Configurable Detail Levels**: Choose between "Confirmed Only", "General Details", or "Full Details".
 
 ---
 
+## How It Works: The 5-Step Operational Pipeline
+
+### 01 · Detect Submission
+> **Post, comment, or moderator approval trigger**
+> - A user posts a link to a supported app store or repository, or a moderator approves a queued post or triggers **Scan Post** / **Enter App Link**.
+
 ---
 
-## Setup & Configuration
+### 02 · Eligibility Gate
+> **Delayed spam and removal check**
+> - The bot waits the configured delay (bypassed on moderator approval) and confirms the post was not removed by Reddit's filters or AutoModerator.
 
-1. **Install**: Add **Playscraper Bot** via the App Directory.
-2. **API Key Requirement**: Obtain a free Google Gemini API Key from Google AI Studio.
-3. **App Settings**: 
-   - Input your Gemini API Key into the app settings.
-   - Choose which sources to detect (e.g., enable GitHub but disable Play Store).
-   - Set your preferred Comment Detail Level.
-4. **Monitoring**: The bot operates silently in the background unless configured for Manual mode.
+---
+
+### 03 · Fetch Source HTML
+> **Bounded external metadata retrieval**
+> - If eligible, Playscraper Bot fetches the target store or repository page with a bounded timeout and parses structured HTML tags.
+
+---
+
+### 04 · AI Extraction
+> **Isolated Gemini metadata synthesis**
+> - Parsed tags and sanitized HTML are sent to Gemini with untrusted-data isolation to extract standardized metadata.
+
+---
+
+### 05 · Post Summary
+> **Distinguished sticky comment**
+> - A formatted, stickied moderator comment summarizing the app is posted to the thread.
+
+---
+
+## Quick Setup
+
+1. **Install**: Add **Playscraper Bot** via the Reddit App Directory.
+2. **Configure API Key**: Obtain a Google Gemini API Key from Google AI Studio and add it in **Mod Tools > App Settings > Playscraper Bot**.
+3. **Customize**: Choose enabled sources, delay settings, and your preferred Comment Detail Level.
 
 ---
 
 ## Support
 
-For help, bug reports, or feature requests, post in r/grantdb.
-Please include the app name, what you expected, what happened, and any error text or screenshots.
+> **Need Help?** Post in [https://www.reddit.com/r/grantdb](https://www.reddit.com/r/grantdb) with the app name, what you expected, what happened, and any error text or screenshots.
+>
+> - **User Guide**: [https://www.reddit.com/r/grantdb/wiki/playscraper-bot/](https://www.reddit.com/r/grantdb/wiki/playscraper-bot/)
+> - **Technical Reference**: [https://www.reddit.com/r/grantdb/wiki/index/all-apps/playscraper-bot/](https://www.reddit.com/r/grantdb/wiki/index/all-apps/playscraper-bot/)
 
 ---
 
