@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T19:17:04.026Z",
+  "generatedAt": "2026-11-16T19:18:11.347Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -1782,12 +1782,7 @@
         "moderation",
         "gimmecodeguard"
       ],
-      "setupSteps": [
-        "Install: Add GimmeCode Guard to your subreddit via the Reddit App Directory.",
-        "Launch Dashboard: Open the subreddit menu (`...`) and click GimmeCode Guard Dashboard to open the interactive control center.",
-        "Configure Thresholds: Review or adjust Tier 1 Warning, Tier 2 Report, and Tier 3 Removal point thresholds directly in the Webview.",
-        "Test & Enforce: Test custom community expressions in the Comment Playground. Automated protection activates immediately across all new comment submissions."
-      ],
+      "setupSteps": [],
       "commonIssues": [],
       "troubleshooting": {
         "install_setup": [],
@@ -1826,7 +1821,7 @@
         "troubleshooting": "Check the GimmeCode Guard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-09-26"
+      "lastUpdated": "2026-11-16"
     },
     {
       "appId": "action-guard",

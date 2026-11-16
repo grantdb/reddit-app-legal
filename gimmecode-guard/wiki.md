@@ -1,18 +1,18 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/gimmecode-guard/) | **Technical Reference & Settings Spec**
+
 # GimmeCode Guard
 
 Category: Moderation  
-Version: v0.0.51  
+Version: v0.0.52  
 Visibility: Unlisted  
 Summary: Detects low-effort give me code requests
 
 ## Overview
 Detects low-effort give me code requests
 
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/gimmecode-guard-flowchart.png)
-
 ## Key Features
-- Not documented yet.
+- High-Precision Moderation Rules: Dynamic pattern matching and content enforcement.
+- Idempotency: Powered by `devvit-utils` TaskRunner to guarantee exact-once execution and zero-drift state sync.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
@@ -43,27 +43,27 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 This app utilizes Reddit Redis storage for state management, caching, and rate limiting.
 
 - Key-Value Strings (deduplication & cooldown markers)
+- Hashes (structured records & alias indices)
 - Sorted Sets (time-series audit logs)
 - Key patterns: node:http, gimmecode_guard:dashboard_post_id, gimmecode_guard:creation_lock
 
 ## Setup and Usage
-- Install: Add GimmeCode Guard to your subreddit via the Reddit App Directory.
-- Launch Dashboard: Open the subreddit menu (`...`) and click GimmeCode Guard Dashboard to open the interactive control center.
-- Configure Thresholds: Review or adjust Tier 1 Warning, Tier 2 Report, and Tier 3 Removal point thresholds directly in the Webview.
-- Test & Enforce: Test custom community expressions in the Comment Playground. Automated protection activates immediately across all new comment submissions.
+- Install: Add app via Reddit App Directory.
+- Configure: Open Mod Tools -> App Settings in your subreddit to configure options.
+- Launch: Use mod menu or triggers as configured.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.52 — 2026-11-16
+- Allow 0-threshold disabled, use atomic hIncrBy stats, fix Tier 1 cooldown logging, add 403 UI gate, and update README/PRIVACY
+
 0.0.51 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 0.0.50 — 2026-10-27
-- Standard fleet synchronization and maintenance.
-
-0.0.49 — 2026-10-21
 - Standard fleet synchronization and maintenance.
 
 ## Links
