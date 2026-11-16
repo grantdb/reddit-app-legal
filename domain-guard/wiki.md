@@ -1,18 +1,18 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/domain-guard/) | **Technical Reference & Settings Spec**
+
 # DomainGuard
 
 Category: Security  
-Version: v0.0.170  
+Version: v0.0.171  
 Visibility: Unlisted  
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
 ## Overview
 Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/domain-guard-flowchart.png)
-
 ## Key Features
-- Not documented yet.
+- High-Precision Moderation Rules: Dynamic pattern matching and content enforcement.
+- Idempotency: Powered by `devvit-utils` TaskRunner to guarantee exact-once execution and zero-drift state sync.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
@@ -54,24 +54,22 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key patterns: node:http, node:events, hover:border-slate-500
 
 ## Setup and Usage
-- Install: Add Domain Guard to your subreddit through the Reddit App Directory.
-- Open Dashboard: Launch GuardHub: DomainGuard Dashboard from Subreddit Mod Tools or the subreddit menu.
-- Configure Rules: Add your domain allowlist or blocklist in Audit Mode to safely verify matching behavior.
-- Enforce: Once satisfied with audit results, switch rules to Live mode to begin automated enforcement.
-- No complex regex configuration required. Full control stays in your native dashboard.*
+- Install: Add app via Reddit App Directory.
+- Configure: Open Mod Tools -> App Settings in your subreddit to configure options.
+- Launch: Use mod menu or triggers as configured.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.171 — 2026-11-16
+- Migrate to archivable Modmail, track removelink, fix getModNotes subredditName, validate settings/delete-rule, align TestConsole, and update README
+
 0.0.170 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 0.0.169 — 2026-10-27
-- Standard fleet synchronization and maintenance.
-
-0.0.168 — 2026-10-26
 - Standard fleet synchronization and maintenance.
 
 ## Links

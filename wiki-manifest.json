@@ -11,7 +11,7 @@
   "chevron-lock": "42f9c37952f5e0c5",
   "comment-guard": "f22843b6296577fd",
   "distrofeed-bot": "2abc16f1c5456afe",
-  "domain-guard": "81d298a1e4717395",
+  "domain-guard": "46d3b6acd96382ac",
   "duplicate-guard": "a29dfd4d18ce50d8",
   "filter-guard": "4e413f9fa84d6630",
   "flair-guard": "ac220de372f8b5b5",
@@ -50,5 +50,5 @@
   "queueclue": "7596f2f3539fde72",
   "piracy-guard": "67f0b5b1bdd986a1",
   "moddispatch": "c2818908d1e393c8",
-  "bot_knowledge": "9071109c05ca3cee"
+  "bot_knowledge": "8a4fd5e3e104d7ae"
 }
