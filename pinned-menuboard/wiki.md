@@ -1,15 +1,14 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/pinned-menuboard/) | **Technical Reference & Settings Spec**
+
 # Pinned Menuboard
 
 Category: Moderation  
-Version: v0.0.88  
+Version: v0.0.89  
 Visibility: Public  
 Summary: Centralized interactive showcase for featured community posts, threads, and resources with custom thumbnails and themes.
 
 ## Overview
 Centralized interactive showcase for featured community posts, threads, and resources with custom thumbnails and themes.
-
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/pinned-menuboard-flowchart.png)
 
 ## Key Features
 - Not documented yet.
@@ -48,20 +47,19 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Install: Add Pinned Menuboard to your subreddit through the Reddit App Directory.
 - Generate Board: Select Generate Pinned Menuboard from Subreddit Mod Tools.
 - Feature Threads: Open any post menu (`...`) and click Toggle on Menuboard, or use the in-webview Customize panel.
-- Tune Settings: Click Customize in the top-right corner of the board to set your preferred theme, title, and slot count.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.89 — 2026-11-16
+- Enforce mod & cross-subreddit checks on menu/manage handlers, make withRedisLock atomic, remove stack trace leak & emoji, scope client cache, and align README
+
 0.0.88 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 0.0.87 — 2026-10-28
-- Standard fleet synchronization and maintenance.
-
-0.0.86 — 2026-10-27
 - Standard fleet synchronization and maintenance.
 
 ## Links

@@ -17,29 +17,31 @@ Pinned Menuboard gives your subreddit a stylish navigation hub and game launcher
 - **In-webview moderator controls**: Customize board headers, adjust capacity, and reorder or remove cards directly inside the post.
 - **One-tap menu toggling**: Feature or remove posts instantly from the native Reddit post overflow menu.
 
-## How It Works
+---
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/pinned-menuboard-flowchart.png)
+## How It Works: The 4-Step Operational Pipeline
 
-### Your Four-Step Workflow
-
-1. **Generate**: A moderator clicks **Generate Pinned Menuboard** from Subreddit Mod Tools to create the master custom post.
-2. **Sticky**: The custom post is stickied to the top of your subreddit feed.
-3. **Feature & Unpin**: Open any post and click **Toggle on Menuboard** (or paste the post URL into the Customize panel). The post is added to the board and automatically unpinned from Community Highlights.
-4. **Customize**: Click **Customize** in the board header to adjust themes, change the board title, adjust slot capacity, or reorder active cards.
+### 01 · Generate
+> **Create the master menuboard post**
+> - A moderator clicks **Generate Pinned Menuboard** from Subreddit Mod Tools to create the master custom post.
 
 ---
 
+### 02 · Sticky
+> **Pin to community highlights**
+> - The custom post is stickied to the top of your subreddit feed.
+
 ---
 
-## Built for Rich Community Navigation
+### 03 · Feature & Unpin
+> **Curate posts from the menu or board**
+> - Open any post and click **Toggle on Menuboard** (or paste the post URL into the Customize panel). The post is added to the board and automatically unpinned from Community Highlights.
 
-- **Dynamic Showcase Grid**: Displays 2 to 12 responsive cards featuring high-impact image previews, submission titles, and author attribution.
-- **Multi-Tier Thumbnail Resolution**: Resolves high-resolution thumbnails via Devvit enriched image APIs, standard post thumbnails, direct image links, and preview payloads.
-- **Dedicated Moderator Controls**: Subreddit moderators receive an in-post Customize button granting access to live configuration without leaving the thread.
-- **Theme Selection**: Switch between Dark Mode (light on dark slate `#0b1426`) and Light Mode (dark on clean light `#f8fafc`).
-- **Capacity Controls**: Configure slot limits (2, 4, 6, 8, 10, or 12 cards) with automatic capacity validation.
-- **Community Highlights Integration**: Automatically unpins stickied posts when featured so they do not duplicate inside Reddit's native top highlights bar.
+---
+
+### 04 · Customize
+> **Live board styling and ordering**
+> - Click **Customize** in the board header to adjust themes, change the board title, adjust slot capacity, or reorder active cards.
 
 ---
 
@@ -48,36 +50,21 @@ Pinned Menuboard gives your subreddit a stylish navigation hub and game launcher
 1. **Install**: Add **Pinned Menuboard** to your subreddit through the Reddit App Directory.
 2. **Generate Board**: Select **Generate Pinned Menuboard** from Subreddit Mod Tools.
 3. **Feature Threads**: Open any post menu (`...`) and click **Toggle on Menuboard**, or use the in-webview **Customize** panel.
-4. **Tune Settings**: Click **Customize** in the top-right corner of the board to set your preferred theme, title, and slot count.
-
----
-
-## Advanced Capabilities
-
-Pinned Menuboard is engineered with Devvit Webview architecture for real-time reactivity and lightweight Redis storage.
-
-- **Atomic Redis Concurrency**: Updates use distributed Redis locking to ensure thread-safe capacity and reordering operations.
-- **Automated Thumbnail Backfill**: Automatically inspects existing featured items and enriches them with high-resolution artwork upon initialization.
-- **Moderator-Gated Endpoints**: Dedicated API endpoints (`/api/settings`, `/api/manage-post`) enforce strict moderator permission checks before modifying community configuration.
-- **Zero-Poll Webview**: Fast client initialization with instant optimistic updates and DOM synchronization.
-
----
-
-## Designed to Assist Moderators
-
-Pinned Menuboard provides visual post curation and navigation tools to enhance community engagement. Featured posts are selected and managed exclusively by your moderation team—human moderators maintain full authority over all showcased content.
 
 ---
 
 ## Support
 
-For help, bug reports, or feature requests, post in r/grantdb.
-Please include the app name, what you expected, what happened, and any error text or screenshots.
+> **Need Help?** Post in [https://www.reddit.com/r/grantdb](https://www.reddit.com/r/grantdb) with the app name, what you expected, what happened, and any error text or screenshots.
+>
+> - **User Guide**: [https://www.reddit.com/r/grantdb/wiki/pinned-menuboard/](https://www.reddit.com/r/grantdb/wiki/pinned-menuboard/)
+> - **Technical Reference**: [https://www.reddit.com/r/grantdb/wiki/index/all-apps/pinned-menuboard/](https://www.reddit.com/r/grantdb/wiki/index/all-apps/pinned-menuboard/)
+
+---
 
 ## Legal
 
 This application is subject to the following legal agreements:
-
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/pinned-menuboard/TERMS.md)
 - [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/pinned-menuboard/PRIVACY.md)
 

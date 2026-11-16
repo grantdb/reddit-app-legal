@@ -12,46 +12,35 @@
 <li><strong>In-webview moderator controls</strong>: Customize board headers, adjust capacity, and reorder or remove cards directly inside the post.</li>
 <li><strong>One-tap menu toggling</strong>: Feature or remove posts instantly from the native Reddit post overflow menu.</li>
 </ul>
-<h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/pinned-menuboard-flowchart.png">Logic Flowchart</a></p>
-<h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Generate</strong>: A moderator clicks <strong>Generate Pinned Menuboard</strong> from Subreddit Mod Tools to create the master custom post.</p>
-<p>2. <strong>Sticky</strong>: The custom post is stickied to the top of your subreddit feed.</p>
-<p>3. <strong>Feature & Unpin</strong>: Open any post and click <strong>Toggle on Menuboard</strong> (or paste the post URL into the Customize panel). The post is added to the board and automatically unpinned from Community Highlights.</p>
-<p>4. <strong>Customize</strong>: Click <strong>Customize</strong> in the board header to adjust themes, change the board title, adjust slot capacity, or reorder active cards.</p>
 <p>---</p>
+<h2>How It Works: The 4-Step Operational Pipeline</h2>
+<h3>01 · Generate</h3>
+<blockquote><p><strong>Create the master menuboard post</strong></p></blockquote>
+<blockquote><p>- A moderator clicks <strong>Generate Pinned Menuboard</strong> from Subreddit Mod Tools to create the master custom post.</p></blockquote>
 <p>---</p>
-<h2>Built for Rich Community Navigation</h2>
-<ul>
-<li><strong>Dynamic Showcase Grid</strong>: Displays 2 to 12 responsive cards featuring high-impact image previews, submission titles, and author attribution.</li>
-<li><strong>Multi-Tier Thumbnail Resolution</strong>: Resolves high-resolution thumbnails via Devvit enriched image APIs, standard post thumbnails, direct image links, and preview payloads.</li>
-<li><strong>Dedicated Moderator Controls</strong>: Subreddit moderators receive an in-post Customize button granting access to live configuration without leaving the thread.</li>
-<li><strong>Theme Selection</strong>: Switch between Dark Mode (light on dark slate `#0b1426`) and Light Mode (dark on clean light `#f8fafc`).</li>
-<li><strong>Capacity Controls</strong>: Configure slot limits (2, 4, 6, 8, 10, or 12 cards) with automatic capacity validation.</li>
-<li><strong>Community Highlights Integration</strong>: Automatically unpins stickied posts when featured so they do not duplicate inside Reddit's native top highlights bar.</li>
-</ul>
+<h3>02 · Sticky</h3>
+<blockquote><p><strong>Pin to community highlights</strong></p></blockquote>
+<blockquote><p>- The custom post is stickied to the top of your subreddit feed.</p></blockquote>
+<p>---</p>
+<h3>03 · Feature & Unpin</h3>
+<blockquote><p><strong>Curate posts from the menu or board</strong></p></blockquote>
+<blockquote><p>- Open any post and click <strong>Toggle on Menuboard</strong> (or paste the post URL into the Customize panel). The post is added to the board and automatically unpinned from Community Highlights.</p></blockquote>
+<p>---</p>
+<h3>04 · Customize</h3>
+<blockquote><p><strong>Live board styling and ordering</strong></p></blockquote>
+<blockquote><p>- Click <strong>Customize</strong> in the board header to adjust themes, change the board title, adjust slot capacity, or reorder active cards.</p></blockquote>
 <p>---</p>
 <h2>Quick Setup</h2>
 <p>1. <strong>Install</strong>: Add <strong>Pinned Menuboard</strong> to your subreddit through the Reddit App Directory.</p>
 <p>2. <strong>Generate Board</strong>: Select <strong>Generate Pinned Menuboard</strong> from Subreddit Mod Tools.</p>
 <p>3. <strong>Feature Threads</strong>: Open any post menu (`...`) and click <strong>Toggle on Menuboard</strong>, or use the in-webview <strong>Customize</strong> panel.</p>
-<p>4. <strong>Tune Settings</strong>: Click <strong>Customize</strong> in the top-right corner of the board to set your preferred theme, title, and slot count.</p>
-<p>---</p>
-<h2>Advanced Capabilities</h2>
-<p>Pinned Menuboard is engineered with Devvit Webview architecture for real-time reactivity and lightweight Redis storage.</p>
-<ul>
-<li><strong>Atomic Redis Concurrency</strong>: Updates use distributed Redis locking to ensure thread-safe capacity and reordering operations.</li>
-<li><strong>Automated Thumbnail Backfill</strong>: Automatically inspects existing featured items and enriches them with high-resolution artwork upon initialization.</li>
-<li><strong>Moderator-Gated Endpoints</strong>: Dedicated API endpoints (`/api/settings`, `/api/manage-post`) enforce strict moderator permission checks before modifying community configuration.</li>
-<li><strong>Zero-Poll Webview</strong>: Fast client initialization with instant optimistic updates and DOM synchronization.</li>
-</ul>
-<p>---</p>
-<h2>Designed to Assist Moderators</h2>
-<p>Pinned Menuboard provides visual post curation and navigation tools to enhance community engagement. Featured posts are selected and managed exclusively by your moderation team—human moderators maintain full authority over all showcased content.</p>
 <p>---</p>
 <h2>Support</h2>
-<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
-<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<blockquote><p><strong>Need Help?</strong> Post in <a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a> with the app name, what you expected, what happened, and any error text or screenshots.</p></blockquote>
+<p>></p>
+<blockquote><p>- <strong>User Guide</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/pinned-menuboard/">https://www.reddit.com/r/grantdb/wiki/pinned-menuboard/</a></p></blockquote>
+<blockquote><p>- <strong>Technical Reference</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/pinned-menuboard/">https://www.reddit.com/r/grantdb/wiki/index/all-apps/pinned-menuboard/</a></p></blockquote>
+<p>---</p>
 <h2>Legal</h2>
 <p>This application is subject to the following legal agreements:</p>
 <ul>
