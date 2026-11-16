@@ -6,8 +6,6 @@
 
 Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs to the Reddit mod queue—without forcing moderators to leave their normal workflow.
 
-> **Documentation**: [Full User Guide](https://www.reddit.com/r/grantdb/wiki/moddispatch/) | [Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/moddispatch/)
-
 ### Key Highlights
 - **Atomic Collision Prevention Engine**: Employs distributed Redis locks with configurable timeouts to guarantee that only one moderator reviews or claims an item at any moment, eliminating duplicate reviews.
 - **Native Mod Queue Submenu Actions**: Perform claims, suggestions, handoffs, notes, escalations, and resolutions directly from post and comment menus using native Reddit forms.
@@ -36,7 +34,7 @@ Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs
 
 ### 02 · Atomic Claim Acquisition
 > **Prevent duplicate review with Redis SET NX locks**
-> - The moderator triggers "Mod Dispatch: Claim for review". Redis evaluates the distributed lock and assigns ownership with a configurable inactivity timer.
+> - The moderator triggers the unified **Mod Dispatch** menu item. Redis evaluates the distributed lock and assigns ownership with a configurable inactivity timer.
 
 ---
 
@@ -54,7 +52,7 @@ Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs
 
 ### 05 · Real-Time Team Oversight
 > **Live queue health and workload visibility**
-> - The status card and expanded dashboard batch-load case states via `redis.mGet`, broadcast `realtime` updates, and display team presence and audit trails.
+> - The status card and expanded dashboard batch-load case states via `redis.mGet` and refresh team presence and audit trails on load and tab switches.
 
 ---
 

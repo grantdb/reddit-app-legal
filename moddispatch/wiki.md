@@ -1,15 +1,14 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/moddispatch/) | **Technical Reference & Settings Spec**
+
 # Mod Dispatch
 
 Category: Moderation  
-Version: v0.0.5  
+Version: v0.0.6  
 Visibility: Unlisted  
 Summary: Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs to the Reddit mod queue.
 
 ## Overview
 Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs to the Reddit mod queue.
-
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/moddispatch-flowchart.png)
 
 ## Key Features
 - Claim for Review: Marks item as actively claimed. Automatically prevents simultaneous claims with informative collision notices ("This item is already claimed by u/example").
@@ -60,6 +59,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 This app utilizes Reddit Redis storage for state management, caching, and rate limiting.
 
 - Key-Value Strings (deduplication & cooldown markers)
+- Sorted Sets (time-series audit logs)
 - Key patterns: ModDispatch:AlertSystem, ModDispatch:Sweeper, node:http
 
 ## Setup and Usage
@@ -73,14 +73,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.6 — 2026-11-16
+- Replace unsupported Redis Set/List calls with Sorted Sets, add scheduler crons, fix ModAction IDs, filter queue leaks, add Slack alerts, and align README
+
 0.0.5 — 2026-11-13
 - Merge 16 post/comment menu triggers into unified Mod Dispatch menu, implement all /internal/form/* handlers with Form specs, and add live getModQueue() sync
 
 0.0.4 — 2026-11-13
 - Security & efficiency hardening: fail-closed moderator auth, webhook SSRF/masking/senior-mod guard, redis.mGet batching, atomic forceSetLock override, realtime broadcasts, and README standardization.
-
-0.0.3 — 2026-11-09
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/moddispatch/TERMS.md)

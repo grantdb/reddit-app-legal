@@ -1,15 +1,13 @@
+<blockquote><p><a href="https://www.reddit.com/r/grantdb/wiki/moddispatch/">Full User Guide</a> | <strong>Technical Reference &amp; Settings Spec</strong></p></blockquote>
 <h1>Mod Dispatch</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.5<br>
+Version: v0.0.6<br>
 Visibility: Unlisted<br>
 Summary: Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs to the Reddit mod queue.</p>
 
 <h2>Overview</h2>
 <p>Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs to the Reddit mod queue.</p>
-
-<h2>Flowchart</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/moddispatch-flowchart.png">View flowchart image</a></p>
 
 <h2>Key Features</h2>
 <ul>
@@ -68,6 +66,7 @@ Summary: Mod Dispatch adds shared ownership, live coordination, suggestions, and
 <p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
 <ul>
 <li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Sorted Sets (time-series audit logs)</li>
 <li>Key patterns: ModDispatch:AlertSystem, ModDispatch:Sweeper, node:http</li>
 </ul>
 
@@ -86,12 +85,12 @@ Summary: Mod Dispatch adds shared ownership, live coordination, suggestions, and
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.6 — 2026-11-16<br>
+Replace unsupported Redis Set/List calls with Sorted Sets, add scheduler crons, fix ModAction IDs, filter queue leaks, add Slack alerts, and align README</p>
 <p>0.0.5 — 2026-11-13<br>
 Merge 16 post/comment menu triggers into unified Mod Dispatch menu, implement all /internal/form/* handlers with Form specs, and add live getModQueue() sync</p>
 <p>0.0.4 — 2026-11-13<br>
 Security & efficiency hardening: fail-closed moderator auth, webhook SSRF/masking/senior-mod guard, redis.mGet batching, atomic forceSetLock override, realtime broadcasts, and README standardization.</p>
-<p>0.0.3 — 2026-11-09<br>
-Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
 <ul>

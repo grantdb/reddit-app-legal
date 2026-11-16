@@ -2,7 +2,6 @@
 <h1>Mod Dispatch</h1>
 <blockquote><p><strong>One case. One owner.</strong></p></blockquote>
 <p>Mod Dispatch adds shared ownership, live coordination, suggestions, and handoffs to the Reddit mod queue—without forcing moderators to leave their normal workflow.</p>
-<blockquote><p><strong>Documentation</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/moddispatch/">Full User Guide</a> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/moddispatch/">Technical Reference & Settings Spec</a></p></blockquote>
 <h3>Key Highlights</h3>
 <ul>
 <li><strong>Atomic Collision Prevention Engine</strong>: Employs distributed Redis locks with configurable timeouts to guarantee that only one moderator reviews or claims an item at any moment, eliminating duplicate reviews.</li>
@@ -28,7 +27,7 @@
 <p>---</p>
 <h3>02 · Atomic Claim Acquisition</h3>
 <blockquote><p><strong>Prevent duplicate review with Redis SET NX locks</strong></p></blockquote>
-<blockquote><p>- The moderator triggers "Mod Dispatch: Claim for review". Redis evaluates the distributed lock and assigns ownership with a configurable inactivity timer.</p></blockquote>
+<blockquote><p>- The moderator triggers the unified <strong>Mod Dispatch</strong> menu item. Redis evaluates the distributed lock and assigns ownership with a configurable inactivity timer.</p></blockquote>
 <p>---</p>
 <h3>03 · Collaborative Routing & Context</h3>
 <blockquote><p><strong>Keep context across shifts</strong></p></blockquote>
@@ -40,7 +39,7 @@
 <p>---</p>
 <h3>05 · Real-Time Team Oversight</h3>
 <blockquote><p><strong>Live queue health and workload visibility</strong></p></blockquote>
-<blockquote><p>- The status card and expanded dashboard batch-load case states via `redis.mGet`, broadcast `realtime` updates, and display team presence and audit trails.</p></blockquote>
+<blockquote><p>- The status card and expanded dashboard batch-load case states via `redis.mGet` and refresh team presence and audit trails on load and tab switches.</p></blockquote>
 <p>---</p>
 <h2>Quick Setup (60-Second Onboarding)</h2>
 <p>1. <strong>Install App</strong>: Install Mod Dispatch on your subreddit via the Reddit Developer Portal.</p>
