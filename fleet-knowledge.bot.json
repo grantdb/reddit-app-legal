@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-16T19:18:11.347Z",
+  "generatedAt": "2026-11-17T05:01:17.107Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -1156,7 +1156,11 @@
         "security",
         "domain guard"
       ],
-      "setupSteps": [],
+      "setupSteps": [
+        "Install: Add DomainGuard to your subreddit via the Reddit Developer portal.",
+        "Open Dashboard: From your subreddit menu (`...`), select GuardHub: DomainGuard Dashboard and add your allowlist/blocklist rules.",
+        "Verify & Enforce: Test rules in the built-in Test Console or Dry Run mode, then switch to Enforce mode."
+      ],
       "commonIssues": [],
       "troubleshooting": {
         "install_setup": [],
@@ -1201,7 +1205,7 @@
         "troubleshooting": "Check the DomainGuard troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-11-16"
+      "lastUpdated": "2026-11-17"
     },
     {
       "appId": "user-guard",

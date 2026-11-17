@@ -3,7 +3,7 @@
 # DomainGuard
 
 Category: Security  
-Version: v0.0.171  
+Version: v0.0.172  
 Visibility: Unlisted  
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
@@ -11,8 +11,7 @@ Summary: Professional URL and domain moderation engine with singleton architectu
 Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
 ## Key Features
-- High-Precision Moderation Rules: Dynamic pattern matching and content enforcement.
-- Idempotency: Powered by `devvit-utils` TaskRunner to guarantee exact-once execution and zero-drift state sync.
+- Not documented yet.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
@@ -35,7 +34,7 @@ Professional URL and domain moderation engine with singleton architecture and ha
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- recheckFilteredPostsJob: Dashboard (devvit-internal, default: -). Dashboard
+- droidappshowcase: Dashboard (devvit-internal, default: -). Dashboard
 
 ## Automation Capabilities
 - Submits Automated Comments: Yes — Posts automated comments on target submissions.
@@ -51,26 +50,26 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key-Value Strings (deduplication & cooldown markers)
 - Hashes (structured records & alias indices)
 - Sorted Sets (time-series audit logs)
-- Key patterns: node:http, node:events, hover:border-slate-500
+- Key patterns: t3_post1:edit:1, t1_comment1:create:1, node:http, node:events, hover:border-slate-500
 
 ## Setup and Usage
-- Install: Add app via Reddit App Directory.
-- Configure: Open Mod Tools -> App Settings in your subreddit to configure options.
-- Launch: Use mod menu or triggers as configured.
+- Install: Add DomainGuard to your subreddit via the Reddit Developer portal.
+- Open Dashboard: From your subreddit menu (`...`), select GuardHub: DomainGuard Dashboard and add your allowlist/blocklist rules.
+- Verify & Enforce: Test rules in the built-in Test Console or Dry Run mode, then switch to Enforce mode.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.172 — 2026-11-17
+- Guarantee approved and auto-approved posts are never marked as spam, fix comment triggers evaluating parent post, and remove duplicate post menu launcher
+
 0.0.171 — 2026-11-16
 - Migrate to archivable Modmail, track removelink, fix getModNotes subredditName, validate settings/delete-rule, align TestConsole, and update README
 
 0.0.170 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
-
-0.0.169 — 2026-10-27
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/TERMS.md)

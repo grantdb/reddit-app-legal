@@ -1,17 +1,54 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/domain-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>DomainGuard</h1>
-<h2>Purpose</h2>
-<p>Professional URL and domain moderation engine with singleton architecture and hardened API gates.</p>
-<h2>Major Features</h2>
+<blockquote><p><strong>High-precision URL and domain moderation engine with rule-based filtering, post-edit auto-recheck, and moderator queue protection.</strong></p></blockquote>
+<p>DomainGuard inspects links and domain mentions across submissions and comments, enforces allowlist or blocklist policies with dry-run simulation support, and tracks filtered posts for automatic re-approval when authors remove offending URLs.</p>
+<hr>
+<h2>At a Glance</h2>
 <ul>
-<li><strong>High-Precision Moderation Rules</strong>: Dynamic pattern matching and content enforcement.</li>
-<li><strong>Idempotency</strong>: Powered by `devvit-utils` TaskRunner to guarantee exact-once execution and zero-drift state sync.</li>
+<li><strong>Allowlist & Blocklist Rule Engine</strong>: Match domains across post URLs, body links, or both with subdomain controls, risk-score thresholds, and moderator exemptions.</li>
+<li><strong>Auto-Recheck & Clean Auto-Approval</strong>: Track filtered submissions and automatically re-evaluate on post edits or scheduled rechecks, approving and unlocking clean posts while permanently protecting approved items from being marked as spam.</li>
+<li><strong>Control Center & Dry-Run Mode</strong>: Manage rules, inspect audit logs, test payloads in the Test Console, and simulate actions safely via throttled Modmail alerts before enforcing.</li>
+<li><strong>Idempotent & Moderator-Safe</strong>: Deduplicates concurrent create/submit triggers and tracks moderator approvals in Redis so approved posts are never re-filtered or marked as spam.</li>
 </ul>
-<h2>Install / Use</h2>
-<p>1. Install on your subreddit.</p>
-<p>2. Configure active moderation filters via the subreddit's developer app settings panel.</p>
+<hr>
+<h2>How It Works: The 4-Step Operational Pipeline</h2>
+<h3>01 · Configure Rules & Mode</h3>
+<blockquote><p><strong>Launch the DomainGuard Dashboard</strong></p></blockquote>
+<blockquote><p>- Moderators open <strong>GuardHub: DomainGuard Dashboard</strong> from the subreddit menu (<code>...</code>) to create prioritized allowlist or blocklist rules.</p></blockquote>
+<blockquote><p>- Start in <strong>Dry Run</strong> mode to log matches and send throttled Modmail previews, or switch to <strong>Enforce</strong> mode for live moderation.</p></blockquote>
+<hr>
+<h3>02 · Inspect Submissions & Comments</h3>
+<blockquote><p><strong>Tiered Domain Extraction & Delta Baseline</strong></p></blockquote>
+<blockquote><p>- On <code>onPostCreate</code>, <code>onPostSubmit</code>, <code>onCommentCreate</code>, and <code>onCommentSubmit</code>, DomainGuard extracts explicit URLs and naked domains while skipping exempt domains.</p></blockquote>
+<blockquote><p>- Previously approved items use a stored domain baseline so edits are only checked against newly introduced domains, and approved posts are never marked as spam.</p></blockquote>
+<hr>
+<h3>03 · Enforce & Track Filtered Posts</h3>
+<blockquote><p><strong>Filter, Notify & Queue for Auto-Recheck</strong></p></blockquote>
+<blockquote><p>- Matching items execute the configured rule action (<code>filter</code>, <code>remove</code>, <code>spam</code>, <code>report</code>, or <code>log</code>), optionally post a removal notice, and record a ModNote.</p></blockquote>
+<blockquote><p>- Filtered submissions are queued in the Control Center with a configurable grace period for author edits.</p></blockquote>
+<hr>
+<h3>04 · Auto-Recheck & Moderator Approval</h3>
+<blockquote><p><strong>Clean Recovery & Permanent Spam Protection</strong></p></blockquote>
+<blockquote><p>- When an author edits a filtered post to remove the offending URL (<code>onPostUpdate</code> or scheduled recheck), DomainGuard auto-approves the post, removes its notice comment, unlocks it, and registers its clean domain baseline.</p></blockquote>
+<blockquote><p>- Manual approvals via Reddit or the Control Center Filtered Queue immediately clear the queue entry and protect the post against future spam marking.</p></blockquote>
+<hr>
+<h2>Quick Setup</h2>
+<ol>
+<li><strong>Install</strong>: Add <strong>DomainGuard</strong> to your subreddit via the Reddit Developer portal.</li>
+<li><strong>Open Dashboard</strong>: From your subreddit menu (<code>...</code>), select <strong>GuardHub: DomainGuard Dashboard</strong> and add your allowlist/blocklist rules.</li>
+<li><strong>Verify & Enforce</strong>: Test rules in the built-in Test Console or Dry Run mode, then switch to <strong>Enforce</strong> mode.</li>
+</ol>
+<hr>
 <h2>Support</h2>
-<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
-<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
-<p>---</p>
+<blockquote><p><strong>Need help, found a bug, or have a feature request?</strong></p></blockquote>
+<blockquote><p>Post in <strong><a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a></strong> with the app name (<code>domain-guard</code>), what you expected, what happened, and any error text or screenshots.</p></blockquote>
+<blockquote><p>- <strong>Full User Guide</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/domain-guard/">https://www.reddit.com/r/grantdb/wiki/domain-guard/</a></p></blockquote>
+<blockquote><p>- <strong>Technical Reference & Settings Spec</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/domain-guard/">https://www.reddit.com/r/grantdb/wiki/index/all-apps/domain-guard/</a></p></blockquote>
+<hr>
+<h2>Legal</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<hr>
 <p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>

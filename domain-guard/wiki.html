@@ -2,18 +2,12 @@
 <h1>DomainGuard</h1>
 
 <p>Category: Security<br>
-Version: v0.0.171<br>
+Version: v0.0.172<br>
 Visibility: Unlisted<br>
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.</p>
 
 <h2>Overview</h2>
 <p>Professional URL and domain moderation engine with singleton architecture and hardened API gates.</p>
-
-<h2>Key Features</h2>
-<ul>
-<li>High-Precision Moderation Rules: Dynamic pattern matching and content enforcement.</li>
-<li>Idempotency: Powered by `devvit-utils` TaskRunner to guarantee exact-once execution and zero-drift state sync.</li>
-</ul>
 
 <h2>Permissions Used</h2>
 <ul>
@@ -39,7 +33,7 @@ Summary: Professional URL and domain moderation engine with singleton architectu
 <h2>Settings Reference</h2>
 <p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
 <ul>
-<li>recheckFilteredPostsJob: Dashboard (devvit-internal, default: -). Dashboard</li>
+<li>droidappshowcase: Dashboard (devvit-internal, default: -). Dashboard</li>
 </ul>
 
 <h2>Automation Capabilities</h2>
@@ -58,16 +52,14 @@ Summary: Professional URL and domain moderation engine with singleton architectu
 <li>Key-Value Strings (deduplication & cooldown markers)</li>
 <li>Hashes (structured records & alias indices)</li>
 <li>Sorted Sets (time-series audit logs)</li>
-<li>Key patterns: node:http, node:events, hover:border-slate-500</li>
+<li>Key patterns: t3_post1:edit:1, t1_comment1:create:1, node:http, node:events, hover:border-slate-500</li>
 </ul>
 
 <h2>Setup and Usage</h2>
 <ul>
-<li>Install: Add app via Reddit App Directory or Mod Tools.</li>
-<li>Open: Open Mod Tools -&gt; App Settings in your subreddit to configure options.</li>
-<li>Configure: Set active options and API keys as needed.</li>
-<li>Use: App runs automatically in background according to event triggers and settings.</li>
-<li>Review: Verify bot activity and comments directly on subreddit posts or in mod logs.</li>
+<li>Install: Add DomainGuard to your subreddit via the Reddit Developer portal.</li>
+<li>Open Dashboard: From your subreddit menu (`...`), select GuardHub: DomainGuard Dashboard and add your allowlist/blocklist rules.</li>
+<li>Verify & Enforce: Test rules in the built-in Test Console or Dry Run mode, then switch to Enforce mode.</li>
 </ul>
 
 <h2>Troubleshooting</h2>
@@ -77,12 +69,12 @@ Summary: Professional URL and domain moderation engine with singleton architectu
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.172 — 2026-11-17<br>
+Guarantee approved and auto-approved posts are never marked as spam, fix comment triggers evaluating parent post, and remove duplicate post menu launcher</p>
 <p>0.0.171 — 2026-11-16<br>
 Migrate to archivable Modmail, track removelink, fix getModNotes subredditName, validate settings/delete-rule, align TestConsole, and update README</p>
 <p>0.0.170 — 2026-11-09<br>
 Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.</p>
-<p>0.0.169 — 2026-10-27<br>
-Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
 <ul>
