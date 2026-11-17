@@ -3,7 +3,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.48  
+Version: v0.0.49  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -59,14 +59,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.49 — 2026-11-17
+- Auto-open Recap on show completion, fix post-match chant bubbles & completed lock, guard mod-area winner flash, expand chant burst stage & slow bubbles, and paginate mod-area comment history
+
 0.0.48 — 2026-11-15
 - Fix Tale of the Tape stale/wrong finishing moves and stats, backfill missing default superstars/belts in HubData, and add live-show + hub dropdown editors for finishing moves, stats, and belts
 
 0.0.47 — 2026-11-15
 - Update default championship belts, superstar brands/stats, finishing moves, and show cards to November 2026
-
-0.0.46 — 2026-11-15
-- Add Special Appearance (single-star segment) support for impromptu and bulk-imported matches plus native comments notice
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
