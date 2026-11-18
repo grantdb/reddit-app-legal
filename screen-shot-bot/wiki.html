@@ -1,24 +1,13 @@
+<blockquote><p><a href="https://www.reddit.com/r/grantdb/wiki/screen-shot-bot/">Full User Guide</a> | <strong>Technical Reference &amp; Settings Spec</strong></p></blockquote>
 <h1>Screen-Shot Bot</h1>
 
 <p>Category: Rendering<br>
-Version: v1.0.85<br>
+Version: v1.0.86<br>
 Visibility: Public<br>
 Summary: Automated screen-capture and visual logging utility.</p>
 
 <h2>Overview</h2>
 <p>Automated screen-capture and visual logging utility.</p>
-
-<h2>Flowchart</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/screen-shot-bot-flowchart.png">View flowchart image</a></p>
-
-<h2>Key Features</h2>
-<ul>
-<li>Automated AI Transcription: Integrates with Gemini to instantly and accurately extract precise text strings from complex, grainy, or poorly lit technical images.</li>
-<li>Searchable Indexing: By converting static images of crash logs into text-based stickied comments, it ensures that your subreddit's error reports are fully searchable by future users experiencing the same issue.</li>
-<li>Configurable Targets: Granular settings allow you to choose exactly what the bot looks for. You can configure it to transcribe *all* terminal images, or only activate when it detects specific contexts (like Errors, System Info, or Config files).</li>
-<li>Mod Approval Coverage: Safely operates alongside your existing moderation workflow. It will automatically check new posts, and intelligently re-process posts if they are held and later approved by a moderator.</li>
-<li>Manual Actions: Moderators can manually trigger an on-demand transcription of older posts using the Mod Actions menu.</li>
-</ul>
 
 <h2>Permissions Used</h2>
 <ul>
@@ -73,11 +62,9 @@ Summary: Automated screen-capture and visual logging utility.</p>
 
 <h2>Setup and Usage</h2>
 <ul>
-<li>Install: Add Screen Shot Bot to your subreddit via the App Directory.</li>
-<li>App Settings:</li>
-<li>Add your Google Gemini API key to the settings.</li>
-<li>Select your "Extraction Target" from the dropdown list.</li>
-<li>Usage: The bot runs automatically. To use it manually on an old post, use the "Extract text from image (Gemini)" menu item in the post's mod menu.</li>
+<li>Install: Add Screen Shot Bot to your subreddit via the Reddit App Directory.</li>
+<li>Configure API Key & Target: Open Mod Tools > App Settings > Screen Shot Bot, add your Google Gemini API key, and select an Extraction Target.</li>
+<li>Verify: Submit a test terminal screenshot or trigger Extract text from image (Gemini)** from a post's mod menu.</li>
 </ul>
 
 <h2>Troubleshooting</h2>
@@ -87,11 +74,11 @@ Summary: Automated screen-capture and visual logging utility.</p>
 </ul>
 
 <h2>Version History</h2>
+<p>1.0.86 — 2026-11-18<br>
+Migrate Gemini Vision candidate models to gemini-3.5-flash-lite / gemini-3.6-flash and avoid 429 bursting</p>
 <p>1.0.85 — 2026-11-11<br>
 Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.</p>
 <p>1.0.84 — 2026-10-26<br>
-Standard fleet synchronization and maintenance.</p>
-<p>1.0.83 — 2026-10-20<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>

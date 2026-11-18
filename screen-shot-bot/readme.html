@@ -1,37 +1,56 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/screen-shot-bot">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>Screen Shot Bot</h1>
-<p><strong>Screen Shot Bot</strong> is a specialized accessibility and support tool designed to bridge the gap between technical image uploads and searchable community data. Rather than forcing users to manually re-type long error logs from a photo, this bot uses advanced AI to automatically transcribe text from terminal windows, boot logs, and configuration screens into clean, indexable comments.</p>
-<h2>Key Features</h2>
+<blockquote><p><strong>Automated AI OCR and terminal-log transcription engine for technical support communities.</strong></p></blockquote>
+<p><strong>Screen Shot Bot</strong> bridges the gap between technical image uploads and searchable community data. Rather than forcing users to manually re-type long error logs from a photo, it uses Google Gemini Vision (<code>gemini-3.5-flash-lite</code>) to transcribe text from terminal windows, boot logs, and configuration screens into clean, indexable comments.</p>
+<hr>
+<h2>At a Glance</h2>
 <ul>
-<li><strong>Automated AI Transcription</strong>: Integrates with Gemini to instantly and accurately extract precise text strings from complex, grainy, or poorly lit technical images.</li>
-<li><strong>Searchable Indexing</strong>: By converting static images of crash logs into text-based stickied comments, it ensures that your subreddit's error reports are fully searchable by future users experiencing the same issue.</li>
-<li><strong>Configurable Targets</strong>: Granular settings allow you to choose exactly what the bot looks for. You can configure it to transcribe *all* terminal images, or only activate when it detects specific contexts (like Errors, System Info, or Config files).</li>
-<li><strong>Mod Approval Coverage</strong>: Safely operates alongside your existing moderation workflow. It will automatically check new posts, and intelligently re-process posts if they are held and later approved by a moderator.</li>
-<li><strong>Manual Actions</strong>: Moderators can manually trigger an on-demand transcription of older posts using the Mod Actions menu.</li>
+<li><strong>Automated AI Transcription</strong>: Uses Gemini Vision to extract text from complex, grainy, or poorly lit technical screenshots.</li>
+<li><strong>Searchable Indexing</strong>: Converts static crash-log images into formatted code-block comments so future users can search for the same errors.</li>
+<li><strong>Configurable Targets</strong>: Restrict transcription to specific categories (Errors & Crash Logs, System Info, Config Files) or allow all terminal images.</li>
+<li><strong>Mod Approval Coverage</strong>: Safely re-processes held posts if they are later approved by a moderator, plus on-demand Mod Menu extraction.</li>
 </ul>
-<h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/screen-shot-bot-flowchart.png">Logic Flowchart</a></p>
-<p>1. A user submits a post containing an image (e.g., a photo of a kernel panic).</p>
-<p>2. The bot intercepts the image and securely sends it to the AI engine for contextual analysis.</p>
-<p>3. The AI determines if the image matches your configured target category (e.g., "Errors & Crash logs").</p>
-<p>4. If it matches, the AI performs Optical Character Recognition (OCR), extracting the text cleanly.</p>
-<p>5. The bot replies to the post with the transcribed text, formatting it in a code block for readability.</p>
-<h2>Setup & Configuration</h2>
-<p>1. <strong>Install</strong>: Add <strong>Screen Shot Bot</strong> to your subreddit via the App Directory.</p>
-<p>2. <strong>App Settings</strong>:</p>
-<ul>
-<li>Add your Google Gemini API key to the settings.</li>
-<li>Select your "Extraction Target" from the dropdown list.</li>
-</ul>
-<p>3. <strong>Usage</strong>: The bot runs automatically. To use it manually on an old post, use the "Extract text from image (Gemini)" menu item in the post's mod menu.</p>
+<hr>
+<h2>How It Works: The 4-Step Operational Pipeline</h2>
+<h3>01 · Image Post Detection</h3>
+<blockquote><p><strong>Submission & Mod-Approval Triggers</strong></p></blockquote>
+<blockquote><p>- Monitors new image posts and moderator-approved posts in the subreddit.</p></blockquote>
+<blockquote><p>- Downloads and base64-encodes the image for AI inspection.</p></blockquote>
+<hr>
+<h3>02 · Target Classification</h3>
+<blockquote><p><strong>Contextual Filtering</strong></p></blockquote>
+<blockquote><p>- Evaluates the image against your configured Extraction Target (e.g., Errors & Crash Logs).</p></blockquote>
+<blockquote><p>- Skips non-matching images cleanly without posting noise.</p></blockquote>
+<hr>
+<h3>03 · OCR Extraction</h3>
+<blockquote><p><strong>Gemini Vision Transcription</strong></p></blockquote>
+<blockquote><p>- Extracts terminal output, stack traces, or configuration lines into structured JSON rows.</p></blockquote>
+<blockquote><p>- Uses <code>gemini-3.5-flash-lite</code> with <code>gemini-3.6-flash</code> fallback and rate-limit protection.</p></blockquote>
+<hr>
+<h3>04 · Formatted Reply</h3>
+<blockquote><p><strong>Indexable Code-Block Comment</strong></p></blockquote>
+<blockquote><p>- Posts the transcribed text in a clean Markdown code block on the submission.</p></blockquote>
+<blockquote><p>- Supports on-demand re-runs via the post's <strong>Extract text from image (Gemini)</strong> mod menu action.</p></blockquote>
+<hr>
+<h2>Quick Setup</h2>
+<ol>
+<li><strong>Install</strong>: Add <strong>Screen Shot Bot</strong> to your subreddit via the Reddit App Directory.</li>
+<li><strong>Configure API Key & Target</strong>: Open <strong>Mod Tools > App Settings > Screen Shot Bot</strong>, add your Google Gemini API key, and select an Extraction Target.</li>
+<li><strong>Verify</strong>: Submit a test terminal screenshot or trigger <strong>Extract text from image (Gemini)</strong> from a post's mod menu.</li>
+</ol>
+<hr>
 <h2>Support</h2>
-<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
-<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<blockquote><p><strong>Official Support Community</strong></p></blockquote>
+<blockquote><p>- Post questions, bug reports, or feature requests in <a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a>.</p></blockquote>
+<blockquote><p>- Include the app name, what you expected, what happened, and any error text or screenshots.</p></blockquote>
+<blockquote><p>- <a href="https://www.reddit.com/r/grantdb/wiki/screen-shot-bot/">Full User Guide</a></p></blockquote>
+<blockquote><p>- <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/screen-shot-bot/">Technical Reference & Settings Spec</a></p></blockquote>
+<hr>
 <h2>Legal</h2>
 <p>This application is subject to the following legal agreements:</p>
 <ul>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/screen-shot-bot/TERMS.md">Terms of Service</a></li>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/screen-shot-bot/PRIVACY.md">Privacy Policy</a></li>
 </ul>
-<p>---</p>
+<hr>
 <p>*Built for Reddit's moderator community.*</p>
