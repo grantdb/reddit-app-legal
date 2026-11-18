@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T21:22:14.174Z",
+  "generatedAt": "2026-11-18T21:27:59.527Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -279,11 +279,9 @@
         "screen shot bot"
       ],
       "setupSteps": [
-        "Install: Add Screen Shot Bot to your subreddit via the App Directory.",
-        "App Settings:",
-        "Add your Google Gemini API key to the settings.",
-        "Select your \"Extraction Target\" from the dropdown list.",
-        "Usage: The bot runs automatically. To use it manually on an old post, use the \"Extract text from image (Gemini)\" menu item in the post's mod menu."
+        "Install: Add Screen Shot Bot to your subreddit via the Reddit App Directory.",
+        "Configure API Key & Target: Open Mod Tools > App Settings > Screen Shot Bot, add your Google Gemini API key, and select an Extraction Target.",
+        "Verify: Submit a test terminal screenshot or trigger Extract text from image (Gemini)** from a post's mod menu."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -328,7 +326,7 @@
         "troubleshooting": "Check the Screen-Shot Bot troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-30"
+      "lastUpdated": "2026-11-18"
     },
     {
       "appId": "post-title-check",

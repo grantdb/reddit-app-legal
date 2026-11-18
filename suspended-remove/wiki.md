@@ -3,7 +3,7 @@
 # Suspended Remove
 
 Category: Security  
-Version: v1.0.93  
+Version: v1.0.94  
 Visibility: Public  
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.
 
@@ -72,14 +72,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.94 — 2026-11-18
+- Add single retry for transient gRPC 500 errors during modqueue/spam scan
+
 1.0.93 — 2026-11-16
 - Fix Waiting Stage threshold math, run Historical Guard before state mutation, sort pending queue, remove settings emoji, and align README
 
 1.0.92 — 2026-11-11
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
-
-1.0.91 — 2026-10-26
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/TERMS.md)

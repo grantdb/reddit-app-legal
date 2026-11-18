@@ -1,16 +1,16 @@
 {
   "slug": "suspended-remove",
   "title": "Suspended Remove",
-  "version": "1.0.93",
-  "date": "2026-11-16",
+  "version": "1.0.94",
+  "date": "2026-11-18",
   "category": "Security",
   "description": "High-precision account purification engine. Fleet-wide security infrastructure.",
   "visibility": "Public",
-  "notes": "- Fix Waiting Stage threshold math, run Historical Guard before state mutation, sort pending queue, remove settings emoji, and align README",
-  "postTitle": "[App Update] Suspended Remove v1.0.93 Released",
-  "postBody": "# Suspended Remove v1.0.93 is Now Available\n\n> **High-precision account purification engine. Fleet-wide security infrastructure.**\n\n---\n\n### What's New in v1.0.93\n- Fix Waiting Stage threshold math, run Historical Guard before state mutation, sort pending queue, remove settings emoji, and align README\n\n---\n\n### Key Capabilities & Highlights\n- **Category**: Security\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/suspended-remove)\n\n---\n\n### How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Suspended Remove** and click **Update** (or verify it displays `v1.0.93`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Submit a new post with the `Support` flair.*\n",
+  "notes": "- Add single retry for transient gRPC 500 errors during modqueue/spam scan",
+  "postTitle": "[App Update] Suspended Remove v1.0.94 Released",
+  "postBody": "# Suspended Remove v1.0.94 is Now Available\n\n> **High-precision account purification engine. Fleet-wide security infrastructure.**\n\n---\n\n### What's New in v1.0.94\n- Add single retry for transient gRPC 500 errors during modqueue/spam scan\n\n---\n\n### Key Capabilities & Highlights\n- **Category**: Security\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/suspended-remove)\n\n---\n\n### How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Suspended Remove** and click **Update** (or verify it displays `v1.0.94`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/suspended-remove-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/suspended-remove",
-  "generatedAt": "2026-11-16T19:40:03.100Z"
+  "generatedAt": "2026-11-18T21:27:59.571Z"
 }
