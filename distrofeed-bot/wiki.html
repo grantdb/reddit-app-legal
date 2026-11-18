@@ -1,24 +1,13 @@
+<blockquote><p><a href="https://www.reddit.com/r/grantdb/wiki/distrofeed-bot/">Full User Guide</a> | <strong>Technical Reference &amp; Settings Spec</strong></p></blockquote>
 <h1>DistroFeed Bot</h1>
 
 <p>Category: Automation<br>
-Version: v0.1.112<br>
+Version: v0.1.113<br>
 Visibility: Unlisted<br>
 Summary: Linux aggregator. Upgraded to Gemini 2.5 metadata extraction. Fixed network permissions.</p>
 
 <h2>Overview</h2>
 <p>Linux aggregator. Upgraded to Gemini 2.5 metadata extraction. Fixed network permissions.</p>
-
-<h2>Flowchart</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/DistroFeed-bot-flowchart.png">View flowchart image</a></p>
-
-<h2>Key Features</h2>
-<ul>
-<li>% Manual & Moderator Control: Zero auto-posting or background crons. Operates via an interactive Mod Menu popout workflow.</li>
-<li>AI-Powered Search Grounding: Uses Google Gemini 2.5 Flash to scan DistroWatch, Phoronix, and 9to5Linux for recent major OS releases and kernel updates.</li>
-<li>Interactive Pre-Publish Editor: Presents candidate updates in an interactive Devvit form where moderators can customize post title, target URL, TL;DR summary, post flair, and sticky comment options.</li>
-<li>Unified Menu Popout: Access both scouting and candidate review flows from a single DistroFeed Bot menu item.</li>
-<li>Deduplication Engine: Enforces Redis URL and topic slug tracking to prevent duplicate coverage.</li>
-</ul>
 
 <h2>Permissions Used</h2>
 <ul>
@@ -64,9 +53,9 @@ Summary: Linux aggregator. Upgraded to Gemini 2.5 metadata extraction. Fixed net
 
 <h2>Setup and Usage</h2>
 <ul>
-<li>Install: Add DistroFeed Bot to your subreddit via the App Directory.</li>
-<li>App Settings: Navigate to Mod Tools > App Settings > DistroFeed Bot and provide a Google Gemini API Key (from aistudio.google.com).</li>
-<li>Usage: Open the subreddit menu (`...`), click DistroFeed Bot, and scout or review updates on your schedule.</li>
+<li>Install: Add DistroFeed Bot to your subreddit via the Reddit App Directory.</li>
+<li>Configure API Key: Navigate to Mod Tools > App Settings > DistroFeed Bot and provide a Google Gemini API Key (from `aistudio.google.com`).</li>
+<li>Run on Demand: Open the subreddit menu (`...`), click DistroFeed Bot, and scout or review updates on your schedule.</li>
 </ul>
 
 <h2>Troubleshooting</h2>
@@ -76,11 +65,11 @@ Summary: Linux aggregator. Upgraded to Gemini 2.5 metadata extraction. Fixed net
 </ul>
 
 <h2>Version History</h2>
+<p>0.1.113 — 2026-11-18<br>
+Migrate Gemini model from deprecated gemini-2.5-flash to gemini-3.5-flash-lite</p>
 <p>0.1.112 — 2026-11-09<br>
 Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.</p>
 <p>0.1.111 — 2026-10-20<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.1.110 — 2026-10-17<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>

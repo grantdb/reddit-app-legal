@@ -2,38 +2,55 @@
 <h1>DistroFeed Bot</h1>
 <blockquote><p><strong>Manual-only Linux release curation and candidate scouting engine for Reddit moderators.</strong></p></blockquote>
 <p><strong>DistroFeed Bot</strong> is a manual-only candidate-scouting and pre-editing curator built for Linux and open-source subreddits. It leverages Google Gemini AI with search grounding to scout major Linux distribution releases and technical updates, allowing moderators to inspect, edit, and post clean, summarized community updates.</p>
-<p>---</p>
-<h2>Key Features</h2>
+<hr>
+<h2>At a Glance</h2>
 <ul>
-<li><strong>100% Manual & Moderator Control</strong>: Zero auto-posting or background crons. Operates via an interactive Mod Menu popout workflow.</li>
-<li><strong>AI-Powered Search Grounding</strong>: Uses Google Gemini 2.5 Flash to scan DistroWatch, Phoronix, and 9to5Linux for recent major OS releases and kernel updates.</li>
+<li><strong>100% Manual & Moderator Control</strong>: Zero auto-posting or background crons. Operates strictly via an interactive Mod Menu popout workflow.</li>
+<li><strong>AI-Powered Search Grounding</strong>: Uses Google Gemini (<code>gemini-3.5-flash-lite</code>) with search grounding to scan DistroWatch, Phoronix, and 9to5Linux for recent major OS releases and kernel updates.</li>
 <li><strong>Interactive Pre-Publish Editor</strong>: Presents candidate updates in an interactive Devvit form where moderators can customize post title, target URL, TL;DR summary, post flair, and sticky comment options.</li>
-<li><strong>Unified Menu Popout</strong>: Access both scouting and candidate review flows from a single <strong>DistroFeed Bot</strong> menu item.</li>
-<li><strong>Deduplication Engine</strong>: Enforces Redis URL and topic slug tracking to prevent duplicate coverage.</li>
+<li><strong>Deduplication Engine</strong>: Enforces Redis URL and topic slug tracking to prevent duplicate coverage across runs.</li>
 </ul>
-<h2>How It Works</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/DistroFeed-bot-flowchart.png">Logic Flowchart</a></p>
-<h3>Your Four-Step Workflow</h3>
-<p>1. <strong>Scout Updates</strong>: Open the subreddit menu (`...`), select <strong>DistroFeed Bot</strong>, and choose <strong>1. Scout Updates</strong> to trigger background AI scanning.</p>
-<p>2. <strong>Review Candidates</strong>: After ~90 seconds, open <strong>DistroFeed Bot</strong> and choose <strong>2. Review & Publish</strong>.</p>
-<p>3. <strong>Pick Update</strong>: Select an update candidate from the interactive Candidate Picker Form.</p>
-<p>4. <strong>Customize & Publish</strong>: Review and customize post title, link URL, TL;DR summary, post flair, and sticky comment settings, then click <strong>Publish Post Now</strong>.</p>
-<p>---</p>
-<p>---</p>
-<h2>Setup & Configuration</h2>
-<p>1. <strong>Install</strong>: Add <strong>DistroFeed Bot</strong> to your subreddit via the App Directory.</p>
-<p>2. <strong>App Settings</strong>: Navigate to <strong>Mod Tools > App Settings > DistroFeed Bot</strong> and provide a Google Gemini API Key (from aistudio.google.com).</p>
-<p>3. <strong>Usage</strong>: Open the subreddit menu (`...`), click <strong>DistroFeed Bot</strong>, and scout or review updates on your schedule.</p>
-<p>---</p>
+<hr>
+<h2>How It Works: The 4-Step Operational Pipeline</h2>
+<h3>01 · Scout Updates</h3>
+<blockquote><p><strong>Manual Trigger & Background AI Scan</strong></p></blockquote>
+<blockquote><p>- Open the subreddit menu (<code>...</code>), select <strong>DistroFeed Bot</strong>, and choose <strong>1. Scout Updates</strong> to start background AI scanning.</p></blockquote>
+<blockquote><p>- Queries DistroWatch, Phoronix, and 9to5Linux via Gemini search grounding and stores fresh candidates in Redis.</p></blockquote>
+<hr>
+<h3>02 · Review Candidates</h3>
+<blockquote><p><strong>Interactive Candidate Picker</strong></p></blockquote>
+<blockquote><p>- After ~90 seconds, open <strong>DistroFeed Bot</strong> and choose <strong>2. Review & Publish</strong>.</p></blockquote>
+<blockquote><p>- Deduplicated candidates are presented in a clean selection form for moderator review.</p></blockquote>
+<hr>
+<h3>03 · Customize Details</h3>
+<blockquote><p><strong>Pre-Publish Editor</strong></p></blockquote>
+<blockquote><p>- Review and customize the post title, target link URL, TL;DR summary, post flair, and optional sticky comment.</p></blockquote>
+<blockquote><p>- Confirm all details before anything is published to the subreddit.</p></blockquote>
+<hr>
+<h3>04 · Publish & Track</h3>
+<blockquote><p><strong>Atomic Post & Dedupe Recording</strong></p></blockquote>
+<blockquote><p>- Click <strong>Publish Post Now</strong> to submit the curated post and optional sticky comment.</p></blockquote>
+<blockquote><p>- Records the URL and topic slug in Redis so the same release is not surfaced again.</p></blockquote>
+<hr>
+<h2>Quick Setup</h2>
+<ol>
+<li><strong>Install</strong>: Add <strong>DistroFeed Bot</strong> to your subreddit via the Reddit App Directory.</li>
+<li><strong>Configure API Key</strong>: Navigate to <strong>Mod Tools > App Settings > DistroFeed Bot</strong> and provide a Google Gemini API Key (from <code>aistudio.google.com</code>).</li>
+<li><strong>Run on Demand</strong>: Open the subreddit menu (<code>...</code>), click <strong>DistroFeed Bot</strong>, and scout or review updates on your schedule.</li>
+</ol>
+<hr>
 <h2>Support</h2>
-<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
-<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
-<p>---</p>
+<blockquote><p><strong>Official Support Community</strong></p></blockquote>
+<blockquote><p>- Post questions, bug reports, or feature requests in <a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a>.</p></blockquote>
+<blockquote><p>- Include the app name, what you expected, what happened, and any error text or screenshots.</p></blockquote>
+<blockquote><p>- <a href="https://www.reddit.com/r/grantdb/wiki/distrofeed-bot/">Full User Guide</a></p></blockquote>
+<blockquote><p>- <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/distrofeed-bot/">Technical Reference & Settings Spec</a></p></blockquote>
+<hr>
 <h2>Legal</h2>
 <p>This application is subject to the following legal agreements:</p>
 <ul>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/DistroFeed-bot/TERMS.md">Terms of Service</a></li>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/DistroFeed-bot/PRIVACY.md">Privacy Policy</a></li>
 </ul>
-<p>---</p>
+<hr>
 <p>*Built for Reddit's moderator community.*</p>

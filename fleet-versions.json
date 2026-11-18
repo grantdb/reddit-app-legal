@@ -16,7 +16,7 @@
   },
   "playscraper-bot": {
     "name": "Playscraper Bot",
-    "version": "1.0.155",
+    "version": "1.0.156",
     "visibility": "unlisted"
   },
   "screen-shot-bot": {
@@ -91,7 +91,7 @@
   },
   "domain-guard": {
     "name": "DomainGuard",
-    "version": "0.0.171",
+    "version": "0.0.173",
     "visibility": "unlisted"
   },
   "user-guard": {

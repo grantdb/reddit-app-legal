@@ -8,41 +8,64 @@
 
 ---
 
-## Key Features
+## At a Glance
 
-- **100% Manual & Moderator Control**: Zero auto-posting or background crons. Operates via an interactive Mod Menu popout workflow.
-- **AI-Powered Search Grounding**: Uses Google Gemini 2.5 Flash to scan DistroWatch, Phoronix, and 9to5Linux for recent major OS releases and kernel updates.
+- **100% Manual & Moderator Control**: Zero auto-posting or background crons. Operates strictly via an interactive Mod Menu popout workflow.
+- **AI-Powered Search Grounding**: Uses Google Gemini (`gemini-3.5-flash-lite`) with search grounding to scan DistroWatch, Phoronix, and 9to5Linux for recent major OS releases and kernel updates.
 - **Interactive Pre-Publish Editor**: Presents candidate updates in an interactive Devvit form where moderators can customize post title, target URL, TL;DR summary, post flair, and sticky comment options.
-- **Unified Menu Popout**: Access both scouting and candidate review flows from a single **DistroFeed Bot** menu item.
-- **Deduplication Engine**: Enforces Redis URL and topic slug tracking to prevent duplicate coverage.
-
-## How It Works
-
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/DistroFeed-bot-flowchart.png)
-
-### Your Four-Step Workflow
-
-1. **Scout Updates**: Open the subreddit menu (`...`), select **DistroFeed Bot**, and choose **1. Scout Updates** to trigger background AI scanning.
-2. **Review Candidates**: After ~90 seconds, open **DistroFeed Bot** and choose **2. Review & Publish**.
-3. **Pick Update**: Select an update candidate from the interactive Candidate Picker Form.
-4. **Customize & Publish**: Review and customize post title, link URL, TL;DR summary, post flair, and sticky comment settings, then click **Publish Post Now**.
+- **Deduplication Engine**: Enforces Redis URL and topic slug tracking to prevent duplicate coverage across runs.
 
 ---
 
+## How It Works: The 4-Step Operational Pipeline
+
+### 01 · Scout Updates
+
+> **Manual Trigger & Background AI Scan**
+> - Open the subreddit menu (`...`), select **DistroFeed Bot**, and choose **1. Scout Updates** to start background AI scanning.
+> - Queries DistroWatch, Phoronix, and 9to5Linux via Gemini search grounding and stores fresh candidates in Redis.
+
 ---
 
-## Setup & Configuration
+### 02 · Review Candidates
 
-1. **Install**: Add **DistroFeed Bot** to your subreddit via the App Directory.
-2. **App Settings**: Navigate to **Mod Tools > App Settings > DistroFeed Bot** and provide a Google Gemini API Key (from aistudio.google.com).
-3. **Usage**: Open the subreddit menu (`...`), click **DistroFeed Bot**, and scout or review updates on your schedule.
+> **Interactive Candidate Picker**
+> - After ~90 seconds, open **DistroFeed Bot** and choose **2. Review & Publish**.
+> - Deduplicated candidates are presented in a clean selection form for moderator review.
+
+---
+
+### 03 · Customize Details
+
+> **Pre-Publish Editor**
+> - Review and customize the post title, target link URL, TL;DR summary, post flair, and optional sticky comment.
+> - Confirm all details before anything is published to the subreddit.
+
+---
+
+### 04 · Publish & Track
+
+> **Atomic Post & Dedupe Recording**
+> - Click **Publish Post Now** to submit the curated post and optional sticky comment.
+> - Records the URL and topic slug in Redis so the same release is not surfaced again.
+
+---
+
+## Quick Setup
+
+1. **Install**: Add **DistroFeed Bot** to your subreddit via the Reddit App Directory.
+2. **Configure API Key**: Navigate to **Mod Tools > App Settings > DistroFeed Bot** and provide a Google Gemini API Key (from `aistudio.google.com`).
+3. **Run on Demand**: Open the subreddit menu (`...`), click **DistroFeed Bot**, and scout or review updates on your schedule.
 
 ---
 
 ## Support
 
-For help, bug reports, or feature requests, post in r/grantdb.
-Please include the app name, what you expected, what happened, and any error text or screenshots.
+> **Official Support Community**
+> - Post questions, bug reports, or feature requests in [https://www.reddit.com/r/grantdb](https://www.reddit.com/r/grantdb).
+> - Include the app name, what you expected, what happened, and any error text or screenshots.
+> - [Full User Guide](https://www.reddit.com/r/grantdb/wiki/distrofeed-bot/)
+> - [Technical Reference & Settings Spec](https://www.reddit.com/r/grantdb/wiki/index/all-apps/distrofeed-bot/)
 
 ---
 

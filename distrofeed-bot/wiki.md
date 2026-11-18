@@ -1,22 +1,17 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/distrofeed-bot/) | **Technical Reference & Settings Spec**
+
 # DistroFeed Bot
 
 Category: Automation  
-Version: v0.1.112  
+Version: v0.1.113  
 Visibility: Unlisted  
 Summary: Linux aggregator. Upgraded to Gemini 2.5 metadata extraction. Fixed network permissions.
 
 ## Overview
 Linux aggregator. Upgraded to Gemini 2.5 metadata extraction. Fixed network permissions.
 
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/DistroFeed-bot-flowchart.png)
-
 ## Key Features
-- % Manual & Moderator Control: Zero auto-posting or background crons. Operates via an interactive Mod Menu popout workflow.
-- AI-Powered Search Grounding: Uses Google Gemini 2.5 Flash to scan DistroWatch, Phoronix, and 9to5Linux for recent major OS releases and kernel updates.
-- Interactive Pre-Publish Editor: Presents candidate updates in an interactive Devvit form where moderators can customize post title, target URL, TL;DR summary, post flair, and sticky comment options.
-- Unified Menu Popout: Access both scouting and candidate review flows from a single DistroFeed Bot menu item.
-- Deduplication Engine: Enforces Redis URL and topic slug tracking to prevent duplicate coverage.
+- Not documented yet.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
@@ -54,22 +49,22 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key patterns: distrofeed:scouted_candidates, distrofeed:posted_urls
 
 ## Setup and Usage
-- Install: Add DistroFeed Bot to your subreddit via the App Directory.
-- App Settings: Navigate to Mod Tools > App Settings > DistroFeed Bot and provide a Google Gemini API Key (from aistudio.google.com).
-- Usage: Open the subreddit menu (`...`), click DistroFeed Bot, and scout or review updates on your schedule.
+- Install: Add DistroFeed Bot to your subreddit via the Reddit App Directory.
+- Configure API Key: Navigate to Mod Tools > App Settings > DistroFeed Bot and provide a Google Gemini API Key (from `aistudio.google.com`).
+- Run on Demand: Open the subreddit menu (`...`), click DistroFeed Bot, and scout or review updates on your schedule.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.1.113 — 2026-11-18
+- Migrate Gemini model from deprecated gemini-2.5-flash to gemini-3.5-flash-lite
+
 0.1.112 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 0.1.111 — 2026-10-20
-- Standard fleet synchronization and maintenance.
-
-0.1.110 — 2026-10-17
 - Standard fleet synchronization and maintenance.
 
 ## Links

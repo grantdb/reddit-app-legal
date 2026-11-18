@@ -10,7 +10,7 @@
   "canucknews-bot": "65986dbc24a41a50",
   "chevron-lock": "42f9c37952f5e0c5",
   "comment-guard": "f22843b6296577fd",
-  "distrofeed-bot": "2abc16f1c5456afe",
+  "distrofeed-bot": "5a16260ca77c8c05",
   "domain-guard": "f53bb5d4c93be6b1",
   "duplicate-guard": "a29dfd4d18ce50d8",
   "filter-guard": "4e413f9fa84d6630",
@@ -50,5 +50,5 @@
   "queueclue": "aadbe2a146f67e7c",
   "piracy-guard": "67f0b5b1bdd986a1",
   "moddispatch": "c2818908d1e393c8",
-  "bot_knowledge": "2a5afe1a499cb028"
+  "bot_knowledge": "d45e18895f85e5e2"
 }
