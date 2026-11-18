@@ -3,7 +3,7 @@
 # GimmeCode Guard
 
 Category: Moderation  
-Version: v0.0.52  
+Version: v0.0.53  
 Visibility: Unlisted  
 Summary: Detects low-effort give me code requests
 
@@ -11,8 +11,7 @@ Summary: Detects low-effort give me code requests
 Detects low-effort give me code requests
 
 ## Key Features
-- High-Precision Moderation Rules: Dynamic pattern matching and content enforcement.
-- Idempotency: Powered by `devvit-utils` TaskRunner to guarantee exact-once execution and zero-drift state sync.
+- Not documented yet.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
@@ -48,23 +47,23 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key patterns: node:http, gimmecode_guard:dashboard_post_id, gimmecode_guard:creation_lock
 
 ## Setup and Usage
-- Install: Add app via Reddit App Directory.
-- Configure: Open Mod Tools -> App Settings in your subreddit to configure options.
-- Launch: Use mod menu or triggers as configured.
+- Install: Add GimmeCode Guard to your subreddit via the Reddit App Directory.
+- Configure Thresholds: Open Mod Tools > App Settings > GimmeCode Guard (or the Control Center) to tune scoring thresholds, exemptions, and cooldowns.
+- Verify: Monitor initial evaluations in the dashboard and adjust thresholds to fit your community's norms.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.53 — 2026-11-18
+- Add single retry for transient gRPC 500 errors during OP post fetch
+
 0.0.52 — 2026-11-16
 - Allow 0-threshold disabled, use atomic hIncrBy stats, fix Tier 1 cooldown logging, add 403 UI gate, and update README/PRIVACY
 
 0.0.51 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
-
-0.0.50 — 2026-10-27
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/TERMS.md)

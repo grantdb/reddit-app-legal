@@ -2,18 +2,12 @@
 <h1>GimmeCode Guard</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.52<br>
+Version: v0.0.53<br>
 Visibility: Unlisted<br>
 Summary: Detects low-effort give me code requests</p>
 
 <h2>Overview</h2>
 <p>Detects low-effort give me code requests</p>
-
-<h2>Key Features</h2>
-<ul>
-<li>High-Precision Moderation Rules: Dynamic pattern matching and content enforcement.</li>
-<li>Idempotency: Powered by `devvit-utils` TaskRunner to guarantee exact-once execution and zero-drift state sync.</li>
-</ul>
 
 <h2>Permissions Used</h2>
 <ul>
@@ -51,11 +45,9 @@ Summary: Detects low-effort give me code requests</p>
 
 <h2>Setup and Usage</h2>
 <ul>
-<li>Install: Add app via Reddit App Directory or Mod Tools.</li>
-<li>Open: Open Mod Tools -&gt; App Settings in your subreddit to configure options.</li>
-<li>Configure: Set active options and API keys as needed.</li>
-<li>Use: App runs automatically in background according to event triggers and settings.</li>
-<li>Review: Verify bot activity and comments directly on subreddit posts or in mod logs.</li>
+<li>Install: Add GimmeCode Guard to your subreddit via the Reddit App Directory.</li>
+<li>Configure Thresholds: Open Mod Tools > App Settings > GimmeCode Guard (or the Control Center) to tune scoring thresholds, exemptions, and cooldowns.</li>
+<li>Verify: Monitor initial evaluations in the dashboard and adjust thresholds to fit your community's norms.</li>
 </ul>
 
 <h2>Troubleshooting</h2>
@@ -65,12 +57,12 @@ Summary: Detects low-effort give me code requests</p>
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.53 — 2026-11-18<br>
+Add single retry for transient gRPC 500 errors during OP post fetch</p>
 <p>0.0.52 — 2026-11-16<br>
 Allow 0-threshold disabled, use atomic hIncrBy stats, fix Tier 1 cooldown logging, add 403 UI gate, and update README/PRIVACY</p>
 <p>0.0.51 — 2026-11-09<br>
 Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.</p>
-<p>0.0.50 — 2026-10-27<br>
-Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
 <ul>

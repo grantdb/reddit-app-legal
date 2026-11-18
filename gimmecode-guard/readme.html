@@ -1,17 +1,56 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/gimmecode-guard">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>GimmeCode Guard</h1>
-<h2>Purpose</h2>
-<p>Detects low-effort give me code requests</p>
-<h2>Major Features</h2>
+<blockquote><p><strong>Automated low-effort code-request detection and weighted scoring engine for developer communities.</strong></p></blockquote>
+<p><strong>GimmeCode Guard</strong> evaluates incoming posts and comments in developer and programming subreddits to detect low-effort "give me the code" requests. It uses weighted pattern scoring, configurable exemptions for OPs, moderators, and approved users, and non-destructive moderation actions so communities stay focused on constructive help.</p>
+<hr>
+<h2>At a Glance</h2>
 <ul>
-<li><strong>High-Precision Moderation Rules</strong>: Dynamic pattern matching and content enforcement.</li>
-<li><strong>Idempotency</strong>: Powered by `devvit-utils` TaskRunner to guarantee exact-once execution and zero-drift state sync.</li>
+<li><strong>Weighted Pattern Scoring</strong>: Evaluates submissions and comments against configurable low-effort request signals before taking action.</li>
+<li><strong>Smart Exemptions</strong>: Automatically exempts OPs on their own threads, moderators, and approved users (with Redis caching and transient-error retries).</li>
+<li><strong>Atomic Metrics & Cooldowns</strong>: Tracks evaluations and enforcement actions with atomic Redis counters and per-user cooldowns.</li>
+<li><strong>Interactive Control Center</strong>: Manage thresholds, exemptions, and live stats from a clean custom-post moderator dashboard.</li>
 </ul>
-<h2>Install / Use</h2>
-<p>1. Install on your subreddit.</p>
-<p>2. Configure active moderation filters via the subreddit's developer app settings panel.</p>
+<hr>
+<h2>How It Works: The 4-Step Operational Pipeline</h2>
+<h3>01 · Event Ingestion</h3>
+<blockquote><p><strong>Post & Comment Trigger Capture</strong></p></blockquote>
+<blockquote><p>- Listens for new posts and comments in the subreddit.</p></blockquote>
+<blockquote><p>- Skips deleted authors and checks exemption rules for OPs, moderators, and approved users.</p></blockquote>
+<hr>
+<h3>02 · Weighted Scoring</h3>
+<blockquote><p><strong>Pattern & Context Evaluation</strong></p></blockquote>
+<blockquote><p>- Runs the content through the <code>ScoringEngine</code> to measure low-effort code-request signals.</p></blockquote>
+<blockquote><p>- Compares the resulting score against the configured enforcement threshold (with <code>0</code> disabling enforcement).</p></blockquote>
+<hr>
+<h3>03 · Cooldown & Action Gate</h3>
+<blockquote><p><strong>Controlled Moderation Response</strong></p></blockquote>
+<blockquote><p>- Enforces configured moderation actions (remove, filter, or report) when a submission exceeds the threshold.</p></blockquote>
+<blockquote><p>- Applies Tier 1 per-user cooldowns to prevent duplicate notifications or repeated actions.</p></blockquote>
+<hr>
+<h3>04 · Telemetry & Dashboard</h3>
+<blockquote><p><strong>Atomic Stats & Moderator Review</strong></p></blockquote>
+<blockquote><p>- Increments atomic Redis counters for evaluated and actioned items.</p></blockquote>
+<blockquote><p>- Surfaces live metrics and configuration controls inside the subreddit's GimmeCode Guard dashboard.</p></blockquote>
+<hr>
+<h2>Quick Setup</h2>
+<ol>
+<li><strong>Install</strong>: Add <strong>GimmeCode Guard</strong> to your subreddit via the Reddit App Directory.</li>
+<li><strong>Configure Thresholds</strong>: Open <strong>Mod Tools > App Settings > GimmeCode Guard</strong> (or the Control Center) to tune scoring thresholds, exemptions, and cooldowns.</li>
+<li><strong>Verify</strong>: Monitor initial evaluations in the dashboard and adjust thresholds to fit your community's norms.</li>
+</ol>
+<hr>
 <h2>Support</h2>
-<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
-<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
-<p>---</p>
+<blockquote><p><strong>Official Support Community</strong></p></blockquote>
+<blockquote><p>- Post questions, bug reports, or feature requests in <a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a>.</p></blockquote>
+<blockquote><p>- Include the app name, what you expected, what happened, and any error text or screenshots.</p></blockquote>
+<blockquote><p>- <a href="https://www.reddit.com/r/grantdb/wiki/gimmecode-guard/">Full User Guide</a></p></blockquote>
+<blockquote><p>- <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/gimmecode-guard/">Technical Reference & Settings Spec</a></p></blockquote>
+<hr>
+<h2>Legal</h2>
+<p>This application is subject to the following legal agreements:</p>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<hr>
 <p>*Built for Reddit's moderator community. Part of the GuardHub family.*</p>
