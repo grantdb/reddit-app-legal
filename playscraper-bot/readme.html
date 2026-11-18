@@ -2,7 +2,7 @@
 <h1>Playscraper Bot</h1>
 <blockquote><p><strong>Instantly extract, summarize, and display app store metadata, cost, and developer details for community submissions.</strong></p></blockquote>
 <p><strong>Playscraper Bot</strong> is a moderator utility that leverages AI to extract and summarize metadata from app stores and open-source repositories. By automatically posting standardized, informative comment headers on submissions containing links to these platforms, it helps moderators and users verify shared software content at a glance.</p>
-<p>---</p>
+<hr>
 <h2>At a Glance</h2>
 <ul>
 <li><strong>Multi-Source Detection</strong>: Identifies links from the Google Play Store, F-Droid, GitHub, GitLab, and Codeberg.</li>
@@ -12,44 +12,45 @@
 <li><strong>Manual Scan & Link Override</strong>: Moderators can trigger <strong>Playscraper Bot: Scan Post</strong> or <strong>Playscraper Bot: Enter App Link</strong> directly from the post menu.</li>
 <li><strong>Configurable Detail Levels</strong>: Choose between "Confirmed Only", "General Details", or "Full Details".</li>
 </ul>
-<p>---</p>
+<hr>
 <h2>How It Works: The 5-Step Operational Pipeline</h2>
 <h3>01 · Detect Submission</h3>
 <blockquote><p><strong>Post, comment, or moderator approval trigger</strong></p></blockquote>
 <blockquote><p>- A user posts a link to a supported app store or repository, or a moderator approves a queued post or triggers <strong>Scan Post</strong> / <strong>Enter App Link</strong>.</p></blockquote>
-<p>---</p>
+<hr>
 <h3>02 · Eligibility Gate</h3>
 <blockquote><p><strong>Delayed spam and removal check</strong></p></blockquote>
 <blockquote><p>- The bot waits the configured delay (bypassed on moderator approval) and confirms the post was not removed by Reddit's filters or AutoModerator.</p></blockquote>
-<p>---</p>
+<hr>
 <h3>03 · Fetch Source HTML</h3>
 <blockquote><p><strong>Bounded external metadata retrieval</strong></p></blockquote>
 <blockquote><p>- If eligible, Playscraper Bot fetches the target store or repository page with a bounded timeout and parses structured HTML tags.</p></blockquote>
-<p>---</p>
+<hr>
 <h3>04 · AI Extraction</h3>
 <blockquote><p><strong>Isolated Gemini metadata synthesis</strong></p></blockquote>
 <blockquote><p>- Parsed tags and sanitized HTML are sent to Gemini with untrusted-data isolation to extract standardized metadata.</p></blockquote>
-<p>---</p>
+<hr>
 <h3>05 · Post Summary</h3>
 <blockquote><p><strong>Distinguished sticky comment</strong></p></blockquote>
 <blockquote><p>- A formatted, stickied moderator comment summarizing the app is posted to the thread.</p></blockquote>
-<p>---</p>
+<hr>
 <h2>Quick Setup</h2>
-<p>1. <strong>Install</strong>: Add <strong>Playscraper Bot</strong> via the Reddit App Directory.</p>
-<p>2. <strong>Configure API Key</strong>: Obtain a Google Gemini API Key from Google AI Studio and add it in <strong>Mod Tools > App Settings > Playscraper Bot</strong>.</p>
-<p>3. <strong>Customize</strong>: Choose enabled sources, delay settings, and your preferred Comment Detail Level.</p>
-<p>---</p>
+<ol>
+<li><strong>Install</strong>: Add <strong>Playscraper Bot</strong> via the Reddit App Directory.</li>
+<li><strong>Configure API Key</strong>: Obtain a Google Gemini API Key from Google AI Studio and add it in <strong>Mod Tools > App Settings > Playscraper Bot</strong>.</li>
+<li><strong>Customize</strong>: Choose enabled sources, delay settings, and your preferred Comment Detail Level.</li>
+</ol>
+<hr>
 <h2>Support</h2>
 <blockquote><p><strong>Need Help?</strong> Post in <a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a> with the app name, what you expected, what happened, and any error text or screenshots.</p></blockquote>
-<p>></p>
 <blockquote><p>- <strong>User Guide</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/playscraper-bot/">https://www.reddit.com/r/grantdb/wiki/playscraper-bot/</a></p></blockquote>
 <blockquote><p>- <strong>Technical Reference</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/playscraper-bot/">https://www.reddit.com/r/grantdb/wiki/index/all-apps/playscraper-bot/</a></p></blockquote>
-<p>---</p>
+<hr>
 <h2>Legal</h2>
 <p>This application is subject to the following legal agreements:</p>
 <ul>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/playscraper-bot/TERMS.md">Terms of Service</a></li>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/playscraper-bot/PRIVACY.md">Privacy Policy</a></li>
 </ul>
-<p>---</p>
+<hr>
 <p>*Built for Reddit's moderator community.*</p>

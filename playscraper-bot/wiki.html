@@ -2,7 +2,7 @@
 <h1>Playscraper Bot</h1>
 
 <p>Category: Metadata<br>
-Version: v1.0.155<br>
+Version: v1.0.156<br>
 Visibility: Unlisted<br>
 Summary: AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with configurable delay. Security-hardened moderator gates.</p>
 
@@ -63,7 +63,7 @@ Summary: AI-powered metadata extraction via Gemini 2.5. Eligibility-first proces
 <p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
 <ul>
 <li>Key-Value Strings (deduplication & cooldown markers)</li>
-<li>Key patterns: og:title</li>
+<li>Key patterns: playscraper:gemini_cooldown_until, og:title</li>
 </ul>
 
 <h2>Setup and Usage</h2>
@@ -80,12 +80,12 @@ Summary: AI-powered metadata extraction via Gemini 2.5. Eligibility-first proces
 </ul>
 
 <h2>Version History</h2>
+<p>1.0.156 — 2026-11-18<br>
+Migrate Gemini model to gemini-3.5-flash-lite, remove retired 1.5/2.0-flash fallbacks, prevent 429 egress bursting with backoff/cooldown, and fix percent-decoding on literal % characters</p>
 <p>1.0.155 — 2026-11-16<br>
 Fix blocks.triggers manifest, move Gemini key to header, isolate untrusted HTML in prompt, add fetch timeouts and nx locks, and align README</p>
 <p>1.0.154 — 2026-11-09<br>
 Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.</p>
-<p>1.0.153 — 2026-10-26<br>
-Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
 <ul>
