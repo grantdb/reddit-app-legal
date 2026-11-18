@@ -3,7 +3,7 @@
 # DomainGuard
 
 Category: Security  
-Version: v0.0.172  
+Version: v0.0.173  
 Visibility: Unlisted  
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
@@ -62,14 +62,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.173 — 2026-11-18
+- Guarantee approved and auto-approved posts are never marked as spam, fix comment triggers evaluating parent post, remove duplicate post menu launcher, and retry transient gRPC 500 on mod check
+
 0.0.172 — 2026-11-17
 - Guarantee approved and auto-approved posts are never marked as spam, fix comment triggers evaluating parent post, and remove duplicate post menu launcher
 
 0.0.171 — 2026-11-16
 - Migrate to archivable Modmail, track removelink, fix getModNotes subredditName, validate settings/delete-rule, align TestConsole, and update README
-
-0.0.170 — 2026-11-09
-- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/TERMS.md)
