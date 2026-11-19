@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T21:27:59.527Z",
+  "generatedAt": "2026-11-19T16:19:21.509Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -593,9 +593,9 @@
         "linuxquest"
       ],
       "setupSteps": [
-        "Install: Add Linux Quest to your subreddit via the App Directory.",
-        "Dashboard Initialization: Navigate to your subreddit's Mod Tools and open the Linux Quest configuration post if you wish to tweak settings.",
-        "Usage: Users can launch the quest directly from an interactive post in the community. We recommend linking to it from your subreddit's sidebar or rules."
+        "Install: Add Linux Quest to your subreddit from the Reddit App Directory.",
+        "Create a Post: Open your subreddit's moderator menu and click Create Linux Quest Post.",
+        "Share with Members: Pin the post or link to it in your subreddit sidebar, rules, or help wiki so new users can practice before opening a support thread."
       ],
       "commonIssues": [],
       "troubleshooting": {
@@ -634,7 +634,7 @@
         "troubleshooting": "Check the Linux Quest troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
-      "lastUpdated": "2026-08-23"
+      "lastUpdated": "2026-11-19"
     },
     {
       "appId": "archive-all-mm",

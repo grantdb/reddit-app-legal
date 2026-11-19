@@ -1,30 +1,57 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>Linux Quest</h1>
-<p><strong>Linux Quest</strong> is an educational RPG built natively in Reddit, designed to act as a "support-readiness" proof layer for Linux and tech communities. Instead of punishing users for asking poor questions, it gamifies the process of learning *how* to ask for help. It teaches users the essential habits required to submit high-quality, actionable support requests, reducing friction and speeding up resolution times for the whole community.</p>
-<h2>Key Features</h2>
+<blockquote><p><strong>Gamified Linux installation simulator and support-readiness trainer built natively inside Reddit.</strong></p></blockquote>
+<p><strong>Linux Quest</strong> walks users through an interactive 14-stage Linux installation simulation covering hardware architecture, ISO selection, USB firmware setup, storage partitioning, graphics stacks, and post-install boot diagnostics. Whether the simulated install boots cleanly or hits a realistic configuration error, players finish with a structured Support Readiness Quiz and a copyable Markdown troubleshooting brief they can paste directly into real community support threads.</p>
+<hr>
+<h2>At a Glance</h2>
 <ul>
-<li><strong>Context-Aware Scenarios</strong>: Features engaging, interactive simulations covering common issues like installations, hardware compatibility, and terminal troubleshooting.</li>
-<li><strong>Support Readiness Brief</strong>: Upon completing the quest, the game generates a formatted, shareable summary including the user's system context and attempted fixes, ready to be pasted into a real support thread.</li>
-<li><strong>Behavioral Scoring</strong>: Measures and rewards support-readiness behavior (precision, clarity, providing logs) rather than expecting the user to know technical trivia.</li>
-<li><strong>Interactive Onboarding</strong>: Clear mission objectives displayed natively on startup to hook users immediately.</li>
+<li><strong>Realistic Installation Simulation</strong>: Covers x86_64 and ARM64 platforms, architecture-matched ISOs, GPT/MBR and UEFI/Legacy boot modes, disk partitioning, graphics driver stacks, and online updates.</li>
+<li><strong>Scenario-Aware Diagnostics</strong>: Mismatched choices produce realistic boot outcomes (architecture mismatch, GRUB rescue, UEFI boot target missing, dual-boot mount error, display manager timeout, or proprietary GPU lockup).</li>
+<li><strong>Support Readiness Scoring</strong>: Evaluates practical help-seeking habits (hardware context, verbatim logs, clear goals, prior attempts, and constructive tone) on a 0-100 scale with a per-post leaderboard.</li>
+<li><strong>Copyable Support Brief</strong>: Generates a ready-to-paste Markdown troubleshooting template populated with system context and log-collection reminders.</li>
 </ul>
-<h2>How It Works</h2>
-<p>1. A user seeking technical help launches Linux Quest from an established sticky post in the subreddit.</p>
-<p>2. They play through a short, interactive text-adventure scenario where they must diagnose a fictional problem.</p>
-<p>3. The game rewards them for providing system specs and trying basic troubleshooting steps before asking for help.</p>
-<p>4. After winning, the game provides a clean template for their real-world issue, which they can copy and paste into the subreddit to ensure volunteers have the context they need.</p>
-<h2>Setup & Configuration</h2>
-<p>1. <strong>Install</strong>: Add <strong>Linux Quest</strong> to your subreddit via the App Directory.</p>
-<p>2. <strong>Dashboard Initialization</strong>: Navigate to your subreddit's Mod Tools and open the Linux Quest configuration post if you wish to tweak settings.</p>
-<p>3. <strong>Usage</strong>: Users can launch the quest directly from an interactive post in the community. We recommend linking to it from your subreddit's sidebar or rules.</p>
+<hr>
+<h2>How It Works: The 4-Step Operational Pipeline</h2>
+<h3>01 · Launch From a Subreddit Post</h3>
+<blockquote><p><strong>Moderators create an interactive Linux Quest post via the subreddit menu.</strong></p></blockquote>
+<blockquote><p>- Moderators select <strong>Create Linux Quest Post</strong> from the subreddit mod menu.</p></blockquote>
+<blockquote><p>- Community members see a zero-scroll inline preview card showing the current record holder and tap <strong>Launch Simulator</strong> to enter expanded mode.</p></blockquote>
+<hr>
+<h3>02 · Configure Hardware, Media, and Storage</h3>
+<blockquote><p><strong>Players walk through a guided Linux installation wizard.</strong></p></blockquote>
+<blockquote><p>- Select target hardware (AMD Ryzen, Intel Core, Raspberry Pi 5, or Hybrid Mobile) and an architecture-appropriate ISO (Arch Linux, Debian 12, or Fedora 41).</p></blockquote>
+<blockquote><p>- Configure USB flashing tools, partition scheme (GPT or MBR), firmware boot mode (UEFI, Legacy BIOS, or Compatible), disk layout, desktop environment, graphics stack, and online updates.</p></blockquote>
+<hr>
+<h3>03 · Boot Validation and Anomaly Review</h3>
+<blockquote><p><strong>The simulator evaluates the full configuration end-to-end.</strong></p></blockquote>
+<blockquote><p>- Runs distro-specific deployment and kernel boot logs matching the selected hardware device path and packages.</p></blockquote>
+<blockquote><p>- Displays either a clean desktop boot or the exact failure caused by configuration conflicts, along with plain-language explanations and <code>journalctl</code> / <code>dmesg</code> recovery commands.</p></blockquote>
+<hr>
+<h3>04 · Support Readiness Quiz and Shareable Brief</h3>
+<blockquote><p><strong>Players practice writing an actionable community support post.</strong></p></blockquote>
+<blockquote><p>- Complete a 6-question scenario-aware quiz scored out of 100 and persisted to the post leaderboard via Redis.</p></blockquote>
+<blockquote><p>- Copy the generated Markdown <strong>Support Readiness Brief</strong> to use when asking for real-world help in the subreddit.</p></blockquote>
+<hr>
+<h2>Quick Setup</h2>
+<ol>
+<li><strong>Install</strong>: Add <strong>Linux Quest</strong> to your subreddit from the Reddit App Directory.</li>
+<li><strong>Create a Post</strong>: Open your subreddit's moderator menu and click <strong>Create Linux Quest Post</strong>.</li>
+<li><strong>Share with Members</strong>: Pin the post or link to it in your subreddit sidebar, rules, or help wiki so new users can practice before opening a support thread.</li>
+</ol>
+<hr>
 <h2>Support</h2>
-<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
-<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<blockquote><p><strong>Need help, found a bug, or have a feature request?</strong></p></blockquote>
+<blockquote><p>Post in the official support community at <a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a> with the app name (<code>linux-quest</code>), what you expected, what happened, and any screenshots or error text.</p></blockquote>
+<ul>
+<li><strong>Full User Guide</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/linux-quest/">https://www.reddit.com/r/grantdb/wiki/linux-quest/</a></li>
+<li><strong>Technical Reference & Settings Spec</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest/">https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest/</a></li>
+</ul>
+<hr>
 <h2>Legal</h2>
 <p>This application is subject to the following legal agreements:</p>
 <ul>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/linux-quest/TERMS.md">Terms of Service</a></li>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/linux-quest/PRIVACY.md">Privacy Policy</a></li>
 </ul>
-<p>---</p>
+<hr>
 <p>*Built for fun on Reddit*</p>

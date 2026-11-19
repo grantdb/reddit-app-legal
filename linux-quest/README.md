@@ -2,32 +2,68 @@
 
 # Linux Quest
 
-**Linux Quest** is an educational RPG built natively in Reddit, designed to act as a "support-readiness" proof layer for Linux and tech communities. Instead of punishing users for asking poor questions, it gamifies the process of learning *how* to ask for help. It teaches users the essential habits required to submit high-quality, actionable support requests, reducing friction and speeding up resolution times for the whole community.
+> **Gamified Linux installation simulator and support-readiness trainer built natively inside Reddit.**
 
-## Key Features
+**Linux Quest** walks users through an interactive 14-stage Linux installation simulation covering hardware architecture, ISO selection, USB firmware setup, storage partitioning, graphics stacks, and post-install boot diagnostics. Whether the simulated install boots cleanly or hits a realistic configuration error, players finish with a structured Support Readiness Quiz and a copyable Markdown troubleshooting brief they can paste directly into real community support threads.
 
-- **Context-Aware Scenarios**: Features engaging, interactive simulations covering common issues like installations, hardware compatibility, and terminal troubleshooting.
-- **Support Readiness Brief**: Upon completing the quest, the game generates a formatted, shareable summary including the user's system context and attempted fixes, ready to be pasted into a real support thread.
-- **Behavioral Scoring**: Measures and rewards support-readiness behavior (precision, clarity, providing logs) rather than expecting the user to know technical trivia.
-- **Interactive Onboarding**: Clear mission objectives displayed natively on startup to hook users immediately.
+---
 
-## How It Works
+## At a Glance
 
-1. A user seeking technical help launches Linux Quest from an established sticky post in the subreddit.
-2. They play through a short, interactive text-adventure scenario where they must diagnose a fictional problem.
-3. The game rewards them for providing system specs and trying basic troubleshooting steps before asking for help.
-4. After winning, the game provides a clean template for their real-world issue, which they can copy and paste into the subreddit to ensure volunteers have the context they need.
+- **Realistic Installation Simulation**: Covers x86_64 and ARM64 platforms, architecture-matched ISOs, GPT/MBR and UEFI/Legacy boot modes, disk partitioning, graphics driver stacks, and online updates.
+- **Scenario-Aware Diagnostics**: Mismatched choices produce realistic boot outcomes (architecture mismatch, GRUB rescue, UEFI boot target missing, dual-boot mount error, display manager timeout, or proprietary GPU lockup).
+- **Support Readiness Scoring**: Evaluates practical help-seeking habits (hardware context, verbatim logs, clear goals, prior attempts, and constructive tone) on a 0-100 scale with a per-post leaderboard.
+- **Copyable Support Brief**: Generates a ready-to-paste Markdown troubleshooting template populated with system context and log-collection reminders.
 
-## Setup & Configuration
+---
 
-1. **Install**: Add **Linux Quest** to your subreddit via the App Directory.
-2. **Dashboard Initialization**: Navigate to your subreddit's Mod Tools and open the Linux Quest configuration post if you wish to tweak settings.
-3. **Usage**: Users can launch the quest directly from an interactive post in the community. We recommend linking to it from your subreddit's sidebar or rules.
+## How It Works: The 4-Step Operational Pipeline
+
+### 01 · Launch From a Subreddit Post
+> **Moderators create an interactive Linux Quest post via the subreddit menu.**
+> - Moderators select **Create Linux Quest Post** from the subreddit mod menu.
+> - Community members see a zero-scroll inline preview card showing the current record holder and tap **Launch Simulator** to enter expanded mode.
+
+---
+
+### 02 · Configure Hardware, Media, and Storage
+> **Players walk through a guided Linux installation wizard.**
+> - Select target hardware (AMD Ryzen, Intel Core, Raspberry Pi 5, or Hybrid Mobile) and an architecture-appropriate ISO (Arch Linux, Debian 12, or Fedora 41).
+> - Configure USB flashing tools, partition scheme (GPT or MBR), firmware boot mode (UEFI, Legacy BIOS, or Compatible), disk layout, desktop environment, graphics stack, and online updates.
+
+---
+
+### 03 · Boot Validation and Anomaly Review
+> **The simulator evaluates the full configuration end-to-end.**
+> - Runs distro-specific deployment and kernel boot logs matching the selected hardware device path and packages.
+> - Displays either a clean desktop boot or the exact failure caused by configuration conflicts, along with plain-language explanations and `journalctl` / `dmesg` recovery commands.
+
+---
+
+### 04 · Support Readiness Quiz and Shareable Brief
+> **Players practice writing an actionable community support post.**
+> - Complete a 6-question scenario-aware quiz scored out of 100 and persisted to the post leaderboard via Redis.
+> - Copy the generated Markdown **Support Readiness Brief** to use when asking for real-world help in the subreddit.
+
+---
+
+## Quick Setup
+
+1. **Install**: Add **Linux Quest** to your subreddit from the Reddit App Directory.
+2. **Create a Post**: Open your subreddit's moderator menu and click **Create Linux Quest Post**.
+3. **Share with Members**: Pin the post or link to it in your subreddit sidebar, rules, or help wiki so new users can practice before opening a support thread.
+
+---
 
 ## Support
 
-For help, bug reports, or feature requests, post in r/grantdb.
-Please include the app name, what you expected, what happened, and any error text or screenshots.
+> **Need help, found a bug, or have a feature request?**
+> Post in the official support community at [https://www.reddit.com/r/grantdb](https://www.reddit.com/r/grantdb) with the app name (`linux-quest`), what you expected, what happened, and any screenshots or error text.
+
+- **Full User Guide**: [https://www.reddit.com/r/grantdb/wiki/linux-quest/](https://www.reddit.com/r/grantdb/wiki/linux-quest/)
+- **Technical Reference & Settings Spec**: [https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest/](https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest/)
+
+---
 
 ## Legal
 
