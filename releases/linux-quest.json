@@ -1,16 +1,16 @@
 {
   "slug": "linux-quest",
   "title": "Linux Quest",
-  "version": "0.0.132",
+  "version": "0.0.133",
   "date": "2026-11-19",
   "category": "Community",
   "description": "Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.",
   "visibility": "Public",
-  "notes": "- Fix Partitioning back-navigation lockout, server HTTP 400/session handling & stack leak, stage counter & breadcrumb state, React 19 timers/updaters, unify end-to-end boot/troubleshooting scenarios, adopt Canonical Webview v2.1 & render Leaderboard, remove emoji/unused deps, and align README to 3-tier standard",
-  "postTitle": "[App Update] Linux Quest v0.0.132 Released",
-  "postBody": "# Linux Quest v0.0.132 is Now Available\n\n> **Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.**\n\n---\n\n### What's New in v0.0.132\n- Fix Partitioning back-navigation lockout, server HTTP 400/session handling & stack leak, stage counter & breadcrumb state, React 19 timers/updaters, unify end-to-end boot/troubleshooting scenarios, adopt Canonical Webview v2.1 & render Leaderboard, remove emoji/unused deps, and align README to 3-tier standard\n\n---\n\n### Key Capabilities & Highlights\n- **Category**: Community\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/linux-quest)\n\n---\n\n### How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Linux Quest** and click **Update** (or verify it displays `v0.0.132`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Submit a new post with the `Support` flair.*\n",
+  "notes": "- Fix Redis TxClient zScore NaN bug preventing leaderboard saves (with WATCH conflict retry & unit tests), add NEW PERSONAL BEST & current-user Leaderboard highlight, and de-cramp UI with full-bleed mobile shell, top progress bar, grouped SystemSetup cards, and wider responsive grids",
+  "postTitle": "[App Update] Linux Quest v0.0.133 Released",
+  "postBody": "# Linux Quest v0.0.133 is Now Available\n\n> **Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.**\n\n---\n\n### What's New in v0.0.133\n- Fix Redis TxClient zScore NaN bug preventing leaderboard saves (with WATCH conflict retry & unit tests), add NEW PERSONAL BEST & current-user Leaderboard highlight, and de-cramp UI with full-bleed mobile shell, top progress bar, grouped SystemSetup cards, and wider responsive grids\n\n---\n\n### Key Capabilities & Highlights\n- **Category**: Community\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/linux-quest)\n\n---\n\n### How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Linux Quest** and click **Update** (or verify it displays `v0.0.133`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/linux-quest-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/linux-quest",
-  "generatedAt": "2026-11-19T16:19:21.548Z"
+  "generatedAt": "2026-11-19T22:27:27.064Z"
 }

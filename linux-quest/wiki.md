@@ -3,7 +3,7 @@
 # Linux Quest
 
 Category: Community  
-Version: v0.0.132  
+Version: v0.0.133  
 Visibility: Public  
 Summary: Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.
 
@@ -42,7 +42,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 - Key-Value Strings (deduplication & cooldown markers)
 - Sorted Sets (time-series audit logs)
-- Key patterns: node:http
+- Key patterns: node:test, leaderboard:t3_1, node:http
 
 ## Setup and Usage
 - Install: Add Linux Quest to your subreddit from the Reddit App Directory.
@@ -54,14 +54,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.133 — 2026-11-19
+- Fix Redis TxClient zScore NaN bug preventing leaderboard saves (with WATCH conflict retry & unit tests), add NEW PERSONAL BEST & current-user Leaderboard highlight, and de-cramp UI with full-bleed mobile shell, top progress bar, grouped SystemSetup cards, and wider responsive grids
+
 0.0.132 — 2026-11-19
 - Fix Partitioning back-navigation lockout, server HTTP 400/session handling & stack leak, stage counter & breadcrumb state, React 19 timers/updaters, unify end-to-end boot/troubleshooting scenarios, adopt Canonical Webview v2.1 & render Leaderboard, remove emoji/unused deps, and align README to 3-tier standard
 
 0.0.131 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
-
-0.0.130 — 2026-10-27
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/linux-quest/TERMS.md)
