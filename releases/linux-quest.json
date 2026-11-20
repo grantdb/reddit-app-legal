@@ -1,16 +1,16 @@
 {
   "slug": "linux-quest",
   "title": "Linux Quest",
-  "version": "0.0.133",
-  "date": "2026-11-19",
+  "version": "0.0.134",
+  "date": "2026-11-20",
   "category": "Community",
   "description": "Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.",
   "visibility": "Public",
-  "notes": "- Fix Redis TxClient zScore NaN bug preventing leaderboard saves (with WATCH conflict retry & unit tests), add NEW PERSONAL BEST & current-user Leaderboard highlight, and de-cramp UI with full-bleed mobile shell, top progress bar, grouped SystemSetup cards, and wider responsive grids",
-  "postTitle": "[App Update] Linux Quest v0.0.133 Released",
-  "postBody": "# Linux Quest v0.0.133 is Now Available\n\n> **Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.**\n\n---\n\n### What's New in v0.0.133\n- Fix Redis TxClient zScore NaN bug preventing leaderboard saves (with WATCH conflict retry & unit tests), add NEW PERSONAL BEST & current-user Leaderboard highlight, and de-cramp UI with full-bleed mobile shell, top progress bar, grouped SystemSetup cards, and wider responsive grids\n\n---\n\n### Key Capabilities & Highlights\n- **Category**: Community\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/linux-quest)\n\n---\n\n### How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Linux Quest** and click **Update** (or verify it displays `v0.0.133`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Submit a new post with the `Support` flair.*\n",
+  "notes": "- Everyday hardware roster (Old Laptop, Everyday PC, Midrange Gaming PC, Aging Pre-2012 Laptop), popular distros (Linux Mint 22, Pop!_OS 24.04, Fedora 41, EndeavourOS), real-life USB flashing flow (drive/tool/FAT32-exFAT-NTFS), persistent ContextSummaryBanner with hints, distro-accurate filesystems (Btrfs/ext4/FAT32), and streamlined Username+Password account setup without Hostname/Localization",
+  "postTitle": "[App Update] Linux Quest v0.0.134 Released",
+  "postBody": "# Linux Quest v0.0.134 is Now Available\n\n> **Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.**\n\n---\n\n### What's New in v0.0.134\n- Everyday hardware roster (Old Laptop, Everyday PC, Midrange Gaming PC, Aging Pre-2012 Laptop), popular distros (Linux Mint 22, Pop!_OS 24.04, Fedora 41, EndeavourOS), real-life USB flashing flow (drive/tool/FAT32-exFAT-NTFS), persistent ContextSummaryBanner with hints, distro-accurate filesystems (Btrfs/ext4/FAT32), and streamlined Username+Password account setup without Hostname/Localization\n\n---\n\n### Key Capabilities & Highlights\n- **Category**: Community\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/linux-quest)\n\n---\n\n### How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Linux Quest** and click **Update** (or verify it displays `v0.0.134`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/linux-quest",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/linux-quest-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/linux-quest",
-  "generatedAt": "2026-11-19T22:27:27.064Z"
+  "generatedAt": "2026-11-20T01:33:39.255Z"
 }

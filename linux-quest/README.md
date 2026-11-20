@@ -10,10 +10,10 @@
 
 ## At a Glance
 
-- **Realistic Installation Simulation**: Covers x86_64 and ARM64 platforms, architecture-matched ISOs, GPT/MBR and UEFI/Legacy boot modes, disk partitioning, graphics driver stacks, and online updates.
-- **Scenario-Aware Diagnostics**: Mismatched choices produce realistic boot outcomes (architecture mismatch, GRUB rescue, UEFI boot target missing, dual-boot mount error, display manager timeout, or proprietary GPU lockup).
-- **Support Readiness Scoring**: Evaluates practical help-seeking habits (hardware context, verbatim logs, clear goals, prior attempts, and constructive tone) on a 0-100 scale with a per-post leaderboard.
-- **Copyable Support Brief**: Generates a ready-to-paste Markdown troubleshooting template populated with system context and log-collection reminders.
+- **Realistic Everyday Systems**: Practice installing Linux on common hardware — Older Business Laptop (Core i5 / 8GB / 256GB SSD), Everyday Desktop PC (Core i5 / 16GB / 512GB NVMe), Midrange Gaming PC (Ryzen 5 / GTX 1660), and Aging Pre-2012 Laptop (Core i3 / 4GB / Legacy BIOS).
+- **Popular Distros & Installer Defaults**: Choose Linux Mint 22 (`ext4`), Pop!_OS 24.04 (`ext4` + `FAT32` Recovery), Fedora 41 (`Btrfs`), or EndeavourOS (`ext4`/`Btrfs`) with contextual summary hints across every step.
+- **Real-Life Flashing & Account Setup**: Pick your target USB stick, formatter (`Rufus`, `Ventoy`, `BalenaEtcher`), USB filesystem (`FAT32`/`exFAT`/`NTFS`), GPT/MBR scheme, firmware boot mode, distro-matched Desktop Environment, graphics drivers, and user login (username + password).
+- **Support Readiness Scoring & Brief**: Evaluates practical help-seeking habits on a 0-100 scale with a per-post Redis leaderboard and a copyable Markdown troubleshooting brief.
 
 ---
 
@@ -26,10 +26,10 @@
 
 ---
 
-### 02 · Configure Hardware, Media, and Storage
-> **Players walk through a guided Linux installation wizard.**
-> - Select target hardware (AMD Ryzen, Intel Core, Raspberry Pi 5, or Hybrid Mobile) and an architecture-appropriate ISO (Arch Linux, Debian 12, or Fedora 41).
-> - Configure USB flashing tools, partition scheme (GPT or MBR), firmware boot mode (UEFI, Legacy BIOS, or Compatible), disk layout, desktop environment, graphics stack, and online updates.
+### 02 · Configure Hardware, USB Media, and Storage
+> **Players walk through a guided, real-world Linux installation wizard.**
+> - Pick an everyday PC or laptop and a popular distro (Linux Mint 22, Pop!_OS 24.04, Fedora 41, or EndeavourOS).
+> - Follow contextual summary hints while selecting the USB drive, flashing tool (`Rufus`, `Ventoy`, `BalenaEtcher`), USB filesystem (`FAT32`, `exFAT`, `NTFS`), GPT/MBR scheme, firmware boot mode, distro-matched storage (`ext4`/`Btrfs`/`FAT32`), user account (username + password), Desktop Environment, and graphics drivers.
 
 ---
 
