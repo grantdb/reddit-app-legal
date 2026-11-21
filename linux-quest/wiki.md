@@ -3,7 +3,7 @@
 # Linux Quest
 
 Category: Community  
-Version: v0.0.134  
+Version: v0.0.135  
 Visibility: Public  
 Summary: Industrial OS simulator. Refactored architecture for direct webview rendering. Hardened state machine.
 
@@ -54,14 +54,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.135 — 2026-11-21
+- Add top-bar Rankings button to view live post leaderboard at any time, move Leaderboard prominently above Support Brief on BootResult and always render it, and always refresh leaderboard on completion
+
 0.0.134 — 2026-11-20
 - Everyday hardware roster (Old Laptop, Everyday PC, Midrange Gaming PC, Aging Pre-2012 Laptop), popular distros (Linux Mint 22, Pop!_OS 24.04, Fedora 41, EndeavourOS), real-life USB flashing flow (drive/tool/FAT32-exFAT-NTFS), persistent ContextSummaryBanner with hints, distro-accurate filesystems (Btrfs/ext4/FAT32), and streamlined Username+Password account setup without Hostname/Localization
 
 0.0.133 — 2026-11-19
 - Fix Redis TxClient zScore NaN bug preventing leaderboard saves (with WATCH conflict retry & unit tests), add NEW PERSONAL BEST & current-user Leaderboard highlight, and de-cramp UI with full-bleed mobile shell, top progress bar, grouped SystemSetup cards, and wider responsive grids
-
-0.0.132 — 2026-11-19
-- Fix Partitioning back-navigation lockout, server HTTP 400/session handling & stack leak, stage counter & breadcrumb state, React 19 timers/updaters, unify end-to-end boot/troubleshooting scenarios, adopt Canonical Webview v2.1 & render Leaderboard, remove emoji/unused deps, and align README to 3-tier standard
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/linux-quest/TERMS.md)
