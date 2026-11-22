@@ -1,0 +1,100 @@
+<blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/logscan">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>Logscan</h1>
+<blockquote><p><strong>Reference Devvit app demonstrating redacted, Redis-buffered operational logging to a central Logscan collector.</strong></p></blockquote>
+<p>Logscan shows how monitored Devvit apps integrate <code>@devvit-fleet/logscan-sdk</code> to report structured errors, scheduler lifecycle events, and operational warnings across subreddit installations without violating Devvit's per-installation Redis isolation. Logscan complements, and does not replace, <code>npm run logs</code>, which remains necessary for uninstrumented crashes, OOMs, and platform-level failures.</p>
+<h2>At a Glance</h2>
+<ul>
+<li>Buffers redacted operational logs in per-installation Devvit Redis using priority-aware capped sorted sets.</li>
+<li>Drains queued events to the central Logscan collector via a 1-minute Devvit Scheduler job (<code>logscan_flush</code>), staying within Devvit's 10-job limit (3 recurring jobs total).</li>
+<li>Protects collector credentials in developer-managed App-scoped settings (<code>logscan_endpoint</code>, <code>logscan_api_key</code>).</li>
+<li>Demonstrates realistic logging for <code>AppInstall</code>, <code>AppUpgrade</code>, scheduler jobs, Reddit API failures, Redis timeouts, webhook errors, and moderator actions.</li>
+</ul>
+<h2>How It Works: The 3-Step Operational Pipeline</h2>
+<h3>01 · Redact and Buffer Locally</h3>
+<blockquote><p><strong>Per-installation Redis isolation with client-side allowlisting</strong></p></blockquote>
+<blockquote><p>- Every handler creates a request-scoped logger bound to a correlation ID (no <code>AsyncLocalStorage</code> or <code>setInterval</code>).</p></blockquote>
+<blockquote><p>- Context keys are filtered through an explicit allowlist, sensitive strings are redacted, and stacks are capped at 20 lines before enqueueing into installation Redis.</p></blockquote>
+<blockquote><p>- On queue overflow, the oldest low-severity events are evicted first so <code>error</code> and <code>fatal</code> events are preserved.</p></blockquote>
+<hr>
+<h3>02 · Scheduled Batch Delivery</h3>
+<blockquote><p><strong>Bounded cron jobs flush batches over HTTPS</strong></p></blockquote>
+<blockquote><p>- <code>logscan_flush</code> runs every 1 minute to drain up to 50 queued events and POST them to <code>POST /v1/events/batch</code>.</p></blockquote>
+<blockquote><p>- If delivery fails, events remain in Redis for the next scheduled tick. If Redis itself fails during logging, the SDK attempts at most one direct 2.5-second fallback POST without retries or recursion.</p></blockquote>
+<hr>
+<h3>03 · Cross-Subreddit Incident Reporting</h3>
+<blockquote><p><strong>Centralized grouping and AI-ready reports</strong></p></blockquote>
+<blockquote><p>- The external <code>services/logscan-collector</code> service aggregates matching <code>(signature, app)</code> errors across subreddits into prioritized incidents.</p></blockquote>
+<blockquote><p>- Operators and AI agents query <code>GET /v1/report</code>, <code>GET /v1/compare</code>, and <code>GET /v1/incidents/:id/*</code> while keeping <code>npm run logs</code> available for uninstrumented platform crashes.</p></blockquote>
+<h2>Quick Setup</h2>
+<ol>
+<li>Update <code>permissions.http.domains</code> in <code>apps/logscan/devvit.json</code> to your exact Logscan collector hostname (no wildcards, protocols, or paths).</li>
+<li>Configure the developer-managed App-scoped settings (<code>logscan_endpoint</code> and secret <code>logscan_api_key</code>) via the Devvit CLI.</li>
+<li>Install the app on a test subreddit and run the moderator menu item <strong>Logscan: Run Diagnostic Sample Events</strong> to verify end-to-end delivery.</li>
+</ol>
+<h2>Integration and Playtest Checklist</h2>
+<p>Use this checklist to verify <code>apps/logscan</code> end-to-end before onboarding additional fleet apps:</p>
+<ol>
+<li><strong>Configure Collector Endpoint and API Key</strong>:</li>
+</ol>
+<ul>
+<li>Confirm <code>permissions.http.domains</code> in <code>apps/logscan/devvit.json</code> contains <code>zboivpuygpsapoejfbpf.supabase.co</code> (exact hostname; no wildcards, protocols, or paths). <code>zboivpuygpsapoejfbpf.supabase.co</code> must have confirmed Reddit HTTP Fetch domain approval before live delivery can be considered verified.</li>
+<li>Set App-scoped settings via Devvit CLI (<code>logscan_endpoint</code> = <code><a href="https://zboivpuygpsapoejfbpf.supabase.co/functions/v1/logscan-ingest">https://zboivpuygpsapoejfbpf.supabase.co/functions/v1/logscan-ingest</a></code>, <code>logscan_api_key</code> = your dedicated <code>LOGSCAN_INGEST_API_KEY</code>).</li>
+<li>Confirm subreddit moderators cannot see <code>logscan_endpoint</code> or <code>logscan_api_key</code> in subreddit installation settings.</li>
+</ul>
+<ol>
+<li><strong>Verify Events Reach the Collector</strong>:</li>
+</ol>
+<ul>
+<li>Start <code>apps/logscan</code> with <code>devvit playtest</code> on a test subreddit.</li>
+<li>Run <strong>Logscan: Run Diagnostic Sample Events</strong> from the subreddit moderator menu.</li>
+<li>Wait 1 minute for <code>logscan_flush</code> and query <code>GET /v1/report?since=15m</code> with <code>LOGSCAN_READ_API_KEY</code>.</li>
+</ul>
+<ol>
+<li><strong>Verify Webhook Failure Logging</strong>:</li>
+</ol>
+<ul>
+<li>Confirm the <code>webhook.delivery_failed</code> (<code>HTTP_502</code>) event appears in <code>GET /v1/incidents</code> with component <code>webhook</code> and redacted context.</li>
+</ul>
+<ol>
+<li><strong>Verify Redis Failure Logging & Fallback</strong>:</li>
+</ol>
+<ul>
+<li>Confirm <code>redis.operation_failed</code> (<code>REDIS_TIMEOUT</code>) appears in the report.</li>
+<li>Verify via SDK unit tests (<code>npm test --workspace=@devvit-fleet/logscan-sdk</code>) that a real Redis outage triggers at most one direct 2.5s HTTPS fallback POST with zero retries.</li>
+</ul>
+<ol>
+<li><strong>Verify Reddit API Failure Logging</strong>:</li>
+</ol>
+<ul>
+<li>Confirm <code>reddit.api_request_failed</code> (<code>HTTP_429</code>) appears in the report with <code>retryAfterSec</code> preserved in allowlisted context.</li>
+</ul>
+<ol>
+<li><strong>Verify Cross-Subreddit Incident Aggregation</strong>:</li>
+</ol>
+<ul>
+<li>Install <code>apps/logscan</code> on two test subreddits (or run <code>npm run seed --workspace=@devvit-fleet/logscan-collector</code>) and trigger the diagnostic menu item in both.</li>
+<li>Confirm <code>GET /v1/report</code> shows <strong>one</strong> incident with both subreddits listed in <code>subreddits</code> and accurate <code>perSubreddit</code> counts.</li>
+</ul>
+<ol>
+<li><strong>Verify Duplicate Events Do Not Inflate Counts</strong>:</li>
+</ol>
+<ul>
+<li>Re-POST an already ingested batch to <code>POST /v1/events/batch</code> and confirm <code>deduplicated</code> matches the batch size while incident <code>count</code>, <code>firstSeen</code>, and <code>evidence</code> remain unchanged.</li>
+</ul>
+<ol>
+<li><strong>Verify Logscan Failures Do Not Recurse</strong>:</li>
+</ol>
+<ul>
+<li>Temporarily configure an invalid <code>logscan_api_key</code> or stop the collector, trigger diagnostic events, and confirm <code>logscan_flush</code> leaves events in Redis, logs a single local warning, and never enqueues new Logscan failure events.</li>
+</ul>
+<h2>Support</h2>
+<blockquote><p><strong>Official Support Community</strong>: <a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a></p></blockquote>
+<blockquote><p>- User Guide: <a href="https://www.reddit.com/r/grantdb/wiki/logscan/">https://www.reddit.com/r/grantdb/wiki/logscan/</a></p></blockquote>
+<blockquote><p>- Technical Reference: <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/logscan/">https://www.reddit.com/r/grantdb/wiki/index/all-apps/logscan/</a></p></blockquote>
+<h2>Legal</h2>
+<ul>
+<li><a href="PRIVACY.md">Privacy Policy</a></li>
+<li><a href="TERMS.md">Terms of Service</a></li>
+</ul>
+<hr>
+<p>*Built for Reddit's moderator community.*</p>

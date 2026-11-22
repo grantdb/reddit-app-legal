@@ -1,0 +1,85 @@
+<blockquote><p><a href="https://www.reddit.com/r/grantdb/wiki/logscan/">Full User Guide</a> | <strong>Technical Reference &amp; Settings Spec</strong></p></blockquote>
+<h1>Logscan</h1>
+
+<p>Category: Observability<br>
+Version: v0.0.3<br>
+Visibility: Unlisted<br>
+Summary: Structured, cross-subreddit operational log buffering, redaction, and scheduled telemetry reporting to a central Logscan collector.</p>
+
+<h2>Overview</h2>
+<p>Structured, cross-subreddit operational log buffering, redaction, and scheduled telemetry reporting to a central Logscan collector.</p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+<li>http: External HTTP Fetch access [Domains: zboivpuygpsapoejfbpf.supabase.co]</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).</li>
+<li>AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).</li>
+</ul>
+<h3>Menu Actions</h3>
+<ul>
+<li>Logscan: Run Diagnostic Sample Events: Moderator menu action (Location: subreddit)</li>
+<li>Logscan: Flush Queue Now: Moderator menu action (Location: subreddit)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>LOGSCAN_SETTING_KEYS.ENDPOINT: Logscan Collector Endpoint URL (string, default: -). HTTPS base URL for the central Logscan collector. Hostname must match devvit.json permissions.http.domains.</li>
+<li>LOGSCAN_SETTING_KEYS.API_KEY: Logscan Ingest API Key (string, default: -). Bearer ingest API key managed by the app developer via Devvit CLI.</li>
+<li>LOGSCAN_SETTING_KEYS.ENABLED: Enable Logscan Structured Reporting (boolean, default: true). Buffer redacted operational logs in Redis and flush to the Logscan collector.</li>
+<li>LOGSCAN_SETTING_KEYS.MIN_LEVEL: Logscan Minimum Log Level (select, default: info). Logscan Minimum Log Level</li>
+<li>LOGSCAN_SETTING_KEYS.SAMPLE_RATE_INFO: Logscan Info Sample Rate (0 to 1) (number, default: 1). Logscan Info Sample Rate (0 to 1)</li>
+<li>LOGSCAN_SETTING_KEYS.SAMPLE_RATE_DEBUG: Logscan Debug Sample Rate (0 to 1) (number, default: 0.1). Logscan Debug Sample Rate (0 to 1)</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: No — Does not send modmail notifications.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Hashes (structured records & alias indices)</li>
+<li>Key patterns: logscan:scheduler:job_ids, logscan:rollup:error_count, logscan:queue:v1, node:fs, node:path</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Update `permissions.http.domains` in `apps/logscan/devvit.json` to your exact Logscan collector hostname (no wildcards, protocols, or paths).</li>
+<li>Configure the developer-managed App-scoped settings (`logscan_endpoint` and secret `logscan_api_key`) via the Devvit CLI.</li>
+<li>Install the app on a test subreddit and run the moderator menu item Logscan: Run Diagnostic Sample Events to verify end-to-end delivery.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.3 — 2026-11-22<br>
+Initial Logscan reference Devvit app demonstrating @devvit-fleet/logscan-sdk integration, Redis buffering, and scheduled flushing</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/logscan/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/logscan/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/logscan">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

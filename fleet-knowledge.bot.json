@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T16:19:21.509Z",
+  "generatedAt": "2026-11-22T21:21:21.576Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -3198,6 +3198,66 @@
       },
       "status": "active",
       "lastUpdated": "2026-11-13"
+    },
+    {
+      "appId": "logscan",
+      "slug": "logscan",
+      "appName": "Logscan",
+      "aliases": [
+        "logscan"
+      ],
+      "summary": "Structured, cross-subreddit operational log buffering, redaction, and scheduled telemetry reporting to a central Logscan collector.",
+      "keywords": [
+        "logscan",
+        "observability"
+      ],
+      "setupSteps": [
+        "Update `permissions.http.domains` in `apps/logscan/devvit.json` to your exact Logscan collector hostname (no wildcards, protocols, or paths).",
+        "Configure the developer-managed App-scoped settings (`logscan_endpoint` and secret `logscan_api_key`) via the Devvit CLI.",
+        "Install the app on a test subreddit and run the moderator menu item Logscan: Run Diagnostic Sample Events to verify end-to-end delivery."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": true,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "AppInstall",
+        "AppUpgrade"
+      ],
+      "menuItems": [
+        "Logscan: Run Diagnostic Sample Events",
+        "Logscan: Flush Queue Now"
+      ],
+      "settingsCount": 6,
+      "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/logscan",
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/logscan",
+        "github": "https://github.com/grantdb/logscan",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/logscan/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/logscan/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for Logscan.",
+        "troubleshooting": "Check the Logscan troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-11-22"
     }
   ]
 }
