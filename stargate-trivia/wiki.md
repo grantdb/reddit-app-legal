@@ -3,7 +3,7 @@
 # Stargate Trivia
 
 Category: Interactive  
-Version: v0.0.132  
+Version: v0.0.133  
 Visibility: Public  
 Summary: Interactive trivia engine with rich UI and global leaderboards.
 
@@ -54,14 +54,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.133 — 2026-11-24
+- Fix Back to Gate Room on expanded leaderboard returning to frozen last question instead of Game Over screen (Dial Again / Leaderboard / Exit), and wire Prev/Next leaderboard pagination
+
 0.0.132 — 2026-11-24
 - Fix Redis TxClient zScore NaN bug in onSubmitScore preventing leaderboard high-score saves
 
 0.0.131 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
-
-0.0.130 — 2026-10-27
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/stargate-trivia/TERMS.md)
