@@ -3,7 +3,7 @@
 # Suspended Remove
 
 Category: Security  
-Version: v1.0.94  
+Version: v1.0.95  
 Visibility: Public  
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.
 
@@ -28,7 +28,8 @@ High-precision account purification engine. Fleet-wide security infrastructure.
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
 - enabled: Enable automated enforcement (boolean, default: true). Turn this off to pause all scan actions without uninstalling the app.
-- recheckDays: Days between rechecks (number, default: 0). Default: 0 for legacy behavior and lowest rollout friction. Use 0 to allow back-to-back scheduled checks. Increase this if you want the app to wait full days between checks before final action.
+- recheckInterval: Time between rechecks (select, default: legacy). Preferred setting for how long to wait between rechecks before final action (1h, 4h, 12h, or 1-4 days). Leave on "Use legacy" to preserve existing "Days between rechecks" installs.
+- recheckDays: [Legacy] Days between rechecks (number, default: 0). Used only when "Time between rechecks" above is set to "Use legacy". Default: 0 (back-to-back checks). Use "Time between rechecks" above for hourly (1h, 4h, 12h) or daily intervals.
 - confirmChecks: Required verification checks (number, default: 1). Default: 1 for legacy behavior and lowest rollout friction. Increase this if you want the app to confirm the account is still inaccessible more than once before final action.
 - duringWaitAction: What to do during the waiting window (select, default: filter_hide_waiting). Filter & Hide removes the item from public view and places it into the Needs Review / ModQueue queue during checks. Filter & Keep Public keeps the item visible to the public on the subreddit while keeping it in the Needs Review queue. Temporary Remove moves the item out of the review queue and into the removed queue while checks continue. Important: if the app approves a filtered or temporarily removed item later, Reddit may not run AutoModerator and other moderation checks on it again like a brand-new post or comment.
 - addDuringWaitNote: Add mod note to item during waiting window (boolean, default: true). Adds the waiting-period note to the item when the waiting action is applied. Turn this off if you do not want a note on the item during the checking period.
@@ -39,7 +40,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - addFinalNote: Add mod note to item on final action (boolean, default: true). Adds the final-action note to the item when it is removed. Turn this off if you do not want a note on the item at removal time.
 - finalReason: Final-action mod note text (string, default: Suspended account content removed — account inaccessible at time of removal.). This note is added to the item when the final action is applied.
 - addUserNote: Add mod note to user on final action (boolean, default: true). Adds a note to the user's mod history when the final action fires. Only runs once, at final action time. Does not run during the waiting period.
-- userNoteLabel: User note label (select, default: SPAM_WARNING). Badge shown on the mod note in the user's profile. None has the lowest impact on the account.
+- userNoteLabel: User note label (select, default: AUTO). Badge shown on the mod note in the user's profile. Match final action omits spam labels on normal removals and applies Spam Warning only when final action is Remove as spam.
 - userNoteText: User note text (string, default: Account is suspended or shadowbanned. Item automatically removed.). User note text
 - removeHistoricalPosts: Remove historical posts from suspended accounts (boolean, default: false). When enabled, when an account reaches final action and is confirmed suspended, the app searches the subreddit to go back in time and remove previous posts submitted by that user. Default: Disabled.
 - historicalPostLimit: Maximum historical posts to remove per user (number, default: 10). Maximum number of past posts by this suspended author to search and remove in one pass (1–25). Default: 10.
@@ -72,14 +73,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.95 — 2026-11-24
+- Match user mod note label to final removal type (AUTO default: None for remove, SPAM_WARNING for spam) and add 1h, 4h, and 12h recheck interval options
+
 1.0.94 — 2026-11-18
 - Add single retry for transient gRPC 500 errors during modqueue/spam scan
 
 1.0.93 — 2026-11-16
 - Fix Waiting Stage threshold math, run Historical Guard before state mutation, sort pending queue, remove settings emoji, and align README
-
-1.0.92 — 2026-11-11
-- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/TERMS.md)
