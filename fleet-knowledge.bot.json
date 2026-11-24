@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T11:51:22.957Z",
+  "generatedAt": "2026-11-24T22:33:17.337Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -3337,6 +3337,63 @@
       "replyTemplates": {
         "welcome": "Welcome to r/grantdb support! Here is reference information for PostLimiter.",
         "troubleshooting": "Check the PostLimiter troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-11-24"
+    },
+    {
+      "appId": "modconnect",
+      "slug": "modconnect",
+      "appName": "ModConnect",
+      "aliases": [
+        "modconnect"
+      ],
+      "summary": "ModConnect helps community moderators recruit, review, and onboard moderators directly inside Reddit.",
+      "keywords": [
+        "modconnect",
+        "moderation"
+      ],
+      "setupSteps": [
+        "Install: Add ModConnect to your subreddit from the Reddit App Directory.",
+        "Open Dashboard: Launch ModConnect: Moderator Dashboard from your subreddit moderation menu.",
+        "Publish First Role: Click Create Role, choose a template, configure any eligibility rules and questions, and click Create & Open Role."
+      ],
+      "commonIssues": [],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [],
+        "syntax_formatting": [],
+        "expected_behavior": [],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Check app console logs via devvit logs <subreddit> for diagnostic output."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "AppInstall",
+        "AppUpgrade"
+      ],
+      "menuItems": [],
+      "settingsCount": 6,
+      "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/modconnect",
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/modconnect",
+        "github": "https://github.com/grantdb/modconnect",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/modconnect/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/modconnect/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for ModConnect.",
+        "troubleshooting": "Check the ModConnect troubleshooting guide or view logs via devvit logs."
       },
       "status": "active",
       "lastUpdated": "2026-11-24"

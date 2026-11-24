@@ -11,10 +11,7 @@ Summary: ModConnect helps community moderators recruit, review, and onboard mode
 ModConnect helps community moderators recruit, review, and onboard moderators directly inside Reddit.
 
 ## Key Features
-- Automatic account eligibility checks (minimum account age, subreddit karma, ban/mod-note flags).
-- Graded onboarding quizzes and reusable subreddit-level onboarding templates.
-- Configurable multi-moderator approval thresholds and structured interview rubrics.
-- Optional exportable audit summaries and recruitment cycle archiving.
+- Not documented yet.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
@@ -72,9 +69,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key patterns: node:http, node:crypto
 
 ## Setup and Usage
-- Install: Add app via Reddit App Directory.
-- Configure: Open Mod Tools -> App Settings in your subreddit to configure options.
-- Launch: Use mod menu or triggers as configured.
+- Install: Add ModConnect to your subreddit from the Reddit App Directory.
+- Open Dashboard: Launch ModConnect: Moderator Dashboard from your subreddit moderation menu.
+- Publish First Role: Click Create Role, choose a template, configure any eligibility rules and questions, and click Create & Open Role.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.

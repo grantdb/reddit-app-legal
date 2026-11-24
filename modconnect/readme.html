@@ -1,26 +1,26 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/modconnect">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>ModConnect</h1>
 <blockquote><p><strong>Connect the right people to the right community roles.</strong></p></blockquote>
-<p>ModConnect is a Reddit-native moderator recruiting, evaluation, and onboarding platform built with Devvit Web. It helps moderation teams publish structured application posts, privately review and score candidates, manage a clear recruiting pipeline, send respectful Modmail notifications, and guide accepted moderators through an onboarding checklist.</p>
+<p>ModConnect is a Reddit-native moderator recruiting, evaluation, and onboarding platform built with Devvit Web. It helps moderation teams publish structured application posts with automated account eligibility checks, privately review and score candidates, manage a clear recruiting pipeline with reversible decisions and audit exports, send respectful Modmail notifications, and guide accepted moderators through an onboarding checklist.</p>
 <h2>At a Glance</h2>
 <ul>
-<li><strong>Structured Role Creation</strong>: Launch open roles from 3 built-in templates (Basic Moderator, Community Volunteer, Event Helper) with 6 question types, openings caps, and optional deadlines.</li>
-<li><strong>Interactive Application Posts</strong>: Opening a role publishes an interactive post where community members apply, track their own status, and withdraw before a final decision.</li>
-<li><strong>Private Moderator Review & Pipeline</strong>: Score candidates (1-5), record recommendations (accept, maybe, reject) and private notes, and move applicants through Submitted, In Review, Interview, Trial, Accepted, or Rejected.</li>
-<li><strong>Automated Modmail & Onboarding</strong>: Receive archivable Modmail Inbox alerts on new applications, send polite decision notices without leaking private notes, and track 6 customizable onboarding tasks for accepted candidates.</li>
+<li><strong>Structured Roles & Automated Eligibility</strong>: Launch open roles from 3 built-in templates (Basic Moderator, Community Volunteer, Event Helper) with 6 question types, openings caps, optional deadlines, and automatic checks for account age, karma, verified email, and subreddit ban status.</li>
+<li><strong>Interactive Recruitment Posts</strong>: Opening a role publishes a subreddit-branded recruitment post where community members verify eligibility, apply, track their own status, and withdraw before a final decision.</li>
+<li><strong>Private Moderator Review & Audit Trail</strong>: Score candidates (1-5), record recommendations and private notes, advance applicants through the pipeline, safely reopen rejected applications or revoke acceptances when plans change, and export audit logs as CSV or Markdown.</li>
+<li><strong>Archivable Modmail & Onboarding</strong>: Receive archivable Modmail Inbox alerts on new applications, send polite decision notices without leaking private notes, and track 6 customizable onboarding tasks for accepted candidates.</li>
 </ul>
 <h2>How It Works: The 5-Step Operational Pipeline</h2>
 <h3>01 · Create & Open a Role</h3>
-<blockquote><p><strong>Publish a recruitment post with structured screening questions</strong></p></blockquote>
+<blockquote><p><strong>Publish a recruitment post with structured screening questions and eligibility rules</strong></p></blockquote>
 <blockquote><p>- Open <strong>ModConnect: Moderator Dashboard</strong> or <strong>ModConnect: Create Open Role</strong> from your subreddit moderation menu.</p></blockquote>
-<blockquote><p>- Pick a default template or build custom questions (<code>shortText</code>, <code>longText</code>, <code>singleSelect</code>, <code>multiSelect</code>, <code>number</code>, <code>checkbox</code>).</p></blockquote>
-<blockquote><p>- Save as a Draft to iterate freely, or Open the role to automatically publish an interactive application post.</p></blockquote>
+<blockquote><p>- Pick a default template or build custom questions (<code>shortText</code>, <code>longText</code>, <code>singleSelect</code>, <code>multiSelect</code>, <code>number</code>, <code>checkbox</code>) and optional account eligibility rules (minimum account age, karma, verified email, or ban-list exclusion).</p></blockquote>
+<blockquote><p>- Save as a Draft to iterate freely, or Open the role to publish an interactive recruitment post with safe publication recovery if Reddit's API is interrupted.</p></blockquote>
 <hr>
-<h3>02 · Collect Community Applications</h3>
+<h3>02 · Screen & Collect Community Applications</h3>
 <blockquote><p><strong>Validated, duplicate-free submissions scoped to your subreddit</strong></p></blockquote>
-<blockquote><p>- Community members open the recruitment post, review openings, eligibility, and deadline countdown, and submit their answers.</p></blockquote>
-<blockquote><p>- ModConnect blocks duplicate submissions, paused or closed roles, passed deadlines, and roles with zero remaining openings.</p></blockquote>
-<blockquote><p>- Moderators immediately receive an archivable Modmail Inbox notification with a link to review the candidate.</p></blockquote>
+<blockquote><p>- Community members open the recruitment post, see live openings, deadline countdown, and their account eligibility status, and submit their answers.</p></blockquote>
+<blockquote><p>- ModConnect enforces eligibility requirements server-side and blocks duplicate submissions, paused or closed roles, passed deadlines, and roles with zero remaining openings.</p></blockquote>
+<blockquote><p>- Moderators immediately receive an archivable Modmail Inbox notification with a direct link to review the candidate.</p></blockquote>
 <hr>
 <h3>03 · Review, Score & Discuss Privately</h3>
 <blockquote><p><strong>Collaborative moderator evaluation with strict privacy isolation</strong></p></blockquote>
@@ -31,85 +31,34 @@
 <h3>04 · Advance Pipeline & Notify Candidates</h3>
 <blockquote><p><strong>Controlled status transitions with full audit logging</strong></p></blockquote>
 <blockquote><p>- Moderators move candidates through <code>submitted -> inReview -> interview -> trial -> accepted | rejected</code>.</p></blockquote>
-<blockquote><p>- Accepting a candidate enforces the role's openings limit and dispatches a polite Modmail notice with a link to their onboarding checklist.</p></blockquote>
-<blockquote><p>- Rejecting a candidate sends a respectful, neutral Modmail notice with zero internal review details exposed.</p></blockquote>
+<blockquote><p>- Accepting a candidate enforces the role's openings limit and dispatches a polite Modmail notice with a link to their onboarding checklist; rejecting sends a respectful notice with zero internal details exposed.</p></blockquote>
+<blockquote><p>- Moderators can reopen a rejected application back to In Review or remove an accepted candidate if needed, with every change recorded in the exportable audit log.</p></blockquote>
 <hr>
 <h3>05 · Track Onboarding & Recruiting Metrics</h3>
-<blockquote><p><strong>Guided checklists and simple pipeline visibility</strong></p></blockquote>
-<blockquote><p>- Accepted candidates automatically receive 6 default onboarding tasks that moderators can customize, reorder, add due dates to, or verify.</p></blockquote>
-<blockquote><p>- Both the accepted candidate and the moderation team can track completion percentage in real time.</p></blockquote>
-<blockquote><p>- Moderators view key Phase 1 metrics: total/open roles, applications by status, acceptance rate, average time to decision, active onboarding count, and onboarding completion rate.</p></blockquote>
-<h2>Moderator Workflow</h2>
+<blockquote><p><strong>Guided checklists and clear pipeline visibility</strong></p></blockquote>
+<blockquote><p>- Accepted candidates automatically receive 6 default onboarding tasks that moderators can customize, reorder, assign due dates to, or verify.</p></blockquote>
+<blockquote><p>- Both the accepted candidate and the moderation team can track completion progress in real time.</p></blockquote>
+<blockquote><p>- Moderators view recruiting metrics (total/open roles, applications by status, acceptance rate, average time to decision, and onboarding completion rate) and export audit history as CSV or Markdown.</p></blockquote>
+<h2>Quick Setup</h2>
 <ol>
-<li>Open <strong>ModConnect: Moderator Dashboard</strong> from the subreddit menu.</li>
-<li>Click <strong>Create Role</strong>, choose one of the 3 templates, adjust openings/deadline/questions, and click <strong>Create & Open Role</strong>.</li>
-<li>If a Reddit API or persistence interruption leaves a role in <strong>Publish Failed</strong>, ModConnect does not automatically retry or create duplicate posts. Review your subreddit feed and choose either <strong>I found the post — link it</strong> (paste the Reddit post URL or <code>t3_</code> ID to verify and open the role) or <strong>No post was created — retry publication</strong> (explicitly confirm no post exists before starting a new publish attempt).</li>
-<li>Open the <strong>Candidates</strong> tab to filter by role or status, search by username, or sort by date, score, or status.</li>
-<li>Click any candidate to inspect answers, submit a private 1-5 review, advance pipeline status, and record a final Accept or Reject decision.</li>
-<li>Open the <strong>Onboarding</strong> tab to customize and track tasks for accepted candidates, and check <strong>Metrics</strong> or <strong>Settings</strong> to review stats and customize Modmail templates.</li>
+<li><strong>Install</strong>: Add <strong>ModConnect</strong> to your subreddit from the Reddit App Directory.</li>
+<li><strong>Open Dashboard</strong>: Launch <strong>ModConnect: Moderator Dashboard</strong> from your subreddit moderation menu.</li>
+<li><strong>Publish First Role</strong>: Click <strong>Create Role</strong>, choose a template, configure any eligibility rules and questions, and click <strong>Create & Open Role</strong>.</li>
 </ol>
-<h2>Applicant Workflow</h2>
-<ol>
-<li>Open an active ModConnect recruitment post in the subreddit and click <strong>Apply Now</strong>.</li>
-<li>Complete all required questions and submit the form.</li>
-<li>Return to the post at any time to check your current pipeline stage or withdraw your application prior to a final decision.</li>
-<li>If accepted, open your <strong>Onboarding Checklist</strong> directly from the post or acceptance Modmail and check off your assigned steps.</li>
-</ol>
-<h2>Data Model</h2>
-<p>All records are strictly scoped per subreddit in Devvit Redis (<code>modconnect:v1:<subreddit>:*</code>):</p>
-<ul>
-<li><strong>Role</strong>: <code>id</code>, <code>subredditName</code>, <code>title</code>, <code>description</code>, <code>openings</code>, <code>applicationDeadline</code>, <code>questions[]</code>, <code>status</code> (<code>draft | publishing | open | publish_failed | paused | closed</code>), <code>createdBy</code>, <code>createdAt</code>, <code>updatedAt</code>, <code>postId</code>, <code>postUrl</code>, and moderator-only <code>publication</code> attempt metadata.</li>
-<li><strong>Application</strong>: <code>id</code>, <code>roleId</code>, <code>subredditName</code>, <code>applicantUsername</code>, <code>answers</code>, <code>status</code> (<code>submitted | inReview | interview | trial | accepted | rejected | withdrawn</code>), <code>submittedAt</code>, <code>updatedAt</code>, <code>decisionAt</code>, <code>decisionBy</code>, <code>decisionNote</code>.</li>
-<li><strong>Review</strong>: <code>id</code>, <code>applicationId</code>, <code>reviewerUsername</code>, <code>score</code> (1-5), <code>recommendation</code> (<code>accept | maybe | reject</code>), <code>notes</code>, <code>createdAt</code>, <code>updatedAt</code>.</li>
-<li><strong>OnboardingTask</strong>: <code>id</code>, <code>applicationId</code>, <code>title</code>, <code>description</code>, <code>order</code>, <code>required</code>, <code>status</code> (<code>pending | completed | skipped</code>), <code>completableBy</code>, <code>dueAt</code>, <code>completedAt</code>, <code>completedBy</code>.</li>
-<li><strong>AuditEvent</strong>: <code>id</code>, <code>subredditName</code>, <code>type</code>, <code>actorUsername</code>, <code>targetType</code>, <code>targetId</code>, <code>metadata</code>, <code>createdAt</code>.</li>
-</ul>
-<h2>Permissions Required</h2>
-<p>ModConnect requests least-privilege Devvit permissions:</p>
-<ul>
-<li><strong>Reddit API (<code>permissions.reddit: true</code>)</strong>: Verify caller identity and moderator status, create interactive recruitment and dashboard posts, and send Modmail notifications.</li>
-<li><strong>Redis (<code>permissions.redis: true</code>)</strong>: Persist subreddit-scoped roles, applications, reviews, onboarding tasks, notification templates, and audit events.</li>
-<li><strong>No external HTTP access</strong>: All data stays inside Reddit's Devvit infrastructure.</li>
-</ul>
-<h2>Local Development & Testing</h2>
-<p>```powershell</p>
-<h1>From the repository root or apps/modconnect</h1>
-<p>npm run build --workspace=modconnect</p>
-<p>npm run type-check --workspace=modconnect</p>
-<p>npm run test --workspace=modconnect</p>
-<p>```</p>
-<p>To test interactively in a development subreddit:</p>
-<p>```powershell</p>
-<p>cd apps/modconnect</p>
-<p>npx devvit playtest <your-dev-subreddit></p>
-<p>```</p>
-<p>For quick local exploration, moderators can click <strong>Load Demo Data</strong> under the <strong>Settings</strong> tab in the Moderator Dashboard to populate sample roles, applications, a review, and an onboarding checklist (strictly opt-in and never run automatically).</p>
-<h2>Known Phase 1 Limitations</h2>
-<ul>
-<li>Accepted and rejected decisions are final in Phase 1 (reopening a decided application is not supported).</li>
-<li>Onboarding quizzes are acknowledgment-based checkboxes rather than graded multi-question exams.</li>
-<li>Single-subreddit scope only; cross-subreddit mod team recruiting is not included in Phase 1.</li>
-<li>No scheduled interview calendar, external webhook/Discord integrations, or AI screening.</li>
-</ul>
-<h2>Planned Phase 2 Features</h2>
-<ul>
-<li>Automatic account eligibility checks (minimum account age, subreddit karma, ban/mod-note flags).</li>
-<li>Graded onboarding quizzes and reusable subreddit-level onboarding templates.</li>
-<li>Configurable multi-moderator approval thresholds and structured interview rubrics.</li>
-<li>Optional exportable audit summaries and recruitment cycle archiving.</li>
-</ul>
+<hr>
 <h2>Support</h2>
-<blockquote><p><strong>Official Support Community</strong>: <a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a></p></blockquote>
+<blockquote><p><strong>Community Support & Feature Requests</strong></p></blockquote>
+<blockquote><p>For questions, troubleshooting, or bug reports, join the official community:</p></blockquote>
+<blockquote><p><strong><a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a></strong></p></blockquote>
 <ul>
 <li><strong>User Guide</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/modconnect/">https://www.reddit.com/r/grantdb/wiki/modconnect/</a></li>
 <li><strong>Technical Reference</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/modconnect/">https://www.reddit.com/r/grantdb/wiki/index/all-apps/modconnect/</a></li>
 </ul>
+<hr>
 <h2>Legal</h2>
 <ul>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/modconnect/TERMS.md">Terms of Service</a></li>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/modconnect/PRIVACY.md">Privacy Policy</a></li>
 </ul>
-<hr>
-<p>*ModConnect — Moderation Recruiting & Onboarding*</p>
 <hr>
 <p>*Built for Reddit's moderator community.*</p>
