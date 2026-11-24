@@ -64,8 +64,8 @@ Ultimate WWE Hub powers a streamlined 3-post ecosystem for wrestling communities
 > **Need help, found a bug, or have a feature request?**
 > Post in **[https://www.reddit.com/r/grantdb](https://www.reddit.com/r/grantdb)** with the app name (`ultimate-wwe`), what you expected, what happened, and any error text or screenshots.
 >
-> - **Full User Guide**: https://www.reddit.com/r/grantdb/wiki/ultimate-wwe/
-> - **Technical Reference & Settings Spec**: https://www.reddit.com/r/grantdb/wiki/index/all-apps/ultimate-wwe/
+> - **Full User Guide**: [https://www.reddit.com/r/grantdb/wiki/ultimate-wwe/](https://www.reddit.com/r/grantdb/wiki/ultimate-wwe/)
+> - **Technical Reference & Settings Spec**: [https://www.reddit.com/r/grantdb/wiki/index/all-apps/ultimate-wwe/](https://www.reddit.com/r/grantdb/wiki/index/all-apps/ultimate-wwe/)
 
 ---
 

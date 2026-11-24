@@ -2,52 +2,53 @@
 <h1>Ultimate WWE Hub</h1>
 <blockquote><p><strong>Transform Monday Night Raw and Friday Night SmackDown into high-voltage, interactive live event megathreads with real-time match cards, crowd predictions, and built-in live chat.</strong></p></blockquote>
 <p>Ultimate WWE Hub powers a streamlined 3-post ecosystem for wrestling communities on Reddit: a pinned <strong>WWE Belts, Stats & Upcoming Matches Hub</strong>, a <strong>Monday Night Raw Live Megathread</strong>, and a <strong>Friday Night SmackDown Live Megathread</strong>, all backed by Redis state, Devvit realtime channels, and a synced built-in live-comments system.</p>
-<p>---</p>
+<hr>
 <h2>At a Glance</h2>
 <ul>
-<li><strong>Streamlined 3-Post Architecture</strong>: Provision the Belts & Stats Hub, Monday Night Raw Live Megathread, and Friday Night SmackDown Live Megathread directly from the subreddit moderator menu (`...`).</li>
+<li><strong>Streamlined 3-Post Architecture</strong>: Provision the Belts & Stats Hub, Monday Night Raw Live Megathread, and Friday Night SmackDown Live Megathread directly from the subreddit moderator menu (<code>...</code>).</li>
 <li><strong>Live Match Cards & Crowd Predictions</strong>: Fans lock in pre-match winner picks, track live consensus meters, trigger soundboard chants, and rate matches in real time.</li>
-<li><strong>Full-Card Management & Post-Show Recap</strong>: Moderators can add impromptu matches or replace the entire match card in bulk, reorder or declare winners live, and publish a winner-highlighted `[SHOW RECAP]` box score at the end of the show.</li>
+<li><strong>Full-Card Management & Post-Show Recap</strong>: Moderators can add impromptu matches or replace the entire match card in bulk, reorder or declare winners live, and publish a winner-highlighted <code>[SHOW RECAP]</code> box score at the end of the show.</li>
 <li><strong>Built-In Live Comments & Bottom Drawer</strong>: Every Ultimate WWE custom post includes a minimal comments preview box, a 65% bottom Live Chat drawer, and a synced standard comments block below the post with reactions, own-comment deletion, reporting, and moderator pinning.</li>
 </ul>
-<p>---</p>
+<hr>
 <h2>How It Works: The 4-Step Operational Pipeline</h2>
 <h3>01 · Provision the 3-Post Ecosystem</h3>
 <blockquote><p><strong>Deploy Hub & Weekly Live Megathreads</strong></p></blockquote>
 <blockquote><p>- Moderators launch <strong>Create WWE Belts & Stats Hub Post</strong> to pin championship lineages, superstar W-L records, and upcoming schedules.</p></blockquote>
-<blockquote><p>- On broadcast nights, moderators deploy <strong>Create Monday Night Raw Live Megathread</strong> or <strong>Create Friday Night SmackDown Live Megathread</strong> with native `LIVE` comment sorting.</p></blockquote>
-<p>---</p>
+<blockquote><p>- On broadcast nights, moderators deploy <strong>Create Monday Night Raw Live Megathread</strong> or <strong>Create Friday Night SmackDown Live Megathread</strong> with native <code>LIVE</code> comment sorting.</p></blockquote>
+<hr>
 <h3>02 · Pre-Show Build-Up & Card Curation</h3>
 <blockquote><p><strong>Set the Card & Lock Community Picks</strong></p></blockquote>
 <blockquote><p>- Moderators edit individual matchups, add impromptu matches, or use <strong>Full Match Card</strong> bulk import (including Hub schedule loading) to set or replace the full card.</p></blockquote>
 <blockquote><p>- Community members view superstar W-L records, streaks, and championship stakes, then tap to lock in pre-match winner predictions.</p></blockquote>
-<p>---</p>
+<hr>
 <h3>03 · Live Broadcast & Synced Fan Chat</h3>
 <blockquote><p><strong>Real-Time Ring Action & 3-Surface Live Comments</strong></p></blockquote>
-<blockquote><p>- When the bell rings, moderators click `[ START MATCH ]`; fans fire off crowd chants, rate match quality, and follow the Titan-Tron ticker.</p></blockquote>
+<blockquote><p>- When the bell rings, moderators click <code>[ START MATCH ]</code>; fans fire off crowd chants, rate match quality, and follow the Titan-Tron ticker.</p></blockquote>
 <blockquote><p>- Fans tap <strong>Open live chat</strong> on the minimal preview box to open the 65% bottom drawer or post in the standard comments block below the post—all synced from one canonical Redis comment store.</p></blockquote>
-<p>---</p>
+<hr>
 <h3>04 · Official Results & Post-Show Recap</h3>
 <blockquote><p><strong>Crown Winners, Sync Belts & Archive the Show</strong></p></blockquote>
 <blockquote><p>- Moderators declare winners, finish methods, and title changes, automatically updating Hub championship reigns and superstar records.</p></blockquote>
-<blockquote><p>- Once the show completes, the `[SHOW RECAP]` tab displays Match of the Night, crowd accuracy, title changes, and winner-highlighted match results.</p></blockquote>
-<p>---</p>
+<blockquote><p>- Once the show completes, the <code>[SHOW RECAP]</code> tab displays Match of the Night, crowd accuracy, title changes, and winner-highlighted match results.</p></blockquote>
+<hr>
 <h2>Quick Setup</h2>
-<p>1. <strong>Install</strong>: Add <strong>Ultimate WWE Hub</strong> to your subreddit via the Reddit Developer portal.</p>
-<p>2. <strong>Launch Anchor Hub</strong>: From your subreddit menu (`...`), select <strong>Create WWE Belts & Stats Hub Post</strong> and pin it as a community anchor.</p>
-<p>3. <strong>Deploy Live Megathread</strong>: On broadcast night, select <strong>Create Monday Night Raw Live Megathread</strong> or <strong>Create Friday Night SmackDown Live Megathread</strong>, then run the show from the Moderator Console.</p>
-<p>---</p>
+<ol>
+<li><strong>Install</strong>: Add <strong>Ultimate WWE Hub</strong> to your subreddit via the Reddit Developer portal.</li>
+<li><strong>Launch Anchor Hub</strong>: From your subreddit menu (<code>...</code>), select <strong>Create WWE Belts & Stats Hub Post</strong> and pin it as a community anchor.</li>
+<li><strong>Deploy Live Megathread</strong>: On broadcast night, select <strong>Create Monday Night Raw Live Megathread</strong> or <strong>Create Friday Night SmackDown Live Megathread</strong>, then run the show from the Moderator Console.</li>
+</ol>
+<hr>
 <h2>Support</h2>
 <blockquote><p><strong>Need help, found a bug, or have a feature request?</strong></p></blockquote>
-<blockquote><p>Post in <strong><a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a></strong> with the app name (`ultimate-wwe`), what you expected, what happened, and any error text or screenshots.</p></blockquote>
-<p>></p>
-<blockquote><p>- <strong>Full User Guide</strong>: https://www.reddit.com/r/grantdb/wiki/ultimate-wwe/</p></blockquote>
-<blockquote><p>- <strong>Technical Reference & Settings Spec</strong>: https://www.reddit.com/r/grantdb/wiki/index/all-apps/ultimate-wwe/</p></blockquote>
-<p>---</p>
+<blockquote><p>Post in <strong><a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a></strong> with the app name (<code>ultimate-wwe</code>), what you expected, what happened, and any error text or screenshots.</p></blockquote>
+<blockquote><p>- <strong>Full User Guide</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/ultimate-wwe/">https://www.reddit.com/r/grantdb/wiki/ultimate-wwe/</a></p></blockquote>
+<blockquote><p>- <strong>Technical Reference & Settings Spec</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/ultimate-wwe/">https://www.reddit.com/r/grantdb/wiki/index/all-apps/ultimate-wwe/</a></p></blockquote>
+<hr>
 <h2>Legal</h2>
 <ul>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md">Terms of Service</a></li>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/PRIVACY.md">Privacy Policy</a></li>
 </ul>
-<p>---</p>
+<hr>
 <p>*Built for fun on Reddit*</p>
