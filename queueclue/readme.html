@@ -2,7 +2,7 @@
 <h1>QueueClue</h1>
 <blockquote><p><strong>Find the available source and reason behind a queue item.</strong></p></blockquote>
 <p>QueueClue gives moderators a clear, read-only explanation of why a post or comment was filtered into Reddit's Needs Review queue. Inspect confirmed removal categories, AutoModerator rule reasons, author context, and available moderation records directly on demand without leaving your queue or changing moderation states.</p>
-<p>---</p>
+<hr>
 <h2>At a Glance</h2>
 <ul>
 <li><strong>Zero-Mutation Safety</strong>: Operates strictly in read-only inspection mode with zero automated approvals, removals, or state mutations.</li>
@@ -10,45 +10,47 @@
 <li><strong>Explicit Author & Account Context</strong>: Surfaces account age, global and subreddit karma, email verification, prior community mod notes, and explicit status when an author account is deleted, suspended, or unavailable.</li>
 <li><strong>Preserved Queue Context</strong>: Opens a native explanation popover modal so moderators review context and close it without losing their queue position.</li>
 </ul>
-<p>---</p>
+<hr>
 <h2>How It Works: The 4-Step Operational Pipeline</h2>
 <h3>01 · Trigger</h3>
 <blockquote><p><strong>On-Demand Queue Menu Invocation</strong></p></blockquote>
 <blockquote><p>- A moderator opens the moderator action menu on a post or comment in the Needs Review queue and selects <strong>QueueClue: Why filtered?</strong>.</p></blockquote>
-<blockquote><p>- Real-time `onAutomoderatorFilterPost`, `onAutomoderatorFilterComment`, and `onModAction` triggers also capture exact rule reasons (30-day TTL) and recent action chronology (7-day TTL, up to 5 records) in bounded Redis storage.</p></blockquote>
-<p>---</p>
+<blockquote><p>- Real-time <code>onAutomoderatorFilterPost</code>, <code>onAutomoderatorFilterComment</code>, and <code>onModAction</code> triggers also capture exact rule reasons (30-day TTL) and recent action chronology (7-day TTL, up to 5 records) in bounded Redis storage.</p></blockquote>
+<hr>
 <h3>02 · Authorize & Verify</h3>
 <blockquote><p><strong>Moderator & Subreddit Boundary Check</strong></p></blockquote>
 <blockquote><p>- QueueClue verifies the invoking user's active moderator permissions server-side before inspecting any record.</p></blockquote>
 <blockquote><p>- Confirms the target post or comment belongs to the current subreddit to prevent cross-subreddit leakage.</p></blockquote>
-<p>---</p>
+<hr>
 <h3>03 · Inspect & Classify</h3>
 <blockquote><p><strong>Ground-Truth Evidence Evaluation</strong></p></blockquote>
 <blockquote><p>- Evaluates captured AutoModerator events, moderation log entries, native removal reasons, and correlated removal notices without overstating uncertain signals.</p></blockquote>
 <blockquote><p>- Fetches author context and community mod note history on demand, explicitly reporting deleted, suspended, or 404/unavailable accounts.</p></blockquote>
-<p>---</p>
+<hr>
 <h3>04 · Present</h3>
 <blockquote><p><strong>Native Popover Summary</strong></p></blockquote>
-<blockquote><p>- Opens a read-only explanation modal showing the verified filtering source, plain-English platform category (`automod_filtered`, `reddit`, `anti_evil_ops`, `copyright_takedown`), relative and subreddit-local timestamps, and author context.</p></blockquote>
+<blockquote><p>- Opens a read-only explanation modal showing the verified filtering source, plain-English platform category (<code>automod_filtered</code>, <code>reddit</code>, <code>anti_evil_ops</code>, <code>copyright_takedown</code>), relative and subreddit-local timestamps, and author context.</p></blockquote>
 <blockquote><p>- Closing the modal returns the moderator directly to their exact queue position.</p></blockquote>
-<p>---</p>
+<hr>
 <h2>Quick Setup</h2>
-<p>1. <strong>Install</strong>: Add <strong>QueueClue</strong> to your subreddit from the Reddit App Directory.</p>
-<p>2. <strong>Open Queue</strong>: Navigate to your subreddit's <strong>Needs Review</strong> queue in desktop Reddit Mod Tools.</p>
-<p>3. <strong>Inspect Item</strong>: Open the item's moderator action menu and click <strong>QueueClue: Why filtered?</strong> to view the diagnostic summary.</p>
-<p>---</p>
+<ol>
+<li><strong>Install</strong>: Add <strong>QueueClue</strong> to your subreddit from the Reddit App Directory.</li>
+<li><strong>Open Queue</strong>: Navigate to your subreddit's <strong>Needs Review</strong> queue in desktop Reddit Mod Tools.</li>
+<li><strong>Inspect Item</strong>: Open the item's moderator action menu and click <strong>QueueClue: Why filtered?</strong> to view the diagnostic summary.</li>
+</ol>
+<hr>
 <h2>Support</h2>
-<blockquote><p><strong>Community Support</strong>: Need help, want to report a bug, or have a feature request? Post in <a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a> with the app name (`queueclue`), expected behavior, actual behavior, and any error details.</p></blockquote>
+<blockquote><p><strong>Community Support</strong>: Need help, want to report a bug, or have a feature request? Post in <a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a> with the app name (<code>queueclue</code>), expected behavior, actual behavior, and any error details.</p></blockquote>
 <ul>
 <li><strong>Full User Guide</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/queueclue/">https://www.reddit.com/r/grantdb/wiki/queueclue/</a></li>
 <li><strong>Technical Reference & Settings Spec</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/queueclue/">https://www.reddit.com/r/grantdb/wiki/index/all-apps/queueclue/</a></li>
 </ul>
-<p>---</p>
+<hr>
 <h2>Legal</h2>
 <p>This application is subject to the following legal agreements:</p>
 <ul>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/TERMS.md">Terms of Service</a></li>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/PRIVACY.md">Privacy Policy</a></li>
 </ul>
-<p>---</p>
+<hr>
 <p>*Built for Reddit's moderator community.*</p>

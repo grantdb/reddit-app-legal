@@ -3,7 +3,7 @@
 # QueueClue
 
 Category: Utility  
-Version: v0.0.24  
+Version: v0.0.25  
 Visibility: Public  
 Summary: Find the available source and reason behind a queue item.
 
@@ -57,14 +57,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.25 — 2026-11-24
+- Retry thrown 'redis: transaction failed' optimistic-lock conflicts in saveModActionEvidence
+
 0.0.24 — 2026-11-16
 - Guard JSON.parse in getAutoModFilterEvidence, bound getModNotes to get(100), and fix 7-day ModAction TTL in README
 
 0.0.23 — 2026-11-13
 - Unlogged / Removed by Reddit diagnostic branch, Author context in fallback, and 3-tier wiki/README sync.
-
-0.0.22 — 2026-11-13
-- Handle unlogged/Removed by Reddit items with explicit platform-removal context and Author context in fallback
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/queueclue/TERMS.md)
