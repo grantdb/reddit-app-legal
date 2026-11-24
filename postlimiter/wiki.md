@@ -107,79 +107,22 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Sorted Sets (time-series audit logs)
 
 ## Setup and Usage
-- Install PostLimiter on your subreddit and open Mod Tools -> Installed Apps -> PostLimiter.
-- Choose Your Mode in Quick Setup (works immediately with zero subject lists):
-- Auto-Detect Topic (Recommended — Default)**: Automatically limits repeat posts about the same topic (e.g. posting *"hey I like this app"* twice is blocked, while posting *"this is a great fishing boat"* and then *"I like this sports car"* is allowed). Choose Same User Only (default) or All Users (subreddit-wide).
-- Per-Flair Auto-Quota: Automatically gives every Reddit post flair its own independent limit without configuring flair names.
-- Custom Subject Rules (Advanced)**: Define distinct per-category limits in Advanced: Custom Subject Rules (JSON or quick fields) if you want different limits for specific games, apps, or categories.
-- Set Max Posts, Rolling Window, and Action (e.g. `1` post per `24 Hours`, `Remove + Comment`) and save.
-- ```json
-- [
-- {
-- "name": "Game A",
-- "slug": "game-a",
-- "priority": 1,
-- "flairs": ["Game A"],
-- "css": ["game-a"],
-- "prefixes": ["[Game A]"],
-- "tags": ["[Game A]"],
-- "max": 1,
-- "window": 24,
-- "unit": "hours",
-- "action": "remove_comment"
-- },
-- {
-- "name": "Game B",
-- "slug": "game-b",
-- "priority": 2,
-- "flairs": ["Game B"],
-- "prefixes": ["[Game B]"],
-- "max": 3,
-- "window": 7,
-- "unit": "days",
-- "action": "remove_comment"
-- },
-- {
-- "name": "App X",
-- "slug": "app-x",
-- "priority": 3,
-- "flairs": ["App X"],
-- "prefixes": ["[App X]"],
-- "max": 2,
-- "window": 7,
-- "unit": "days",
-- "action": "report"
-- }
-- ]
-- ```
-- When a single post matches more than one subject (for example, flair `Game B` and title tag `[Support]`):
-- Strictest Rule Wins (Default)**: Selects the subject with the lowest effective posting rate (`maxPosts / windowMs`), breaking ties by lowest `maxPosts`, longest window, then alphabetical slug.
-- First Matching Rule Wins: Selects the highest-priority subject (lowest `priority` number, or earliest in configuration order).
-- Apply All Matching Rules: Checks every matched subject's quota; if any matched subject is exceeded, enforces on the strictest violated rule, otherwise counts the post in all matched subjects.
-- Designated Primary Subject Wins: Applies `primaryConflictSubjectSlug` if it is among the matched subjects; otherwise falls back to strictest.
-- Duplicate-title enforcement is off by default and must be deliberately enabled by moderators.
-- Even when enabled, the default scope is Same User Only, so two different users posting similar titles (e.g. `"My App Update"`) are not blocked unless a moderator explicitly switches the scope to `same_subject` or `entire_subreddit`.
-- Open Check PostLimiter Quotas from the subreddit moderator menu (moderator permissions are verified both by Reddit's menu gate and at runtime before execution):
-- View User Quotas & History: Enter a username to inspect active counts, rolling windows, expiration timers, matched rules, expired/excluded posts, and recent audit entries.
-- Manually Exclude / Restore a Post: Enter a Post ID (`t3_...`), optional reason, and check Confirm Destructive / State-Changing Action to remove or re-include a post in active quota counts.
-- Reset User Quota (Single Subject or All Subjects)**: Enter a username (and subject slug for single-subject reset), reason, and check confirmation to clear active quota slots.
-- Temporary & Permanent Exemptions: Grant a timed per-subject exemption (in hours) or add/remove a permanent subreddit-wide exemption with confirmation.
-- Decision Logs, Metrics & Config Summary: Inspect recent post decisions, operational counters, moderator audit trail, validation errors/warnings, and copyable compact JSON.
-- PostLimiter: Test Rule Match: Dry-run any sample title and flair to verify which subject, matching method, and quota rule would apply without modifying any stored data.
-- Every state-changing moderator action writes an audit entry recording the moderator username, action, target user, subject, timestamp, and reason.
-- Subject not matching expected posts: Run PostLimiter: Test Rule Match from the subreddit menu to inspect which method matched and check for configuration validation errors.
-- User still blocked after deleting a post: Verify Count Posts Deleted by Author is turned OFF (default) under Post Lifecycle Counting Policies, or use Check PostLimiter Quotas -> Manually Exclude a Post / Reset User Quota.
-- Regex rule not firing: Confirm Enable Optional Regex Title Matching is enabled and check View Configuration Summary for unsafe-pattern validation errors (nested quantifiers and backreferences are rejected for safety).
-- Settings size limit: `additionalSubjectsJson` supports up to 16,384 bytes and 50 subject rules; use compact keys (`flairs`, `css`, `prefixes`, `tags`, `max`, `window`, `unit`, `action`) for large rule sets.
-- All data is stored exclusively inside Reddit's subreddit-scoped Devvit Redis storage; no external databases or third-party services are used.
-- Active quota records expire automatically after the configured rolling window plus a 24-hour grace period, and a bounded 6-hour scheduled cleanup job prunes expired sets without scanning the Redis keyspace.
-- Decision logs, post history indexes, duplicate-title entries, and moderator audit logs are retained for at most 30 days. Temporary exemptions expire automatically at their configured duration.
+- Open Mod Tools > Installed Apps > PostLimiter.
+- Under Quick Setup, configure:
+- Enable PostLimiter: On
+- Quota Mode:
+- Auto-Detect Topic (Recommended)**: Works immediately with no subject list. Blocks repeat posts about the same topic or link while allowing unrelated topics (for example, posting *"hey I like this app"* twice is blocked, while posting *"this is a great fishing boat"* and then *"I like this sports car"* is allowed).
+- Per-Flair Auto-Quota: Gives every Reddit post flair its own independent limit without configuring flair names.
+- Custom Subject Rules (Advanced)**: Enforces custom per-subject limits defined in Advanced: Custom Subject Rules.
+- Who Does the Topic Limit Apply To?**: Same User Only (Default)** or All Users (Subreddit-Wide Topic Limit)**.
+- Max Posts Per Topic / Subject, Rolling Time Window, Time Unit (`Hours` / `Days`), Action, and Topic Matching Sensitivity (`Strict`, `Balanced`, `Broad`).
+- Max Overall Posts Per User (0 = Unlimited)**: Optional hard cap on total posts per user across all topics within an overall rolling window (e.g. `3` posts per `24 Hours`).
 
 ## Troubleshooting
-- Subject not matching expected posts: Run PostLimiter: Test Rule Match from the subreddit menu to inspect which method matched and check for configuration validation errors.
-- User still blocked after deleting a post: Verify Count Posts Deleted by Author is turned OFF (default) under Post Lifecycle Counting Policies, or use Check PostLimiter Quotas -> Manually Exclude a Post / Reset User Quota.
-- Regex rule not firing: Confirm Enable Optional Regex Title Matching is enabled and check View Configuration Summary for unsafe-pattern validation errors (nested quantifiers and backreferences are rejected for safety).
-- Settings size limit: `additionalSubjectsJson` supports up to 16,384 bytes and 50 subject rules; use compact keys (`flairs`, `css`, `prefixes`, `tags`, `max`, `window`, `unit`, `action`) for large rule sets.
+- Test posts by a moderator are not blocked: Toggle Exempt Subreddit Moderators OFF under Exemptions while testing, then re-enable it afterward.
+- Subject not matching expected posts: Run PostLimiter: Test Rule Match from the subreddit menu to inspect matching results and validation errors.
+- User still blocked after deleting a post: Ensure Count Posts Deleted by Author is OFF (default) under Post Lifecycle Counting Policies, or use Check PostLimiter Quotas to exclude/reset.
+- Settings size limit: `additionalSubjectsJson` supports up to 16,384 bytes and 50 subject rules.
 
 ## Version History
 0.0.2 — 2026-11-24
