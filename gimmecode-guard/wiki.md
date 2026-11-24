@@ -3,7 +3,7 @@
 # GimmeCode Guard
 
 Category: Moderation  
-Version: v0.0.53  
+Version: v0.0.54  
 Visibility: Unlisted  
 Summary: Detects low-effort give me code requests
 
@@ -56,14 +56,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.54 — 2026-11-24
+- Replace broken Collapse button with working Exit button (fix stale isDraggingRef guard, preserve trusted click gesture for exitExpandedMode, remove premature unmount, add html mode classes and viewport zoom compliance)
+
 0.0.53 — 2026-11-18
 - Add single retry for transient gRPC 500 errors during OP post fetch
 
 0.0.52 — 2026-11-16
 - Allow 0-threshold disabled, use atomic hIncrBy stats, fix Tier 1 cooldown logging, add 403 UI gate, and update README/PRIVACY
-
-0.0.51 — 2026-11-09
-- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/gimmecode-guard/TERMS.md)
