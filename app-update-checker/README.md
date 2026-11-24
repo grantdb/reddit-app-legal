@@ -4,17 +4,17 @@
 
 > **Track installed app versions, discover new releases, and receive automated modmail update alerts for any subreddit.**
 
-App Update Checker ensures your subreddit's Devvit tools and moderation bots remain secure and up-to-date. Powered by an automated backend directory scraper that continuously tracks public Reddit App Directory releases, it runs silent daily audits and keeps your mod team informed whenever an app author publishes a new version.
+App Update Checker ensures your subreddit's Devvit tools and moderation bots remain secure and up-to-date. Backed by a public Reddit App Directory version manifest hosted on GitHub (`raw.githubusercontent.com`), it runs silent daily audits and keeps your mod team informed whenever an app author publishes a new version.
 
 ---
 
 ## At a Glance
 
-- **Automated backend directory scraper**: Continuously monitors and extracts release versions from public Reddit App Directory listings into an up-to-date manifest feed.
+- **Public directory version manifest**: Reads a lightweight static JSON version feed (`raw.githubusercontent.com`) tracking public Reddit App Directory releases.
 - **Clear, verified onboarding**: Guides your mod team to update apps in Mod Tools and sync baseline tracking on initial install.
 - **Silent daily audits**: Runs a lightweight background check every day at 12:00 UTC with zero modmail spam—alerts are sent only when a new update is published.
 - **Archivable Modmail alerts**: Delivers clean, text-formatted summary tables directly to your Modmail Inbox where they can be archived to keep your inbox clean.
-- **Universal directory support**: Cross-references against 150+ public apps in the Reddit App Directory and official developer manifests.
+- **Universal directory support**: Cross-references against 150+ public apps in the Reddit App Directory.
 - **Consolidated moderator controls**: Access on-demand scans, baseline syncing, and cache resets from a single **App Update Checker** menu popout.
 
 ---
@@ -35,7 +35,7 @@ App Update Checker ensures your subreddit's Devvit tools and moderation bots rem
 
 ### 03 · Silent Audit
 > **Scheduled daily version comparison**
-> - Runs automated daily checks at 12:00 UTC, comparing active community tools against version feeds compiled by our backend directory scraper.
+> - Runs automated daily checks at 12:00 UTC, comparing active community tools against the public directory version manifest.
 
 ---
 

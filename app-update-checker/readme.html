@@ -1,51 +1,52 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/app-update-checker">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>App Update Checker</h1>
 <blockquote><p><strong>Track installed app versions, discover new releases, and receive automated modmail update alerts for any subreddit.</strong></p></blockquote>
-<p>App Update Checker ensures your subreddit's Devvit tools and moderation bots remain secure and up-to-date. Powered by an automated backend directory scraper that continuously tracks public Reddit App Directory releases, it runs silent daily audits and keeps your mod team informed whenever an app author publishes a new version.</p>
-<p>---</p>
+<p>App Update Checker ensures your subreddit's Devvit tools and moderation bots remain secure and up-to-date. Backed by a public Reddit App Directory version manifest hosted on GitHub (<code>raw.githubusercontent.com</code>), it runs silent daily audits and keeps your mod team informed whenever an app author publishes a new version.</p>
+<hr>
 <h2>At a Glance</h2>
 <ul>
-<li><strong>Automated backend directory scraper</strong>: Continuously monitors and extracts release versions from public Reddit App Directory listings into an up-to-date manifest feed.</li>
+<li><strong>Public directory version manifest</strong>: Reads a lightweight static JSON version feed (<code>raw.githubusercontent.com</code>) tracking public Reddit App Directory releases.</li>
 <li><strong>Clear, verified onboarding</strong>: Guides your mod team to update apps in Mod Tools and sync baseline tracking on initial install.</li>
 <li><strong>Silent daily audits</strong>: Runs a lightweight background check every day at 12:00 UTC with zero modmail spam—alerts are sent only when a new update is published.</li>
 <li><strong>Archivable Modmail alerts</strong>: Delivers clean, text-formatted summary tables directly to your Modmail Inbox where they can be archived to keep your inbox clean.</li>
-<li><strong>Universal directory support</strong>: Cross-references against 150+ public apps in the Reddit App Directory and official developer manifests.</li>
+<li><strong>Universal directory support</strong>: Cross-references against 150+ public apps in the Reddit App Directory.</li>
 <li><strong>Consolidated moderator controls</strong>: Access on-demand scans, baseline syncing, and cache resets from a single <strong>App Update Checker</strong> menu popout.</li>
 </ul>
-<p>---</p>
+<hr>
 <h2>How It Works: The 4-Step Operational Pipeline</h2>
 <h3>01 · Discover</h3>
 <blockquote><p><strong>Moderator bot & custom slug detection</strong></p></blockquote>
 <blockquote><p>- App Update Checker discovers installed Devvit applications from subreddit moderator bot signatures and configured custom slugs.</p></blockquote>
-<p>---</p>
+<hr>
 <h3>02 · Setup & Sync</h3>
 <blockquote><p><strong>Baseline version confirmation</strong></p></blockquote>
 <blockquote><p>- Update your apps via Reddit's <strong>Mod Tools > Installed Apps</strong>, then run <strong>Sync All Apps as Updated</strong> in the menu popout to lock in baselines.</p></blockquote>
-<p>---</p>
+<hr>
 <h3>03 · Silent Audit</h3>
 <blockquote><p><strong>Scheduled daily version comparison</strong></p></blockquote>
-<blockquote><p>- Runs automated daily checks at 12:00 UTC, comparing active community tools against version feeds compiled by our backend directory scraper.</p></blockquote>
-<p>---</p>
+<blockquote><p>- Runs automated daily checks at 12:00 UTC, comparing active community tools against the public directory version manifest.</p></blockquote>
+<hr>
 <h3>04 · Notify</h3>
 <blockquote><p><strong>Archivable Modmail Inbox alerts</strong></p></blockquote>
 <blockquote><p>- Delivers an actionable Modmail alert only when an app author publishes a new release (or immediately on manual scan).</p></blockquote>
-<p>---</p>
+<hr>
 <h2>Quick Setup</h2>
-<p>1. <strong>Install</strong>: Add <strong>App Update Checker</strong> to your subreddit through the Reddit App Directory.</p>
-<p>2. <strong>Update Apps in Mod Tools</strong>: Open <strong>Mod Tools > Installed Apps</strong> in Reddit and update any outdated applications.</p>
-<p>3. <strong>Sync Baseline</strong>: Open the subreddit menu (`...`), select <strong>App Update Checker</strong>, and choose <strong>Sync All Apps as Updated</strong> to establish your confirmed tracking baseline.</p>
-<p>---</p>
+<ol>
+<li><strong>Install</strong>: Add <strong>App Update Checker</strong> to your subreddit through the Reddit App Directory.</li>
+<li><strong>Update Apps in Mod Tools</strong>: Open <strong>Mod Tools > Installed Apps</strong> in Reddit and update any outdated applications.</li>
+<li><strong>Sync Baseline</strong>: Open the subreddit menu (<code>...</code>), select <strong>App Update Checker</strong>, and choose <strong>Sync All Apps as Updated</strong> to establish your confirmed tracking baseline.</li>
+</ol>
+<hr>
 <h2>Support</h2>
 <blockquote><p><strong>Need Help?</strong> Post in <a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a> with the app name, what you expected, what happened, and any error text or screenshots.</p></blockquote>
-<p>></p>
 <blockquote><p>- <strong>User Guide</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/app-update-checker/">https://www.reddit.com/r/grantdb/wiki/app-update-checker/</a></p></blockquote>
 <blockquote><p>- <strong>Technical Reference</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/app-update-checker/">https://www.reddit.com/r/grantdb/wiki/index/all-apps/app-update-checker/</a></p></blockquote>
-<p>---</p>
+<hr>
 <h2>Legal</h2>
 <p>This application is subject to the following legal agreements:</p>
 <ul>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/app-update-checker/TERMS.md">Terms of Service</a></li>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/app-update-checker/PRIVACY.md">Privacy Policy</a></li>
 </ul>
-<p>---</p>
+<hr>
 <p>*Built for Reddit's moderator community.*</p>
