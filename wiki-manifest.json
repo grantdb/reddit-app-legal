@@ -36,7 +36,7 @@
   "sgteam-dispatch": "68b3d30a23a91499",
   "stargate-trivia": "fa7fa82bb78fdddc",
   "sticky-pro": "55e45609e2e743a6",
-  "suspended-remove": "67fddbd5964b94bf",
+  "suspended-remove": "d64987e92c20af29",
   "testrank": "fd92e5413b3ad18b",
   "user-board": "9c6a82e666901855",
   "user-guard": "a36fb60d4267a07c",
@@ -52,5 +52,5 @@
   "moddispatch": "c2818908d1e393c8",
   "logscan": "83bc1cb5c7b0abd1",
   "postlimiter": "0f9110b80ebfb0a0",
-  "bot_knowledge": "2e2deda3bd7a7b51"
+  "bot_knowledge": "562525027abbf0e6"
 }

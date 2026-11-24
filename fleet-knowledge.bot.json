@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-24T08:17:47.733Z",
+  "generatedAt": "2026-11-24T11:51:22.957Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -53,7 +53,7 @@
       "menuItems": [
         "GuardHub: Scan Modqueue for Suspended Users"
       ],
-      "settingsCount": 18,
+      "settingsCount": 19,
       "links": {
         "readme": "https://www.reddit.com/r/grantdb/wiki/suspended-remove",
         "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove",
