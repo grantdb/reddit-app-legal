@@ -71,6 +71,15 @@ Use this checklist to verify `apps/logscan` end-to-end before onboarding additio
 8. **Verify Logscan Failures Do Not Recurse**:
    - Temporarily configure an invalid `logscan_api_key` or stop the collector, trigger diagnostic events, and confirm `logscan_flush` leaves events in Redis, logs a single local warning, and never enqueues new Logscan failure events.
 
+## Fetch Domains
+
+The following external domain is requested in `devvit.json` under `permissions.http.domains`:
+
+- `zboivpuygpsapoejfbpf.supabase.co` - Dedicated Supabase project hosting the central Logscan relational database and Edge Function ingest endpoint (`POST /functions/v1/logscan-ingest/v1/events/batch`).
+  - **Why external storage is required**: Devvit Redis is strictly isolated per subreddit installation and cannot aggregate or correlate operational errors across multiple installations. Supabase provides the relational storage needed to group recurring `(signature, app)` failures into cross-subreddit incident reports.
+  - **Data sent**: Strictly allowlist-filtered, redacted operational telemetry only (app name, version, subreddit name, severity level, error code, component, and stack traces capped at 20 lines). No Reddit user posts, comments, private messages, PII, or credentials are transmitted.
+  - **Security**: Outbound requests use HTTPS only and authenticate with a developer-managed, App-scoped secret API key (`isSecret: true`) configured via the Devvit CLI.
+
 ## Support
 
 > **Official Support Community**: [https://www.reddit.com/r/grantdb](https://www.reddit.com/r/grantdb)

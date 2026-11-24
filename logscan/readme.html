@@ -87,6 +87,14 @@
 <ul>
 <li>Temporarily configure an invalid <code>logscan_api_key</code> or stop the collector, trigger diagnostic events, and confirm <code>logscan_flush</code> leaves events in Redis, logs a single local warning, and never enqueues new Logscan failure events.</li>
 </ul>
+<h2>Fetch Domains</h2>
+<p>The following external domain is requested in <code>devvit.json</code> under <code>permissions.http.domains</code>:</p>
+<ul>
+<li><code>zboivpuygpsapoejfbpf.supabase.co</code> - Dedicated Supabase project hosting the central Logscan relational database and Edge Function ingest endpoint (<code>POST /functions/v1/logscan-ingest/v1/events/batch</code>).</li>
+<li><strong>Why external storage is required</strong>: Devvit Redis is strictly isolated per subreddit installation and cannot aggregate or correlate operational errors across multiple installations. Supabase provides the relational storage needed to group recurring <code>(signature, app)</code> failures into cross-subreddit incident reports.</li>
+<li><strong>Data sent</strong>: Strictly allowlist-filtered, redacted operational telemetry only (app name, version, subreddit name, severity level, error code, component, and stack traces capped at 20 lines). No Reddit user posts, comments, private messages, PII, or credentials are transmitted.</li>
+<li><strong>Security</strong>: Outbound requests use HTTPS only and authenticate with a developer-managed, App-scoped secret API key (<code>isSecret: true</code>) configured via the Devvit CLI.</li>
+</ul>
 <h2>Support</h2>
 <blockquote><p><strong>Official Support Community</strong>: <a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a></p></blockquote>
 <blockquote><p>- User Guide: <a href="https://www.reddit.com/r/grantdb/wiki/logscan/">https://www.reddit.com/r/grantdb/wiki/logscan/</a></p></blockquote>
