@@ -3,7 +3,7 @@
 # Playscraper Bot
 
 Category: Metadata  
-Version: v1.0.156  
+Version: v1.0.157  
 Visibility: Unlisted  
 Summary: AI-powered metadata extraction via Gemini 2.5. Eligibility-first processing with configurable delay. Security-hardened moderator gates.
 
@@ -67,14 +67,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.157 — 2026-11-24
+- Fail fast on Gemini HTTP 429 with immediate Redis cooldown to prevent Devvit job timeouts, fix Play Store downloads HTML regex, and merge HTML-extracted IAP status
+
 1.0.156 — 2026-11-18
 - Migrate Gemini model to gemini-3.5-flash-lite, remove retired 1.5/2.0-flash fallbacks, prevent 429 egress bursting with backoff/cooldown, and fix percent-decoding on literal % characters
 
 1.0.155 — 2026-11-16
 - Fix blocks.triggers manifest, move Gemini key to header, isolate untrusted HTML in prompt, add fetch timeouts and nx locks, and align README
-
-1.0.154 — 2026-11-09
-- Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/playscraper-bot/TERMS.md)
