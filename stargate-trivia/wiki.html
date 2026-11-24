@@ -1,20 +1,13 @@
+<blockquote><p><a href="https://www.reddit.com/r/grantdb/wiki/stargate-trivia/">Full User Guide</a> | <strong>Technical Reference &amp; Settings Spec</strong></p></blockquote>
 <h1>Stargate Trivia</h1>
 
 <p>Category: Interactive<br>
-Version: v0.0.131<br>
+Version: v0.0.132<br>
 Visibility: Public<br>
 Summary: Interactive trivia engine with rich UI and global leaderboards.</p>
 
 <h2>Overview</h2>
 <p>Interactive trivia engine with rich UI and global leaderboards.</p>
-
-<h2>Key Features</h2>
-<ul>
-<li>Curated Content: Features a proprietary library of unique, canonical trivia questions ensuring that hardcore fans are challenged.</li>
-<li>Persistent Leaderboards: Encourages long-term community engagement by tracking high scores and milestones directly on the event post.</li>
-<li>Seamless Experience: A custom-designed, low-latency interface that ensures perfect mobile and desktop rendering without leaving the Reddit app.</li>
-<li>Autonomous Game Logic: Automatically handles answer validation, scoring, and session management—no moderator oversight required once the event is launched.</li>
-</ul>
 
 <h2>Permissions Used</h2>
 <ul>
@@ -51,8 +44,8 @@ Summary: Interactive trivia engine with rich UI and global leaderboards.</p>
 <h2>Setup and Usage</h2>
 <ul>
 <li>Install: Add Stargate Trivia to your subreddit via the Reddit App Directory.</li>
-<li>Launch Event: Open the Mod Menu on your subreddit and select Create Stargate Trivia Post.</li>
-<li>Autonomous Execution: The interactive game post will automatically handle player sessions, answer validation, and score tracking with zero ongoing maintenance.</li>
+<li>Launch: Open the subreddit menu (`...`) and select Create Stargate Trivia Post.</li>
+<li>Play: Community members tap the post to play and compete on the persistent leaderboard with zero ongoing moderation required.</li>
 </ul>
 
 <h2>Troubleshooting</h2>
@@ -62,11 +55,11 @@ Summary: Interactive trivia engine with rich UI and global leaderboards.</p>
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.132 — 2026-11-24<br>
+Fix Redis TxClient zScore NaN bug in onSubmitScore preventing leaderboard high-score saves</p>
 <p>0.0.131 — 2026-11-09<br>
 Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.</p>
 <p>0.0.130 — 2026-10-27<br>
-Standard fleet synchronization and maintenance.</p>
-<p>0.0.129 — 2026-10-26<br>
 Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>

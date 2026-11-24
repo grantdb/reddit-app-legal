@@ -1,30 +1,57 @@
 <blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/stargate-trivia">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
 <h1>Stargate Trivia</h1>
-<p><strong>Stargate Trivia</strong> is a high-fidelity interactive engagement app that brings a professional gaming experience directly to your community. By leveraging a deep library of curated franchise questions, it fosters community competition through real-time leaderboards and interactive UI posts, driving long-term engagement.</p>
-<h2>Key Features</h2>
+<blockquote><p><strong>Challenge your community with curated Stargate trivia rounds and persistent live leaderboards directly inside Reddit posts.</strong></p></blockquote>
+<p><strong>Stargate Trivia</strong> is an interactive engagement game built on Reddit Devvit. Moderators launch a custom trivia post from the subreddit menu, and players jump into a 10-question gauntlet with real-time scoring and persistent Redis leaderboards on mobile and desktop.</p>
+<hr>
+<h2>At a Glance</h2>
 <ul>
-<li><strong>Curated Content</strong>: Features a proprietary library of unique, canonical trivia questions ensuring that hardcore fans are challenged.</li>
-<li><strong>Persistent Leaderboards</strong>: Encourages long-term community engagement by tracking high scores and milestones directly on the event post.</li>
-<li><strong>Seamless Experience</strong>: A custom-designed, low-latency interface that ensures perfect mobile and desktop rendering without leaving the Reddit app.</li>
-<li><strong>Autonomous Game Logic</strong>: Automatically handles answer validation, scoring, and session management—no moderator oversight required once the event is launched.</li>
+<li><strong>Curated Franchise Library</strong>: Deep pool of canonical Stargate trivia questions tailored for casual fans and lore experts alike.</li>
+<li><strong>Persistent Live Leaderboards</strong>: Tracks personal bests and top subreddit scores directly on each event post via Redis.</li>
+<li><strong>Dual-Mode Responsive UI</strong>: Clean inline feed card that launches smoothly into expanded gameplay on both mobile and desktop.</li>
+<li><strong>Zero Ongoing Maintenance</strong>: Automatically validates answers, calculates scores, and updates rankings with no moderator upkeep.</li>
 </ul>
-<h2>How It Works</h2>
-<p>1. A moderator launches a new Stargate Trivia event directly from the subreddit Mod Menu (<strong>Create Stargate Trivia Post</strong>).</p>
-<p>2. A customized interactive post is generated and pinned in the subreddit feed.</p>
-<p>3. Users tap into the post to launch the expanded 10-question trivia gauntlet.</p>
-<p>4. Correct answers award points (+100 each). Upon completing the round, the player's final score is verified and saved to the post's live persistent leaderboard.</p>
-<h2>Setup & Configuration</h2>
-<p>1. <strong>Install</strong>: Add <strong>Stargate Trivia</strong> to your subreddit via the Reddit App Directory.</p>
-<p>2. <strong>Launch Event</strong>: Open the Mod Menu on your subreddit and select <strong>Create Stargate Trivia Post</strong>.</p>
-<p>3. <strong>Autonomous Execution</strong>: The interactive game post will automatically handle player sessions, answer validation, and score tracking with zero ongoing maintenance.</p>
+<hr>
+<h2>How It Works: The 4-Step Operational Pipeline</h2>
+<h3>01 · Launch Event Post</h3>
+<blockquote><p><strong>One-click moderator deployment</strong></p></blockquote>
+<blockquote><p>- A moderator opens the subreddit menu (<code>...</code>) and selects <strong>Create Stargate Trivia Post</strong>.</p></blockquote>
+<blockquote><p>- The app publishes an interactive custom post into the subreddit feed.</p></blockquote>
+<hr>
+<h3>02 · Enter Expanded Gameplay</h3>
+<blockquote><p><strong>Seamless inline-to-expanded transition</strong></p></blockquote>
+<blockquote><p>- Players tap the inline trivia card to open the full-screen 10-question trivia gauntlet.</p></blockquote>
+<blockquote><p>- Navigation and back-button handling keep players cleanly inside the Reddit experience.</p></blockquote>
+<hr>
+<h3>03 · Answer & Score</h3>
+<blockquote><p><strong>Real-time validation and scoring</strong></p></blockquote>
+<blockquote><p>- Each correct answer awards points (+100 per question) with instant feedback.</p></blockquote>
+<blockquote><p>- Session state and scoring run autonomously on the Devvit Web backend.</p></blockquote>
+<hr>
+<h3>04 · Save High Scores</h3>
+<blockquote><p><strong>Persistent Redis leaderboard updates</strong></p></blockquote>
+<blockquote><p>- Completed rounds verify and save the player's highest score to the post's live leaderboard.</p></blockquote>
+<blockquote><p>- Players can review final rankings or jump into another round immediately.</p></blockquote>
+<hr>
+<h2>Quick Setup</h2>
+<ol>
+<li><strong>Install</strong>: Add <strong>Stargate Trivia</strong> to your subreddit via the Reddit App Directory.</li>
+<li><strong>Launch</strong>: Open the subreddit menu (<code>...</code>) and select <strong>Create Stargate Trivia Post</strong>.</li>
+<li><strong>Play</strong>: Community members tap the post to play and compete on the persistent leaderboard with zero ongoing moderation required.</li>
+</ol>
+<hr>
 <h2>Support</h2>
-<p>For help, bug reports, or feature requests, post in r/grantdb.</p>
-<p>Please include the app name, what you expected, what happened, and any error text or screenshots.</p>
+<blockquote><p><strong>Community Support & Feature Requests</strong></p></blockquote>
+<blockquote><p>For questions, troubleshooting, or bug reports, join the official community:</p></blockquote>
+<blockquote><p><strong><a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a></strong></p></blockquote>
+<ul>
+<li><strong>User Guide</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/stargate-trivia/">https://www.reddit.com/r/grantdb/wiki/stargate-trivia/</a></li>
+<li><strong>Technical Reference</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/stargate-trivia/">https://www.reddit.com/r/grantdb/wiki/index/all-apps/stargate-trivia/</a></li>
+</ul>
+<hr>
 <h2>Legal</h2>
-<p>This application is subject to the following legal agreements:</p>
 <ul>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/stargate-trivia/TERMS.md">Terms of Service</a></li>
 <li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/stargate-trivia/PRIVACY.md">Privacy Policy</a></li>
 </ul>
-<p>---</p>
+<hr>
 <p>*Built for fun on Reddit*</p>

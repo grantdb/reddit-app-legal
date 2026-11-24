@@ -1,7 +1,9 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/stargate-trivia/) | **Technical Reference & Settings Spec**
+
 # Stargate Trivia
 
 Category: Interactive  
-Version: v0.0.131  
+Version: v0.0.132  
 Visibility: Public  
 Summary: Interactive trivia engine with rich UI and global leaderboards.
 
@@ -9,10 +11,7 @@ Summary: Interactive trivia engine with rich UI and global leaderboards.
 Interactive trivia engine with rich UI and global leaderboards.
 
 ## Key Features
-- Curated Content: Features a proprietary library of unique, canonical trivia questions ensuring that hardcore fans are challenged.
-- Persistent Leaderboards: Encourages long-term community engagement by tracking high scores and milestones directly on the event post.
-- Seamless Experience: A custom-designed, low-latency interface that ensures perfect mobile and desktop rendering without leaving the Reddit app.
-- Autonomous Game Logic: Automatically handles answer validation, scoring, and session management—no moderator oversight required once the event is launched.
+- Not documented yet.
 
 ## Permissions Used
 - reddit: Reddit API access (moderation actions, post/comment fetching, modmail)
@@ -47,21 +46,21 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 
 ## Setup and Usage
 - Install: Add Stargate Trivia to your subreddit via the Reddit App Directory.
-- Launch Event: Open the Mod Menu on your subreddit and select Create Stargate Trivia Post.
-- Autonomous Execution: The interactive game post will automatically handle player sessions, answer validation, and score tracking with zero ongoing maintenance.
+- Launch: Open the subreddit menu (`...`) and select Create Stargate Trivia Post.
+- Play: Community members tap the post to play and compete on the persistent leaderboard with zero ongoing moderation required.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.132 — 2026-11-24
+- Fix Redis TxClient zScore NaN bug in onSubmitScore preventing leaderboard high-score saves
+
 0.0.131 — 2026-11-09
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 0.0.130 — 2026-10-27
-- Standard fleet synchronization and maintenance.
-
-0.0.129 — 2026-10-26
 - Standard fleet synchronization and maintenance.
 
 ## Links
