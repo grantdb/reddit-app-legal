@@ -263,5 +263,10 @@
     "name": "PostLimiter",
     "version": "0.0.5",
     "visibility": "unlisted"
+  },
+  "modconnect": {
+    "name": "ModConnect",
+    "version": "0.0.2",
+    "visibility": "unlisted"
   }
 }
