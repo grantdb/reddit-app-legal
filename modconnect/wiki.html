@@ -1,0 +1,107 @@
+<blockquote><p><a href="https://www.reddit.com/r/grantdb/wiki/modconnect/">Full User Guide</a> | <strong>Technical Reference &amp; Settings Spec</strong></p></blockquote>
+<h1>ModConnect</h1>
+
+<p>Category: Moderation<br>
+Version: v0.0.2<br>
+Visibility: Unlisted<br>
+Summary: ModConnect helps community moderators recruit, review, and onboard moderators directly inside Reddit.</p>
+
+<h2>Overview</h2>
+<p>ModConnect helps community moderators recruit, review, and onboard moderators directly inside Reddit.</p>
+
+<h2>Key Features</h2>
+<ul>
+<li>Automatic account eligibility checks (minimum account age, subreddit karma, ban/mod-note flags).</li>
+<li>Graded onboarding quizzes and reusable subreddit-level onboarding templates.</li>
+<li>Configurable multi-moderator approval thresholds and structured interview rubrics.</li>
+<li>Optional exportable audit summaries and recruitment cycle archiving.</li>
+</ul>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>AppInstall: Delivered by Reddit event router to endpoint /internal/trigger/app-install.</li>
+<li>AppUpgrade: Delivered by Reddit event router to endpoint /internal/trigger/app-upgrade.</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>newApplicationSubject: New Application Modmail Subject (string, default: [ModConnect] New application for {{roleTitle}} from u/{{applicantUsername}}). Placeholders: {{roleTitle}}, {{applicantUsername}}, {{subredditName}}, {{submittedAt}}</li>
+<li>newApplicationBody: New Application Modmail Template (paragraph, default: A new moderator application has been submitted for **{{roleTitle}}** in r/{{subredditName}}.
+
+- **Applicant:** u/{{applicantUsername}}
+- **Submitted:** {{submittedAt}}
+- **Review Candidate:** [Open ModConnect Dashboard]({{dashboardUrl}})
+
+Open the ModConnect dashboard to review answers, leave a score, and update pipeline status.). Placeholders: {{roleTitle}}, {{applicantUsername}}, {{subredditName}}, {{submittedAt}}, {{dashboardUrl}}</li>
+<li>acceptedSubject: Accepted Candidate Modmail Subject (string, default: Update on your {{roleTitle}} application for r/{{subredditName}}). Placeholders: {{roleTitle}}, {{applicantUsername}}, {{subredditName}}</li>
+<li>acceptedBody: Accepted Candidate Modmail Template (paragraph, default: Hello u/{{applicantUsername}},
+
+Thank you for applying for **{{roleTitle}}** in r/{{subredditName}}. We are pleased to let you know that your application has been accepted!
+
+To get started, please open your onboarding checklist here:
+[Open Your Onboarding Checklist]({{postUrl}})
+
+We look forward to welcoming you to the moderation team.). Placeholders: {{roleTitle}}, {{applicantUsername}}, {{subredditName}}, {{postUrl}}</li>
+<li>rejectedSubject: Rejected Candidate Modmail Subject (string, default: Update on your {{roleTitle}} application for r/{{subredditName}}). Placeholders: {{roleTitle}}, {{applicantUsername}}, {{subredditName}}</li>
+<li>rejectedBody: Rejected Candidate Modmail Template (paragraph, default: Hello u/{{applicantUsername}},
+
+Thank you for taking the time to apply for **{{roleTitle}}** in r/{{subredditName}}. After careful consideration, we will not be moving forward with your application at this time.
+
+We appreciate your interest in supporting the community and encourage you to stay involved.). Placeholders: {{roleTitle}}, {{applicantUsername}}, {{subredditName}}</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: No — Does not submit automated comments.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: Yes — Automatically approves eligible content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: Yes — Sends notifications or summaries to modmail.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Hashes (structured records & alias indices)</li>
+<li>Sorted Sets (time-series audit logs)</li>
+<li>Key patterns: node:http, node:crypto</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install: Add app via Reddit App Directory or Mod Tools.</li>
+<li>Open: Open Mod Tools -&gt; App Settings in your subreddit to configure options.</li>
+<li>Configure: Set active options and API keys as needed.</li>
+<li>Use: App runs automatically in background according to event triggers and settings.</li>
+<li>Review: Verify bot activity and comments directly on subreddit posts or in mod logs.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Check console logs via devvit logs &lt;subreddit&gt; for real-time diagnostic output.</li>
+<li>Ensure all required app settings and API keys are properly configured in Mod Tools.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.2 — 2026-11-24<br>
+Build Phase 1 ModConnect MVP: role creation, interactive application post, moderator review & pipeline, archivable modmail notifications, onboarding checklist, and basic recruiting metrics</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/modconnect/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/modconnect/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/modconnect">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>
