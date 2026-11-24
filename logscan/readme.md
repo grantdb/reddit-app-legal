@@ -89,8 +89,8 @@ The following external domain is requested in `devvit.json` under `permissions.h
 
 ## Legal
 
-- [Privacy Policy](PRIVACY.md)
-- [Terms of Service](TERMS.md)
+- [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/logscan/TERMS.md)
+- [Privacy Policy](https://github.com/grantdb/reddit-app-legal/blob/main/logscan/PRIVACY.md)
 
 ---
 *Built for Reddit's moderator community.*

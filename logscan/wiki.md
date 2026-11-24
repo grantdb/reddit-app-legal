@@ -3,7 +3,7 @@
 # Logscan
 
 Category: Observability  
-Version: v0.0.4  
+Version: v0.0.6  
 Visibility: Unlisted  
 Summary: Structured, cross-subreddit operational log buffering, redaction, and scheduled telemetry reporting to a central Logscan collector.
 
@@ -61,6 +61,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.6 — 2026-11-24
+- Fix 404 Terms of Service and Privacy Policy links in README.md to point to reddit-app-legal GitHub URLs
+
 0.0.4 — 2026-11-24
 - Standard fleet synchronization and maintenance.
 
