@@ -1,0 +1,212 @@
+<blockquote><p><a href="https://www.reddit.com/r/grantdb/wiki/postlimiter/">Full User Guide</a> | <strong>Technical Reference &amp; Settings Spec</strong></p></blockquote>
+<h1>PostLimiter</h1>
+
+<p>Category: Moderation<br>
+Version: v0.0.2<br>
+Visibility: Unlisted<br>
+Summary: Configurable independent per-user, per-subject rolling post quota engine for Reddit moderators.</p>
+
+<h2>Overview</h2>
+<p>Configurable independent per-user, per-subject rolling post quota engine for Reddit moderators.</p>
+
+<h2>Permissions Used</h2>
+<ul>
+<li>reddit: Reddit API access (moderation actions, post/comment fetching, modmail)</li>
+<li>redis: Redis key-value storage (state tracking, caching, strike memory)</li>
+</ul>
+
+<h2>Triggers and Activation</h2>
+<h3>Event Triggers</h3>
+<ul>
+<li>AppInstall: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppInstall' }).</li>
+<li>AppUpgrade: Subscribed in main.ts via Devvit.addTrigger({ event: 'AppUpgrade' }).</li>
+<li>PostCreate: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostCreate' }).</li>
+<li>PostDelete: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostDelete' }).</li>
+<li>PostUpdate: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostUpdate' }).</li>
+<li>PostFlairUpdate: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostFlairUpdate' }).</li>
+<li>ModAction: Subscribed in main.ts via Devvit.addTrigger({ event: 'ModAction' }).</li>
+<li>PostSubmit: Subscribed in main.ts via Devvit.addTrigger({ event: 'PostSubmit' }).</li>
+</ul>
+<h3>Menu Actions</h3>
+<ul>
+<li>PostLimiter: Test Rule Match: Preview which subject and quota rule would apply for a sample title and flair. (Location: subreddit)</li>
+<li>Check PostLimiter Quotas: Inspect quotas, exclude/restore posts, reset limits, manage exemptions, and view logs. (Location: subreddit)</li>
+</ul>
+<h3>Custom Post Types and Entrypoints</h3>
+<p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.tsx</p>
+
+<h2>Settings Reference</h2>
+<p>Subreddit moderators configure the app in Mod Tools -&gt; App Settings.</p>
+<ul>
+<li>enabled: Enable PostLimiter (boolean, default: true). Master toggle for quota checks on new posts.</li>
+<li>quotaMode: Quota Mode (select, default: auto_topic). Auto-Detect Topic works for any topic automatically (same topic = limited, different topic = allowed). Per-Flair gives each post flair its own limit automatically. Custom Subject Rules uses the advanced rules below.</li>
+<li>topicScope: Who Does the Topic Limit Apply To? (Auto-Detect Mode) (select, default: same_user). Same User Only tracks each user independently. All Users limits the same topic across the entire subreddit.</li>
+<li>defaultMaxPosts: Max Posts Per Topic / Subject (number, default: 1). Maximum posts allowed about the same topic within the rolling window (e.g. 1).</li>
+<li>defaultWindowValue: Rolling Time Window (number, default: 24). Rolling cooldown duration (e.g. 24 hours or 7 days).</li>
+<li>defaultTimeUnit: Time Unit (select, default: hours). Time Unit</li>
+<li>defaultAction: Action When Limit Exceeded (select, default: remove_comment). Action When Limit Exceeded</li>
+<li>topicSensitivity: Topic Matching Sensitivity (Auto-Detect Mode) (select, default: balanced). Balanced (default) catches same-topic reposts while allowing different topics (e.g. fishing boat vs sports car).</li>
+<li>overallMaxPosts: Max Overall Posts Per User (0 = Unlimited) (number, default: 0). Hard cap on total posts per user across ALL topics/subjects within the overall window (e.g. 3 posts per 24 hours). Set to 0 to disable.</li>
+<li>overallWindowValue: Overall Limit Rolling Window (number, default: 24). Rolling window for Max Overall Posts Per User (e.g. 24 hours or 7 days).</li>
+<li>overallTimeUnit: Overall Limit Time Unit (select, default: hours). Overall Limit Time Unit</li>
+<li>overallAction: Action When Overall Limit Exceeded (select, default: remove_comment). Action When Overall Limit Exceeded</li>
+<li>overallLimitReason: Too Many Overall Posts - Removal / Report Reason (string, default: DEFAULT_REMOVAL_MESSAGES.overallLimitReason). Placeholders: {maxPosts}, {window}, {remainingTime}, {author}, {subreddit}.</li>
+<li>overallLimitMessage: Too Many Overall Posts - User Message (paragraph, default: DEFAULT_REMOVAL_MESSAGES.overallLimitMessage). Shown when a user hits Max Overall Posts Per User across any topics.</li>
+<li>duplicateTitleReason: Duplicate / Similar Title - Removal / Report Reason (string, default: DEFAULT_REMOVAL_MESSAGES.duplicateTitleReason). Placeholders: {matchedTitle}, {maxPosts}, {window}, {remainingTime}, {author}, {subreddit}.</li>
+<li>duplicateTitleMessage: Duplicate / Similar Title - User Message (paragraph, default: DEFAULT_REMOVAL_MESSAGES.duplicateTitleMessage). Shown when a post is removed for having an identical or very similar title.</li>
+<li>sameTopicReason: Same Topic / Same Link - Removal / Report Reason (string, default: DEFAULT_REMOVAL_MESSAGES.sameTopicReason). Placeholders: {matchedTitle}, {maxPosts}, {window}, {remainingTime}, {author}, {subreddit}.</li>
+<li>sameTopicMessage: Same Topic / Same Link - User Message (paragraph, default: DEFAULT_REMOVAL_MESSAGES.sameTopicMessage). Shown when a post matches an active topic by shared keywords or same external link URL.</li>
+<li>defaultRemovalReason: Subject / Flair Quota - Removal / Report Reason (string, default: DEFAULT_REMOVAL_REASON). Used in Per-Flair and Custom Subject modes. Placeholders: {subject}, {maxPosts}, {window}, {remainingTime}, {author}, {subreddit}, {rulesUrl}.</li>
+<li>defaultUserMessage: Subject / Flair Quota - User Message (paragraph, default: DEFAULT_USER_MESSAGE). Used in Per-Flair and Custom Subject modes. Supports {subject}, {maxPosts}, {window}, {remainingTime}, {author}, {subreddit}, {rulesUrl}.</li>
+<li>subredditRulesUrl: Subreddit Rules / Wiki Link (Optional) (string, default: ). Optional URL automatically linked in user-facing quota messages.</li>
+<li>commentBehavior: Distinguished Mod Comment Behavior (select, default: always). Controls when PostLimiter posts a distinguished moderator comment.</li>
+<li>exemptModerators: Exempt Subreddit Moderators (boolean, default: true). Exempt Subreddit Moderators</li>
+<li>exemptAutoModerator: Exempt AutoModerator (boolean, default: true). Exempt AutoModerator</li>
+<li>exemptUsers: Exempt Usernames (paragraph, default: ). Comma- or newline-separated usernames (with or without u/ prefix).</li>
+<li>exemptUserFlairs: Exempt User Flairs (string, default: ). Comma-separated user flair texts exempt from quotas (case-insensitive).</li>
+<li>exemptPostFlairs: Exempt Post Flairs (string, default: ). Comma-separated post flair texts exempt from quotas (case-insensitive).</li>
+<li>defaultCountRemovedPosts: Count Posts Removed by PostLimiter (boolean, default: false). Recommended OFF: posts removed by PostLimiter do not extend wait time.</li>
+<li>countRemovedByPostLimiter: Keep PostLimiter-Removed Posts Counted (boolean, default: false). Default OFF.</li>
+<li>countRemovedByModerator: Count Posts Removed by Moderators (boolean, default: false). Default OFF: enable if moderator-removed posts should keep counting.</li>
+<li>countRemovedByAutoModerator: Count Posts Removed by AutoModerator (boolean, default: false). Default OFF.</li>
+<li>countDeletedByAuthor: Count Posts Deleted by Author (boolean, default: false). Default OFF: deleting a post frees the user quota slot.</li>
+<li>countMarkedAsSpam: Count Posts Marked as Spam (boolean, default: false). Default OFF.</li>
+<li>recountOnModApproval: Restore Counted Status When Approved by Moderator (boolean, default: true). Restore Counted Status When Approved by Moderator</li>
+<li>reevaluateOnFlairChange: Re-Attribute Subject on Post Flair Change (boolean, default: true). Re-Attribute Subject on Post Flair Change</li>
+<li>primarySubjectName: Primary Subject Name (Optional) (string, default: ). Optional named subject (e.g. "Game A"). Leave blank for Auto-Detect Topic mode.</li>
+<li>primarySubjectSlug: Primary Subject Slug (string, default: ). Primary Subject Slug</li>
+<li>primarySubjectFlairTexts: Matching Post Flair Text(s) (string, default: ). Matching Post Flair Text(s)</li>
+<li>primarySubjectFlairCss: Matching Post Flair CSS Class(es) (string, default: ). Matching Post Flair CSS Class(es)</li>
+<li>primarySubjectTitlePrefixes: Matching Title Prefix(es) (string, default: ). Matching Title Prefix(es)</li>
+<li>primarySubjectTitleTags: Matching Title Tag(s) Anywhere in Title (string, default: ). Matching Title Tag(s) Anywhere in Title</li>
+<li>primarySubjectMaxPosts: Primary Subject Max Posts (number, default: 1). Primary Subject Max Posts</li>
+<li>primarySubjectWindowValue: Primary Subject Rolling Window (number, default: 24). Primary Subject Rolling Window</li>
+<li>primarySubjectTimeUnit: Primary Subject Time Unit (select, default: hours). Primary Subject Time Unit</li>
+<li>primarySubjectAction: Primary Subject Action (select, default: remove_comment). Primary Subject Action</li>
+<li>primarySubjectRemovalReason: Primary Subject Custom Removal Reason (string, default: ). Primary Subject Custom Removal Reason</li>
+<li>primarySubjectMessage: Primary Subject Custom Message (paragraph, default: ). Primary Subject Custom Message</li>
+<li>primarySubjectCountRemoved: Count Removed Posts for Primary Subject (boolean, default: false). Count Removed Posts for Primary Subject</li>
+<li>additionalSubjectsJson: Additional Subject Rules JSON Array (paragraph, default: []). Optional compact JSON array (max MAX_SUBJECT_RULES rules, max MAX_SUBJECTS_JSON_BYTES bytes).</li>
+<li>conflictResolution: Multi-Subject Conflict Resolution (select, default: strictest). Multi-Subject Conflict Resolution</li>
+<li>primaryConflictSubjectSlug: Designated Primary Subject Slug (string, default: ). Designated Primary Subject Slug</li>
+<li>enableRegexMatching: Enable Optional Regex Title Matching (Off by Default) (boolean, default: false). Enable Optional Regex Title Matching (Off by Default)</li>
+<li>fallbackBehavior: Unmatched Post Behavior (Custom Subject / Per-Flair Modes) (select, default: allow). Unmatched Post Behavior (Custom Subject / Per-Flair Modes)</li>
+<li>fallbackRemovalReason: Fallback Removal / Report Reason (string, default: DEFAULT_FALLBACK_REMOVAL_REASON). Fallback Removal / Report Reason</li>
+<li>fallbackMessage: Fallback User Message (paragraph, default: DEFAULT_FALLBACK_MESSAGE). Fallback User Message</li>
+<li>duplicateTitleDetectionEnabled: Enable Duplicate-Title Enforcement (Custom Mode - Off by Default) (boolean, default: false). Only applies in Custom Subject / Per-Flair modes. Auto-Detect Topic mode handles same-topic detection automatically.</li>
+<li>duplicateTitleScope: Duplicate-Title Scope (select, default: same_user). Duplicate-Title Scope</li>
+<li>duplicateTitleSimilarityThreshold: Title Similarity Threshold (0.50 to 1.00) (number, default: 0.85). Title Similarity Threshold (0.50 to 1.00)</li>
+<li>duplicateTitleWindowValue: Duplicate-Title Lookback Window (number, default: 24). Duplicate-Title Lookback Window</li>
+<li>duplicateTitleTimeUnit: Duplicate-Title Time Unit (select, default: hours). Duplicate-Title Time Unit</li>
+<li>duplicateTitleAction: Duplicate-Title Action (select, default: allow). Duplicate-Title Action</li>
+<li>logLevel: Logging Level (select, default: info). Logging Level</li>
+<li>legal_docs: Terms & Privacy (string, default: See help text for official documentation links.). LEGAL_DOCS_URL</li>
+</ul>
+
+<h2>Automation Capabilities</h2>
+<ul>
+<li>Submits Automated Comments: Yes — Posts automated comments on target submissions.</li>
+<li>Attaches Removal Notes: No — Does not attach removal notes.</li>
+<li>Approves Content: No — Does not approve content.</li>
+<li>Removes or Filters Content: Yes — Removes or filters non-compliant submissions.</li>
+<li>Dispatches Modmail Alerts: Yes — Sends notifications or summaries to modmail.</li>
+<li>Updates User or Post Flair: No — Does not update flair.</li>
+</ul>
+
+<h2>Data Storage</h2>
+<p>This app utilizes Reddit Redis storage for state management, caching, and rate limiting.</p>
+<ul>
+<li>Key-Value Strings (deduplication & cooldown markers)</li>
+<li>Sorted Sets (time-series audit logs)</li>
+</ul>
+
+<h2>Setup and Usage</h2>
+<ul>
+<li>Install PostLimiter on your subreddit and open Mod Tools -> Installed Apps -> PostLimiter.</li>
+<li>Choose Your Mode in Quick Setup (works immediately with zero subject lists):</li>
+<li>Auto-Detect Topic (Recommended — Default)**: Automatically limits repeat posts about the same topic (e.g. posting *"hey I like this app"* twice is blocked, while posting *"this is a great fishing boat"* and then *"I like this sports car"* is allowed). Choose Same User Only (default) or All Users (subreddit-wide).</li>
+<li>Per-Flair Auto-Quota: Automatically gives every Reddit post flair its own independent limit without configuring flair names.</li>
+<li>Custom Subject Rules (Advanced)**: Define distinct per-category limits in Advanced: Custom Subject Rules (JSON or quick fields) if you want different limits for specific games, apps, or categories.</li>
+<li>Set Max Posts, Rolling Window, and Action (e.g. `1` post per `24 Hours`, `Remove + Comment`) and save.</li>
+<li>```json</li>
+<li>[</li>
+<li>{</li>
+<li>"name": "Game A",</li>
+<li>"slug": "game-a",</li>
+<li>"priority": 1,</li>
+<li>"flairs": ["Game A"],</li>
+<li>"css": ["game-a"],</li>
+<li>"prefixes": ["[Game A]"],</li>
+<li>"tags": ["[Game A]"],</li>
+<li>"max": 1,</li>
+<li>"window": 24,</li>
+<li>"unit": "hours",</li>
+<li>"action": "remove_comment"</li>
+<li>},</li>
+<li>{</li>
+<li>"name": "Game B",</li>
+<li>"slug": "game-b",</li>
+<li>"priority": 2,</li>
+<li>"flairs": ["Game B"],</li>
+<li>"prefixes": ["[Game B]"],</li>
+<li>"max": 3,</li>
+<li>"window": 7,</li>
+<li>"unit": "days",</li>
+<li>"action": "remove_comment"</li>
+<li>},</li>
+<li>{</li>
+<li>"name": "App X",</li>
+<li>"slug": "app-x",</li>
+<li>"priority": 3,</li>
+<li>"flairs": ["App X"],</li>
+<li>"prefixes": ["[App X]"],</li>
+<li>"max": 2,</li>
+<li>"window": 7,</li>
+<li>"unit": "days",</li>
+<li>"action": "report"</li>
+<li>}</li>
+<li>]</li>
+<li>```</li>
+<li>When a single post matches more than one subject (for example, flair `Game B` and title tag `[Support]`):</li>
+<li>Strictest Rule Wins (Default)**: Selects the subject with the lowest effective posting rate (`maxPosts / windowMs`), breaking ties by lowest `maxPosts`, longest window, then alphabetical slug.</li>
+<li>First Matching Rule Wins: Selects the highest-priority subject (lowest `priority` number, or earliest in configuration order).</li>
+<li>Apply All Matching Rules: Checks every matched subject's quota; if any matched subject is exceeded, enforces on the strictest violated rule, otherwise counts the post in all matched subjects.</li>
+<li>Designated Primary Subject Wins: Applies `primaryConflictSubjectSlug` if it is among the matched subjects; otherwise falls back to strictest.</li>
+<li>Duplicate-title enforcement is off by default and must be deliberately enabled by moderators.</li>
+<li>Even when enabled, the default scope is Same User Only, so two different users posting similar titles (e.g. `"My App Update"`) are not blocked unless a moderator explicitly switches the scope to `same_subject` or `entire_subreddit`.</li>
+<li>Open Check PostLimiter Quotas from the subreddit moderator menu (moderator permissions are verified both by Reddit's menu gate and at runtime before execution):</li>
+<li>View User Quotas & History: Enter a username to inspect active counts, rolling windows, expiration timers, matched rules, expired/excluded posts, and recent audit entries.</li>
+<li>Manually Exclude / Restore a Post: Enter a Post ID (`t3_...`), optional reason, and check Confirm Destructive / State-Changing Action to remove or re-include a post in active quota counts.</li>
+<li>Reset User Quota (Single Subject or All Subjects)**: Enter a username (and subject slug for single-subject reset), reason, and check confirmation to clear active quota slots.</li>
+<li>Temporary & Permanent Exemptions: Grant a timed per-subject exemption (in hours) or add/remove a permanent subreddit-wide exemption with confirmation.</li>
+<li>Decision Logs, Metrics & Config Summary: Inspect recent post decisions, operational counters, moderator audit trail, validation errors/warnings, and copyable compact JSON.</li>
+<li>PostLimiter: Test Rule Match: Dry-run any sample title and flair to verify which subject, matching method, and quota rule would apply without modifying any stored data.</li>
+<li>Every state-changing moderator action writes an audit entry recording the moderator username, action, target user, subject, timestamp, and reason.</li>
+<li>Subject not matching expected posts: Run PostLimiter: Test Rule Match from the subreddit menu to inspect which method matched and check for configuration validation errors.</li>
+<li>User still blocked after deleting a post: Verify Count Posts Deleted by Author is turned OFF (default) under Post Lifecycle Counting Policies, or use Check PostLimiter Quotas -> Manually Exclude a Post / Reset User Quota.</li>
+<li>Regex rule not firing: Confirm Enable Optional Regex Title Matching is enabled and check View Configuration Summary for unsafe-pattern validation errors (nested quantifiers and backreferences are rejected for safety).</li>
+<li>Settings size limit: `additionalSubjectsJson` supports up to 16,384 bytes and 50 subject rules; use compact keys (`flairs`, `css`, `prefixes`, `tags`, `max`, `window`, `unit`, `action`) for large rule sets.</li>
+<li>All data is stored exclusively inside Reddit's subreddit-scoped Devvit Redis storage; no external databases or third-party services are used.</li>
+<li>Active quota records expire automatically after the configured rolling window plus a 24-hour grace period, and a bounded 6-hour scheduled cleanup job prunes expired sets without scanning the Redis keyspace.</li>
+<li>Decision logs, post history indexes, duplicate-title entries, and moderator audit logs are retained for at most 30 days. Temporary exemptions expire automatically at their configured duration.</li>
+</ul>
+
+<h2>Troubleshooting</h2>
+<ul>
+<li>Subject not matching expected posts: Run PostLimiter: Test Rule Match from the subreddit menu to inspect which method matched and check for configuration validation errors.</li>
+<li>User still blocked after deleting a post: Verify Count Posts Deleted by Author is turned OFF (default) under Post Lifecycle Counting Policies, or use Check PostLimiter Quotas -> Manually Exclude a Post / Reset User Quota.</li>
+<li>Regex rule not firing: Confirm Enable Optional Regex Title Matching is enabled and check View Configuration Summary for unsafe-pattern validation errors (nested quantifiers and backreferences are rejected for safety).</li>
+<li>Settings size limit: `additionalSubjectsJson` supports up to 16,384 bytes and 50 subject rules; use compact keys (`flairs`, `css`, `prefixes`, `tags`, `max`, `window`, `unit`, `action`) for large rule sets.</li>
+</ul>
+
+<h2>Version History</h2>
+<p>0.0.2 — 2026-11-24<br>
+Phase 1 + Phase 2: Independent per-subject rolling quotas, lifecycle triggers, conflict resolution, moderator operations hub, audit trail, scheduled cleanup, and disabled-by-default duplicate-title foundation</p>
+
+<h2>Links</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/postlimiter/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/postlimiter/PRIVACY.md">Privacy Policy</a></li>
+<li><a href="https://github.com/grantdb/postlimiter">GitHub Repository</a></li>
+<li><a href="https://www.reddit.com/r/grantdb">Support</a></li>
+</ul>

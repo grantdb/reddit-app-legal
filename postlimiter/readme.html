@@ -1,0 +1,147 @@
+<blockquote><p><strong>User Guide &amp; Overview</strong> | <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/postlimiter">View Deep Technical Reference &amp; Settings Spec</a></p></blockquote>
+<h1>PostLimiter</h1>
+<blockquote><p><strong>Independent per-user, per-subject rolling post quotas that stop flooding without silencing active community categories.</strong></p></blockquote>
+<p>PostLimiter is a configurable Reddit moderation app built on Devvit. It lets subreddit moderators define separate posting limits and rolling time windows for each game, app, support topic, or category so a user who hits their limit in one subject can still post freely in unrelated subjects.</p>
+<h2>At a Glance</h2>
+<ul>
+<li><strong>Independent Per-Subject Quotas</strong>: Configure distinct limits per category (for example, Game A at 1 post per 24 hours, Game B at 3 posts per 7 days, and App X at 2 posts per 7 days) without cross-blocking unrelated subjects.</li>
+<li><strong>Flexible Subject Matching & Conflict Resolution</strong>: Map posts via exact or case-insensitive flair text, flair CSS class, title prefix, bracketed title tags (<code>[Game A]</code>), or optional safe regex (off by default). Choose how overlapping rules resolve: strictest rule, first match, apply all, or designated primary subject.</li>
+<li><strong>Reliable Post Lifecycle Handling</strong>: Automatically updates active quotas when posts are deleted by authors, removed by moderators or AutoModerator, marked as spam, approved after removal, edited, or reflaired.</li>
+<li><strong>Full Moderator Operations & Observability</strong>: Inspect active and historical posts, exclude or restore posts, reset quotas, grant temporary or permanent exemptions with confirmation and audit logs, test rule matches in dry-run mode, and track operational metrics.</li>
+</ul>
+<h2>How It Works: The 6-Step Operational Pipeline</h2>
+<h3>01 · Atomic Deduplication & Exemption Check</h3>
+<blockquote><p><strong>Guarantees every submission is evaluated at most once</strong></p></blockquote>
+<blockquote><p>- Acquires an atomic Redis NX lock (<code>quota:lock:{subredditId}:{postId}</code>) shared between <code>PostSubmit</code> (primary) and <code>PostCreate</code> (fallback) and tracks prevented duplicates in operational metrics.</p></blockquote>
+<blockquote><p>- Safely ignores deleted or already-removed posts and honors global, per-subject, temporary, and moderator-managed permanent exemptions.</p></blockquote>
+<hr>
+<h3>02 · Subject Matching & Conflict Resolution</h3>
+<blockquote><p><strong>Maps the post to its target category without hardcoded names</strong></p></blockquote>
+<blockquote><p>- Evaluates configured subjects in priority order against flair text (exact or case-insensitive), flair CSS class, title prefix, title tags, and optional validated regex patterns.</p></blockquote>
+<blockquote><p>- Resolves overlapping subject matches using the configured strategy (<code>strictest</code>, <code>first_match</code>, <code>apply_all</code>, or <code>primary_subject</code>) and logs every matched rule.</p></blockquote>
+<blockquote><p>- Applies the configured fallback behavior (<code>allow</code>, <code>default_quota</code>, <code>remove</code>, or <code>report</code>) when no subject matches.</p></blockquote>
+<hr>
+<h3>03 · Rolling Window Evaluation & Optional Duplicate-Title Check</h3>
+<blockquote><p><strong>Checks only active, non-expired, counted posts in scan-free Redis sorted sets</strong></p></blockquote>
+<blockquote><p>- Queries <code>quota:active:{subredditId}:{subjectId}:{userId}</code> without scanning Redis keys and opportunistically prunes expired entries.</p></blockquote>
+<blockquote><p>- Stores normalized titles for all tracked posts; duplicate-title enforcement is <strong>disabled by default</strong> and scoped to <code>same_user</code> so different users posting similar titles are never blocked unless moderators deliberately opt in.</p></blockquote>
+<hr>
+<h3>04 · Enforcement & Clear User Communication</h3>
+<blockquote><p><strong>Never silently removes a post without a clear, configurable reason</strong></p></blockquote>
+<blockquote><p>- Executes the configured action (<code>remove</code>, <code>report</code>, <code>remove_comment</code>, <code>remove_modmail</code>, <code>report_comment</code>, <code>leave_comment</code>, or <code>leave_modmail</code>).</p></blockquote>
+<blockquote><p>- Supports distinguished comment modes (<code>always</code>, <code>first_violation_only</code>, <code>subject_only</code>, <code>never</code>) and optional subreddit rules/wiki links while clearly stating the subject, limit, window, wait time, and confirming other subjects are unaffected.</p></blockquote>
+<hr>
+<h3>05 · Lifecycle Synchronization & Scheduled Cleanup</h3>
+<blockquote><p><strong>Keeps active quotas accurate after edits, flair changes, removals, and deletions</strong></p></blockquote>
+<blockquote><p>- Responds to <code>PostDelete</code>, <code>PostUpdate</code>, <code>PostFlairUpdate</code>, and <code>ModAction</code> (<code>removelink</code>, <code>spamlink</code>, <code>approvelink</code>) using configurable counting policies.</p></blockquote>
+<blockquote><p>- Runs a recurring scan-free cleanup job every 6 hours to purge expired active sets, old title records, and aged audit entries.</p></blockquote>
+<hr>
+<h3>06 · Moderator Operations & Dry-Run Testing</h3>
+<blockquote><p><strong>Complete operational control with confirmation gates and audit logging</strong></p></blockquote>
+<blockquote><p>- <strong>Check PostLimiter Quotas</strong>: View active/expired posts, matched rules, exclusion reasons, decision logs, metrics, and copyable config JSON; exclude/restore posts, reset quotas, and manage temporary or permanent exemptions (all state-changing actions require explicit confirmation and write to the audit trail).</p></blockquote>
+<blockquote><p>- <strong>PostLimiter: Test Rule Match</strong>: Dry-run any sample title and flair to see which subject and quota rule would apply.</p></blockquote>
+<h2>Quick Setup</h2>
+<ol>
+<li><strong>Install PostLimiter</strong> on your subreddit and open <strong>Mod Tools -> Installed Apps -> PostLimiter</strong>.</li>
+<li><strong>Choose Your Mode in Quick Setup</strong> (works immediately with zero subject lists):</li>
+</ol>
+<ul>
+<li><strong>Auto-Detect Topic (Recommended — Default)</strong>: Automatically limits repeat posts about the same topic (e.g. posting *"hey I like this app"* twice is blocked, while posting *"this is a great fishing boat"* and then *"I like this sports car"* is allowed). Choose <strong>Same User Only</strong> (default) or <strong>All Users</strong> (subreddit-wide).</li>
+<li><strong>Per-Flair Auto-Quota</strong>: Automatically gives every Reddit post flair its own independent limit without configuring flair names.</li>
+<li><strong>Custom Subject Rules (Advanced)</strong>: Define distinct per-category limits in <strong>Advanced: Custom Subject Rules</strong> (JSON or quick fields) if you want different limits for specific games, apps, or categories.</li>
+</ul>
+<ol>
+<li><strong>Set Max Posts, Rolling Window, and Action</strong> (e.g. <code>1</code> post per <code>24 Hours</code>, <code>Remove + Comment</code>) and save.</li>
+</ol>
+<h3>Multi-Subject Configuration Example</h3>
+<p>```json</p>
+<p>[</p>
+<p>{</p>
+<p>"name": "Game A",</p>
+<p>"slug": "game-a",</p>
+<p>"priority": 1,</p>
+<p>"flairs": ["Game A"],</p>
+<p>"css": ["game-a"],</p>
+<p>"prefixes": ["[Game A]"],</p>
+<p>"tags": ["[Game A]"],</p>
+<p>"max": 1,</p>
+<p>"window": 24,</p>
+<p>"unit": "hours",</p>
+<p>"action": "remove_comment"</p>
+<p>},</p>
+<p>{</p>
+<p>"name": "Game B",</p>
+<p>"slug": "game-b",</p>
+<p>"priority": 2,</p>
+<p>"flairs": ["Game B"],</p>
+<p>"prefixes": ["[Game B]"],</p>
+<p>"max": 3,</p>
+<p>"window": 7,</p>
+<p>"unit": "days",</p>
+<p>"action": "remove_comment"</p>
+<p>},</p>
+<p>{</p>
+<p>"name": "App X",</p>
+<p>"slug": "app-x",</p>
+<p>"priority": 3,</p>
+<p>"flairs": ["App X"],</p>
+<p>"prefixes": ["[App X]"],</p>
+<p>"max": 2,</p>
+<p>"window": 7,</p>
+<p>"unit": "days",</p>
+<p>"action": "report"</p>
+<p>}</p>
+<p>]</p>
+<p>```</p>
+<h3>Overlapping Rules & Conflict Resolution</h3>
+<p>When a single post matches more than one subject (for example, flair <code>Game B</code> and title tag <code>[Support]</code>):</p>
+<ul>
+<li><strong>Strictest Rule Wins (Default)</strong>: Selects the subject with the lowest effective posting rate (<code>maxPosts / windowMs</code>), breaking ties by lowest <code>maxPosts</code>, longest window, then alphabetical slug.</li>
+<li><strong>First Matching Rule Wins</strong>: Selects the highest-priority subject (lowest <code>priority</code> number, or earliest in configuration order).</li>
+<li><strong>Apply All Matching Rules</strong>: Checks every matched subject's quota; if any matched subject is exceeded, enforces on the strictest violated rule, otherwise counts the post in all matched subjects.</li>
+<li><strong>Designated Primary Subject Wins</strong>: Applies <code>primaryConflictSubjectSlug</code> if it is among the matched subjects; otherwise falls back to strictest.</li>
+</ul>
+<h3>Duplicate-Title Foundation (Disabled by Default)</h3>
+<ul>
+<li>Duplicate-title enforcement is <strong>off by default</strong> and must be deliberately enabled by moderators.</li>
+<li>Even when enabled, the default scope is <strong>Same User Only</strong>, so two different users posting similar titles (e.g. <code>"My App Update"</code>) are <strong>not</strong> blocked unless a moderator explicitly switches the scope to <code>same_subject</code> or <code>entire_subreddit</code>.</li>
+</ul>
+<h3>Moderator Action Guide</h3>
+<p>Open <strong>Check PostLimiter Quotas</strong> from the subreddit moderator menu (moderator permissions are verified both by Reddit's menu gate and at runtime before execution):</p>
+<ul>
+<li><strong>View User Quotas & History</strong>: Enter a username to inspect active counts, rolling windows, expiration timers, matched rules, expired/excluded posts, and recent audit entries.</li>
+<li><strong>Manually Exclude / Restore a Post</strong>: Enter a Post ID (<code>t3_...</code>), optional reason, and check <strong>Confirm Destructive / State-Changing Action</strong> to remove or re-include a post in active quota counts.</li>
+<li><strong>Reset User Quota (Single Subject or All Subjects)</strong>: Enter a username (and subject slug for single-subject reset), reason, and check confirmation to clear active quota slots.</li>
+<li><strong>Temporary & Permanent Exemptions</strong>: Grant a timed per-subject exemption (in hours) or add/remove a permanent subreddit-wide exemption with confirmation.</li>
+<li><strong>Decision Logs, Metrics & Config Summary</strong>: Inspect recent post decisions, operational counters, moderator audit trail, validation errors/warnings, and copyable compact JSON.</li>
+<li><strong>PostLimiter: Test Rule Match</strong>: Dry-run any sample title and flair to verify which subject, matching method, and quota rule would apply without modifying any stored data.</li>
+</ul>
+<p>Every state-changing moderator action writes an audit entry recording the moderator username, action, target user, subject, timestamp, and reason.</p>
+<h3>Troubleshooting</h3>
+<ul>
+<li><strong>Subject not matching expected posts</strong>: Run <strong>PostLimiter: Test Rule Match</strong> from the subreddit menu to inspect which method matched and check for configuration validation errors.</li>
+<li><strong>User still blocked after deleting a post</strong>: Verify <strong>Count Posts Deleted by Author</strong> is turned OFF (default) under <strong>Post Lifecycle Counting Policies</strong>, or use <strong>Check PostLimiter Quotas -> Manually Exclude a Post / Reset User Quota</strong>.</li>
+<li><strong>Regex rule not firing</strong>: Confirm <strong>Enable Optional Regex Title Matching</strong> is enabled and check <strong>View Configuration Summary</strong> for unsafe-pattern validation errors (nested quantifiers and backreferences are rejected for safety).</li>
+<li><strong>Settings size limit</strong>: <code>additionalSubjectsJson</code> supports up to <strong>16,384 bytes</strong> and <strong>50 subject rules</strong>; use compact keys (<code>flairs</code>, <code>css</code>, <code>prefixes</code>, <code>tags</code>, <code>max</code>, <code>window</code>, <code>unit</code>, <code>action</code>) for large rule sets.</li>
+</ul>
+<h3>Privacy & Data Retention</h3>
+<ul>
+<li>All data is stored exclusively inside Reddit's subreddit-scoped Devvit Redis storage; no external databases or third-party services are used.</li>
+<li>Active quota records expire automatically after the configured rolling window plus a 24-hour grace period, and a bounded 6-hour scheduled cleanup job prunes expired sets without scanning the Redis keyspace.</li>
+<li>Decision logs, post history indexes, duplicate-title entries, and moderator audit logs are retained for at most 30 days. Temporary exemptions expire automatically at their configured duration.</li>
+</ul>
+<h2>Support</h2>
+<blockquote><p><strong>Official Support Community</strong>: <a href="https://www.reddit.com/r/grantdb">https://www.reddit.com/r/grantdb</a></p></blockquote>
+<ul>
+<li><strong>Full User Guide</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/postlimiter/">https://www.reddit.com/r/grantdb/wiki/postlimiter/</a></li>
+<li><strong>Technical Reference & Settings Spec</strong>: <a href="https://www.reddit.com/r/grantdb/wiki/index/all-apps/postlimiter/">https://www.reddit.com/r/grantdb/wiki/index/all-apps/postlimiter/</a></li>
+</ul>
+<h2>Legal</h2>
+<ul>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/postlimiter/TERMS.md">Terms of Service</a></li>
+<li><a href="https://github.com/grantdb/reddit-app-legal/blob/main/postlimiter/PRIVACY.md">Privacy Policy</a></li>
+</ul>
+<hr>
+<p>*Moderation — PostLimiter*</p>
+<hr>
+<p>*Built for Reddit's moderator community.*</p>
