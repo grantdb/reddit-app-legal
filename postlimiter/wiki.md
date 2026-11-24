@@ -3,7 +3,7 @@
 # PostLimiter
 
 Category: Moderation  
-Version: v0.0.2  
+Version: v0.0.3  
 Visibility: Unlisted  
 Summary: Configurable independent per-user, per-subject rolling post quota engine for Reddit moderators.
 
@@ -125,6 +125,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Settings size limit: `additionalSubjectsJson` supports up to 16,384 bytes and 50 subject rules.
 
 ## Version History
+0.0.3 — 2026-11-24
+- Initial unlisted release: zero-config auto-topic quotas, max overall posts per user, per-type removal messages, per-flair and custom subject rules, lifecycle handling, and moderator operations hub.
+
 0.0.2 — 2026-11-24
 - Phase 1 + Phase 2: Independent per-subject rolling quotas, lifecycle triggers, conflict resolution, moderator operations hub, audit trail, scheduled cleanup, and disabled-by-default duplicate-title foundation
 
