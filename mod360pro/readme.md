@@ -24,17 +24,42 @@ mod360pro replaces fragmented moderation bots and competing sticky comments with
 - **Two-Way Wiki Policy Sync**: Bi-directional rule synchronization with `r/subreddit/wiki/mod360_rules` for effortless team collaboration.
 - **Disaster Recovery Modmail Backups**: 1-click snapshot exporting the entire active configuration directly to mod team Modmail.
 
-## How It Works
+## How It Works: The 5-Step Operational Pipeline
 
-![Logic Flowchart](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod360pro-flowchart.png)
+### 01 · Fast-Gate Interception (`onPostSubmit`)
 
-### The 5-Step Operational Flow
+> **Sub-10ms atomic Redis gate**
+> - Incoming submissions pass through an atomic Redis gate in single-digit milliseconds.
+> - Blocks duplicate cross-posts and rapid-fire flood bursts without external API round-trips.
 
-1. **Fast-Gate Interception (`onPostSubmit`)**: Incoming submissions pass through an atomic Redis gate in single-digit milliseconds, blocking duplicate cross-posts and rapid-fire flood bursts without external API round-trips.
-2. **Deep Content Inspection (`onPostCreate`)**: Surviving posts undergo modular inspection across author status (suspended / shadowbanned accounts), keyword regex lists, domain rules, title compliance, and verification tiers.
-3. **Quarantine or Verdict**: Clear violations trigger immediate removal with concurrency locks (`SET NX`); borderline posts enter the timed quarantine state machine awaiting manual review or auto-expiry.
-4. **Single-Notice Dispatch**: Violations are assembled into a single formatted sticky comment detailing exact community guidelines violated and appeal steps.
-5. **Rescue Hub Logging**: Removed items are archived into the in-dashboard Rescue Hub, allowing any moderator to reverse false positives with one click.
+---
+
+### 02 · Deep Content Inspection (`onPostCreate`)
+
+> **Unified multi-rule evaluation**
+> - Surviving posts undergo modular inspection across author status (suspended / shadowbanned accounts), keyword regex lists, domain rules, title compliance, and verification tiers.
+
+---
+
+### 03 · Quarantine or Verdict
+
+> **Atomic enforcement with timed holding**
+> - Clear violations trigger immediate removal with concurrency locks (`SET NX`).
+> - Borderline posts enter the timed quarantine state machine awaiting manual review or auto-expiry.
+
+---
+
+### 04 · Single-Notice Dispatch
+
+> **Zero bot comment clutter**
+> - Violations are assembled into a single formatted sticky comment detailing exact community guidelines violated and appeal steps.
+
+---
+
+### 05 · Rescue Hub Logging
+
+> **Instant false-positive reversal**
+> - Removed items are archived into the in-dashboard Rescue Hub, allowing any moderator to reverse false positives with one click.
 
 ---
 
@@ -120,14 +145,12 @@ mod360pro is built strictly on human-in-the-loop principles. All automated actio
 
 ## Support
 
-For help, bug reports, or feature requests, post in r/grantdb.
-Please include:
+> **Official Support Community**: [https://www.reddit.com/r/grantdb](https://www.reddit.com/r/grantdb)
+>
+> - User Guide: [https://www.reddit.com/r/grantdb/wiki/mod360pro/](https://www.reddit.com/r/grantdb/wiki/mod360pro/)
+> - Technical Reference: [https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod360pro/](https://www.reddit.com/r/grantdb/wiki/index/all-apps/mod360pro/)
 
-- The app name (`mod360pro`).
-- What you expected to happen.
-- What happened instead.
-- Any error message.
-- Screenshots or relevant details.
+For help, bug reports, or feature requests, post in r/grantdb with the app name (`mod360pro`), expected vs. actual behavior, and any relevant details.
 
 ---
 

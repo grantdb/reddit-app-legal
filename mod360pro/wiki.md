@@ -1,15 +1,14 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/mod360pro/) | **Technical Reference & Settings Spec**
+
 # Mod360 Pro
 
 Category: Moderation  
-Version: v0.0.58  
+Version: v0.0.59  
 Visibility: Public  
 Summary: Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
 
 ## Overview
 Unified 360-degree moderation engine and waterfall pipeline consolidating 14+ moderation tools.
-
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/mod360pro-flowchart.png)
 
 ## Key Features
 - Sliding-Window Frequency Limiter: Configurable post-per-minute counters that clamp burst submissions and coordinated spam floods.
@@ -80,13 +79,13 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.59 — 2026-11-24
+- Hide 7 additional power-user sections in Simple Mode when Advanced tools is toggled off, fix squished Help search input box, and move Help & Manual out of nav bar into top-right header button
+
 0.0.58 — 2026-11-11
 - Devvit SDK v0.15.2 baseline and minor/patch dependency maintenance update.
 
 0.0.57 — 2026-10-31
-- Standard fleet synchronization and maintenance.
-
-0.0.56 — 2026-10-29
 - Standard fleet synchronization and maintenance.
 
 ## Links
