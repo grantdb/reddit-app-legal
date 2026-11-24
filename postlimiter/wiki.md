@@ -3,7 +3,7 @@
 # PostLimiter
 
 Category: Moderation  
-Version: v0.0.4  
+Version: v0.0.5  
 Visibility: Unlisted  
 Summary: Configurable independent per-user, per-subject rolling post quota engine for Reddit moderators.
 
@@ -34,12 +34,12 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - defaultMaxPosts: Max Posts Per Topic / Subject (number, default: 1). Maximum posts allowed about the same topic within the rolling window (e.g. 1).
 - defaultWindowValue: Rolling Time Window (number, default: 24). Rolling cooldown duration (e.g. 24 hours or 7 days).
 - defaultTimeUnit: Time Unit (select, default: hours). Time Unit
-- defaultAction: Action When Limit Exceeded (select, default: remove_comment). Action When Limit Exceeded
+- defaultAction: Action When Limit Exceeded (select, default: filter_comment). Action When Limit Exceeded
 - topicSensitivity: Topic Matching Sensitivity (Auto-Detect Mode) (select, default: balanced). Balanced (default) catches same-topic reposts while allowing different topics (e.g. fishing boat vs sports car).
 - overallMaxPosts: Max Overall Posts Per User (0 = Unlimited) (number, default: 0). Hard cap on total posts per user across ALL topics/subjects within the overall window (e.g. 3 posts per 24 hours). Set to 0 to disable.
 - overallWindowValue: Overall Limit Rolling Window (number, default: 24). Rolling window for Max Overall Posts Per User (e.g. 24 hours or 7 days).
 - overallTimeUnit: Overall Limit Time Unit (select, default: hours). Overall Limit Time Unit
-- overallAction: Action When Overall Limit Exceeded (select, default: remove_comment). Action When Overall Limit Exceeded
+- overallAction: Action When Overall Limit Exceeded (select, default: filter_comment). Action When Overall Limit Exceeded
 - overallLimitReason: Too Many Overall Posts - Removal / Report Reason (string, default: DEFAULT_REMOVAL_MESSAGES.overallLimitReason). Placeholders: {maxPosts}, {window}, {remainingTime}, {author}, {subreddit}.
 - overallLimitMessage: Too Many Overall Posts - User Message (paragraph, default: DEFAULT_REMOVAL_MESSAGES.overallLimitMessage). Shown when a user hits Max Overall Posts Per User across any topics.
 - duplicateTitleReason: Duplicate / Similar Title - Removal / Report Reason (string, default: DEFAULT_REMOVAL_MESSAGES.duplicateTitleReason). Placeholders: {matchedTitle}, {maxPosts}, {window}, {remainingTime}, {author}, {subreddit}.
@@ -72,7 +72,7 @@ Subreddit moderators configure the app in Mod Tools -> App Settings.
 - primarySubjectMaxPosts: Primary Subject Max Posts (number, default: 1). Primary Subject Max Posts
 - primarySubjectWindowValue: Primary Subject Rolling Window (number, default: 24). Primary Subject Rolling Window
 - primarySubjectTimeUnit: Primary Subject Time Unit (select, default: hours). Primary Subject Time Unit
-- primarySubjectAction: Primary Subject Action (select, default: remove_comment). Primary Subject Action
+- primarySubjectAction: Primary Subject Action (select, default: filter_comment). Primary Subject Action
 - primarySubjectRemovalReason: Primary Subject Custom Removal Reason (string, default: ). Primary Subject Custom Removal Reason
 - primarySubjectMessage: Primary Subject Custom Message (paragraph, default: ). Primary Subject Custom Message
 - primarySubjectCountRemoved: Count Removed Posts for Primary Subject (boolean, default: false). Count Removed Posts for Primary Subject
@@ -125,14 +125,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Settings size limit: `additionalSubjectsJson` supports up to 16,384 bytes and 50 subject rules.
 
 ## Version History
+0.0.5 — 2026-11-24
+- Add Filter + Comment (filter_comment) and Filter Only (filter) actions and make filter_comment the default across all PostLimiter removal/exceed actions
+
 0.0.4 — 2026-11-24
 - Initial unlisted release: zero-config auto-topic quotas, max overall posts per user, per-type removal messages, per-flair and custom subject rules, lifecycle handling, and moderator operations hub.
 
 0.0.3 — 2026-11-24
 - Initial unlisted release: zero-config auto-topic quotas, max overall posts per user, per-type removal messages, per-flair and custom subject rules, lifecycle handling, and moderator operations hub.
-
-0.0.2 — 2026-11-24
-- Phase 1 + Phase 2: Independent per-subject rolling quotas, lifecycle triggers, conflict resolution, moderator operations hub, audit trail, scheduled cleanup, and disabled-by-default duplicate-title foundation
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/postlimiter/TERMS.md)
