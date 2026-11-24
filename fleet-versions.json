@@ -253,5 +253,10 @@
     "name": "Mod Dispatch",
     "version": "0.0.6",
     "visibility": "unlisted"
+  },
+  "logscan": {
+    "name": "Logscan",
+    "version": "0.0.3",
+    "visibility": "unlisted"
   }
 }

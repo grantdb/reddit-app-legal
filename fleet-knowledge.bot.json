@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-22T21:21:21.576Z",
+  "generatedAt": "2026-11-24T01:49:12.444Z",
   "subreddit": "grantdb",
   "apps": [
     {
@@ -3258,6 +3258,88 @@
       },
       "status": "active",
       "lastUpdated": "2026-11-22"
+    },
+    {
+      "appId": "postlimiter",
+      "slug": "postlimiter",
+      "appName": "PostLimiter",
+      "aliases": [
+        "postlimiter"
+      ],
+      "summary": "Configurable independent per-user, per-subject rolling post quota engine for Reddit moderators.",
+      "keywords": [
+        "postlimiter",
+        "moderation"
+      ],
+      "setupSteps": [
+        "Open Mod Tools > Installed Apps > PostLimiter.",
+        "Under Quick Setup, configure:",
+        "Enable PostLimiter: On",
+        "Quota Mode:",
+        "Auto-Detect Topic (Recommended)**: Works immediately with no subject list. Blocks repeat posts about the same topic or link while allowing unrelated topics (for example, posting *\"hey I like this app\"* twice is blocked, while posting *\"this is a great fishing boat\"* and then *\"I like this sports car\"* is allowed)."
+      ],
+      "commonIssues": [
+        "Test posts by a moderator are not blocked: Toggle Exempt Subreddit Moderators OFF under Exemptions while testing, then re-enable it afterward.",
+        "Subject not matching expected posts: Run PostLimiter: Test Rule Match from the subreddit menu to inspect matching results and validation errors.",
+        "User still blocked after deleting a post: Ensure Count Posts Deleted by Author is OFF (default) under Post Lifecycle Counting Policies, or use Check PostLimiter Quotas to exclude/reset.",
+        "Settings size limit: `additionalSubjectsJson` supports up to 16,384 bytes and 50 subject rules."
+      ],
+      "troubleshooting": {
+        "install_setup": [],
+        "permissions_access": [],
+        "configuration": [
+          "Settings size limit: `additionalSubjectsJson` supports up to 16,384 bytes and 50 subject rules.",
+          "Settings size limit: `additionalSubjectsJson` supports up to 16,384 bytes and 50 subject rules."
+        ],
+        "syntax_formatting": [],
+        "expected_behavior": [
+          "Subject not matching expected posts: Run PostLimiter: Test Rule Match from the subreddit menu to inspect matching results and validation errors.",
+          "Subject not matching expected posts: Run PostLimiter: Test Rule Match from the subreddit menu to inspect matching results and validation errors."
+        ],
+        "bug_report": [],
+        "feature_request": [],
+        "docs_help": [
+          "Test posts by a moderator are not blocked: Toggle Exempt Subreddit Moderators OFF under Exemptions while testing, then re-enable it afterward.",
+          "User still blocked after deleting a post: Ensure Count Posts Deleted by Author is OFF (default) under Post Lifecycle Counting Policies, or use Check PostLimiter Quotas to exclude/reset.",
+          "Test posts by a moderator are not blocked: Toggle Exempt Subreddit Moderators OFF under Exemptions while testing, then re-enable it afterward.",
+          "User still blocked after deleting a post: Ensure Count Posts Deleted by Author is OFF (default) under Post Lifecycle Counting Policies, or use Check PostLimiter Quotas to exclude/reset."
+        ]
+      },
+      "capabilities": {
+        "reddit": true,
+        "redis": true,
+        "http": false,
+        "scheduler": true,
+        "customPost": true
+      },
+      "triggers": [
+        "AppInstall",
+        "AppUpgrade",
+        "PostCreate",
+        "PostDelete",
+        "PostUpdate",
+        "PostFlairUpdate",
+        "ModAction",
+        "PostSubmit"
+      ],
+      "menuItems": [
+        "PostLimiter: Test Rule Match",
+        "Check PostLimiter Quotas"
+      ],
+      "settingsCount": 63,
+      "links": {
+        "readme": "https://www.reddit.com/r/grantdb/wiki/postlimiter",
+        "wiki": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/postlimiter",
+        "github": "https://github.com/grantdb/postlimiter",
+        "terms": "https://github.com/grantdb/reddit-app-legal/blob/main/postlimiter/TERMS.md",
+        "privacy": "https://github.com/grantdb/reddit-app-legal/blob/main/postlimiter/PRIVACY.md"
+      },
+      "replyTemplates": {
+        "welcome": "Welcome to r/grantdb support! Here is reference information for PostLimiter.",
+        "troubleshooting": "Check the PostLimiter troubleshooting guide or view logs via devvit logs."
+      },
+      "status": "active",
+      "lastUpdated": "2026-11-24"
     }
   ]
 }
