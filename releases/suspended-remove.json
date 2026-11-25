@@ -1,16 +1,16 @@
 {
   "slug": "suspended-remove",
   "title": "Suspended Remove",
-  "version": "1.0.96",
-  "date": "2026-11-24",
+  "version": "1.0.97",
+  "date": "2026-11-25",
   "category": "Security",
   "description": "High-precision account purification engine. Fleet-wide security infrastructure.",
   "visibility": "Public",
-  "notes": "- Add returnRecoveredToNeedsReview setting under Auto-approve to filter recovered temp-removed/hidden items back into Needs Review with a [RECOVERED] mod note when Auto-approve is off",
-  "postTitle": "[App Update] Suspended Remove v1.0.96 Released",
-  "postBody": "# Suspended Remove v1.0.96 is Now Available\n\n> **High-precision account purification engine. Fleet-wide security infrastructure.**\n\n---\n\n### What's New in v1.0.96\n- Add returnRecoveredToNeedsReview setting under Auto-approve to filter recovered temp-removed/hidden items back into Needs Review with a [RECOVERED] mod note when Auto-approve is off\n\n---\n\n### Key Capabilities & Highlights\n- **Category**: Security\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/suspended-remove)\n\n---\n\n### How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Suspended Remove** and click **Update** (or verify it displays `v1.0.96`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Submit a new post with the `Support` flair.*\n",
+  "notes": "- Use real subreddit Removal Reason IDs ([WAITING] Suspended Recheck and Suspended Account Removed) so Removed Queue cards display [WAITING] instead of Add removal reason, and add live Waiting Queue viewer to the subreddit menu item",
+  "postTitle": "[App Update] Suspended Remove v1.0.97 Released",
+  "postBody": "# Suspended Remove v1.0.97 is Now Available\n\n> **High-precision account purification engine. Fleet-wide security infrastructure.**\n\n---\n\n### What's New in v1.0.97\n- Use real subreddit Removal Reason IDs ([WAITING] Suspended Recheck and Suspended Account Removed) so Removed Queue cards display [WAITING] instead of Add removal reason, and add live Waiting Queue viewer to the subreddit menu item\n\n---\n\n### Key Capabilities & Highlights\n- **Category**: Security\n- **Visibility**: Public\n- **Documentation**: [r/grantdb Wiki Guide](https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove)\n- **Directory Listing**: [Reddit App Directory](https://developers.reddit.com/apps/suspended-remove)\n\n---\n\n### How to Update\n1. Open your subreddit's **Mod Tools** → **Installed Apps**.\n2. Find **Suspended Remove** and click **Update** (or verify it displays `v1.0.97`).\n3. Check **App Settings** to review any new toggles or rules.\n\n*Need help or experiencing issues? Submit a new post with the `Support` flair.*\n",
   "wikiUrl": "https://www.reddit.com/r/grantdb/wiki/index/all-apps/suspended-remove",
   "flowchartUrl": "https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/suspended-remove-flowchart.png",
   "directoryUrl": "https://developers.reddit.com/apps/suspended-remove",
-  "generatedAt": "2026-11-24T11:51:23.003Z"
+  "generatedAt": "2026-11-25T02:00:47.190Z"
 }

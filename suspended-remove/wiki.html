@@ -2,7 +2,7 @@
 <h1>Suspended Remove</h1>
 
 <p>Category: Security<br>
-Version: v1.0.96<br>
+Version: v1.0.97<br>
 Visibility: Public<br>
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.</p>
 
@@ -23,7 +23,7 @@ Summary: High-precision account purification engine. Fleet-wide security infrast
 </ul>
 <h3>Menu Actions</h3>
 <ul>
-<li>GuardHub: Scan Modqueue for Suspended Users: Manually run the suspended user queue scan immediately (Location: subreddit)</li>
+<li>GuardHub: Suspended Remove Queue & Scan: View items waiting for recheck and optionally run an immediate modqueue scan (Location: subreddit)</li>
 </ul>
 <h3>Custom Post Types and Entrypoints</h3>
 <p>Features interactive custom post UI or Block views rendered natively on Reddit. Entrypoint: src/main.ts</p>
@@ -86,12 +86,12 @@ Summary: High-precision account purification engine. Fleet-wide security infrast
 </ul>
 
 <h2>Version History</h2>
+<p>1.0.97 — 2026-11-25<br>
+Use real subreddit Removal Reason IDs ([WAITING] Suspended Recheck and Suspended Account Removed) so Removed Queue cards display [WAITING] instead of Add removal reason, and add live Waiting Queue viewer to the subreddit menu item</p>
 <p>1.0.96 — 2026-11-24<br>
 Add returnRecoveredToNeedsReview setting under Auto-approve to filter recovered temp-removed/hidden items back into Needs Review with a [RECOVERED] mod note when Auto-approve is off</p>
 <p>1.0.95 — 2026-11-24<br>
 Match user mod note label to final removal type (AUTO default: None for remove, SPAM_WARNING for spam) and add 1h, 4h, and 12h recheck interval options</p>
-<p>1.0.94 — 2026-11-18<br>
-Add single retry for transient gRPC 500 errors during modqueue/spam scan</p>
 
 <h2>Links</h2>
 <ul>

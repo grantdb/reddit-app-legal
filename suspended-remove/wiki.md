@@ -3,7 +3,7 @@
 # Suspended Remove
 
 Category: Security  
-Version: v1.0.96  
+Version: v1.0.97  
 Visibility: Public  
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.
 
@@ -19,7 +19,7 @@ High-precision account purification engine. Fleet-wide security infrastructure.
 
 ## Triggers and Activation
 ### Menu Actions
-- GuardHub: Scan Modqueue for Suspended Users: Manually run the suspended user queue scan immediately (Location: subreddit)
+- GuardHub: Suspended Remove Queue & Scan: View items waiting for recheck and optionally run an immediate modqueue scan (Location: subreddit)
 
 ### Custom Post Types and Entrypoints
 - Features interactive custom post UI or Block views rendered natively on Reddit. (Entrypoint: src/main.ts)
@@ -74,14 +74,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.97 — 2026-11-25
+- Use real subreddit Removal Reason IDs ([WAITING] Suspended Recheck and Suspended Account Removed) so Removed Queue cards display [WAITING] instead of Add removal reason, and add live Waiting Queue viewer to the subreddit menu item
+
 1.0.96 — 2026-11-24
 - Add returnRecoveredToNeedsReview setting under Auto-approve to filter recovered temp-removed/hidden items back into Needs Review with a [RECOVERED] mod note when Auto-approve is off
 
 1.0.95 — 2026-11-24
 - Match user mod note label to final removal type (AUTO default: None for remove, SPAM_WARNING for spam) and add 1h, 4h, and 12h recheck interval options
-
-1.0.94 — 2026-11-18
-- Add single retry for transient gRPC 500 errors during modqueue/spam scan
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/TERMS.md)
