@@ -37,16 +37,17 @@ DomainGuard inspects links and domain mentions across submissions and comments, 
 
 ### 03 · Enforce & Track Filtered Posts
 
-> **Filter, Notify & Queue for Auto-Recheck**
-> - Matching items execute the configured rule action (`filter`, `remove`, `spam`, `report`, or `log`), optionally post a removal notice, and record a ModNote.
-> - Filtered submissions are queued in the Control Center with a configurable grace period for author edits.
+> **Filter, Silent Temp Remove & Queue for Auto-Recheck**
+> - Matching items execute the configured rule action (`filter`, `temp_remove`, `remove`, `spam`, `report`, or `log`), optionally post a removal notice, and record a ModNote.
+> - `filter` and `temp_remove` (Silent Temp Remove) submissions are queued in the Control Center with a configurable grace period for author edits.
 
 ---
 
-### 04 · Auto-Recheck & Moderator Approval
+### 04 · Auto-Recheck & Moderator Review
 
-> **Clean Recovery & Permanent Spam Protection**
-> - When an author edits a filtered post to remove the offending URL (`onPostUpdate` or scheduled recheck), DomainGuard auto-approves the post, removes its notice comment, unlocks it, and registers its clean domain baseline.
+> **Clean Recovery, Needs-Review Routing & Permanent Spam Protection**
+> - When an author edits a filtered or temp-removed post to remove the offending URL (`onPostUpdate` or scheduled recheck), DomainGuard applies your configured clean-recheck policy: route to Reddit's Mod Queue as `"Restricted link removed - needs review"` with a ModNote, flag in the Control Center Filtered Queue only, or auto-approve.
+> - Unedited submissions that still contain restricted links after the grace period expires are automatically removed and untracked.
 > - Manual approvals via Reddit or the Control Center Filtered Queue immediately clear the queue entry and protect the post against future spam marking.
 
 ---

@@ -23,13 +23,14 @@
 <blockquote><p>- Previously approved items use a stored domain baseline so edits are only checked against newly introduced domains, and approved posts are never marked as spam.</p></blockquote>
 <hr>
 <h3>03 · Enforce & Track Filtered Posts</h3>
-<blockquote><p><strong>Filter, Notify & Queue for Auto-Recheck</strong></p></blockquote>
-<blockquote><p>- Matching items execute the configured rule action (<code>filter</code>, <code>remove</code>, <code>spam</code>, <code>report</code>, or <code>log</code>), optionally post a removal notice, and record a ModNote.</p></blockquote>
-<blockquote><p>- Filtered submissions are queued in the Control Center with a configurable grace period for author edits.</p></blockquote>
+<blockquote><p><strong>Filter, Silent Temp Remove & Queue for Auto-Recheck</strong></p></blockquote>
+<blockquote><p>- Matching items execute the configured rule action (<code>filter</code>, <code>temp_remove</code>, <code>remove</code>, <code>spam</code>, <code>report</code>, or <code>log</code>), optionally post a removal notice, and record a ModNote.</p></blockquote>
+<blockquote><p>- <code>filter</code> and <code>temp_remove</code> (Silent Temp Remove) submissions are queued in the Control Center with a configurable grace period for author edits.</p></blockquote>
 <hr>
-<h3>04 · Auto-Recheck & Moderator Approval</h3>
-<blockquote><p><strong>Clean Recovery & Permanent Spam Protection</strong></p></blockquote>
-<blockquote><p>- When an author edits a filtered post to remove the offending URL (<code>onPostUpdate</code> or scheduled recheck), DomainGuard auto-approves the post, removes its notice comment, unlocks it, and registers its clean domain baseline.</p></blockquote>
+<h3>04 · Auto-Recheck & Moderator Review</h3>
+<blockquote><p><strong>Clean Recovery, Needs-Review Routing & Permanent Spam Protection</strong></p></blockquote>
+<blockquote><p>- When an author edits a filtered or temp-removed post to remove the offending URL (<code>onPostUpdate</code> or scheduled recheck), DomainGuard applies your configured clean-recheck policy: route to Reddit's Mod Queue as <code>"Restricted link removed - needs review"</code> with a ModNote, flag in the Control Center Filtered Queue only, or auto-approve.</p></blockquote>
+<blockquote><p>- Unedited submissions that still contain restricted links after the grace period expires are automatically removed and untracked.</p></blockquote>
 <blockquote><p>- Manual approvals via Reddit or the Control Center Filtered Queue immediately clear the queue entry and protect the post against future spam marking.</p></blockquote>
 <hr>
 <h2>Quick Setup</h2>

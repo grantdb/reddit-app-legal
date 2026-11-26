@@ -3,7 +3,7 @@
 # DomainGuard
 
 Category: Security  
-Version: v0.0.174  
+Version: v0.0.175  
 Visibility: Unlisted  
 Summary: Professional URL and domain moderation engine with singleton architecture and hardened API gates.
 
@@ -50,7 +50,7 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key-Value Strings (deduplication & cooldown markers)
 - Hashes (structured records & alias indices)
 - Sorted Sets (time-series audit logs)
-- Key patterns: t3_post1:edit:1, t1_comment1:create:1, t3_dm_blocked:create:1, t3_quiet_remove:create:1, node:http, node:events
+- Key patterns: t3_post1:edit:1, t1_comment1:create:1, t3_dm_blocked:create:1, t3_quiet_remove:create:1, t3_temp_post:create:1, t3_dryrun_rule:create:1
 
 ## Setup and Usage
 - Install: Add DomainGuard to your subreddit via the Reddit Developer portal.
@@ -62,14 +62,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.175 — 2026-11-26
+- Add Silent Temp Remove (temp_remove) action with restricted-link ModNote and edit-recheck tracking, route cleaned posts to Needs Review queue as 'Restricted link removed - needs review' when auto-approve is off, add fine-grained lifecycle settings (cleanRecheckAction, cleanReviewModNote, addModNoteOnAction, cleanupNotificationOnClean, unlockOnClean, autoRemoveOnExpire, alwaysAllowedDomains), enforce rule.enabled and per-rule dryRun, and guard dashboard self-heal
+
 0.0.174 — 2026-11-22
 - Add configurable minutes/hours Time Between Checks with Devvit Web scheduler task registration, ignore self-triggered filter spamlink modactions, add subreddit modmail fallback for DM-restricted users, and omit SPAM_WARNING label on non-spam removals
 
 0.0.173 — 2026-11-18
 - Guarantee approved and auto-approved posts are never marked as spam, fix comment triggers evaluating parent post, remove duplicate post menu launcher, and retry transient gRPC 500 on mod check
-
-0.0.172 — 2026-11-17
-- Guarantee approved and auto-approved posts are never marked as spam, fix comment triggers evaluating parent post, and remove duplicate post menu launcher
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/domain-guard/TERMS.md)
