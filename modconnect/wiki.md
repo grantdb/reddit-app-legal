@@ -3,7 +3,7 @@
 # ModConnect
 
 Category: Moderation  
-Version: v0.0.3  
+Version: v0.0.4  
 Visibility: Unlisted  
 Summary: ModConnect helps community moderators recruit, review, and onboard moderators directly inside Reddit.
 
@@ -28,29 +28,7 @@ ModConnect helps community moderators recruit, review, and onboard moderators di
 ## Settings Reference
 Subreddit moderators configure the app in Mod Tools -> App Settings.
 
-- newApplicationSubject: New Application Modmail Subject (string, default: [ModConnect] New application for {{roleTitle}} from u/{{applicantUsername}}). Placeholders: {{roleTitle}}, {{applicantUsername}}, {{subredditName}}, {{submittedAt}}
-- newApplicationBody: New Application Modmail Template (paragraph, default: A new moderator application has been submitted for **{{roleTitle}}** in r/{{subredditName}}.
-
-- **Applicant:** u/{{applicantUsername}}
-- **Submitted:** {{submittedAt}}
-- **Review Candidate:** [Open ModConnect Dashboard]({{dashboardUrl}})
-
-Open the ModConnect dashboard to review answers, leave a score, and update pipeline status.). Placeholders: {{roleTitle}}, {{applicantUsername}}, {{subredditName}}, {{submittedAt}}, {{dashboardUrl}}
-- acceptedSubject: Accepted Candidate Modmail Subject (string, default: Update on your {{roleTitle}} application for r/{{subredditName}}). Placeholders: {{roleTitle}}, {{applicantUsername}}, {{subredditName}}
-- acceptedBody: Accepted Candidate Modmail Template (paragraph, default: Hello u/{{applicantUsername}},
-
-Thank you for applying for **{{roleTitle}}** in r/{{subredditName}}. We are pleased to let you know that your application has been accepted!
-
-To get started, please open your onboarding checklist here:
-[Open Your Onboarding Checklist]({{postUrl}})
-
-We look forward to welcoming you to the moderation team.). Placeholders: {{roleTitle}}, {{applicantUsername}}, {{subredditName}}, {{postUrl}}
-- rejectedSubject: Rejected Candidate Modmail Subject (string, default: Update on your {{roleTitle}} application for r/{{subredditName}}). Placeholders: {{roleTitle}}, {{applicantUsername}}, {{subredditName}}
-- rejectedBody: Rejected Candidate Modmail Template (paragraph, default: Hello u/{{applicantUsername}},
-
-Thank you for taking the time to apply for **{{roleTitle}}** in r/{{subredditName}}. After careful consideration, we will not be moving forward with your application at this time.
-
-We appreciate your interest in supporting the community and encourage you to stay involved.). Placeholders: {{roleTitle}}, {{applicantUsername}}, {{subredditName}}
+- No custom app settings.
 
 ## Automation Capabilities
 - Submits Automated Comments: No — Does not submit automated comments.
@@ -78,6 +56,9 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.4 — 2026-11-26
+- Remove redundant Devvit settings.subreddit block and AppSettingsReader fallback so the Webview Moderator Dashboard Settings tab is the single source of truth for Modmail notification templates
+
 0.0.3 — 2026-11-24
 - Initial unlisted release: Phase 1 moderator recruiting, review, pipeline, onboarding, metrics, Redis transactions, safe publication recovery, and Phase 2A automated account eligibility checks.
 
