@@ -1,15 +1,14 @@
+> [Full User Guide](https://www.reddit.com/r/grantdb/wiki/piracy-guard/) | **Technical Reference & Settings Spec**
+
 # Piracy Guard
 
 Category: Moderation  
-Version: v0.0.5  
+Version: v0.0.6  
 Visibility: Unlisted  
 Summary: Configurable piracy-content moderation filters for Reddit communities.
 
 ## Overview
 Configurable piracy-content moderation filters for Reddit communities.
-
-## Flowchart
-[View flowchart image](https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/piracy-guard-flowchart.png)
 
 ## Key Features
 - Not documented yet.
@@ -62,23 +61,23 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Key patterns: piracy-guard:circuit-breaker, piracy-guard:telemetry:totals, node:http, piracy-guard:config:current, piracy-guard:config:history, piracy-guard:config:lock
 
 ## Setup and Usage
-- Install: Add app via Reddit App Directory.
-- Configure: Open Mod Tools -> App Settings in your subreddit to configure options.
-- Launch: Use mod menu or triggers as configured.
+- Install: Add Piracy Guard to your subreddit from the Reddit App Directory.
+- Open Control Center: Launch Piracy Guard: Dashboard from your subreddit moderation menu.
+- Configure & Test: Set your Enforcement Mode, Minimum Confidence, and categories in the Configuration and Preset Rules tabs, then verify behavior with the Test Console.
 
 ## Troubleshooting
 - Check app console logs via devvit logs <subreddit> for real-time diagnostic output.
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.6 — 2026-11-26
+- Move all core settings (enforcement mode, confidence, scan scope, allowlists) into Webview Control Center backed by Redis, remove legacy Devvit.addSettings registration, unify inline and expanded status badges, bypass stale dashboard cache, and quiet non-mod /api/dashboard log spam
+
 0.0.5 — 2026-11-09
 - Fix TypeError: Invalid URL in UIClient.navigateTo on relative permalink and remove Devvit SDK Limitations Encountered from README.
 
 0.0.4 — 2026-11-09
 - Fix @devvit/web/server Redis camelCase hash methods, remove Phase 5 Roadmap from README, and implement zero-scroll inline status page with Expanded Mode routing for all settings and interactions.
-
-0.0.3 — 2026-11-09
-- Standard fleet synchronization and maintenance.
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/piracy-guard/TERMS.md)

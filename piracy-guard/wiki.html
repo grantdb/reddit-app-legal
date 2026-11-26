@@ -1,15 +1,13 @@
+<blockquote><p><a href="https://www.reddit.com/r/grantdb/wiki/piracy-guard/">Full User Guide</a> | <strong>Technical Reference &amp; Settings Spec</strong></p></blockquote>
 <h1>Piracy Guard</h1>
 
 <p>Category: Moderation<br>
-Version: v0.0.5<br>
+Version: v0.0.6<br>
 Visibility: Unlisted<br>
 Summary: Configurable piracy-content moderation filters for Reddit communities.</p>
 
 <h2>Overview</h2>
 <p>Configurable piracy-content moderation filters for Reddit communities.</p>
-
-<h2>Flowchart</h2>
-<p><a href="https://raw.githubusercontent.com/grantdb/reddit-app-legal/main/assets/flowcharts/piracy-guard-flowchart.png">View flowchart image</a></p>
 
 <h2>Permissions Used</h2>
 <ul>
@@ -74,11 +72,9 @@ Summary: Configurable piracy-content moderation filters for Reddit communities.<
 
 <h2>Setup and Usage</h2>
 <ul>
-<li>Install: Add app via Reddit App Directory or Mod Tools.</li>
-<li>Open: Open Mod Tools -&gt; App Settings in your subreddit to configure options.</li>
-<li>Configure: Set active options and API keys as needed.</li>
-<li>Use: App runs automatically in background according to event triggers and settings.</li>
-<li>Review: Verify bot activity and comments directly on subreddit posts or in mod logs.</li>
+<li>Install: Add Piracy Guard to your subreddit from the Reddit App Directory.</li>
+<li>Open Control Center: Launch Piracy Guard: Dashboard from your subreddit moderation menu.</li>
+<li>Configure & Test: Set your Enforcement Mode, Minimum Confidence, and categories in the Configuration and Preset Rules tabs, then verify behavior with the Test Console.</li>
 </ul>
 
 <h2>Troubleshooting</h2>
@@ -88,12 +84,12 @@ Summary: Configurable piracy-content moderation filters for Reddit communities.<
 </ul>
 
 <h2>Version History</h2>
+<p>0.0.6 — 2026-11-26<br>
+Move all core settings (enforcement mode, confidence, scan scope, allowlists) into Webview Control Center backed by Redis, remove legacy Devvit.addSettings registration, unify inline and expanded status badges, bypass stale dashboard cache, and quiet non-mod /api/dashboard log spam</p>
 <p>0.0.5 — 2026-11-09<br>
 Fix TypeError: Invalid URL in UIClient.navigateTo on relative permalink and remove Devvit SDK Limitations Encountered from README.</p>
 <p>0.0.4 — 2026-11-09<br>
 Fix @devvit/web/server Redis camelCase hash methods, remove Phase 5 Roadmap from README, and implement zero-scroll inline status page with Expanded Mode routing for all settings and interactions.</p>
-<p>0.0.3 — 2026-11-09<br>
-Standard fleet synchronization and maintenance.</p>
 
 <h2>Links</h2>
 <ul>
