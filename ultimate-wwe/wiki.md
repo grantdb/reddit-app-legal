@@ -3,7 +3,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.52  
+Version: v0.0.53  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -59,14 +59,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.53 — 2026-11-26
+- Redesign Tonight's Preview Webview Card as a glowing WWE broadcast promo poster with brand spotlights, Titan-Tron scanlines, featured Main Event VS marquee, perks strip, and shimmering glow CTA button
+
 0.0.52 — 2026-11-26
 - Add Mod Panel Tonight's Preview Summary post publisher supporting both Standard Markdown Text Post and Custom Webview Preview Card formats with in-place updates and direct links to the main Live Megathread
 
 0.0.51 — 2026-11-24
 - Gate live chat on scheduled shows until toggled on by a moderator or a match starts, add moderator LIVE CHAT ON/OFF toggle, fix start_match show status transition, and stop idle /api/comments polling before chat opens
-
-0.0.50 — 2026-11-24
-- End live chat 1 hour after show completion (server + client), lock all other post-show interactive controls, and enable clicking through matches and official show recap in inline and expanded views
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
