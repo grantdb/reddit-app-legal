@@ -2,7 +2,7 @@
 <h1>Suspended Remove</h1>
 
 <p>Category: Security<br>
-Version: v1.0.97<br>
+Version: v1.0.98<br>
 Visibility: Public<br>
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.</p>
 
@@ -38,8 +38,8 @@ Summary: High-precision account purification engine. Fleet-wide security infrast
 <li>duringWaitAction: What to do during the waiting window (select, default: filter_hide_waiting). Filter & Hide removes the item from public view and places it into the Needs Review / ModQueue queue during checks. Filter & Keep Public keeps the item visible to the public on the subreddit while keeping it in the Needs Review queue. Temporary Remove moves the item out of the review queue and into the removed queue while checks continue. Important: if the app approves a filtered or temporarily removed item later, Reddit may not run AutoModerator and other moderation checks on it again like a brand-new post or comment.</li>
 <li>addDuringWaitNote: Add mod note to item during waiting window (boolean, default: true). Adds the waiting-period note to the item when the waiting action is applied. Turn this off if you do not want a note on the item during the checking period.</li>
 <li>duringWaitReason: Waiting-period mod note text (string, default: [WAITING] Suspended account recheck pending.). This note is added to the item when the waiting-period action is applied. The default starts with [WAITING] so moderators can quickly see that this item is already being tracked and does not need manual action yet.</li>
-<li>approveRecoveredTempRemovals: Auto-approve if account recovers (hidden/temp-removed items) (boolean, default: true). If a later check shows the account is accessible again, the app will automatically approve items it hid via "Filter & Hide" or removed via "Temp Remove". This setting has no effect when "Filter & Keep Public" is selected (since those items were never hidden). Note: approving an item may not re-run AutoModerator or other moderation checks the same way a brand-new submission would.</li>
-<li>returnRecoveredToNeedsReview: Return recovered items to Needs Review (when Auto-approve is off) (boolean, default: false). Used when "Auto-approve if account recovers" above is turned OFF. If a later check shows the account is accessible again, moves temp-removed or hidden items into Needs Review (via filter) with a [RECOVERED] mod note so a moderator can review and approve them manually.</li>
+<li>approveRecoveredTempRemovals: Auto-approve if account recovers (hidden/temp-removed items) (boolean, default: true). If a later check shows the account is accessible again, the app will automatically approve items that ONLY this app hid via "Filter & Hide" or removed via "Temp Remove". Items already removed by Reddit, AutoModerator, or another moderator are NEVER auto-approved and instead receive a [CHECK COMPLETE - PRIOR REMOVAL] label. When turned off (or in "Filter & Keep Public" mode), items receive a [CHECK COMPLETE] Ready for Review label. Note: approving an item may not re-run AutoModerator or other moderation checks the same way a brand-new submission would.</li>
+<li>returnRecoveredToNeedsReview: Return recovered items to Needs Review (when Auto-approve is off) (boolean, default: false). Used when "Auto-approve if account recovers" above is turned OFF. If a later check shows the account is accessible again, moves temp-removed or hidden items into Needs Review (via filter) with a [CHECK COMPLETE] Ready for Review mod note so a moderator can review and approve them manually.</li>
 <li>finalAction: Final action after threshold (select, default: remove). This is the preferred setting. Remove is recommended for most subreddits because it does not add spam signals to accounts that may be temporarily suspended by mistake. If both this and the deprecated setting below are configured, this setting is used first.</li>
 <li>markAsSpam: [Deprecated] Mark final removal as spam (boolean, default: false). This older setting is still shown for compatibility with existing installs. Use "Final action after threshold" above for new setup. If both are set, the new setting is used first.</li>
 <li>addFinalNote: Add mod note to item on final action (boolean, default: true). Adds the final-action note to the item when it is removed. Turn this off if you do not want a note on the item at removal time.</li>
@@ -86,12 +86,12 @@ Summary: High-precision account purification engine. Fleet-wide security infrast
 </ul>
 
 <h2>Version History</h2>
+<p>1.0.98 — 2026-11-26<br>
+Prevent auto-approving items already removed by Reddit, AutoModerator, or another moderator; update [WAITING] labels to [CHECK COMPLETE] Ready for Review or [CHECK COMPLETE - PRIOR REMOVAL] Review when account verification completes</p>
 <p>1.0.97 — 2026-11-25<br>
 Use real subreddit Removal Reason IDs ([WAITING] Suspended Recheck and Suspended Account Removed) so Removed Queue cards display [WAITING] instead of Add removal reason, and add live Waiting Queue viewer to the subreddit menu item</p>
 <p>1.0.96 — 2026-11-24<br>
 Add returnRecoveredToNeedsReview setting under Auto-approve to filter recovered temp-removed/hidden items back into Needs Review with a [RECOVERED] mod note when Auto-approve is off</p>
-<p>1.0.95 — 2026-11-24<br>
-Match user mod note label to final removal type (AUTO default: None for remove, SPAM_WARNING for spam) and add 1h, 4h, and 12h recheck interval options</p>
 
 <h2>Links</h2>
 <ul>
