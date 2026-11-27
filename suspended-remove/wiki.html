@@ -2,7 +2,7 @@
 <h1>Suspended Remove</h1>
 
 <p>Category: Security<br>
-Version: v1.0.98<br>
+Version: v1.0.99<br>
 Visibility: Public<br>
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.</p>
 
@@ -86,12 +86,12 @@ Summary: High-precision account purification engine. Fleet-wide security infrast
 </ul>
 
 <h2>Version History</h2>
+<p>1.0.99 — 2026-11-27<br>
+Pass filter reason to item.filter() so Needs Review shows clear check-complete/waiting text instead of blank Filtered by suspended-remove; keep recovered items hidden (keep=false) unless Filter & Keep Public is selected; preserve modqueue sourceQueue over spam and allow returnRecoveredToNeedsReview on prior-removed items while keeping them hidden</p>
 <p>1.0.98 — 2026-11-26<br>
 Prevent auto-approving items already removed by Reddit, AutoModerator, or another moderator; update [WAITING] labels to [CHECK COMPLETE] Ready for Review or [CHECK COMPLETE - PRIOR REMOVAL] Review when account verification completes</p>
 <p>1.0.97 — 2026-11-25<br>
 Use real subreddit Removal Reason IDs ([WAITING] Suspended Recheck and Suspended Account Removed) so Removed Queue cards display [WAITING] instead of Add removal reason, and add live Waiting Queue viewer to the subreddit menu item</p>
-<p>1.0.96 — 2026-11-24<br>
-Add returnRecoveredToNeedsReview setting under Auto-approve to filter recovered temp-removed/hidden items back into Needs Review with a [RECOVERED] mod note when Auto-approve is off</p>
 
 <h2>Links</h2>
 <ul>

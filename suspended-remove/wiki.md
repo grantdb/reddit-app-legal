@@ -3,7 +3,7 @@
 # Suspended Remove
 
 Category: Security  
-Version: v1.0.98  
+Version: v1.0.99  
 Visibility: Public  
 Summary: High-precision account purification engine. Fleet-wide security infrastructure.
 
@@ -74,14 +74,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+1.0.99 — 2026-11-27
+- Pass filter reason to item.filter() so Needs Review shows clear check-complete/waiting text instead of blank Filtered by suspended-remove; keep recovered items hidden (keep=false) unless Filter & Keep Public is selected; preserve modqueue sourceQueue over spam and allow returnRecoveredToNeedsReview on prior-removed items while keeping them hidden
+
 1.0.98 — 2026-11-26
 - Prevent auto-approving items already removed by Reddit, AutoModerator, or another moderator; update [WAITING] labels to [CHECK COMPLETE] Ready for Review or [CHECK COMPLETE - PRIOR REMOVAL] Review when account verification completes
 
 1.0.97 — 2026-11-25
 - Use real subreddit Removal Reason IDs ([WAITING] Suspended Recheck and Suspended Account Removed) so Removed Queue cards display [WAITING] instead of Add removal reason, and add live Waiting Queue viewer to the subreddit menu item
-
-1.0.96 — 2026-11-24
-- Add returnRecoveredToNeedsReview setting under Auto-approve to filter recovered temp-removed/hidden items back into Needs Review with a [RECOVERED] mod note when Auto-approve is off
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/suspended-remove/TERMS.md)
