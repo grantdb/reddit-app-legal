@@ -3,7 +3,7 @@
 # Ultimate WWE Hub
 
 Category: Interactive  
-Version: v0.0.55  
+Version: v0.0.56  
 Visibility: Unlisted  
 Summary: Interactive WWE live event mega-thread engine with match cards, pick 'em prediction game, and dual leaderboards.
 
@@ -59,14 +59,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.56 — 2026-11-28
+- Prevent deleting a preview_summary post from wiping the active/completed live show state and resetting final results to upcoming; return 404 on tombstoned posts in GET /api/live/show; stop polling once show is completed (15s fallback + debounced focus refresh); parallelize per-match Redis reads and quiet routine poll logs
+
 0.0.55 — 2026-11-26
 - Add staggered wave highlight animation across bottom preview feature pills and upgrade tag-team marquee/undercard display to show both partners with individual Hub DB records and 2-line wrapping
 
 0.0.54 — 2026-11-26
 - Enhance Coming Up preview card with glowing pyro sparks, marquee sheen, high-contrast neon feature pills at the bottom, and live database sync (fan picks, superstar W-L records, champion reign days, and polling sync fix)
-
-0.0.53 — 2026-11-26
-- Redesign Tonight's Preview Webview Card as a glowing WWE broadcast promo poster with brand spotlights, Titan-Tron scanlines, featured Main Event VS marquee, perks strip, and shimmering glow CTA button
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/ultimate-wwe/TERMS.md)
