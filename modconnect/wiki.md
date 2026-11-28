@@ -3,7 +3,7 @@
 # ModConnect
 
 Category: Moderation  
-Version: v0.0.4  
+Version: v0.0.5  
 Visibility: Unlisted  
 Summary: ModConnect helps community moderators recruit, review, and onboard moderators directly inside Reddit.
 
@@ -56,14 +56,14 @@ This app utilizes Reddit Redis storage for state management, caching, and rate l
 - Ensure all required app settings and API keys are properly configured in Mod Tools.
 
 ## Version History
+0.0.5 — 2026-11-28
+- Add Request Mod Review button when all self-completable required onboarding tasks are done to send an urgent mod-only Modmail Inbox alert with 24h cooldown and Review Requested badges; skip outbound decision modmail for demo_* applications and log ServiceError/lifecycle/mutation events
+
 0.0.4 — 2026-11-26
 - Remove redundant Devvit settings.subreddit block and AppSettingsReader fallback so the Webview Moderator Dashboard Settings tab is the single source of truth for Modmail notification templates
 
 0.0.3 — 2026-11-24
 - Initial unlisted release: Phase 1 moderator recruiting, review, pipeline, onboarding, metrics, Redis transactions, safe publication recovery, and Phase 2A automated account eligibility checks.
-
-0.0.2 — 2026-11-24
-- Build Phase 1 ModConnect MVP: role creation, interactive application post, moderator review & pipeline, archivable modmail notifications, onboarding checklist, and basic recruiting metrics
 
 ## Links
 - [Terms of Service](https://github.com/grantdb/reddit-app-legal/blob/main/modconnect/TERMS.md)
